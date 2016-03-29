@@ -1,0 +1,272 @@
+'\377' CHAR not INT!: (09feb04)
+--------------------
+
+The literals '\377' and 255 are different: the former is a char,
+the latter an int.  But CKIT currently normalizes the former to
+be the latter.
+
+This comes into play in the following real example from gap:
+
+  char c = -1;
+  switch(c){
+    /* original */
+      case '\377': --> case matches.
+    /* ckit */
+      case 255: --> case DOES NOT match.
+  }
+
+Best fix would be to (somehow) preserve the original string
+representation?
+But an OK fix would be to translate each <'xxx'> to <(char)'xxx'>.
+This would entail changing the following line (not yet done):
+  ckit/src/parser/grammar/c.grm:488
+
+-->FIXED -13feb04<--
+
+"1." LITERALS: (17mar03)
+-------------
+
+Not sure if strictly spec-compliant, but spec2000 benchmark (175.vpr)
+is full of float literals ending with a decimal point "1.", which
+isn't recognized by ckit.
+
+(FIXED -when?)
+
+
+NOTE ON FUNCTION SCOPING: (17feb04)
+------------------------
+
+The storage class of functions are a bit unusual,
+for example, in:
+
+  int main()
+  {
+    int foo();
+  }
+
+"foo" is not marked extern.
+But if foo is declared static in this file (before or after),
+CKIT will (correctly) mark it as static.
+
+My implementation had incorrectly scopified function names;
+the correct version is thus:
+ - if storage class is STATIC, then it is (file-)static.
+ - otherwise, it is "global"
+
+
+PRECEDENCE BUG: (08jul00)
+--------------
+"?:" versus "|=" not properly parenthesized:
+
+input:
+
+  int i = 0, j = 0, k = 0;
+  i ? (j |= 0x1) : (k |= 0x1);
+
+output:
+
+  i ? j|=1 : k|=1;
+
+(FIXED -when?)
+
+
+ANNOYANCE: (01jun00)
+----------
+This problem doesn't seem to want to go away:
+
+input:
+  const char * c;
+  c[0]?c:"abcd";
+
+output:
+  error: Type Error: Unacceptable operands of question-colon.
+
+Another manifestation:
+input:
+  unsigned char * ucp;
+  const char * cp;
+  int i;
+
+  i = (char *) ucp - cp - 1;
+
+output:
+  "arith.c":7.7-24: error: Type Error: Unacceptable operands of "-" or "--".
+  "arith.c":7.3-28: error: Type Error: rval of type char * cannot be assigned to lval of type int.
+
+The first error is OK, the second implies that implicits were screwed up because of the first.
+
+(FIXED -when?)
+
+
+CKIT annoyance: (01jun00)
+--------------
+Input:
+int foo(int a[])
+{
+  foo(a);
+}
+
+Output:
+"cast.c":5.3-9: error: Bad function call: arg 1 has type int * but fn parameter has type int []
+
+int foo (int *a)
+{
+  foo (a);
+}
+
+(FIXED -when?)
+
+
+BUG FIXED: (25may00)
+----------
+Input:
+	struct S {
+	  float j;
+	  int:24;
+	  char * k;
+	} s = {1.2,"3"};
+
+Spurious Error Messages:
+	"stst.c":1.2-5.16: error: type of initializer is incompatible with type of lval
+	"stst.c":1.2-5.16: error: badly formed struct initializer: not enough initializers
+
+Fix: skip over unnamed members, as per C specs: diff of build-ast.sml (<new,>old) follows:
+623c623
+<             let fun f ((fieldType, _, _) :: l, expr :: exprs) =
+---
+>             let fun f ((fieldType, SOME mem, _) :: l, expr :: exprs) =
+625a626,627
+>                   | f ((fieldType, NONE, _) :: l, exprs) =
+>                        f (l, exprs)
+
+
+BUG (24may00 - long long overdue):
+---------------------------------
+
+1. Does not really handle long long (it just recognizes the type, but
+	does not handle literals of "long long" size: seems to be due
+	to availability of Int{N} structures in SML. See "unsigned long"
+	bug below.
+
+2. Should keep around "L", "LL", "UL" suffix to int literals:
+	input:	1LL<<40
+	output:	1<<40	/* compiler complains */
+
+3. Tilde and negative: possibly another SML problem:
+	input:	2e-5
+	output: 2E~05
+
+
+ANNOYANCE: (17apr00) const char */char * incompatibility
+---------
+
+  input:	char c[100]; const char * d = &c[5];
+		c - d;
+  output:	error: Type Error: Unacceptable operands of "-" or "--".
+
+  general:	in general, the error occurs with incompatible pointer types.
+		the key is to not treat "const" as incompatible.
+
+input:
+  int foo()
+  {
+    char foo[10];
+    const char * bar = &foo[5];
+
+    foo - bar;
+  }
+
+output:
+  "/tmp/test.c":6.3-12: error: Type Error: Unacceptable operands of "-" or "--".
+
+
+=======
+BUG (17apr00): Array formals
+-------------
+
+This one is similar to the ?: bug we reported earlier (Bug number 8).
+
+void foo(int a[]);
+
+int main() {
+  int * ip;
+  foo(ip);
+}
+
+Output:
+
+"tt.c":5.3-10: error: Bad function call:
+               arg 1 has type int * but fn parameter has type int []
+
+Correct output in C is still produced but again the implicit type of ip
+inside the call to foo has int array type.  This is a problem for our
+instrumentation.
+
+
+BUG (17apr00): Union Bitfields
+-------------
+
+According to Harbison and Steele (top of p.141), bitfields in unions are
+allowed in ISO C, but not "traditional" C.  Neither "gcc -ansi -pedantic",
+nor cc complains.
+
+  input:	union { int u16:12; } u;
+
+  output:	"test.c":1.2-3.4: error: union member has size spec
+
+		union t1 { int u16; };
+		union t1 u;
+
+
+BUG (17apr00): Struct Bitfields
+-------------
+
+This is not a big deal, since ckit implements a superset of ANSI C,
+but I thought I'd mention it anyway.  Ckit allows the following:
+
+struct S {
+  char a:4;   /* <-- Illegal field for ANSI C, but not "traditional" C */
+  float f:4;  /* <-- Illegal field */
+};
+
+
+BUG (14apr00):
+-------------
+
+  Input:
+  ------
+  long i = 0xf8000000;
+  unsigned long i = 0xf8000000ul;
+
+  Output:
+  -------
+  "test.c":1.11-21: error: large int const
+  "test.c":2.19-31: error: large int const
+  "???": warning: additional errors suppressed.
+  "???": warning: additional warnings suppressed.
+
+  long i=0;
+  unsigned long i=0;
+
+  Note:
+  -----
+  gcc -Wall -ansi -pedantic: no complaint
+  cc: warning: initializer does not fit or is out of range: 0xf8000000
+
+
+INCONVENIENCE: old style varargs
+-------------
+
+This is something we have an easy workaround for (i.e. using cc -E
+instead of gcc -E to preprocess) but we mention it in case you think
+other people might care about this.  When varargs.h is included by
+gcc -E, old style parameter passing is transformed to this:
+
+  int foo(a)
+  a;...
+  { }
+
+  This is not accepted by ckit.
+  Remark: non-ANSI (gcc gives warning)
+  Solution: use cc -E.
+

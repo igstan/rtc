@@ -1,0 +1,134 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include "tcinternal.h"
+
+/********************************/
+/* Paged mirror data structures */
+/********************************/
+
+/* the mirrormap lookup table */
+void * mirrormap[MIRRORMAP_NUMELEMENTS] = {0};
+
+/* for now, freelist assumes tags-per-byte ratio is 2.
+   - to be more general introduces unnecessary complications? */
+void * mirrormap_freelist = 0;
+
+void _touchMirrorPage(unsigned long mapindex)
+{
+    if(mirrormap_freelist){ /*see comment about freelist above*/
+      mirrormap[mapindex] = mirrormap_freelist;
+      mirrormap_freelist = 0;
+    } else {
+      mirrormap[mapindex] = (void *) memalign(MIRRORPAGE_NUMBYTES, MIRRORPAGE_NUMBYTES);
+      if(!mirrormap[mapindex])
+        exit(fprintf(stderr, "FATAL ERROR: memalign out of memory\n"));
+      mirrormap_freelist = (char *)mirrormap[mapindex] + MIRRORPAGE_NUMBYTES/2;
+    }
+    /* initialize mirror to 0 (_typetag_unalloc) */
+    memset(mirrormap[mapindex], 0, MIRRORPAGE_NUMBYTES/2);
+}
+
+void _mirrortest_function(const void * addr)
+{
+  void * local = &local;
+  unsigned long addrindex = MIRRORMAP_INDEX(addr);
+  unsigned long localindex = MIRRORMAP_INDEX(local);
+
+  if(!mirrormap[addrindex])
+    _touchMirrorPage(addrindex);
+
+  if(!mirrormap[localindex])
+    _touchMirrorPage(localindex);
+}
+
+/**************************************/
+/*********  malloc functions  *********/
+/**************************************/
+void * _typecheck_malloc(size_t size)
+{
+  void * newmem;
+
+  newmem = malloc(size + TC_MALLOC_PADDING);
+
+  if(newmem){
+    unsigned long mapindex = MIRRORMAP_INDEX(newmem);
+
+    if(!mirrormap[mapindex])
+      _touchMirrorPage(mapindex);
+  }
+
+  return newmem;
+}
+
+void * _typecheck_calloc(size_t nelem, size_t elsize)
+{
+  void * newmem;
+
+  newmem = calloc(nelem + TC_MALLOC_PADDING/elsize, elsize);
+
+  if(newmem){
+    unsigned long mapindex = MIRRORMAP_INDEX(newmem);
+
+    if(!mirrormap[mapindex])
+      _touchMirrorPage(mapindex);
+  }
+
+  return newmem;
+}
+
+void * _typecheck_memalign(size_t alignment, size_t size)
+{
+  void * newmem;
+
+  newmem = memalign(alignment, size + TC_MALLOC_PADDING);
+
+  if(newmem){
+    unsigned long mapindex = MIRRORMAP_INDEX(newmem);
+
+    if(!mirrormap[mapindex])
+      _touchMirrorPage(mapindex);
+  }
+
+  return newmem;
+}
+
+void * _typecheck_realloc(void * ptr, size_t size)
+{
+  void * newmem;
+
+  if(ptr == 0) /* behaves like malloc */
+    return _typecheck_malloc(size);
+  if(size == 0){ /* behaves like free */
+    return 0;
+  }
+
+  newmem = realloc(ptr, size + TC_MALLOC_PADDING);
+
+  if(newmem){
+    unsigned long mapindex = MIRRORMAP_INDEX(newmem);
+
+    if(!mirrormap[mapindex])
+      _touchMirrorPage(mapindex);
+  }
+
+  return newmem;
+}
+
+void * _typecheck_valloc(size_t size)
+{
+  void * newmem;
+
+  newmem = valloc(size + TC_MALLOC_PADDING);
+
+  if(newmem){
+    unsigned long mapindex = MIRRORMAP_INDEX(newmem);
+
+    if(!mirrormap[mapindex])
+      _touchMirrorPage(mapindex);
+  }
+
+  return newmem;
+}
+

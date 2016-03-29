@@ -1,0 +1,129 @@
+head	1.5;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.5
+date	2004.02.23.23.55.03;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.12.23.19.04.13;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.01.21.20.31.23;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.08.21.13.50.10;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.08.20.20.10.54;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Template makefile to make single-file programs.
+Usage: make TARGET=<pgm-name>
+@
+
+
+1.5
+log
+@Changed/enhanced support for condor-rtca:
+can invoke either
+1. with targets condor-nt,condor-ptr,condor-ptrw; or
+2. by defining RTCA_USE_CONDOR in makefile preamble.
+@
+text
+@#################################################################
+# USER DEFINED PART #
+#####################
+CC = gcc
+#CFLAGS +=
+#TCFLAGS += -persist
+#LDFLAGS += -lm
+#RTCAFLAGS += -mbu -rda
+
+## Uncomment this to send rtca jobs to condor
+## (only when making targets tsl-tca, tsl-ptr, or tsl-ptrw
+#RTCA_USE_CONDOR = 1
+
+### STEMS: list of object file stems
+### TARGET: target name
+ifndef TARGET
+
+usage:
+	@@echo Usage: make TARGET=tgt
+
+else
+
+STEMS = $(TARGET)
+
+endif
+
+
+### If a dummy_externs object file is needed, add it here
+#DUMMY_EXTERNS = dummy_externs.o
+
+#################################################################
+
+include /p/wpis/people/students/suan/TypecheckDebugger/scripts/Makefile.template
+
+@
+
+
+1.4
+log
+@Deleted obsolete commets
+@
+text
+@d10 4
+@
+
+
+1.3
+log
+@Added RTCAFLAGS variable so Makefile can specify whether
+to do -mbu or -rda or both, etc.
+@
+text
+@a0 7
+#
+# To make: make            (default target = encode), or
+#	   make PGM=decode
+#
+# To run: ./encode < cs.xwd > output
+#	  ./decode < cs.xwd.enc > output
+#
+@
+
+
+1.2
+log
+@Removed -persist flag.
+@
+text
+@d15 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d12 2
+a13 2
+CFLAGS +=
+TCFLAGS += -persist
+@

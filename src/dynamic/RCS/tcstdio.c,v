@@ -1,0 +1,266 @@
+head	1.5;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.5
+date	2002.05.02.20.51.43;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.03.01.19.52.31;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.02.25.17.03.02;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2001.05.22.22.54.30;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.07.12.23.58.05;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Wrapper for some stdio functions (to start with, fgets, gets, fread).
+@
+
+
+1.5
+log
+@Restructured output mechanism to associate stream with error message;
+also, generalized signalflag mechanism (TCKILL now called by _output_
+functions), and enhanced run-time flags to allow better control of
+streams, message-destinations, and signal-flags.
+Also, added function _fn_SET_UNALLOC_TAG to reduce code bloat in
+processReturn.
+@
+text
+@#include <stdio.h>
+
+#include "tcinternal.h"
+#include <tclibc.h>
+
+char * _typecheck_fgets(char * s, int n, FILE * stream)
+{
+  char * ret;
+#ifdef TC_VERIFY_INPUT_BUFFER_ALLOC /* { */
+  if(!verifyAlloc(s, n)){
+    /* target is unallocated; warn */
+    _output_simple(TCFG_RIUM);
+  }
+#endif /* } !TC_VERIFY_INPUT_BUFFER_ALLOC */
+  ret = fgets(s, n, stream);
+  if(ret)
+    _setStringTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, s,strlen(s));
+  return ret;
+}
+
+char * _typecheck_gets(char * s)
+{
+  char * ret = gets(s);
+  if(ret){
+    int slen = strlen(ret);
+#ifdef TC_VERIFY_INPUT_BUFFER_ALLOC /* { */
+    if(!verifyAlloc(s, slen+1)){
+      /* target is unallocated; warn */
+      _output_simple(TCG_RIUM);
+    }
+#endif /* } !TC_VERIFY_INPUT_BUFFER_ALLOC */
+    _setStringTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, s,slen);
+  }
+  return ret;
+}
+
+size_t _typecheck_fread(void * ptr, size_t size, size_t nitems, FILE * stream)
+{
+  size_t ret;
+#ifdef TC_VERIFY_INPUT_BUFFER_ALLOC /* { */
+  if(!verifyAlloc(ptr, size*nitems)){
+    /* target is unallocated; warn */
+    _output_simple(TCFR_RIUM);
+  }
+#endif /* } !TC_VERIFY_INPUT_BUFFER_ALLOC */
+  ret = fread(ptr, size, nitems, stream);
+
+  if(ret){
+
+/* NEW CODE: set to INI tag */
+    _setByteTags(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+                ptr, size*nitems, _typetag_init, _typetag_uninit);
+
+#if 0 /* { OLD CODE: */
+    /* Assumption: this is in order of likelihood */
+    if(size == sizeof(char)){
+      _setStringTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, ptr,nitems-1);
+    } else if(size == sizeof(int)){
+      int i; for(i = 0; i < nitems; ++i)
+               _setScalarTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, ptr,_ctype_int);
+    } else if(size == sizeof(short)){
+      int i; for(i = 0; i < nitems; ++i)
+               _setScalarTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, ptr,_ctype_short);
+    } else if(size == sizeof(long)){
+      int i; for(i = 0; i < nitems; ++i)
+               _setScalarTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, ptr,_ctype_long);
+    } else if(size == sizeof(long long)){
+      int i; for(i = 0; i < nitems; ++i)
+               _setScalarTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, ptr,_ctype_longlong);
+    } else if(size == sizeof(double)){
+      int i; for(i = 0; i < nitems; ++i)
+               _setScalarTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, ptr,_ctype_double);
+    } else if(size == sizeof(float)){
+      int i; for(i = 0; i < nitems; ++i)
+               _setScalarTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, ptr,_ctype_float);
+#ifdef LONGDOUBLE /* { */
+    } else if(size == sizeof(long double)){
+      int i; for(i = 0; i < nitems; ++i)
+               _setScalarTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, ptr,_ctype_longdouble);
+#endif /* } LONGDOUBLE */
+    } else { /* default: char */
+      _setStringTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, ptr,size*nitems-1);
+    }
+#endif /* } if 0  */
+  }
+  return ret;
+}
+
+@
+
+
+1.4
+log
+@Changed fread to set to INI rather than guess type.
+@
+text
+@d12 1
+a12 4
+    if(warnstream){
+      _output_simple(warnstream, TCFG_RIUM);
+      TC_WARN_SIGNAL;
+    }
+d29 1
+a29 4
+      if(warnstream){
+        _output_simple(warnstream, TCG_RIUM);
+        TC_WARN_SIGNAL;
+      }
+d43 1
+a43 4
+    if(warnstream){
+      _output_simple(warnstream, TCFR_RIUM);
+      TC_WARN_SIGNAL;
+    }
+@
+
+
+1.3
+log
+@Moved compile-time flags to tcinternal.h; renamed some to include TC_ prefix.
+@
+text
+@d58 6
+d66 1
+a66 1
+      _setStringTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, ptr,nitems);
+d91 1
+a91 1
+      _setStringTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, ptr,size*nitems);
+d93 1
+@
+
+
+1.2
+log
+@Modified output functions to use _globalErrloc* variables
+which are now set by instr-ast.sml.
+@
+text
+@a0 3
+/* -- suppresses verification of buffer size */
+#define NO_VERIFY_ALLOC
+
+d9 1
+a9 1
+#ifndef NO_VERIFY_ALLOC /* { */
+d17 1
+a17 1
+#endif /* } !NO_VERIFY_ALLOC */
+d29 1
+a29 1
+#ifndef NO_VERIFY_ALLOC /* { */
+d37 1
+a37 1
+#endif /* } !NO_VERIFY_ALLOC */
+d46 1
+a46 1
+#ifndef NO_VERIFY_ALLOC /* { */
+d54 1
+a54 1
+#endif /* } !NO_VERIFY_ALLOC */
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@a15 4
+/*
+      fprintf(warnstream, "[_typecheck_fgets]"
+		"WARNING! Reading into unallocated memory.\n");
+*/
+d23 1
+a23 1
+    _setStringTag("(_typecheck_fgets)",__LINE__,0, s,strlen(s));
+a35 4
+/*
+        fprintf(warnstream, "[_typecheck_gets]"
+		"WARNING! Reading into unallocated memory.\n");
+*/
+d41 1
+a41 1
+    _setStringTag("(_typecheck_gets)",__LINE__,0, s,slen);
+a52 4
+/*
+      fprintf(warnstream, "[_typecheck_fread]"
+		"WARNING! Reading into unallocated memory.\n");
+*/
+d63 1
+a63 1
+      _setStringTag("(_tc_fread)",__LINE__,0, ptr,nitems);
+d66 1
+a66 1
+               _setScalarTag("(tc_fread)",__LINE__,0,ptr,_ctype_int);
+d69 1
+a69 1
+               _setScalarTag("(tc_fread)",__LINE__,0,ptr,_ctype_short);
+d72 1
+a72 1
+               _setScalarTag("(tc_fread)",__LINE__,0,ptr,_ctype_long);
+d75 1
+a75 1
+               _setScalarTag("(tc_fread)",__LINE__,0,ptr,_ctype_longlong);
+d78 1
+a78 1
+               _setScalarTag("(tc_fread)",__LINE__,0,ptr,_ctype_double);
+d81 1
+a81 1
+               _setScalarTag("(tc_fread)",__LINE__,0,ptr,_ctype_float);
+d85 1
+a85 1
+               _setScalarTag("(tc_fread)",__LINE__,0,ptr,_ctype_longdouble);
+d88 1
+a88 1
+      _setStringTag("(_tc_fread)",__LINE__,0, ptr,size*nitems);
+@

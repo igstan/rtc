@@ -1,0 +1,1834 @@
+head	1.38;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+1.38
+date	2004.05.07.19.52.39;	author suan;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2004.05.02.18.26.36;	author suan;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2004.04.14.00.22.35;	author suan;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2004.04.07.21.07.14;	author suan;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2004.04.07.18.02.03;	author suan;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2004.04.07.17.38.56;	author suan;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2004.04.05.18.16.29;	author suan;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2004.03.18.21.21.28;	author suan;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2004.02.24.23.48.16;	author suan;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2004.02.24.19.29.20;	author suan;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2004.02.17.19.24.20;	author suan;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2003.12.11.21.03.59;	author suan;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2003.12.11.18.26.35;	author suan;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2003.10.08.16.31.43;	author suan;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2003.10.01.22.18.32;	author suan;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2003.02.22.00.11.49;	author suan;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2003.02.21.17.40.11;	author suan;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2003.02.14.17.41.44;	author suan;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2003.02.04.20.25.11;	author suan;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2003.02.03.21.55.30;	author suan;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2003.01.21.21.49.51;	author suan;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2003.01.20.19.46.55;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2003.01.20.18.24.37;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2003.01.16.21.19.32;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2003.01.16.17.45.59;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2003.01.15.21.19.39;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2003.01.14.21.51.09;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2003.01.14.21.10.06;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2003.01.13.19.21.54;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2003.01.13.17.39.03;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2003.01.10.16.31.00;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2003.01.09.17.16.56;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.12.24.21.22.32;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.12.23.21.21.14;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.12.21.00.01.06;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.12.20.23.06.38;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.12.20.20.59.32;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.12.20.00.07.02;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Reaching-Defs Analysis (RDA).
+Extends Dataflow Analysis (DFA) class.
+@
+
+
+1.38
+log
+@Changed AO/ECR relationship: added AO::getECR() function
+that is to be called after pt-analysis finalization of
+ECRs -- so, PRIOR to finalization, must use ECR::getECR()
+(as is now done in pta.cpp), but AFTER, must only use
+AO::getECR() which outputs a fatal error message if ECR
+not found.
+@
+text
+@#include <stdio.h>
+#include "ao.h"
+#include "ecr.h"
+#include "cfg.h"
+#include "rda.h"
+#include "flags.h" // for flag_verbose, flag_readable_output
+#include "diag.h" // for TCstats
+
+//----------------------------------
+// REACHING-DEFS ANALYSIS
+//----------------------------------
+
+DFAfact& RDAfact::newClone(bool preserve)
+{
+  RDAfact& nmf = *new RDAfact;
+  nmf.meet(*this, preserve);
+  return nmf;
+}
+
+//-- filter this, placing into ffact all elements that are part of fn->gmod
+// - i.e. this = this \ fn->gmod
+// -      ffact = this intersect fn->gmod
+void RDAfact::filterGmodInto(CFGfunction& fn, RDAfact& ffact)
+{
+  LocAidNode ** tnpp = &this->head;
+  LocAidNode ** rnpp = &ffact.head;
+
+  while(*tnpp){
+    AO * tao = &(*tnpp)->getAO();
+    if(!fn.getGMOD().Contains(*tao)){
+      tnpp = &(*tnpp)->next;
+    } else {
+      //-- advance rnpp
+      while(*rnpp && (&(*rnpp)->getAO() < tao))
+        rnpp = &(*rnpp)->next;
+
+      //-- move node from *tnpp to *rnpp
+      LocAidNode * tmp = *tnpp;
+      *tnpp = tmp->next;
+      tmp->next = *rnpp;
+      *rnpp = tmp;
+    }
+  }
+}
+
+//-- set union
+// - preserve=false means we are free to tamper with df
+// - warnNotLE=true: warn if this has elements not in df
+// - returns true if df has elements not in this
+bool RDAfact::meet(DFAfact& df, bool preserve, bool warnNotLE)
+{
+  RDAfact& mf = (RDAfact&) df;
+
+  if(mf.is_bot){ //- meet with bot: set to bot
+
+    bool ret = !this->is_bot;
+
+    this->is_bot = true;
+    this->clear();
+
+    return ret;
+
+  } else if(this->is_bot) { //- already bot: do nothing
+
+    if(warnNotLE) {
+      fprintf(stderr, "RDA Meet: Higher Than Bottom!: ");
+      mf.debug_dump(stderr);
+    }
+
+    return false;
+
+  } else { //- non-bot meet with non-bot
+
+    //-- copy elements of mf into this
+    LocAidNode ** tnpp = &this->head;
+    LocAidNode * mnp = mf.head;
+
+    bool mf_has_extra = false;
+
+    while(mnp){
+      if(!*tnpp){ //- copy over all remaining nodes in mf
+
+        mf_has_extra = true;
+
+        if(preserve){ //- copy over
+          do {
+            *tnpp = LocAidNode::acquire(*mnp);
+            mnp = mnp->next;
+            tnpp = &(*tnpp)->next;
+          } while(mnp);
+        } else { //- move over
+          *tnpp = mf.head;
+          mnp = mf.head = 0;
+        }
+
+      } else if(&mnp->getAO() < &(*tnpp)->getAO()){ //- copy over
+
+        mf_has_extra = true;
+
+        if(preserve){ //- copy over
+          *tnpp = LocAidNode::acquire(*mnp, *tnpp);
+          mnp = mnp->next;
+          tnpp = &(*tnpp)->next;
+        } else { //- move node(s) over
+          mf.head = mnp->next;
+          mnp->next = *tnpp;
+          *tnpp = mnp;
+          tnpp = &(mnp)->next;
+          mnp = mf.head;
+        }
+
+      } else if(&mnp->getAO() == &(*tnpp)->getAO()){ //- add aids
+
+        LocAidNode * tnp = *tnpp;
+
+        int pre_nelems =  tnp->nodes.Length()
+			+ tnp->args.Length()
+			+ tnp->rets.Length();
+
+        if(preserve){ //- add aids, increment mnp
+          tnp->nodes.Union(mnp->nodes);
+          tnp->args.Union(mnp->args);
+          tnp->rets.Union(mnp->rets);
+          mnp = mnp->next;
+          tnpp = &tnp->next;
+        } else { //- consume aids, delete mnp, reset mf.head
+          tnp->nodes.UnionConsume(mnp->nodes);
+          tnp->args.UnionConsume(mnp->args);
+          tnp->rets.UnionConsume(mnp->rets);
+          mf.head = mnp->next;
+          LocAidNode::dispose(mnp);
+          mnp = mf.head;
+          tnpp = &tnp->next;
+        }
+
+        int post_nelems = tnp->nodes.Length()
+			+ tnp->args.Length()
+			+ tnp->rets.Length();
+   
+        mf_has_extra |= (post_nelems > pre_nelems);
+
+      } else { //- continue
+
+        if(warnNotLE){
+          fprintf(stderr, "RDA Meet: RDAfact Not <=: this has ");
+          (*tnpp)->getAO().dump_descr(stderr);
+          fprintf(stderr, "\n");
+        }
+
+        tnpp = &(*tnpp)->next;
+
+      }
+    }
+
+    return mf_has_extra;
+  }
+}
+
+//-- set intersection
+// - preserve=false means we are free to tamper with df
+void RDAfact::join(DFAfact& df, bool preserve)
+{
+  RDAfact& mf = (RDAfact&) df;
+
+  if(mf.is_bot) { //- join with bot: do nothing
+
+    //- nop
+
+  } else if(this->is_bot) { //- this is bot: set to mf
+
+    this->is_bot = false;
+    this->clear(); //-- redundant
+    this->meet(mf, preserve);
+
+  } else { //- join non-bot with non-bot
+
+    LocAidNode ** tnpp = &this->head;
+    LocAidNode * mnp = mf.head;
+    while(*tnpp){
+      if((!mnp) || (&(*tnpp)->getAO() < &mnp->getAO())){ //- not in mf, delete
+        LocAidNode * del = *tnpp;
+        *tnpp = (*tnpp)->next;
+        LocAidNode::dispose(del);
+      } else if(&(*tnpp)->getAO() == &mnp->getAO()){ //- add aids
+        if(preserve){ //- add aids
+          (*tnpp)->nodes.Union(mnp->nodes);
+          (*tnpp)->args.Union(mnp->args);
+          (*tnpp)->rets.Union(mnp->rets);
+        } else { //- union consume
+          (*tnpp)->nodes.UnionConsume(mnp->nodes);
+          (*tnpp)->args.UnionConsume(mnp->args);
+          (*tnpp)->rets.UnionConsume(mnp->rets);
+        }
+        mnp = mnp->next;
+        tnpp = &(*tnpp)->next;
+      } else { //- continue
+        mnp = mnp->next;
+      }
+    }
+  }
+}
+
+void RDAfact::debug_dump(FILE * outf, bool brief)
+{
+  if(is_bot){
+    fprintf(outf, "bot\n");
+  } else if(brief){
+    int numaos = 0; 
+    int numnodes = 0;
+    int numrets = 0;
+    int numargs = 0;
+    for(LocAidNode * np = this->head; np; np = np->next){
+      numaos++;
+      numnodes += np->nodes.Length();
+      numrets += np->rets.Length();
+      numargs += np->args.Length();
+    }
+    fprintf(outf, "%d aos, %d nodes, %d rets, %d args\n",
+		numaos, numnodes, numrets, numargs);
+  } else {
+    LocAidNode * np;
+    fprintf(outf, "\n");
+    for(np = this->head; np; np = np->next){
+      fprintf(outf, "\t[ ");
+      np->getAO().write_string_rep(outf, true);
+      fprintf(outf, ":");
+      suco_iterator<PgmExpr *> ni(np->nodes);
+      while(ni.Iterate()){
+        switch(ni.Current()->getKind()){
+/*
+          case PgmExpr::fCall: {
+              AID& aid = ((PExprCall *)ni.Current())->getAid();
+              fprintf(outf, " call<%d,%d>", aid.filestem_id, aid.aid);
+            } break;
+*/
+          case PgmExpr::fAssign: {
+              AID& aid = ((PExprAssign *)ni.Current())->getAid();
+              fprintf(outf, " assign<%d,%d>", aid.filestem_id, aid.aid);
+            } break;
+          case PgmExpr::fVerify: {
+              PExprVerify& pv = *(PExprVerify *)ni.Current();
+              AID& aid = pv.getAid();
+              fprintf(outf, " verify%s%s<%d,%d>",
+			pv.getVtKindString(), pv.getVpKindString(),
+			aid.filestem_id, aid.aid);
+            } break;
+          case PgmExpr::fDecl: {
+              fprintf(outf, " decl(");
+              ((PExprDecl *)ni.Current())->getAO().write_string_rep(outf, true);
+              fprintf(outf, ")");
+            } break;
+          default:
+            fprintf(outf, "Invalid PgmExpr recorded in RDAfact:\n");
+            ni.Current()->debug_dump(outf, 2);
+        }
+      }
+      suco_iterator<PExprArg *> ai(np->args);
+      while(ai.Iterate()){
+        AID& aid = ((PExprArg *)ai.Current())->getAid();
+        fprintf(outf, " arg<%d,%d>", aid.filestem_id, aid.aid);
+      }
+      suco_iterator<PgmStmt *> ri(np->rets);
+      while(ri.Iterate()){
+        AID& aid = ((PgmStmt *)ri.Current())->getAid();
+        fprintf(outf, " ret<%d,%d>", aid.filestem_id, aid.aid);
+      }
+      fprintf(outf, " ]\n");
+    }
+  }
+}
+
+//----------------------
+// RDAfactHandler
+
+RDAfactHandler RDAfactHandler::handler;
+
+//- filter out GMOD, then cache local fact!
+void RDAfactHandler::filterCallsiteFacts(PExprCall& dc, DFAfact& df, DFAfact& df_local)
+{
+  RDAfact& rdf = (RDAfact&) df;
+  RDAfact& rdf_local = (RDAfact&) df_local;
+
+  //- 1. move all facts to rdf_local
+  rdf_local.meet(rdf, false);
+
+  //- 2. filter GMOD elements back into rdf
+  suco_iterator<CFGfunction *> tfi(dc.getTargetFns());
+  while(tfi.Iterate())
+    rdf_local.filterGmodInto(*tfi.Current(), rdf);
+
+  //- 3. specially handle call arguments? --no need for RDA
+
+  //- 4. cache local set
+  dc.getRDAlocal().meet(rdf_local);
+}
+
+void RDAfactHandler::interProcFilterEntryFact(DFAfact& df, CFGnode& cn) 
+{
+//-NOP for now
+}
+
+void RDAfactHandler::interProcHandleCallArgs(DFAfact& df, PExprCall& dc)
+{
+//-TODO? or NOP?
+}
+
+void RDAfactHandler::interProcHandleRetvalAssign(DFAfact& df, PExprCall& dc)
+{
+//-TODO? or NOP?
+}
+
+DFAfact& RDAfactHandler::lookupNodeFact(CFGnode& cn, CFGnode * tfSucc)
+{
+  return cn.getRDAfact();
+}
+
+DFAfact& RDAfactHandler::lookupNodeFact(PExprCall& dc)
+{
+  return dc.getRDAfact();
+}
+
+DFAfact& RDAfactHandler::lookupNodeFact(PExprParallel& dp)
+{
+  return dp.getRDAfact();
+}
+
+bool RDAfactHandler::handleStrongAssign(DFAfact& df, AO& lhs, ExpDescr& /*ignored*/,
+				 PgmExpr * dnode, PgmStmt * cnode, PExprArg * arg)
+{
+  RDAfact& rf = (RDAfact&) df;
+  if(lhs.getTSC() >= AO::TSC_EXPOSED){
+    rf.removeFacts(lhs);
+    rf.addFact(lhs, dnode, cnode, arg);
+    return false;
+  } else return true; //- useless
+}
+
+bool RDAfactHandler::handleWeakAssign(DFAfact& df, ExpDescr& lhs, ExpDescr& /*ignored*/, PExprAssign& dnode)
+{
+  RDAfact& rf = (RDAfact&) df;
+  //-- collect lhs's ecrset
+  suco_set<ECR *> ecrset;
+  suco_iterator<AO *> aoi(lhs.getAOs());
+  while(aoi.Iterate())
+    ecrset.Insert(&aoi.Current()->getECR());
+
+  //-- set aual_fact, aual_assign_node
+  RDAfactHandler::aual_fact = &rf;
+  RDAfactHandler::aual_assign_node = &dnode;
+
+  //-- do traversal
+  ECR::traverseSetAliases(ecrset, RDAfactHandler::add_locs_to_aual_fact);
+  return false; //- not useless
+}
+
+bool RDAfactHandler::handleFormal(DFAfact& df, PExprDecl& dd, CFGfunction& parfn, bool interproc)
+{
+  RDAfact& rf = (RDAfact&) df;
+  if(dd.getAO().getTSC() >= AO::TSC_EXPOSED){ //- skip if not safe (optimize)
+    rf.removeFacts(dd.getAO()); //- treat as strong assign
+    rf.addFact(dd.getAO(), &dd, 0, 0);
+    suco_iterator<PExprCall *> csi(parfn.getCallSites());
+    while(csi.Iterate()){
+      PExprArg * arg = csi.Current()->getArg(dd.getArgNo());
+      if(arg) rf.addFact(dd.getAO(), 0, 0, arg);
+    }
+    return false; //- not useless
+  } else return true; //- useless
+}
+
+bool RDAfactHandler::handleReturnStmt(DFAfact& df, PgmStmt& retnode, ExpDescr * retedesc, bool interproc)
+{
+  RDAfact& rf = (RDAfact&) df;
+  CFGfunction& parfn = retnode.getParentFunction();
+  AO& retao = parfn.getId().get_AOFunction().get_AOReturn();
+
+  //- treat as strong assign: Return(Fnid) = retaos
+  rf.removeFacts(retao);
+  rf.addFact(retao, 0, &retnode, 0);
+
+  //- filter out local vars, only if non-recursive
+  if(!parfn.getRecursionId()){
+    suco_iterator<AOId *> lvi(parfn.getLocalVars());
+    while(lvi.Iterate())
+      rf.removeFacts(*lvi.Current());
+  }
+  return false;
+}
+
+bool RDAfactHandler::handleDecl(DFAfact& df, PExprDecl& dd)
+{
+  RDAfact& rf = (RDAfact&) df;
+  if(dd.getAO().getTSC() >= AO::TSC_EXPOSED){  //-- filter safe and tracked AOs
+    rf.removeFacts(dd.getAO()); //-- should not already be there -- assert?
+    rf.addFact(dd.getAO(), &dd);
+    return false; //- not useless
+  } else return true; //- useless
+}
+
+//-- static helpers for handleWeakAssign
+RDAfact * RDAfactHandler::aual_fact = 0;
+PgmExpr * RDAfactHandler::aual_assign_node = 0; //- should never be zero when used
+bool RDAfactHandler::add_locs_to_aual_fact(AO& ao)
+{
+  if(RDAfactHandler::aual_fact && ao.isLoc() && (ao.getTSC() >= AO::TSC_EXPOSED))
+    RDAfactHandler::aual_fact->addFact(ao, RDAfactHandler::aual_assign_node);
+  return true;
+}
+
+//----------------------------------
+
+void RDAfact::clear()
+{
+  LocAidNode * np = this->head;
+  while(np){
+    LocAidNode * del = np;
+    np = np->next;
+    LocAidNode::dispose(del);
+  }
+  this->head = 0;
+}
+
+//- return 0 indicates bottom
+RDAfact::LocAidNode * RDAfact::getFactNode(AO& ao)
+{
+  if(this->is_bot)
+    return 0;
+
+  LocAidNode ** np;
+  for(np = &this->head; *np && (&(*np)->getAO() < &ao); np = &(*np)->next);
+  if(!(*np) || (&(*np)->getAO() != &ao)){ //-- node not found, add new
+    *np = LocAidNode::acquire(ao, *np);
+  }
+  return *np;
+}
+
+void RDAfact::addFact(AO& ao, PgmExpr * dnode, PgmStmt * cnode, PExprArg * arg)
+{
+  LocAidNode * n = getFactNode(ao);
+  if(n){
+    if(dnode) n->nodes.Insert(dnode);
+    if(cnode) n->rets.Insert(cnode);
+    if(arg)   n->args.Insert(arg);
+  }
+}
+
+void RDAfact::copyFacts(AO& idx_ao, AO& ao, RDAfact& mf)
+{
+  LocAidNode * tn = this->getFactNode(idx_ao);
+  LocAidNode * mfn = mf.getFactNode(ao);
+  if(tn && mfn){
+    tn->nodes.Union(mfn->nodes);
+    tn->rets.Union(mfn->rets);
+    tn->args.Union(mfn->args);
+  }
+}
+
+void RDAfact::removeFacts(AO& ao)
+{
+  LocAidNode ** np;
+  for(np = &head; *np && (&(*np)->getAO() < &ao); np = &(*np)->next);
+  if(*np && (&(*np)->getAO() == &ao)){ //-- node found, remove
+    LocAidNode * del = *np;
+    *np = (*np)->next;
+    LocAidNode::dispose(del);
+  }
+}
+
+bool RDAfact::hasKey(AO& ao)
+{
+  if(this->is_bot)
+    return true;
+
+  LocAidNode * np;
+  for(np = this->head; np && (&np->getAO() < &ao); np = np->next);
+  return (np && (&np->getAO() == &ao));
+}
+
+void RDAfact::markAOsExposed()
+{
+  for(LocAidNode * np = this->head; np; np = np->next){
+    np->getAO().getECR().propagateExposed();
+
+    //- find weak assignments; mark their lhs exposed
+    suco_iterator<PgmExpr *> ni(np->nodes);
+    while(ni.Iterate()){
+      if(ni.Current()->getKind() == PgmExpr::fAssign){
+        suco_iterator<AO *> laoi(((PExprAssign *)ni.Current())->getLHS().getAOs());
+        while(laoi.Iterate()){
+          if(!laoi.Current()->isVal()){ //- filter out values
+            laoi.Current()->getECR().propagateExposed();
+          }
+        }
+      }
+    }
+  }
+}
+
+int RDAfact::freelistLength()
+{
+  int i = 0;
+  for(LocAidNode * n = LocAidNode::freelist; n; n = n->next)
+    i++;
+  return i;
+}
+
+void RDAfact::writeResults(FILE * outf)
+{
+  LocAidNode * np;
+  for(np = this->head; np; np = np->next){
+    //-- do nodes
+    suco_iterator<PgmExpr *> ni(np->nodes);
+    while(ni.Iterate()){
+      switch(ni.Current()->getKind()){
+/*
+        case PgmExpr::fCall: {
+            //-- mbu calls: ! <N> u c <int>
+            AID& aid = ((PExprCall *)ni.Current())->getAid();
+            fprintf(outf, "! %d u c %d\n", aid.filestem_id, aid.aid);
+          } break;
+*/
+        case PgmExpr::fAssign: {
+            //-- mbu assigns: ! <N> u g <int>
+            AID& aid = ((PExprAssign *)ni.Current())->getAid();
+            fprintf(outf, "! %d u g %d\n", aid.filestem_id, aid.aid);
+          } break;
+        case PgmExpr::fVerify: {
+            //-- mbu verify: ! <N> u v <int> # vtTag | vtRhs
+            PExprVerify& pv = *(PExprVerify *)ni.Current();
+            AID& aid = pv.getAid();
+            fprintf(outf, "! %d u v %d #%s\n", aid.filestem_id, aid.aid, pv.getVtKindString());
+          } break;
+        case PgmExpr::fDecl: {
+            //-- mbu decls (including formals): ! <N> u d <AO>
+            PExprDecl& dd = *(PExprDecl *)ni.Current();
+            fprintf(outf, "! %d u d ", dd.getFSid());
+            dd.getAO().write_string_rep(outf, flag_readable_output);
+            fprintf(outf, "\n");
+          } break;
+        default:
+          fprintf(stderr, "Invalid PgmExpr recorded in RDAfact:\n");
+          ni.Current()->debug_dump(stderr, 2);
+      }
+    }
+    //-- do args
+    //-- mbu args: ! <N> u a <int>
+    suco_iterator<PExprArg *> ai(np->args);
+    while(ai.Iterate()){
+      AID& aid = ai.Current()->getAid();
+      fprintf(outf, "! %d u a %d\n", aid.filestem_id, aid.aid);
+    }
+    //-- do rets
+    //-- mbu rets: ! <N> u r <int>
+    suco_iterator<PgmStmt *> ri(np->rets);
+    while(ri.Iterate()){
+      AID& aid = ri.Current()->getAid();
+      fprintf(outf, "! %d u r %d\n", aid.filestem_id, aid.aid);
+    }
+  }
+}
+
+//----------------------------------
+// RDAfact::LocAidNode
+
+RDAfact::LocAidNode * RDAfact::LocAidNode::freelist = 0;
+
+RDAfact::LocAidNode * RDAfact::LocAidNode::acquire(AO& o, LocAidNode * nx)
+{
+  LocAidNode * nn;
+
+  if(freelist){
+    TCstats::recy_la_nodes++;
+    nn = freelist;
+    freelist = freelist->next;
+    nn->ao = &o;
+    nn->next = nx;
+  } else {
+    TCstats::new_la_nodes++;
+    nn = new LocAidNode(o, nx);
+  }
+
+  return nn;
+}
+
+RDAfact::LocAidNode * RDAfact::LocAidNode::acquire(LocAidNode& n, LocAidNode * nx)
+{
+  LocAidNode * nn = acquire(n.getAO(), nx);
+  //- deep copy
+  nn->nodes.Copy(n.nodes);
+  nn->args.Copy(n.args);
+  nn->rets.Copy(n.rets);
+  return nn;
+}
+
+void RDAfact::LocAidNode::dispose(LocAidNode * n)
+{
+  if(flag_recycle){
+    n->ao = 0;
+    n->nodes.Clear();
+    n->args.Clear();
+    n->rets.Clear();
+    n->next = freelist;
+    freelist = n;
+  } else {
+    delete n;
+  }
+}
+
+//----------------------------------
+// RDA
+
+bool RDA::isUselessNode(PgmExpr& dn)
+{
+  return dn.RDAisUseless();
+}
+
+bool RDA::isUselessNode(CFGnode& cn)
+{
+  return cn.RDAisUseless();
+}
+
+bool RDA::markUselessNode(PgmExpr& dn)
+{
+  dn.RDAsetUseless();
+  return true;
+}
+
+bool RDA::markUselessNode(CFGnode& cn)
+{
+  cn.RDAsetUseless();
+  return true;
+}
+
+//----------------------------------
+// END
+//----------------------------------
+
+@
+
+
+1.37
+log
+@MAJOR UPDATE:
+- Created new class LocSet to encapsulate a set of
+  locations, used to store GMOD, GREF, and backedge
+  filters.
+  (Previously, was suco_set<AO *>, later changed to
+  suco_set<ECR *>.)
+- Created two versions, one storing AOs, another
+  storing ECRs.  Verified that results are the
+  same, though performance is not (but only when
+  computing backedge filters).
+@
+text
+@d345 1
+a345 2
+    if(aoi.Current()->hasECR())
+      ecrset.Insert(&ECR::getECR(*aoi.Current()));
+d482 1
+a482 1
+    ECR::getECR(np->getAO()).propagateExposed();
+d491 1
+a491 1
+            ECR::getECR(*laoi.Current()).propagateExposed();
+@
+
+
+1.36
+log
+@Major overhaul, to handle function call filtering.
+See dfa.cpp for documentation.
+ - filterRetnodeFact() eliminated; replaced by
+ - interProcHandleRetvalAssign -- responsible for
+   assigning from R X I <fn> to R D I <fp>.
+ - interProcPrepareReturnCollector() -- special
+    pre-processor for indirect calls to set "intersection"
+   AOs to "top".
+ - meetFiltered() -- does meet, but constrained by a
+   window (defined by a function's GREF/MayFree set).
+Supporting changes:
+ - eliminated removeArgIntervalsExceptFor(); rendered obsolete
+   by
+ - filterGrefMayFree() -- called at function entry
+ - RANfact::isTop()
+ - collectAOset, createTopMappings, in support of
+   interProcPrepareReturnCollector()
+ - PExprCall::isDirectCall() and isRecursiveCall()
+ - CFGfunction::GrefOrFreeHeapAffects()
+@
+text
+@d20 4
+a23 4
+//-- filter this, placing into ffact all elements of this in filterset
+// - i.e. this = this \ filterset
+// -      ffact = this intersect filterset
+void RDAfact::filterInto(suco_set<AO *>& filterset, RDAfact& ffact)
+d30 1
+a30 1
+    if(!filterset.Contains(tao)){
+d289 1
+a289 1
+    rdf_local.filterInto(tfi.Current()->getGMOD(), rdf);
+@
+
+
+1.35
+log
+@Added new DFA interface function interProcFilterEntryFact()
+called at each function entry (when doing inter-proc
+analysis).
+@
+text
+@d307 5
+@
+
+
+1.34
+log
+@Changed handleFormal to pass parent-function rather
+than previous "ismain" and "callsites" pair.
+@
+text
+@d297 5
+@
+
+
+1.33
+log
+@Added interProcHandleCallArgs() interface function to
+DFA and all derived classes.
+@
+text
+@d347 1
+a347 1
+bool RDAfactHandler::handleFormal(DFAfact& df, PExprDecl& dd, bool ismain, suco_llist<PExprCall *>& callsites, bool interproc)
+d353 1
+a353 1
+    suco_iterator<PExprCall *> csi(callsites);
+@
+
+
+1.32
+log
+@Semi-bug fix: remember that function return node is
+represented by R F I <fn> not R I <fn>, which was
+not the case, so I've fixed it throughout (occurs
+mainly in handleReturnStmt() in the various analyses).
+
+Also, added AOReturn::getStaticType() as a separate
+function to look up the underlying function's return
+type if staticType is not set;
+added TCfunctionType::getReturnType() accessor to
+assist.
+@
+text
+@d297 5
+@
+
+
+1.31
+log
+@Changed AO::write_string_rep and write_list_string_rep
+to take a "readable" flag.
+So now, flag_readable_output only affects the parts intended
+for machine-reading by sml; the other auxiliary output
+(e.g. via debug_dump, or for longjmp targets) will be
+always readable.
+@
+text
+@d361 1
+a361 1
+  AO& retao = parfn.getId().get_AOReturn();
+@
+
+
+1.30
+log
+@PREVIOUSLY: handleReturnStmt was only called for non-void
+return statements.
+NOW: handleReturnStmt is called for ALL return statements.
+This is needed so analyses can properly handle deallocation
+of local variables.
+OTHER CHANGES:
+ 1. RAN: handleReturnStmt now removes intervals pointing
+    to freedStack ECRs.
+ 2. Interval: changed code for narrow() to be more logically
+    sound?
+@
+text
+@d6 1
+a6 1
+#include "flags.h" // for flag_verbose
+d225 1
+a225 1
+      np->getAO().write_string_rep(outf);
+d249 1
+a249 1
+              ((PExprDecl *)ni.Current())->getAO().write_string_rep(outf);
+d523 1
+a523 1
+            dd.getAO().write_string_rep(outf);
+@
+
+
+1.29
+log
+@Modified handleFormal to pass a flag indicating whether
+the function is "main".  This is needed because main's
+argc/argv formals may need to be initialized differently.
+
+For RAN::handleFormal() - if ismain, then set bottom;
+else do top MEET callsite facts.
+
+For MBU::handleFormal() - *BUG FIX* - was previously calling
+handleStrongAssign(), which was _wrong_ (doesn't correctly
+meet facts from multiple callsites); fixed to do "weak"
+assignment.
+@
+text
+@d357 1
+a357 1
+bool RDAfactHandler::handleReturnStmt(DFAfact& df, PgmStmt& retnode, ExpDescr& retedesc, bool interproc)
+@
+
+
+1.28
+log
+@Small bug fix: in handleReturn, was filtering out locals
+only when recursive, rather than when NOT recursive, as
+was intended.
+@
+text
+@d342 1
+a342 1
+bool RDAfactHandler::handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites, bool interproc)
+@
+
+
+1.27
+log
+@Another change: RETURN argument is now an ExpDescr
+instead of an aoset (as was before); with a corresponding
+change to the argument of handleReturnStmt.
+
+Independently: updated RAN's handleFormal (wrote but
+not tested).
+@
+text
+@d368 1
+a368 1
+  if(parfn.getRecursionId()){
+@
+
+
+1.26
+log
+@Interface update: augmented handleFormal / handleReturnStmt
+with "interproc" flag.
+Not yet used.
+@
+text
+@d357 1
+a357 1
+bool RDAfactHandler::handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos, bool interproc)
+@
+
+
+1.25
+log
+@Added infrastructure for widening/narrowing:
+ - added widen/narrow flag to CFGnode and DFA
+ - added widen/narrow flag to absorbAndCompare to
+   trigger widening/narrowing
+Also, extended lookupNodeFact to take an extra argument:
+a CFGnode to guide lookup of branch successors.
+@
+text
+@d342 1
+a342 1
+bool RDAfactHandler::handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites)
+d357 1
+a357 1
+bool RDAfactHandler::handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos)
+@
+
+
+1.24
+log
+@Changed rhs argument of Assign node from an aolist to an exp-descr
+triplet: <aolist, aff-aolist, estr>.
+Main effect is changing the type of the rhs argument of
+handle[Strong/Weak]Assign from an aoset to an ExpDescr,
+which has been down-propagated to all subclasses.
+@
+text
+@d297 1
+a297 1
+DFAfact& RDAfactHandler::lookupNodeFact(CFGnode& cn)
+@
+
+
+1.23
+log
+@Changed final argument to handleWeakAssign from PgmExpr
+to PExprAssign!
+@
+text
+@d312 1
+a312 1
+bool RDAfactHandler::handleStrongAssign(DFAfact& df, AO& lhs, suco_set<AO *>& /*ignored*/,
+d323 1
+a323 1
+bool RDAfactHandler::handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& /*ignored*/, PExprAssign& dnode)
+@
+
+
+1.22
+log
+@Updated redundant analysis: strong and weak assignments written;
+to do: function calls and result collection.
+Entailed following changes:
+  PExprAssign::getLHS to return ExpDescr instead of AO set.
+  DFA handleWeakAssign's second argument is now ExpDescr rather than AO set.
+  ECR: added helper collectAliasECRs (not tested!)
+@
+text
+@d323 1
+a323 1
+bool RDAfactHandler::handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& /*ignored*/, PgmExpr& dnode)
+@
+
+
+1.21
+log
+@Split dfa.h into mbu.h, rda.h, rdmb.h.
+@
+text
+@d323 1
+a323 1
+bool RDAfactHandler::handleWeakAssign(DFAfact& df, suco_set<AO *>& lhs, suco_set<AO *>& /*ignored*/, PgmExpr& dnode)
+d328 1
+a328 1
+  suco_iterator<AO *> aoi(lhs);
+d474 1
+a474 1
+        suco_iterator<AO *> laoi(((PExprAssign *)ni.Current())->getLHS());
+@
+
+
+1.20
+log
+@Major Design Update (small code change):
+for each weak assignment e = ... that may-be-uninit,
+the AO of e (usuall a deref) will be marked EXPOSED,
+to signify that it will always refer to a mirrored
+location (as opposed to INFLUENTIAL, which marks a
+location for which the update MUST be instrumented).
+Note that marking e exposed will propagate the exposed
+tag to all of e's aliased locations.
+@
+text
+@d5 1
+a5 1
+#include "dfa.h"
+@
+
+
+1.19
+log
+@FIX: RDAfact::meet previously did not return true if
+rhs has a subelement not in this (they both contained a
+key, but rhs had extra elements not in this); this now
+works correctly.
+@
+text
+@d467 1
+a467 1
+  for(LocAidNode * np = this->head; np; np = np->next)
+d469 14
+@
+
+
+1.18
+log
+@Commented out fCall output -- don't believe this is used
+any longer. If it is, the default error message should
+appear.
+@
+text
+@d114 6
+d121 3
+a123 3
+          (*tnpp)->nodes.Union(mnp->nodes);
+          (*tnpp)->args.Union(mnp->args);
+          (*tnpp)->rets.Union(mnp->rets);
+d125 1
+a125 1
+          tnpp = &(*tnpp)->next;
+d127 3
+a129 3
+          (*tnpp)->nodes.UnionConsume(mnp->nodes);
+          (*tnpp)->args.UnionConsume(mnp->args);
+          (*tnpp)->rets.UnionConsume(mnp->rets);
+d133 1
+a133 1
+          tnpp = &(*tnpp)->next;
+d135 6
+@
+
+
+1.17
+log
+@Deleted commented-out old code for handleReturn/handleReturnDealloc.
+@
+text
+@d218 1
+d223 1
+d475 1
+d481 1
+@
+
+
+1.16
+log
+@Significant Update: changed handling of function returns
+ - OLD: was handled at function callsite, split betwee
+        functions handleReturn and handleReturnDealloc
+ - NEW: handled when processing statement, by function
+        handleReturnStmt
+This checkin has old code commented-out; will remove in
+next checkin.
+@
+text
+@a342 20
+/*
+void RDAfactHandler::handleReturn(DFAfact& df, PExprCall& callnode, PgmStmt& retnode, suco_set<AO *>&)
+{
+  RDAfact& rf = (RDAfact&) df;
+  //-- for each function AO, do assign(Return(fao), return value AOs)
+  suco_iterator<AO *> faoi(callnode.getFaos());
+  while(faoi.Iterate()){
+    if(!faoi.Current()->isVal()){
+      //- treat as strong assign
+      rf.removeFacts(faoi.Current()->get_AOReturn());
+      rf.addFact(faoi.Current()->get_AOReturn(), &callnode, &retnode, 0);
+    }
+  }
+//TODO: to optimize, we might try to remove the return AOs from the facts as soon
+//      as possible, which might be complicated (might we need to traverse PARALLELs?)
+//      OTOH: it might be simplest to leave them in (always, in fact), as our
+//            context-insensitivity implies that a Return AO's fact holds always?
+}
+*/
+
+a360 10
+
+/*
+void RDAfactHandler::handleReturnDealloc(DFAfact& df, suco_set<AOId *>& localvars)
+{
+  RDAfact& rf = (RDAfact&) df;
+  suco_iterator<AOId *> lvi(localvars);
+  while(lvi.Iterate())
+    rf.removeFacts(*lvi.Current());
+}
+*/
+@
+
+
+1.15
+log
+@Added MBUc2 skeleton, and wrote handleStrongAssign (though
+evidently not correct); entailed adding RDAfact::hasKey
+helper function.
+@
+text
+@d299 1
+a299 1
+				 PgmExpr& dnode, PgmStmt * cnode, PExprArg * arg)
+d304 1
+a304 1
+    rf.addFact(lhs, &dnode, cnode, arg);
+d343 2
+a344 1
+void RDAfactHandler::handleReturn(DFAfact& df, PExprCall& callnode, PgmStmt& retnode, suco_set<AO *>& /*ignored*/)
+d361 1
+d363 20
+d390 1
+@
+
+
+1.14
+log
+@Major restructuring:
+ 1. added DFAfactHandler class to encapsulate functions
+    that process a DFAfact based on the CFG node.
+    Created a handler for each fact class thusfar
+    (MBU, RDA, cMBU->RDMB)
+ 2. renamed cMBU to RDMB, to represent the pair (RDA,MBU).
+    The collection analysis class is now called RDMBc.
+    Use this new convention for naming?: end in "c" for
+    a "collecting" analysis class (and "a" for "analysis"?)
+@
+text
+@d448 10
+@
+
+
+1.13
+log
+@Systematic change: moved the seven handle_() functions
+from DFAfact to DFA -- this means adding an additional
+DFAfact argument (previously held by "this").
+This change is needed to allow different DFA/BBA classes
+to share the same underlying DFAfact.
+Comment: in this case, C++'s class hierarchy mechanism
+doesn't seem the ideal choice of abstraction!
+@
+text
+@d191 108
+a298 1
+bool RDA::handleStrongAssign(DFAfact& df, AO& lhs, suco_set<AO *>& /*ignored*/,
+d309 1
+a309 1
+bool RDA::handleWeakAssign(DFAfact& df, suco_set<AO *>& lhs, suco_set<AO *>& /*ignored*/, PgmExpr& dnode)
+d320 2
+a321 2
+  RDA::aual_fact = &rf;
+  RDA::aual_assign_node = &dnode;
+d324 1
+a324 1
+  ECR::traverseSetAliases(ecrset, RDA::add_locs_to_aual_fact);
+d328 1
+a328 1
+bool RDA::handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites)
+d343 1
+a343 1
+void RDA::handleReturn(DFAfact& df, PExprCall& callnode, PgmStmt& retnode, suco_set<AO *>& /*ignored*/)
+d361 1
+a361 1
+void RDA::handleReturnDealloc(DFAfact& df, suco_set<AOId *>& localvars)
+d369 1
+a369 1
+bool RDA::handleDecl(DFAfact& df, PExprDecl& dd)
+d379 4
+a382 1
+void RDAfact::debug_dump(FILE * outf, bool brief)
+d384 3
+a386 63
+  if(is_bot){
+    fprintf(outf, "bot\n");
+  } else if(brief){
+    int numaos = 0; 
+    int numnodes = 0;
+    int numrets = 0;
+    int numargs = 0;
+    for(LocAidNode * np = this->head; np; np = np->next){
+      numaos++;
+      numnodes += np->nodes.Length();
+      numrets += np->rets.Length();
+      numargs += np->args.Length();
+    }
+    fprintf(outf, "%d aos, %d nodes, %d rets, %d args\n",
+		numaos, numnodes, numrets, numargs);
+  } else {
+    LocAidNode * np;
+    fprintf(outf, "\n");
+    for(np = this->head; np; np = np->next){
+      fprintf(outf, "\t[ ");
+      np->getAO().write_string_rep(outf);
+      fprintf(outf, ":");
+      suco_iterator<PgmExpr *> ni(np->nodes);
+      while(ni.Iterate()){
+        switch(ni.Current()->getKind()){
+          case PgmExpr::fCall: {
+              AID& aid = ((PExprCall *)ni.Current())->getAid();
+              fprintf(outf, " call<%d,%d>", aid.filestem_id, aid.aid);
+            } break;
+          case PgmExpr::fAssign: {
+              AID& aid = ((PExprAssign *)ni.Current())->getAid();
+              fprintf(outf, " assign<%d,%d>", aid.filestem_id, aid.aid);
+            } break;
+          case PgmExpr::fVerify: {
+              PExprVerify& pv = *(PExprVerify *)ni.Current();
+              AID& aid = pv.getAid();
+              fprintf(outf, " verify%s%s<%d,%d>",
+			pv.getVtKindString(), pv.getVpKindString(),
+			aid.filestem_id, aid.aid);
+            } break;
+          case PgmExpr::fDecl: {
+              fprintf(outf, " decl(");
+              ((PExprDecl *)ni.Current())->getAO().write_string_rep(outf);
+              fprintf(outf, ")");
+            } break;
+          default:
+            fprintf(outf, "Invalid PgmExpr recorded in RDAfact:\n");
+            ni.Current()->debug_dump(outf, 2);
+        }
+      }
+      suco_iterator<PExprArg *> ai(np->args);
+      while(ai.Iterate()){
+        AID& aid = ((PExprArg *)ai.Current())->getAid();
+        fprintf(outf, " arg<%d,%d>", aid.filestem_id, aid.aid);
+      }
+      suco_iterator<PgmStmt *> ri(np->rets);
+      while(ri.Iterate()){
+        AID& aid = ((PgmStmt *)ri.Current())->getAid();
+        fprintf(outf, " ret<%d,%d>", aid.filestem_id, aid.aid);
+      }
+      fprintf(outf, " ]\n");
+    }
+  }
+a461 10
+//-- static helpers for handleWeakAssign
+RDAfact * RDA::aual_fact = 0;
+PgmExpr * RDA::aual_assign_node = 0; //- should never be zero when used
+bool RDA::add_locs_to_aual_fact(AO& ao)
+{
+  if(RDA::aual_fact && ao.isLoc() && (ao.getTSC() >= AO::TSC_EXPOSED))
+    RDA::aual_fact->addFact(ao, RDA::aual_assign_node);
+  return true;
+}
+
+a563 35
+
+//- filter out GMOD, then cache local fact!
+void RDA::filterCallsiteFacts(PExprCall& dc, DFAfact& df, DFAfact& df_local)
+{
+  RDAfact& rdf = (RDAfact&) df;
+  RDAfact& rdf_local = (RDAfact&) df_local;
+
+  //- 1. move all facts to rdf_local
+  rdf_local.meet(rdf, false);
+
+  //- 2. filter GMOD elements back into rdf
+  suco_iterator<CFGfunction *> tfi(dc.getTargetFns());
+  while(tfi.Iterate())
+    rdf_local.filterInto(tfi.Current()->getGMOD(), rdf);
+
+  //- 3. specially handle call arguments? --no need for RDA
+
+  //- 4. cache local set
+  dc.getRDAlocal().meet(rdf_local);
+}
+
+DFAfact& RDA::lookupNodeFact(CFGnode& cn)
+{
+  return cn.getRDAfact();
+}
+
+DFAfact& RDA::lookupNodeFact(PExprCall& dc)
+{
+  return dc.getRDAfact();
+}
+
+DFAfact& RDA::lookupNodeFact(PExprParallel& dp)
+{
+  return dp.getRDAfact();
+}
+@
+
+
+1.12
+log
+@Added RDAfact::markAOsExposed to traverse mbu results
+and mark all "index" AOs (and their aliases) exposed.
+@
+text
+@d191 1
+a191 1
+bool RDAfact::handleStrongAssign(AO& lhs, suco_set<AO *>& /*ignored*/,
+d194 1
+d196 2
+a197 2
+    this->removeFacts(lhs);
+    this->addFact(lhs, &dnode, cnode, arg);
+d202 1
+a202 1
+bool RDAfact::handleWeakAssign(suco_set<AO *>& lhs, suco_set<AO *>& /*ignored*/, PgmExpr& dnode)
+d204 1
+d213 2
+a214 2
+  RDAfact::aual_fact = this;
+  RDAfact::aual_assign_node = &dnode;
+d217 1
+a217 1
+  ECR::traverseSetAliases(ecrset, RDAfact::add_locs_to_aual_fact);
+d221 1
+a221 1
+bool RDAfact::handleFormal(PExprDecl& dd, suco_llist<PExprCall *>& callsites)
+d223 1
+d225 2
+a226 2
+    this->removeFacts(dd.getAO()); //- treat as strong assign
+    this->addFact(dd.getAO(), &dd, 0, 0);
+d230 1
+a230 1
+      if(arg) this->addFact(dd.getAO(), 0, 0, arg);
+d236 1
+a236 1
+void RDAfact::handleReturn(PExprCall& callnode, PgmStmt& retnode, suco_set<AO *>& /*ignored*/)
+d238 1
+d244 2
+a245 2
+      this->removeFacts(faoi.Current()->get_AOReturn());
+      this->addFact(faoi.Current()->get_AOReturn(), &callnode, &retnode, 0);
+d254 1
+a254 1
+void RDAfact::handleReturnDealloc(suco_set<AOId *>& localvars)
+d256 1
+d259 1
+a259 1
+    this->removeFacts(*lvi.Current());
+d262 1
+a262 1
+bool RDAfact::handleDecl(PExprDecl& dd)
+d264 1
+d266 2
+a267 2
+    this->removeFacts(dd.getAO()); //-- should not already be there -- assert?
+    this->addFact(dd.getAO(), &dd);
+d413 3
+a415 3
+RDAfact * RDAfact::aual_fact = 0;
+PgmExpr * RDAfact::aual_assign_node = 0; //- should never be zero when used
+bool RDAfact::add_locs_to_aual_fact(AO& ao)
+d417 2
+a418 2
+  if(RDAfact::aual_fact && ao.isLoc() && (ao.getTSC() >= AO::TSC_EXPOSED))
+    aual_fact->addFact(ao, RDAfact::aual_assign_node);
+@
+
+
+1.11
+log
+@Change of approach: the points-to graph will now contain
+include-edges for function return nodes, so that the alias
+set of Return(Star(exp)) will include Return(Id(foo)) for
+all exp-aliased functions foo.
+This negates previous hack approaches (treating function
+calls as a special case when handling an assignment RHS),
+which have been removed.
+NOTE: the addition of the new include edges is done in
+tca.cpp (TCAstate); perhaps should migrate to a better
+place (pta.cpp?).
+
+Also, cMBU fact-collection now includes non-location objects,
+and the result set will include the reaching-defs of aliases.
+For example, the cMBU result set might now include
+{ *p : defn(i), defn(j) } where i and j are aliases of *p.
+This was previously omitted, erroneously.
+@
+text
+@d392 6
+@
+
+
+1.10
+log
+@Fixed omission: RDA::debug_dump now outputs arg and ret
+(previously, erroneously output nothing).
+@
+text
+@d370 1
+a370 1
+void RDAfact::copyFacts(AO& ao, RDAfact& mf)
+d372 1
+a372 1
+  LocAidNode * tn = this->getFactNode(ao);
+@
+
+
+1.9
+log
+@Expanded verify-kind to have two 3-valued flags:
+verifyTag_kind (vtKind) = Tag, Rhs, None
+verifyPtr_kind (vpKind) = Ptr, PtrW, None
+
+Also, cmbu.cpp has some RHS collection stuff commented out:
+don't think it's necessary now, with verify-ptr/verify-rhs
+handling.
+@
+text
+@d319 4
+a322 1
+      while(ai.Iterate()) fprintf(outf, "", ai.Current());
+d324 4
+a327 1
+      while(ri.Iterate()) fprintf(outf, "", ri.Current());
+@
+
+
+1.8
+log
+@Major fixes:
+1. right-hand-side of assignment now treated as a "use";
+   this is extended to cover formals and returns.
+2. special case (in MBUfact) when handling RHS of assignment:
+   if it is a return node (signifying the result of a call),
+   then a special alias resolution is used, in which
+   for Return(tgt), we find all aliases of tgt that are
+   functions of the form Function(fid), then collect the
+   set of Return(fid)s as  the alias set. Basically --
+   we're normalizing the "MBU holder" to be Return(fid).
+Appears to work on test cases -- the only remaining issue
+to be dealt with: must store additional information signifying
+whether a fact deals with the LHS or RHS of an assignment, as
+they can be independently instrumented.
+@
+text
+@d301 6
+a306 3
+          case PgmExpr::fVT: {
+              AID& aid = ((PExprVerify *)ni.Current())->getAid();
+              fprintf(outf, " verifyTag<%d,%d>", aid.filestem_id, aid.aid);
+d422 5
+a426 4
+        case PgmExpr::fVT: {
+            //-- mbu vts: ! <N> u v <int>
+            AID& aid = ((PExprVerify *)ni.Current())->getAid();
+            fprintf(outf, "! %d u v %d\n", aid.filestem_id, aid.aid);
+@
+
+
+1.7
+log
+@Rewrote filterCallsiteFacts to fix bug: instead of
+"filtering out" local facts, must instead "filter into"
+non-local facts -- to get the union rather than intersect
+of GMOD/GREFs of callees.
+This entailed also renaming and changing definition og
+filterOut() to filterInto().
+
+Additional change: MBUfact::filterCallsiteFacts now accoutns
+for function arguments, including them in the non-local
+facts (since these will be checked when processing formal
+declarations).
+@
+text
+@d192 1
+a192 1
+				 PgmExpr * dnode, PgmStmt * cnode, PExprArg * arg)
+d196 1
+a196 1
+    this->addFact(lhs, dnode, cnode, arg);
+@
+
+
+1.6
+log
+@1. changed GMOD/GREF filtering mechanism -- now controlled
+   by a BBA function, rather than a DFAfact function --
+   this allows BBA-specific choice of filter, and also
+   allows RDA to cache local facts
+2. per above, added RDAlocal cache to PExprCall
+3. added a parent PgmStmt pointer to PgmExpr (previously
+   only defined for PExprCall, as a reference) -- this
+   will allow cMBU to lookup the containing function of
+   any PgmExpr (and will likely be useful later as well).
+   Note that this is a pointer, and may be null for
+   PgmExprs at global scope.
+   Also, current assumption is that all PExprCalls have
+   a non-null parent (asserted during input in one of
+   the read() functions).
+@
+text
+@d20 4
+a23 4
+//-- filter this, placing into df_remainders all elements not in filterset
+// - i.e. this = this intersect filterset
+// -      df_remainders = this \ filterset
+void RDAfact::filterOut(suco_set<AO *>& filterset, RDAfact& df_remainders)
+d26 1
+a26 1
+  LocAidNode ** rnpp = &df_remainders.head;
+d30 1
+a30 1
+    if(filterset.Contains(tao)){
+d509 4
+d515 3
+a517 1
+    rdf.filterOut(tfi.Current()->getGMOD(), rdf_local);
+d519 1
+@
+
+
+1.5
+log
+@Added EXPOSED-filtering to rda;
+also, commented out reaching-def facts from mbu --
+when sure of results, can remove the whole MBUfact::LocAidNode
+mechanism fully.
+@
+text
+@d23 1
+a23 1
+void RDAfact::filterOut(suco_set<AO *>& filterset, DFAfact& df_remainders)
+d26 1
+a26 1
+  LocAidNode ** rnpp = &((RDAfact &)df_remainders).head;
+d502 13
+@
+
+
+1.4
+log
+@Added GMOD/IMOD computation.
+Modified DFA to have different call-filtering modes:
+by GMOD, GREF, or NONE.
+Renamed DFAfact::filter to filterOut (which performs
+the opposite of what filter used to).
+Currently, RDA is GMOD-filtered, MBU and cMBU are
+GREF-filtered.
+@
+text
+@d194 5
+a198 3
+  this->removeFacts(lhs);
+  this->addFact(lhs, dnode, cnode, arg);
+  return false; //- not useless
+d221 10
+a230 8
+  this->removeFacts(dd.getAO()); //- treat as strong assign
+  this->addFact(dd.getAO(), &dd, 0, 0);
+  suco_iterator<PExprCall *> csi(callsites);
+  while(csi.Iterate()){
+    PExprArg * arg = csi.Current()->getArg(dd.getArgNo());
+    if(arg) this->addFact(dd.getAO(), 0, 0, arg);
+  }
+  return false; //- not useless
+d259 5
+a263 3
+  this->removeFacts(dd.getAO()); //-- should not already be there -- assert?
+  this->addFact(dd.getAO(), &dd);
+  return false; //- not useless
+d396 1
+a396 1
+  if(RDAfact::aual_fact && ao.isLoc())
+@
+
+
+1.3
+log
+@Cleaned up a few things:
+ - eliminated dmode (mode_iterating/mode_collecting);
+ - added checkParallelProgress;
+ - migrated absorbAndCompare from DFAfact to DFA;
+ - rewrote fParallel case incorporating these changes;
+ - added a cMBUfact as a member of each CFG node, call,
+   and parallel, so cMBU can also define lookupNodeFact.
+@
+text
+@d20 4
+a23 4
+//-- filter this, placing into df_gref all elements in gref
+// - i.e. this = this \ gref
+// -      df_gref = this intersect gref
+void RDAfact::filter(suco_set<AO *>& gref, DFAfact& df_gref)
+d26 1
+a26 1
+  LocAidNode ** dnpp = &((RDAfact &)df_gref).head;
+d30 6
+a35 10
+    if(gref.Contains(tao)){
+      //-- advance dnpp
+      while(*dnpp && (&(*dnpp)->getAO() < tao))
+        dnpp = &(*dnpp)->next;
+
+      //-- move node from *tnpp to *dnpp
+      LocAidNode * tp = *tnpp;
+      *tnpp = tp->next;
+      tp->next = *dnpp;
+      *dnpp = tp;
+d37 5
+a41 2
+    } else {
+      tnpp = &(*tnpp)->next;
+@
+
+
+1.2
+log
+@Added cMBU class to collect may-be-uninit results (after
+running RDA and MBU); new class is in cmbu.cpp.
+Appears to be working, though a few open issues remain:
+ - lookupNodeFact needs a complement (releaseNodeFact),
+   since cMBU returns a new node (though neither MBU
+   nor RDA do)
+ - mode_iterating/mode_collecting -- should get rid
+   of this flag cleanly
+ - absorbAndCompare -- should obsolesce this, or migrate
+   it to DFA/MBU/RDA
+Longer term:
+ - RDA should use GMOD, but when collecting, will need
+   to refer to GREF.
+@
+text
+@a191 8
+//- compare df with this: if df is lower-than this, return true
+//  then absorb (meet) df into this
+//- (warn=true): if df is not <= this, print warning message
+bool RDAfact::absorbAndCompare(DFAfact& df, bool warn)
+{
+  return this->meet(df, false, warn);
+}
+
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d269 1
+a269 1
+void RDAfact::debug_dump(FILE * outf)
+d273 13
+d364 11
+d402 52
+@

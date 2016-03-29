@@ -1,0 +1,47 @@
+28mar03:
+On the TODO list: do away with clunky tagpos interface?
+Write "optimized" newtags versions when SAME_MIRROR_PAGE?
+This seems to've been done for setByteTags, but not some
+of the other functions.
+
+03may01:
+
+For verifyTag, currently we'll overwrite destination with proper
+type to suppress further warnings *only* if destination was
+unalloc to begin with; else leave the old stuff there. This same
+criterion could be used to decide whether or not to output a
+warning; don't warn if reading unalloc? Tradeoff between safety
+and false positives (incomplete types).
+
+10june00:
+
+Funny logic with mismatch in _copyTag.  Btw, macro CT_NONCHAR in
+tcapi.h does not do the same stuff on type mismatch.  Do we want
+to keep warning on mismatched tag copying?
+
+Should _getTagPos/GET_TAG_BYTE/etc. take an argument telling them
+if they should allocate a new page or not?  I remember it being
+useful somewhere.  The tradeoff is the extra test vs the savings
+in the possibly infrequent cases?
+
+Should _getTagPos/GET_TAG_BYTE/etc. return an argument saying that
+they allocated a new page?  Then the tests for _typetag_unalloc
+could be sped up by assuming that the whole object for which we
+looked up the tag location is in the new page, and so is unalloc.
+
+
+16may00:
+
+pmirror.c, .h: "clean" version without is/ts/ps stuff
+		- an attempt at abstraction is backed up in
+		  pmirror-convoluted.c; as the name implies,
+		  it isn't pretty.
+
+paged_mirror.c, .h: old ((soon to be) obsolete) version
+
+------------------------------------------------------------------------------
+
+Compile time -D flags:
+
+  VERIFY_UNALLOC
+	will output warning when verifying against Unalloc

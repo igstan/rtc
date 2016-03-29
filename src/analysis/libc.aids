@@ -1,0 +1,393 @@
+
+typedef void FILE;
+char *_rtclib_fgets (char *s,int n,FILE *stream)
+{
+  int unknown;
+  {6}{3}*{2}s = {4}unknown;
+  {14}{11}*{10}({8}s+{9}unknown) = {12}unknown;
+  return {16}s;
+}
+char *_rtclib_gets (char *s)
+{
+  int unknown;
+  {24}{21}*{20}s = {22}unknown;
+  {32}{29}*{28}({26}s+{27}unknown) = {30}unknown;
+  return {34}s;
+}
+size_t _rtclib_fread (void *ptr,size_t size,size_t nitems,FILE *stream)
+{
+  int unknown;
+  {43}{40}*{39}((char *) {38}ptr) = {41}unknown;
+  {52}{49}*{48}((char *) {47}({45}ptr+{46}unknown)) = {50}unknown;
+  return {54}unknown;
+}
+int _rtclib_pctn_printf (char const *format,...)
+{
+  int unknown;
+  char *args;
+  {62}{58}args = {61}({59}_tc_varg_dummy,{60}args);
+  {68}{65}*{64}args = {66}0;
+  {76}{73}*{72}({70}args+{71}unknown) = {74}0;
+  return {78}unknown;
+}
+int _rtclib_pctn_fprintf (FILE *stream,char const *format,...)
+{
+  int unknown;
+  char *args;
+  {86}{82}args = {85}({83}_tc_varg_dummy,{84}args);
+  {92}{89}*{88}args = {90}0;
+  {100}{97}*{96}({94}args+{95}unknown) = {98}0;
+  return {102}unknown;
+}
+int _rtclib_sprintf (char *str,char const *format,...)
+{
+  int unknown;
+  char *args;
+  {110}{106}args = {109}({107}_tc_varg_dummy,{108}args);
+  {116}{113}*{112}str = {114}0;
+  {124}{121}*{120}({118}str+{119}unknown) = {122}0;
+  {130}{127}*{126}args = {128}0;
+  {138}{135}*{134}({132}args+{133}unknown) = {136}0;
+  return {140}unknown;
+}
+int _rtclib_snprintf (char *str,size_t size,char const *format,...)
+{
+  int unknown;
+  char *args;
+  {148}{144}args = {147}({145}_tc_varg_dummy,{146}args);
+  {154}{151}*{150}str = {152}0;
+  {162}{159}*{158}({156}str+{157}unknown) = {160}0;
+  {168}{165}*{164}args = {166}0;
+  {176}{173}*{172}({170}args+{171}unknown) = {174}0;
+  return {178}unknown;
+}
+int _rtclib_scanf (char const *format,...)
+{
+  int unknown;
+  char *args;
+  {186}{182}args = {185}({183}_tc_varg_dummy,{184}args);
+  {192}{189}*{188}args = {190}0;
+  {200}{197}*{196}({194}args+{195}unknown) = {198}0;
+  if ({210}{203}(*{202}format)&&{207}(*{206}({204}format+{205}unknown))) 
+    ;
+  return {213}unknown;
+}
+int _rtclib_fscanf (FILE *stream,char const *format,...)
+{
+  int unknown;
+  char *args;
+  {221}{217}args = {220}({218}_tc_varg_dummy,{219}args);
+  {227}{224}*{223}args = {225}0;
+  {235}{232}*{231}({229}args+{230}unknown) = {233}0;
+  if ({245}{238}(*{237}format)&&{242}(*{241}({239}format+{240}unknown))) 
+    ;
+  return {248}unknown;
+}
+int _rtclib_sscanf (char const *str,char const *format,...)
+{
+  int unknown;
+  char *args;
+  {256}{252}args = {255}({253}_tc_varg_dummy,{254}args);
+  {262}{259}*{258}args = {260}0;
+  {270}{267}*{266}({264}args+{265}unknown) = {268}0;
+  if ({280}{273}(*{272}format)&&{277}(*{276}({274}format+{275}unknown))) 
+    ;
+  if ({291}{284}(*{283}str)&&{288}(*{287}({285}str+{286}unknown))) 
+    ;
+  return {294}unknown;
+}
+void _rtclib_free (void *ptr)
+{
+}
+void *_rtclib_memcpy (void *s1,void const *s2,size_t n)
+{
+  int unknown;
+  {306}{302}*{301}((char *) {300}s1) = {305}(*{304}((char *) {303}s2));
+  {318}{312}*{311}((char *) {310}({308}s1+{309}unknown)) = {317}(*{316}((char *) {315}({313}s2+{314}unknown)));
+  return {320}s1;
+}
+void *_rtclib_memmove (void *s1,void const *s2,size_t n)
+{
+  int unknown;
+  {330}{326}*{325}((char *) {324}s1) = {329}(*{328}((char *) {327}s2));
+  {342}{336}*{335}((char *) {334}({332}s1+{333}unknown)) = {341}(*{340}((char *) {339}({337}s2+{338}unknown)));
+  return {344}s1;
+}
+char *_rtclib_strcpy (char *dst,char const *src)
+{
+  int unknown;
+  {352}{349}*{348}dst = {351}(*{350}src);
+  {362}{357}*{356}({354}dst+{355}unknown) = {361}(*{360}({358}src+{359}unknown));
+  return {364}dst;
+}
+char *_rtclib_strncpy (char *dst,char const *src,size_t n)
+{
+  int unknown;
+  {372}{369}*{368}dst = {371}(*{370}src);
+  {382}{377}*{376}({374}dst+{375}unknown) = {381}(*{380}({378}src+{379}unknown));
+  return {384}dst;
+}
+char *_rtclib_strcat (char *dst,char const *src)
+{
+  int unknown;
+  {392}{389}*{388}dst = {391}(*{390}src);
+  {402}{397}*{396}({394}dst+{395}unknown) = {401}(*{400}({398}src+{399}unknown));
+  return {404}dst;
+}
+char *_rtclib_strncat (char *dst,char const *src,size_t n)
+{
+  int unknown;
+  {412}{409}*{408}dst = {411}(*{410}src);
+  {422}{417}*{416}({414}dst+{415}unknown) = {421}(*{420}({418}src+{419}unknown));
+  return {424}dst;
+}
+size_t _rtclib_strxfrm (char *dst,char const *src,size_t n)
+{
+  int unknown;
+  {432}{429}*{428}dst = {431}(*{430}src);
+  {442}{437}*{436}({434}dst+{435}unknown) = {441}(*{440}({438}src+{439}unknown));
+  return {444}unknown;
+}
+void _rtclib_bcopy (void *s,void *d,size_t n)
+{
+  int unknown;
+  {454}{450}*{449}((char *) {448}d) = {453}(*{452}((char *) {451}s));
+  {466}{460}*{459}((char *) {458}({456}d+{457}unknown)) = {465}(*{464}((char *) {463}({461}s+{462}unknown)));
+}
+void _rtclib_bzero (void *s,size_t n)
+{
+  int unknown;
+  {475}{472}*{471}((char *) {470}s) = {473}0;
+  {484}{481}*{480}((char *) {479}({477}s+{478}unknown)) = {482}0;
+}
+void *_rtclib_memset (void *s,int c,size_t n)
+{
+  int unknown;
+  {493}{490}*{489}((char *) {488}s) = {491}c;
+  {502}{499}*{498}((char *) {497}({495}s+{496}unknown)) = {500}c;
+  return {504}s;
+}
+void *_rtclib_memccpy (void *s1,void const *s2,int c,size_t n)
+{
+  int unknown;
+  {514}{510}*{509}((char *) {508}s1) = {513}(*{512}((char *) {511}s2));
+  {526}{520}*{519}((char *) {518}({516}s1+{517}unknown)) = {525}(*{524}((char *) {523}({521}s2+{522}unknown)));
+}
+char *_rtclib_strdup (char const *s1)
+{
+  int unknown;
+  void *_typecheck_malloc ();
+  char *ret={532}(char *) {531}{530}_typecheck_malloc ();
+  {537}{534}*{533}ret = {536}(*{535}s1);
+  {547}{542}*{541}({539}ret+{540}unknown) = {546}(*{545}({543}s1+{544}unknown));
+  return {549}ret;
+}
+char *_rtclib_strchr (char *s,int c)
+{
+  int unknown;
+  return {555}{553}s+{554}unknown;
+}
+char *_rtclib_strrchr (char *s,int c)
+{
+  int unknown;
+  return {561}{559}s+{560}unknown;
+}
+char *_rtclib_strstr (char *s1,char const *s2)
+{
+  int unknown;
+  return {567}{565}s1+{566}unknown;
+}
+char *_rtclib_strtok (char *s1,char const *s2)
+{
+  static char *sp;
+  int unknown;
+  {575}{571}sp = {574}({572}s1+{573}unknown);
+  return {577}sp;
+}
+char *_rtclib_strtok_r (char *s1,char const *s2,char **lasts)
+{
+  int unknown;
+  return {589}{581}s1 ? {584}({582}s1+{583}unknown) : {588}({586}(*{585}lasts)+{587}unknown);
+}
+typedef int nl_item;
+char *_rtclib_nl_langinfo (nl_item item)
+{
+  static char nl_langinfo_static_buffer[{594}1]={{596}(char) {595}99};
+  return {597}nl_langinfo_static_buffer;
+}
+struct _typecheck_stat {
+  unsigned long long st_dev;
+  unsigned short __pad1;
+  unsigned long st_ino;
+  unsigned int st_mode;
+  unsigned int st_nlink;
+  unsigned int st_uid;
+  unsigned int st_gid;
+  unsigned long long st_rdev;
+  unsigned short __pad2;
+  long st_size;
+  long st_blksize;
+  long st_blocks;
+  long st_atime;
+  unsigned long __unused1;
+  long st_mtime;
+  unsigned long __unused2;
+  long st_ctime;
+  unsigned long __unused3;
+  unsigned long __unused4;
+  unsigned long __unused5;
+};
+int _rtclib_stat (char const *path,struct _typecheck_stat *buf)
+{
+  int unknown;
+  if ({603}*{602}path) 
+    ;
+  {610}{607}{606}buf->st_dev = {608}unknown;
+  {616}{613}{612}buf->st_ino = {614}unknown;
+  {622}{619}{618}buf->st_mode = {620}unknown;
+  {628}{625}{624}buf->st_nlink = {626}unknown;
+  {634}{631}{630}buf->st_uid = {632}unknown;
+  {640}{637}{636}buf->st_gid = {638}unknown;
+  {646}{643}{642}buf->st_rdev = {644}unknown;
+  {652}{649}{648}buf->st_size = {650}unknown;
+  {658}{655}{654}buf->st_blksize = {656}unknown;
+  {664}{661}{660}buf->st_blocks = {662}unknown;
+  {670}{667}{666}buf->st_atime = {668}unknown;
+  {676}{673}{672}buf->st_mtime = {674}unknown;
+  {682}{679}{678}buf->st_ctime = {680}unknown;
+  return {684}unknown;
+}
+int _rtclib_lstat (char const *path,struct _typecheck_stat *buf)
+{
+  int unknown;
+  if ({689}*{688}path) 
+    ;
+  {696}{693}{692}buf->st_dev = {694}unknown;
+  {702}{699}{698}buf->st_ino = {700}unknown;
+  {708}{705}{704}buf->st_mode = {706}unknown;
+  {714}{711}{710}buf->st_nlink = {712}unknown;
+  {720}{717}{716}buf->st_uid = {718}unknown;
+  {726}{723}{722}buf->st_gid = {724}unknown;
+  {732}{729}{728}buf->st_rdev = {730}unknown;
+  {738}{735}{734}buf->st_size = {736}unknown;
+  {744}{741}{740}buf->st_blksize = {742}unknown;
+  {750}{747}{746}buf->st_blocks = {748}unknown;
+  {756}{753}{752}buf->st_atime = {754}unknown;
+  {762}{759}{758}buf->st_mtime = {760}unknown;
+  {768}{765}{764}buf->st_ctime = {766}unknown;
+  return {770}unknown;
+}
+int _rtclib_fstat (int fildes,struct _typecheck_stat *buf)
+{
+  int unknown;
+  {778}{775}{774}buf->st_dev = {776}unknown;
+  {784}{781}{780}buf->st_ino = {782}unknown;
+  {790}{787}{786}buf->st_mode = {788}unknown;
+  {796}{793}{792}buf->st_nlink = {794}unknown;
+  {802}{799}{798}buf->st_uid = {800}unknown;
+  {808}{805}{804}buf->st_gid = {806}unknown;
+  {814}{811}{810}buf->st_rdev = {812}unknown;
+  {820}{817}{816}buf->st_size = {818}unknown;
+  {826}{823}{822}buf->st_blksize = {824}unknown;
+  {832}{829}{828}buf->st_blocks = {830}unknown;
+  {838}{835}{834}buf->st_atime = {836}unknown;
+  {844}{841}{840}buf->st_mtime = {842}unknown;
+  {850}{847}{846}buf->st_ctime = {848}unknown;
+  return {852}unknown;
+}
+typedef void time_t;
+struct tm {
+  int tm_sec;
+  int tm_min;
+  int tm_hour;
+  int tm_mday;
+  int tm_mon;
+  int tm_year;
+  int tm_wday;
+  int tm_yday;
+  int tm_isdst;
+};
+char *_rtclib_ctime (time_t const *clock)
+{
+  static char ctime_static_buffer[{858}1]={{860}(char) {859}99};
+  return {861}ctime_static_buffer;
+}
+struct tm *_rtclib_localtime (time_t const *clock)
+{
+  static struct tm localtime_static_buffer;
+  int unknown;
+  {868}{866}{865}localtime_static_buffer.tm_sec = {867}unknown;
+  {873}{871}{870}localtime_static_buffer.tm_min = {872}unknown;
+  {878}{876}{875}localtime_static_buffer.tm_hour = {877}unknown;
+  {883}{881}{880}localtime_static_buffer.tm_mday = {882}unknown;
+  {888}{886}{885}localtime_static_buffer.tm_mon = {887}unknown;
+  {893}{891}{890}localtime_static_buffer.tm_year = {892}unknown;
+  {898}{896}{895}localtime_static_buffer.tm_wday = {897}unknown;
+  {903}{901}{900}localtime_static_buffer.tm_yday = {902}unknown;
+  {908}{906}{905}localtime_static_buffer.tm_isdst = {907}unknown;
+  return {911}&{910}localtime_static_buffer;
+}
+struct tm *_rtclib_gmtime (time_t const *clock)
+{
+  static struct tm gmtime_static_buffer;
+  int unknown;
+  {918}{916}{915}gmtime_static_buffer.tm_sec = {917}unknown;
+  {923}{921}{920}gmtime_static_buffer.tm_min = {922}unknown;
+  {928}{926}{925}gmtime_static_buffer.tm_hour = {927}unknown;
+  {933}{931}{930}gmtime_static_buffer.tm_mday = {932}unknown;
+  {938}{936}{935}gmtime_static_buffer.tm_mon = {937}unknown;
+  {943}{941}{940}gmtime_static_buffer.tm_year = {942}unknown;
+  {948}{946}{945}gmtime_static_buffer.tm_wday = {947}unknown;
+  {953}{951}{950}gmtime_static_buffer.tm_yday = {952}unknown;
+  {958}{956}{955}gmtime_static_buffer.tm_isdst = {957}unknown;
+  return {961}&{960}gmtime_static_buffer;
+}
+char *_rtclib_asctime (struct tm const *tm)
+{
+  static char asctime_static_buffer[{965}1]={{967}(char) {966}99};
+  return {968}asctime_static_buffer;
+}
+char *_rtclib_getpass (char const *prompt)
+{
+  static char getpass_static_buffer[{972}1]={{974}(char) {973}99};
+  return {975}getpass_static_buffer;
+}
+struct hostent {
+  char *h_name;
+  char **h_aliases;
+  int h_addrtype;
+  int h_length;
+  char **h_addr_list;
+};
+struct hostent *_rtclib_gethostbyname (char const *name)
+{
+  static struct hostent gethostbyname_static_buffer;
+  static char h_name_static_buffer[{980}1]={{982}(char) {981}99};
+  static char h_addr_list_string_static_buffer[{983}1]={{985}(char) {984}99};
+  static char *h_addr_list_static_buffer[{986}1]={{987}h_addr_list_string_static_buffer};
+  static char h_aliases_string_static_buffer[{988}1]={{990}(char) {989}99};
+  static char *h_aliases_static_buffer[{991}1]={{992}h_aliases_string_static_buffer};
+  int unknown;
+  {997}{994}{993}gethostbyname_static_buffer.h_name = {995}h_name_static_buffer;
+  {1003}{1000}{999}gethostbyname_static_buffer.h_addr_list = {1001}h_addr_list_static_buffer;
+  {1008}{1006}{1005}gethostbyname_static_buffer.h_addrtype = {1007}unknown;
+  {1013}{1011}{1010}gethostbyname_static_buffer.h_length = {1012}unknown;
+  {1019}{1016}{1015}gethostbyname_static_buffer.h_aliases = {1017}h_aliases_static_buffer;
+  return {1022}&{1021}gethostbyname_static_buffer;
+}
+struct hostent *_rtclib_gethostbyaddr (void const *addr,unsigned int len,int type)
+{
+  static struct hostent gethostbyaddr_static_buffer;
+  static char h_name_static_buffer[{1026}1]={{1028}(char) {1027}99};
+  static char h_addr_list_string_static_buffer[{1029}1]={{1031}(char) {1030}99};
+  static char *h_addr_list_static_buffer[{1032}1]={{1033}h_addr_list_string_static_buffer};
+  static char h_aliases_string_static_buffer[{1034}1]={{1036}(char) {1035}99};
+  static char *h_aliases_static_buffer[{1037}1]={{1038}h_aliases_string_static_buffer};
+  int unknown;
+  {1043}{1040}{1039}gethostbyaddr_static_buffer.h_name = {1041}h_name_static_buffer;
+  {1049}{1046}{1045}gethostbyaddr_static_buffer.h_addr_list = {1047}h_addr_list_static_buffer;
+  {1054}{1052}{1051}gethostbyaddr_static_buffer.h_addrtype = {1053}unknown;
+  {1059}{1057}{1056}gethostbyaddr_static_buffer.h_length = {1058}unknown;
+  {1065}{1062}{1061}gethostbyaddr_static_buffer.h_aliases = {1063}h_aliases_static_buffer;
+  return {1068}&{1067}gethostbyaddr_static_buffer;
+}

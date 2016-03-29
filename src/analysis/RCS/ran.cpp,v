@@ -1,0 +1,6611 @@
+head	1.86;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+1.86
+date	2004.07.01.23.36.01;	author suan;	state Exp;
+branches;
+next	1.85;
+
+1.85
+date	2004.05.27.19.33.42;	author suan;	state Exp;
+branches;
+next	1.84;
+
+1.84
+date	2004.05.16.14.53.22;	author suan;	state Exp;
+branches;
+next	1.83;
+
+1.83
+date	2004.05.12.21.17.22;	author suan;	state Exp;
+branches;
+next	1.82;
+
+1.82
+date	2004.05.10.14.50.59;	author suan;	state Exp;
+branches;
+next	1.81;
+
+1.81
+date	2004.05.08.23.04.16;	author suan;	state Exp;
+branches;
+next	1.80;
+
+1.80
+date	2004.05.07.21.21.52;	author suan;	state Exp;
+branches;
+next	1.79;
+
+1.79
+date	2004.05.07.19.52.39;	author suan;	state Exp;
+branches;
+next	1.78;
+
+1.78
+date	2004.05.02.18.26.36;	author suan;	state Exp;
+branches;
+next	1.77;
+
+1.77
+date	2004.04.14.16.12.19;	author suan;	state Exp;
+branches;
+next	1.76;
+
+1.76
+date	2004.04.14.15.26.53;	author suan;	state Exp;
+branches;
+next	1.75;
+
+1.75
+date	2004.04.14.00.22.35;	author suan;	state Exp;
+branches;
+next	1.74;
+
+1.74
+date	2004.04.08.15.13.07;	author suan;	state Exp;
+branches;
+next	1.73;
+
+1.73
+date	2004.04.07.22.47.58;	author suan;	state Exp;
+branches;
+next	1.72;
+
+1.72
+date	2004.04.07.21.07.14;	author suan;	state Exp;
+branches;
+next	1.71;
+
+1.71
+date	2004.04.07.19.25.59;	author suan;	state Exp;
+branches;
+next	1.70;
+
+1.70
+date	2004.04.07.18.02.03;	author suan;	state Exp;
+branches;
+next	1.69;
+
+1.69
+date	2004.04.07.17.38.56;	author suan;	state Exp;
+branches;
+next	1.68;
+
+1.68
+date	2004.04.06.21.56.32;	author suan;	state Exp;
+branches;
+next	1.67;
+
+1.67
+date	2004.04.06.16.34.06;	author suan;	state Exp;
+branches;
+next	1.66;
+
+1.66
+date	2004.04.06.15.49.53;	author suan;	state Exp;
+branches;
+next	1.65;
+
+1.65
+date	2004.04.06.00.03.55;	author suan;	state Exp;
+branches;
+next	1.64;
+
+1.64
+date	2004.04.05.19.23.36;	author suan;	state Exp;
+branches;
+next	1.63;
+
+1.63
+date	2004.04.05.18.32.21;	author suan;	state Exp;
+branches;
+next	1.62;
+
+1.62
+date	2004.04.05.18.16.54;	author suan;	state Exp;
+branches;
+next	1.61;
+
+1.61
+date	2004.04.02.16.15.41;	author suan;	state Exp;
+branches;
+next	1.60;
+
+1.60
+date	2004.04.02.03.55.41;	author suan;	state Exp;
+branches;
+next	1.59;
+
+1.59
+date	2004.04.02.02.16.47;	author suan;	state Exp;
+branches;
+next	1.58;
+
+1.58
+date	2004.03.29.20.29.06;	author suan;	state Exp;
+branches;
+next	1.57;
+
+1.57
+date	2004.03.29.17.17.32;	author suan;	state Exp;
+branches;
+next	1.56;
+
+1.56
+date	2004.03.29.16.29.36;	author suan;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2004.03.29.02.24.42;	author suan;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2004.03.28.20.53.05;	author suan;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2004.03.27.00.54.21;	author suan;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2004.03.21.20.57.20;	author suan;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2004.03.07.05.30.41;	author suan;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2004.03.04.22.31.16;	author suan;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2004.03.04.20.51.02;	author suan;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2004.03.03.00.43.54;	author suan;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2004.02.25.22.12.54;	author suan;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2004.02.25.17.00.37;	author suan;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2004.02.25.00.48.09;	author suan;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2004.02.24.23.48.16;	author suan;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2004.02.24.21.44.28;	author suan;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2004.02.24.19.29.20;	author suan;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2004.02.24.02.17.35;	author suan;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2004.02.21.22.12.41;	author suan;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2004.02.20.16.56.39;	author suan;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2004.02.19.17.27.02;	author suan;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2004.02.19.15.04.55;	author suan;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2004.02.19.00.39.16;	author suan;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2004.02.18.16.06.52;	author suan;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2003.12.18.17.06.31;	author suan;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2003.12.15.22.58.23;	author suan;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2003.12.12.03.38.39;	author suan;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2003.12.11.21.28.54;	author suan;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2003.12.11.21.03.59;	author suan;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2003.12.11.19.18.20;	author suan;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2003.12.11.18.26.35;	author suan;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2003.12.11.17.31.28;	author suan;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2003.11.14.15.58.36;	author suan;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2003.11.13.00.23.51;	author suan;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2003.11.12.00.10.31;	author suan;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2003.11.07.20.39.42;	author suan;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2003.11.06.21.38.03;	author suan;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2003.10.29.23.12.11;	author suan;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2003.10.28.21.58.37;	author suan;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2003.10.28.20.23.12;	author suan;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2003.10.27.22.41.44;	author suan;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2003.10.24.22.40.50;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2003.10.24.21.09.25;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2003.10.24.16.54.39;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2003.10.23.23.05.54;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2003.10.23.21.04.28;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2003.10.22.23.34.31;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2003.10.22.22.55.57;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2003.10.22.21.41.42;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2003.10.22.21.26.36;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2003.10.21.22.43.44;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2003.10.21.21.34.30;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2003.10.17.23.00.53;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2003.10.16.21.58.46;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.10.16.19.36.01;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.10.10.20.56.42;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.10.10.16.55.55;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.10.09.15.29.52;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Range analysis.
+@
+
+
+1.86
+log
+@RAN: added counter to count number of in-bounds
+dereferences that contain an SDot/UDot ('M') or
+Arrow ('W').
+@
+text
+@#include "cfg.h"
+#include "diag.h"
+#include "ecr.h"
+#include "flags.h"	//for flag_range_collect_stats
+#include <stdlib.h>	//for strtoul
+#include <string.h>	//for strncmp
+
+//----------------------------------
+//- RANfact:
+
+RANfact::~RANfact()
+{
+  clearMap();
+}
+
+DFAfact& RANfact::newClone(bool preserve)
+{
+  RANfact& nrf = *new RANfact;
+  nrf.meet(*this, preserve);
+  return nrf;
+}
+
+void RANfact::setTop()
+{
+  clearMap();
+  is_top = true;
+}
+
+void RANfact::setBottom()
+{
+  clearMap();
+  is_top = false;
+}
+
+bool RANfact::meet(DFAfact& df, bool preserve, bool warnNotLE)
+{
+  return extended_meet((RANfact&) df, preserve, warnNotLE, RAN::WN_MEET);
+}
+
+bool RANfact::extended_meet(RANfact& rf, bool preserve, bool warnNotLE,
+			    enum RAN::wn_mode wn, LocSet * backedge_filter)
+{
+  if(rf.is_top){ //- meet with top: no op
+
+    if(warnNotLE && !this->is_top){
+      fprintf(stderr, "WARNING(RANfact::meet): rf=top, higher than : ");
+      this->debug_dump(stderr);
+    }
+
+    return false; //- unchanged either way!
+
+  } else if(this->is_top){ //- top meet non-top: copy over
+
+    this->is_top = false;
+
+    if(preserve){
+      interval_node ** tnp = &this->map;
+      interval_node * rn = rf.map;
+      while(rn){
+        *tnp = new interval_node(rn->ao, rn->interval, *tnp);
+        tnp = &(*tnp)->next;
+        rn = rn->next;
+      }
+    } else {
+      this->map = rf.map;
+      rf.map = 0;
+    }
+    return true;
+
+  } else { //- non-top meet non-top
+    
+    bool this_changed = false;
+
+    if(wn == RAN::WN_NARROW){ //- Narrowing mode: union interval nodes
+      //- note: this code was pretty much copy-and-pasted from the join() code
+      interval_node ** tnp = &this->map;
+      interval_node ** rnp = &rf.map;
+
+      while(*rnp){
+
+        if((!*tnp) || (&(*tnp)->ao > &(*rnp)->ao)){ //- copy rnp into tnp
+          if((*rnp)->interval.isBottom()){ //- but not if rnp is bottom
+            rnp = &(*rnp)->next;
+          } else {
+            if(preserve){
+              *tnp = new interval_node((*rnp)->ao, (*rnp)->interval, *tnp);
+              rnp = &(*rnp)->next;
+            } else {
+              interval_node * tmp = *rnp;
+              *rnp = tmp->next;
+              tmp->next = *tnp;
+              *tnp = tmp;
+            }
+            this_changed = true;
+            tnp = &(*tnp)->next;
+          }
+        } else if(&(*tnp)->ao == &(*rnp)->ao){ //- do tnp narrow rnp
+
+          this_changed |= (*tnp)->interval.narrow((*rnp)->interval);
+          tnp = &(*tnp)->next;
+          rnp = &(*rnp)->next;
+
+        } else { //- if(&(*tnp)->ao < &(*rnp)->ao) //-skip ahead?
+          //- narrowing: don't delete
+          tnp = &(*tnp)->next;
+        }
+      }
+    } else { //- wn != RAN::NARROW //- Meet or Widen mode: intersect interval nodes
+
+      interval_node ** tnp = &this->map;
+      interval_node * rn = rf.map;
+
+      while(*tnp){
+
+        if((!rn) || (&(*tnp)->ao < &rn->ao)){ //- not in rf, delete
+
+          interval_node * tmp = *tnp;
+          *tnp = (*tnp)->next;
+          delete tmp;
+
+          this_changed = true;
+
+        } else if(&(*tnp)->ao == &rn->ao){ //- interval-meet rn into tnp
+
+           ////////////////////////////////////////
+          // main part                          //
+          if(wn == RAN::WN_WIDEN){ //----widening----
+            if(!backedge_filter || backedge_filter->Contains(rn->ao))
+              this_changed |= (*tnp)->interval.widen(rn->interval);
+            else
+              this_changed |= (*tnp)->interval.meet(rn->interval);
+          } else { //- if(wn = RAN::WN_MEET) //----normal meet----
+            this_changed |= (*tnp)->interval.meet(rn->interval);
+          }
+         //                                    //
+        ////////////////////////////////////////
+
+          //- cleanup if bottom
+          if((*tnp)->interval.isBottom()){
+            interval_node * tmp = *tnp;
+            *tnp = (*tnp)->next;
+            delete tmp;
+          } else {
+            tnp = &(*tnp)->next;
+          }
+          rn = rn->next;
+
+        } else { //- if(&(*tnp)->ao > &rn->ao) //- skip ahead
+          //- todo: if warnNotLE, report
+          rn = rn->next;
+        }
+      }
+    }
+
+    return this_changed;
+  }
+}
+
+void RANfact::join(DFAfact& df, bool preserve)
+{
+  RANfact& rf = (RANfact&) df;
+
+  if(this->is_top){ //- already top: do nothing
+    //- nop
+  } else if(rf.is_top){ //- join with top: set to top
+
+    this->setTop();
+
+  } else { //- non-top join non-top: "union" intervals
+
+    interval_node ** tnp = &this->map;
+    interval_node ** rnp = &rf.map;
+
+    while(*rnp){
+
+      if((!*tnp) || (&(*tnp)->ao > &(*rnp)->ao)){ //- absorb rnp into tnp
+
+        if(preserve){
+          *tnp = new interval_node((*rnp)->ao, (*rnp)->interval, *tnp);
+          rnp = &(*rnp)->next;
+        } else {
+          interval_node * tmp = *rnp;
+          *rnp = tmp->next;
+          tmp->next = *tnp;
+          *tnp = tmp;
+        }
+        tnp = &(*tnp)->next;
+
+      } else if(&(*tnp)->ao == &(*rnp)->ao){ //- interval-join rnp into tnp
+
+        (*tnp)->interval.join((*rnp)->interval);
+
+        tnp = &(*tnp)->next;
+        rnp = &(*rnp)->next;
+
+      } else { //- if(&(*tnp)->ao < &(*rnp)->ao) //- skip ahead
+
+        tnp = &(*tnp)->next;
+
+      }
+    }
+  }
+}
+
+//-----------------------------------------------------------
+// Evaluate the expression ed to get an Interval.
+// The expression is encoded in the pair <es,aoi>,
+// where es is a string representation of the
+// expression (with 'V' and 'S' placeholders for
+// location objects), and aoi iterates a list of
+// abstract objects mapping (in left-to-right order)
+// to the 'V's and 'S' in es.
+//=SY-NOTE: actually no need to differentiate S from V?
+//
+// There are two levels of evaluation:
+// - evalSubexpr: returns the Interval for the expressions.
+// - evalAddrRange: returns the Interval for what the
+//   (lvalue) expression points to.
+//-----------------------------------------------------------
+Interval RANfact::evalExpr(ExpDescr& ed)
+{
+  //- estr is either "@@" or is surrounded by "{}"
+  char * es = ed.getEstr();
+  if(es && *es == '{'){
+    char * str = es+1;
+    suco_iterator<AO *> aoi(ed.getEstrAOs());
+    try {
+      return evalSubexpr(str, aoi);
+    } catch(char * s) {
+      fprintf(stderr, "ERROR(RANfact::evalExpr): parse error at position %d in string %s\n", s - es, es);
+    }
+  }
+  return Interval::Bottom;
+}
+
+//- lookup ed's deref range, for bounds checking
+Interval RANfact::getDerefRangeFor(ExpDescr& ed)
+{
+  //- estr is either "@@" or is surrounded by "{}"
+  char * es = ed.getEstr();
+  if(es && *es == '{'){
+    char * str = es+1;
+    suco_iterator<AO *> aoi(ed.getEstrAOs());
+    try {
+      return evalAddrRange(str, aoi);
+    } catch(char * s) {
+      fprintf(stderr, "ERROR(RANfact::getDerefRangeFor): parse error at position %d in string %s\n", s - es, es);
+    }
+  }
+  return Interval::Bottom;
+}
+
+Interval RANfact::evalAddrRange(char *& s, suco_iterator<AO *>& aoi)
+{
+  switch(*s++){
+    //- non-Lvalues: should never occur
+    case 'A': // AddrOf(exp)
+    case 'I': // IntConst(li)
+    case 'o': // binop(e1,e2), one char
+    case 'O': // binop(e1,e2), two chars
+    case 'p': // Plus/Minus[+-_#=](e1,e2,elty)
+    case 'Q': // QuestionColon(e1,e2,e3)
+    case 'R': // RealConst(r)
+    case 'T': // Cast(ctype,exp)
+    case 'u': // unop(exp), one char
+    case 'U': // unop(exp), two chars
+    case 'Z': // SizeOf(ty)
+      fprintf(stderr, "ERROR(evalAddrRange): rvalue encountered at %s\n", s-1);
+      skipArgs(s, aoi);
+      break;
+
+    case 'B': { // Sub(e1,e2,elty)
+      //- eval(e1) + eval(e2)
+      consume(s, '(');
+      Interval iv1 = evalSubexpr(s, aoi);
+      consume(s, ',');
+      Interval iv2 = evalSubexpr(s, aoi);
+      consume(s, ',');
+      TCtype * cty = TCtype::stringToTy(s, &s);
+      if(!cty) throw s;
+      consume(++s, ')');
+      return iv1.plus(iv2, cty);	//NOTE: if cty is non-trivial, it will
+					//      be leaked.  But we cannot delete
+					//      it, because it _may_ be consumed
+					//	by plus/minus!
+    } break;
+    case 'D': { // Deref(exp)
+      //- eval(exp)
+      consume(s, '(');
+      Interval iv = evalSubexpr(s, aoi);
+      consume(s, ')');
+      return iv;
+    } break;
+    case 'M': { // Member(exp,tylist)
+      //- addr(exp) + offset(name)
+      consume(s, '(');
+      Interval iv = evalAddrRange(s, aoi);
+      consume(s, ',');
+      suco_llist<TCtype *>& tylist = TCtype::stringToTyList(s, &s);
+      consume(++s, ')');
+      iv.adjustStructOffset(tylist);
+      TCtype::deleteTyList(tylist);
+      return iv;
+    } break;
+    case 'S':   // struct/union member atom
+    case 'V': { // Id atom
+      if(aoi.Iterate()){
+        return Interval(*aoi.Current());
+      }
+    } break;
+    case 'W': { // Arrow(exp,tylist)
+      //- eval(exp) + offset(tylist)
+      consume(s, '(');
+      Interval iv = evalSubexpr(s, aoi);
+      consume(s, ',');
+      suco_llist<TCtype *>& tylist = TCtype::stringToTyList(s, &s);
+      consume(++s, ')');
+      iv.adjustStructOffset(tylist);
+      TCtype::deleteTyList(tylist);
+      return iv;
+    } break;
+    default: {
+      fprintf(stderr, "ERROR(evalAddrRange): unrecognized expression type at %s\n", s-1);
+    } break;
+  }
+  return (this->is_top)?(Interval::Top):(Interval::Bottom);
+} // RANfact::evalAddrRange(char *& s, suco_iterator<AO *>& aoi)
+
+Interval RANfact::evalSubexpr(char *& s, suco_iterator<AO *>& aoi, bool skipahead)
+{
+  switch(*s++){
+    case 'A': { // AddrOf(exp)
+      if(skipahead) skipArgs(s, aoi);
+      else {
+        consume(s, '(');
+        Interval iv = evalAddrRange(s, aoi);
+        consume(s, ')');
+        return iv;
+      }
+    } break;
+    case 'B':   // Sub(e1,e2)
+    case 'D':   // Deref(exp)
+    case 'W': { // Arrow(exp,tylist)
+      Interval iv = evalAddrRange(--s, aoi);
+      if(iv.inBounds(false) && iv.tgtAO()){
+        return this->getInterval(*iv.tgtAO());
+      }
+    } break;
+    case 'I': { // IntConst(li)
+      if(skipahead) skipArgs(s, aoi);
+      else {
+        consume(s, '(');
+        int ival = strtoul(s, &s, 10);
+        consume(s, ')');
+        return Interval(ival);
+      }
+    } break;
+    case 'M': { // Member(exp,tylist)
+      //- this case is for exp != loc; when exp == loc, will produce 'S'=struct member object
+      skipArgs(s, aoi);
+    } break;
+    case 'o': { // binop(e1,e2), one char
+      if(skipahead){
+        s++;
+        skipArgs(s, aoi);
+      } else {
+        char op = *s++;       
+
+        consume(s, '(');
+        Interval iv1 = evalSubexpr(s, aoi);
+        consume(s, ',');
+        Interval iv2 = evalSubexpr(s, aoi);
+        consume(s, ')');
+
+        switch(op){
+          case '*': // Times
+            return iv1.times(iv2);
+          case '/': // Divide
+            return iv1.divide(iv2);
+          case '%': // Mod
+            return iv1.modulo(iv2);
+          case '>': // Gt
+          case '<': // Lt
+            break;
+          case '|': // BitOr
+	    //TODO?
+            break;
+          case '&': // BitAnd
+	    //TODO?
+            break;
+          case '^': // BitXor
+	    //TODO?
+            break;
+          default: {
+            fprintf(stderr, "ERROR(evalSubexpr): unrecognized binop %c before %s\n", op, s);
+          } break;
+        }
+      }
+    } break;
+    case 'O': { // binop(e1,e2), two chars
+      if(skipahead){
+        s += 2;
+        skipArgs(s, aoi);
+      } else if(!strncmp(s,">=",2)){ // Gte
+        s += 2;
+        skipArgs(s, aoi);
+      } else if(!strncmp(s,"<=",2)){ // Lte
+        s += 2;
+        skipArgs(s, aoi);
+      } else if(!strncmp(s,"==",2)){ // Eq
+        s += 2;
+        skipArgs(s, aoi);
+      } else if(!strncmp(s,"!=",2)){ // Neq
+        s += 2;
+        skipArgs(s, aoi);
+      } else if(!strncmp(s,"&&",2)){ // And
+        s += 2;
+        skipArgs(s, aoi);
+      } else if(!strncmp(s,"||",2)){ // Or
+        s += 2;
+        skipArgs(s, aoi);
+      } else if(!strncmp(s,"<<",2)){ // Lshift
+        s += 2;
+        skipArgs(s, aoi);
+      } else if(!strncmp(s,">>",2)){ // Rshift
+        s += 2;
+        skipArgs(s, aoi);
+      } else if((!strncmp(s,"*=",2))|| // TimesAssign
+		(!strncmp(s,"/=",2))|| // DivAssign
+		(!strncmp(s,"%=",2))){ // ModAssign
+        //-During evaluation, op-assign are treated as having been effected
+        char op = *s;
+        s += 2;
+
+        consume(s, '(');
+        Interval iv1 = evalSubexpr(s, aoi);
+        consume(s, ',');
+        Interval iv2 = evalSubexpr(s, aoi);
+        consume(s, ')');
+
+        switch(op){
+          case '*': // Times
+            return iv1.times(iv2);
+          case '/': // Divide
+            return iv1.divide(iv2);
+          case '%': // Mod
+            return Interval(0, iv2.minus(Interval(1), &TCtype::tcVoidType).Max());
+          default: {
+            fprintf(stderr, "ERROR(evalSubexpr): unrecognized assign-binop %c before %s\n", op, s);
+          } break;
+        }
+      } else if(!strncmp(s,"^=",2)){ // XorAssign
+        s += 2;
+        skipArgs(s, aoi);
+      } else if(!strncmp(s,"|=",2)){ // OrAssign
+        s += 2;
+        skipArgs(s, aoi);
+      } else if(!strncmp(s,"&=",2)){ // AndAssign
+        s += 2;
+        skipArgs(s, aoi);
+      } else if(!strncmp(s,"=<",2)){ // LshiftAssign
+        s += 2;
+        skipArgs(s, aoi);
+      } else if(!strncmp(s,"=>",2)){ // RshiftAssign
+        s += 2;
+        skipArgs(s, aoi);
+      } else fprintf(stderr, "ERROR(evalSubexpr): unrecognized Binop at %s\n", s);
+    } break;
+    case 'p': { // Plus/Minus[+-_#=](e1,e2,elty)
+      if(skipahead){
+        s++;
+        skipArgs(s, aoi);
+      } else {
+        char op = *s++;       
+
+        consume(s, '(');
+        Interval iv1 = evalSubexpr(s, aoi);
+        consume(s, ',');
+        Interval iv2 = evalSubexpr(s, aoi);
+        consume(s, ',');
+        TCtype * cty = TCtype::stringToTy(s, &s);
+        if(!cty) throw s;
+        consume(++s, ')');
+
+        switch(op){
+          case '+': // Plus
+          case '#': // PlusEquals
+            return iv1.plus(iv2, cty);
+          case '-': // Minus
+          case '=': // MinusEquals
+            return iv1.minus(iv2, cty);
+          case '_': {// Minus (ptr-ptr)
+            return iv1.ptrs_minus(iv2, *cty);
+          } break;
+          default: {
+            fprintf(stderr, "ERROR(evalSubexpr): unrecognized plus/minus binop '%c'\n", op);
+          } break;
+        }
+      }
+    } break;
+    case 'Q': { // QuestionColon(e1,e2,e3)
+      skipArgs(s, aoi);
+    } break;
+    case 'R': { // RealConst(r)
+      skipArgs(s, aoi);
+    } break;
+    case 'S': { // struct/union member atom
+      //- same as 'V' case
+      if(aoi.Iterate() && !skipahead){
+        Interval riv = this->getInterval(*aoi.Current());
+        if(!riv.isBottom()) return riv;
+        else {
+          //- Optimize, assuming char size is 1 byte
+          TCtype * aoty = aoi.Current()->getStaticType();
+          if(aoty && (aoty->getKind() == TCtype::tcChar)){
+            //-- for now, assume either signedness; TODO: handle signedness
+            return Interval(-128,255);
+          }
+        }
+      }
+    } break;
+    case 'T': { // Cast(ctype,exp)
+      if(skipahead) skipArgs(s, aoi);
+      else {
+        consume(s, '(');
+
+        TCtype * cty = TCtype::stringToTy(s, &s);
+        if(!cty) throw s;
+        consume(++s, ',');
+        Interval iv = evalSubexpr(s, aoi);
+        consume(s, ')');
+
+//-TODO: handle type-cast? for now, disregard cast.
+        TCtype::deleteTy(*cty);
+
+        return iv;
+      }
+    } break;
+    case 'u': { // unop(exp), one char
+      if(skipahead){
+        s++;
+        skipArgs(s, aoi);
+      } else {
+        switch(*s++){
+          case '+': { // Uplus
+            consume(s, '(');
+            Interval iv = evalSubexpr(s, aoi);
+            consume(s, ')');
+            return iv;
+          } break;
+          case '!': { // Not
+            skipArgs(s, aoi);
+          } break;
+          case '-': { // Negate
+            consume(s, '(');
+            Interval iv = evalSubexpr(s, aoi);
+            consume(s, ')');
+            return Interval(0).minus(iv, &TCtype::tcVoidType);
+          } break;
+          case '~': { // BitNot
+            skipArgs(s, aoi);
+          } break;
+          default: {
+            fprintf(stderr, "ERROR(evalSubexpr): unrecognized unop at %s\n", s-1);
+          } break;
+        }
+      }
+    } break;
+    case 'U': { // unop(exp), two chars
+      //-During evaluation, Pre/Post Inc/Dec are treated as having been effected
+      if(skipahead){
+        s += 2;
+        skipArgs(s, aoi);
+      } else if((!strncmp(s,"+<",2))|| // PreInc
+		(!strncmp(s,"+>",2))){ // PostInc
+        s += 2;
+        consume(s, '(');
+        Interval iv = evalSubexpr(s, aoi);
+        consume(s, ',');
+        TCtype * cty = TCtype::stringToTy(s, &s);
+        if(!cty) throw s;
+        consume(++s, ')');
+        return iv.plus(Interval(1), cty);
+      } else if((!strncmp(s,"-<",2))|| // PreDec
+		(!strncmp(s,"->",2))){ // PostDec
+        s += 2;
+        consume(s, '(');
+        Interval iv = evalSubexpr(s, aoi);
+        consume(s, ',');
+        TCtype * cty = TCtype::stringToTy(s, &s);
+        if(!cty) throw s;
+        consume(++s, ')');
+        return iv.minus(Interval(1), cty);
+      } else fprintf(stderr, "ERROR(evalSubexpr): unrecognized Unop at %s\n", s);
+    } break;
+    case 'V': { // Id atom, or fncall atom (new)
+      //- same as 'S' case
+      if(aoi.Iterate() && !skipahead){
+        Interval riv = this->getInterval(*aoi.Current());
+        if(!riv.isBottom()) return riv;
+        else {
+          //- Optimize, assuming char size is 1 byte
+          TCtype * aoty = aoi.Current()->getStaticType();
+          if(aoty && (aoty->getKind() == TCtype::tcChar)){
+            //-- for now, assume either signedness; TODO: handle signedness
+            return Interval(-128,255);
+          }
+        }
+      }
+    } break;
+    case 'Z': { // SizeOf(ty)
+      skipArgs(s, aoi);
+    } break;
+    default: {
+      fprintf(stderr, "ERROR(evalSubexpr): unrecognized expression type at %s\n", s-1);
+    } break;
+  }
+  return (this->is_top)?(Interval::Top):(Interval::Bottom);
+} // RANfact::evalSubexpr(char *& s, suco_iterator<AO *>& aoi, bool skipahead)
+
+//-------------------------------------------------------------
+// Evaluates the expression <s,aoi> (see comment at evalExpr())
+// and compare it to the interval iv; then split the dataflow
+// fact pair dfp according to this comparison (true:dfp.fact1,
+// false:dfp.fact2).  If the comparison is inconclusive, merge
+// dfp into one fact.
+// NOTE: the three modes of comparison are eqne(==), ltge(<),
+// and gtle(>); to get the negation, just flip dfp.
+// RETURNS: true if there is a statically-decidable predicate
+//	    (where at least one predicate variable maps to top)
+//-------------------------------------------------------------
+bool RANfact::evalPredExpr(char * s, suco_iterator<AO *>& aoi, enum cfmode mode, Interval iv, DFAfactPair& dfp)
+{
+  bool has_top = false;
+  switch(*s++){
+    //case 'A': // AddrOf(exp)
+//TODO
+    //case 'B': // Sub(e1,e2)
+    //case 'D': // Deref(exp)
+    //case 'I': // IntConst(li)
+    //case 'M': // Member(exp,tylist)
+    case 'p': { // Plus/Minus[+-_#=](e1,e2,elty)
+      char c = *s++;
+      switch(c){
+        case '+':   // Plus
+        case '-':   // Minus
+        case '_': { // Minus (ptr-ptr)
+
+          consume(s, '(');
+          char * s1 = s;
+          suco_iterator<AO *> aoi1(aoi);
+          Interval iv1 = this->evalSubexpr(s, aoi);
+          consume(s, ',');
+          char * s2 = s;
+          suco_iterator<AO *> aoi2(aoi);
+          Interval iv2 = this->evalSubexpr(s, aoi);
+          consume(s, ',');
+          TCtype * cty = TCtype::stringToTy(s, &s);
+          if(!cty) throw s;
+          consume(++s, ')');
+
+          //-- cases: int + int < int   int - int < int
+          //          ptr + int < ptr   ptr - int < ptr   ptr - ptr < int
+          //          ---------------   ---------------   ---------------
+          //          ip1 + ii2 < ip    ip1 - ii2 < ip    p1 - p2  < i
+          //- case A: ip1 < ip - ii2    ip1 < ip  + ii2   p1 < p2 + i
+          //- case B: ii2 < ip - ip1    ii2 > ip1 - ip    p2 > p1 - i
+          // 
+          //- REMEMBER: ptr-arith is now non-commutative, so int+ptr
+          //            must be normalized to ptr+int.
+
+          Interval ivA;
+          Interval ivB;
+          enum cfmode modeB = mode;
+          switch(c){
+            case '+': { // Plus
+              ivA = iv.minus(iv2, cty);
+              ivB = iv.minus(iv1, cty);
+            } break;
+            case '-': { // Minus
+              ivA = iv.plus(iv2, cty);
+              if(cty->getKind() == TCtype::tcVoid){ // plain arith
+                ivB = iv1.minus(iv, cty);
+              } else { // ptr arith
+                ivB = iv1.ptrs_minus(iv, *cty);
+              }
+              modeB = flipmode(mode);
+            } break;
+            case '_': { // Minus (ptr-ptr)
+              ivA = iv2.plus(iv, cty);
+              ivB = iv1.minus(iv, cty);
+              modeB = flipmode(mode);
+            } break;
+          }
+          if(!ivA.isBottom())
+            has_top |= evalPredExpr(s1, aoi1, mode, ivA, dfp);
+          if(!ivB.isBottom())
+            has_top |= evalPredExpr(s2, aoi2, modeB, ivB, dfp);
+
+        } break;
+        case '#':   // PlusEquals
+        case '=': { // MinusEquals
+          //-During predicate evaluation, op-assign are treated as nops
+          // (actually, should never occur in predicate node?)
+/**/      fprintf(stderr, "WARNING(RANfact::evalPredExpr): encountered op-assign in estr %s\n", s);
+          consume(s, '(');
+          has_top |= evalPredExpr(s, aoi, mode, iv, dfp);
+        } break;
+      }
+    } break;
+
+    case 'o': { // binop(e1,e2), one char
+      char c = *s++;
+      switch(c){
+        case '>':   // Gt
+        case '<': { // Lt
+          if((mode == m_eqne) && (iv == Interval(0))){
+
+            consume(s, '(');
+            char * s1 = s;
+            suco_iterator<AO *> aoi1(aoi);
+            Interval iv1 = this->evalSubexpr(s, aoi);
+            consume(s, ',');
+            char * s2 = s;
+            suco_iterator<AO *> aoi2(aoi);
+            Interval iv2 = this->evalSubexpr(s, aoi);
+            consume(s, ')');
+
+            dfp.meetIfPair(RANfactHandler::handler); //- redundant?
+
+            if(!iv2.isBottom()){
+              has_top |= evalPredExpr(s1, aoi1, (c=='<')?m_ltge:m_gtle, iv2, dfp);
+            }
+            if(!iv1.isBottom()){
+              has_top |= evalPredExpr(s2, aoi2, (c=='<')?m_gtle:m_ltge, iv1, dfp);
+            }
+
+            //- REMEMBER: since the outer condition is ==0, we need to do here the complement!
+            dfp.flipFacts(RANfactHandler::handler);
+
+          } //- else skipahead: cannot handle!
+        } break;
+        //case '*': // Times
+        //case '/': // Divide
+        //case '%': // Mod
+        //case '|': // BitOr
+        //case '&': // BitAnd
+        //case '^': // BitXor
+        default: break;
+      }
+    } break;
+    case 'O': { // binop(e1,e2), two chars
+      if((!strncmp(s,">=",2))|| // Gte
+	 (!strncmp(s,"<=",2))|| // Lte
+	 (!strncmp(s,"==",2))|| // Eq
+	 (!strncmp(s,"!=",2))){ // Neq
+
+        char c = *s;
+        s += 2;
+
+        if((mode == m_eqne) && (iv == Interval(0))){
+
+          consume(s, '(');
+          char * s1 = s;
+          suco_iterator<AO *> aoi1(aoi);
+          Interval iv1 = this->evalSubexpr(s, aoi);
+          consume(s, ',');
+          char * s2 = s;
+          suco_iterator<AO *> aoi2(aoi);
+          Interval iv2 = this->evalSubexpr(s, aoi);
+          consume(s, ')');
+
+          dfp.meetIfPair(RANfactHandler::handler); //- redundant?
+
+          //- REMEMBER: since the outer condition is ==0, we need to do here the complement!
+          if(!iv2.isBottom()){
+            switch(c){
+              case '>': has_top |= evalPredExpr(s1, aoi1, m_ltge, iv2, dfp);
+                        break;
+              case '<': has_top |= evalPredExpr(s1, aoi1, m_gtle, iv2, dfp);
+                        break;
+              case '=': dfp.flipFacts(RANfactHandler::handler); //- nop; but left here for symmetry with below
+                        has_top |= evalPredExpr(s1, aoi1, m_eqne, iv2, dfp);
+                        dfp.flipFacts(RANfactHandler::handler);
+                        break;
+              case '!': has_top |= evalPredExpr(s1, aoi1, m_eqne, iv2, dfp);
+                        break;
+            }
+          }
+          if(!iv1.isBottom()){
+            switch(c){
+              case '>': has_top |= evalPredExpr(s2, aoi2, m_gtle, iv1, dfp);
+                        break;
+              case '<': has_top |= evalPredExpr(s2, aoi2, m_ltge, iv1, dfp);
+                        break;
+              case '=': dfp.flipFacts(RANfactHandler::handler);
+                        has_top |= evalPredExpr(s2, aoi2, m_eqne, iv1, dfp);
+                        dfp.flipFacts(RANfactHandler::handler);
+                        break;
+              case '!': has_top |= evalPredExpr(s2, aoi2, m_eqne, iv1, dfp);
+                        break;
+            }
+          }
+        } //- else skipahead: cannot handle!
+      } else if(!strncmp(s,"&&",2)){ // And
+        s += 2;
+        if((mode == m_eqne) && (iv == Interval(0))){
+          consume(s, '(');
+          char * s1 = s;
+          suco_iterator<AO *> aoi1(aoi);
+          this->evalSubexpr(s, aoi, /*skipahead=*/true);
+          consume(s, ',');
+
+          dfp.meetIfPair(RANfactHandler::handler); //- redundant?
+
+          //- to handle (p1 && p2) == 0   equiv  (p1==0) || (p2==0)
+          //  (p1 is s1/aoi1, p2 is s/aoi)
+          //- First, do (p1==0) to get T1/F1
+          has_top |= evalPredExpr(s1, aoi1, m_eqne, Interval(0), dfp);
+
+          DFAfact * t1 = 0;
+          if(dfp.getFact2()){
+            dfp.flipFacts(RANfactHandler::handler);
+            t1 = dfp.getFact2();
+            dfp.resetFact2();
+          } else {
+            t1 = &dfp.getFact1().newClone();
+          }
+
+          //- next, feed F1 into (p2 == 0) to get T2/F2
+          has_top |= evalPredExpr(s, aoi, m_eqne, Interval(0), dfp);
+
+          //- finally, T/F == (T1 meet T2 / F2)
+          dfp.getFact1().meet(*t1, false);
+
+          RANfactHandler::handler.deleteFact(*t1); //- discard t1
+        }
+      } else if(!strncmp(s,"||",2)){ // Or
+        s += 2;
+        if((mode == m_eqne) && (iv == Interval(0))){
+          consume(s, '(');
+          char * s1 = s;
+          suco_iterator<AO *> aoi1(aoi);
+          this->evalSubexpr(s, aoi, /*skipahead=*/true);
+          consume(s, ',');
+
+          dfp.meetIfPair(RANfactHandler::handler); //- redundant?
+
+          //- to handle (p1 || p2) == 0   equiv  (p1==0) && (p2==0)
+          //  (p1 is s1/aoi1, p2 is s/aoi)
+          //- First, do (p1==0) to get T1/F1
+          has_top |= evalPredExpr(s1, aoi1, m_eqne, Interval(0), dfp);
+
+          DFAfact * f1 = 0;
+          if(dfp.getFact2()){
+            f1 = dfp.getFact2();
+            dfp.resetFact2();
+          } else {
+            f1 = &dfp.getFact1().newClone();
+          }
+
+          //- next, feed T1 into (p2 == 0) to get T2/F2
+          has_top |= evalPredExpr(s, aoi, m_eqne, Interval(0), dfp);
+
+          //- finally, T/F == (T2 / F1 meet F2)
+          dfp.splitIfSingle();
+          dfp.getFact2()->meet(*f1, false);
+
+          RANfactHandler::handler.deleteFact(*f1); //- discard f1
+        }
+      // } else if(!strncmp(s,"<<",2)){ // Lshift
+      // } else if(!strncmp(s,">>",2)){ // Rshift
+      } else if((!strncmp(s,"*=",2))|| // TimesAssign
+		(!strncmp(s,"/=",2))|| // DivAssign
+		(!strncmp(s,"%=",2))|| // ModAssign
+		(!strncmp(s,"^=",2))|| // XorAssign
+		(!strncmp(s,"|=",2))|| // OrAssign
+		(!strncmp(s,"&=",2))|| // AndAssign
+		(!strncmp(s,"=<",2))|| // LshiftAssign
+		(!strncmp(s,"=>",2))){ // RshiftAssign
+        //-During predicate evaluation, op-assign are treated as nops
+        // (actually, should never occur in predicate node?)
+/**/    fprintf(stderr, "WARNING(RANfact::evalPredExpr): encountered op-assign in estr %s\n", s);
+        s += 2;
+        consume(s, '(');
+        has_top |= evalPredExpr(s, aoi, mode, iv, dfp);
+      }
+    } break;
+    //case 'Q': // QuestionColon(e1,e2,e3)
+    //case 'R': // RealConst(r)
+    case 'T': { // Cast(ctype,exp)
+      char * es = strchr(s, ',');
+      if(es){
+        consume(es, ',');
+        has_top |= evalPredExpr(es, aoi, mode, iv, dfp);
+      } else {
+        fprintf(stderr, "ERROR(RANfact::evalPredExpr): expecting comma after type in cast string %s\n", s);
+        throw s;
+      }
+    } break;
+    case 'u': { // unop(exp), one char
+      switch(*s++){
+        case '!': { // Not
+          if((mode == m_eqne) && (iv == Interval(0))){
+            consume(s, '(');
+            dfp.meetIfPair(RANfactHandler::handler); //- redundant?
+            has_top |= evalPredExpr(s, aoi, m_eqne, iv, dfp);
+            dfp.flipFacts(RANfactHandler::handler);
+          } //- else skipahead: cannot handle!
+        } break;
+        case '+':{ // Uplus
+          consume(s, '(');
+          has_top |= evalPredExpr(s, aoi, mode, iv, dfp);
+        } break;
+        case '-':{ // Negate
+          consume(s, '(');
+          has_top |= evalPredExpr(s, aoi, flipmode(mode), Interval(0).minus(iv, &TCtype::tcVoidType), dfp);
+        } break;
+        //case '~': // BitNot
+        default: break;
+      }
+    } break;
+    case 'U': { // unop(exp), two chars
+      //-During predicate evaluation Pre/Post Inc/Dec are treated as nops
+      // (actually, should never occur in predicate node?)
+/**/  fprintf(stderr, "WARNING(RANfact::evalPredExpr): encountered pre/post inc/dec in estr %s\n", s);
+      //if(!strncmp(s,"+<",2)) // PreInc
+      //if(!strncmp(s,"+>",2)) // PostInc
+      //if(!strncmp(s,"-<",2)) // PreDec
+      //if(!strncmp(s,"->",2)) // PostDec
+      s += 2;
+      consume(s, '(');
+      has_top |= evalPredExpr(s, aoi, mode, iv, dfp);
+    } break;
+    case 'S':   // struct/union member atom
+    case 'V': { // Id atom
+      if(aoi.Iterate()){
+        AO& ao = *aoi.Current();
+
+        if(!iv.isBottom()){
+          dfp.splitIfSingle();
+          RANfact& trf = (RANfact&) dfp.getFact1();
+          RANfact& frf = (RANfact&) *dfp.getFact2();
+
+//-TODO: this is very hackish, including the Interval(Interval,int,int)
+//	 constructor: find better solution!
+
+          //- compute min/max for true/false branches
+          Interval iv_true, iv_false;
+
+          switch(mode){
+            case m_ltge:
+              iv_true = Interval(iv, Interval::MINUS_INF
+				   , iv.minus(Interval(1), 0).Max());
+              iv_false = Interval(iv, iv.Min()
+				    , Interval::PLUS_INF);
+              break;
+            case m_gtle:
+              iv_true = Interval(iv, iv.plus(Interval(1), 0).Min()
+				   , Interval::PLUS_INF);
+              iv_false = Interval(iv, Interval::MINUS_INF
+				    , iv.Max());
+              break;
+            case m_eqne:
+              iv_true = iv;
+              iv_false.setBottom();
+              break;
+          }
+
+          //- join interval for true branch
+          //NOTE: if ao is a return node, DON'T UPDATE its interval
+          //	  in dfp, because it may be used again, which would
+          //      correspond to a separate call (i.e., return nodes
+          //      are not mutable w.r.t. the analysis).
+          //      So, we'll just check for emptyness (top).
+          if(!iv_true.isBottom()){
+            interval_node ** tin = trf.lookupIntervalPosn(ao);
+            if(*tin && (&(*tin)->ao == &ao)){
+              Interval tmp = (*tin)->interval;
+              Interval& aoiv = (ao.getEnclosingStruct().getKind() == AO::aoReturn)
+				? (tmp) : ((*tin)->interval);
+              Interval old = aoiv;
+              aoiv.cond_intersect(iv_true);
+              if(aoiv.isTop()){
+                has_top = true;
+                if(flag_debug_range_collect_phase){
+                  fprintf(stderr, "ISTOP: ");
+                  ao.write_string_rep(stderr, true);
+                  fprintf(stderr, " -> ");
+                  old.debug_dump(stderr);
+                  fprintf(stderr, " INTERSECT ");
+                  iv_true.debug_dump(stderr);
+                  fprintf(stderr, "\n");
+                }
+              }
+            } else if(ao.dfa_relevant
+			&& (ao.getEnclosingStruct().getKind() != AO::aoReturn)	//- skip if return node
+			&& (!trf.is_top || !iv_true.isTop())){			//- skip if top/top
+              *tin = new interval_node(ao, iv_true, *tin);
+            }
+          }
+
+          //- join interval for false branch
+          if(!iv_false.isBottom()){
+            interval_node ** fin = frf.lookupIntervalPosn(ao);
+            if(*fin && (&(*fin)->ao == &ao)){
+              Interval tmp = (*fin)->interval;
+              Interval& aoiv = (ao.getEnclosingStruct().getKind() == AO::aoReturn)
+				? (tmp) : ((*fin)->interval);
+              Interval old = aoiv;
+              aoiv.cond_intersect(iv_false);
+              if(aoiv.isTop()){
+                has_top = true;
+                if(flag_debug_range_collect_phase){
+                  fprintf(stderr, "ISTOP: ");
+                  ao.write_string_rep(stderr, true);
+                  fprintf(stderr, " -> ");
+                  old.debug_dump(stderr);
+                  fprintf(stderr, " INTERSECT ");
+                  iv_false.debug_dump(stderr);
+                  fprintf(stderr, "\n");
+                }
+              }
+            } else if(ao.dfa_relevant
+			&& (ao.getEnclosingStruct().getKind() == AO::aoReturn)	//- skip if return node
+			&& (!frf.is_top || !iv_false.isTop())){			//- skip if top/top
+              *fin = new interval_node(ao, iv_false, *fin);
+            }
+          }
+        }
+      }
+    } break;
+    //case 'W': // Arrow(exp,tylist)
+    //case 'Z': // SizeOf(ty)
+    default:
+      break;
+  }
+  return has_top;
+} // RANfact::evalPredExpr(char * s, suco_iterator<AO *>& aoi, enum cfmode mode, Interval iv, DFAfactPair& dfp)
+
+void RANfact::consume(char *& s, char c)
+{
+  if(*s == c) s++;
+  else {
+    fprintf(stderr, "ERROR(RANfact::consume): expecting char %c at %s\n", c, s);
+    throw (char *)s;
+  }
+}
+
+//- NOTE: relies on the fact that 'S' and 'V' always refer to AO!
+void RANfact::skipArgs(char *& s, suco_iterator<AO *>& aoi)
+{
+  if(*s == '('){
+    int slevel = 1;
+    while(*++s){
+      if(*s == 'S' || *s == 'V') aoi.Iterate();
+      if(*s == '(') slevel++;
+      if(*s == ')' && !(--slevel)){
+        s++;
+        return;
+      }
+    }
+    fprintf(stderr, "ERROR(RANfact::skipArgs): premature end-of-string\n");
+    throw (char *)s;
+  }
+}
+
+void RANfact::debug_dump(FILE * outf, bool brief)
+{
+  if(this->is_top) fprintf(outf, "top\n");
+  else {
+    fprintf(outf, "\n");
+    interval_node * mp = this->map;
+    while(mp){
+      fprintf(outf, "\t");
+      mp->interval.debug_dump(outf);
+      fprintf(outf, ":");
+      mp->ao.dump_descr(outf);
+      fprintf(outf, "\n");
+      mp = mp->next;
+    }
+  }
+}
+
+RANfact::interval_node ** RANfact::lookupIntervalPosn(AO& ao)
+{
+  interval_node ** mp = &this->map;
+  while((*mp) && (&(*mp)->ao < &ao))
+    mp = &(*mp)->next;
+  return mp;
+}
+
+//- if ao is struct, update componentwise
+void RANfact::updateInterval(AO& ao, Interval iv, TCtype * aoty)
+{
+  if(this->is_top && iv.isTop()) return;
+  this->is_top = false;
+
+  if(!aoty) aoty = ao.getStaticType();
+  if(aoty && aoty->getKind() == TCtype::tcStruct){
+
+    suco_iterator<TCtype *> tli(((TCstructUnionType *)aoty)->getTypeList());
+    suco_llist<TCtype *> tlist;
+    while(tli.Iterate()){
+      tlist.Append(tli.Current());
+      AO * sdao = ao.get_AOSDot(tlist);
+      if(sdao){
+        if(sdao->dfa_relevant){ //- filter
+          this->updateInterval(*sdao, iv, tli.Current());
+        }
+      } else {
+        if(flag_instantiate_structunion){
+/**/      fprintf(stderr, "ERROR(RANfact::updateInterval): aoSdot not found: ao = ");
+/**/      ao.write_string_rep(stderr, true);
+/**/      fprintf(stderr, "  tylist = ");
+/**/      TCtype::write_list_string_rep(tlist, stderr);
+/**/      fprintf(stderr, "\n");
+        }
+      }
+    }
+
+  } else if(aoty && aoty->getKind() == TCtype::tcArray){
+    if(ao.dfa_relevant){ //- filter
+      this->updateInterval(ao, iv, &((TCnumType *)aoty)->getBaseType());
+    }
+  } else {
+    if(ao.dfa_relevant){ //- filter
+      if(iv.isBottom()){
+        deleteInterval(ao);
+      } else {
+        interval_node ** mp = lookupIntervalPosn(ao);
+        if(*mp && (&(*mp)->ao == &ao)){
+          (*mp)->interval = iv;
+        } else {
+          *mp = new interval_node(ao, iv, *mp);
+        }
+      }
+    }
+  }
+}
+
+void RANfact::deleteInterval(AO& ao)
+{
+  interval_node ** mp = lookupIntervalPosn(ao);
+  if(*mp && (&(*mp)->ao == &ao)){
+    interval_node * tmp = *mp;
+    *mp = (*mp)->next;
+    delete tmp;
+  }
+}
+
+Interval RANfact::getInterval(AO& ao)
+{
+  if(this->is_top) return Interval::Top;
+  interval_node * mp = *lookupIntervalPosn(ao);
+  if(mp && (&mp->ao == &ao))
+    return mp->interval;
+  else return Interval::Bottom;
+}
+
+//- for each fact whose ao.ecr is in ecrset, meet with iv
+//TODO: handle top?
+void RANfact::meetIntervals(suco_set<ECR *>& ecrset, Interval iv)
+{
+  interval_node ** mp = &this->map;
+  while(*mp){
+    if(ecrset.Contains(&(*mp)->ao.getECR())){
+      (*mp)->interval.meet(iv); //- meet with iv
+      //- cleanup if bottom
+      if((*mp)->interval.isBottom()){
+        interval_node * tmp = *mp;
+        *mp = (*mp)->next;
+        delete tmp;
+      } else {
+        mp = &(*mp)->next;
+      }
+    } else {
+      mp = &(*mp)->next;
+    }
+  }
+}
+
+void RANfact::removeIntervalsPointingTo(suco_set<ECR *>& tgt_ecrset)
+{
+  interval_node ** mp = &this->map;
+  while(*mp){
+    if((!(*mp)->interval.isNullTgted())	//- not null-targeted
+	&& (((*mp)->interval.tgtAO())	//- do we have "precise" points-to information from the interval?
+	   ? (tgt_ecrset.Contains(&(*mp)->interval.tgtAO()->getECR()))	//- if so: use it
+	   : ((*mp)->ao.getECR().getPointsTo().getAliasECRs().Intersects(tgt_ecrset)))){ //- if not, revert to flow-insens pt-set
+      //- delete interval
+      interval_node * tmp = *mp;
+      *mp = (*mp)->next;
+      delete tmp;
+    } else {
+      mp = &(*mp)->next;
+    }
+  }
+}
+
+//- "Disable" any interval whose target component is ao-based.
+//  Return true if any disabled
+bool RANfact::disableIntervalsWithTarget(AO& ao)
+{
+  bool changed = false;
+  interval_node ** mp = &this->map;
+  while(*mp){
+    changed |= (*mp)->interval.disableIfTargetIsPartOf(ao);
+    if((*mp)->interval.isBottom()){ //- cleanup if bottom
+      interval_node * tmp = *mp;
+      *mp = (*mp)->next;
+      delete tmp;
+    } else {
+      mp = &(*mp)->next;
+    }
+  }
+  return changed;
+}
+
+int RANfact::countIntervals() const
+{
+  int ret = 0;
+  interval_node * n;
+  for(n = this->map; n; n = n->next) ret++;
+  return ret;
+}
+
+void RANfact::clearMap()
+{
+  while(this->map){
+    interval_node * tmp = this->map;
+    this->map = this->map->next;
+    delete tmp;
+  }
+}
+
+//- This is an intertwining of two similar functions with opposite behaviors:
+//  - mode 1: if in_fact != 0, then
+//	Move facts in GREF/GMayFree from this to in_fact.
+//	After, this and in_fact will be disjoint sets whose union
+//	is the original this.
+//	The dual of this function is reconstitute().
+//  - mode 2: if in_fact == 0, then
+//	keep only facts in GREF/GMayFree; delete the rest.
+void RANfact::filterGrefMayFreeInto(CFGfunction& fn, RANfact * in_fact)
+{
+  interval_node ** mp = &this->map;
+  interval_node ** fmp = in_fact?(&in_fact->map):0;
+  while(*mp){
+    if(fn.getGREF().Contains((*mp)->ao) || fn.GFreeHeapAffects((*mp)->ao)){ //- in GREF or GMayFree
+      if(fmp){	//- mode 1: move to in_fact
+        interval_node * tmp = *mp;
+        *mp = (*mp)->next;
+        while(*fmp && (&(*fmp)->ao < &tmp->ao)){
+          fmp = &(*fmp)->next;
+        }
+        //- assume no clash (todo: assert?)
+        tmp->next = *fmp;
+        *fmp = tmp;
+      } else {	//- mode 2: keep
+        mp = &(*mp)->next;
+      }
+    } else { //- not in GREF or GMayFree
+      if(fmp){	//- mode 1: keep
+        mp = &(*mp)->next;
+      } else {	//- mode 2: delete
+        interval_node * tmp = *mp;
+        *mp = (*mp)->next;
+        delete tmp;
+      }
+    }
+  }
+}
+
+//- Do a union of nodes from this and rf_local, which should be disjoint.
+//  NEW: they may not be disjoint with function pointers:
+//	foo1:  call fp -> {bar1,bar2}, gref_cumulative={x,y}
+//	bar1:  gref={x}, but from foo1 callsite, may return {x,y}
+//	foo2:  call bar1, gref={x}
+//		~~> may reconstitute two {y}s
+//  In such a situation, rf_local version should be preferred!
+void RANfact::reconstitute(RANfact& rf_local)
+{
+  interval_node ** tnp = &this->map;
+  interval_node ** rnp = &rf_local.map;
+
+  while(*rnp){
+
+    if((!*tnp) || (&(*tnp)->ao >= &(*rnp)->ao)){ //- copy rnp into tnp
+      if((*tnp) && (&(*tnp)->ao == &(*rnp)->ao)){ //- a clash: delete tnp, then copy rnp into tnp
+        interval_node * tmp = *tnp;
+        *tnp = (*tnp)->next;
+        delete tmp;
+      }
+
+      //- copy rnp into tnp
+      if((*rnp)->interval.isBottom()){ //- but not if rnp is bottom
+        rnp = &(*rnp)->next;
+      } else {
+        interval_node * tmp = *rnp;
+        *rnp = tmp->next;
+        tmp->next = *tnp;
+        *tnp = tmp;
+        tnp = &(*tnp)->next;
+      }
+
+    } else { //- if(&(*tnp)->ao < &(*rnp)->ao) //-skip ahead
+      tnp = &(*tnp)->next;
+    }
+  }
+}
+
+//----------------------------------
+//- RANfactHandler
+
+RANfactHandler RANfactHandler::handler;
+
+DFAfact& RANfactHandler::newTopFact()
+{
+  return *new RANfact;
+}
+
+void RANfactHandler::deleteFact(DFAfact& df)
+{
+  delete (RANfact*) &df;
+}
+
+//- this function filters df into df (cached and used in call node)
+//	and df_local (fallthrough, bypasses call).
+//  the two pieces are recombined by reconstituteFilteredFacts() below.
+//- default behavior is: here, split set into df, df_local, and reconstitute with "meet"
+//- but for RAN, since absense of a fact implies bottom, and the idea behind this filter
+//  is to optimize the number of facts to pass around, we instead do:
+//  - here, split into df and df_local, which must be disjoint sets;
+//    df contains only facts whose AO intersect with the function's GREF*
+//    (*new complication: "intersect with GREF" now means "intersect with GREF or
+//      points to something in GFreeHeap")
+//    -- in effect, the filtered-out facts are converted from "top" to "bottom"
+//    (this is OK since, not being in any GREF, they'll have no effect on the callees).
+//  - below, reconstituteFilteredFacts will do a (disjoint) union of df and
+//    df_local, and will complain if they are not disjoint.
+// (NOTE: old implementation tried to piggyback on NARROW function to do the
+//  reconstitution -- it just made things more complicated.)
+void RANfactHandler::filterCallsiteFacts(PExprCall& dc, DFAfact& df, DFAfact& df_local)
+{
+  RANfact& ranf = (RANfact&) df;
+  RANfact& ranf_local = (RANfact&) df_local;
+  
+  //- 1. move all facts to ranf_local
+  ranf_local.meet(ranf, false);
+
+  //- 2. filter elements satisfying GREF/GFreeHeap constraints back into ranf
+  suco_iterator<CFGfunction *> tfi(dc.getTargetFns());
+  while(tfi.Iterate()){
+    ranf_local.filterGrefMayFreeInto(*tfi.Current(), &ranf);
+  }
+
+  //- ??. remove R D I <fn>
+  //      (previously, could not remove, as it may be an actual argument to this call;
+  //	   but now that args are pre-evaluated, it should no longer be needed)
+  suco_iterator<AO *> faoi(dc.getFaos()); //- note: difference between getFaos and getTargetFns!
+  while(faoi.Iterate()){
+    ranf_local.updateInterval(faoi.Current()->get_AOStar().get_AOReturn(), Interval::Bottom);
+  }
+}
+
+void RANfactHandler::interProcHandleCallArgs(DFAfact& df, PExprCall& dc)
+{
+  RANfact& rf = (RANfact&) df;
+  //- for each tgtfn, assign into F X I <tgtfn>
+  suco_iterator<CFGfunction *> tfi(dc.getTargetFns());
+  while(tfi.Iterate()){
+    AOFunction& tgtfn_ao = (AOFunction&) tfi.Current()->getId().get_AOFunction();
+    int lhs_largno = tgtfn_ao.getLargNo();
+    for(int i = 1; dc.getArg(i); ++i){
+      bool upto_largno = (i <= lhs_largno); //- up to (and including) largno: strong assign; after, weak assign (takes care of varargs)
+      AO * arg_ao = tgtfn_ao.get_AOArg(upto_largno?i:lhs_largno);
+      if(arg_ao){
+        ExpDescr& actual_edesc = dc.getArg(i)->getDesc();
+        //- special handling of structs: precisely handle only if actual is 'S' or 'V'
+        if((!strcmp(actual_edesc.getEstr(),"{S}")) || (!strcmp(actual_edesc.getEstr(),"{V}"))){
+          AO& rhs_ao = *actual_edesc.getEstrAOs().Head();
+          TCtype * sty = rhs_ao.getStaticType();
+          if(sty) rf.handleStructAssign(*arg_ao, *sty, &rhs_ao, upto_largno);
+          else {
+            if(arg_ao->dfa_relevant){ // minor optimization (non-struct, can bypass if irrelevant)
+              Interval actual_iv = rf.evalExpr(actual_edesc);
+              if(!upto_largno && !actual_iv.isBottom()) //- weak-assign!
+                actual_iv.meet(rf.getInterval(*arg_ao));
+              rf.updateInterval(*arg_ao, actual_iv);
+            }
+          }
+        } else {
+          Interval actual_iv = rf.evalExpr(actual_edesc);
+          if(!upto_largno && !actual_iv.isBottom()) //- weak-assign!
+            actual_iv.meet(rf.getInterval(*arg_ao));
+          rf.updateInterval(*arg_ao, actual_iv);
+        }
+      } else {
+        fprintf(stderr, "ERROR(RAN::interProcHandleCallArgs): arg(%d) not found for ", i);
+        tgtfn_ao.dump_descr(stderr);
+        fprintf(stderr, "\n");
+      }
+    }
+  }
+}
+
+void RANfact::collectAOset(suco_set<AO *>& aoset)
+{
+  interval_node * mp = this->map;
+  while(mp){
+    aoset.Insert(&mp->ao);
+    mp = mp->next;
+  }
+}
+
+//- add or set a top-mapped node for each variable in aoset
+//- called by RANfactHandler::interProcPrepareReturnCollector()
+void RANfact::createTopMappings(suco_set<AO *>& aoset)
+{
+  if(aoset.IsEmpty()) return;
+  if(this->is_top) this->is_top = false;
+
+  suco_iterator<AO *> aoi(aoset);
+  while(aoi.Iterate()){
+    this->updateInterval(*aoi.Current(), Interval::Top);
+  }
+}
+
+//- map the following to top:
+//  - a variable that occurs in _ALL_ of dc's return-nodes' facts
+//  - callee retval nodes (R X I <tgtfn>)
+//- these top facts will subsequently be window-meeted with retval
+//  node results.
+void RANfactHandler::interProcPrepareReturnCollector(DFAfact& df, PExprCall& dc)
+{
+  RANfact& rf = (RANfact&) df;
+
+  suco_set<AO *> intersect_aos;
+  suco_set<AO *> retval_aos;
+  bool first_time = true;
+  bool all_top = true;
+
+  suco_iterator<CFGfunction *> tfi(dc.getTargetFns());
+  while(tfi.Iterate()){
+    retval_aos.Insert(&tfi.Current()->getId().get_AOFunction().get_AOReturn());
+    suco_iterator<PgmStmt *> eni(tfi.Current()->getExitNodes());
+    while(eni.Iterate()){
+      CFGnode * retnode = eni.Current()->getCFGactiveNode();
+      //-- meet with return-node fact
+      if(retnode){ //- retnode may be null bblock, if unreachable
+        RANfact& rf_retnode = (RANfact&) this->lookupNodeFact(*retnode);
+        all_top &= rf_retnode.isTop();
+        if(!rf_retnode.isTop()){ //- if node is top, aoset should be "all"
+          if(first_time){
+            first_time = false;
+            rf_retnode.collectAOset(intersect_aos);
+          } else {
+            suco_set<AO *> local_aos;
+            rf_retnode.collectAOset(local_aos);
+            intersect_aos.Intersect(local_aos);
+          }
+        }
+      }
+    }
+  }
+  if(all_top) { //- special treatment: if rhs is all top
+    rf.setTop();
+  } else {
+    rf.createTopMappings(intersect_aos);
+    rf.createTopMappings(retval_aos);
+  }
+}
+
+//- meet df into this, but filter in only facts that are tgtfn_relevant,
+//  namely tgtfn's GREF set (including R X I <tgtfn>) and MayFree set.
+//  For everying outside of this set, keep the old version in this.
+void RANfact::meetFiltered(DFAfact& df, CFGfunction& tgtfn)
+{
+  RANfact& rf = (RANfact&) df;
+
+  if(rf.is_top){ //- meet with top: no op
+    return;
+  } else if(this->is_top){ //- top meet sth = sth (filtered by GREF/GMayFree)
+
+    this->is_top = false;
+    interval_node ** tnp = &this->map;
+    interval_node * rn = rf.map;
+    while(rn){
+      if(tgtfn.getGREF().Contains(rn->ao) || tgtfn.GFreeHeapAffects(rn->ao)){
+        *tnp = new interval_node(rn->ao, rn->interval, *tnp);
+        tnp = &(*tnp)->next;
+      }
+      rn = rn->next;
+    }
+
+  } else { //- non-top meet non-top
+    
+    interval_node ** tnp = &this->map;
+    interval_node * rn = rf.map;
+
+    while(*tnp){
+
+      if((!rn) || (&(*tnp)->ao < &rn->ao)){ //- in this, not in rf
+        if(tgtfn.getGREF().Contains((*tnp)->ao) || tgtfn.GFreeHeapAffects((*tnp)->ao)){ //- if in GREF or GMayFree, delete
+          interval_node * tmp = *tnp;
+          *tnp = (*tnp)->next;
+          delete tmp;
+        } else {
+          tnp = &(*tnp)->next;
+        }
+
+      } else if(&(*tnp)->ao == &rn->ao){ //- interval-meet rn into tnp
+
+        if(tgtfn.getGREF().Contains((*tnp)->ao) || (tgtfn.GFreeHeapAffects((*tnp)->ao))){
+	  //- if in GREF or GMayFree, meet	(check may be redundant)
+          (*tnp)->interval.meet(rn->interval);
+        }
+
+        //- cleanup if bottom
+        if((*tnp)->interval.isBottom()){
+          interval_node * tmp = *tnp;
+          *tnp = (*tnp)->next;
+          delete tmp;
+        } else {
+          tnp = &(*tnp)->next;
+        }
+        rn = rn->next;
+
+      } else { //- if(&(*tnp)->ao > &rn->ao) //- in rf, not in this; skip ahead
+        rn = rn->next;
+      }
+    }
+  }
+}
+
+//- assign to "R D <fao>" from "R X I <tgtfn>"
+//  also, remove "R X I <tgtfn>" mapping
+void RANfactHandler::interProcHandleRetvalAssign(DFAfact& df, PExprCall& dc)
+{
+  RANfact& rf = (RANfact&) df;
+  bool strong_assign = (dc.getTargetFns().Length() == 1);
+
+  //- if weak assign: first, set "R D <fao>" to top
+  if(!strong_assign){
+    suco_iterator<AO *> faoi(dc.getFaos()); //- should usually be singleton
+    while(faoi.Iterate()){
+      rf.updateInterval(faoi.Current()->get_AOStar().get_AOReturn(), Interval::Top);
+    }
+  }
+
+  //- now, iterate over targetfns
+  suco_iterator<CFGfunction *> tfi(dc.getTargetFns());
+  while(tfi.Iterate()){
+
+    AO& retao = tfi.Current()->getId().get_AOFunction().get_AOReturn();
+    TCtype * retty = retao.getStaticType();
+
+    if(retty){
+      suco_iterator<AO *> faoi(dc.getFaos()); //- this should usually be a singleton
+      while(faoi.Iterate()){
+        rf.handleStructAssign(faoi.Current()->get_AOStar().get_AOReturn(), *retty, &retao, strong_assign);
+      }
+    } else {
+      Interval tgtfnr_iv = rf.getInterval(retao);
+      suco_iterator<AO *> faoi(dc.getFaos()); //- this should usually be a singleton
+      while(faoi.Iterate()){
+        rf.updateInterval(faoi.Current()->get_AOStar().get_AOReturn(), tgtfnr_iv);
+      }
+    }
+    //- CLEANUP: can remove "R X I <tgtfn>"
+    rf.updateInterval(retao, Interval::Bottom);
+  }
+}
+
+void RANfactHandler::reconstituteFilteredFacts(DFAfact& df, DFAfact& df_local)
+{
+  RANfact& rf = (RANfact&) df;
+  RANfact& rf_local = (RANfact&) df_local;
+  rf.reconstitute(rf_local);
+}
+
+DFAfact& RANfactHandler::lookupNodeFact(CFGnode& cn, CFGnode * tfSucc)
+{
+  DFAfactPair& dfp = cn.getRANfactPair();
+  if(cn.getNsuccs() == 2){
+    if(cn.getSucc(0) == tfSucc) return dfp.getFact1();
+    if(cn.getSucc(1) == tfSucc && dfp.getFact2()) return *dfp.getFact2();
+  }
+  return dfp.meetIfPair(*this);
+}
+
+DFAfactPair& RANfactHandler::lookupNodeFactPair(CFGnode& cn)
+{
+  return cn.getRANfactPair();
+}
+
+DFAfact& RANfactHandler::lookupNodeFact(PExprCall& dc)
+{
+  return dc.getRANfact();
+}
+
+DFAfact& RANfactHandler::lookupNodeFact(PExprParallel& dp)
+{
+  return dp.getRANfact();
+}
+
+void RANfact::handleStructAssign(AO& lhs, TCtype& lhsty, AO * rhs, bool strong)
+{
+  if(lhsty.getKind() == TCtype::tcStruct){
+    //- struct: must treat as component-wise assignment!
+
+    suco_iterator<TCtype *> tli(((TCstructUnionType &)lhsty).getTypeList());
+    suco_llist<TCtype *> tlist;
+    while(tli.Iterate()){
+      tlist.Append(tli.Current());
+      AO * sdao = lhs.get_AOSDot(tlist);
+      if(sdao){
+        this->handleStructAssign(*sdao, *tli.Current(), rhs?rhs->get_AOSDot(tlist):0, strong);
+      } else {
+        if(flag_instantiate_structunion){
+/**/      fprintf(stderr, "ERROR(RANfact::handleStructAssign): aoSdot not found: ao = ");
+/**/      lhs.write_string_rep(stderr, true);
+/**/      fprintf(stderr, "  tylist = ");
+/**/      TCtype::write_list_string_rep(tlist, stderr);
+/**/      fprintf(stderr, "\n");
+        }
+      }
+    }
+
+  } else if(lhsty.getKind() == TCtype::tcArray){
+    //- array: weak assign!
+    this->handleStructAssign(lhs, ((TCnumType &)lhsty).getBaseType(), rhs, false);
+  } else {
+    //- non-struct non-array: do the assignment here
+    if(lhs.dfa_relevant){ // minor optimization (non-struct, can bypass if irrelevant)
+      Interval rhs_iv = rhs?(this->getInterval(*rhs)):(Interval::Bottom);
+      if(!strong && !rhs_iv.isBottom())
+        rhs_iv.meet(this->getInterval(lhs));
+      this->updateInterval(lhs, rhs_iv);
+    }
+  }
+}
+
+bool RANfactHandler::handleStrongAssign(DFAfact& df, AO& lhs, ExpDescr& rhs,
+			    PgmExpr * dnode, PgmStmt * cnode, PExprArg * arg)
+{
+  RANfact& rf = (RANfact&) df;
+
+  TCtype * lhsty = lhs.getStaticType();
+  if(lhsty && (lhsty->getKind() == TCtype::tcStruct)){
+    //- struct: must treat as component-wise assignment!
+
+    //- precisely handle only if RHS is S or V
+    AO * rhs_ao = 0;
+    if((!strcmp(rhs.getEstr(),"{S}")) || (!strcmp(rhs.getEstr(),"{V}")))
+      rhs_ao = rhs.getEstrAOs().Head();
+
+    rf.handleStructAssign(lhs, *lhsty, rhs_ao, true);
+
+  } else { //- non-struct case
+    rf.updateInterval(lhs, rf.evalExpr(rhs));
+  }
+  return false; //- not useless
+}
+
+bool RANfactHandler::handleWeakAssign(DFAfact& df, ExpDescr& lhs, ExpDescr& rhs, PExprAssign& dnode)
+{
+  RANfact& rf = (RANfact&) df;
+
+  //- collect lhs ecrset
+  suco_set<ECR *>& lecrset = lhs.getAliasECRs();
+  Interval riv = rf.evalExpr(rhs);
+  rf.meetIntervals(lecrset, riv);
+
+  return false; //- not useless
+}
+
+bool RANfactHandler::handleFormal(DFAfact& df, PExprDecl& dd, CFGfunction& parfn, bool interproc)
+{
+  if(interproc){
+    RANfact& rf = (RANfact&) df;
+
+    if(!strcmp(parfn.getId().getPid().getname(),".main")){ //- main function formals: map to bottom
+      rf.updateInterval(dd.getAO(), Interval::Bottom);
+    } else {
+      //- NOTE: vararg taken care of at callsite (see interProcHandleCallArgs())
+      AO * argao = parfn.getId().get_AOFunction().get_AOArg(dd.getArgNo());
+      if(argao){
+        TCtype * sty = dd.getAO().getStaticType();
+        if(sty){
+          rf.handleStructAssign(dd.getAO(), *sty, argao, true);
+        } else {
+	  //-- (currently: ellipses have no static type)
+          if(dd.getAO().dfa_relevant){ // minor optimization (non-struct, can bypass if irrelevant)
+            rf.updateInterval(dd.getAO(), rf.getInterval(*argao));
+          }
+        }
+        //-CLEANUP: delete argao from rf, as it's no longer needed!
+        rf.updateInterval(*argao, Interval::Bottom);
+      } else {
+        fprintf(stderr, "ERROR(RAN::handleFormal): arg(%d) not found for ", dd.getArgNo());
+        parfn.getId().get_AOFunction().dump_descr(stderr);
+        fprintf(stderr, "\n");
+      }
+    }
+    return false; //- false=not useless
+
+  } else { //- intraproc: ignore formal (better yet: remove from df?)
+    return true; //- true=useless
+  }
+}
+
+bool RANfactHandler::handleReturnStmt(DFAfact& df, PgmStmt& retnode, ExpDescr * retedesc, bool interproc)
+{
+  if(interproc){
+    RANfact& rf = (RANfact&) df;
+    if(retedesc){
+      //- redirect to handleStrongAssign
+      this->handleStrongAssign(df, retnode.getParentFunction().getId().get_AOFunction().get_AOReturn(), *retedesc, 0, 0, 0);
+    }
+
+    //- cleanup: remove return nodes except R X I <parfn>
+    rf.removeRetIntervalsExcept(&retnode.getParentFunction().getId().get_AOFunction());
+
+    //- handle deallocation:
+    //  1. delete intervals for localvars
+    //  2. delete intervals for aos that may point to anything in localvars
+    suco_set<ECR *> localvars_ecrset;
+    suco_iterator<AOId *> aoi(retnode.getParentFunction().getLocalVars());
+    while(aoi.Iterate()){
+      rf.updateInterval(*aoi.Current(), Interval::Bottom);		//- delete from rf
+      localvars_ecrset.Insert(&aoi.Current()->getECR());	//- add to localvars ecrset
+    }
+    //- Now, remove intervals pointing to anything in localvars ecrset
+    rf.removeIntervalsPointingTo(localvars_ecrset);
+
+    return false; //- false=not useless
+
+  } else { //- intraproc: ignore return?
+    return true; //- true=useless
+  }
+}
+
+TCtype * RANfact::evalSizeOfExpr(char *& s)
+{
+  TCtype * ret = 0;
+  if(*s == 'Z'){ //- sizeof
+    consume(++s, '(');
+    ret = TCtype::stringToTy(s, &s);
+    consume(++s, ')');
+  }
+  return ret;
+}
+
+//- r_size,r_type are return values
+void RANfact::evalMallocSize(char * s, suco_iterator<AO *>& aoi, unsigned int& r_size, TCtype *& r_type)
+{
+  //- look for "sizeof(T)"
+  r_type = evalSizeOfExpr(s);
+  if(r_type){ //- sizeof
+    r_size = 1;
+    return;
+  }
+  //- look for "e * sizeof(T)" or "sizeof(T) * e"
+  if(*s == 'o' && *(s+1) == '*'){
+    char * ts = s + 2;
+    suco_iterator<AO *> taoi = aoi;
+    consume(ts, '(');
+    r_type = evalSizeOfExpr(ts);
+    if(r_type){ //- sizeof * exp
+      consume(ts, ',');
+      Interval iv2 = evalSubexpr(ts, taoi);
+      consume(ts, ')');
+      if(iv2.isNullTgted() && iv2.Min() > 0)
+        r_size = iv2.Min();
+      return;
+    } else {
+      Interval iv1 = evalSubexpr(ts, taoi);
+      consume(ts, ',');
+      r_type = evalSizeOfExpr(ts);
+      if(r_type){ //- exp * sizeof
+        if(iv1.isNullTgted() && iv1.Min() > 0)
+          r_size = iv1.Min();
+        return;
+      }
+      //- else fallthrough
+    }
+  }
+  //- non-sizeof: just try to evaluate
+  Interval iv = evalSubexpr(s, aoi);
+  if(iv.isNullTgted() && iv.Min() > 0){
+    r_size = iv.Min();
+    r_type = &TCtype::tcCharType;
+  }
+  return;
+}
+
+bool RANfactHandler::handleDecl(DFAfact& df, PExprDecl& dd)
+{
+  RANfact& rf = (RANfact&) df;
+
+  //- 0: handle malloc: try to evaluate its size
+  ExpDescr * msed = dd.getMallocSize();
+  if(dd.isMalloc() && msed){
+    //- estr is either "@@" or is surrounded by "{}"
+    char * es = msed->getEstr();
+    if(es && *es == '{'){
+      char * str = es+1;
+      suco_iterator<AO *> aoi(msed->getEstrAOs());
+      try {
+        unsigned int size = 0;
+        TCtype * type = 0;
+        rf.evalMallocSize(str, aoi, size, type);
+        ((AOMalloc &)dd.getAO()).meetMallocStaticType(type, size);
+      } catch(char * s) {
+        fprintf(stderr, "ERROR(RANfactHandler::handleDecl/Malloc): parse error at position %d in string %s\n", s - es, es);
+      }
+    }
+  }
+
+  //- 1: reset dd.ao in rf
+  rf.updateInterval(dd.getAO(), dd.isZeroed()?(Interval(0)):(Interval::Bottom));
+
+  //- 2: if something in rf points to dd.ao, must remove that
+  //	reference: if must_have_tgt_ao set to bottom, else set
+  //	tgt_ao to unknown.
+  //	Otherwise we could mis-handle subtraction or comparison
+  //	of pointers to two different instantiations of dd.ao.
+  //	NOTE: as it turns out, we could've done without this fix,
+  //	because (1) as above, each recursive loop should have an
+  //	incoming edge without dd.ao as a target; (2) in such a
+  //	case our meet should produce either bottom or a zero-ed
+  //	fact, which would fail on comparison and subtraction anyways.
+  //	But still, for future extension of interval representation,
+  //	this might be necessary.
+  if(rf.disableIntervalsWithTarget(dd.getAO())){
+/**/fprintf(stderr, "NOTE(handleDecl): disabled intervals pointing to ");
+/**/dd.getAO().dump_descr(stderr);
+/**/fprintf(stderr, "\n");
+  }
+  return false; //- not useless
+}
+
+bool RANfactHandler::handleVerify(DFAfact& df, PExprVerify& dv)
+{
+//- ignore
+  return true;
+}
+
+bool RANfactHandler::handlePredicate(DFAfactPair& dfp, PExprPredicate& dp)
+{
+  char * es = dp.getDesc().getEstr();
+  if(flag_range_handle_preds
+	&& !dp.isSwitch()	//- don't evaluate switch predicate (for now?)
+	&& es && *es == '{'){
+    suco_iterator<AO *> aoi(dp.getDesc().getEstrAOs());
+
+    //- create a copy of the fact for lookup
+    RANfact& lookup_rf = (RANfact&) dfp.getFact1().newClone();
+    if(dfp.getFact2()) lookup_rf.meet(*dfp.getFact2());
+
+    try {
+      if(lookup_rf.evalPredExpr(es+1, aoi, RANfact::m_eqne, Interval(0), dfp)){
+        reportKnownPredicate(dp); //- report predicate where at least one predicate variable is top
+      }
+    } catch(char * exs) {
+      fprintf(stderr, "ERROR(RANfactHandler::handlePredicate): parse error at position %d in string %s\n", exs - es, es);
+    }
+    dfp.flipFacts(*this);
+    this->deleteFact(lookup_rf); //- discard lookup_rf
+    return false; //- not useless
+  } else {
+    return true; //- useless node
+  }
+}
+
+void RANfactHandler::handleFreeCall(DFAfact& df, PExprCall& dc)
+{
+  RANfact& rf = (RANfact&) df;
+
+  //- Get Freed ECR set
+  //  TODO: may want to cache freed_ecrset in PExprCall?
+  suco_set<ECR *> freed_ecrset;
+  PExprArg * freearg = dc.getArg(1);
+  if(freearg){ //- collect freed heap ecrs
+    //- 1. Try "precise" points-to information from intervals
+    Interval iv = rf.evalExpr(freearg->getDesc());
+    if(iv.tgtAO()){ // check also for in-bounds?  or for [0,0]??
+      freed_ecrset.Insert(&iv.tgtAO()->getECR());
+    } else if(!iv.isNullTgted()){ //- (should never be null-targeted!?!)
+      //- 2. Revert to flow-insens points-to information
+      suco_iterator<AO *> aoi(freearg->getDesc().getAOs());
+      while(aoi.Iterate()){
+        if(!aoi.Current()->isVal()){ //- skip values
+          freed_ecrset.Union(aoi.Current()->getECR().getPointsTo().getAliasECRs());
+        }
+      }
+    }
+  }
+
+  //- Now, remove intervals pointing to anything in Freed ECR set
+  ((RANfact&)df).removeIntervalsPointingTo(freed_ecrset);
+}
+
+//- fnao=null means delete all AOReturn intervals
+void RANfact::removeRetIntervalsExcept(AO * fnao)
+{
+  interval_node ** mp = &this->map;
+  while(*mp){
+    AO& tsao = (*mp)->ao.getEnclosingStruct();
+    if((tsao.getKind() == AO::aoReturn)
+	&& (&((AOReturn &)tsao).getParent() != fnao)){
+      interval_node * tmp = *mp;
+      *mp = (*mp)->next;
+      delete tmp;
+    } else {
+      mp = &(*mp)->next;
+    }
+  }
+}
+
+void RANfactHandler::interProcFilterEntryFact(DFAfact& df, CFGnode& cn) 
+{
+  RANfact& rf = (RANfact&) df;
+
+  //- filter in only things in gref/mayfree
+  rf.filterGrefMayFreeInto(cn.getParentFunction(), 0);
+
+  //- filter out all return facts
+  rf.removeRetIntervalsExcept(0);
+}
+
+void RANfactHandler::intraProcInitializeEntryFact(DFAfact& df, CFGnode& cn)
+{
+  //- initially: bottom (all vars map implicitly to bottom)
+  df.setBottom();
+}
+
+void RANfactHandler::intraProcHandleCall(DFAfact& df, PExprCall& dc)
+{
+  RANfact& rf = (RANfact&) df;
+
+  suco_iterator<CFGfunction *> fni(dc.getTargetFns());
+  while(fni.Iterate()){
+    RANfact trash;
+    //- remove intervals for aos in GREF/GMayFree
+    rf.filterGrefMayFreeInto(*fni.Current(), &trash);
+
+    //- remove intervals for aos pointing to anything in GFreeHeap
+    rf.removeIntervalsPointingTo(fni.Current()->getGFreeHeap_ecrs());
+  }
+}
+
+//----------------------------------
+//- RAN/RANwiden/RANnarrow: range analysis
+
+bool RAN::isUselessNode(CFGnode& cn)
+{
+  return cn.RANisUseless();
+}
+
+bool RAN::isUselessNode(PgmExpr& dn)
+{
+  return dn.RANisUseless();
+}
+
+bool RAN::markUselessNode(CFGnode& cn)
+{
+  cn.RANsetUseless();
+  return true;
+}
+
+bool RAN::markUselessNode(PgmExpr& dn)
+{
+  dn.RANsetUseless();
+  return true;
+}
+
+void RAN::print_debug_stats(CFG& cfg, FILE * outf)
+{
+//TODO
+}
+
+//- if wn_always, then widen/narrow
+//- else, if backedge, then widen/narrow
+//        else just meet
+bool RAN::absorbAndCompare(DFAfact& df1, DFAfact& df2, LocSet * backedge_filter)
+{
+  return ((RANfact&)df1).extended_meet((RANfact&)df2, false, true
+	 , (wn_always || backedge_filter) ? wnmode : WN_MEET
+	 , (backedge_filter == CFGnode::ALL_AOS)?0:backedge_filter);
+}
+
+//----------------------------------
+// RANcFactHandler
+
+bool RANcFactHandler::handleVerify(DFAfact& df, PExprVerify& dv)
+{
+  RANfact& rf = (RANfact&) df;
+
+  //- diagnostic data
+  {
+    int rfsize = rf.countIntervals();
+    TCstats::ranc_verify_visit_factsizes += rfsize;
+    if(TCstats::ranc_verify_visit_max_factsize < rfsize)
+       TCstats::ranc_verify_visit_max_factsize = rfsize;
+    TCstats::ranc_verify_visits++;
+  }
+
+  //- do VP-all
+  if((dv.getVpKind() == PExprVerify::vpPtrW) ||
+	(this->readwrite && (dv.getVpKind() == PExprVerify::vpPtr))){
+
+    Interval ran_iv = rf.getDerefRangeFor(dv.getDesc());
+
+    //- collect stats about interval finiteness
+    if(flag_range_collect_stats && !dv.isLib()){
+      this->all_vps.Insert(&dv);
+      if(ran_iv.isTargetedFinite())
+        this->finite_vps.Insert(&dv);
+      if(ran_iv.isTargetedHalfFinite())
+        this->half_finite_vps.Insert(&dv);
+    }
+
+    if(ran_iv.inBounds(dv.getVpKind() == PExprVerify::vpPtrW)){
+      if(!dv.isLib()){
+        if(this->inbounds_vps.Insert(&dv)){
+          if(strchr(dv.getDesc().getEstr(), 'M')
+	    || strchr(dv.getDesc().getEstr(), 'W')){ //- count sdot and arrow expressions
+            num_inb_sdotarrows++;
+          }
+        }
+      }
+    } else { //- mark as touched
+      suco_iterator<AO *> aoi(dv.getAOs());
+      while(aoi.Iterate())
+        aoi.Current()->getECR().touchExposedAndPropagate();
+    }
+  }
+
+  // RANFactHandler::handler.handleVerify(df, dv); //- NOP anyways
+  return true;
+}
+
+void RANcFactHandler::reportKnownPredicate(PExprPredicate& dp)
+{
+  if(flag_range_collect_stats && !dp.isLib()){
+    if(dp.isStmtOrQC()){ //- record only stmt or qc predicates
+      this->known_preds.Insert(&dp);
+    }
+/**/fprintf(stderr, "NOTE(reportKnownPredicate): ");
+/**/dp.debug_dump(stderr);
+  }
+}
+
+int RANcFactHandler::countVPs(suco_set<PExprVerify *>& vps, bool limit_array)
+{
+  if(limit_array){
+    int count = 0;
+    suco_iterator<PExprVerify *> vpi(vps);
+    while(vpi.Iterate()){
+      AO * ao = vpi.Current()->getDesc().getAOs().GetSingleton();
+      if(ao && ao->isDirectArrayAccess())
+        count++;
+    }
+    return count;
+  } else {
+    return vps.Length();
+  }
+}
+
+//----------------------------------
+// RANc: collect redundant results
+
+//(no functions)
+
+//----------------------------------
+
+@
+
+
+1.85
+log
+@Pred/return-node bug was only partially fixed; now fully(?)
+fixed.
+(When evaluating predicate, we want to improve ranges for
+ locs whenever possible -- EXCEPT for return nodes, since
+ they're in a sense a "consume-once" location.)
+@
+text
+@d2027 8
+a2034 2
+      if(!dv.isLib())
+        this->inbounds_vps.Insert(&dv);
+@
+
+
+1.84
+log
+@Fixed evalPredExpr to NOT UPDATE the dataflow fact if
+checking a return node -- since there may be multiple
+references to the return node, where each would be an
+independent call.  (Example that was wrong before:
+getc() == 'a' && getc() == 'b')
+@
+text
+@d980 1
+a980 1
+              Interval& aoiv = (ao.getKind() == AO::aoReturn)
+d996 3
+a998 1
+            } else if(ao.dfa_relevant && (!trf.is_top || !iv_true.isTop())){	//- skip if top/top
+d1008 1
+a1008 1
+              Interval& aoiv = (ao.getKind() == AO::aoReturn)
+d1024 3
+a1026 1
+            } else if(ao.dfa_relevant && (!frf.is_top || !iv_false.isTop())){	//- skip if top/top
+@
+
+
+1.83
+log
+@SMALL BUT MAJOR BUG FIX: RANc must take a flag indicating
+whether to do intra or inter!  (Previously, was always
+doing intra mode!)
+
+Also: added ugly flag "flag_debug_range_collect_phase"
+to help in debugging, currently used to output meaningful
+information when reporting known predicates.
+@
+text
+@d971 5
+d979 17
+a995 17
+if(flag_debug_range_collect_phase){
+  Interval old = (*tin)->interval;
+  (*tin)->interval.cond_intersect(iv_true);
+  if((*tin)->interval.isTop()){
+    fprintf(stderr, "ISTOP: ");
+    ao.write_string_rep(stderr, true);
+    fprintf(stderr, " -> ");
+    old.debug_dump(stderr);
+    fprintf(stderr, " INTERSECT ");
+    iv_true.debug_dump(stderr);
+    fprintf(stderr, "\n");
+    has_top = true;
+  }
+} else {
+              (*tin)->interval.cond_intersect(iv_true);
+              has_top |= (*tin)->interval.isTop();	//- report if result is top!
+}
+d1005 17
+a1021 17
+if(flag_debug_range_collect_phase){
+  Interval old = (*fin)->interval;
+  (*fin)->interval.cond_intersect(iv_false);
+  if((*fin)->interval.isTop()){
+    fprintf(stderr, "ISTOP: ");
+    ao.write_string_rep(stderr, true);
+    fprintf(stderr, " -> ");
+    old.debug_dump(stderr);
+    fprintf(stderr, " INTERSECT ");
+    iv_false.debug_dump(stderr);
+    fprintf(stderr, "\n");
+    has_top = true;
+  }
+} else {
+              (*fin)->interval.cond_intersect(iv_false);
+              has_top |= (*fin)->interval.isTop();	//- report if result is top!
+}
+@
+
+
+1.82
+log
+@1. Renamed ExpDescr's affaos to estr_aos, to avoid confusion
+   with "affecting aos" (affecrs).
+2. tca: more refinement of relevant-aos computation:
+   - specially handle op/ext/star AOs -- not quite
+     there yet (this is hopefully the last bit that
+     needs to be fixed)
+   - in RAN mode, starting points must include malloc
+     sizes.
+@
+text
+@d974 14
+d990 2
+a991 1
+            } else if(!trf.is_top || !iv_true.isTop()){	//- skip if top/top
+d1000 14
+d1016 2
+a1017 1
+            } else if(!frf.is_top || !iv_false.isTop()){	//- skip if top/top
+@
+
+
+1.81
+log
+@Towards relevant-aos support for RAN analysis:
+1. tca.cpp: fixed bug in markStartingPoints;
+2. ao.cpp: changed constructor to set dfa_relevant
+   tag to true by default;
+3. ran.cpp: RAN analysis now keeps track of ranges
+   only for dfa_relevant-tagged AOs!
+(I.e., w/o relevant-aos flag, all AOs are marked
+ dfa-relevant=true by default).
+@
+text
+@d226 1
+a226 1
+    suco_iterator<AO *> aoi(ed.getAffAOs());
+d243 1
+a243 1
+    suco_iterator<AO *> aoi(ed.getAffAOs());
+d1343 1
+a1343 1
+          AO& rhs_ao = *actual_edesc.getAffAOs().Head();
+d1618 1
+a1618 1
+      rhs_ao = rhs.getAffAOs().Head();
+d1771 1
+a1771 1
+      suco_iterator<AO *> aoi(msed->getAffAOs());
+d1818 1
+a1818 1
+    suco_iterator<AO *> aoi(dp.getDesc().getAffAOs());
+@
+
+
+1.80
+log
+@FIXED VARARG HANDLING:
+- to be compliant with new "finalizeECR" phase change
+  model, I had to change AO::get_AOArg to possibly
+  return null, and create new AO::get_or_create_AOArg
+  for early use to construct AOArg objects as needed.
+- the above change required more careful handling
+  (in ran.cpp) of function call argument passing:
+  specifically, at callsite fp(i,j,n) where fp
+  points to foo(i), there will be only two AOArg
+  objects created for foo (F X I foo i and l where
+  l is "last argno/largno"), so we will do:
+  - strong assign for actuals up to largno:
+    F X I foo i <=strong= actual(i)
+    F X I foo l <=strong= actual(j)
+  - weak assign for actuals beyond that point:
+    F X I foo l <=weak= actual(n)
+  Note that this nicely handles varargs, where
+  the ellipsis maps to largno.
+@
+text
+@d1069 3
+a1071 1
+        this->updateInterval(*sdao, iv, tli.Current());
+d1084 3
+a1086 1
+    this->updateInterval(ao, iv, &((TCnumType *)aoty)->getBaseType());
+d1088 3
+a1090 6
+    if(iv.isBottom()){
+      deleteInterval(ao);
+    } else {
+      interval_node ** mp = lookupIntervalPosn(ao);
+      if(*mp && (&(*mp)->ao == &ao)){
+        (*mp)->interval = iv;
+d1092 6
+a1097 1
+        *mp = new interval_node(ao, iv, *mp);
+d1347 6
+a1352 4
+            Interval actual_iv = rf.evalExpr(actual_edesc);
+            if(!upto_largno && !actual_iv.isBottom()) //- weak-assign!
+              actual_iv.meet(rf.getInterval(*arg_ao));
+            rf.updateInterval(*arg_ao, actual_iv);
+d1596 7
+a1602 5
+    //- non-struct non-array: do the assignment here  assign
+    Interval rhs_iv = rhs?(this->getInterval(*rhs)):(Interval::Bottom);
+    if(!strong && !rhs_iv.isBottom())
+      rhs_iv.meet(this->getInterval(lhs));
+    this->updateInterval(lhs, rhs_iv);
+d1656 3
+a1658 1
+          rf.updateInterval(dd.getAO(), rf.getInterval(*argao));
+@
+
+
+1.79
+log
+@Changed AO/ECR relationship: added AO::getECR() function
+that is to be called after pt-analysis finalization of
+ECRs -- so, PRIOR to finalization, must use ECR::getECR()
+(as is now done in pta.cpp), but AFTER, must only use
+AO::getECR() which outputs a fatal error message if ECR
+not found.
+@
+text
+@d1328 2
+a1329 1
+    AO& tgtfn_ao = tfi.Current()->getId().get_AOFunction();
+d1331 21
+a1351 9
+      AO& arg_ao = tgtfn_ao.get_AOArg(i);
+      ExpDescr& actual_edesc = dc.getArg(i)->getDesc();
+
+      //- special handling of structs: precisely handle only if actual is 'S' or 'V'
+      if((!strcmp(actual_edesc.getEstr(),"{S}")) || (!strcmp(actual_edesc.getEstr(),"{V}"))){
+        AO& rhs_ao = *actual_edesc.getAffAOs().Head();
+        TCtype * sty = rhs_ao.getStaticType();
+        if(sty) rf.handleStructAssign(arg_ao, *sty, &rhs_ao, true);
+        else rf.updateInterval(arg_ao, rf.evalExpr(actual_edesc));
+d1353 3
+a1355 1
+        rf.updateInterval(arg_ao, rf.evalExpr(actual_edesc));
+a1357 1
+
+d1638 12
+a1649 6
+
+//TODO: handle varags?
+      AO& argao = parfn.getId().get_AOFunction().get_AOArg(dd.getArgNo());
+      TCtype * sty = dd.getAO().getStaticType();
+      if(sty){
+        rf.handleStructAssign(dd.getAO(), *sty, &argao, true);
+d1651 3
+a1653 6
+	//-- (currently: ellipses have no static type)
+        rf.updateInterval(dd.getAO(), rf.getInterval(argao));
+
+//    fprintf(stderr, "ERROR(RAN::handleFormal): formal has no static type: ");
+//    dd.getAO().write_string_rep(stderr, true);
+//    fprintf(stderr, "\n");
+a1654 2
+      //-CLEANUP: delete argao from rf, as it's no longer needed!
+      rf.updateInterval(argao, Interval::Bottom);
+@
+
+
+1.78
+log
+@MAJOR UPDATE:
+- Created new class LocSet to encapsulate a set of
+  locations, used to store GMOD, GREF, and backedge
+  filters.
+  (Previously, was suco_set<AO *>, later changed to
+  suco_set<ECR *>.)
+- Created two versions, one storing AOs, another
+  storing ECRs.  Verified that results are the
+  same, though performance is not (but only when
+  computing backedge filters).
+@
+text
+@d1122 1
+a1122 1
+    if(ecrset.Contains(&ECR::getECR((*mp)->ao))){
+d1144 2
+a1145 2
+	   ? (tgt_ecrset.Contains(&ECR::getECR(*(*mp)->interval.tgtAO())))	//- if so: use it
+	   : (ECR::getECR((*mp)->ao).getPointsTo().getAliasECRs().Intersects(tgt_ecrset)))){ //- if not, revert to flow-insens pt-set
+d1667 1
+a1667 1
+      localvars_ecrset.Insert(&ECR::getECR(*aoi.Current()));	//- add to localvars ecrset
+d1824 1
+a1824 1
+      freed_ecrset.Insert(&ECR::getECR(*iv.tgtAO()));
+d1830 1
+a1830 1
+          freed_ecrset.Union(ECR::getECR(*aoi.Current()).getPointsTo().getAliasECRs());
+d1966 1
+a1966 1
+        ECR::getECR(*aoi.Current()).touchExposedAndPropagate();
+@
+
+
+1.77
+log
+@Added [-no]-inst-fields option to turn off
+instantiation of all struct/union member AOs
+at declaration point.
+Originally did this to circumvent explosion in
+mesa which has some huge structures -- but as
+I think about it, leaving this feature off by
+default should still get correct results!?!
+@
+text
+@d41 1
+a41 1
+			    enum RAN::wn_mode wn, suco_set<AO *> * backedge_filter)
+d128 1
+a128 1
+            if(!backedge_filter || backedge_filter->Contains(&rn->ao))
+d1205 1
+a1205 1
+    if(fn.GrefOrFreeHeapAffects((*mp)->ao)){ //- in GREF or GMayFree
+d1429 1
+a1429 1
+      if(tgtfn.GrefOrFreeHeapAffects(rn->ao)){
+d1444 1
+a1444 1
+        if(tgtfn.GrefOrFreeHeapAffects((*tnp)->ao)){ //- if in GREF or GMayFree, delete
+d1454 2
+a1455 1
+        if(tgtfn.GrefOrFreeHeapAffects((*tnp)->ao)){ //- if in GREF or GMayFree, meet	(check may be redundant)
+d1885 1
+a1885 1
+    rf.removeIntervalsPointingTo(fni.Current()->getGFreeHeapEcrs());
+d1922 1
+a1922 1
+bool RAN::absorbAndCompare(DFAfact& df1, DFAfact& df2, suco_set<AO *> * backedge_filter)
+@
+
+
+1.76
+log
+@RAN: combined formerly-two functions filterInto and
+filterGrefMayFree into one function filterGrefMayFreeInto.
+Code sharing, but more confusing?  May not have been a
+good idea...
+@
+text
+@d1071 7
+a1077 5
+/**/fprintf(stderr, "ERROR(RANfact::updateInterval): aoSdot not found: ao = ");
+/**/ao.write_string_rep(stderr, true);
+/**/fprintf(stderr, "  tylist = ");
+/**/TCtype::write_list_string_rep(tlist, stderr);
+/**/fprintf(stderr, "\n");
+d1559 7
+a1565 5
+/**/fprintf(stderr, "ERROR(RANfact::handleStructAssign): aoSdot not found: ao = ");
+/**/lhs.write_string_rep(stderr, true);
+/**/fprintf(stderr, "  tylist = ");
+/**/TCtype::write_list_string_rep(tlist, stderr);
+/**/fprintf(stderr, "\n");
+@
+
+
+1.75
+log
+@Major overhaul, to handle function call filtering.
+See dfa.cpp for documentation.
+ - filterRetnodeFact() eliminated; replaced by
+ - interProcHandleRetvalAssign -- responsible for
+   assigning from R X I <fn> to R D I <fp>.
+ - interProcPrepareReturnCollector() -- special
+    pre-processor for indirect calls to set "intersection"
+   AOs to "top".
+ - meetFiltered() -- does meet, but constrained by a
+   window (defined by a function's GREF/MayFree set).
+Supporting changes:
+ - eliminated removeArgIntervalsExceptFor(); rendered obsolete
+   by
+ - filterGrefMayFree() -- called at function entry
+ - RANfact::isTop()
+ - collectAOset, createTopMappings, in support of
+   interProcPrepareReturnCollector()
+ - PExprCall::isDirectCall() and isRecursiveCall()
+ - CFGfunction::GrefOrFreeHeapAffects()
+@
+text
+@d1190 9
+a1198 5
+//- for each fact whose AO is in filterset, move it over to ffact
+//  NOTE: this and ffact are now disjoint sets;
+//  the dual of this function, reconstitute(), will combine (union)
+//  them together.
+void RANfact::filterInto(suco_set<AO *>& filterset, suco_set<ECR *>* freeheap_ecrset, RANfact& ffact)
+d1201 1
+a1201 1
+  interval_node ** fmp = &ffact.map;
+d1203 20
+a1222 7
+    bool filter_in = false;
+    suco_iterator<AO *> fi(filterset);
+    while(fi.Iterate()){ //- note: must do this instead of just fileterset.Contains(&(*mp)->ao)
+			 //	   to account for struct members
+      if(&(*mp)->ao.getEnclosingStruct() == &fi.Current()->getEnclosingStruct()){ //- fi.Current() should already be outermost?
+        filter_in = true;
+        break;
+a1224 10
+    if(filter_in
+	|| (freeheap_ecrset
+		&& ECR::getECR((*mp)->ao).getPointsTo().getAliasECRs().Intersects(*freeheap_ecrset))){
+      ffact.updateInterval((*mp)->ao, (*mp)->interval);
+      interval_node * tmp = *mp;
+      *mp = (*mp)->next;
+      delete tmp;
+    } else {
+      mp = &(*mp)->next;
+    }
+d1308 1
+a1308 1
+    ranf_local.filterInto(tfi.Current()->getGREF(), &tfi.Current()->getGFreeHeapEcrs(), ranf);
+a1834 14
+void RANfact::filterGrefMayFree(CFGfunction& fn)
+{
+  interval_node ** mp = &this->map;
+  while(*mp){
+    if(!fn.GrefOrFreeHeapAffects((*mp)->ao)){ //- if not in GREF or GMayFree, delete
+      interval_node * tmp = *mp;
+      *mp = (*mp)->next;
+      delete tmp;
+    } else {
+      mp = &(*mp)->next;
+    }
+  }
+}
+
+d1857 1
+a1857 1
+  rf.filterGrefMayFree(cn.getParentFunction());
+d1875 3
+a1877 5
+    //- remove intervals for aos in GREF
+    //- TODO: make this more efficient?
+    suco_iterator<AO *> gri(fni.Current()->getGREF());
+    while(gri.Iterate())
+      rf.updateInterval(*gri.Current(), Interval::Bottom);
+@
+
+
+1.74
+log
+@Bug semi-fix: when meet encounters top (higher than this),
+return true (whereas before, was returning if there was
+a difference, which broke the required fixed-point
+convergability).
+TODO: debug why this happens (e.g. in perl), and whether
+it's OK (I think it may be).
+@
+text
+@d1338 28
+a1365 1
+void RANfactHandler::reconstituteFilteredFacts(DFAfact& df, DFAfact& df_local)
+d1368 35
+a1402 2
+  RANfact& rf_local = (RANfact&) df_local;
+  rf.reconstitute(rf_local);
+d1405 4
+a1408 8
+//- Instantiate the interval of "R D <fao>" to
+//  - if tgtfn == 0, then top
+//  - if tgtfn != 0, then the interval of "R X I <tgtfn>"
+//
+// This is a hackish handling of function return values,
+// and also accounts for the RANfact empty-implies-bottom
+// problem.
+void RANfactHandler::filterRetnodeFact(DFAfact& df, suco_set<AO *>& faos, CFGfunction * tgtfn)
+d1412 60
+a1471 2
+  AO * retao = (tgtfn) ? (&tgtfn->getId().get_AOFunction().get_AOReturn()) : 0;
+  TCtype * retty = (retao) ? (retao->getStaticType()) : 0;
+d1473 3
+a1475 2
+  if(retty){ //- (implies retao != 0)
+    suco_iterator<AO *> faoi(faos); //- this should usually be a singleton
+d1477 1
+a1477 1
+      rf.handleStructAssign(faoi.Current()->get_AOStar().get_AOReturn(), *retty, retao, true);
+d1479 20
+a1498 6
+  } else {
+    Interval tgtfnr_iv = (retao) ? (rf.getInterval(*retao))
+				 : (Interval::Top);
+    suco_iterator<AO *> faoi(faos); //- this should usually be a singleton
+    while(faoi.Iterate()){
+      rf.updateInterval(faoi.Current()->get_AOStar().get_AOReturn(), tgtfnr_iv);
+d1500 2
+d1505 7
+d1828 1
+a1828 1
+void RANfact::removeArgIntervalsExceptFor(AO& fnao)
+d1832 1
+a1832 3
+    AO& tsao = (*mp)->ao.getEnclosingStruct();
+    if((tsao.getKind() == AO::aoArg)
+	&& (&((AOArg &)tsao).getParent() != &fnao)){
+d1863 4
+a1866 1
+  //- filter out all return facts, and arg facts that aren't for this function
+a1867 1
+  rf.removeArgIntervalsExceptFor(cn.getParentFunction().getId().get_AOFunction());
+@
+
+
+1.73
+log
+@AO: removed isPartOf(), replaced with getEnclosingStruct()
+which returns the outermost non-S/U-dotted AO.
+
+RAN: added removeArgIntervalsExceptFor() and
+removeRetIntervalsExcept(), which are used to
+clean up AOArg and AOReturn objects that would
+otherwise be unnecessarily propagated around.
+
+RAN: changed reconstitute so that if there is
+a clash, take the rf_local version rather than
+the default (previous) incoming-df version.
+@
+text
+@d50 1
+a50 1
+    return !this->is_top;
+@
+
+
+1.72
+log
+@Added new DFA interface function interProcFilterEntryFact()
+called at each function entry (when doing inter-proc
+analysis).
+@
+text
+@d1203 1
+a1203 1
+      if((*mp)->ao.isPartOf(*fi.Current())){
+d1222 6
+a1227 1
+//  Complain if they are not disjoint.
+d1235 8
+a1242 1
+    if((!*tnp) || (&(*tnp)->ao > &(*rnp)->ao)){ //- copy rnp into tnp
+a1251 12
+    } else if(&(*tnp)->ao == &(*rnp)->ao){ //- a clash: warn!
+
+/**/fprintf(stderr, "ERROR(RANfact::reconstitute): clashing intervals for ");
+/**/(*tnp)->ao.dump_descr(stderr);
+/**/fprintf(stderr, ": rf = ");
+/**/(*tnp)->interval.debug_dump(stderr);
+/**/fprintf(stderr, ": rf_local = ");
+/**/(*rnp)->interval.debug_dump(stderr);
+/**/fprintf(stderr, "\n");
+
+      tnp = &(*tnp)->next;
+      rnp = &(*rnp)->next;
+d1481 1
+d1483 4
+a1486 3
+/**/    fprintf(stderr, "ERROR(RAN::handleFormal): formal has no static type: ");
+/**/    dd.getAO().write_string_rep(stderr, true);
+/**/    fprintf(stderr, "\n");
+d1507 3
+d1690 33
+d1725 5
+a1729 1
+//TODO
+@
+
+
+1.71
+log
+@Major Update: RAN handling of function argument passing,
+now uses F X I <fn> (Arg(Func(Id(<fn>)))) as go-between:
+assigned prior to callsite, retrieved by formal.
+Also changed CFG gmod/gref collection to include
+F X I <fn> in each function's gref set.
+@
+text
+@d1685 5
+@
+
+
+1.70
+log
+@Changed handleFormal to pass parent-function rather
+than previous "ismain" and "callsites" pair.
+@
+text
+@d1304 3
+a1306 2
+  //- 2a. move also R D I <fn> to ranf
+  //      NOTE: cannot just remove it, as it may be an actual argument to this call!
+d1309 1
+a1309 3
+    suco_set<AO *> tmp;
+    tmp.Insert(&faoi.Current()->get_AOStar().get_AOReturn());
+    ranf_local.filterInto(tmp, 0, ranf);
+a1310 4
+
+  //- 3. specially handle call arguments
+  for(int i = 1; dc.getArg(i); ++i)
+    ranf_local.filterInto(dc.getArg(i)->getDesc().getAOs(), 0, ranf);
+d1315 21
+a1335 1
+//TODO
+d1347 1
+a1347 1
+//  - if tgtfn != 0, then the interval of "R F I <tgtfn>"
+a1467 1
+
+d1475 2
+d1478 7
+a1484 37
+      if(sty && sty->getKind() == TCtype::tcStruct){ //- struct case
+        //- initialize to top
+        rf.updateInterval(dd.getAO(), Interval::Top);
+
+        //- do weak-assignment
+        suco_iterator<PExprCall *> csi(parfn.getCallSites());
+        while(csi.Iterate()){
+          PExprArg * arg = csi.Current()->getArg(dd.getArgNo());
+          if(arg){
+            ExpDescr& argdesc = arg->getDesc();
+            //- precisely handle only if arg.desc is S or V
+            AO * rhs_ao = 0;
+            if((!strcmp(argdesc.getEstr(),"{S}")) || (!strcmp(argdesc.getEstr(),"{V}"))){
+              rhs_ao = argdesc.getAffAOs().Head();
+              rf.handleStructAssign(dd.getAO(), *sty, rhs_ao, false);
+            } else {
+              rf.updateInterval(dd.getAO(), Interval::Bottom); //- set to bottom
+              break;  //- no need to continue iteration
+            }
+          } else { //- no arg: assume the worst?
+            rf.updateInterval(dd.getAO(), Interval::Bottom);
+            break;  //- no need to continue iteration
+          }
+        }
+      } else { //- non-struct case
+        Interval iv = Interval::Top; //- start at top; meet the incoming intervals
+        suco_iterator<PExprCall *> csi(parfn.getCallSites());
+        while(csi.Iterate()){
+          PExprArg * arg = csi.Current()->getArg(dd.getArgNo());
+          if(arg){
+            iv.meet(rf.evalExpr(arg->getDesc()));
+          } else { //- no arg: assume the worst?
+            iv.setBottom();
+            break;  //- no need to continue iteration
+          }
+        }
+        rf.updateInterval(dd.getAO(), iv);
+d1486 2
+@
+
+
+1.69
+log
+@Added interProcHandleCallArgs() interface function to
+DFA and all derived classes.
+@
+text
+@d1451 1
+a1451 1
+bool RANfactHandler::handleFormal(DFAfact& df, PExprDecl& dd, bool ismain, suco_llist<PExprCall *>& callsites, bool interproc)
+d1453 1
+d1457 1
+a1457 1
+    if(ismain){ //- main function formals: map to bottom
+d1467 1
+a1467 1
+        suco_iterator<PExprCall *> csi(callsites);
+d1488 1
+a1488 1
+        suco_iterator<PExprCall *> csi(callsites);
+@
+
+
+1.68
+log
+@Modified Interval/RAN functions to account for
+is_top case;
+also, introduced Interval::Bottom member to make
+bottom initialization and returning more explicit
+(readable).
+@
+text
+@d1318 5
+@
+
+
+1.67
+log
+@Changed removeIntervalsPointingTo() and handleFreeCall()
+to use "precise" points-to information from intervals,
+if available (if the interval is null-tgted or has
+tgt-ao); otherwise revert to flow-insens points-to
+sets approach
+@
+text
+@d233 1
+a233 1
+  return Interval();
+d250 1
+a250 1
+  return Interval();
+d326 1
+a326 1
+  return Interval();
+d510 3
+a512 5
+        AO& ao = *aoi.Current();
+        interval_node ** in = lookupIntervalPosn(ao);
+        if(*in && (&(*in)->ao == &ao)){
+          return (*in)->interval;
+        } else {
+d514 1
+a514 1
+          TCtype * aoty = ao.getStaticType();
+d599 3
+a601 5
+        AO& ao = *aoi.Current();
+        interval_node ** in = lookupIntervalPosn(ao);
+        if(*in && (&(*in)->ao == &ao)){
+          return (*in)->interval;
+        } else {
+d603 1
+a603 1
+          TCtype * aoty = ao.getStaticType();
+d618 1
+a618 1
+  return Interval();
+d976 1
+a976 1
+            } else {
+d987 1
+a987 1
+            } else {
+d1107 1
+d1111 1
+a1111 1
+  else return Interval();
+d1115 1
+d1405 1
+a1405 1
+    Interval rhs_iv = rhs?this->getInterval(*rhs):Interval();
+d1452 1
+a1452 1
+      rf.updateInterval(dd.getAO(), Interval());
+d1472 1
+a1472 1
+              rf.updateInterval(dd.getAO(), Interval()); //- set to bottom
+d1476 1
+a1476 1
+            rf.updateInterval(dd.getAO(), Interval());
+d1517 1
+a1517 1
+      rf.updateInterval(*aoi.Current(), Interval());		//- delete from rf
+d1608 1
+a1608 1
+  rf.updateInterval(dd.getAO(), dd.isZeroed()?Interval(0):Interval());
+d1707 1
+a1707 1
+      rf.updateInterval(*gri.Current(), Interval());
+@
+
+
+1.66
+log
+@Changed evalSubexpr to handle dereferences
+(B/Sub, D/Deref, W/Arrow): eval-addr-range
+and if in-bounds, getInterval for the addr-range's
+target-ao.
+This is now OK since we started handling ranges
+for array locations.
+(Still not sure about Unions -- I think they're
+always bottom anyways).
+@
+text
+@a204 17
+//- lookup ed's deref range, for bounds checking
+Interval RANfact::getDerefRangeFor(ExpDescr& ed)
+{
+  //- estr is either "@@" or is surrounded by "{}"
+  char * es = ed.getEstr();
+  if(es && *es == '{'){
+    char * str = es+1;
+    suco_iterator<AO *> aoi(ed.getAffAOs());
+    try {
+      return evalAddrRange(str, aoi);
+    } catch(char * s) {
+      fprintf(stderr, "ERROR(RANfact::getDerefRangeFor): parse error at position %d in string %s\n", s - es, es);
+    }
+  }
+  return Interval();
+}
+
+d236 17
+d1142 4
+a1145 1
+    if(ECR::getECR((*mp)->ao).getPointsTo().getAliasECRs().Intersects(tgt_ecrset)){
+d1667 2
+d1674 11
+a1684 4
+    suco_iterator<AO *> aoi(freearg->getDesc().getAOs());
+    while(aoi.Iterate()){
+      if(!aoi.Current()->isVal()){ //- skip values
+        freed_ecrset.Union(ECR::getECR(*aoi.Current()).getPointsTo().getAliasECRs());
+@
+
+
+1.65
+log
+@Added Malloc arg-evaluation mechanism:
+
+- RAN: added evalSizeOfExpr() and evalMallocSize();
+- AOMalloc: added mtype/msize members, and meetMallocStaticType()
+  function to set those at each MallocDecl node;
+- Interval::setTgt now checks for AOMalloc, and uses its
+  mtype/msize members to set tgt_ty/tgt_numelts;
+- Interval addedisNullTgted() helper;
+@
+text
+@a285 2
+					//	(Solution: have single-representative
+					//	structure, like with AOs)
+d341 7
+a347 6
+    case 'B': { // Sub(e1,e2)
+//TODO: if array, can still lookup?
+      skipArgs(s, aoi);
+    } break;
+    case 'D': { // Deref(exp)
+      skipArgs(s, aoi);
+a613 3
+    } break;
+    case 'W': { // Arrow(exp,tylist)
+      skipArgs(s, aoi);
+@
+
+
+1.64
+log
+@Final piece of struct puzzle: handleFormal() now
+properly collects structure assignments (weakly
+assigned).
+Exposed a bug in filterInto(): must account for struct
+fields!  This is actually only needed because of the
+way we handle call arguments, because GMOD/GREF already
+account for fields!
+@
+text
+@d1533 54
+d1590 20
+@
+
+
+1.63
+log
+@Changed RAN::handleDecl filtering of facts with target =
+AO: previously, set to bottom if target is ao; now, just
+set tgt_ao = 0 unless flag_range_must_have_ao -- basically
+let Interval class decide what to do.
+Entailed renaming of:
+  RANfact::removeIntervalsWithTarget()
+  to       disableIntervalsWithTarget
+and name/functionality change of:
+  Interval::targetIsPartOf()
+  to        disableIfTargetIsPartOf()
+@
+text
+@d1202 12
+a1213 2
+    if(filterset.Contains(&(*mp)->ao) ||
+	(freeheap_ecrset && ECR::getECR((*mp)->ao).getPointsTo().getAliasECRs().Intersects(*freeheap_ecrset))){
+a1217 1
+      
+a1452 2
+//TODO: do handleStructAssign
+    Interval iv = Interval::Top; //- start at top; meet the incoming intervals
+d1455 1
+a1455 1
+      iv.setBottom();
+d1457 25
+a1481 8
+      suco_iterator<PExprCall *> csi(callsites);
+      while(csi.Iterate()){
+        PExprArg * arg = csi.Current()->getArg(dd.getArgNo());
+        if(arg){
+          iv.meet(rf.evalExpr(arg->getDesc()));
+        } else { //- no arg: assume the worst?
+          iv.setBottom();
+          break;  //- no need to continue iteration
+d1483 13
+a1497 2
+    rf.updateInterval(dd.getAO(), iv); //- finally, update dd.ao's entry with the collected iv
+
+d1511 1
+a1511 1
+      this->handleStrongAssign(df, retnode.getParentFunction().getId().get_AOFunction().get_AOReturn(), *retedesc, 0, 0);
+@
+
+
+1.62
+log
+@Major update: changed updateInterval() to be struct-sensitive
+(if struct, update component AOs); am going through to make
+entire code struct-sensitive.  Done are: strongAssign,
+handleReturnStmt and filterRetnode; todo is handleFormal.
+@
+text
+@d1157 3
+a1159 3
+//- Remove any interval whose target component is ao-based.
+//  Return true if any removed
+bool RANfact::removeIntervalsWithTarget(AO& ao)
+d1164 2
+a1165 1
+    if((*mp)->interval.targetIsPartOf(ao)){
+a1168 1
+      changed = true;
+d1504 4
+a1507 4
+  //- 2: what if something in rf points to dd.ao?
+  //  Answer: this is a problem if must_have_tgt_ao.
+  //	Thus, we must remove any fact in rf whose tgt-ao is dd.ao;
+  //	otherwise we could mis-handle subtraction or comparison
+d1516 2
+a1517 2
+  if(rf.removeIntervalsWithTarget(dd.getAO())){
+/**/fprintf(stderr, "NOTE(handleDecl): removed intervals pointing to ");
+@
+
+
+1.61
+log
+@Augmented RAN counters to count both "all" and "array"
+versions of all four categories: all-vps, finite, half-finite,
+inbounds.
+@
+text
+@d1062 2
+a1063 1
+void RANfact::updateInterval(AO& ao, Interval iv)
+d1065 1
+d1067 22
+a1088 2
+  if(iv.isBottom()){
+    deleteInterval(ao);
+d1090 2
+a1091 3
+    interval_node ** mp = lookupIntervalPosn(ao);
+    if(*mp && (&(*mp)->ao == &ao)){
+      (*mp)->interval = iv;
+d1093 6
+a1098 1
+      *mp = new interval_node(ao, iv, *mp);
+d1321 1
+a1321 1
+//  - if tgtfn != 0, then the interval of "R I <tgtfn>"
+d1330 2
+a1331 2
+  Interval tgtfnr_iv = (tgtfn)?(rf.getInterval(tgtfn->getId().get_AOReturn()))
+			      :(Interval::Top);
+d1333 13
+a1345 3
+  suco_iterator<AO *> faoi(faos); //- this should usually be a singleton
+  while(faoi.Iterate())
+    rf.updateInterval(faoi.Current()->get_AOStar().get_AOReturn(), tgtfnr_iv);	//- hackish: why R D <ao>?  It just is.
+d1386 1
+a1386 1
+/**/fprintf(stderr, "ERROR(RAN::handleStrongAssign): aoSdot not found: ao = ");
+d1444 1
+a1444 1
+
+d1475 2
+a1476 2
+      rf.updateInterval(retnode.getParentFunction().getId().get_AOReturn(),
+			rf.evalExpr(*retedesc));
+d1501 2
+a1502 12
+  //- Question 1: do we need to remove dd.ao from rf?
+  //  Answer: yes, but no when context-insensitive:
+  //	clashes can only occur with recursion, but there should
+  //	always be a (call-graph) path into the recursion loop
+  //	from outside, and along this path dd.ao should be bottom,
+  //	so dd.ao should always be bottom at function entry.
+  //  ACTUALLY: the recursion thing only means we'll get the
+  //	same result in the end; during worklist algo, the outside-
+  //	coming-in edge may not have been initialized yet, so we
+  //	_may_ in fact encounter a non-bottom dd.ao.
+  //	Let's just remove it, if only for efficiency.
+  rf.updateInterval(dd.getAO(), Interval());
+d1504 2
+a1505 2
+  //- Question 2: what if something in rf points to dd.ao?
+  //  Answer: this is a problem for tgt-ao, but not for tgt-elty.
+@
+
+
+1.60
+log
+@MAJOR BUG FIX: getInterval() was not checking for
+equality, because it assumed the (poorly-named)
+lookupInterval would return the proper interval,
+rather than just the position at which the interval
+should be!
+
+FIXED, and renamed lookupInteral() to lookupIntervalPosn(),
+to alleviate future such misunderstandings.
+
+MAJOR UPDATE: added handling of strong-assignment of
+structures ~ facilitated by helpder function
+RANfact::handleStructAssign().
+
+TODO: weak assignment, etc.
+@
+text
+@d1669 1
+a1669 1
+int RANcFactHandler::countAllArrayVPs()
+d1671 11
+a1681 6
+  int count = 0;
+  suco_iterator<PExprVerify *> vpi(this->all_vps);
+  while(vpi.Iterate()){
+    AO * ao = vpi.Current()->getDesc().getAOs().GetSingleton();
+    if(ao && ao->isDirectArrayAccess())
+      count++;
+a1682 13
+  return count;
+}
+
+int RANcFactHandler::countInboundsArrayVPs()
+{
+  int count = 0;
+  suco_iterator<PExprVerify *> vpi(this->inbounds_vps);
+  while(vpi.Iterate()){
+    AO * ao = vpi.Current()->getDesc().getAOs().GetSingleton();
+    if(ao && ao->isDirectArrayAccess())
+      count++;
+  }
+  return count;
+@
+
+
+1.59
+log
+@Changed the whole AO::get_AO[SU]Dot mechanism -- now
+split into two sets of functions:
+ - get_or_create_AO[SU]Dot() is AO-protected, and is
+   called to get, or create if not found, and follows
+   the old semantics of get_AO[SU]Dot (deleting the
+   type if found, etc).
+ - get_AO[SU]Dot() not returns a pointer, and returns
+   null if not found.
+
+So now, interval calls the public version which may
+return null; cascadingly, Interval::adjustStructOffset
+no longer consumes tylist -- the consumption is now
+taken care of by the RAN callsites.
+@
+text
+@d512 1
+a512 1
+        interval_node ** in = lookupInterval(ao);
+d603 1
+a603 1
+        interval_node ** in = lookupInterval(ao);
+d980 1
+a980 1
+            interval_node ** tin = trf.lookupInterval(ao);
+d991 1
+a991 1
+            interval_node ** fin = frf.lookupInterval(ao);
+d1054 1
+a1054 1
+RANfact::interval_node ** RANfact::lookupInterval(AO& ao)
+d1068 1
+a1068 1
+    interval_node ** mp = lookupInterval(ao);
+d1079 1
+a1079 1
+  interval_node ** mp = lookupInterval(ao);
+d1089 3
+a1091 2
+  interval_node * mp = *lookupInterval(ao);
+  if(mp) return mp->interval;
+d1337 33
+d1374 15
+a1388 1
+  rf.updateInterval(lhs, rf.evalExpr(rhs));
+@
+
+
+1.58
+log
+@Added mechanism to report static RAN-count of
+direct-array accesses (all, and in-bounds only).
+Entailed adding AO::isDirectArrayAccess() helper
+funciton; a couple of counting helpers in
+RANcFactHandler, and a place to store the
+results in TCAstate.
+@
+text
+@d303 2
+a304 1
+      iv.adjustStructOffset(tylist); //- will consume tylist
+d320 2
+a321 1
+      iv.adjustStructOffset(tylist); //- will consume tylist
+@
+
+
+1.57
+log
+@Added flag_range_handle_predicates to control whether
+or not to try to improve ranges for predicates.
+
+Predicate handling (cond_intersect) updated so that
+two non-aliasing-loc -targeted ranges can set to top
+only if they're both in-bounds.
+
+Known-predicate stat-counter now only counts STMT and
+QC predicates -- previously was double counting &&/||
+predicates within a STMT predicate.
+*NOTE*: the current flow-sensitive representation for
+predicates are _BROKEN_ -- they're ad-hoc (OK for
+redundant checks?), and don't look entirely correct
+for RAN analysis evaluation!  Try e.g. (i++>0).
+@
+text
+@d1619 24
+@
+
+
+1.56
+log
+@Added filter for RAN stat collection to filter out
+derefs in libraries.
+Entailed adding PgmExpr::isLib() helper.
+@
+text
+@d1457 3
+a1459 2
+  if(!dp.isSwitch() && //- don't evaluate switch predicate (for now?)
+	es && *es == '{'){
+d1611 3
+a1613 1
+    this->known_preds.Insert(&dp);
+@
+
+
+1.55
+log
+@Collecting RAN stats (all-vps, finite-vps, half-finite-vps, inbounds-vps,
+known-preds):
+ - RAN replaced checkInBounds() with getDerefRangeFor()
+ - added reportKnownPredicate() helper to RAN[c]factHandler
+ - added list accumulators to RANcFactHandler
+ - added count holders to TCAstate
+
+Interval::isTop() - now returns true of min > max!
+(was returning only if min = +inf, max = -inf!)
+
+Interval: added "modulo" to compute %.
+
+AO::get_AOUDot/get_AOSDot() - unify ecr if called after pt-analysis.
+@
+text
+@d1585 1
+a1585 1
+    if(flag_range_collect_stats){
+d1594 2
+a1595 1
+      this->inbounds_vps.Insert(&dv);
+d1609 1
+a1609 1
+  if(flag_range_collect_stats){
+@
+
+
+1.54
+log
+@OVERHAUL: removed flag_range_target_aos, replaced with
+ - flag_range_must_have_ao: do we support ao=bottom?
+ - flag_ty_can_change: must interval's ty equal loc's ty?
+ - flag_range_do_sliding: allow sliding transformation?
+Changed command-line flags: -ran-DO, -ran-LO should be
+the default ones to use, while the above flags can be
+individually manipulated for data collection.
+
+CHANGED Interval::adjustStructOffset to also change the
+ao target (if possible; currently doesn't handle array-of
+structs correctly sometimes).
+
+CHANGED Interval::adjustTypes to support the full type
+assumptions (incl |char|<=|short|<=|int|...).  This is
+actually implemented in TCtype::countInstancesOf.
+This resulted in greatly-streamlined code.
+
+CHANGED Interval::cond_intersect to allow intersection
+to go to Top in cases when we know the two sides don't
+intersect.
+@
+text
+@d4 1
+d205 2
+a206 3
+//- return true if (1) it's a dereference node,
+//  and (2) we can tell it's in bounds
+bool RANfact::checkInBounds(ExpDescr& ed, bool iswrite)
+d214 1
+a214 1
+      return evalAddrRange(str, aoi).inBounds(iswrite);
+d216 1
+a216 1
+      fprintf(stderr, "ERROR(RANfact::checkInBounds): parse error at position %d in string %s\n", s - es, es);
+d219 1
+a219 1
+  return false;
+d380 1
+a380 1
+            return Interval(0, iv2.minus(Interval(1), &TCtype::tcVoidType).Max());
+d1466 3
+a1468 1
+      lookup_rf.evalPredExpr(es+1, aoi, RANfact::m_eqne, Interval(0), dfp);
+d1581 15
+a1595 4
+    ExpDescr& ed = dv.getDesc();
+    if(rf.checkInBounds(ed, (dv.getVpKind() == PExprVerify::vpPtrW)))
+      this->results.Insert(&dv);
+    else{ //- mark as touched
+d1604 9
+@
+
+
+1.53
+log
+@Augmented evalPredExpr to return a boolean, indicating
+if the evaluation encountered any top facts (implying
+the predicate is statically known).
+This value is not yet collected.
+@
+text
+@a3 1
+#include "flags.h"	//for flag_range_target_aos
+d303 1
+a303 2
+      iv.adjustStructOffset(tylist);
+      TCtype::deleteTyList(tylist);
+d319 1
+a319 2
+      iv.adjustStructOffset(tylist);
+      TCtype::deleteTyList(tylist);
+a1127 1
+//- (called only if flag_range_target_aos)
+d1440 1
+a1440 2
+  if(flag_range_target_aos){
+    if(rf.removeIntervalsWithTarget(dd.getAO())){
+a1443 1
+    }
+@
+
+
+1.52
+log
+@Removed some obsolete comments.
+@
+text
+@d637 3
+a639 1
+// and gtle(>); to get the dual, just flip dfp.
+d641 1
+a641 1
+void RANfact::evalPredExpr(char * s, suco_iterator<AO *>& aoi, enum cfmode mode, Interval iv, DFAfactPair& dfp)
+d643 1
+d705 1
+a705 1
+            evalPredExpr(s1, aoi1, mode, ivA, dfp);
+d707 1
+a707 1
+            evalPredExpr(s2, aoi2, modeB, ivB, dfp);
+d710 2
+a711 2
+        case '#':   // Plus
+        case '=': { // Minus
+d716 1
+a716 1
+          evalPredExpr(s, aoi, mode, iv, dfp);
+d741 1
+a741 1
+              evalPredExpr(s1, aoi1, (c=='<')?m_ltge:m_gtle, iv2, dfp);
+d744 1
+a744 1
+              evalPredExpr(s2, aoi2, (c=='<')?m_gtle:m_ltge, iv1, dfp);
+d787 1
+a787 1
+              case '>': evalPredExpr(s1, aoi1, m_ltge, iv2, dfp);
+d789 1
+a789 1
+              case '<': evalPredExpr(s1, aoi1, m_gtle, iv2, dfp);
+d792 1
+a792 1
+                        evalPredExpr(s1, aoi1, m_eqne, iv2, dfp);
+d795 1
+a795 1
+              case '!': evalPredExpr(s1, aoi1, m_eqne, iv2, dfp);
+d801 1
+a801 1
+              case '>': evalPredExpr(s2, aoi2, m_gtle, iv1, dfp);
+d803 1
+a803 1
+              case '<': evalPredExpr(s2, aoi2, m_ltge, iv1, dfp);
+d806 1
+a806 1
+                        evalPredExpr(s2, aoi2, m_eqne, iv1, dfp);
+d809 1
+a809 1
+              case '!': evalPredExpr(s2, aoi2, m_eqne, iv1, dfp);
+d828 1
+a828 1
+          evalPredExpr(s1, aoi1, m_eqne, Interval(0), dfp);
+d840 1
+a840 1
+          evalPredExpr(s, aoi, m_eqne, Interval(0), dfp);
+d861 1
+a861 1
+          evalPredExpr(s1, aoi1, m_eqne, Interval(0), dfp);
+d872 1
+a872 1
+          evalPredExpr(s, aoi, m_eqne, Interval(0), dfp);
+d895 1
+a895 1
+        evalPredExpr(s, aoi, mode, iv, dfp);
+d904 1
+a904 1
+        evalPredExpr(es, aoi, mode, iv, dfp);
+d916 1
+a916 1
+            evalPredExpr(s, aoi, m_eqne, iv, dfp);
+d922 1
+a922 1
+          evalPredExpr(s, aoi, mode, iv, dfp);
+d926 1
+a926 1
+          evalPredExpr(s, aoi, flipmode(mode), Interval(0).minus(iv, &TCtype::tcVoidType), dfp);
+d942 1
+a942 1
+      evalPredExpr(s, aoi, mode, iv, dfp);
+d984 1
+d995 1
+d1008 1
+@
+
+
+1.51
+log
+@Range analysis: added support for evaluating arroW/Member
+expressions.  Changes are:
+ - TCtype::listEquivPrefix: instead of returning bool,
+   now returns the TCtype of the last matching item.
+ - Interval: added setTgt(TCtype&), which was previously
+   included as part of setTgt(AO&).
+ - Interval: added adjustStructOffset() to perform the
+   meat of the arroW/Member handling.
+ - RANfact: added handlers for arroW/Member.
+@
+text
+@a495 3
+            //- currently not supported (returns bottom) under tgt_elty/numelts scheme
+            // (we _could_ support this if the pointers actually contain non-targeted
+	    //  intervals, but that's not likely to occur in real code.)
+d691 1
+a691 1
+                ivB = iv1.ptrs_minus(iv, *cty);  //- currently unsupported (returns bottom)
+@
+
+
+1.50
+log
+@For RAN::handleDecl fix to delete facts affected by
+declared variable (to avoid scoping/aliasing clashes):
+the theory that they should not occur because recursive
+loops always has an input from outside is false: that
+will hold at the very end, but not necessarily during the
+worklist algorithm.
+So a small change to delete the interval (which might
+improve analysis-time anyways).
+@
+text
+@d297 1
+a297 1
+    case 'M': { // Member(exp,name)
+d299 8
+a306 2
+//TODO?
+      skipArgs(s, aoi);
+d314 10
+a323 4
+    case 'W': { // Arrow(exp,name)
+      //- eval(exp) + offset(name)
+//TODO?
+      skipArgs(s, aoi);
+d360 1
+a360 1
+    case 'M': { // Member(exp,name)
+d620 1
+a620 1
+    case 'W': { // Arrow(exp,name)
+d650 1
+a650 1
+    //case 'M': // Member(exp,name)
+d1001 1
+a1001 1
+    //case 'W': // Arrow(exp,name)
+@
+
+
+1.49
+log
+@Minor bug fix(es):
+ 1. Interval::ptrs_minus()
+    Need to account for has_zero -- if either argument
+    has zero, return bottom.
+ 2. RANfactHandled::handleDecl()
+    When declaring x, need to remove both
+    1. fact for x, and
+    2. facts whose interval target ao is x
+    because of new scope/aliasing potential.
+    (Entailed introduction of helpers in many
+    classes, including AO.)
+Note: 2 is the clean solution, but appears to be
+technically unnecessary with context-insensitive
+analysis, since any recursive loop (for which the
+new scope/aliasing problem arises) must have an
+external in-edge which should bottom out any facts
+affecting x.
+@
+text
+@d1410 6
+a1415 8
+  //	Let's check for this:
+/**/if(!rf.getInterval(dd.getAO()).isBottom()){
+/**/fprintf(stderr, "ERROR(handleDecl): decl fact not bottom! ");
+/**/dd.getAO().dump_descr(stderr);
+/**/fprintf(stderr, ": ");
+/**/rf.getInterval(dd.getAO()).debug_dump(stderr);
+/**/fprintf(stderr, "\n");
+/**/}
+a1434 1
+    return false; //- not useless
+d1436 1
+a1436 1
+  return true; //- true=useless
+@
+
+
+1.48
+log
+@Removed unused method meetInterval().
+Added code so that whenever doing "meet" of intervals,
+always check after if result was bottom, and if so remove
+the interval from the RANfact.
+@
+text
+@d4 3
+a6 2
+#include <stdlib.h> //for strtoul
+#include <string.h> //for strncmp
+d1116 20
+d1403 37
+a1439 2
+//- ignore decl (better yet: remove from df?)
+  return true;
+@
+
+
+1.47
+log
+@Another fix for callsite-filter, to prevent "reconstitute
+clash" error caused by Return nodes (R I <fn>, R D I <fp>):
+three changes:
+ 1. For each fn, add R I <fn> to gref (and gmod)
+ 2. For each callsite to fp, add R D I <fp> to gref (and gmod)
+    Note: this entailed non-trivial changes to collectIMODREF
+    mechanism, which is really ugly to begin with.
+ 3. In RAN::filterCallsiteFacts, for callsite to fp, still need
+    to separately include R D I <fp>.
+@
+text
+@d137 8
+a144 1
+          tnp = &(*tnp)->next;
+a1078 15
+//- meet ao's interval with iv
+void RANfact::meetInterval(AO& ao, Interval iv)
+{
+  interval_node ** mp = lookupInterval(ao);
+  if(*mp && (&(*mp)->ao == &ao)){
+    if(iv.isBottom()){ //- delete the interval
+      interval_node * tmp = *mp;
+      *mp = (*mp)->next;
+      delete tmp;
+    } else { //- meet with iv
+      (*mp)->interval.meet(iv);
+    }
+  }
+}
+
+d1085 3
+a1087 1
+      if(iv.isBottom()){ //- delete the interval
+d1091 1
+a1091 2
+      } else { //- meet with iv
+        (*mp)->interval.meet(iv);
+@
+
+
+1.46
+log
+@1. BUG FIX: RAN::handleReturn was erroneously deleting
+   intervals for anyting pointing to localvars.pointsto.aliases!
+   This turns out to over-filter!?
+   FIXED to filter out a. all local vars, b. intervals for aos
+   that may point to a local var.
+2. Minor hack to bypass "reconstitute" error message for R D I <ao>
+   objects.  There's no better solution at this point; what we
+   really want is to delete the R D I <ao> intervals after it is
+   no longer needed, which is a point after the callsite that
+   we cannot currently easily identify.  (Note: what if it is
+   return foo();?)  Anyhow, current version should be correct,
+   but with a lot of extra R D I baggage lugged around unnecessarily.
+@
+text
+@d1238 1
+a1238 2
+  //- 2. filter elements satisfying GREF/GFreeHeap constraints back into ranf:
+  //     but leave "top" footprint for later meeting
+d1242 1
+d1244 7
+a1250 7
+    //- Remove return nodes from ranf_local: both R I <fn> and R D I <fn>
+    //  They really shouldn't've been in df to begin with (I think they could
+    //  only get there as residual garbage leaked in certain recursive cases)?
+    //  Actually, they *ARE* needed in df (non_local) because they could be
+    //  assigned as an argument to the called function!
+    ranf_local.updateInterval(tfi.Current()->getId().get_AOReturn(), Interval());
+    ranf_local.updateInterval(tfi.Current()->getId().get_AOStar().get_AOReturn(), Interval());
+@
+
+
+1.45
+log
+@Changed function call handling: filterCallsiteFacts and
+reconstituteFilteredFacts now just create disjoing df and
+df_local sets, and union them together.
+I.e., eliminated shortcut attempt to piggyback reconstitute
+on NARROW, which just complicated everything.
+~ Added function RANfact::reconstitute()
+~ modified RANfact::narrow() to be closer to "true" narrowing
+  (with more warning msgs etc)
+~ updated the comments scattered throughout.
+@
+text
+@d1243 8
+d1368 4
+a1371 3
+    //- handle deallocation (filter out facts for aos that may point to anything in localvars)
+    //- Get freed (localvars) ECR set
+    suco_set<ECR *> freed_ecrset;
+d1374 2
+a1375 1
+      freed_ecrset.Union(ECR::getECR(*aoi.Current()).getPointsTo().getAliasECRs());
+d1377 2
+a1378 2
+    //- Now, remove intervals pointing to anything in freed (localvars) ECR set
+    rf.removeIntervalsPointingTo(freed_ecrset);
+@
+
+
+1.44
+log
+@PREVIOUSLY: handleReturnStmt was only called for non-void
+return statements.
+NOW: handleReturnStmt is called for ALL return statements.
+This is needed so analyses can properly handle deallocation
+of local variables.
+OTHER CHANGES:
+ 1. RAN: handleReturnStmt now removes intervals pointing
+    to freedStack ECRs.
+ 2. Interval: changed code for narrow() to be more logically
+    sound?
+@
+text
+@d1139 4
+a1142 5
+//- for each fact whose AO is in filterset, copy it over to ffact
+//  IMPORTANT: instead of just moving it to ffact, we need to leave
+//  a "top" footprint behind.
+//  This is because the absense of a fact implies bottom, and "this"
+//  will later be meet-ed with the function call results.
+d1151 44
+a1194 1
+      (*mp)->interval.setTop();
+a1195 1
+    mp = &(*mp)->next;
+d1219 6
+a1224 3
+//  is to optimize the number of facts to pass around, what happens is:
+//  - here df is filtered to contain only facts that intersect with the function's
+//    GREF* -- in effect, the filtered-out facts are converted from "top" to "bottom"
+d1226 4
+a1229 6
+//    * new complication: "intersect with GREF" now means "intersect with GREF or
+//      points to something in GFreeHeap"
+//  - df_local is set up to contain a copy of df, but with the filtered-in facts set
+//    to "top" -- I call this the "footprint", which'll help us reconstitute the facts
+//    correctly.
+//  - (cont'd below, in comment for reconstituteFilteredFacts())
+a1242 2
+    //- create footprint for return value!?!
+    ranf_local.updateInterval(tfi.Current()->getId().get_AOReturn(), Interval::Top);
+a1249 3
+//- (cont'd from filterCallsiteFacts() comment above)
+//- when reconstituting, we want to meet df_local into df, BUT treat facts
+//  absent in df as "top" rather than "bottom" --- i.e. narrow!?
+d1254 1
+a1254 1
+  rf.extended_meet(rf_local, false, false, RAN::WN_NARROW);
+a1256 1
+//- if tgtfn == 0
+d1360 2
+a1361 2
+    //- handle deallocation (filter out facts for aos that may point to anything in GFreeStack)
+    //- Get FreeStack ECR set
+d1363 1
+a1363 1
+    suco_iterator<AO *> aoi(retnode.getParentFunction().getGFreeStack());
+d1367 1
+a1367 1
+    //- Now, remove intervals pointing to anything in FreeStack ECR set
+@
+
+
+1.43
+log
+@Changed RAN::evalPredExpr S/V case to use
+Interval::cond_intersect() rather than Interval::join()
+to impose the predicate's constraint.
+(cond_intersect() is a newly written method.)
+The difference is that join computes a SUBSET of the
+intersection, while cond_intersect computes a SUPERSET
+(conservative approximation), as mandated by the semantics
+of how we handle predicates.
+Note that as of now, join() is not being used for any
+purpose.
+@
+text
+@d1212 1
+a1212 1
+//  absent in df as "top" rather than "bottom" --- i.e. narrow!? -- almost
+d1315 1
+a1315 1
+bool RANfactHandler::handleReturnStmt(DFAfact& df, PgmStmt& retnode, ExpDescr& retedesc, bool interproc)
+d1319 15
+a1333 2
+    rf.updateInterval(retnode.getParentFunction().getId().get_AOReturn(),
+			rf.evalExpr(retedesc));
+d1335 1
+@
+
+
+1.42
+log
+@Modified handleFormal to pass a flag indicating whether
+the function is "main".  This is needed because main's
+argc/argv formals may need to be initialized differently.
+
+For RAN::handleFormal() - if ismain, then set bottom;
+else do top MEET callsite facts.
+
+For MBU::handleFormal() - *BUG FIX* - was previously calling
+handleStrongAssign(), which was _wrong_ (doesn't correctly
+meet facts from multiple callsites); fixed to do "weak"
+assignment.
+@
+text
+@d963 1
+a963 1
+              (*tin)->interval.join(iv_true);
+d973 1
+a973 1
+              (*fin)->interval.join(iv_false);
+@
+
+
+1.41
+log
+@Minor diagnostic output change.
+@
+text
+@d1285 1
+a1285 1
+bool RANfactHandler::handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites, bool interproc)
+d1292 12
+a1303 8
+    suco_iterator<PExprCall *> csi(callsites);
+    while(csi.Iterate()){
+      PExprArg * arg = csi.Current()->getArg(dd.getArgNo());
+      if(arg){
+        iv.meet(rf.evalExpr(arg->getDesc()));
+      } else { //- no arg: assume the worst?
+        iv.setBottom();
+        break;  //- no need to continue iteration
+@
+
+
+1.40
+log
+@Small but important change to ExpDescr/estr format:
+ - "pointer-minus-pointer" is now a separate operator "p_",
+   because it has different semantic behavior from the other
+   minuses.
+ - pointer addition and array-sub operators must be normalized,
+   because the behavior is NOT COMMUTATIVE: so now,
+     int + pointer    --(normalized)-->     pointer + int
+     int[pointer]     --(normalized)-->     pointer[int]
+So,
+ - Adjusted ran.cpp to read and handle "p_";
+ - Introduced new function Interval::ptrs_minus for
+   ptr-ptr subtraction ~~ currently returns bottom
+   (because tgt_elty/numelts method cannot support
+    ptr-ptr subtraction).
+ - Simplified Interval::plus/minus, due to int+ptr/ptr+int
+   normalization
+ - for evalPredExpr, had to make sure I respected the
+   normalization.
+@
+text
+@d261 1
+a261 1
+      fprintf(stderr, "ERROR(evalAddrRange): rvalue encountered at %s\n", s);
+d306 1
+a306 1
+      fprintf(stderr, "ERROR(evalAddrRange): unrecognized expression type at %s\n", s);
+d377 1
+a377 1
+            fprintf(stderr, "ERROR(evalSubexpr): unrecognized binop at %s\n", s);
+d431 1
+a431 1
+            fprintf(stderr, "ERROR(evalSubexpr): unrecognized assign-binop at %s\n", s);
+d551 1
+a551 1
+            fprintf(stderr, "ERROR(evalSubexpr): unrecognized unop at %s\n", s);
+d607 1
+a607 1
+      fprintf(stderr, "ERROR(evalSubexpr): unrecognized expression type at %s\n", s);
+@
+
+
+1.39
+log
+@Major Change: ExpDescr estr augmented Sub(B)
+and plus/minus to include elty; further,
+remapped plus/minus to new representations:
+
+  Sub:   B(e1,e2)   -> B(e1,e2,elty)
+  Binop: o+(e1,e2)  -> p+(e1,e2,elty)
+         o-(e1,e2)  -> p-(e1,e2,elty)
+         O+=(e1,e2) -> p#(e1,e2,elty)
+         O-=(e1,e2) -> p=(e1,e2,elty)
+  Unop:  U+<(e)     -> U+<(e,elty)
+         U+>(e)     -> U+>(e,elty)
+         U-<(e)     -> U-<(e,elty)
+         U->(e)     -> U->(e,elty)
+
+For plain (non-pointer) arithmetic, elty = tcVoid.
+
+NOT YET DONE: change body of Interval.plus/minus
+to account for elty.
+
+Auxiliary change: Interval::deleteTy now takes
+a reference rather than a pointer.
+@
+text
+@d254 1
+a254 1
+    case 'p': // Plus/Minus[+-#=](e1,e2,elty)
+d451 1
+a451 1
+    case 'p': { // Plus/Minus[+-#=](e1,e2,elty)
+d474 6
+d631 1
+a631 1
+    case 'p': { // Plus/Minus[+-#=](e1,e2,elty)
+d635 2
+a636 1
+        case '-': { // Minus
+d651 10
+a660 3
+          //-- handling:  i1 + i2 < i	i1 - i2 < i
+          //-    case A:  i1 < i - i2	i1 < i + i2
+          //-    case B:  i2 < i - i1	i2 > i1 - i
+d665 1
+a665 1
+            case '+':
+d668 2
+a669 2
+              break;
+            case '-':
+d671 9
+d682 1
+a682 1
+              break;
+@
+
+
+1.38
+log
+@Added documentation; reordered some functions for more
+logical flow.
+@
+text
+@d228 1
+a228 1
+//   expression points to.
+d254 1
+d265 1
+a265 1
+    case 'B': { // Sub(e1,e2)
+d271 10
+a280 2
+      consume(s, ')');
+      return iv1.plus(iv2);
+a357 4
+          case '+': // Plus
+            return iv1.plus(iv2);
+          case '-': // Minus
+            return iv1.minus(iv2);
+d363 1
+a363 1
+            return Interval(0, iv2.minus(Interval(1)).Max());
+d410 1
+a410 3
+      } else if((!strncmp(s,"+=",2))|| // PlusAssign
+		(!strncmp(s,"-=",2))|| // MinusAssign
+		(!strncmp(s,"*=",2))|| // TimesAssign
+a423 4
+          case '+': // Plus
+            return iv1.plus(iv2);
+          case '-': // Minus
+            return iv1.minus(iv2);
+d429 4
+a432 1
+            return Interval(0, iv2.minus(Interval(1)).Max());
+d451 29
+d509 5
+d515 1
+a515 7
+        if(cty){
+          TCtype::deleteTy(cty);
+          s++;
+        } else {
+          fprintf(stderr, "ERROR(RANfact::evalSubexpr): expecting reading type in cast string %s\n", s);
+          throw s;
+        }
+a516 3
+        consume(s, ',');
+        Interval iv = evalSubexpr(s, aoi);
+        consume(s, ')');
+d539 1
+a539 1
+            return Interval(0).minus(iv);
+d560 5
+a564 2
+        consume(s, ')');
+        return iv.plus(Interval(1));
+d570 5
+a574 2
+        consume(s, ')');
+        return iv.minus(Interval(1));
+d625 1
+a625 1
+    case 'o': { // binop(e1,e2), one char
+a627 28
+        case '>':   // Gt
+        case '<': { // Lt
+          if((mode == m_eqne) && (iv == Interval(0))){
+
+            consume(s, '(');
+            char * s1 = s;
+            suco_iterator<AO *> aoi1(aoi);
+            Interval iv1 = this->evalSubexpr(s, aoi);
+            consume(s, ',');
+            char * s2 = s;
+            suco_iterator<AO *> aoi2(aoi);
+            Interval iv2 = this->evalSubexpr(s, aoi);
+            consume(s, ')');
+
+            dfp.meetIfPair(RANfactHandler::handler); //- redundant?
+
+            if(!iv2.isBottom()){
+              evalPredExpr(s1, aoi1, (c=='<')?m_ltge:m_gtle, iv2, dfp);
+            }
+            if(!iv1.isBottom()){
+              evalPredExpr(s2, aoi2, (c=='<')?m_gtle:m_ltge, iv1, dfp);
+            }
+
+            //- REMEMBER: since the outer condition is ==0, we need to do here the complement!
+            dfp.flipFacts(RANfactHandler::handler);
+
+          } //- else skipahead: cannot handle!
+        } break;
+d639 4
+a642 1
+          consume(s, ')');
+d652 2
+a653 2
+              ivA = iv.minus(iv2);
+              ivB = iv.minus(iv1);
+d656 2
+a657 2
+              ivA = iv.plus(iv2);
+              ivB = iv1.minus(iv);
+d667 42
+d839 1
+a839 3
+      } else if((!strncmp(s,"+=",2))|| // PlusAssign
+		(!strncmp(s,"-=",2))|| // MinusAssign
+		(!strncmp(s,"*=",2))|| // TimesAssign
+d883 1
+a883 1
+          evalPredExpr(s, aoi, flipmode(mode), Interval(0).minus(iv), dfp);
+d920 1
+a920 1
+				   , iv.minus(Interval(1)).Max());
+d925 1
+a925 1
+              iv_true = Interval(iv, iv.plus(Interval(1)).Min()
+@
+
+
+1.37
+log
+@Minor change: replaced duplicate code with call to
+getAliasECRs.
+@
+text
+@d215 15
+d246 57
+a302 3
+//FUTURE TODO: must enrich estr to include:
+// - string literal: to track a string constant as a home
+// - malloc calls: to track a malloc callsite ao as a home
+d316 1
+d574 9
+a915 57
+
+Interval RANfact::evalAddrRange(char *& s, suco_iterator<AO *>& aoi)
+{
+  switch(*s++){
+    //- non-Lvalues: should never occur
+    case 'A': // AddrOf(exp)
+    case 'I': // IntConst(li)
+    case 'o': // binop(e1,e2), one char
+    case 'O': // binop(e1,e2), two chars
+    case 'Q': // QuestionColon(e1,e2,e3)
+    case 'R': // RealConst(r)
+    case 'T': // Cast(ctype,exp)
+    case 'u': // unop(exp), one char
+    case 'U': // unop(exp), two chars
+    case 'Z': // SizeOf(ty)
+      fprintf(stderr, "ERROR(evalAddrRange): rvalue encountered at %s\n", s);
+      skipArgs(s, aoi);
+      break;
+
+    case 'B': { // Sub(e1,e2)
+      //- eval(e1) + eval(e2)
+      consume(s, '(');
+      Interval iv1 = evalSubexpr(s, aoi);
+      consume(s, ',');
+      Interval iv2 = evalSubexpr(s, aoi);
+      consume(s, ')');
+      return iv1.plus(iv2);
+    } break;
+    case 'D': { // Deref(exp)
+      //- eval(exp)
+      consume(s, '(');
+      Interval iv = evalSubexpr(s, aoi);
+      consume(s, ')');
+      return iv;
+    } break;
+    case 'M': { // Member(exp,name)
+      //- addr(exp) + offset(name)
+//TODO?
+      skipArgs(s, aoi);
+    } break;
+    case 'S':   // struct/union member atom
+    case 'V': { // Id atom
+      if(aoi.Iterate()){
+        return Interval(*aoi.Current());
+      }
+    } break;
+    case 'W': { // Arrow(exp,name)
+      //- eval(exp) + offset(name)
+//TODO?
+      skipArgs(s, aoi);
+    } break;
+    default: {
+      fprintf(stderr, "ERROR(evalAddrRange): unrecognized expression type at %s\n", s);
+    } break;
+  }
+  return Interval();
+} // RANfact::evalAddrRange(char *& s, suco_iterator<AO *>& aoi)
+@
+
+
+1.36
+log
+@Added support for treating StringLits as read-only in RAN analysis.
+ - commandline flag -ran-strlit-[readonly|readwrite];
+   global flag flag_range_strlit_readonly
+ - in Interval, added boolean tgt_readonly;
+   updated each Interval function to properly propagate it
+ - added readwrite argument to Interval::inBounds() and
+   RANfact::checkInBounds().
+Also, while updating Interval functions:
+ - fixed some hidden but significant bugs in implementation:
+   a typo in Plus; rudimentary overflow detection for
+   Multiply;...
+@
+text
+@d1185 1
+a1185 11
+  suco_set<ECR *> lecrset;
+  { //- collect lhs ecrs
+    suco_iterator<AO *> aoi(lhs.getAOs());
+    while(aoi.Iterate()){
+      AO& lao = *aoi.Current();
+      if(!lao.isVal() && lao.hasECR()){
+        if(lao.isLoc()) lecrset.Insert(&ECR::getECR(lao));
+        else lecrset.Union(ECR::getECR(lao).getAliasECRs());
+      }
+    }
+  }
+@
+
+
+1.35
+log
+@CHANGE 1: wrote ECR::getAliasECRs(), which collects and
+  caches an ecrset of alias ECRs.
+  This function replaces the functionality of
+  collectAliasECRs(), but should only be called after
+  the points-to graph is finalized.
+CHANGE 2: changed RAN and REDp to account for MayFree
+  set (CFGfunction::getGFreeHeap()).
+  For RAN, this affected: filterCallsiteFact,
+  intraProcHandleCall, and handleFreeCall (previously
+  empty).
+  For RED, this affected only REDp::intraProcHandleCall.
+  For CFGfunction: added gfreeheap_ecrs/getGFreeHeapEcrs()
+  to cache the freeheap ecrset for use in the above
+  phases.
+@
+text
+@d199 1
+a199 1
+bool RANfact::checkInBounds(ExpDescr& ed)
+d207 1
+a207 1
+      return evalAddrRange(str, aoi).inBounds();
+d1378 1
+a1378 1
+    if(rf.checkInBounds(ed))
+@
+
+
+1.34
+log
+@Reorganized (again) interface for inter-procedural handling
+of function calls; removed linkCallRetvalWithTargetFnRetval;
+added filterRetnodeFact.
+NOTE: current solution is very RAN-centric - hacks needed to
+get RAN to work.
+@
+text
+@d1014 15
+d1051 1
+a1051 1
+void RANfact::filterInto(suco_set<AO *>& filterset, RANfact& ffact)
+d1056 2
+a1057 1
+    if(filterset.Contains(&(*mp)->ao)){
+d1087 1
+a1087 1
+//    GREF -- in effect, the filtered-out facts are converted from "top" to "bottom"
+d1089 2
+d1103 2
+a1104 1
+  //- 2. filter GREF elements back into ranf: but leave "top" footprint for later meeting
+d1107 1
+a1107 1
+    ranf_local.filterInto(tfi.Current()->getGREF(), ranf);
+d1114 1
+a1114 1
+    ranf_local.filterInto(dc.getArg(i)->getDesc().getAOs(), ranf);
+d1192 1
+a1192 1
+        else ECR::getECR(lao).collectAliasECRs(lecrset);
+d1278 15
+a1292 1
+//- nop?
+d1312 3
+@
+
+
+1.33
+log
+@Added "top" abstraction to Interval: setTop(), isTop(),
+and static member "Top".
+@
+text
+@d1070 1
+a1070 1
+//  - here df is filtered to contain only facts that intersect with the function
+a1095 5
+
+  //- 4. insert "top" footprint for call retval: this loop mirrors the one in linkCallRetvalWithTargetFnRetval
+  suco_iterator<AO *> faoi(dc.getFaos()); //- should usually just be a singleton set
+  while(faoi.Iterate())
+    ranf_local.updateInterval(faoi.Current()->get_AOStar().get_AOReturn(), Interval::Top); //- hackish: why R D <ao>?  I don't know
+d1108 9
+a1116 1
+void RANfactHandler::linkCallRetvalWithTargetFnRetval(DFAfact& df, PExprCall& dc, CFGfunction& tgtfn)
+d1119 5
+a1123 2
+  Interval tgtrv_iv = rf.getInterval(tgtfn.getId().get_AOReturn());
+  suco_iterator<AO *> faoi(dc.getFaos()); //- should usually just be a singleton set
+d1125 1
+a1125 1
+    rf.meetInterval(faoi.Current()->get_AOStar().get_AOReturn(), tgtrv_iv);
+@
+
+
+1.32
+log
+@Wrote -ran-inter (not fully working?), with many changes:
+- in dfa.cpp function call case, restructured code for
+  collecting facts from return nodes: introduced new
+  function reconstituteFilteredFacts as a dual to
+  filterCallsiteFacts; also introduced function
+  linkRetvalWithTargetFnRetval to copy the fact from
+  the target function's return node to the caller's
+  return node.
+- in the process, fixed two bugs in RANfact
+  (extended_meet(WN_NARROW) and meetIntervals()) -
+  now see if they help (or hurt).
+- modified behavior of Interval.narrow() to do nothing
+  when narrowing with "top" -- previously should never
+  have occured; now may occur due to the interproc stuff.
+@
+text
+@d103 1
+a103 4
+          //- narrowing: don't delete?
+/**/fprintf(stderr, "WARNING(RANfact::extended_meet/WN_NARROW): narrowing ");
+/**/(*tnp)->interval.debug_dump(stderr);
+/**/fprintf(stderr, " with bottom\n");
+d1043 1
+a1043 1
+      (*mp)->interval = Interval(Interval::PLUS_INF, Interval::MINUS_INF);
+d1090 1
+a1090 2
+    ranf_local.updateInterval(tfi.Current()->getId().get_AOReturn(),
+				Interval(Interval::PLUS_INF, Interval::MINUS_INF));
+d1100 1
+a1100 2
+    ranf_local.updateInterval(faoi.Current()->get_AOStar().get_AOReturn(),	//- hackish: why R D <ao>?  I don't know
+				Interval(Interval::PLUS_INF, Interval::MINUS_INF));
+d1182 1
+a1182 1
+    Interval iv(Interval::PLUS_INF, Interval::MINUS_INF); //- start at top; meet the incoming intervals
+@
+
+
+1.31
+log
+@Wrote handleReturnStmt, which introduced a new function
+meetInterval to RANfact.
+Only one piece missing...
+@
+text
+@d81 1
+a81 1
+          if(!(*rnp)->interval.isBottom()){ //- but not if rnp is bottom
+d477 1
+a477 1
+    case 'V': { // Id atom
+d975 7
+a992 1
+      *mp = (*mp)->next;
+d1009 1
+a1009 1
+        *mp = (*mp)->next;
+d1034 5
+d1045 2
+a1046 18
+      interval_node * tmp = *mp;
+      *mp = tmp->next;
+      tmp->next = 0; //- just ultra-paranoid protection
+
+      while((*fmp) && (&(*fmp)->ao < &tmp->ao))
+        fmp = &(*fmp)->next;
+
+      if((*fmp) && (&(*fmp)->ao == &tmp->ao)){ //- already present - delete (actually, this should never occur?)
+        //- assert: should have same interval
+        if(!((*fmp)->interval == tmp->interval)) //- must do !(==) because of operator overloading!?
+          fprintf(stderr, "WARNING(RANfact::filterInto): mismatched intervals!\n");
+        delete tmp;
+      } else { //- insert into ffact via fmp
+        tmp->next = *fmp;
+        *fmp = tmp;
+      }
+    } else {
+      mp = &(*mp)->next;
+d1048 1
+d1067 13
+a1079 1
+//- code copied from MBUfactHandler
+d1088 1
+a1088 1
+  //- 2. filter GREF elements back into ranf
+d1090 1
+a1090 1
+  while(tfi.Iterate())
+d1092 4
+d1100 25
+d1212 2
+a1213 2
+    rf.meetInterval(retnode.getParentFunction().getId().get_AOReturn(),
+		    rf.evalExpr(retedesc));
+d1263 1
+a1263 1
+//- initially: bottom (all vars map implicitly to bottom)
+@
+
+
+1.30
+log
+@Another change: RETURN argument is now an ExpDescr
+instead of an aoset (as was before); with a corresponding
+change to the argument of handleReturnStmt.
+
+Independently: updated RAN's handleFormal (wrote but
+not tested).
+@
+text
+@d975 16
+d1174 3
+a1176 1
+//TODO
+@
+
+
+1.29
+log
+@Interface change: intraProcHandleCall now takes a PExprCall
+rather than a CFGfunction -- consequently, the iteration
+over target functions is now the responsibility of
+intraProcHandleCall rather than in dfa.cpp: BBA::PgmExprPropagate.
+
+Then, one update to body of MBU::intraProcHandleCall -
+to account for assignment of return value, at callsite
+dc to ao, now add "R D ao" to the MBUfact set, so that
+the subsequent assignment of the call's return value
+to a variable will mark that variable as MBU as well.
+This was a bug in the old implemenation.
+@
+text
+@d1071 1
+a1071 1
+    ranf_local.filterInto(dc.getArg(i)->getAOs(), ranf);
+d1131 22
+a1152 2
+//intraproc: ignore formal (better yet: remove from df?)
+  return true; //- true=useless
+d1155 1
+a1155 1
+bool RANfactHandler::handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos, bool interproc)
+d1157 6
+a1162 2
+//intraproc: ignore return
+  return true; //- true=useless
+@
+
+
+1.28
+log
+@Interface update: augmented handleFormal / handleReturnStmt
+with "interproc" flag.
+Not yet used.
+@
+text
+@d1188 1
+a1188 1
+void RANfactHandler::intraProcHandleCall(DFAfact& df, CFGfunction& fn)
+d1192 8
+a1199 5
+  //- remove intervals for aos in GREF
+  //- TODO: make this more efficient?
+  suco_iterator<AO *> gri(fn.getGREF());
+  while(gri.Iterate())
+    rf.updateInterval(*gri.Current(), Interval());
+@
+
+
+1.27
+log
+@Added -ran-inter support: only started implementing
+(not complete - don't run yet).
+@
+text
+@d1129 1
+a1129 1
+bool RANfactHandler::handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites)
+d1135 1
+a1135 1
+bool RANfactHandler::handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos)
+@
+
+
+1.26
+log
+@1. SUCO UPDATE: added copy constructor to suco_iterator,
+   that sets the "list" pointer to the current pointer
+   (this feature will be used in collecting backedge
+   filter).
+2. compute backedge filters: reshuffled interface, and
+   wrote some preliminary untested code!
+   The old version tried to recursively walk the cfg;
+   the new one just walks the sequential list of nodes.
+   Also added command line flag (-ran-[no-]filter-backedge).
+TODO: fix high level bug that only handles true-false
+edges differently when the predicate node gives a pair
+of facts.
+@
+text
+@d1012 28
+d1055 1
+d1058 14
+a1071 1
+//-nop: only needed for interprocedural (TODO?)
+d1132 1
+a1132 1
+  return true;
+d1138 1
+a1138 1
+  return true;
+@
+
+
+1.25
+log
+@Infrastructure update: CFGnode backedge indicator has
+been upgraded from a boolean to an AO set pointer, for
+which a value of:
+  0 indicates non-backedge
+  1 (constant CFGnode::ALL_AOS) indicates a backedge
+    with no AO-filter information (i.e. widen all intervals)
+  otherwise, contains the set of AOs that may be modified
+    in the loop body, and constitutes a safe superset of
+    AOs whose interval needs to be widened.
+So far, added the necessary interface and skeletal function
+bodies; NOT YET DONE: write the engine to compute the may-mod
+sets.
+@
+text
+@d525 1
+a525 1
+            suco_iterator<AO *> aoi1 = aoi;
+d529 1
+a529 1
+            suco_iterator<AO *> aoi2 = aoi;
+d552 1
+a552 1
+          suco_iterator<AO *> aoi1 = aoi;
+d556 1
+a556 1
+          suco_iterator<AO *> aoi2 = aoi;
+d605 1
+a605 1
+          suco_iterator<AO *> aoi1 = aoi;
+d609 1
+a609 1
+          suco_iterator<AO *> aoi2 = aoi;
+d650 1
+a650 1
+          suco_iterator<AO *> aoi1 = aoi;
+d683 1
+a683 1
+          suco_iterator<AO *> aoi1 = aoi;
+@
+
+
+1.24
+log
+@1. Adjustment to "_" (untouched exposed aos) behavior: reports only
+   one status, rather than a separate status for ptr/ptrw as was done
+   before.  This is because the tsl analysis is already dependent on
+   ptr/ptrw-ness, so it makes no sense to report both when doing one
+   particular analysis.
+   Involved change to ECR class definition (used to have two booleans
+   touched_ptr/touched_ptrw; now just one).
+
+2. Updated "/" (freearg) to account for untouched-ness: by adding
+   a flag to AO::pointsToExposed/ECR::inclToExposed saying whether
+   or not to check the touched flag.
+@
+text
+@d39 2
+a40 1
+bool RANfact::extended_meet(RANfact& rf, bool preserve, bool warnNotLE, enum RAN::wn_mode wn)
+d130 4
+a133 1
+            this_changed |= (*tnp)->interval.widen(rn->interval);
+d1190 1
+a1190 1
+bool RAN::absorbAndCompare(DFAfact& df1, DFAfact& df2, bool is_backedge)
+d1193 2
+a1194 1
+	 , (wn_always || is_backedge) ? wnmode : WN_MEET);
+@
+
+
+1.23
+log
+@1. Added code to find untouched exposed locations (so they
+   can be unexposed/untracked):
+   - in ECR, added members touched_ptr, touched_ptrw
+   - in RANc(FactHandler), for each Verify, touch the
+     affected ECRs
+   - at the end, traverse all AOs, and for each EXPOSED
+     ao that's untouched, output a "_ [T|U] [T|U] <O>"
+     line (T=touched, U=untouched; 1st=ptr, 2nd=ptrw).
+   - (sml code has concurrently been modified to read
+     those lines and treat <O> as SAFE when untouched)
+2. Behavioral change: -cde-incl and -cde-pt are now
+   on by default!
+@
+text
+@d1209 2
+a1210 3
+  if((dv.getVpKind() == PExprVerify::vpPtr) ||
+	(dv.getVpKind() == PExprVerify::vpPtrW)){
+
+d1217 1
+a1217 1
+        ECR::getECR(*aoi.Current()).touchExposedAndPropagate((dv.getVpKind() == PExprVerify::vpPtrW));
+@
+
+
+1.22
+log
+@Added new stat counters for range analysis: count average
+and max size of RANfact when collecting.
+@
+text
+@d1215 5
+@
+
+
+1.21
+log
+@Major update: implemeted narrowing.
+Some restructuring: previously had different classes
+RAN/RANnarrow/RANwiden; have consolidated them with
+a flag indicating which mode the analysis will run in
+(meet/narrow/widen; the first not currently used).
+Also added runtime flags to turn on/off narrowing
+phase, and also to control whether widen/narrow
+is done always or on backedge only (previous implementation
+was equivalent to one widen pass plus one meet pass;
+current default is one widen(backedge) pass plus one
+narrow(always) pass).
+Note that the narrowing code is currently full of
+debug printfs -- cases that shouldn't(?) occur.
+@
+text
+@d2 1
+d991 8
+d1198 9
+@
+
+
+1.20
+log
+@1. Added predicate handling of && and ||
+2. Fixed intraProcInitFacts to setBottom() rather than setTop()
+@
+text
+@d35 1
+a35 1
+  return extended_meet((RANfact&) df, preserve, warnNotLE, WN_MEET);
+d38 1
+a38 1
+bool RANfact::extended_meet(RANfact& rf, bool preserve, bool warnNotLE, enum RANfact::wn_mode wn)
+d67 28
+a94 1
+  } else { //- non-top meet non-top: intersect interval nodes
+d96 3
+a98 2
+    interval_node ** tnp = &this->map;
+    interval_node * rn = rf.map;
+d100 9
+a108 1
+    bool this_changed = false;
+d110 2
+a111 1
+    while(*tnp){
+d113 1
+a113 1
+      if((!rn) || (&(*tnp)->ao < &rn->ao)){ //- not in rf, delete
+d115 1
+a115 3
+        interval_node * tmp = *tnp;
+        *tnp = (*tnp)->next;
+        delete tmp;
+d117 3
+a119 1
+        this_changed = true;
+d121 1
+a121 1
+      } else if(&(*tnp)->ao == &rn->ao){ //- interval-meet rn into tnp
+d123 1
+a123 9
+         ////////////////////////////////////////
+        // main part                          //
+        if(wn == WN_WIDEN){ //----widening----
+          this_changed |= (*tnp)->interval.widen(rn->interval);
+        } else { //- if(wn == WN_NARROW || wn = WN_MEET) //----narrowing or normal meet----
+          this_changed |= (*tnp)->interval.meet(rn->interval);
+        }
+       //                                    //
+      ////////////////////////////////////////
+d125 9
+a133 2
+        tnp = &(*tnp)->next;
+        rn = rn->next;
+d135 2
+a136 1
+      } else { //- if(&(*tnp)->ao > &rn->ao) //- skip ahead
+d138 4
+a141 2
+        //- todo: if warnNotLE, report
+        rn = rn->next;
+d144 1
+d1004 10
+d1174 4
+a1177 1
+bool RANwiden::absorbAndCompare(DFAfact& df1, DFAfact& df2, bool is_backedge)
+d1179 2
+a1180 24
+  if(is_backedge){
+    RANfact& tdf = (RANfact&) df1.newClone();
+    if(tdf.meet(df2, false, true)){
+      bool ret = ((RANfact&)df1).extended_meet(tdf, false, false, RANfact::WN_WIDEN);
+      dfh.deleteFact(tdf);
+      return ret;
+    } else return false;
+  } else {
+    return df1.meet(df2, false, true);
+  }
+}
+
+bool RANnarrow::absorbAndCompare(DFAfact& df1, DFAfact& df2, bool is_backedge)
+{
+  if(is_backedge){
+    RANfact& tdf = (RANfact&) df1.newClone();
+    if(tdf.meet(df2, false, true)){
+      bool ret = ((RANfact&)df1).extended_meet(tdf, false, false, RANfact::WN_NARROW);
+      dfh.deleteFact(tdf);
+      return ret;
+    } else return false;
+  } else {
+    return df1.meet(df2, false, true);
+  }
+@
+
+
+1.19
+log
+@Added handleWeakAssign; involved adding meetIntervals
+helper.
+@
+text
+@d602 31
+a632 1
+//TODO
+d635 31
+a665 1
+//TODO
+d1079 2
+a1080 2
+//- initially: clear
+  df.setTop();
+@
+
+
+1.18
+log
+@Added code to
+ - lookup address range (evalAddrRange)
+ - do the bounds check
+Also, fixed small bug: skipArgs() now takes aoi as
+argument, as that has to be advanced for each 'V' and
+'S' in the string!
+@
+text
+@a108 1
+//- probably not going to be used: just writing for completeness
+a844 1
+//- return true if changed
+a859 1
+//- return true if deleted
+d870 20
+d959 1
+d961 1
+a961 12
+  if(riv.isBottom()){ //- if rhs interval is bottom
+    //- just clear facts in rf whose ao.ecr is in lecrset
+//TODO
+//    rf.updateInterval(lao, Interval());
+  } else { //- if rhs is not bottom
+    //- we want to update facts for aos whose ecr is in lecrset
+    //- to be smarter: let's use this function's GREF as a filter
+//TODO
+//    rf.meetInterval(lao, riv);
+  }
+
+  return true;
+d991 2
+a992 1
+  if(es && *es == '{'){
+@
+
+
+1.17
+log
+@Added interface skeleton for doing the bounds-check phase,
+including:
+  Interval::inBounds
+  RANfact::checkInBounds
+  RANfact::evalAddrRange (needed by both checkInBounds
+                          and evalSubexpr/addrof case)
+and changed RANc result type from a REDresult to a
+list of PExprVerify's.
+Next need to fill in, mainly evalAddrRange, but must
+think of strategy to store object sizes.
+@
+text
+@d2 1
+a173 6
+Interval RANfact::evalAddrRange(char *& s, suco_iterator<AO *>& aoi)
+{
+//TODO
+  return Interval();
+}
+
+d190 3
+d197 7
+a203 2
+//TODO-      evalAddrRange(s, aoi);
+      skipArgs(s);
+d206 1
+a206 1
+      skipArgs(s);
+d209 1
+a209 1
+      skipArgs(s);
+d212 1
+a212 1
+      if(skipahead) skipArgs(s);
+d222 1
+a222 1
+      skipArgs(s);
+d227 1
+a227 1
+        skipArgs(s);
+d269 1
+a269 1
+        skipArgs(s);
+d272 1
+a272 1
+        skipArgs(s);
+d275 1
+a275 1
+        skipArgs(s);
+d278 1
+a278 1
+        skipArgs(s);
+d281 1
+a281 1
+        skipArgs(s);
+d284 1
+a284 1
+        skipArgs(s);
+d287 1
+a287 1
+        skipArgs(s);
+d290 1
+a290 1
+        skipArgs(s);
+d293 1
+a293 1
+        skipArgs(s);
+d323 1
+a323 1
+        skipArgs(s);
+d326 1
+a326 1
+        skipArgs(s);
+d329 1
+a329 1
+        skipArgs(s);
+d332 1
+a332 1
+        skipArgs(s);
+d335 1
+a335 1
+        skipArgs(s);
+d339 1
+a339 1
+      skipArgs(s);
+d342 1
+a342 1
+      skipArgs(s);
+d362 1
+a362 1
+      if(skipahead) skipArgs(s);
+d385 1
+a385 1
+        skipArgs(s);
+d395 1
+a395 1
+            skipArgs(s);
+d404 1
+a404 1
+            skipArgs(s);
+d416 1
+a416 1
+        skipArgs(s);
+d451 1
+a451 1
+      skipArgs(s);
+d454 1
+a454 1
+      skipArgs(s);
+d461 1
+a461 1
+}
+d735 58
+a792 1
+}
+d803 2
+a804 1
+void RANfact::skipArgs(char *& s)
+d809 1
+d927 23
+d951 3
+@
+
+
+1.16
+log
+@Migrated more interval stuff from ran.cpp to
+Interval class, including:
+ - renaming expand/shrink to meet/join
+ - added code to check for ao equality
+ - ao, min, max are now private members
+@
+text
+@d155 24
+d199 1
+a199 1
+//TODO
+a903 1
+/**/fprintf(stderr, "HandlingPred: %s\n", es);
+a909 4
+/**/if(dfp.getFact2()){
+/**/fprintf(stderr, " (TRUE) : "); dfp.getFact1().debug_dump(stderr);
+/**/fprintf(stderr, " (FALSE): "); dfp.getFact2()->debug_dump(stderr);
+/**/}
+d1001 12
+a1012 1
+//TODO
+@
+
+
+1.15
+log
+@Added handling of pre/post incr/decr and op-assign.
+Small fix to handling of mod (%) operator.
+@
+text
+@d88 1
+a88 8
+          if((*tnp)->interval.min > rn->interval.min){
+             (*tnp)->interval.min = Interval::MINUS_INF;
+             this_changed = true;
+          }
+          if((*tnp)->interval.max < rn->interval.max){
+             (*tnp)->interval.max = Interval::PLUS_INF;
+             this_changed = true;
+          }
+d90 1
+a90 1
+          this_changed = (*tnp)->interval.expand(rn->interval);
+d141 1
+a141 1
+        (*tnp)->interval.shrink((*rnp)->interval);
+d220 1
+a220 3
+            return Interval(0, (iv2.max == Interval::PLUS_INF)
+				?(Interval::PLUS_INF):(iv2.max - 1));
+
+d292 1
+a292 2
+            return Interval(0, (iv2.max == Interval::PLUS_INF)
+				?(Interval::PLUS_INF):(iv2.max - 1));
+d450 1
+a450 1
+          if((mode == m_eqne) && (iv.min == 0) && (iv.max == 0)){
+d530 1
+a530 1
+        if((mode == m_eqne) && (iv.min == 0) && (iv.max == 0)){
+d615 1
+a615 1
+          if((mode == m_eqne) && (iv.min == 0) && (iv.max == 0)){
+d656 3
+d664 4
+a667 2
+              iv_true.max = iv.max - 1;
+              iv_false.min = iv.min;
+d670 4
+a673 2
+              iv_true.min = iv.min + 1;
+              iv_false.max = iv.max;
+d676 2
+a677 2
+              iv_true.min = iv.min;
+              iv_true.max = iv.max;
+d685 1
+a685 1
+              (*tin)->interval.shrink(iv_true);
+d695 1
+a695 1
+              (*fin)->interval.shrink(iv_false);
+@
+
+
+1.14
+log
+@Filled in more cases: uplus/uminus, <=/>=/==/!=, type-cast.
+Note: changed evalPredExpr so taht first argument is no longer
+passed by reference -- since evalPredExpr is not written to
+consume while parsing.
+@
+text
+@a172 1
+      return Interval();
+d175 1
+d182 1
+d226 4
+a229 4
+          case '%': {// Mod
+            if(iv2.max != Interval::PLUS_INF)
+              return Interval(0, iv2.max - 1);
+          } break;
+d276 7
+a282 1
+      } else if(!strncmp(s,"+=",2)){ // PlusAssign
+d284 20
+a303 13
+        skipArgs(s);
+      } else if(!strncmp(s,"-=",2)){ // MinusAssign
+        s += 2;
+        skipArgs(s);
+      } else if(!strncmp(s,"*=",2)){ // TimesAssign
+        s += 2;
+        skipArgs(s);
+      } else if(!strncmp(s,"/=",2)){ // DivAssign
+        s += 2;
+        skipArgs(s);
+      } else if(!strncmp(s,"%=",2)){ // ModAssign
+        s += 2;
+        skipArgs(s);
+d396 1
+d400 2
+a401 1
+      } else if(!strncmp(s,"+<",2)){ // PreInc
+d403 6
+a408 2
+        skipArgs(s);
+      } else if(!strncmp(s,"+>",2)){ // PostInc
+d410 4
+a413 7
+        skipArgs(s);
+      } else if(!strncmp(s,"-<",2)){ // PreDec
+        s += 2;
+        skipArgs(s);
+      } else if(!strncmp(s,"->",2)){ // PostDec
+        s += 2;
+        skipArgs(s);
+d450 1
+d532 4
+a535 4
+      if(  (!strncmp(s,">=",2))  // Gte
+	 ||(!strncmp(s,"<=",2))  // Lte
+	 ||(!strncmp(s,"==",2))  // Eq
+	 ||(!strncmp(s,"!=",2))){ // Neq
+d592 13
+a604 1
+      } else if(!strncmp(s,"+=",2)){ // PlusAssign
+d606 2
+a607 12
+//TODO
+      } else if(!strncmp(s,"-=",2)){ // MinusAssign
+        s += 2;
+//TODO
+      // } else if(!strncmp(s,"*=",2)){ // TimesAssign
+      // } else if(!strncmp(s,"/=",2)){ // DivAssign
+      // } else if(!strncmp(s,"%=",2)){ // ModAssign
+      // } else if(!strncmp(s,"^=",2)){ // XorAssign
+      // } else if(!strncmp(s,"|=",2)){ // OrAssign
+      // } else if(!strncmp(s,"&=",2)){ // AndAssign
+      // } else if(!strncmp(s,"=<",2)){ // LshiftAssign
+      // } else if(!strncmp(s,"=>",2)){ // RshiftAssign
+d645 10
+a654 13
+      if(!strncmp(s,"+<",2)){ // PreInc
+        s += 2;
+//TODO
+      } else if(!strncmp(s,"+>",2)){ // PostInc
+        s += 2;
+//TODO
+      } else if(!strncmp(s,"-<",2)){ // PreDec
+        s += 2;
+//TODO
+      } else if(!strncmp(s,"->",2)){ // PostDec
+        s += 2;
+//TODO
+      }
+@
+
+
+1.13
+log
+@Added Interval helpers expand(meet), shrink(join);
+added times, divide (which use helpers [max/min][pos/neg]()
+and inclzero()).
+@
+text
+@d196 1
+a196 1
+        return Interval(ival,ival);
+d331 19
+a349 1
+      skipArgs(s);
+d370 1
+a370 1
+            return Interval(0,0).minus(iv);
+d429 1
+a429 1
+void RANfact::evalPredExpr(char *& s, suco_iterator<AO *>& aoi, enum cfmode mode, Interval iv, DFAfactPair& dfp)
+d462 2
+d465 1
+d495 1
+a495 1
+              modeB = (mode == m_ltge) ? m_gtle : ((mode == m_gtle) ? m_ltge : mode);
+d514 6
+a519 1
+      if(!strncmp(s,">=",2)){ // Gte
+d521 45
+a565 10
+//TODO
+      } else if(!strncmp(s,"<=",2)){ // Lte
+        s += 2;
+//TODO
+      } else if(!strncmp(s,"==",2)){ // Eq
+        s += 2;
+//TODO
+      } else if(!strncmp(s,"!=",2)){ // Neq
+        s += 2;
+//TODO
+d593 8
+a600 1
+//TODO
+d605 14
+a618 1
+//TODO
+d620 1
+a620 3
+        case '+': // Uplus
+        case '-': // Negate
+        case '~': // BitNot
+a858 1
+    char * s = es + 1;
+d867 1
+a867 1
+      lookup_rf.evalPredExpr(s, aoi, RANfact::m_eqne, Interval(0,0), dfp);
+@
+
+
+1.12
+log
+@Added Interval class to encapsulate [min,max] intervals.
+@
+text
+@d97 1
+a97 8
+          if((*tnp)->interval.min > rn->interval.min){
+             (*tnp)->interval.min = rn->interval.min;
+             this_changed = true;
+          }
+          if((*tnp)->interval.max < rn->interval.max){
+             (*tnp)->interval.max = rn->interval.max;
+             this_changed = true;
+          }
+d148 1
+a148 5
+        if((*tnp)->interval.min < (*rnp)->interval.min)
+           (*tnp)->interval.min = (*rnp)->interval.min;
+
+        if((*tnp)->interval.max > (*rnp)->interval.max)
+           (*tnp)->interval.max = (*rnp)->interval.max;
+d208 1
+a208 2
+        switch(*s++){
+          case '+': { // Plus
+d210 5
+a214 5
+            consume(s, '(');
+            Interval iv1 = evalSubexpr(s, aoi);
+            consume(s, ',');
+            Interval iv2 = evalSubexpr(s, aoi);
+            consume(s, ')');
+d216 2
+d219 1
+a219 10
+
+          } break;
+          case '-': { // Minus
+
+            consume(s, '(');
+            Interval iv1 = evalSubexpr(s, aoi);
+            consume(s, ',');
+            Interval iv2 = evalSubexpr(s, aoi);
+            consume(s, ')');
+
+d221 20
+a240 26
+
+          } break;
+          case '*': { // Times
+            skipArgs(s);
+          } break;
+          case '/': { // Divide
+            skipArgs(s);
+          } break;
+          case '%': { // Mod
+            skipArgs(s);
+          } break;
+          case '>': { // Gt
+            skipArgs(s);
+          } break;
+          case '<': { // Lt
+            skipArgs(s);
+          } break;
+          case '|': { // BitOr
+            skipArgs(s);
+          } break;
+          case '&': { // BitAnd
+            skipArgs(s);
+          } break;
+          case '^': { // BitXor
+            skipArgs(s);
+          } break;
+d340 4
+a343 1
+            skipArgs(s);
+d349 4
+a352 1
+            skipArgs(s);
+d477 1
+a477 1
+          if(!ivA.isBottom()){
+d479 1
+a479 2
+          }
+          if(!ivB.isBottom()){
+a480 1
+          }
+d592 1
+a592 4
+              if((*tin)->interval.min < iv_true.min)
+                 (*tin)->interval.min = iv_true.min;
+              if((*tin)->interval.max > iv_true.max)
+                 (*tin)->interval.max = iv_true.max;
+d602 1
+a602 4
+              if((*fin)->interval.min < iv_false.min)
+                 (*fin)->interval.min = iv_false.min;
+              if((*fin)->interval.max > iv_false.max)
+                 (*fin)->interval.max = iv_false.max;
+@
+
+
+1.11
+log
+@Wrote evalPredExpr '+'/'-' cases:
+ - changed handlePredicate to create a copy of the fact
+	for lookup
+ - thus, evalPredExpr is no longer a static function
+ - added helper functions intervalAdd and intervalSubtract
+Next: will define Interval class to encapsulate intervals
+(min,max).
+@
+text
+@d56 1
+a56 1
+        *tnp = new interval_node(rn->ao, rn->min, rn->max, *tnp);
+d88 2
+a89 2
+          if((*tnp)->min > rn->min){
+             (*tnp)->min = INT_MIN;
+d92 2
+a93 2
+          if((*tnp)->max < rn->max){
+             (*tnp)->max = INT_MAX;
+d97 2
+a98 2
+          if((*tnp)->min > rn->min){
+             (*tnp)->min = rn->min;
+d101 2
+a102 2
+          if((*tnp)->max < rn->max){
+             (*tnp)->max = rn->max;
+d143 1
+a143 1
+          *tnp = new interval_node((*rnp)->ao, (*rnp)->min, (*rnp)->max, *tnp);
+d155 2
+a156 2
+        if((*tnp)->min < (*rnp)->min)
+           (*tnp)->min = (*rnp)->min;
+d158 2
+a159 2
+        if((*tnp)->max > (*rnp)->max)
+           (*tnp)->max = (*rnp)->max;
+d173 1
+a173 1
+void RANfact::evalExpr(ExpDescr& ed, int& min, int& max)
+d181 1
+a181 2
+      evalSubexpr(str, aoi, min, max);
+      consume(str, '}');
+d184 1
+d189 1
+a189 5
+int RANfact::dummy = 0;
+
+//- if &min == &dummy, parse in "skipahead" mode
+//- else, compute min/max
+void RANfact::evalSubexpr(char *& s, suco_iterator<AO *>& aoi, int& min, int& max)
+a190 1
+  bool skipahead = (&min == &dummy);
+d207 1
+a207 1
+        min = max = ival;
+a220 2
+            int min1 = INT_MIN, max1 = INT_MAX;
+            int min2 = INT_MIN, max2 = INT_MAX;
+d223 1
+a223 1
+            evalSubexpr(s, aoi, min1, max1);
+d225 1
+a225 1
+            evalSubexpr(s, aoi, min2, max2);
+d228 1
+a228 1
+            intervalAdd(min,max, min1,max1, min2,max2);
+a231 2
+            int min1 = INT_MIN, max1 = INT_MAX;
+            int min2 = INT_MIN, max2 = INT_MAX;
+d234 1
+a234 1
+            evalSubexpr(s, aoi, min1, max1);
+d236 1
+a236 1
+            evalSubexpr(s, aoi, min2, max2);
+d239 1
+a239 1
+            intervalSubtract(min,max, min1,max1, min2,max2);
+d344 1
+a344 2
+          min = (*in)->min;
+          max = (*in)->max;
+d350 1
+a350 2
+            min = -128;
+            max = 255;
+d406 1
+a406 2
+          min = (*in)->min;
+          max = (*in)->max;
+d412 1
+a412 2
+            min = -128;
+            max = 255;
+d427 1
+d430 1
+a430 1
+void RANfact::evalPredExpr(char *& s, suco_iterator<AO *>& aoi, enum cfmode mode, int min, int max, DFAfactPair& dfp)
+d443 1
+a443 3
+          if((mode == m_eqne) && (min == 0) && (max == 0)){
+            int min1 = INT_MIN, max1 = INT_MAX;
+            int min2 = INT_MIN, max2 = INT_MAX;
+d448 1
+a448 1
+            this->evalSubexpr(s, aoi, min1, max1);
+d452 1
+a452 1
+            this->evalSubexpr(s, aoi, min2, max2);
+d457 2
+a458 2
+            if((min2 != INT_MIN) || (max2 != INT_MAX)){
+              evalPredExpr(s1, aoi1, (c=='<')?m_ltge:m_gtle, min2, max2, dfp);
+d460 2
+a461 2
+            if((min1 != INT_MIN) || (max1 != INT_MAX)){
+              evalPredExpr(s2, aoi2, (c=='<')?m_gtle:m_ltge, min1, max1, dfp);
+a467 2
+          int min1 = INT_MIN, max1 = INT_MAX;
+          int min2 = INT_MIN, max2 = INT_MAX;
+d472 1
+a472 1
+          this->evalSubexpr(s, aoi, min1, max1);
+d476 1
+a476 1
+          this->evalSubexpr(s, aoi, min2, max2);
+d482 2
+a483 2
+          int minA = INT_MIN, maxA = INT_MAX;
+          int minB = INT_MIN, maxB = INT_MAX;
+d487 2
+a488 2
+              intervalSubtract(minA,maxA, min,max, min2,max2);
+              intervalSubtract(minB,maxB, min,max, min1,max1);
+d491 2
+a492 2
+              intervalAdd(minA,maxA, min,max, min2,max2);
+              intervalSubtract(minB,maxB, min1,max1, min,max);
+d496 2
+a497 2
+          if((minA != INT_MIN) || (maxA != INT_MAX)){
+            evalPredExpr(s1, aoi1, mode, minA, maxA, dfp);
+d499 2
+a500 2
+          if((minB != INT_MIN) || (maxB != INT_MAX)){
+            evalPredExpr(s2, aoi2, modeB, minB, maxB, dfp);
+d586 1
+a586 1
+        if((min != INT_MIN) || (max != INT_MAX)){
+d592 1
+a592 2
+          int tmin = INT_MIN, tmax = INT_MAX;
+          int fmin = INT_MIN, fmax = INT_MAX;
+d596 2
+a597 2
+              tmax = max - 1;
+              fmin = min;
+d600 2
+a601 2
+              tmin = min + 1;
+              fmax = max;
+d604 2
+a605 2
+              tmin = min;
+              tmax = max;
+d610 1
+a610 1
+          if((tmin != INT_MIN) || (tmax != INT_MAX)){
+d613 4
+a616 4
+              if((*tin)->min < tmin)
+                 (*tin)->min = tmin;
+              if((*tin)->max > tmax)
+                 (*tin)->max = tmax;
+d618 1
+a618 1
+              *tin = new interval_node(ao, tmin, tmax, *tin);
+d623 1
+a623 1
+          if((fmin != INT_MIN) || (fmax != INT_MAX)){
+d626 4
+a629 4
+              if((*fin)->min < fmin)
+                 (*fin)->min = fmin;
+              if((*fin)->max > fmax)
+                 (*fin)->max = fmax;
+d631 1
+a631 1
+              *fin = new interval_node(ao, fmin, fmax, *fin);
+a668 18
+//- [min,max] = [min1,max1] - [min2,max2] = [min1-max2, max1-min2]
+void RANfact::intervalSubtract(int& min, int& max, int min1, int max1, int min2, int max2)
+{
+  if((min1 != INT_MIN) && (max2 != INT_MAX))
+    min = min1 - max2;
+  if((max1 != INT_MAX) && (min2 != INT_MIN))
+    max = max1 - min2;
+}
+
+//- [min,max] = [min1,max1] + [min2,max2]
+void RANfact::intervalAdd(int& min, int& max, int min1, int max1, int min2, int max2)
+{
+  if((min1 != INT_MIN) && (min2 != INT_MIN))
+    min = min1 + min2;
+  if((max1 != INT_MAX) && (max2 != INT_MAX))
+    max = max1 + max2;
+}
+
+d676 3
+a678 1
+      fprintf(outf, "\t[%d,%d]:", mp->min, mp->max);
+d695 1
+a695 1
+void RANfact::updateInterval(AO& ao, int min, int max)
+d698 1
+a698 1
+  if((min == INT_MIN) && (max == INT_MAX)){
+d703 1
+a703 2
+      (*mp)->min = min;
+      (*mp)->max = max;
+d705 1
+a705 1
+      *mp = new interval_node(ao, min, max, *mp);
+d769 1
+a769 4
+  int min = INT_MIN;	//- default is maximal interval (bottom)
+  int max = INT_MAX;
+  rf.evalExpr(rhs, min, max);
+  rf.updateInterval(lhs, min, max);
+d816 1
+a816 1
+      lookup_rf.evalPredExpr(s, aoi, RANfact::m_eqne, 0, 0, dfp);
+d851 1
+a851 1
+    rf.updateInterval(*gri.Current(), INT_MIN, INT_MAX);
+@
+
+
+1.10
+log
+@Oops: undid DFAfactPairChange: need to keep fact1 as reference,
+since each CFGnode's factPair's fact1 must refer to an instance
+of RANfact within that CFGnode!
+Therefore, rewrote flipFacts a little more clunkily, but
+"conformantly", using DFAfact interface functions (setTop,
+newClone, meet, deleteFact).
+@
+text
+@d235 2
+a236 4
+            if((min1 != INT_MIN) && (min2 != INT_MIN))
+              min = min1 + min2;
+            if((max1 != INT_MAX) && (max2 != INT_MAX))
+              max = max1 + max2;
+d248 2
+a249 5
+            if((min1 != INT_MIN) && (max2 != INT_MAX))
+              min = min1 - max2;
+            if((max1 != INT_MAX) && (min2 != INT_MIN))
+              max = max1 - min2;
+            skipArgs(s);
+a457 1
+            RANfact& rf = (RANfact&) dfp.meetIfPair(RANfactHandler::handler);
+d462 1
+a462 1
+            rf.evalSubexpr(s, aoi, min1, max1);
+d466 1
+a466 1
+            rf.evalSubexpr(s, aoi, min2, max2);
+d469 2
+d478 1
+a478 4
+          }
+        } break;
+        case '+': { // Plus
+//TODO
+d480 1
+d482 37
+a518 1
+//TODO
+d686 18
+d846 5
+d853 1
+a853 1
+      RANfact::evalPredExpr(s, aoi, RANfact::m_eqne, 0, 0, dfp);
+d858 1
+@
+
+
+1.9
+log
+@Added code for initial handling of predicate nodes:
+wrote < and V cases for evalPredExpr;
+modified evalSubexpr to possibly take no arguments, to mean
+a "skipahead" pass, without evaluating min/max.
+Compiles, runs on small test, but not bigger pgms.
+@
+text
+@d481 1
+a481 1
+            dfp.flipFacts();
+d804 1
+a804 1
+    dfp.flipFacts();
+@
+
+
+1.8
+log
+@Somewhat Major Rewrite:
+Previously, I was careless about RANfact being top/bottom
+and how to meet facts.
+Now, however, the lattice has been more distinctly defined:
+a top fact is one where all vars map to the empty interval;
+this is now represented with a is_top flag in RANfact.
+Next, when not is_top, the absense of an interval mapping
+for a variable implies the unconstrained [INT_MIN,INT_MAX]
+interval.
+Meet should thus be an intersection of the two interval
+maps, not union as was previously implemented!
+(The union code has been moved to join(), which is an
+unused function at the moment).
+NOTE: the one place where top-ness is important is when
+widening: the backedge "widening-cache" fact is initially
+top, and upon first widening will be a limited mapping
+with probably many unconstrained intervals.
+Therefore, the order of traversal is not vitally important:
+consider a branch within a loop: if the one-branch fact
+is allowed to be widened into the cached value, then the
+other-branch fact will probably be washed out by the
+cached value having many absent (implying unconstrained)
+intervals!  Therefore, the recently-added -wli-topo flag
+should always be used (it seems to do the "right" thing
+when traversing).
+@
+text
+@d178 1
+a179 1
+    es++;
+d181 2
+a182 2
+      evalSubexpr(es, min, max, aoi);
+      consume(es, '}');
+d184 1
+a184 2
+      fprintf(stderr, "ERROR(RANfact::evalExpr): parse error at position %d in string %s\n",
+		s - ed.getEstr(), ed.getEstr());
+d189 5
+a193 1
+void RANfact::evalSubexpr(char *& s, int& min, int& max, suco_iterator<AO *>& aoi)
+d195 1
+d207 7
+a213 4
+      consume(s, '(');
+      int ival = strtoul(s, &s, 10);
+      consume(s, ')');
+      min = max = ival;
+d220 64
+a283 59
+      switch(*s++){
+        case '+': { // Plus
+          int min1 = INT_MIN, max1 = INT_MAX;
+          int min2 = INT_MIN, max2 = INT_MAX;
+
+          consume(s, '(');
+          evalSubexpr(s, min1, max1, aoi);
+          consume(s, ',');
+          evalSubexpr(s, min2, max2, aoi);
+          consume(s, ')');
+
+          if((min1 != INT_MIN) && (min2 != INT_MIN))
+            min = min1 + min2;
+          if((max1 != INT_MAX) && (max2 != INT_MAX))
+            max = max1 + max2;
+        } break;
+        case '-': { // Minus
+          int min1 = INT_MIN, max1 = INT_MAX;
+          int min2 = INT_MIN, max2 = INT_MAX;
+
+          consume(s, '(');
+          evalSubexpr(s, min1, max1, aoi);
+          consume(s, ',');
+          evalSubexpr(s, min2, max2, aoi);
+          consume(s, ')');
+
+          if((min1 != INT_MIN) && (max2 != INT_MAX))
+            min = min1 - max2;
+          if((max1 != INT_MAX) && (min2 != INT_MIN))
+            max = max1 - min2;
+          skipArgs(s);
+        } break;
+        case '*': { // Times
+          skipArgs(s);
+        } break;
+        case '/': { // Divide
+          skipArgs(s);
+        } break;
+        case '%': { // Mod
+          skipArgs(s);
+        } break;
+        case '>': { // Gt
+          skipArgs(s);
+        } break;
+        case '<': { // Lt
+          skipArgs(s);
+        } break;
+        case '|': { // BitOr
+          skipArgs(s);
+        } break;
+        case '&': { // BitAnd
+          skipArgs(s);
+        } break;
+        case '^': { // BitXor
+          skipArgs(s);
+        } break;
+        default: {
+          fprintf(stderr, "ERROR(evalSubexpr): unrecognized binop at %s\n", s);
+        } break;
+d287 4
+a290 1
+      if(!strncmp(s,">=",2)){ // Gte
+d354 1
+a354 1
+      if(aoi.Iterate()){
+d375 21
+a395 16
+      switch(*s++){
+        case '+': { // Uplus
+          skipArgs(s);
+        } break;
+        case '!': { // Not
+          skipArgs(s);
+        } break;
+        case '-': { // Negate
+          skipArgs(s);
+        } break;
+        case '~': { // BitNot
+          skipArgs(s);
+        } break;
+        default: {
+          fprintf(stderr, "ERROR(evalSubexpr): unrecognized unop at %s\n", s);
+        } break;
+d399 4
+a402 1
+      if(!strncmp(s,"+<",2)){ // PreInc
+d418 1
+a418 1
+      if(aoi.Iterate()){
+d447 184
+a641 1
+/**/char * tmp = s;
+a647 1
+/**/fprintf(stderr, "skipArgs(%s) skipped %d\n", tmp, s-tmp);
+d728 6
+a733 1
+  return cn.getRANfactPair().meetIfPair(*this);
+d794 19
+a812 4
+  dfp.meetIfPair(*this);
+//TODO
+  dfp.splitIfSingle();
+  return true;
+a871 2
+/**/fprintf(stderr, "WIDENING: "); df1.debug_dump(stderr);
+/**/fprintf(stderr, "    WITH: "); tdf.debug_dump(stderr);
+a872 1
+/**/fprintf(stderr, " GIVES %c: ", ret?'T':'F'); df1.debug_dump(stderr);
+@
+
+
+1.7
+log
+@Added helpers skipArgs/consume; filled in all cases of
+evalSubexpr with empty default cases, and wrote plus
+and minus cases.
+@
+text
+@d23 1
+a23 1
+  is_bot = false;
+d29 1
+a29 1
+  is_bot = true;
+d39 1
+a39 1
+  if(rf.is_bot){ //- meet with bot: set to bot
+d41 8
+a48 3
+    bool ret = !this->is_bot;
+    this->setBottom();
+    return ret;
+d50 1
+a50 1
+  } else if(this->is_bot){ //- already bot: do nothing
+d52 11
+a62 3
+    if(warnNotLE){
+      fprintf(stderr, "WARNING(RANfact::meet): higher than bottom: ");
+      rf.debug_dump(stderr);
+d64 1
+a64 1
+    return false;
+d66 1
+a66 1
+  } else { //- non-bot meet non-bot
+d69 1
+a69 1
+    interval_node ** rnp = &rf.map;
+d73 3
+a75 1
+    while(*rnp){
+d77 3
+a79 1
+      if((!*tnp) || (&(*tnp)->ao > &(*rnp)->ao)){ //- absorb rnp into tnp
+d83 1
+a83 12
+        if(preserve){
+          *tnp = new interval_node((*rnp)->ao, (*rnp)->min, (*rnp)->max, *tnp);
+          rnp = &(*rnp)->next;
+        } else {
+          interval_node * tmp = *rnp;
+          *rnp = tmp->next;
+          tmp->next = *tnp;
+          *tnp = tmp;
+        }
+        tnp = &(*tnp)->next;
+
+      } else if(&(*tnp)->ao == &(*rnp)->ao){ //- interval-meet rnp into tnp
+d88 2
+a89 5
+          if((*tnp)->min > (*rnp)->min){
+             if((*tnp)->min != INT_MAX)
+               (*tnp)->min = INT_MIN;
+             else
+               (*tnp)->min = (*rnp)->min;
+d92 2
+a93 5
+          if((*tnp)->max < (*rnp)->max){
+             if((*tnp)->max != INT_MIN)
+               (*tnp)->max = INT_MAX;
+             else
+               (*tnp)->max = (*rnp)->max;
+d97 2
+a98 2
+          if((*tnp)->min > (*rnp)->min){
+             (*tnp)->min = (*rnp)->min;
+d101 2
+a102 2
+          if((*tnp)->max < (*rnp)->max){
+             (*tnp)->max = (*rnp)->max;
+d110 1
+a110 1
+        rnp = &(*rnp)->next;
+d112 1
+a112 1
+      } else { //- if(&(*tnp)->ao < &(*rnp)->ao) //- skip ahead
+d115 1
+a115 1
+        tnp = &(*tnp)->next;
+d122 1
+d125 46
+a170 1
+//-TODO
+d215 2
+a216 2
+          int min1 = INT_MAX, max1 = INT_MIN;
+          int min2 = INT_MAX, max2 = INT_MIN;
+d224 1
+a224 1
+          if((min1 != INT_MAX) && (min2 != INT_MAX))
+d226 1
+a226 1
+          if((max1 != INT_MIN) && (max2 != INT_MIN))
+d230 2
+a231 2
+          int min1 = INT_MAX, max1 = INT_MIN;
+          int min2 = INT_MAX, max2 = INT_MIN;
+d239 1
+a239 1
+          if((min1 != INT_MAX) && (max2 != INT_MAX))
+d241 1
+a241 1
+          if((max1 != INT_MIN) && (min2 != INT_MIN))
+d453 2
+a454 5
+  fprintf(outf, "\n");
+  interval_node * mp = this->map;
+  while(mp){
+    fprintf(outf, "\t[%d,%d]:", mp->min, mp->max);
+    mp->ao.dump_descr(outf);
+d456 7
+a462 1
+    mp = mp->next;
+d475 1
+a475 1
+bool RANfact::updateInterval(AO& ao, int min, int max)
+d477 6
+a482 5
+  interval_node ** mp = lookupInterval(ao);
+  if(*mp && (&(*mp)->ao == &ao)){
+    if(((*mp)->min = min) && ((*mp)->max = max)){
+      return false; //- unchanged
+    } else {
+d485 2
+a486 1
+      return true;
+a487 3
+  } else {
+    *mp = new interval_node(ao, min, max, *mp);
+    return true;
+d492 1
+a492 1
+bool RANfact::deleteInterval(AO& ao)
+d499 1
+a499 2
+    return true;
+  } else return false;
+d545 2
+a546 2
+  int min = INT_MAX;	//- default is maximal interval (bottom)
+  int max = INT_MIN;
+d548 1
+a548 4
+  if((min == INT_MAX) && (max == INT_MIN))
+    rf.deleteInterval(lhs);
+  else
+    rf.updateInterval(lhs, min, max);
+d609 1
+a609 1
+    rf.deleteInterval(*gri.Current());
+@
+
+
+1.6
+log
+@BUG FIXES: fixed bugs in lookupIterval, extended_meet.
+FILLED IN: a few cases in evalSubexpr.
+@
+text
+@d48 1
+a48 1
+      fprintf(stderr, "Meet: higher than bottom: ");
+d133 8
+a140 1
+    evalSubexpr(es+1, min, max, aoi);
+d144 1
+a144 1
+void RANfact::evalSubexpr(char * s, int& min, int& max, suco_iterator<AO *> aoi, char ** ep)
+d146 10
+a155 4
+  switch(*s){
+    case 'A': // AddrOf(exp)
+    case 'B': // Sub(e1,e2)
+    case 'D': // Deref(exp)
+d157 8
+a164 5
+      if(*(++s) == '('){
+        int ival = strtoul(s, &s, 10);
+        min = max = ival;
+        if(*s == ')') s++;
+      }
+d166 60
+a225 15
+    case 'M': // Member(exp,name)
+    case 'o': { // binop, one char
+      s++;
+      switch(*s){
+        case '+': // Plus
+        case '-': // Minus
+        case '*': // Times
+        case '/': // Divide
+        case '%': // Mod
+        case '>': // Gt
+        case '<': // Lt
+        case '|': // BitOr
+        case '&': // BitAnd
+        case '^': // BitXor
+          ;
+d228 1
+a228 2
+    case 'O': { // binop, two chars
+      s++;
+d230 2
+d233 2
+d236 2
+d239 2
+d242 2
+d245 2
+d248 2
+d251 2
+d254 2
+d257 2
+d260 2
+d263 2
+d266 2
+d269 2
+d272 2
+d275 2
+d278 2
+d281 9
+a289 1
+      }
+a290 2
+    case 'Q': // QuestionColon(e1,e2,e3)
+    case 'R': // RealConst(r)
+d299 8
+d310 20
+a329 9
+    case 'T': // Cast(ctype,exp)
+    case 'u': { // unop, one char
+      s++;
+      switch(*s){
+        case '+': // Uplus
+        case '!': // Not
+        case '-': // Negate
+        case '~': // BitNot
+          ;
+d332 1
+a332 2
+    case 'U': { // unop, two chars
+      s++;
+d334 2
+d337 2
+d340 2
+d343 3
+a345 1
+      }
+a347 1
+      s++;
+d355 8
+d366 36
+a401 3
+    case 'W': // Arrow(exp,name)
+    case 'Z': // SizeOf(ty)
+      ;
+a402 1
+  if(ep) *ep = s;
+d425 2
+a426 1
+void RANfact::updateInterval(AO& ao, int min, int max)
+d430 7
+a436 2
+    (*mp)->min = min;
+    (*mp)->max = max;
+d439 1
+d443 2
+a444 1
+void RANfact::deleteInterval(AO& ao)
+d451 2
+a452 1
+  }
+d505 1
+a505 1
+  return true;
+d540 1
+d542 1
+d603 2
+d606 1
+@
+
+
+1.5
+log
+@Filled in skeletal switch functions for evalExpr / added
+evalSubexpr.
+@
+text
+@d2 1
+d61 2
+a62 1
+      if(!(*tnp) || &(*tnp)->ao > &(*rnp)->ao){ //- absorb rnp into tnp
+d68 1
+d113 1
+d130 5
+a134 2
+  const char * es = ed.getEstr();
+  if(es && *es == '{') evalSubexpr(es+1, min, max);
+d137 1
+a137 1
+void RANfact::evalSubexpr(const char * s, int& min, int& max, const char ** ep)
+d143 7
+a149 1
+    case 'I': // IntConst(li)
+d191 11
+a201 1
+    case 'S': // struct/union member atom
+d221 12
+a232 1
+    case 'V': // Id atom
+d237 1
+d242 1
+d248 1
+d255 1
+a255 1
+  while((*mp) && (&ao < &(*mp)->ao))
+@
+
+
+1.4
+log
+@Slowly filling in components of range analysis:
+ - filled in handleStrongAssign
+ - introduced RANfact::evalExpr, right now empty
+ - added RANfact::deleteInterval
+@
+text
+@d2 1
+d125 78
+a257 1
+//- only needed for interprocedural
+d260 1
+a260 1
+//TODO
+d305 1
+a305 1
+//TODO
+d311 1
+a311 1
+//TODO
+d317 1
+a317 1
+//TODO
+d323 1
+a323 1
+//TODO
+d335 1
+a335 1
+//TODO
+d340 2
+a341 1
+//TODO
+d346 7
+a352 1
+//TODO
+@
+
+
+1.3
+log
+@Filled in more of RAN: basically all but transfer functions.
+Note: one change was to eliminate widen/narrow, and create
+an "extended_meet" function with a flag indicating which
+mode (meet/widen/narrow) to perform.
+(Note: narrow mode and meet mode are the same??)
+@
+text
+@d122 4
+d155 10
+d208 8
+a215 1
+//TODO
+@
+
+
+1.2
+log
+@Filled in code and data components for Range analysis.
+Only partway done: compiles, but run doesn't terminate.
+@
+text
+@d32 2
+a33 1
+  RANfact& rf = (RANfact&) df;
+d35 2
+d56 2
+d61 2
+d75 30
+a104 4
+        if((*tnp)->min > (*rnp)->min)
+           (*tnp)->min = (*rnp)->min;
+        if((*tnp)->max < (*rnp)->max)
+           (*tnp)->max = (*rnp)->max;
+d113 1
+a131 14
+//- widen must consume rf
+bool RANfact::widen(RANfact& rf)
+{
+//TODO
+  return false;
+}
+
+//- narrow must consume rf
+bool RANfact::narrow(RANfact& rf)
+{
+//TODO
+  return false;
+}
+
+d165 1
+d284 1
+a284 1
+      bool ret = ((RANfact&)df1).widen(tdf);
+d298 1
+a298 1
+      bool ret = ((RANfact&)df1).narrow(tdf);
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 1
+a1 1
+#include "ran.h"
+d6 5
+d13 3
+d20 2
+d26 2
+d32 49
+d85 1
+d90 6
+d101 2
+d108 2
+d112 7
+d120 1
+a120 6
+//----------------------------------
+//- RANfactHandler
+
+RANfactHandler RANfactHandler::handler;
+
+DFAfact& RANfactHandler::newTopFact()
+d122 7
+d131 1
+a131 1
+void RANfactHandler::deleteFact(DFAfact& df)
+d133 5
+d140 5
+d147 1
+d152 1
+d157 1
+d162 1
+d167 1
+d173 2
+d179 2
+d185 2
+d191 2
+d197 2
+d203 2
+d209 2
+d215 1
+d220 1
+d225 1
+d233 1
+d238 1
+d243 2
+d249 2
+d255 1
+d291 2
+@

@@ -1,0 +1,3581 @@
+head	1.85;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.85
+date	2004.07.01.14.05.11;	author suan;	state Exp;
+branches;
+next	1.84;
+
+1.84
+date	2004.05.18.21.37.54;	author suan;	state Exp;
+branches;
+next	1.83;
+
+1.83
+date	2004.05.02.18.26.36;	author suan;	state Exp;
+branches;
+next	1.82;
+
+1.82
+date	2004.04.14.00.22.35;	author suan;	state Exp;
+branches;
+next	1.81;
+
+1.81
+date	2004.04.08.15.34.36;	author suan;	state Exp;
+branches;
+next	1.80;
+
+1.80
+date	2004.04.07.21.07.14;	author suan;	state Exp;
+branches;
+next	1.79;
+
+1.79
+date	2004.04.07.18.02.03;	author suan;	state Exp;
+branches;
+next	1.78;
+
+1.78
+date	2004.04.07.17.38.56;	author suan;	state Exp;
+branches;
+next	1.77;
+
+1.77
+date	2004.02.24.23.48.16;	author suan;	state Exp;
+branches;
+next	1.76;
+
+1.76
+date	2004.02.24.20.57.49;	author suan;	state Exp;
+branches;
+next	1.75;
+
+1.75
+date	2004.02.24.19.29.20;	author suan;	state Exp;
+branches;
+next	1.74;
+
+1.74
+date	2003.12.18.17.06.31;	author suan;	state Exp;
+branches;
+next	1.73;
+
+1.73
+date	2003.12.12.03.38.39;	author suan;	state Exp;
+branches;
+next	1.72;
+
+1.72
+date	2003.12.11.21.03.59;	author suan;	state Exp;
+branches;
+next	1.71;
+
+1.71
+date	2003.12.11.19.18.20;	author suan;	state Exp;
+branches;
+next	1.70;
+
+1.70
+date	2003.12.11.18.26.35;	author suan;	state Exp;
+branches;
+next	1.69;
+
+1.69
+date	2003.11.13.00.23.51;	author suan;	state Exp;
+branches;
+next	1.68;
+
+1.68
+date	2003.10.24.21.28.49;	author suan;	state Exp;
+branches;
+next	1.67;
+
+1.67
+date	2003.10.24.21.18.48;	author suan;	state Exp;
+branches;
+next	1.66;
+
+1.66
+date	2003.10.22.21.41.42;	author suan;	state Exp;
+branches;
+next	1.65;
+
+1.65
+date	2003.10.22.21.24.52;	author suan;	state Exp;
+branches;
+next	1.64;
+
+1.64
+date	2003.10.21.21.32.17;	author suan;	state Exp;
+branches;
+next	1.63;
+
+1.63
+date	2003.10.08.23.31.07;	author suan;	state Exp;
+branches;
+next	1.62;
+
+1.62
+date	2003.10.08.16.31.43;	author suan;	state Exp;
+branches;
+next	1.61;
+
+1.61
+date	2003.10.07.23.05.21;	author suan;	state Exp;
+branches;
+next	1.60;
+
+1.60
+date	2003.10.01.22.18.32;	author suan;	state Exp;
+branches;
+next	1.59;
+
+1.59
+date	2003.06.18.20.08.46;	author suan;	state Exp;
+branches;
+next	1.58;
+
+1.58
+date	2003.03.21.21.47.30;	author suan;	state Exp;
+branches;
+next	1.57;
+
+1.57
+date	2003.02.24.21.53.17;	author suan;	state Exp;
+branches;
+next	1.56;
+
+1.56
+date	2003.02.22.00.11.49;	author suan;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2003.02.21.17.40.11;	author suan;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2003.02.14.17.41.44;	author suan;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2003.02.13.20.45.06;	author suan;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2003.02.12.21.12.14;	author suan;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2003.01.20.19.46.55;	author suan;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2003.01.20.18.24.37;	author suan;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2003.01.17.21.08.39;	author suan;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2003.01.17.20.15.48;	author suan;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2003.01.16.21.19.32;	author suan;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2003.01.16.20.58.10;	author suan;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2003.01.16.19.30.49;	author suan;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2003.01.16.17.45.59;	author suan;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2003.01.15.21.19.39;	author suan;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2003.01.14.21.51.09;	author suan;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2003.01.14.21.10.06;	author suan;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2003.01.13.17.39.03;	author suan;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2003.01.10.16.31.00;	author suan;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2003.01.09.17.16.56;	author suan;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2003.01.07.20.01.38;	author suan;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2002.12.24.21.22.32;	author suan;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2002.12.21.00.01.06;	author suan;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2002.12.20.23.06.38;	author suan;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2002.12.20.20.59.32;	author suan;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2002.12.20.19.22.33;	author suan;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2002.12.19.23.42.40;	author suan;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2002.12.19.22.03.44;	author suan;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2002.12.19.00.24.06;	author suan;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2002.12.11.21.35.22;	author suan;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2002.12.11.21.31.34;	author suan;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2002.12.10.16.20.05;	author suan;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2002.12.09.22.29.44;	author suan;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2002.12.09.21.23.54;	author suan;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2002.11.29.21.26.17;	author suan;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2002.11.27.21.15.17;	author suan;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2002.11.27.19.52.44;	author suan;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2002.11.27.18.46.20;	author suan;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2002.11.26.20.23.21;	author suan;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2002.11.25.22.49.51;	author suan;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2002.11.22.19.56.04;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2002.11.21.20.44.57;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2002.11.21.19.19.38;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2002.11.21.16.50.28;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2002.11.21.00.35.53;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2002.11.20.19.49.16;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.11.20.19.09.02;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.11.18.22.49.59;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.11.18.22.15.52;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.11.18.16.43.13;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.11.15.23.20.38;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.11.15.22.07.32;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.11.15.20.12.21;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.11.15.01.22.27;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.11.14.21.26.46;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.11.14.18.38.33;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.11.14.16.46.56;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Code for dataflow analyses
+@
+
+
+1.85
+log
+@Added "parallel-2-rounds" hackery to get RED (ptr mode)
+to get better results -- results _MAY_ or may not be sound...
+Complication: the fix "broke" RAN (it gave worse results).
+SO, in the interest of thesis deadline, I've hacked BBA to
+switch between the two versions depending on which analysis
+is being run.
+@
+text
+@#ifndef TC_DFA_H /* { */
+#define TC_DFA_H
+
+#include "suco.h"
+#include "ao.h"
+#include "cfg.h"
+
+//----------------------------------
+// WORKLIST
+
+class CFGnode;
+
+class WorkList
+{
+  public:
+    friend class MBU; //-- for print_debug_stats
+
+    WorkList() : list(), set(leaf_first_compare) {}
+
+    void Insert(CFGnode& cn);
+
+    bool InitialInsert(CFGnode& cn); //- true if inserted
+    void FinishedInitialInserts(); //- "cleanup" initialization
+
+    CFGnode * Remove();
+    void Clear();
+    int Size();
+    bool IsEmpty();
+
+    int ListLength() { return list.Length(); } //- (for debugging)
+    int SetLength() { return set.Length(); } //- (for debugging)
+
+    void debug_dump(FILE * outf);
+
+  private:
+    //- fifo/lifo modes: only use list
+    //- leaf-first mode: use list for initial traversal, then use set
+    suco_llist<CFGnode *> list;
+    suco_set<CFGnode *> set;
+
+    static int leaf_first_compare(CFGnode * n1, CFGnode * n2);
+};
+
+//----------------------------------
+// ABSTRACT DFA and DFAfact classes
+
+class PExprCall;
+class PExprParallel;
+class PExprArg;
+class PExprDecl;
+class PgmExpr;
+class PExprVerify;
+class PgmStmt;
+class CFGfunction;
+
+class DFAfact
+{
+  public:
+    //-- fact constructors/destructor
+    virtual DFAfact& newClone(bool preserve = true) = 0;
+
+    //-- lattice operations
+    // - preserve is an optimization flag: if false, then the
+    //   function is free to modify (consume) df, which should
+    //   often be more efficient
+    // - NOTE: currently join is not called from the DFA level
+    virtual void setTop() = 0;
+    virtual void setBottom() = 0;
+    virtual bool meet(DFAfact& df, bool preserve = true, bool warnNotLE = false) = 0;
+    virtual void join(DFAfact& df, bool preserve = true) = 0;
+    virtual void meetFiltered(DFAfact& df, CFGfunction& tgtfn);
+
+    //-- other
+    virtual void debug_dump(FILE * outf, bool brief = true) = 0;
+
+    virtual ~DFAfact() {}
+};
+
+//----------------------------------
+
+class DFAfactHandler;
+
+class DFAfactPair
+{
+  public:
+    DFAfactPair(DFAfact& f1, DFAfact * f2 = 0): fact1(f1), fact2(f2) {}
+
+    DFAfact& getFact1() { return fact1; }
+    DFAfact * getFact2() { return fact2; }
+    void setFact2(DFAfact& f2) { fact2 = &f2; }
+    void resetFact2() { fact2 = 0; }
+
+    void flipFacts(DFAfactHandler& dfh);
+    DFAfact& meetIfPair(DFAfactHandler& dfh);
+    void splitIfSingle();
+
+  private:
+    DFAfactPair();
+
+    DFAfact& fact1;
+    DFAfact * fact2;
+};
+
+//----------------------------------
+
+class CFGfunction;
+class PExprAssign;
+class PExprPredicate;
+
+class DFAfactHandler
+{
+  public:
+    virtual DFAfact& newTopFact() = 0;
+    virtual void deleteFact(DFAfact& df) = 0;
+
+    //-- filter callsite facts by GMOD/GREF, if needed - dual to reconstituteFilteredFacts
+    virtual void filterCallsiteFacts(PExprCall& dc, DFAfact& df, DFAfact& df_local) = 0;
+    //-- reincorporate df_local back into df; default version does a (destructive) meet
+    virtual void reconstituteFilteredFacts(DFAfact& df, DFAfact& df_local);
+    //-- prepare df to do retval-meet, default is noop, currently used by RAN only
+    virtual void interProcPrepareReturnCollector(DFAfact& df, PExprCall& dc) {}
+
+    //-- as currently written, lookupNodeFact needs to return
+    //   a handle to the actual, modifiable fact object
+    //--     if tfSucc, then return fact in pair corresponding to tfSucc
+    //-- *** if tfSucc = 0, then MEET the pair and return the single fact! ***
+    virtual DFAfact& lookupNodeFact(CFGnode& cn, CFGnode * tfSucc = 0) = 0;
+    virtual DFAfactPair& lookupNodeFactPair(CFGnode& cn);
+    virtual DFAfact& lookupNodeFact(PExprCall& dc) = 0;
+    virtual DFAfact& lookupNodeFact(PExprParallel& dp) = 0;
+
+    //-- dataflow analysis transfer functions
+    // - return true means "useless" (NOP) for a given DFA
+    virtual bool handleStrongAssign(DFAfact& df, AO& lhs, ExpDescr& rhs,
+				    PgmExpr * dnode = 0, PgmStmt * cnode = 0, PExprArg * arg = 0) = 0;
+    virtual bool handleWeakAssign(DFAfact& df, ExpDescr& lhs, ExpDescr& rhs, PExprAssign& dnode) = 0;
+    virtual bool handleFormal(DFAfact& df, PExprDecl& dd, CFGfunction& parfn, bool interproc) = 0;
+    virtual bool handleDecl(DFAfact& df, PExprDecl& dd) = 0;
+    virtual bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, ExpDescr * retedesc, bool interproc) = 0;
+    virtual bool handleVerify(DFAfact& df, PExprVerify& dv) = 0;
+    virtual bool handlePredicate(DFAfactPair& dfp, PExprPredicate& dp) = 0;
+
+    virtual void handleFreeCall(DFAfact& df, PExprCall& dc) = 0;
+
+    virtual void intraProcInitializeEntryFact(DFAfact& df, CFGnode& cn) = 0;
+    virtual void interProcFilterEntryFact(DFAfact& df, CFGnode& cn) = 0;
+    virtual void intraProcHandleCall(DFAfact& df, PExprCall& dc) = 0;
+    virtual void interProcHandleCallArgs(DFAfact& df, PExprCall& dc) = 0;
+    virtual void interProcHandleRetvalAssign(DFAfact& df, PExprCall& dc) = 0;
+};
+
+//----------------------------------
+
+class CFG;
+
+class BBA
+{
+  public:
+
+    void collectResults(CFG& cfg, bool skip_libfns = false);
+
+  protected:
+    enum parallel_mode { PM_DEFAULT, PM_RED, PM_RED_UNSAFE };
+
+    BBA(DFAfactHandler& h, bool inter, enum parallel_mode pm = PM_DEFAULT)
+	: dfh(h),
+	  do_interprocedural(inter),
+	  pmode(pm)
+	  {}
+
+    //-- data
+    DFAfactHandler& dfh;
+    bool do_interprocedural;
+    enum parallel_mode pmode;
+
+    bool PgmExprPropagate(PgmExpr& dn, DFAfactPair& dfp, PgmStmt * parent);
+    bool PgmStmtPropagate(PgmStmt& cn, DFAfactPair& dfp);
+    void processCFGnode(CFGnode& cn);
+
+    //-- used by DFA to add successors to worklist
+    // - default BBA (collector) versions do nothing
+    virtual void checkCallProgress(PExprCall& dc, DFAfact& df) {}
+    virtual void checkNodeProgress(CFGnode& cn, DFAfactPair& dfp) {}
+    virtual bool checkParallelProgress(PExprParallel& dp, DFAfact& df, bool looping_back = true) { return false; }
+
+    //-- default BBA (collector) versions: no node is useless
+    virtual bool isUselessNode(CFGnode& cn) { return false; }
+    virtual bool isUselessNode(PgmExpr& dn) { return false; }
+    virtual bool markUselessNode(CFGnode& cn) { return false; }
+    virtual bool markUselessNode(PgmExpr& dn) { return false; }
+
+    virtual bool isCollector() const { return true; } //- BBA = "collect" mode (as opposed to DFA mode)
+
+  private:
+    BBA();
+};
+
+class DFA : public BBA
+{
+  public:
+    void collectWorkList(CFGnode& cn);
+    void doAnalysis(CFG& cn, bool intra_skip_libfns = false);
+
+    WorkList worklist; //-- should be private; is protected now for MBU::print_debug_stats
+
+  protected:
+    DFA(DFAfactHandler& h, bool inter, bool widen = false, enum BBA::parallel_mode pm = BBA::PM_DEFAULT)
+	: BBA(h,inter,pm),
+	  worklist() {}
+
+    virtual bool absorbAndCompare(DFAfact& df1, DFAfact& df2, LocSet * backedge_filter = 0);
+
+    virtual void print_debug_stats(CFG& cfg, FILE * outf) = 0;
+
+  protected: //- inherited stuff
+    virtual bool isUselessNode(CFGnode& cn) = 0;
+    virtual bool isUselessNode(PgmExpr& dn) = 0;
+    virtual bool markUselessNode(CFGnode& cn) = 0;
+    virtual bool markUselessNode(PgmExpr& dn) = 0;
+
+    virtual bool isCollector() const { return false; } //- BBA = "collect" mode (as opposed to DFA mode)
+
+    void checkCallProgress(PExprCall& dc, DFAfact& df);
+    void checkNodeProgress(CFGnode& cn, DFAfactPair& dfp);
+    bool checkParallelProgress(PExprParallel& dp, DFAfact& df, bool looping_back = true);
+
+  private:
+    DFA();
+
+    static DFA * act_dfa;
+    static bool addCallTargetsToWorkList(PgmExpr& dn);
+
+    void collectWorkListDepthFirst(CFGnode& cn);
+
+    //- helper for doAnalysis
+    void processWorklist(CFG& cfg);
+};
+
+//----------------------------------
+
+#endif /* } ifndef TC_DFA_H */
+
+@
+
+
+1.84
+log
+@Added new flag "skip_libfn" to DFA::doAnalysis and
+BBA::collectResults to control whether or not to
+process library functions.
+~> currently, only pMBU skips library fns.
+~> other analyses still need to go through
+   library fns, to process "touched aos" etc.
+   *TODO*: recognize that we're in a libfn,
+	and just do touched aos w/o collecting
+	e.g. RAN aids.
+@
+text
+@d163 7
+a169 1
+    BBA(DFAfactHandler& h, bool inter): dfh(h), do_interprocedural(inter) {}
+d174 1
+d192 2
+d207 3
+a209 1
+    DFA(DFAfactHandler& h, bool inter, bool widen = false) : BBA(h,inter), worklist() {}
+d220 2
+@
+
+
+1.83
+log
+@MAJOR UPDATE:
+- Created new class LocSet to encapsulate a set of
+  locations, used to store GMOD, GREF, and backedge
+  filters.
+  (Previously, was suco_set<AO *>, later changed to
+  suco_set<ECR *>.)
+- Created two versions, one storing AOs, another
+  storing ECRs.  Verified that results are the
+  same, though performance is not (but only when
+  computing backedge filters).
+@
+text
+@d160 1
+a160 1
+    void collectResults(CFG& cfg);
+d193 1
+a193 1
+    void doAnalysis(CFG& cn);
+@
+
+
+1.82
+log
+@Major overhaul, to handle function call filtering.
+See dfa.cpp for documentation.
+ - filterRetnodeFact() eliminated; replaced by
+ - interProcHandleRetvalAssign -- responsible for
+   assigning from R X I <fn> to R D I <fp>.
+ - interProcPrepareReturnCollector() -- special
+    pre-processor for indirect calls to set "intersection"
+   AOs to "top".
+ - meetFiltered() -- does meet, but constrained by a
+   window (defined by a function's GREF/MayFree set).
+Supporting changes:
+ - eliminated removeArgIntervalsExceptFor(); rendered obsolete
+   by
+ - filterGrefMayFree() -- called at function entry
+ - RANfact::isTop()
+ - collectAOset, createTopMappings, in support of
+   interProcPrepareReturnCollector()
+ - PExprCall::isDirectCall() and isRecursiveCall()
+ - CFGfunction::GrefOrFreeHeapAffects()
+@
+text
+@d200 1
+a200 1
+    virtual bool absorbAndCompare(DFAfact& df1, DFAfact& df2, suco_set<AO *> * backedge_filter = 0);
+@
+
+
+1.81
+log
+@Added debug functions to WorkList to return
+the length of its list and set components.
+@
+text
+@d54 1
+d71 1
+d120 2
+a121 2
+    //-- at a callsite, do extra filtering of the return facts (currently used only by RAN)
+    virtual void filterRetnodeFact(DFAfact& df, suco_set<AO *>& faos, CFGfunction * tgtfn) {}
+d149 1
+@
+
+
+1.80
+log
+@Added new DFA interface function interProcFilterEntryFact()
+called at each function entry (when doing inter-proc
+analysis).
+@
+text
+@d30 3
+@
+
+
+1.79
+log
+@Changed handleFormal to pass parent-function rather
+than previous "ismain" and "callsites" pair.
+@
+text
+@d141 1
+@
+
+
+1.78
+log
+@Added interProcHandleCallArgs() interface function to
+DFA and all derived classes.
+@
+text
+@d132 1
+a132 1
+    virtual bool handleFormal(DFAfact& df, PExprDecl& dd, bool ismain, suco_llist<PExprCall *>& callsites, bool interproc) = 0;
+@
+
+
+1.77
+log
+@PREVIOUSLY: handleReturnStmt was only called for non-void
+return statements.
+NOW: handleReturnStmt is called for ALL return statements.
+This is needed so analyses can properly handle deallocation
+of local variables.
+OTHER CHANGES:
+ 1. RAN: handleReturnStmt now removes intervals pointing
+    to freedStack ECRs.
+ 2. Interval: changed code for narrow() to be more logically
+    sound?
+@
+text
+@d142 1
+@
+
+
+1.76
+log
+@Updated some obsolete comments.
+@
+text
+@d134 1
+a134 1
+    virtual bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, ExpDescr& retedesc, bool interproc) = 0;
+@
+
+
+1.75
+log
+@Modified handleFormal to pass a flag indicating whether
+the function is "main".  This is needed because main's
+argc/argv formals may need to be initialized differently.
+
+For RAN::handleFormal() - if ismain, then set bottom;
+else do top MEET callsite facts.
+
+For MBU::handleFormal() - *BUG FIX* - was previously calling
+handleStrongAssign(), which was _wrong_ (doesn't correctly
+meet facts from multiple callsites); fixed to do "weak"
+assignment.
+@
+text
+@d62 1
+a62 1
+    // - both widen and narrow must consume df
+@
+
+
+1.74
+log
+@Reorganized (again) interface for inter-procedural handling
+of function calls; removed linkCallRetvalWithTargetFnRetval;
+added filterRetnodeFact.
+NOTE: current solution is very RAN-centric - hacks needed to
+get RAN to work.
+@
+text
+@d132 1
+a132 1
+    virtual bool handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites, bool interproc) = 0;
+@
+
+
+1.73
+log
+@Wrote -ran-inter (not fully working?), with many changes:
+- in dfa.cpp function call case, restructured code for
+  collecting facts from return nodes: introduced new
+  function reconstituteFilteredFacts as a dual to
+  filterCallsiteFacts; also introduced function
+  linkRetvalWithTargetFnRetval to copy the fact from
+  the target function's return node to the caller's
+  return node.
+- in the process, fixed two bugs in RANfact
+  (extended_meet(WN_NARROW) and meetIntervals()) -
+  now see if they help (or hurt).
+- modified behavior of Interval.narrow() to do nothing
+  when narrowing with "top" -- previously should never
+  have occured; now may occur due to the interproc stuff.
+@
+text
+@d115 2
+a116 2
+    //-- if needed, at a callsite, link the target function's retval fact with the caller's retval
+    virtual void linkCallRetvalWithTargetFnRetval(DFAfact& df, PExprCall& dc, CFGfunction& tgtfn) {}
+@
+
+
+1.72
+log
+@Another change: RETURN argument is now an ExpDescr
+instead of an aoset (as was before); with a corresponding
+change to the argument of handleReturnStmt.
+
+Independently: updated RAN's handleFormal (wrote but
+not tested).
+@
+text
+@d111 1
+a111 1
+    //-- filter callsite facts by GMOD/GREF, if needed
+d113 4
+@
+
+
+1.71
+log
+@Interface change: intraProcHandleCall now takes a PExprCall
+rather than a CFGfunction -- consequently, the iteration
+over target functions is now the responsibility of
+intraProcHandleCall rather than in dfa.cpp: BBA::PgmExprPropagate.
+
+Then, one update to body of MBU::intraProcHandleCall -
+to account for assignment of return value, at callsite
+dc to ao, now add "R D ao" to the MBUfact set, so that
+the subsequent assignment of the call's return value
+to a variable will mark that variable as MBU as well.
+This was a bug in the old implemenation.
+@
+text
+@d130 1
+a130 1
+    virtual bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos, bool interproc) = 0;
+@
+
+
+1.70
+log
+@Interface update: augmented handleFormal / handleReturnStmt
+with "interproc" flag.
+Not yet used.
+@
+text
+@d134 1
+a134 1
+    virtual void handleFreeCall(DFAfact& df, PExprCall& dc) = 0; //- FOR NOW needs to be decreasing (see dfa.cpp)
+d137 1
+a137 1
+    virtual void intraProcHandleCall(DFAfact& df, CFGfunction& fn) = 0; //- FOR NOW needs to be decreasing (see dfa.cpp)
+@
+
+
+1.69
+log
+@Infrastructure update: CFGnode backedge indicator has
+been upgraded from a boolean to an AO set pointer, for
+which a value of:
+  0 indicates non-backedge
+  1 (constant CFGnode::ALL_AOS) indicates a backedge
+    with no AO-filter information (i.e. widen all intervals)
+  otherwise, contains the set of AOs that may be modified
+    in the loop body, and constitutes a safe superset of
+    AOs whose interval needs to be widened.
+So far, added the necessary interface and skeletal function
+bodies; NOT YET DONE: write the engine to compute the may-mod
+sets.
+@
+text
+@d128 1
+a128 1
+    virtual bool handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites) = 0;
+d130 1
+a130 1
+    virtual bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos) = 0;
+@
+
+
+1.68
+log
+@Changed checkParallelProgress(dp,df,flag)
+ BEHAVIOR: meet dp with df; if unchanged, then df must be
+           preserved.
+ NEW BEHAVIOR: meet needs to be replaced by widen when
+           looping back.
+ OLD IMPLEMENTATION: flag was "preserve" which was passed
+     on to the call to meet; in particular, preserve=true
+     usually because when the meet is the same, df must
+     be preserved.
+ NEW IMPLEMENTATION: flag is now "is_loopback", and we call
+     absorbAndCompare which abstracts the handling of
+     meet/widen.  But since absorbAndCompare never preserves
+     df, our hack is that if it returns false, we reset the
+     value of df by meeting with dp.
+@
+text
+@d188 1
+a188 1
+    virtual bool absorbAndCompare(DFAfact& df1, DFAfact& df2, bool is_backedge = false);
+@
+
+
+1.67
+log
+@Restructured BBA/DFA definitions: added default definitions
+of the seven BBA methods (isUseless,markUseless,checkProgress)
+and removed them from the inheriting collector classes.
+Altogether "cleaner" (?) interface, with no change in semantics.
+@
+text
+@d165 1
+a165 1
+    virtual bool checkParallelProgress(PExprParallel& dp, DFAfact& df, bool preserve = true) { return false; }
+d200 1
+a200 1
+    bool checkParallelProgress(PExprParallel& dp, DFAfact& df, bool preserve = true);
+@
+
+
+1.66
+log
+@Oops: undid DFAfactPairChange: need to keep fact1 as reference,
+since each CFGnode's factPair's fact1 must refer to an instance
+of RANfact within that CFGnode!
+Therefore, rewrote flipFacts a little more clunkily, but
+"conformantly", using DFAfact interface functions (setTop,
+newClone, meet, deleteFact).
+@
+text
+@d162 10
+a171 9
+    virtual void checkCallProgress(PExprCall& dc, DFAfact& df) = 0;
+    virtual void checkNodeProgress(CFGnode& cn, DFAfactPair& dfp) = 0;
+
+    virtual bool checkParallelProgress(PExprParallel& dp, DFAfact& df, bool preserve = true) = 0;
+
+    virtual bool isUselessNode(CFGnode& cn) = 0;
+    virtual bool isUselessNode(PgmExpr& dn) = 0;
+    virtual bool markUselessNode(CFGnode& cn) = 0;
+    virtual bool markUselessNode(PgmExpr& dn) = 0;
+d188 10
+a200 4
+
+    virtual bool absorbAndCompare(DFAfact& df1, DFAfact& df2, bool is_backedge = false);
+
+    virtual void print_debug_stats(CFG& cfg, FILE * outf) = 0;
+@
+
+
+1.65
+log
+@Modified DFAfactPair to consist of two pointers rather than
+one reference and one pointer; this is to allow addition of
+flipFacts() method.
+(Also, in dfa.cpp: changed direct accesses to succs/preds
+to call newly-defined helpers getPred/getSucc).
+@
+text
+@d81 1
+a81 1
+    DFAfactPair(DFAfact& f1, DFAfact * f2 = 0): fact1(&f1), fact2(f2) {}
+d83 1
+a83 1
+    DFAfact& getFact1() { return *fact1; }
+d88 1
+a88 1
+    void flipFacts();
+d95 1
+a95 1
+    DFAfact * fact1;
+@
+
+
+1.64
+log
+@Added -wli-topo/-wli-depth, which signals whether to
+initialize the worklist in "breadth-first" order or
+depth-first order. Previously, defaulted to depth-first,
+but with widening, this is not a good initial scheme!
+The "topo"/"breadth-first" order uses the traversal_id
+computed for "leaf-first" traversal -- seems to do the
+desirable thing.
+Implementation (in dfa.h/dfa.cpp) is somewhat hackish
+with respect to Worklist class and its set/list members,
+so beware!.
+@
+text
+@d81 1
+a81 1
+    DFAfactPair(DFAfact& f1, DFAfact * f2 = 0): fact1(f1), fact2(f2) {}
+d83 1
+a83 1
+    DFAfact& getFact1() { return fact1; }
+d88 1
+d95 1
+a95 1
+    DFAfact& fact1;
+@
+
+
+1.63
+log
+@1. Added code (to CFG::assignId) to mark backedges in
+   the CFG.
+   May be buggy -- must test.
+2. -MAJOR UPDATE-
+   Added ran.cpp/ran.h for range checking.
+   Thusfar, ran.cpp contains only empty skeletons to be
+   filled in - do not run!
+3. Renamed widen_narrow in CFG to is_backedge;
+   also, now widen/narrow are specific to RAN/RANfact,
+   rather than generic to DFA/DFAfact.
+@
+text
+@d21 1
+d23 2
+d199 2
+@
+
+
+1.62
+log
+@Added infrastructure for widening/narrowing:
+ - added widen/narrow flag to CFGnode and DFA
+ - added widen/narrow flag to absorbAndCompare to
+   trigger widening/narrowing
+Also, extended lookupNodeFact to take an extra argument:
+a CFGnode to guide lookup of branch successors.
+@
+text
+@a63 2
+    virtual bool widen(DFAfact& df) { return meet(df,false); }
+    virtual bool narrow(DFAfact& df) { return meet(df,false); }
+d181 1
+a181 2
+    DFA(DFAfactHandler& h, bool inter, bool widen = false)
+	: BBA(h,inter), worklist(), flag_widen_narrow(widen?WN_WIDEN:WN_NONE) {}
+d187 1
+a187 1
+    virtual bool absorbAndCompare(DFAfact& df1, DFAfact& df2, bool widen_narrow = false);
+a189 6
+
+    enum wn_mode {
+	WN_NONE		= 0,
+	WN_WIDEN	= 1,
+	WN_NARROW	= 2
+    } flag_widen_narrow;
+@
+
+
+1.61
+log
+@Major Update: added handling of predicates and branches:
+ - added DFAfactPair class
+ - changed Pgm[Expr/Stmt]Propagate to work on DFAfactPairs (dfps)
+ - checkNodeProgress also handles dfps properly
+ - two new virtual functions in DFAfactHandler are
+   - lookupNodeFactPair: default version outputs a warning
+     and allocates a dfp (which probably won't be deleted)
+   - handlePredicate: wrote default { return true; } versions
+     in all the subclasses.
+@
+text
+@d59 1
+d64 2
+d114 3
+a117 1
+    virtual DFAfact& lookupNodeFact(CFGnode& cn) = 0;
+d183 2
+a184 1
+    DFA(DFAfactHandler& h, bool inter) : BBA(h,inter), worklist() {}
+d190 1
+a190 1
+    virtual bool absorbAndCompare(DFAfact& df1, DFAfact& df2);
+d193 6
+@
+
+
+1.60
+log
+@Changed rhs argument of Assign node from an aolist to an exp-descr
+triplet: <aolist, aff-aolist, estr>.
+Main effect is changing the type of the rhs argument of
+handle[Strong/Weak]Assign from an aoset to an ExpDescr,
+which has been down-propagated to all subclasses.
+@
+text
+@d72 24
+d98 1
+d111 1
+d125 1
+d150 2
+a151 2
+    bool PgmExprPropagate(PgmExpr& dn, DFAfact& df, PgmStmt * parent);
+    bool PgmStmtPropagate(PgmStmt& cn, DFAfact& df);
+d156 1
+a156 1
+    virtual void checkNodeProgress(CFGnode& cn, DFAfact& df) = 0;
+d181 1
+a181 1
+    void checkNodeProgress(CFGnode& cn, DFAfact& df);
+@
+
+
+1.59
+log
+@Gave the code the -Wall treatment: adjusted things to
+get rid of warnings:
+ - reordered initializers to match declaration order
+ - made some destructors virtual (note that for many
+   classes with no explicit destructors, I did not
+   add explicit virtual destructors, so -Wall warnings
+   remain)
+ - made some signed/unsigned casts
+ - made some pointer/unsigned int casts for printfs
+ - filled in unaccounted-for cases in switch statements
+@
+text
+@d92 1
+a92 1
+    virtual bool handleStrongAssign(DFAfact& df, AO& lhs, suco_set<AO *>& rhs,
+d94 1
+a94 1
+    virtual bool handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& rhs, PExprAssign& dnode) = 0;
+@
+
+
+1.58
+log
+@Fixed "major" logical flaw when dealing with Parallel nodes:
+previously, final fact was taken to be the *join* of the
+facts along the different paths; however, that only works
+for monotonic transfer functions (?), which gen-kill functions
+aren't; therefore must take the *meet*.
+(Note that when monotonic, the join result is more precise
+than the meet).
+@
+text
+@d67 1
+@
+
+
+1.57
+log
+@Added handleFreeCall to dfa framework (PExprCall now has
+extra set of undeclared functions to which it might point,
+and a helper callsFree() to determine if it may call free()).
+For mbu/rda/rdmb, handleFreeCall is a noop; for RED: wrote
+handleFreeCall to remove expressions affected by *p (p is
+arg 1 of free call).
+@
+text
+@d130 1
+a130 1
+    virtual bool checkParallelProgress(PExprParallel& dp, DFAfact& df) = 0;
+d154 1
+a154 1
+    bool checkParallelProgress(PExprParallel& dp, DFAfact& df);
+@
+
+
+1.56
+log
+@Changed final argument to handleWeakAssign from PgmExpr
+to PExprAssign!
+@
+text
+@d99 2
+d102 1
+a102 1
+    virtual void intraProcHandleCall(DFAfact& df, CFGfunction& fn) = 0;
+@
+
+
+1.55
+log
+@Updated redundant analysis: strong and weak assignments written;
+to do: function calls and result collection.
+Entailed following changes:
+  PExprAssign::getLHS to return ExpDescr instead of AO set.
+  DFA handleWeakAssign's second argument is now ExpDescr rather than AO set.
+  ECR: added helper collectAliasECRs (not tested!)
+@
+text
+@d72 1
+d93 1
+a93 1
+    virtual bool handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& rhs, PgmExpr& dnode) = 0;
+@
+
+
+1.54
+log
+@Split dfa.h into mbu.h, rda.h, rdmb.h.
+@
+text
+@d92 1
+a92 1
+    virtual bool handleWeakAssign(DFAfact& df, suco_set<AO *>& lhs, suco_set<AO *>& rhs, PgmExpr& dnode) = 0;
+@
+
+
+1.53
+log
+@Finished writing intra-procedural engine...
+tested only on small example.
+@
+text
+@a40 1
+class PExprAssign;
+a164 371
+};
+
+//----------------------------------
+//- RDA: reaching-defs analysis
+
+class RDAfact : public DFAfact
+{
+  //-- inherited interface
+  public:
+    DFAfact& newClone(bool preserve = true);
+
+    void setTop() { is_bot = false; clear(); }
+    void setBottom() { is_bot = true; clear(); }
+    bool meet(DFAfact& df, bool preserve = true, bool warnNotLE = false);
+    void join(DFAfact& df, bool preserve = true);
+
+    void debug_dump(FILE * outf, bool brief = true);
+
+  //-- mbu-specific stuff
+  public:
+    RDAfact() : head(0), is_bot(false) {}
+    ~RDAfact() { clear(); }
+
+    void filterInto(suco_set<AO *>& filterset, RDAfact& ffact);
+    void addFact(AO& ao, PgmExpr * dnode = 0, PgmStmt * cnode = 0, PExprArg * arg = 0);
+    void copyFacts(AO& idx_ao, AO& ao, RDAfact& mf);
+    void removeFacts(AO& ao);
+    bool hasKey(AO& ao);
+
+    void markAOsExposed(); //TODO: migrate to BBA?
+
+    static int freelistLength();
+
+    void writeResults(FILE * outf);
+
+  private:
+    RDAfact(RDAfact& mf); //-- disable copy constructor
+
+    //-- data --
+    bool is_bot; //- mark bottom
+    class LocAidNode
+    {
+      public:
+        //-- constructor/destructor wrappers
+        static LocAidNode * acquire(AO& o, LocAidNode * nx = 0);
+        static LocAidNode * acquire(LocAidNode& n, LocAidNode * nx = 0);
+        static void dispose(LocAidNode * n);
+
+        AO& getAO() const { return *ao; }
+        //-- three different types of meta-facts are collected
+        suco_set<PgmExpr *> nodes;	//- assigns, calls, formal decls
+        suco_set<PExprArg *> args;	//- call args
+        suco_set<PgmStmt *> rets;	//- return nodes
+
+        LocAidNode * next;
+
+        static LocAidNode * freelist;
+
+      private:
+        LocAidNode();
+        LocAidNode(AO& o, LocAidNode * nx)
+		: ao(&o),
+		  nodes(), args(), rets(),
+		  next(nx) {}
+        ~LocAidNode() {}
+        AO * ao;
+    } * head;
+
+    //-- methods --
+    void clear();
+    LocAidNode * getFactNode(AO& ao); //- helper for addFact
+};
+
+//----------------------------------
+//- RDA: reaching-defs analysis
+
+class RDAfactHandler : public DFAfactHandler
+{
+  public:
+    DFAfact& newTopFact() { return *new RDAfact(); }
+    void deleteFact(DFAfact& df) { delete (RDAfact *) &df; }
+
+    void filterCallsiteFacts(PExprCall& dc, DFAfact& df, DFAfact& df_local);
+
+    DFAfact& lookupNodeFact(CFGnode& cn);
+    DFAfact& lookupNodeFact(PExprCall& dc);
+    DFAfact& lookupNodeFact(PExprParallel& dp);
+
+    bool handleStrongAssign(DFAfact& df, AO& lhs, suco_set<AO *>& /*ignored*/,
+			    PgmExpr * dnode = 0, PgmStmt * cnode = 0, PExprArg * arg = 0);
+    bool handleWeakAssign(DFAfact& df, suco_set<AO *>& lhs, suco_set<AO *>& /*ignored*/, PgmExpr& dnode);
+    bool handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites);
+    bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos);
+    bool handleDecl(DFAfact& df, PExprDecl& dd);
+    bool handleVerify(DFAfact& df, PExprVerify& dv) { return true; } //- RDA: do nothing
+
+    void intraProcInitializeEntryFact(DFAfact& df, CFGnode& cn) {} //- RDA: no intraProc
+    void intraProcHandleCall(DFAfact& df, CFGfunction& fn) {} //- RDA: no intraProc
+
+  public:
+    static RDAfactHandler handler;
+
+  private:
+    //-- static helpers for handleWeakAssign
+    static RDAfact * aual_fact;
+    static PgmExpr * aual_assign_node;
+    static bool add_locs_to_aual_fact(AO& ao);
+};
+
+//----------------------------------
+//- RDA: reaching-defs analysis
+
+class RDA : public DFA
+{
+  public:
+    RDA() : DFA(RDAfactHandler::handler, true) {}
+
+    bool isUselessNode(CFGnode& cn);
+    bool isUselessNode(PgmExpr& dn);
+    bool markUselessNode(CFGnode& cn);
+    bool markUselessNode(PgmExpr& dn);
+
+    // bool absorbAndCompare(DFAfact& df1, DFAfact& df2); //-- use base version
+
+    void print_debug_stats(CFG& cfg, FILE * outf) {}
+
+};
+
+//----------------------------------
+//- MBU: may-be-uninit analysis
+
+class MBUfact : public DFAfact
+{
+  //-- inherited interface
+  public:
+    friend class MBUfactHandler; //- to access aoset
+
+    DFAfact& newClone(bool preserve = true);
+
+    void setTop() { is_bot = false; aoset.Clear(); }
+    void setBottom() { is_bot = true; aoset.Clear(); }
+    bool meet(DFAfact& df, bool preserve = true, bool warnNotLE = false);
+    void join(DFAfact& df, bool preserve = true);
+
+    void debug_dump(FILE * outf, bool brief = true);
+
+  //-- mbu-specific stuff
+  public:
+    MBUfact() : aoset(), is_bot(false) {}
+    ~MBUfact() { aoset.Clear(); }
+
+    void filterInto(suco_set<AO *>& filterset, MBUfact& ffact);
+    void addUnsafeAliasLocs(suco_set<AO *>& laoset);
+    void addAOs(suco_set<AO *>& aos);
+
+    bool intersectsAliases(suco_set<AO *>& raoset);
+
+    bool contains(AO& ao) { return aoset.Contains(&ao); }
+    int length() { return aoset.Length(); }
+
+  private:
+    MBUfact(MBUfact& mf); //-- disable copy constructor
+
+    //-- data --
+    suco_set<AO *> aoset;
+    bool is_bot; //- mark bottom
+
+    //-- static helpers for addUnsafeAliasLocs
+    static MBUfact * aual_fact;
+    static bool add_locs_to_aual_fact(AO& ao);
+
+    //-- static helpers for intersectsAliases
+    static suco_set<ECR *> ia_ecrset;
+    static bool is_ia_ecrset(ECR& ecr);
+    static suco_set<ECR *> cfr_ecrset;
+    static bool collectFnReturns(AO& ao);
+};
+
+//----------------------------------
+//- MBU: may-be-uninit analysis
+
+class MBUfactHandler : public DFAfactHandler
+{
+  public:
+    DFAfact& newTopFact() { return *new MBUfact(); }
+    void deleteFact(DFAfact& df) { delete (MBUfact *) &df; }
+
+    void filterCallsiteFacts(PExprCall& dc, DFAfact& df, DFAfact& df_local);
+
+    DFAfact& lookupNodeFact(CFGnode& cn);
+    DFAfact& lookupNodeFact(PExprCall& dc);
+    DFAfact& lookupNodeFact(PExprParallel& dp);
+
+    virtual bool handleStrongAssign(DFAfact& df, AO& lhs, suco_set<AO *>& rhs,
+			    PgmExpr * dnode = 0, PgmStmt * cnode = 0, PExprArg * arg = 0);
+    virtual bool handleWeakAssign(DFAfact& df, suco_set<AO *>& lhs, suco_set<AO *>& rhs, PgmExpr& dnode);
+    virtual bool handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites);
+    virtual bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos);
+    virtual bool handleDecl(DFAfact& df, PExprDecl& dd);
+    virtual bool handleVerify(DFAfact& df, PExprVerify& dv) { return true; } //- MBU: do nothing
+
+    virtual void intraProcInitializeEntryFact(DFAfact& df, CFGnode& cn);
+    virtual void intraProcHandleCall(DFAfact& df, CFGfunction& fn);
+
+  public:
+    static MBUfactHandler handler;
+};
+
+class MBUc1factHandler : public MBUfactHandler
+{
+  public:
+    bool handleVerify(DFAfact& df, PExprVerify& dv);
+
+  public:
+    MBUc1factHandler(RDAfact& res) : MBUfactHandler(), results(res) {}
+
+  private:
+    MBUc1factHandler();
+
+    RDAfact& results;
+
+    //-- helpers for handleVerify
+    static MBUfact * cf_mf;
+    static RDAfact * cf_res;
+    static bool collectFact(AO& ao);
+
+};
+
+class MBUc2factHandler : public MBUfactHandler
+{
+  public:
+    bool handleStrongAssign(DFAfact& df, AO& lhs, suco_set<AO *>& rhs,
+			    PgmExpr * dnode = 0, PgmStmt * cnode = 0, PExprArg * arg = 0);
+    bool handleWeakAssign(DFAfact& df, suco_set<AO *>& lhs, suco_set<AO *>& rhs, PgmExpr& dnode);
+    bool handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites);
+    bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos);
+    bool handleDecl(DFAfact& df, PExprDecl& dd);
+    // bool handleVerify(DFAfact& df, PExprVerify& dv); //- MBUc2: do nothing
+
+  public:
+    MBUc2factHandler(RDAfact& res) : MBUfactHandler(), results(res) {}
+
+  private:
+    MBUc2factHandler();
+
+    RDAfact& results;
+};
+
+//----------------------------------
+//- MBU: may-be-uninit analysis
+
+class MBU : public DFA
+{
+  public:
+    MBU(bool inter) : DFA(MBUfactHandler::handler, inter) {}
+
+    bool isUselessNode(CFGnode& cn);
+    bool isUselessNode(PgmExpr& dn);
+    bool markUselessNode(CFGnode& cn);
+    bool markUselessNode(PgmExpr& dn);
+
+    bool absorbAndCompare(DFAfact& df1, DFAfact& df2);
+
+    void print_debug_stats(CFG& cfg, FILE * outf);
+};
+
+//----------------------------------
+//- RDMB: RDA/MBU combo, for collecting may-be-uninit results
+
+class RDMBfact : public DFAfact
+{
+    friend class RDMBfactHandler;
+
+  public:
+
+    RDMBfact(RDAfact& rf, MBUfact& mf) : rda_fact(rf), mbu_fact(mf) {}
+    ~RDMBfact() {}
+
+  private: //-- inherited interface
+    DFAfact& newClone(bool preserve = true);
+
+    void setTop();
+    void setBottom();
+    bool meet(DFAfact& df, bool preserve = true, bool warnNotLE = false);
+    void join(DFAfact& df, bool preserve = true);
+
+    void debug_dump(FILE * outf, bool brief = true);
+
+  private:
+
+    RDAfact& rda_fact;
+    MBUfact& mbu_fact;
+
+    static RDAfact * results;
+
+    void addFacts(suco_set<AO *>& aoset, PgmExpr& dnode, PgmStmt * cnode = 0, PExprArg * arg = 0);
+    //-- static helper for addFacts
+    static AO * cf_ao;
+    static RDAfact * cf_rda_fact;
+    static PgmStmt * cf_parent_node;
+    static bool collectFacts(AO& ao);
+
+};
+
+//----------------------------------
+//- RDMB: RDA/MBU combo, for collecting may-be-uninit results
+
+class RDMBfactHandler : public DFAfactHandler
+{
+  public:
+
+    DFAfact& newTopFact();
+    void deleteFact(DFAfact& df);
+
+    void filterCallsiteFacts(PExprCall& dc, DFAfact& df, DFAfact& df_local);
+
+    DFAfact& lookupNodeFact(CFGnode& cn);
+    DFAfact& lookupNodeFact(PExprCall& dc);
+    DFAfact& lookupNodeFact(PExprParallel& dp);
+
+    bool handleStrongAssign(DFAfact& df, AO& lhs, suco_set<AO *>& rhs,
+			    PgmExpr * dnode = 0, PgmStmt * cnode = 0, PExprArg * arg = 0);
+    bool handleWeakAssign(DFAfact& df, suco_set<AO *>& lhs, suco_set<AO *>& rhs, PgmExpr& dnode);
+    bool handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites);
+    bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos);
+    bool handleDecl(DFAfact& df, PExprDecl& dd);
+    bool handleVerify(DFAfact& df, PExprVerify& dv);
+
+    void intraProcInitializeEntryFact(DFAfact& df, CFGnode& cn);
+    void intraProcHandleCall(DFAfact& df, CFGfunction& fn);
+
+  public:
+    RDMBfactHandler(RDAfact& res) : DFAfactHandler(), results(res)
+	{ RDMBfact::results = &results; }
+
+  private:
+    RDMBfactHandler();
+
+    RDAfact& results;
+};
+
+//----------------------------------
+// MBUc: collect may-be-uninit results
+// A. by rda/mbu - use RDMBfactHandler
+// B. by mbu delta, use, in succession:
+//    MBUc1factHandler - identify only MBU locations
+//    MBUc2factHandler - for these locations, find deltas
+
+class MBUc : public BBA
+{
+  public: //- inherited stuff
+
+    //-- no nothing when collecting
+    void checkCallProgress(PExprCall& dc, DFAfact& df) {}
+    void checkNodeProgress(CFGnode& cn, DFAfact& df) {}
+    bool checkParallelProgress(PExprParallel& dp, DFAfact& df) { return false; }
+
+    //-- no node is useless when collecting
+    bool isUselessNode(CFGnode& cn) { return false; }
+    bool isUselessNode(PgmExpr& dn) { return false; }
+    bool markUselessNode(CFGnode& cn) { return false; }
+    bool markUselessNode(PgmExpr& dn) { return false; }
+
+  public:
+    MBUc(DFAfactHandler& dfh, RDAfact& res, bool inter) : BBA(dfh,inter), results(res) {}
+
+  protected:
+    RDAfact& results;
+
+  private:
+    MBUc();
+@
+
+
+1.52
+log
+@Added -mbu-intra flag; starting to add intra-procedural
+analysis mechanism -- wrote some skeletal setups, but
+not done.
+Should be only two pieces to write to do MBU intraprocedurally
+(I don't think we can/should do RDA intraprocedurally).
+@
+text
+@d72 2
+d99 2
+a138 2
+class CFGfunction;
+
+a153 1
+    virtual void initializeIntraProcEntryFact(CFGfunction& fn) {}
+d262 2
+a263 1
+    void initializeIntraProcEntryFact(CFGfunction& fn) {}
+a287 1
+    // void initializeIntraProcEntryFact(CFGfunction& fn); //-- use base version (noop)
+d319 1
+d367 3
+a426 1
+    void initializeIntraProcEntryFact(CFGfunction& fn);
+d493 3
+@
+
+
+1.51
+log
+@Deleted commented-out old code for handleReturn/handleReturnDealloc.
+@
+text
+@d110 1
+a110 1
+    BBA(DFAfactHandler& h): dfh(h) {}
+d112 1
+d114 1
+d135 2
+d146 1
+a146 1
+    DFA(DFAfactHandler& h) : BBA(h), worklist() {}
+d152 1
+d162 3
+d261 2
+d279 1
+a279 1
+    RDA() : DFA(RDAfactHandler::handler) {}
+d286 1
+d415 1
+a415 1
+    MBU() : DFA(MBUfactHandler::handler) {}
+d422 1
+d523 1
+a523 1
+    MBUc(DFAfactHandler& dfh, RDAfact& res) : BBA(dfh), results(res) {}
+@
+
+
+1.50
+log
+@Significant Update: changed handling of function returns
+ - OLD: was handled at function callsite, split betwee
+        functions handleReturn and handleReturnDealloc
+ - NEW: handled when processing statement, by function
+        handleReturnStmt
+This checkin has old code commented-out; will remove in
+next checkin.
+@
+text
+@a93 1
+//    virtual void handleReturn(DFAfact& df, PExprCall& callnode, PgmStmt& retnode, suco_set<AO *>& retaos) = 0;
+a94 1
+//    virtual void handleReturnDealloc(DFAfact& df, suco_set<AOId *>& localvars) = 0;
+a248 1
+//    void handleReturn(DFAfact& df, PExprCall& callnode, PgmStmt& retnode, suco_set<AO *>& /*ignored*/);
+a249 1
+//    void handleReturnDealloc(DFAfact& df, suco_set<AOId *>& localvars);
+a349 1
+//    virtual void handleReturn(DFAfact& df, PExprCall& callnode, PgmStmt& retnode, suco_set<AO *>& retaos);
+a350 1
+//    virtual void handleReturnDealloc(DFAfact& df, suco_set<AOId *>& localvars);
+a384 1
+//    void handleReturn(DFAfact& df, PExprCall& callnode, PgmStmt& retnode, suco_set<AO *>& retaos);
+a385 1
+//    // void handleReturnDealloc(DFAfact& df, suco_set<AOId *>& localvars); //- MBUc2: do nothing
+a473 1
+//    void handleReturn(DFAfact& df, PExprCall& callnode, PgmStmt& retnode, suco_set<AO *>& retaos);
+a474 1
+//    void handleReturnDealloc(DFAfact& df, suco_set<AOId *>& localvars);
+@
+
+
+1.49
+log
+@Added skeleton for handleReturnStmt, which will replace
+handleReturn when implemented and verified.
+@
+text
+@d90 1
+a90 1
+				    PgmExpr& dnode, PgmStmt * cnode = 0, PExprArg * arg = 0) = 0;
+d94 3
+a96 3
+    virtual void handleReturn(DFAfact& df, PExprCall& callnode, PgmStmt& retnode, suco_set<AO *>& retaos) = 0;
+    virtual bool handleReturnStmt(DFAfact& df, suco_set<AO *>& retaos) = 0;
+    virtual void handleReturnDealloc(DFAfact& df, suco_set<AOId *>& localvars) = 0;
+d248 1
+a248 1
+			    PgmExpr& dnode, PgmStmt * cnode = 0, PExprArg * arg = 0);
+d251 3
+a253 3
+    void handleReturn(DFAfact& df, PExprCall& callnode, PgmStmt& retnode, suco_set<AO *>& /*ignored*/);
+    bool handleReturnStmt(DFAfact& df, suco_set<AO *>& retaos) { return true; /* TODO */ }
+    void handleReturnDealloc(DFAfact& df, suco_set<AOId *>& localvars);
+d351 1
+a351 1
+			    PgmExpr& dnode, PgmStmt * cnode = 0, PExprArg * arg = 0);
+d354 3
+a356 3
+    virtual void handleReturn(DFAfact& df, PExprCall& callnode, PgmStmt& retnode, suco_set<AO *>& retaos);
+    virtual bool handleReturnStmt(DFAfact& df, suco_set<AO *>& retaos) { return true; /* TODO */ }
+    virtual void handleReturnDealloc(DFAfact& df, suco_set<AOId *>& localvars);
+d388 1
+a388 1
+			    PgmExpr& dnode, PgmStmt * cnode = 0, PExprArg * arg = 0);
+d391 3
+a393 3
+    void handleReturn(DFAfact& df, PExprCall& callnode, PgmStmt& retnode, suco_set<AO *>& retaos);
+    bool handleReturnStmt(DFAfact& df, suco_set<AO *>& retaos) { return true; /* TODO */ }
+    // void handleReturnDealloc(DFAfact& df, suco_set<AOId *>& localvars); //- MBUc2: do nothing
+d479 1
+a479 1
+			    PgmExpr& dnode, PgmStmt * cnode = 0, PExprArg * arg = 0);
+d482 3
+a484 3
+    void handleReturn(DFAfact& df, PExprCall& callnode, PgmStmt& retnode, suco_set<AO *>& retaos);
+    bool handleReturnStmt(DFAfact& df, suco_set<AO *>& retaos) { return true; /* TODO */ }
+    void handleReturnDealloc(DFAfact& df, suco_set<AOId *>& localvars);
+@
+
+
+1.48
+log
+@Added call to MBUc2 in tca.cpp;
+added handler functions for MBUc2 for all but handleReturn case.
+That one needs a small overhaul...
+@
+text
+@d95 1
+d252 1
+d355 1
+d392 1
+d483 1
+@
+
+
+1.47
+log
+@Added MBUc2 skeleton, and wrote handleStrongAssign (though
+evidently not correct); entailed adding RDAfact::hasKey
+helper function.
+@
+text
+@d389 1
+a389 1
+    void handleReturnDealloc(DFAfact& df, suco_set<AOId *>& localvars);
+@
+
+
+1.46
+log
+@Rewrote MBUc1 to collect into results both
+A. mbu-verified expressions (including derefs)
+B. mbu-verified locations (these are the ones that will be
+   delta'ed in c2)
+@
+text
+@d185 1
+d384 8
+@
+
+
+1.45
+log
+@Removed RDMBc class; replaced by instantiation of
+general MBUc class (for collecting may-be-uninit
+results in a RDAfact object).
+Added MBUc1factHandler class, and skeleton for MBUc2factHandler.
+@
+text
+@d311 1
+d372 6
+@
+
+
+1.44
+log
+@Major restructuring:
+ 1. added DFAfactHandler class to encapsulate functions
+    that process a DFAfact based on the CFG node.
+    Created a handler for each fact class thusfar
+    (MBU, RDA, cMBU->RDMB)
+ 2. renamed cMBU to RDMB, to represent the pair (RDA,MBU).
+    The collection analysis class is now called RDMBc.
+    Use this new convention for naming?: end in "c" for
+    a "collecting" analysis class (and "a" for "analysis"?)
+@
+text
+@d359 27
+a404 32
+// MBUc: collect may-be-uninit results, by mbu delta
+//   stage 1 - identify only MBU locations
+//   stage 2 - for these locations, find deltas
+
+class MBUc : public BBA
+{
+  public: //- inherited stuff
+
+    //-- no nothing when collecting
+    void checkCallProgress(PExprCall& dc, DFAfact& df) {}
+    void checkNodeProgress(CFGnode& cn, DFAfact& df) {}
+    bool checkParallelProgress(PExprParallel& dp, DFAfact& df) { return false; }
+
+    //-- no node is useless when collecting
+    bool isUselessNode(CFGnode& cn) { return false; }
+    bool isUselessNode(PgmExpr& dn) { return false; }
+    bool markUselessNode(CFGnode& cn) { return false; }
+    bool markUselessNode(PgmExpr& dn) { return false; }
+
+  public:
+    MBUc(MBUfactHandler& mfh, RDAfact& res) : BBA(mfh), results(res) {}
+
+    RDAfact& getResults() { return results; }
+
+  protected:
+    RDAfact& results;
+
+  private:
+    MBUc();
+};
+
+//----------------------------------
+a408 1
+    friend class RDMBc; //- for assigning results pointer
+d468 7
+a474 1
+    static RDMBfactHandler handler;
+d478 5
+a482 1
+//- RDMBc: collect may-be-uninit results using RDA/MBU combo
+d484 1
+a484 1
+class RDMBc : public BBA
+d488 1
+d500 4
+a503 3
+    RDMBc() : BBA(RDMBfactHandler::handler), results()
+	{ RDMBfact::results = &results; }
+    RDAfact& getResults() { return results; }
+d506 1
+a506 1
+    RDAfact results;
+@
+
+
+1.43
+log
+@Systematic change: moved the seven handle_() functions
+from DFAfact to DFA -- this means adding an additional
+DFAfact argument (previously held by "this").
+This change is needed to allow different DFA/BBA classes
+to share the same underlying DFAfact.
+Comment: in this case, C++'s class hierarchy mechanism
+doesn't seem the ideal choice of abstraction!
+@
+text
+@d72 1
+a72 3
+class CFG;
+
+class BBA
+a74 1
+
+a77 7
+    void collectResults(CFG& cfg);
+
+  protected:
+    bool PgmExprPropagate(PgmExpr& dn, DFAfact& df, PgmStmt * parent);
+    bool PgmStmtPropagate(PgmStmt& cn, DFAfact& df);
+    void processCFGnode(CFGnode& cn);
+
+a80 6
+    //-- used by DFA to add successors to worklist
+    virtual void checkCallProgress(PExprCall& dc, DFAfact& df) = 0;
+    virtual void checkNodeProgress(CFGnode& cn, DFAfact& df) = 0;
+
+    virtual bool checkParallelProgress(PExprParallel& dp, DFAfact& df) = 0;
+
+a86 5
+    virtual bool isUselessNode(CFGnode& cn) = 0;
+    virtual bool isUselessNode(PgmExpr& dn) = 0;
+    virtual bool markUselessNode(CFGnode& cn) = 0;
+    virtual bool markUselessNode(PgmExpr& dn) = 0;
+
+d100 34
+d143 1
+a143 1
+    DFA() : BBA(), worklist() {}
+d154 2
+d233 1
+a233 1
+class RDA : public DFA
+a235 2
+    RDA() : DFA() {}
+
+a244 7
+    bool isUselessNode(CFGnode& cn);
+    bool isUselessNode(PgmExpr& dn);
+    bool markUselessNode(CFGnode& cn);
+    bool markUselessNode(PgmExpr& dn);
+
+    // bool absorbAndCompare(DFAfact& df1, DFAfact& df2); //-- use base version
+
+d254 2
+a255 1
+    void print_debug_stats(CFG& cfg, FILE * outf) {}
+a257 1
+
+d265 19
+d290 1
+a290 1
+    friend class MBU; //- to access aoset
+d334 1
+a334 1
+class MBU : public DFA
+a336 2
+    MBU() : DFA(), results() {}
+
+d346 21
+d374 25
+a398 8
+    bool handleStrongAssign(DFAfact& df, AO& lhs, suco_set<AO *>& rhs,
+			    PgmExpr& dnode, PgmStmt * cnode = 0, PExprArg * arg = 0);
+    bool handleWeakAssign(DFAfact& df, suco_set<AO *>& lhs, suco_set<AO *>& rhs, PgmExpr& dnode);
+    bool handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites);
+    void handleReturn(DFAfact& df, PExprCall& callnode, PgmStmt& retnode, suco_set<AO *>& retaos);
+    void handleReturnDealloc(DFAfact& df, suco_set<AOId *>& localvars);
+    bool handleDecl(DFAfact& df, PExprDecl& dd);
+    bool handleVerify(DFAfact& df, PExprVerify& dv) { return true; } //- MBU: do nothing
+d400 1
+a400 1
+    void print_debug_stats(CFG& cfg, FILE * outf);
+d402 2
+a403 1
+    MBUfact& getResults() { return results; }
+d406 1
+a406 1
+    MBUfact results;
+d410 1
+a410 1
+//- cMBU: collecg may-be-uninit results
+d412 1
+a412 1
+class cMBUfact : public DFAfact
+d414 2
+a415 1
+    friend class cMBU;
+d419 2
+a420 2
+    cMBUfact(RDAfact& rf, MBUfact& mf) : rda_fact(rf), mbu_fact(mf) {}
+    ~cMBUfact() {}
+d449 1
+a449 1
+//- cMBU: collect may-be-uninit results
+d451 1
+a451 1
+class cMBU : public BBA
+d453 1
+a453 1
+  public: //- inherited stuff
+a459 5
+    void checkCallProgress(PExprCall& dc, DFAfact& df) {}
+    void checkNodeProgress(CFGnode& cn, DFAfact& df) {}
+    bool checkParallelProgress(PExprParallel& dp, DFAfact& df) { return false; }
+
+    //-- as currently written, these will be left dangling!
+a463 6
+    //-- no node is useless when collecting
+    bool isUselessNode(CFGnode& cn) { return false; }
+    bool isUselessNode(PgmExpr& dn) { return false; }
+    bool markUselessNode(CFGnode& cn) { return false; }
+    bool markUselessNode(PgmExpr& dn) { return false; }
+
+d474 23
+a496 2
+    cMBU(RDA& r, MBU& m) : BBA(), rda(r), mbu(m), results()
+	{ cMBUfact::results = &results; }
+a499 4
+    cMBU();
+
+    RDA& rda;
+    MBU& mbu;
+@
+
+
+1.42
+log
+@Added RDAfact::markAOsExposed to traverse mbu results
+and mark all "index" AOs (and their aliases) exposed.
+@
+text
+@a64 11
+    //-- dataflow analysis transfer functions
+    // - return true means "useless" (NOP) for a given DFA
+    virtual bool handleStrongAssign(AO& lhs, suco_set<AO *>& rhs,
+				    PgmExpr& dnode, PgmStmt * cnode = 0, PExprArg * arg = 0) = 0;
+    virtual bool handleWeakAssign(suco_set<AO *>& lhs, suco_set<AO *>& rhs, PgmExpr& dnode) = 0;
+    virtual bool handleFormal(PExprDecl& dd, suco_llist<PExprCall *>& callsites) = 0;
+    virtual bool handleDecl(PExprDecl& dd) = 0;
+    virtual void handleReturn(PExprCall& callnode, PgmStmt& retnode, suco_set<AO *>& retaos) = 0;
+    virtual void handleReturnDealloc(suco_set<AOId *>& localvars) = 0;
+    virtual bool handleVerify(PExprVerify& dv) = 0;
+
+d108 11
+a158 9
+    bool handleStrongAssign(AO& lhs, suco_set<AO *>& /*ignored*/,
+			    PgmExpr& dnode, PgmStmt * cnode = 0, PExprArg * arg = 0);
+    bool handleWeakAssign(suco_set<AO *>& lhs, suco_set<AO *>& /*ignored*/, PgmExpr& dnode);
+    bool handleFormal(PExprDecl& dd, suco_llist<PExprCall *>& callsites);
+    void handleReturn(PExprCall& callnode, PgmStmt& retnode, suco_set<AO *>& /*ignored*/);
+    void handleReturnDealloc(suco_set<AOId *>& localvars);
+    bool handleDecl(PExprDecl& dd);
+    bool handleVerify(PExprVerify& dv) { return true; } //- RDA: do nothing
+
+a212 5
+
+    //-- static helpers for handleWeakAssign
+    static RDAfact * aual_fact;
+    static PgmExpr * aual_assign_node;
+    static bool add_locs_to_aual_fact(AO& ao);
+d239 9
+d251 5
+d265 2
+a273 9
+    bool handleStrongAssign(AO& lhs, suco_set<AO *>& rhs,
+			    PgmExpr& dnode, PgmStmt * cnode = 0, PExprArg * arg = 0);
+    bool handleWeakAssign(suco_set<AO *>& lhs, suco_set<AO *>& rhs, PgmExpr& dnode);
+    bool handleFormal(PExprDecl& dd, suco_llist<PExprCall *>& callsites);
+    void handleReturn(PExprCall& callnode, PgmStmt& retnode, suco_set<AO *>& retaos);
+    void handleReturnDealloc(suco_set<AOId *>& localvars);
+    bool handleDecl(PExprDecl& dd);
+    bool handleVerify(PExprVerify& dv) { return true; } //- MBU: do nothing
+
+d330 9
+a366 9
+    bool handleStrongAssign(AO& lhs, suco_set<AO *>& rhs,
+			    PgmExpr& dnode, PgmStmt * cnode = 0, PExprArg * arg = 0);
+    bool handleWeakAssign(suco_set<AO *>& lhs, suco_set<AO *>& rhs, PgmExpr& dnode);
+    bool handleFormal(PExprDecl& dd, suco_llist<PExprCall *>& callsites);
+    void handleReturn(PExprCall& callnode, PgmStmt& retnode, suco_set<AO *>& retaos);
+    void handleReturnDealloc(suco_set<AOId *>& localvars);
+    bool handleDecl(PExprDecl& dd);
+    bool handleVerify(PExprVerify& dv);
+
+d411 9
+@
+
+
+1.41
+log
+@Change of approach: the points-to graph will now contain
+include-edges for function return nodes, so that the alias
+set of Return(Star(exp)) will include Return(Id(foo)) for
+all exp-aliased functions foo.
+This negates previous hack approaches (treating function
+calls as a special case when handling an assignment RHS),
+which have been removed.
+NOTE: the addition of the new include edges is done in
+tca.cpp (TCAstate); perhaps should migrate to a better
+place (pta.cpp?).
+
+Also, cMBU fact-collection now includes non-location objects,
+and the result set will include the reaching-defs of aliases.
+For example, the cMBU result set might now include
+{ *p : defn(i), defn(j) } where i and j are aliases of *p.
+This was previously omitted, erroneously.
+@
+text
+@d180 2
+@
+
+
+1.40
+log
+@Expanded verify-kind to have two 3-valued flags:
+verifyTag_kind (vtKind) = Tag, Rhs, None
+verifyPtr_kind (vpKind) = Ptr, PtrW, None
+
+Also, cmbu.cpp has some RHS collection stuff commented out:
+don't think it's necessary now, with verify-ptr/verify-rhs
+handling.
+@
+text
+@d177 1
+a177 1
+    void copyFacts(AO& ao, RDAfact& mf);
+d382 6
+@
+
+
+1.39
+log
+@Major fixes:
+1. right-hand-side of assignment now treated as a "use";
+   this is extended to cover formals and returns.
+2. special case (in MBUfact) when handling RHS of assignment:
+   if it is a return node (signifying the result of a call),
+   then a special alias resolution is used, in which
+   for Return(tgt), we find all aliases of tgt that are
+   functions of the form Function(fid), then collect the
+   set of Return(fid)s as  the alias set. Basically --
+   we're normalizing the "MBU holder" to be Return(fid).
+Appears to work on test cases -- the only remaining issue
+to be dealt with: must store additional information signifying
+whether a fact deals with the LHS or RHS of an assignment, as
+they can be independently instrumented.
+@
+text
+@d74 1
+a74 2
+    virtual bool handleVerifyTag(PExprVerify& dv) = 0;
+    virtual bool handleVerifyPtr(PExprVerify& dv) = 0;
+d166 1
+a166 2
+    bool handleVerifyTag(PExprVerify& dv) { return true; } //- RDA: do nothing
+    bool handleVerifyPtr(PExprVerify& dv) { return true; } //- RDA: do nothing
+d277 1
+a277 2
+    bool handleVerifyTag(PExprVerify& dv) { return true; } //- MBU: do nothing
+    bool handleVerifyPtr(PExprVerify& dv) { return true; } //- MBU: do nothing
+d370 1
+a370 2
+    bool handleVerifyTag(PExprVerify& dv);
+    bool handleVerifyPtr(PExprVerify& dv);
+@
+
+
+1.38
+log
+@Rewrote filterCallsiteFacts to fix bug: instead of
+"filtering out" local facts, must instead "filter into"
+non-local facts -- to get the union rather than intersect
+of GMOD/GREFs of callees.
+This entailed also renaming and changing definition og
+filterOut() to filterInto().
+
+Additional change: MBUfact::filterCallsiteFacts now accoutns
+for function arguments, including them in the non-local
+facts (since these will be checked when processing formal
+declarations).
+@
+text
+@d68 1
+a68 1
+				    PgmExpr * dnode = 0, PgmStmt * cnode = 0, PExprArg * arg = 0) = 0;
+d161 1
+a161 1
+			    PgmExpr * dnode = 0, PgmStmt * cnode = 0, PExprArg * arg = 0);
+d273 1
+a273 1
+			    PgmExpr * dnode = 0, PgmStmt * cnode = 0, PExprArg * arg = 0);
+d310 2
+d367 1
+a367 1
+			    PgmExpr * dnode = 0, PgmStmt * cnode = 0, PExprArg * arg = 0);
+d384 2
+@
+
+
+1.37
+log
+@Eliminated LocAidNodes from MBUfact -- major strip-down.
+Now MBUfact is implemented as simply a suco_set of AOs.
+Added suco_set::Intersect.
+@
+text
+@d177 1
+a177 1
+    void filterOut(suco_set<AO *>& filterset, RDAfact& df_remainders);
+d289 1
+a289 1
+    void filterOut(suco_set<AO *>& filterset, MBUfact& df_remainders);
+@
+
+
+1.36
+log
+@1. changed GMOD/GREF filtering mechanism -- now controlled
+   by a BBA function, rather than a DFAfact function --
+   this allows BBA-specific choice of filter, and also
+   allows RDA to cache local facts
+2. per above, added RDAlocal cache to PExprCall
+3. added a parent PgmStmt pointer to PgmExpr (previously
+   only defined for PExprCall, as a reference) -- this
+   will allow cMBU to lookup the containing function of
+   any PgmExpr (and will likely be useful later as well).
+   Note that this is a pointer, and may be null for
+   PgmExprs at global scope.
+   Also, current assumption is that all PExprCalls have
+   a non-null parent (asserted during input in one of
+   the read() functions).
+@
+text
+@d267 2
+a268 2
+    void setTop() { is_bot = false; clear(); }
+    void setBottom() { is_bot = true; clear(); }
+d286 2
+a287 2
+    MBUfact() : head(0), is_bot(false), num_elts(0) {}
+    ~MBUfact() { clear(); }
+d290 1
+a290 4
+    void addFact(AO& ao, PgmExpr * dnode = 0, PgmStmt * cnode = 0, PExprArg * arg = 0);
+    void copyFacts(AO& ao, MBUfact& mf);
+    void removeFacts(AO& ao);
+    void addUnsafeAliasLocs(suco_set<AO *>& aoset, PgmExpr& asgnode);
+d292 1
+a292 1
+    bool intersectsAliases(suco_set<AO *>& aoset);
+d294 1
+a294 5
+    int length(bool confirm = false);
+
+    static int freelistLength();
+
+    void writeResults(FILE * outf);
+d300 1
+a301 34
+    int num_elts; //- used for faster length() for faster lowerThan comparison (-ltsize mode)
+    class LocAidNode
+    {
+      public:
+        //-- constructor/destructor wrappers
+        static LocAidNode * acquire(AO& o, LocAidNode * nx = 0);
+        static LocAidNode * acquire(LocAidNode& n, LocAidNode * nx = 0);
+        static void dispose(LocAidNode * n);
+
+        AO& getAO() const { return *ao; }
+        //-- three different types of meta-facts are collected
+        suco_set<PgmExpr *> nodes;	//- assigns, calls, formal decls
+        suco_set<PExprArg *> args;	//- call args
+        suco_set<PgmStmt *> rets;	//- return nodes
+
+        LocAidNode * next;
+
+        static LocAidNode * freelist;
+
+      private:
+        LocAidNode();
+        LocAidNode(AO& o, LocAidNode * nx)
+		: ao(&o),
+		  nodes(), args(), rets(),
+		  next(nx) {}
+        ~LocAidNode() {}
+        AO * ao;
+    } * head;
+
+    //-- methods --
+    void clear();
+    LocAidNode * getFactNode(AO& ao); //- helper for addFact
+
+    void recomputeLength();
+a304 1
+    static PgmExpr * aual_assign_node;
+@
+
+
+1.35
+log
+@Added GMOD/IMOD computation.
+Modified DFA to have different call-filtering modes:
+by GMOD, GREF, or NONE.
+Renamed DFAfact::filter to filterOut (which performs
+the opposite of what filter used to).
+Currently, RDA is GMOD-filtered, MBU and cMBU are
+GREF-filtered.
+@
+text
+@a54 1
+    virtual void filterOut(suco_set<AO *>& filterset, DFAfact& df_remainders) = 0;
+d100 3
+d104 1
+a104 1
+    virtual void checkCallProgress(PExprCall& dc, DFAfact& df, bool set_top) = 0;
+a119 7
+  protected:
+    enum call_filter_mode { FM_NONE, FM_GMOD, FM_GREF };
+    BBA(enum call_filter_mode cfm) : cfmode(cfm) {}
+
+  private:
+    BBA();
+    enum call_filter_mode cfmode;
+d131 1
+a131 1
+    DFA(enum call_filter_mode cfm = FM_NONE) : BBA(cfm), worklist() {}
+d133 1
+a133 1
+    void checkCallProgress(PExprCall& dc, DFAfact& df, bool set_top);
+a153 1
+    void filterOut(suco_set<AO *>& filterset, DFAfact& df_remainders);
+d177 1
+d235 1
+a235 1
+    RDA() : DFA(FM_GMOD) {}
+d240 2
+a265 1
+    void filterOut(suco_set<AO *>& filterset, DFAfact& df_remainders);
+d289 1
+d359 1
+a359 1
+    MBU() : DFA(FM_GREF), results() {}
+d364 2
+a398 1
+    void filterOut(suco_set<AO *>& filterset, DFAfact& df_remainders);
+d435 3
+a437 1
+    void checkCallProgress(PExprCall& dc, DFAfact& df, bool set_top) {}
+d453 1
+a453 1
+    cMBU(RDA& r, MBU& m) : BBA(FM_GREF), rda(r), mbu(m), results()
+@
+
+
+1.34
+log
+@Cleaned up a few things:
+ - eliminated dmode (mode_iterating/mode_collecting);
+ - added checkParallelProgress;
+ - migrated absorbAndCompare from DFAfact to DFA;
+ - rewrote fParallel case incorporating these changes;
+ - added a cMBUfact as a member of each CFG node, call,
+   and parallel, so cMBU can also define lookupNodeFact.
+@
+text
+@d55 1
+a55 1
+    virtual void filter(suco_set<AO *>& gref, DFAfact& df_gref) = 0;
+d118 7
+d136 1
+a136 1
+    DFA() : worklist() {}
+d159 1
+a159 1
+    void filter(suco_set<AO *>& gref, DFAfact& df_gref);
+d240 1
+a240 1
+    RDA() : DFA() {}
+d269 1
+a269 1
+    void filter(suco_set<AO *>& gref, DFAfact& df_gref);
+d362 1
+a362 1
+    MBU() : DFA(), results() {}
+d400 1
+a400 1
+    void filter(suco_set<AO *>& gref, DFAfact& df_gref);
+d453 1
+a453 1
+    cMBU(RDA& r, MBU& m) : BBA(), rda(r), mbu(m), results()
+@
+
+
+1.33
+log
+@Added cMBU class to collect may-be-uninit results (after
+running RDA and MBU); new class is in cmbu.cpp.
+Appears to be working, though a few open issues remain:
+ - lookupNodeFact needs a complement (releaseNodeFact),
+   since cMBU returns a new node (though neither MBU
+   nor RDA do)
+ - mode_iterating/mode_collecting -- should get rid
+   of this flag cleanly
+ - absorbAndCompare -- should obsolesce this, or migrate
+   it to DFA/MBU/RDA
+Longer term:
+ - RDA should use GMOD, but when collecting, will need
+   to refer to GREF.
+@
+text
+@a64 1
+    virtual bool absorbAndCompare(DFAfact& df, bool warn = true) = 0;
+a89 1
+    enum mode { mode_iterating, mode_collecting };
+d97 3
+a99 3
+    bool PgmExprPropagate(mode dmode, PgmExpr& dn, DFAfact& df, PgmStmt * parent);
+    bool PgmStmtPropagate(mode dmode, PgmStmt& cn, DFAfact& df);
+    void processCFGnode(mode dmode, CFGnode& cn);
+d102 1
+a102 1
+    virtual void checkCallProgress(PExprCall& dc, DFAfact& df) = 0;
+d105 1
+a105 3
+    //-- TO BE OBSOLETE
+    virtual void collectResultsVerifyTag(DFAfact& df, PExprVerify& dn) = 0;
+    virtual void collectResultsVerifyPtr(DFAfact& df, PExprVerify& dn) = 0;
+d131 1
+a131 1
+    void checkCallProgress(PExprCall& dc, DFAfact& df);
+d133 3
+a157 1
+    bool absorbAndCompare(DFAfact& df, bool warn = true);
+a241 3
+    void collectResultsVerifyTag(DFAfact& df, PExprVerify& dn) {}
+    void collectResultsVerifyPtr(DFAfact& df, PExprVerify& dn) {}
+
+d247 2
+a267 1
+    bool absorbAndCompare(DFAfact& df, bool warn = true);
+a359 3
+    void collectResultsVerifyTag(DFAfact& df, PExprVerify& dn);
+    void collectResultsVerifyPtr(DFAfact& df, PExprVerify& dn) {}
+
+d369 2
+d386 5
+a398 1
+    bool absorbAndCompare(DFAfact& df, bool warn = true);
+a412 2
+    cMBUfact(RDAfact& rf, MBUfact& mf) : rda_fact(rf), mbu_fact(mf) {}
+    ~cMBUfact() {}
+d430 1
+a430 1
+    void checkCallProgress(PExprCall& dc, DFAfact& df) {}
+d432 1
+a432 4
+
+    //-- TO BE OBSOLETE
+    void collectResultsVerifyTag(DFAfact& df, PExprVerify& dn) {}
+    void collectResultsVerifyPtr(DFAfact& df, PExprVerify& dn) {}
+@
+
+
+1.32
+log
+@Start of Major Revision:
+ Split DFA into BBA and DFA, with BBA parenting DFA.
+ Did not yet change behavior.
+@
+text
+@d80 1
+a80 1
+    virtual void debug_dump(FILE * outf) = 0;
+d146 1
+a146 1
+//- MBU: may-be-uninit analysis
+d148 1
+a148 1
+class MBUfact : public DFAfact
+d161 1
+a161 1
+    bool handleStrongAssign(AO& lhs, suco_set<AO *>& rhs,
+d163 1
+a163 1
+    bool handleWeakAssign(suco_set<AO *>& lhs, suco_set<AO *>& rhs, PgmExpr& dnode);
+d165 1
+a165 1
+    void handleReturn(PExprCall& callnode, PgmStmt& retnode, suco_set<AO *>& retaos);
+d168 2
+a169 2
+    bool handleVerifyTag(PExprVerify& dv) { return true; } //- MBU: do nothing
+    bool handleVerifyPtr(PExprVerify& dv) { return true; } //- MBU: do nothing
+d171 1
+a171 1
+    void debug_dump(FILE * outf);
+d175 2
+a176 2
+    MBUfact() : head(0), is_bot(false), num_elts(0) {}
+    ~MBUfact() { clear(); }
+d179 1
+a179 1
+    void copyFacts(AO& ao, MBUfact& mf);
+a180 5
+    void addUnsafeAliasLocs(suco_set<AO *>& aoset, PgmExpr& asgnode);
+
+    bool intersectsAliases(suco_set<AO *>& aoset);
+
+    int length(bool confirm = false);
+d187 1
+a187 1
+    MBUfact(MBUfact& mf); //-- disable copy constructor
+a190 1
+    int num_elts; //- used for faster length() for faster lowerThan comparison (-ltsize mode)
+d223 2
+a224 4
+    void recomputeLength();
+
+    //-- static helpers for addUnsafeAliasLocs
+    static MBUfact * aual_fact;
+a226 4
+
+    //-- static helpers for intersectsAliases
+    static suco_set<ECR *> ia_ecrset;
+    static bool is_ia_ecrset(ECR& ecr);
+d230 1
+a230 1
+//- MBU: may-be-uninit analysis
+d232 1
+a232 1
+class MBU : public DFA
+d235 1
+a235 1
+    MBU() : DFA(), results() {}
+d237 2
+a238 5
+    DFAfact& newTopFact() { return *new MBUfact(); }
+    void deleteFact(DFAfact& df) { delete (MBUfact *) &df; }
+
+    void collectResultsVerifyTag(DFAfact& df, PExprVerify& dn);
+    void collectResultsVerifyPtr(DFAfact& df, PExprVerify& dn) {}
+d244 3
+d252 1
+a252 3
+    void print_debug_stats(CFG& cfg, FILE * outf);
+
+    MBUfact& getResults() { return results; }
+a254 1
+    MBUfact results;
+d258 1
+a258 1
+//- RDA: reaching-defs analysis
+d260 1
+a260 1
+class RDAfact : public DFAfact
+d273 1
+a273 1
+    bool handleStrongAssign(AO& lhs, suco_set<AO *>& /*ignored*/,
+d275 1
+a275 1
+    bool handleWeakAssign(suco_set<AO *>& lhs, suco_set<AO *>& /*ignored*/, PgmExpr& dnode);
+d277 1
+a277 1
+    void handleReturn(PExprCall& callnode, PgmStmt& retnode, suco_set<AO *>& /*ignored*/);
+d280 2
+a281 2
+    bool handleVerifyTag(PExprVerify& dv) { return true; } //- RDA: do nothing
+    bool handleVerifyPtr(PExprVerify& dv) { return true; } //- RDA: do nothing
+d283 1
+a283 1
+    void debug_dump(FILE * outf);
+d287 2
+a288 2
+    RDAfact() : head(0), is_bot(false) {}
+    ~RDAfact() { clear(); }
+d291 1
+d293 5
+d304 1
+a304 1
+    RDAfact(RDAfact& mf); //-- disable copy constructor
+d308 1
+d341 4
+a344 2
+    //-- static helpers for handleWeakAssign
+    static RDAfact * aual_fact;
+d347 4
+d354 1
+a354 1
+//- RDA: reaching-defs analysis
+d356 1
+a356 1
+class RDA : public DFA
+d359 4
+a362 1
+    RDA() : DFA() {}
+d364 2
+a365 2
+    DFAfact& newTopFact() { return *new RDAfact(); }
+    void deleteFact(DFAfact& df) { delete (RDAfact *) &df; }
+a370 3
+    void collectResultsVerifyTag(DFAfact& df, PExprVerify& dn) {}
+    void collectResultsVerifyPtr(DFAfact& df, PExprVerify& dn) {}
+
+d376 79
+a454 1
+    void print_debug_stats(CFG& cfg, FILE * outf) {}
+d457 5
+@
+
+
+1.31
+log
+@Minor update: cleaned up some interface stuff,
+modified handleReturn to simulate rather than call
+handleStrongAssign.
+@
+text
+@d88 1
+a88 1
+class DFA
+d96 1
+a96 2
+    void collectWorkList(CFGnode& cn);
+    void doAnalysis(CFG& cn);
+a98 1
+    DFA() : worklist() {}
+d103 8
+a116 3
+    virtual void collectResultsVerifyTag(DFAfact& df, PExprVerify& dn) = 0;
+    virtual void collectResultsVerifyPtr(DFAfact& df, PExprVerify& dn) = 0;
+
+d122 7
+a128 1
+    virtual void print_debug_stats(CFG& cfg, FILE * outf) = 0;
+d131 8
+@
+
+
+1.30
+log
+@Major update:
+Added -rda (reaching-defs analysis) in new class RDA:DFA.
+Basically, copied the meat from MBU, making minimal changes.
+Compiles, runs, verified against small examples.
+NEED TO REVIEW CODE IN DETAIL, and verify against larger
+examples.
+Potential problem: seems rather slow, may want to compute
+GMOD?
+@
+text
+@d271 1
+a271 1
+    bool handleStrongAssign(AO& lhs, suco_set<AO *>& rhs,
+d273 1
+a273 1
+    bool handleWeakAssign(suco_set<AO *>& lhs, suco_set<AO *>& rhs, PgmExpr& dnode);
+d275 1
+a275 1
+    void handleReturn(PExprCall& callnode, PgmStmt& retnode, suco_set<AO *>& retaos);
+a288 1
+//    void copyFacts(AO& ao, RDAfact& mf);
+@
+
+
+1.29
+log
+@SIGNIFICANT UPDATE:
+ - added -gref flag, to enable GREF filtering
+ - added code to first compute IREF for each function,
+   then collect them into GREFs
+ - this makes use of recursion_id/callgraph_id traversal
+   order (verify that this correctly computes GREF with
+   complex callgaphs?)
+ - the recursion_id/callgraph_id ordering is encoded by
+   the function CFGfunction::compareByCallgraphId, which
+   has been absorbed into the worklist ordering function,
+   so a slight behavior change there as well.
+@
+text
+@d9 2
+d39 1
+d85 44
+d225 23
+d249 8
+a256 1
+class CFG;
+d258 1
+a258 1
+class DFA
+d260 1
+d262 31
+a292 1
+    enum mode { mode_iterating, mode_collecting };
+d294 1
+a294 2
+    virtual DFAfact& newTopFact() = 0;
+    virtual void deleteFact(DFAfact& df) = 0;
+d296 2
+a297 2
+    void collectWorkList(CFGnode& cn);
+    void doAnalysis(CFG& cn);
+d299 9
+a307 8
+  protected:
+    DFA() : worklist() {}
+    bool PgmExprPropagate(mode dmode, PgmExpr& dn, DFAfact& df, PgmStmt * parent);
+    bool PgmStmtPropagate(mode dmode, PgmStmt& cn, DFAfact& df);
+    void processCFGnode(mode dmode, CFGnode& cn);
+/*
+    void processPgmStmt(mode dmode, PgmStmt& cn);
+*/
+d309 5
+a313 5
+    //-- as currently written, lookupNodeFact needs to return
+    //   a handle to the actual, modifiable fact object
+    virtual DFAfact& lookupNodeFact(CFGnode& cn) = 0;
+    virtual DFAfact& lookupNodeFact(PExprCall& dc) = 0;
+    virtual DFAfact& lookupNodeFact(PExprParallel& dp) = 0;
+d315 1
+a315 2
+    virtual void collectResultsVerifyTag(DFAfact& df, PExprVerify& dn) = 0;
+    virtual void collectResultsVerifyPtr(DFAfact& df, PExprVerify& dn) = 0;
+d317 1
+a317 4
+    virtual bool isUselessNode(CFGnode& cn) = 0;
+    virtual bool isUselessNode(PgmExpr& dn) = 0;
+    virtual bool markUselessNode(CFGnode& cn) = 0;
+    virtual bool markUselessNode(PgmExpr& dn) = 0;
+d319 9
+a327 1
+    virtual void print_debug_stats(CFG& cfg, FILE * outf) = 0;
+d329 3
+a331 1
+    WorkList worklist; //-- should be private; is protected now for MBU::print_debug_stats
+d333 4
+a336 3
+  private:
+    static DFA * act_dfa;
+    static bool addCallTargetsToWorkList(PgmExpr& dn);
+d340 1
+a340 1
+//- MBU: may-be-uninit analysis
+d342 1
+a342 1
+class MBU : public DFA
+d345 1
+a345 4
+    MBU() : DFA(), results() {}
+
+    DFAfact& newTopFact() { return *new MBUfact(); }
+    void deleteFact(DFAfact& df) { delete (MBUfact *) &df; }
+d347 2
+a348 2
+    void collectResultsVerifyTag(DFAfact& df, PExprVerify& dn);
+    void collectResultsVerifyPtr(DFAfact& df, PExprVerify& dn) {}
+a349 1
+    bool isUselessNode(CFGnode& cn);
+d354 4
+d362 1
+a362 3
+    void print_debug_stats(CFG& cfg, FILE * outf);
+
+    MBUfact& getResults() { return results; }
+a364 1
+    MBUfact results;
+d370 1
+@
+
+
+1.28
+log
+@Deleted previously commented-out old code for lowerThan
+(now replaced by enhanced meet() function)
+@
+text
+@d52 1
+d89 1
+@
+
+
+1.27
+log
+@1. Added -ltsize flag which when determining "lowerThan"
+   uses the length of the MBUfact set rather than explicit
+   comparison; a consequent change is the storing of a
+   "num_elts" field to MBUfact, which must be updated
+   on each change. This doesn't seem to be a significant
+   improvement over the old version of length() which
+   traverses the nodelist to count elements.
+2. eliminated lowerThan() function, incorporating the
+   "lowerThan" check into the meet() function. This
+   eliminates a redundancy which speeds things up a bit.
+@
+text
+@a111 1
+//    bool lowerThan(MBUfact& mf, bool warn = true);
+d130 1
+a130 1
+    int num_elts; //- used for faster length() for faster lowerThan (-ltsize mode)
+@
+
+
+1.26
+log
+@1. Added WorkList.debug_dump (-v4 will dump)
+2. Switched worklist initialization to be "in-order"
+   traversal of callgraph (but still depth-first).
+@
+text
+@d59 1
+a59 1
+    virtual void meet(DFAfact& df, bool preserve = true) = 0;
+d91 1
+a91 1
+    void meet(DFAfact& df, bool preserve = true);
+d109 1
+a109 1
+    MBUfact() : head(0), is_bot(false) {}
+d112 1
+a112 1
+    bool lowerThan(MBUfact& mf, bool warn = true);
+d120 1
+a120 1
+    int length() const;
+d131 1
+d163 2
+@
+
+
+1.25
+log
+@Added mbu_fact to parallel node to cache pre-facts,
+each processing of parallel now begins by meet-ing
+its cached pre-facts; otherwise it was possible to
+process nodes with facts higher than a previous
+iteration (when there's a call within a parallel).
+@
+text
+@d25 2
+@
+
+
+1.24
+log
+@Added boolean flag (warn) to absorbAndCompare/lowerThan,
+to mark cases where incomparable elements are expected
+(parallel) and where they aren't (all other cases).
+Remaining to do: cache parallel pre-facts!
+@
+text
+@d38 1
+d199 1
+d235 1
+@
+
+
+1.23
+log
+@Added worklist traversal mode (fifo, lifo, leaf-first),
+the last sorting the worklist in call-graph leaf-first
+order (non-recursive first), and within each function,
+sorting by a traversal_id which is a bottom-up numbering
+of CFGnodes.
+@
+text
+@d58 1
+a58 1
+    virtual bool absorbAndCompare(DFAfact& df) = 0;
+d90 1
+a90 1
+    bool absorbAndCompare(DFAfact& df);
+d109 1
+a109 1
+    bool lowerThan(MBUfact& mf);
+@
+
+
+1.22
+log
+@Added WorkList class;
+Moved isEntryNode() from PgmStmt to CFGnode;
+Added CFGnode::isExitNode() (virtual function, implemented
+by CFGbblock and PgmStmt)
+@
+text
+@d16 1
+a16 1
+    WorkList() : list() {}
+d19 1
+a19 1
+    bool InsertAtEnd(CFGnode& cn); //- true if inserted
+d26 2
+d29 3
+@
+
+
+1.21
+log
+@Added -bblocks flag; partially separated bblock and non-bblock
+mode of DFA; many bblock components not yet written.
+@
+text
+@d9 21
+a37 1
+class CFGnode;
+d183 3
+d187 1
+d204 1
+a204 1
+    suco_llist<CFGnode *> worklist; //-- should be private; is protected now for MBU::print_debug_stats
+@
+
+
+1.20
+log
+@Renamed CFGnode to PgmStmt, then created new base
+class CFGnode from which PgmStmt and CFGbblock are
+derived. Added PgmStmt.getPred/getSucc helper functions
+for cleaner lookups.
+@
+text
+@d157 1
+a157 2
+    void addCallTargetsToWorkList(PgmExpr& dn);
+    void collectWorkList(PgmStmt& cn);
+d183 2
+@
+
+
+1.19
+log
+@Changed verbose output: added worklist profile (per function),
+now summarized with top five plus active delta.
+@
+text
+@d16 1
+d38 1
+a38 1
+				    PgmExpr * dnode = 0, CFGnode * cnode = 0, PExprArg * arg = 0) = 0;
+d42 1
+a42 1
+    virtual void handleReturn(PExprCall& callnode, CFGnode& retnode, suco_set<AO *>& retaos) = 0;
+d68 1
+a68 1
+			    PgmExpr * dnode = 0, CFGnode * cnode = 0, PExprArg * arg = 0);
+d71 1
+a71 1
+    void handleReturn(PExprCall& callnode, CFGnode& retnode, suco_set<AO *>& retaos);
+d85 1
+a85 1
+    void addFact(AO& ao, PgmExpr * dnode = 0, CFGnode * cnode = 0, PExprArg * arg = 0);
+d115 1
+a115 1
+        suco_set<CFGnode *> rets;	//- return nodes
+d158 1
+a158 1
+    void collectWorkList(CFGnode& cn);
+d163 2
+a164 2
+    bool PgmExprPropagate(mode dmode, PgmExpr& dn, DFAfact& df, CFGnode * parent);
+    void processCFGnode(mode dmode, CFGnode& cn);
+d181 1
+a181 1
+    suco_stack<CFGnode *> worklist; //-- should be private; is protected now for MBU::print_debug_stats
+@
+
+
+1.18
+log
+@Renamed DFAnode to PgmExpr, and its subclasses from
+DFA_ to PExpr_.
+@
+text
+@d180 2
+a182 1
+    suco_stack<CFGnode *> worklist;
+@
+
+
+1.17
+log
+@In verbose mode, now output stats about average and largest
+MBUfact set size.
+@
+text
+@d10 6
+a15 6
+class DFAassign;
+class DFAcall;
+class DFAarg;
+class DFAdecl;
+class DFAnode;
+class DFAverify;
+d37 5
+a41 5
+				    DFAnode * dnode = 0, CFGnode * cnode = 0, DFAarg * arg = 0) = 0;
+    virtual bool handleWeakAssign(suco_set<AO *>& lhs, suco_set<AO *>& rhs, DFAnode& dnode) = 0;
+    virtual bool handleFormal(DFAdecl& dd, suco_llist<DFAcall *>& callsites) = 0;
+    virtual bool handleDecl(DFAdecl& dd) = 0;
+    virtual void handleReturn(DFAcall& callnode, CFGnode& retnode, suco_set<AO *>& retaos) = 0;
+d43 2
+a44 2
+    virtual bool handleVerifyTag(DFAverify& dv) = 0;
+    virtual bool handleVerifyPtr(DFAverify& dv) = 0;
+d67 4
+a70 4
+			    DFAnode * dnode = 0, CFGnode * cnode = 0, DFAarg * arg = 0);
+    bool handleWeakAssign(suco_set<AO *>& lhs, suco_set<AO *>& rhs, DFAnode& dnode);
+    bool handleFormal(DFAdecl& dd, suco_llist<DFAcall *>& callsites);
+    void handleReturn(DFAcall& callnode, CFGnode& retnode, suco_set<AO *>& retaos);
+d72 3
+a74 3
+    bool handleDecl(DFAdecl& dd);
+    bool handleVerifyTag(DFAverify& dv) { return true; } //- MBU: do nothing
+    bool handleVerifyPtr(DFAverify& dv) { return true; } //- MBU: do nothing
+d84 1
+a84 1
+    void addFact(AO& ao, DFAnode * dnode = 0, CFGnode * cnode = 0, DFAarg * arg = 0);
+d87 1
+a87 1
+    void addUnsafeAliasLocs(suco_set<AO *>& aoset, DFAnode& asgnode);
+d112 2
+a113 2
+        suco_set<DFAnode *> nodes;	//- assigns, calls, formal decls
+        suco_set<DFAarg *> args;	//- call args
+d136 1
+a136 1
+    static DFAnode * aual_assign_node;
+d156 1
+a156 1
+    void addCallTargetsToWorkList(DFAnode& dn);
+d162 1
+a162 1
+    bool DFAnodePropagate(mode dmode, DFAnode& dn, DFAfact& df, CFGnode * parent);
+d168 1
+a168 1
+    virtual DFAfact& lookupNodeFact(DFAcall& dc) = 0;
+d170 2
+a171 2
+    virtual void collectResultsVerifyTag(DFAfact& df, DFAverify& dn) = 0;
+    virtual void collectResultsVerifyPtr(DFAfact& df, DFAverify& dn) = 0;
+d174 1
+a174 1
+    virtual bool isUselessNode(DFAnode& dn) = 0;
+d176 1
+a176 1
+    virtual bool markUselessNode(DFAnode& dn) = 0;
+d195 2
+a196 2
+    void collectResultsVerifyTag(DFAfact& df, DFAverify& dn);
+    void collectResultsVerifyPtr(DFAfact& df, DFAverify& dn) {}
+d200 1
+a200 1
+    DFAfact& lookupNodeFact(DFAcall& dc);
+d202 1
+a202 1
+    bool isUselessNode(DFAnode& dn);
+d204 1
+a204 1
+    bool markUselessNode(DFAnode& dn);
+@
+
+
+1.16
+log
+@Changed worklist to a queue/stack, with two execution modes
+(fifo/lifo):
+ - added command-line flags "fifo" or "lifo"
+ - in suco, made stack inherit queue publicly, so a stack
+   object can be used as both a stack and a queue
+   (an unsafe thing to do?)
+ - added a flag in CFGnodes to indicate if a node is in the
+   worklist -- should make it faster than checking for
+   worklist membership each time, though we have to make
+   sure the bookkeeping is correct.
+@
+text
+@d91 2
+d178 2
+d205 2
+@
+
+
+1.15
+log
+@Changed worklist from a llist to a set -- significant
+optimization!
+@
+text
+@d177 1
+a177 1
+    suco_set<CFGnode *> worklist;
+@
+
+
+1.14
+log
+@DFA: bug fix: lessThan had logical error -- fixed.
+Also -- renamed and rewrote switchAndCompare, now
+absorbAndCompare, which meets rather than switches
+with the newly computed facts (and consumes it as
+well, if need be).
+CFG: added mbu_fact debug_dump
+@
+text
+@d177 1
+a177 1
+    suco_llist<CFGnode *> worklist;
+@
+
+
+1.13
+log
+@1. in TCAstate, mbu is now a member -- it stores the results
+   to be output later.
+2. MBU now contains a result fact, and DFA analysis now
+   progresses in two modes: iterating and collecting,
+   the latter calling collectResultsVerifyTag(/Ptr)
+   to accumulate the results.
+3. in cfg.cpp/h, DFAdecl now has filestem_id argument,
+   needed for consistent output.
+Current state of program: compiles, runs without crashing,
+but results are wrong (no output on many examples, suspect
+function call handling error?).
+@
+text
+@d32 1
+a32 1
+    virtual bool switchAndCompare(DFAfact& df) = 0;
+d64 1
+a64 1
+    bool switchAndCompare(DFAfact& df);
+a89 2
+
+    void switchWith(MBUfact& mf);
+@
+
+
+1.12
+log
+@Replaced MBUfacts::keysEqual with MBUfacts::lowerThan,
+which is necessary to ensure monotonicity (I think in
+parallel cases only), and now analyses terminate very
+quickly.
+@
+text
+@d85 1
+d95 2
+d151 2
+d162 2
+a163 2
+    bool DFAnodePropagate(DFAnode& dn, DFAfact& df, CFGnode * parent);
+    void processCFGnode(CFGnode& cn);
+d170 3
+d188 1
+a188 1
+    MBU() : DFA() {}
+d193 4
+a199 1
+    bool isUselessNode(CFGnode& cn);
+d203 5
+@
+
+
+1.11
+log
+@Major changes -- fixed logical flaws in ability to collect
+MBU results.
+1. Added suco_llist::Copy and suco_set::Union (non-destructive version)
+2. In cfg.cpp/h, added new type DFAarg to represent a function
+   call actual argument.
+3. In dfa.cpp/h, MBUfacts now stores (in LocAidNode) for each
+   AO, in place of just a single set of aids:
+    - nodes:DFAnode - assignments, calls, and formal decls
+    - args::DFAarg - function call arguments
+    - rets:CFGnode - function return node
+@
+text
+@d83 1
+a83 1
+    bool keysEqual(MBUfact& mf);
+@
+
+
+1.10
+log
+@Removed previously commented-out stuff (old aid/aidnos).
+Also, moved CFG::writeFileStemMap to AID::writeFileStemMap.
+@
+text
+@d12 1
+d14 1
+d36 3
+a38 2
+    virtual bool handleStrongAssign(AO& lhs, suco_set<AO *>& rhs, AID& aid) = 0;
+    virtual bool handleWeakAssign(suco_set<AO *>& lhs, suco_set<AO *>& rhs, AID& aid) = 0;
+d41 1
+a41 1
+    virtual void handleReturn(suco_set<AO *>& faos, suco_set<AO *>& retaos, AID& aid) = 0;
+d66 3
+a68 2
+    bool handleStrongAssign(AO& lhs, suco_set<AO *>& rhs, AID& aid);
+    bool handleWeakAssign(suco_set<AO *>& lhs, suco_set<AO *>& rhs, AID& aid);
+d70 1
+a70 1
+    void handleReturn(suco_set<AO *>& faos, suco_set<AO *>& retaos, AID& aid);
+d84 1
+a84 1
+    void addFact(AO& ao, AID& aid = AID::zero);
+d86 1
+a86 1
+    void addUnsafeAliasLocs(suco_set<AO *>& aoset, AID& aid);
+d103 1
+a103 1
+        static LocAidNode * acquire(AO& o, AID& aid, LocAidNode * nx = 0);
+d108 5
+a112 1
+        suco_set<AID *> aids;
+d120 3
+a122 1
+		: ao(&o), aids(AID::compare), next(nx) {}
+d129 1
+d133 1
+a133 1
+    static AID * aual_aid;
+a142 1
+class DFAnode;
+@
+
+
+1.9
+log
+@Changed CFG nodes' AID member to be of type AID, which
+is a pair <filestem_id, aid>; MBUfacts now tracks a set
+of (references to) these, so we can have access to the
+filestem_id for output.
+Old code commented out -- will clear out in next checkin.
+@
+text
+@d34 2
+a35 2
+    virtual bool handleStrongAssign(AO& lhs, suco_set<AO *>& rhs, /*int*/AID& aid) = 0;
+    virtual bool handleWeakAssign(suco_set<AO *>& lhs, suco_set<AO *>& rhs, /*int*/AID& aid) = 0;
+d38 1
+a38 1
+    virtual void handleReturn(suco_set<AO *>& faos, suco_set<AO *>& retaos, /*int*/AID& aid) = 0;
+d63 2
+a64 2
+    bool handleStrongAssign(AO& lhs, suco_set<AO *>& rhs, /*int*/AID& aid);
+    bool handleWeakAssign(suco_set<AO *>& lhs, suco_set<AO *>& rhs, /*int*/AID& aid);
+d66 1
+a66 1
+    void handleReturn(suco_set<AO *>& faos, suco_set<AO *>& retaos, /*int*/AID& aid);
+d80 1
+a80 1
+    void addFact(AO& ao, /*int*/AID& aidno = /*0*/AID::zero);
+d82 1
+a82 1
+    void addUnsafeAliasLocs(suco_set<AO *>& aoset, /*int*/AID& aidno);
+d99 1
+a99 1
+        static LocAidNode * acquire(AO& o, /*int*/AID& aid, LocAidNode * nx = 0);
+d104 1
+a104 1
+        suco_set</*int*/AID *> aids;
+d122 1
+a122 1
+    static /*int*/AID * aual_aid;
+@
+
+
+1.8
+log
+@Added 4 levels of -mbu, which turns off, in order:
+return-value assignments, formal assignments, and
+assignment-GENs altogether.
+@
+text
+@d34 2
+a35 2
+    virtual bool handleStrongAssign(AO& lhs, suco_set<AO *>& rhs, int aid) = 0;
+    virtual bool handleWeakAssign(suco_set<AO *>& lhs, suco_set<AO *>& rhs, int aid) = 0;
+d38 1
+a38 1
+    virtual void handleReturn(suco_set<AO *>& faos, suco_set<AO *>& retaos, int aid) = 0;
+d63 2
+a64 2
+    bool handleStrongAssign(AO& lhs, suco_set<AO *>& rhs, int aid);
+    bool handleWeakAssign(suco_set<AO *>& lhs, suco_set<AO *>& rhs, int aid);
+d66 1
+a66 1
+    void handleReturn(suco_set<AO *>& faos, suco_set<AO *>& retaos, int aid);
+d80 1
+a80 1
+    void addFact(AO& ao, int aidno = 0);
+d82 1
+a82 1
+    void addUnsafeAliasLocs(suco_set<AO *>& aoset, int aidno);
+d99 1
+a99 1
+        static LocAidNode * acquire(AO& o, int aid, LocAidNode * nx = 0);
+d104 1
+a104 1
+        suco_set<int> aids;
+d112 1
+a112 1
+		: ao(&o), aids(), next(nx) {}
+d122 1
+a122 1
+    static int aual_aid;
+@
+
+
+1.7
+log
+@Added is_useless flag to CFGnode/DFAnode, to make visits
+faster during DFA.
+@
+text
+@d38 1
+d66 2
+a68 1
+    void handleReturnDealloc(suco_set<AOId *>& localvars);
+@
+
+
+1.6
+log
+@Suco change (major):
+ 1. Added new file suco_usage.cpp as a hack to instantiate
+    the suco code only once, rather than once-per-file as
+    before.
+ 2. Suco now has node-recycling mechanism in place, which
+    seems to help with rtca performance.
+@
+text
+@d32 6
+a37 5
+    //-- dataflow analysis
+    virtual void handleStrongAssign(AO& lhs, suco_set<AO *>& rhs, int aid) = 0;
+    virtual void handleWeakAssign(suco_set<AO *>& lhs, suco_set<AO *>& rhs, int aid) = 0;
+    virtual void handleFormal(DFAdecl& dd, suco_llist<DFAcall *>& callsites) = 0;
+    virtual void handleDecl(DFAdecl& dd) = 0;
+d39 2
+a40 2
+    virtual void handleVerifyTag(DFAverify& dv) = 0;
+    virtual void handleVerifyPtr(DFAverify& dv) = 0;
+d62 4
+a65 4
+    void handleStrongAssign(AO& lhs, suco_set<AO *>& rhs, int aid);
+    void handleWeakAssign(suco_set<AO *>& lhs, suco_set<AO *>& rhs, int aid);
+    void handleFormal(DFAdecl& dd, suco_llist<DFAcall *>& callsites);
+    void handleDecl(DFAdecl& dd);
+d67 2
+a68 2
+    void handleVerifyTag(DFAverify& dv) {} //- MBU: do nothing
+    void handleVerifyPtr(DFAverify& dv) {} //- MBU: do nothing
+d145 1
+a145 1
+    void DFAnodePropagate(DFAnode& dn, DFAfact& df, CFGnode * parent);
+d147 1
+d153 5
+d175 5
+@
+
+
+1.5
+log
+@Added node-recycling to MBUlist/LocAidNode.
+Speeds up mel test by about 20%!
+@
+text
+@a4 1
+#include "suco.cpp"
+@
+
+
+1.4
+log
+@Filled in final holes: handleFormals and fCall case.
+Other (related) changes:
+ 1. split handleAssign into two different API functions,
+    handleStrongAssign and handleWeakAssign; the former
+    is used as a helper in both handleFormals and the
+    fCall case.
+ 2. in cfg.h, renamed confusing nomenclature "getParent"
+    to getParentNode and getParentFunction.
+@
+text
+@d86 2
+d96 6
+a101 10
+        LocAidNode(AO& o, int aid, LocAidNode * nx = 0)
+		: ao(o),
+		  aids(),
+		  next(nx)
+		{ if(aid) aids.Insert(aid); }
+        LocAidNode(LocAidNode& n, LocAidNode * nx = 0)
+		: ao(n.ao),
+		  aids(n.aids), // calls copy constructor
+		  next(nx) {}
+        AO& ao;
+d105 2
+d109 4
+@
+
+
+1.3
+log
+@Resturctured:
+ 1. may-be-uninit analysis is now called directly from
+    tca.cpp to mbu.doAnalysis, rather than with an intermediate
+    cfg.mayBeUninitAnalysis.
+ 2. updated CFG data structures, so that
+    a. each CFG has a unique entry node (with no DFA content,
+       so that its facts can be assigned after computing
+       global facts). Note that while this node's parent is
+       set to main, it doesn't count as main's entry node.
+    b. DFAcall nodes now have mbu_facts, and pointers to
+       their parents.
+ 3. in DFA, refined further analysis process, so that all
+    that remains to be written are
+    a. handleFormal(), which will look up the callsites
+       and compute whatever facts are needed, and
+    b. fCall case, which needs to handle return values
+       as well (may be non-trivial, this one).
+@
+text
+@d34 2
+a35 1
+    virtual void handleAssign(DFAassign& da) = 0;
+d38 1
+d62 2
+a63 1
+    void handleAssign(DFAassign& da);
+d66 1
+@
+
+
+1.2
+log
+@Wrote correct (I think) version of parallel, with meet-verification.
+This entailed changing the DFA api slightly, with setTop and setBottom
+and switchAndCompare moved from DFA to DFAfact.
+Also, for optimization, meet and join now take a preserve flag to
+denote whether the RHS needs to be preserved, or can be consumed.
+@
+text
+@d12 1
+d14 2
+d35 1
+d37 2
+d61 1
+d63 2
+a121 1
+class CFGnode;
+d123 1
+d131 3
+a133 2
+    void collectWorkList(CFGnode& entry);
+    void doAnalysis(CFGnode& cn);
+d137 1
+a137 1
+    void DFAnodePropagate(DFAnode& dn, DFAfact& df);
+d139 2
+d142 1
+d160 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d18 1
+a18 2
+    virtual DFAfact& newClone() = 0;
+    virtual DFAfact& new_bottomThis() = 0;
+d21 8
+a28 2
+    virtual void meet(DFAfact& df) = 0;
+    virtual void join(DFAfact& df) = 0;
+d33 4
+d39 3
+a41 1
+//-to be obsolescent, replace by above
+d46 1
+a46 2
+    DFAfact& newClone();
+    DFAfact& new_bottomThis();
+d48 5
+a52 2
+    void meet(DFAfact& df);
+    void join(DFAfact& df);
+d57 2
+a70 2
+    void debug_dump(FILE * outf);
+
+a129 1
+    virtual bool switchAndCompareNodeFact(CFGnode& cn, DFAfact& df) = 0;
+d136 1
+a146 1
+    bool switchAndCompareNodeFact(CFGnode& cn, DFAfact& df);
+@

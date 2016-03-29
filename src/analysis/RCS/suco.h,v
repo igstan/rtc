@@ -1,0 +1,533 @@
+head	1.15;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.15
+date	2004.05.25.14.20.58;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2004.05.06.23.30.10;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2004.04.29.15.09.01;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2003.11.14.15.58.36;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2003.03.20.23.01.22;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2003.02.22.00.05.44;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2003.02.18.23.26.50;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2003.01.08.21.44.38;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2003.01.07.20.01.38;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.11.27.16.20.42;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.11.25.19.29.16;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.11.21.20.44.57;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.11.20.19.09.02;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.11.15.22.07.32;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.08.14.19.30.46;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@SUCO list and set library.
+@
+
+
+1.15
+log
+@Added set::Subtract().
+@
+text
+@#ifndef SUCO_H
+#define SUCO_H
+
+//
+// The data structures used by SUan and COlby (SUCO) in this
+// project.  It includes:
+//   suco_llist - a linked list
+//   suco_queue - a queue
+//   suco_olist - an ordered list
+//   suco_set   - a set
+//   suco_iterator - an iterator that can be used in conjunction
+//                   with any of the above data structures.
+// Note: very little 'protection' is provided; designed on the
+// assumption that its users (us) know what they (we) are doing.
+//
+
+//
+// CAVEATS:
+//  these are designed to hold pointers only; further, Insert() will
+//  discard null pointers (for convenience)
+//
+
+#include <stdio.h>
+
+//-- these are defined in suco_usage.cpp
+extern bool suco_recycle;
+
+class suco_diag_wrapper
+{
+  public: static void suco_write_recycle_stats(FILE * outf);
+};
+
+template <class T> class suco_iterator;
+
+//
+// A linked list.
+//
+template <class T>
+class suco_llist
+{
+  public:
+    suco_llist(): _head(0), _tail(&_head){}
+    ~suco_llist();
+
+    bool Contains(T item);
+
+    bool Insert(T item); // return true if success (mainly for suco_set)
+
+    void Append(T item);
+
+    void Attach(suco_llist<T>& list);
+
+    void Copy(suco_llist<T>& list);
+
+    T Head() { return (_head != 0)?(_head->item):0; }
+
+    T Last();
+
+    T ElementAt(int index);
+
+    bool Remove(T item); // true if item found and removed
+
+    T RemoveHead();
+
+    void Clear();
+
+    int Length();
+
+    bool IsEmpty() { return (_head==0); }
+
+    friend class suco_iterator<T>;
+    friend class suco_diag_wrapper;
+
+  protected:
+
+    class _suco_node
+    {
+      public:
+        static _suco_node * acquire(T i, _suco_node * n = 0);
+        static void dispose(_suco_node * n);
+        static int freelistLength();
+        static int num_new_nodes;
+        static int num_recy_nodes;
+
+        T item;
+        _suco_node * next;
+
+      private:
+        _suco_node();
+        _suco_node(T i, _suco_node * n)
+                  :item(i),next(n) {}
+        ~_suco_node() {}
+        static _suco_node * freelist;
+    };
+
+    _suco_node * _head;
+
+    _suco_node ** _tail;
+};
+
+//
+// A queue
+//
+template <class T>
+class suco_queue:public suco_llist<T>
+{
+  public:
+    suco_queue() {}
+
+    void Enqueue(T item);
+
+    T Dequeue();
+
+  private:
+};
+
+//
+// A stack
+//
+template <class T>
+class suco_stack:public suco_llist<T>
+{
+  public:
+    suco_stack() {}
+
+    void Push(T item);
+
+    T Pop();
+
+    operator bool(); // !isEmpty()
+
+  private:
+};
+
+//
+// An ordered list: instantiated with a compare function that
+// is used to determine the position in the list in which to
+// insert a new element.
+//
+template <class T>
+class suco_olist:public suco_llist<T>
+{
+  public:
+    suco_olist(int (*cf)(T,T) = default_compare):compare(cf) {}
+
+    bool Insert(T item); // return true if success (mainly for suco_set)
+    bool Contains(T item);
+
+  protected:
+    int (*compare)(T,T);
+    static int default_compare(T l,T r) { return ((int)l - (int)r); }
+};
+
+//
+// A set class.  The only thing 'unusual' would be that
+// the set cannot contain any 'NULL' elements (0).  This
+// property makes coding for us a little more convenient.
+//
+template <class T>
+class suco_set:public suco_olist<T>
+{
+  public:
+    suco_set(int (*cf)(T,T) = suco_olist<T>::default_compare) : suco_olist<T>(cf) {}
+    suco_set(suco_set<T> & src, int (*cf)(T,T) = suco_olist<T>::default_compare);
+
+    bool Insert(T); // return true if success
+
+    T GetSingleton();
+
+    void InsertList(suco_llist<T> &tgt);
+
+    void Union(suco_set<T> &tgt);
+
+    void UnionConsume(suco_set<T> &tgt);
+
+    bool Superset(suco_set<T> &tgt);
+
+    bool Subset(suco_set<T> &tgt);
+
+    void Intersect(suco_set<T> &tgt);
+
+    void Subtract(suco_set<T> &tgt);
+
+    bool Intersects(suco_llist<T> &tgt);
+};
+
+//
+// An iterator for all the above classes (which are all derived
+// from the llist, BTW).
+// The use of this is as follows:
+//
+//  suco_iterator<type> name(list);
+//  while(name.Iterate()){
+//    use name.Current();
+//    [name.DeleteCurrent();]
+//  }
+//
+template <class T>
+class suco_iterator
+{
+  public:
+    suco_iterator(suco_llist<T> &s)
+               : _list(&(s._head)), _tail(&(s._tail)),
+                 _ptr(&(s._head)), _valid(false) {}
+    suco_iterator(suco_iterator<T> &i)	//- copy constructor: sets list to current ptr!
+               : _list(i._ptr), _tail(i._tail),
+                 _ptr(i._ptr), _valid(i._valid) {}
+    T Current() { return (_valid && (*_ptr)!=0)?((*_ptr)->item):0; }
+    void DeleteCurrent();
+    bool Iterate();
+    operator bool(){ return (_valid && ((*_ptr)!=0)); }
+    void Rewind() { _ptr = _list; _valid = false; }
+
+  protected:
+    suco_iterator();
+    typename suco_llist<T>::_suco_node ** _list, *** _tail, ** _ptr;
+    bool _valid;
+};
+
+#endif
+@
+
+
+1.14
+log
+@Added set::InsertList(llist).
+@
+text
+@d182 2
+@
+
+
+1.13
+log
+@1. Removed STRONGER_CPP compile-time flag.
+   This was surrounding two things affected by g++
+   version change:
+   A. inline initialization of static member CFGnode::ALL_AOS.
+      ~~> no big deal.
+   B. ability to define friend function suco_write_recycle_stats
+      as friend of (templated) suco class.
+      ~~> solution: wrap suco_write_recycle_stats in its
+          own class (suco_diag_wrapper).
+2. Added purify target to makefile.
+@
+text
+@d170 2
+@
+
+
+1.12
+log
+@1. SUCO UPDATE: added copy constructor to suco_iterator,
+   that sets the "list" pointer to the current pointer
+   (this feature will be used in collecting backedge
+   filter).
+2. compute backedge filters: reshuffled interface, and
+   wrote some preliminary untested code!
+   The old version tried to recursively walk the cfg;
+   the new one just walks the sequential list of nodes.
+   Also added command line flag (-ran-[no-]filter-backedge).
+TODO: fix high level bug that only handles true-false
+edges differently when the predicate node gives a pair
+of facts.
+@
+text
+@d27 5
+a31 1
+extern void suco_write_recycle_stats(FILE * outf);
+d72 1
+a72 2
+
+    friend void suco_write_recycle_stats();
+@
+
+
+1.11
+log
+@Fixed REDt -- previous version was naive and didn't account
+for aliases.
+Removed REDfact::remove, which is no longer needed.
+Added ExpDescr::aliasecrs cache (with accessor getAliasECRs()).
+Added to suco GetSingleton function.
+@
+text
+@d198 3
+d208 1
+a208 1
+    suco_iterator(){}
+@
+
+
+1.10
+log
+@Wrote redundant analysis collection function.
+Entailed creation of REDresults class and REDcFactHandler, etc.
+Resulted in modifying suco_set (olist, actually) to have a
+different Contains function that uses the compare function
+rather than ==. (Future work: may want to extend to some
+other functions).
+@
+text
+@d165 2
+@
+
+
+1.9
+log
+@Changed Intersects to accept a llist rather than a set.
+@
+text
+@d144 1
+@
+
+
+1.8
+log
+@Added "typename" keywords to suppress "implicit typename
+deprecated" warnings in latest version of g++.
+@
+text
+@d174 1
+a174 1
+    bool Intersects(suco_set<T> &tgt);
+@
+
+
+1.7
+log
+@Eliminated LocAidNodes from MBUfact -- major strip-down.
+Now MBUfact is implemented as simply a suco_set of AOs.
+Added suco_set::Intersect.
+@
+text
+@d203 1
+a203 1
+    suco_llist<T>::_suco_node ** _list, *** _tail, ** _ptr;
+@
+
+
+1.6
+log
+@Updated suco so that stack is derived from llist rather
+than queue, and also Pop calls RemoveHead (as does Dequeue),
+and old commented-out code is deleted.
+@
+text
+@d172 2
+@
+
+
+1.5
+log
+@Added RemoveHead(), Last(); changed Remove() to return
+a bool indicating whether item was present.
+@
+text
+@d118 1
+a118 1
+class suco_stack:public suco_queue<T>
+@
+
+
+1.4
+log
+@Changed worklist to a queue/stack, with two execution modes
+(fifo/lifo):
+ - added command-line flags "fifo" or "lifo"
+ - in suco, made stack inherit queue publicly, so a stack
+   object can be used as both a stack and a queue
+   (an unsafe thing to do?)
+ - added a flag in CFGnodes to indicate if a node is in the
+   worklist -- should make it faster than checking for
+   worklist membership each time, though we have to make
+   sure the bookkeeping is correct.
+@
+text
+@d53 2
+d57 3
+a59 1
+    void Remove(T item);
+@
+
+
+1.3
+log
+@Major changes -- fixed logical flaws in ability to collect
+MBU results.
+1. Added suco_llist::Copy and suco_set::Union (non-destructive version)
+2. In cfg.cpp/h, added new type DFAarg to represent a function
+   call actual argument.
+3. In dfa.cpp/h, MBUfacts now stores (in LocAidNode) for each
+   AO, in place of just a single set of aids:
+    - nodes:DFAnode - assignments, calls, and formal decls
+    - args::DFAarg - function call arguments
+    - rets:CFGnode - function return node
+@
+text
+@d114 1
+a114 1
+class suco_stack:private suco_queue<T>
+@
+
+
+1.2
+log
+@Suco change (major):
+ 1. Added new file suco_usage.cpp as a hack to instantiate
+    the suco code only once, rather than once-per-file as
+    before.
+ 2. Suco now has node-recycling mechanism in place, which
+    seems to help with rtca performance.
+@
+text
+@d47 3
+a49 1
+    void Attach(suco_llist<T> &list);
+d159 2
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d23 6
+a56 2
+    void debug_print();
+
+d63 2
+d70 6
+a75 2
+        _suco_node(T i, _suco_node * n = 0)
+                  :item(i),next(n) {}
+d78 7
+d141 1
+a141 1
+    static int default_compare(T l,T r) { return (l - r); }
+@

@@ -1,0 +1,50 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2002.09.03.15.58.23;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.08.28.22.55.22;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Wrapper for rtca executable (in bin/rtca-raw), which includes
+the library function models (libc.tc_asgs) into the mix.
+@
+
+
+1.2
+log
+@Added usage if $* is null
+@
+text
+@#!/bin/sh
+
+LIBC_ASGS=/p/wpis/people/students/suan/TypecheckDebugger/scripts/libc.tc_asgs
+RTCA_RAW=/p/wpis/people/students/suan/TypecheckDebugger/bin/rtca-raw
+
+if [ -z "$*" ]
+then $RTCA_RAW
+else $RTCA_RAW $LIBC_ASGS $*
+fi
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 4
+a9 1
+$RTCA_RAW $LIBC_ASGS $*
+@

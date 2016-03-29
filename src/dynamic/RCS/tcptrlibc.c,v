@@ -1,0 +1,461 @@
+head	1.5;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.5
+date	2004.08.13.18.51.43;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.10.21.21.46.25;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.10.14.23.05.35;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.10.14.21.43.50;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.10.10.18.03.17;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@TCPtr version of libc functions, excluding malloc
+and scanf/printf functions.
+@
+
+
+1.5
+log
+@BUG FIX: strcpy and strncat checks were off by one
+(terminating null char)
+@
+text
+@#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <langinfo.h>
+#include <sys/stat.h>
+#include <time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <netdb.h>
+#include <sys/socket.h>
+#include <unistd.h>
+
+#include "tcptr_internal.h"
+
+/*************************/
+/******** stdio.h ********/
+/*************************/
+
+char   * _typecheck_fgets(char * s, int n, FILE * stream)
+{
+  _tcptr_verifyPtr("",0,0,"(fgets)", s,n);
+  return fgets(s, n, stream);
+}
+
+char   * _typecheck_gets(char * s)
+{
+  char * ret = gets(s);
+  _tcptr_verifyPtr("",0,0,"(gets)", s,strlen(ret)+1);
+  return ret;
+}
+
+size_t   _typecheck_fread(void * ptr, size_t size, size_t nitems, FILE * stream)
+{
+  _tcptr_verifyPtr("",0,0,"(fread)", ptr, size*nitems);
+  return fread(ptr, size, nitems, stream);
+}
+
+/**************************/
+/******** string.h ********/
+/**************************/
+
+void *_typecheck_memcpy(void * s1, const void * s2, size_t n)
+{
+  _tcptr_verifyPtr("",0,0,"(memcpy:s1)", s1, n);
+#ifndef TC_PTRW /* { */
+  _tcptr_verifyPtr("",0,0,"(memcpy:s2)", s2, n);
+#endif /* } ifndef TC_PTRW */
+  return memcpy(s1, s2, n);
+}
+
+void *_typecheck_memmove(void * s1, const void * s2, size_t n)
+{
+  _tcptr_verifyPtr("",0,0,"(memmove:s1)", s1, n);
+#ifndef TC_PTRW /* { */
+  _tcptr_verifyPtr("",0,0,"(memmove:s2)", s2, n);
+#endif /* } ifndef TC_PTRW */
+  return memmove(s1, s2, n);
+}
+
+char *_typecheck_strcpy(char * dst, const char * src)
+{
+  int slen = strlen(src);
+#ifndef TC_PTRW /* { */
+  _tcptr_verifyPtr("",0,0,"(strcpy:src)", src, slen+1);
+#endif /* } ifndef TC_PTRW */
+  _tcptr_verifyPtr("",0,0,"(strcpy:dst)", dst, slen+1);
+  return strcpy(dst, src);
+}
+
+char *_typecheck_strncpy(char * dst, const char * src, size_t n)
+{
+  int slen = strlen(src);
+#ifndef TC_PTRW /* { */
+  _tcptr_verifyPtr("",0,0,"(strncpy:src)", src, (slen < n)?(slen+1):n);
+#endif /* } ifndef TC_PTRW */
+  _tcptr_verifyPtr("",0,0,"(strncpy:dst)", dst, n);
+  return strncpy(dst, src, n);
+}
+
+
+char *_typecheck_strcat(char * dst, const char * src)
+{
+  int slen = strlen(src);
+  int dlen = strlen(dst);
+#ifndef TC_PTRW /* { */
+  _tcptr_verifyPtr("",0,0,"(strcat:src)", src, slen+1);
+#endif /* } ifndef TC_PTRW */
+  _tcptr_verifyPtr("",0,0,"(strcat:dst)", dst, dlen+slen+1);
+  return strcat(dst, src);
+}
+
+char *_typecheck_strncat(char * dst, const char * src, size_t n)
+{
+  int slen = strlen(src);
+  int dlen = strlen(dst);
+#ifndef TC_PTRW /* { */
+  _tcptr_verifyPtr("",0,0,"(strncat:src)", src, (slen < n)?(slen+1):n);
+#endif /* } ifndef TC_PTRW */
+  _tcptr_verifyPtr("",0,0,"(strncat:dst)", dst, dlen+((slen < n)?(slen+1):(n+1)));
+  return strncat(dst, src, n);
+}
+
+size_t _typecheck_strxfrm(char *s1, const char * s2, size_t n)
+{
+  return strxfrm(s1, s2, n);
+}
+
+
+void _typecheck_bzero(void * s, size_t n)
+{
+  _tcptr_verifyPtr("",0,0,"(bzero)", s,n);
+  bzero(s, n);
+}
+
+
+void *_typecheck_memset(void * s, int c, size_t n)
+{
+  _tcptr_verifyPtr("",0,0,"(memset)", s,n);
+  return memset(s, c, n);
+}
+
+/* char *_typecheck_strerror(int) */
+void *_typecheck_memccpy(void * s1, const void * s2, int c, size_t n)
+{
+  _tcptr_verifyPtr("",0,0,"(memccpy:s1)", s1,n);
+#ifndef TC_PTRW /* { */
+  _tcptr_verifyPtr("",0,0,"(memccpy:s2)", s2,n);
+#endif /* } ifndef TC_PTRW */
+  return memccpy(s1, s2, c, n);
+}
+
+/* char *_typecheck_strsignal(int) */
+char *_typecheck_strdup(const char * s1)
+{
+  char * ret = strdup(s1);
+/*should insert into malloc mhash?:*/
+  if(ret) _tcptr_setTags(ret, strlen(ret)+1);
+  return ret;
+}
+
+
+
+/****************************/
+/******** langinfo.h ********/
+/****************************/
+extern char * _typecheck_nl_langinfo(nl_item item)
+{
+  char * ret = nl_langinfo(item);
+  _tcptr_setTags(ret, strlen(ret)+1);
+  return ret;
+}
+
+
+/****************************/
+/******** sys/stat.h ********/
+/****************************/
+extern int _typecheck_stat(const char *path, struct stat *buf)
+{
+  _tcptr_setTags(buf, sizeof(struct stat));
+  return stat(path, buf);
+}
+
+extern int _typecheck_lstat(const char *path, struct stat *buf)
+{
+  _tcptr_setTags(buf, sizeof(struct stat));
+  return lstat(path, buf);
+}
+
+extern int _typecheck_fstat(int fildes, struct stat *buf)
+{
+  _tcptr_setTags(buf, sizeof(struct stat));
+  return fstat(fildes, buf);
+}
+
+
+/************************/
+/******** time.h ********/
+/************************/
+extern char *_typecheck_ctime(const time_t *clock)
+{
+  char * ret = ctime(clock);
+  _tcptr_setTags(ret, strlen(ret)+1);
+  return ret;
+}
+
+extern struct tm *_typecheck_localtime(const time_t *clock)
+{
+  struct tm * ret = localtime(clock);
+  _tcptr_setTags(ret, sizeof(struct tm));
+  return ret;
+}
+
+extern struct tm *_typecheck_gmtime(const time_t *clock)
+{
+  struct tm * ret = gmtime(clock);
+  _tcptr_setTags(ret, sizeof(struct tm));
+  return ret;
+}
+
+extern char *_typecheck_asctime(const struct tm *tm)
+{
+  char * ret = asctime(tm);
+  _tcptr_setTags(ret, strlen(ret)+1);
+  return ret;
+}
+
+
+/**************************/
+/******** unistd.h ********/
+/**************************/
+extern char * _typecheck_getpass(const char * prompt)
+{
+  char * ret = getpass(prompt);
+  _tcptr_setTags(ret, strlen(ret)+1);
+  return ret;
+}
+
+extern int    _typecheck_brk(void *endds)
+{
+  return brk(endds);
+}
+
+extern void * _typecheck_sbrk(int incr)
+{
+  return sbrk(incr);
+}
+
+
+extern ssize_t _typecheck_read(int fildes, void *buf, size_t nbyte)
+{
+  return read(fildes, buf, nbyte);
+}
+
+extern ssize_t _typecheck_pread(int fildes, void *buf, size_t nbyte, off_t offset)
+{
+  return pread(fildes, buf, nbyte, offset);
+}
+
+extern ssize_t _typecheck_readv(int fildes, struct iovec *iov, int iovcnt)
+{
+  return readv(fildes, iov, iovcnt);
+}
+
+
+/*************************/
+/******** netdb.h ********/
+/****** sys/socket.h *****/
+/*************************/
+struct hostent *_typecheck_gethostbyname(const char *name)
+{
+  struct hostent * ret = gethostbyname(name);
+
+  _tcptr_setTags(ret, sizeof(struct hostent));
+
+  /* more here, TODO */
+
+  return ret;
+}
+
+struct hostent *_typecheck_gethostbyaddr(const char *addr, int len, int type)
+{
+  struct hostent * ret = gethostbyaddr(addr, len, type);
+
+  _tcptr_setTags(ret, sizeof(struct hostent));
+
+  /* more here, TODO */
+
+  return ret;
+}
+
+
+@
+
+
+1.4
+log
+@Added libtcptrw.a and libtcptrwg.a targets; these are
+compiled by passing -DTC_PTRW to the ptr-version of
+the library wrappers during compilation.
+@
+text
+@d64 1
+a64 1
+  _tcptr_verifyPtr("",0,0,"(strcpy:src)", src, slen);
+d66 1
+a66 1
+  _tcptr_verifyPtr("",0,0,"(strcpy:dst)", dst, slen);
+d99 1
+a99 1
+  _tcptr_verifyPtr("",0,0,"(strncat:dst)", dst, dlen+((slen < n)?(slen+1):n));
+@
+
+
+1.3
+log
+@Reintroduced file,line,col,exp arguments to _tcptr_verifyPtr
+@
+text
+@d45 1
+d47 1
+d54 1
+d56 1
+d63 1
+d65 1
+d73 1
+d75 1
+d85 1
+d87 1
+d96 1
+d98 1
+d126 1
+d128 1
+@
+
+
+1.2
+log
+@Filled in most libc functions; not tested.
+@
+text
+@d21 1
+a21 1
+  _tcptr_verifyPtr(s,n);
+d28 1
+a28 1
+  _tcptr_verifyPtr(s,strlen(ret)+1);
+d34 1
+a34 1
+  _tcptr_verifyPtr(ptr, size*nitems);
+d44 2
+a45 2
+  _tcptr_verifyPtr(s1, n);
+  _tcptr_verifyPtr(s2, n);
+d51 2
+a52 2
+  _tcptr_verifyPtr(s1, n);
+  _tcptr_verifyPtr(s2, n);
+d59 2
+a60 2
+  _tcptr_verifyPtr(src, slen);
+  _tcptr_verifyPtr(dst, slen);
+d67 2
+a68 2
+  _tcptr_verifyPtr(src, (slen < n)?(slen+1):n);
+  _tcptr_verifyPtr(dst, n);
+d77 2
+a78 2
+  _tcptr_verifyPtr(src, slen+1);
+  _tcptr_verifyPtr(dst, dlen+slen+1);
+d86 2
+a87 2
+  _tcptr_verifyPtr(src, (slen < n)?(slen+1):n);
+  _tcptr_verifyPtr(dst, dlen+((slen < n)?(slen+1):n));
+d99 1
+a99 1
+  _tcptr_verifyPtr(s,n);
+d106 1
+a106 1
+  _tcptr_verifyPtr(s,n);
+d113 2
+a114 2
+  _tcptr_verifyPtr(s1,n);
+  _tcptr_verifyPtr(s2,n);
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d21 1
+d27 3
+a29 1
+  return gets(s);
+d34 1
+d44 2
+d51 2
+d58 3
+d66 3
+d75 4
+d84 4
+d99 1
+d106 1
+d113 2
+d121 4
+a124 1
+  return strdup(s1);
+d134 3
+a136 1
+  return nl_langinfo(item);
+d145 1
+d151 1
+d157 1
+d167 3
+a169 1
+  return ctime(clock);
+d174 3
+a176 1
+  return localtime(clock);
+d181 3
+a183 1
+  return gmtime(clock);
+d188 3
+a190 1
+  return asctime(tm);
+d199 3
+a201 1
+  return getpass(prompt);
+d237 7
+a243 1
+  return gethostbyname(name);
+d248 7
+a254 1
+  return gethostbyaddr(addr, len, type);
+@

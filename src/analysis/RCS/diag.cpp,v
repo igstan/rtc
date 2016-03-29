@@ -1,0 +1,1091 @@
+head	1.30;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+1.30
+date	2004.07.16.19.46.35;	author suan;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2004.06.29.20.02.32;	author suan;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2004.05.07.19.52.39;	author suan;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2004.04.29.15.09.01;	author suan;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2004.04.06.15.02.47;	author suan;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2004.04.06.00.13.13;	author suan;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2004.02.21.23.25.21;	author suan;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2004.01.16.23.50.55;	author suan;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2003.11.06.21.38.03;	author suan;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2003.11.05.21.26.08;	author suan;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2003.10.30.20.33.31;	author suan;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2003.10.02.19.31.00;	author suan;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2003.06.18.20.08.46;	author suan;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2003.03.26.15.53.05;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2003.02.25.22.39.31;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2003.01.07.20.01.38;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2002.12.20.00.06.38;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2002.11.15.23.20.38;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2002.11.15.22.07.32;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.11.15.20.52.01;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.11.15.20.12.21;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.11.15.17.49.43;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.08.19.14.22.25;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.08.18.21.30.13;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.08.16.23.20.35;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.08.16.21.56.08;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.07.30.13.27.06;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.05.26.05.43.21;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.05.23.22.44.23;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.05.21.21.50.24;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@for diagnosis/cmd-line flags.
+@
+
+
+1.30
+log
+@CHANGES:
+1. Moved PExprAssign::getSingletonLHSloc() to
+   ExpDescr::getSingletonLoc(), so it can be used
+   elsewhere to determine strong update.
+1a. FIXED BUG (??) in getSingletonLoc(): previously
+    for sdot object, was returning enclosing struct!?!
+2. Added -vtfix flag, which enables/disables RED and
+   MBU treatment of verifyTag as fixing the type on
+   mismatch.
+3. Added MBU handling of verifyTag vtfix.
+4. Changed so that MBU uses the RED parallel hackery
+   (PM_RED_UNSAFE) when vtfix is on.
+@
+text
+@#include <stdio.h>
+#include <string.h>
+#include <sys/resource.h> /* for getrusage timing stuff */
+#include <time.h> // for time functions used in print_now_time()
+
+#include "flags.h"
+#include "diag.h"
+#include "ao.h"
+#include "ecr.h"
+#include "ty.h"
+#include "cfg.h"
+
+//------------------------------------------------------
+//- TCstats
+
+int TCstats::new_la_nodes = 0,
+    TCstats::recy_la_nodes = 0;
+
+int TCstats::num_pt_constraints = 0,
+    TCstats::num_constraint_solving_visits = 0;
+
+int TCstats::cde_incl_num_collapses = 0,
+    TCstats::cde_incl_nodes_collapsed = 0,
+    TCstats::cde_pt_num_collapses = 0,
+    TCstats::cde_pt_nodes_collapsed = 0;
+
+int TCstats::dfa_useless_expr_node_visits = 0,
+    TCstats::dfa_useful_expr_node_visits = 0,
+    TCstats::dfa_useless_cfg_node_visits = 0,
+    TCstats::dfa_useful_cfg_node_visits = 0;
+
+int TCstats::ranc_verify_visits = 0,
+    TCstats::ranc_verify_visit_factsizes = 0,
+    TCstats::ranc_verify_visit_max_factsize = 0;
+
+int TCstats::mbuc_verify_visits = 0,
+    TCstats::mbuc_verify_visit_factsizes = 0,
+    TCstats::mbuc_verify_visit_max_factsize = 0;
+
+int TCstats::num_aos = 0,
+    TCstats::num_addrof = 0,
+    TCstats::num_deref = 0,
+    TCstats::num_unsafe = 0,
+    TCstats::num_tracked = 0;
+
+int TCstats::num_malloc = 0,
+    TCstats::num_malloc_constsize = 0,
+    TCstats::num_malloc_evalsize = 0;
+
+int TCstats::num_poss_bottom = 0,
+    TCstats::num_poss_scalar = 0,
+    TCstats::num_poss_zero = 0,
+    TCstats::num_poss_top = 0;
+
+int TCstats::num_safe_ptr = 0,
+    TCstats::num_unsafe_ptr = 0,
+    TCstats::num_safe_struct_ptr = 0,
+    TCstats::num_unsafe_struct_ptr = 0,
+    TCstats::num_safe_written_ptr = 0,
+    TCstats::num_unsafe_written_ptr = 0,
+    TCstats::num_safe_struct_written_ptr = 0,
+    TCstats::num_unsafe_struct_written_ptr = 0,
+    TCstats::num_safe_fnptr = 0,
+    TCstats::num_unsafe_fnptr = 0,
+    TCstats::num_safe_struct_fnptr = 0,
+    TCstats::num_unsafe_struct_fnptr = 0,
+    TCstats::num_tracked_loc = 0,
+    TCstats::num_untracked_loc = 0,
+    TCstats::num_tracked_fnptr = 0,
+    TCstats::num_untracked_fnptr = 0,
+    TCstats::num_tracked_struct_fnptr = 0,
+    TCstats::num_untracked_struct_fnptr = 0;
+
+void TCstats::doAO(AO& ao)
+{
+  if(ao.isLib()) return; //- skip library objects
+
+  num_aos++;
+  if(ao.getKind() == AO::aoAddrOf) num_addrof++;
+  if(ao.getKind() == AO::aoStar) num_deref++;
+  switch(ao.getTScode()){
+    case 'U': num_unsafe++; break;
+    case 'T': num_tracked++; break;
+  }
+  if(ao.getKind() == AO::aoMalloc){
+    num_malloc++;
+    if(ao.getStaticType() && ao.getStaticType()->getKind() != TCtype::tcVoid)
+      num_malloc_constsize++;
+    if(((AOMalloc&)ao).getMallocType()
+	&& ((AOMalloc&)ao).getMallocType()->getKind() != TCtype::tcVoid)
+      num_malloc_evalsize++;
+  }
+
+  switch(ao.getECR().possType().getKind()){
+    case TClatType::tclBottom:
+	 num_poss_bottom++; break;
+    case TClatType::tclZero:
+	 num_poss_zero++; break;
+    case TClatType::tclTop:
+	 num_poss_top++; break;
+    default: //- scalar type
+	 num_poss_scalar++; break;
+  }
+
+  switch(ao.getKind()){
+    case AO::aoSDot:
+    case AO::aoUDot: {
+	 //- if ao is a pointer, and it is a direct decendent of an Id,
+	 //  then count as pointer declaration
+	 AO * dao = ao.find(AO::aoStar);
+	 if(dao){ //- this indicates that ao is a pointer (note: static type not set for sdot/udot aos)
+	   //- find root container
+	   AO * pao = &ao;
+	   do {
+	     pao = (pao->getKind() == (AO::aoSDot)) ? &((AOSDot *)pao)->getParent()
+						    : &((AOUDot *)pao)->getParent();
+	   } while(pao->getKind() == AO::aoSDot || pao->getKind() == AO::aoUDot);
+
+	   if(pao->getKind() == AO::aoId){
+
+	     //- identify fnptr by presence of return ao
+	     if(dao->find(AO::aoReturn)){
+	       //-- count safe/unsafe
+	       if(dao->getTSC() == AO::TSC_POSS_INVALID)
+	         num_unsafe_struct_fnptr++;
+	       else
+	         num_safe_struct_fnptr++;
+	       //-- count tracked/untracked
+	       // NOTE: this count is technically inaccurate in current implementation,
+	       //       since any tracked member of a struct will force the whole thing
+	       //       to be tracked -- but this should be a measure of "potential" benefit
+	       if(ao.getTSC() == AO::TSC_SAFE)
+		 num_untracked_struct_fnptr++;
+	       else
+		 num_tracked_struct_fnptr++;
+	     } else { //- non-function pointer
+	       //- non-function pointer
+	       if(dao->getTSC() == AO::TSC_POSS_INVALID)
+	         num_unsafe_struct_ptr++;
+	       else
+	         num_safe_struct_ptr++;
+	       if(dao->isAssigned()){
+	         if(dao->getTSC() == AO::TSC_POSS_INVALID)
+	           num_unsafe_struct_written_ptr++;
+	         else
+	           num_safe_struct_written_ptr++;
+	       }
+	     }
+	   }
+	 }
+      } break;
+    case AO::aoId: {
+	 //- categorize pointers
+	 AO * dao = ao.find(AO::aoStar);
+	 if(dao){ //- this indicates that ao is a pointer (note: no need to use static type)
+	   if(!ao.find(AO::aoFunction)){
+	     //- identify fnptr by presence of return ao
+	     if(dao->find(AO::aoReturn)){
+	       //-- count safe/unsafe
+	       if(dao->getTSC() == AO::TSC_POSS_INVALID)
+	         num_unsafe_fnptr++;
+	       else
+	         num_safe_fnptr++;
+	       //-- count tracked/untracked
+	       if(ao.getTSC() == AO::TSC_SAFE)
+		 num_untracked_fnptr++;
+	       else {
+		 num_tracked_fnptr++;
+/**/fprintf(stderr, "TRACKED FNPTR: ");
+/**/ao.dump_descr(stderr);
+/**/fprintf(stderr, "\n");
+               }
+	       break; // function pointer: don't fallthrough!
+	     } else { //- non-function pointer
+	       //- non-function pointer
+	       if(dao->getTSC() == AO::TSC_POSS_INVALID)
+	         num_unsafe_ptr++;
+	       else
+	         num_safe_ptr++;
+	       if(dao->isAssigned()){
+	         if(dao->getTSC() == AO::TSC_POSS_INVALID)
+	           num_unsafe_written_ptr++;
+	         else
+	           num_safe_written_ptr++;
+	       }
+	     }
+	   } else { // regular function: don't fallthrough!
+	     break;
+	   }
+	 }
+      } // fallthrough (if id is not function or function pointer)
+    case AO::aoStringLit:
+    case AO::aoMalloc: { // count tracked/untracked locations
+	 if(ao.getTSC() == AO::TSC_SAFE)
+	   num_untracked_loc++;
+	 else
+	   num_tracked_loc++;
+      } break;
+/*
+    case AO::aoReturn:
+    case AO::aoArg:
+    case AO::aoStar:
+    case AO::aoValue:
+    case AO::aoOp:
+    case AO::aoExt:
+    case AO::aoAddrOf:
+    case AO::aoFunction:
+*/
+    default: break;	//- NOP
+  }
+}
+
+void TCstats::doAssigns(FILE * outf, suco_llist<TCassignEdge *>& assigns)
+{
+  //------- tabulate per undefined function
+  struct entry {
+    const char * fnname;
+    int literal,
+	tracked, untracked,
+	pt_tracked, pt_untracked;
+    struct entry * next;
+  } * list = 0;
+  //---------------------------------------
+  suco_iterator<TCassignEdge *> aei(assigns);
+  while(aei.Iterate()){
+    if(aei.Current()->getTo().getKind() == AO::aoArg){
+      AOArg& aao = (AOArg&)aei.Current()->getTo();
+      if(aao.getParent().getKind() == AO::aoStar){
+	AO& tgtao = ((AOStar&)aao.getParent()).getTarget();
+	if(tgtao.getKind() == AO::aoId){
+	  AOId& idao = (AOId&) tgtao;
+	  AOFunction * fao = (AOFunction *) idao.find(AO::aoFunction);
+	  if(fao && (!fao->getLargNo() || fao->isLib())){ // id is defined and non-library
+	    ID& pid = idao.getPid();
+	    const char * fnname = pid.getname();
+	    // find entry, or add if not found
+	    struct entry ** lp = &list;
+	    int cf = 1;
+	    while((*lp) && (cf = strcmp((*lp)->fnname, fnname)) < 0)
+	      lp = &(*lp)->next;
+	    if(cf){ //- entry not found
+	      struct entry * tail = *lp;
+	      *lp = new struct entry;
+	      (*lp)->fnname = fnname;
+	      (*lp)->literal = 0;
+	      (*lp)->tracked = 0;
+	      (*lp)->untracked = 0;
+	      (*lp)->pt_tracked = 0;
+	      (*lp)->pt_untracked = 0;
+	      (*lp)->next = tail;
+	    }
+
+	    //- categorize fromAO
+	    AO& fromao = aei.Current()->getFrom();
+	    if(fromao.isVal()){
+	      (*lp)->literal++;
+	    } else {
+	      //- determine trackedness
+	      if(fromao.getTSC() == AO::TSC_SAFE){
+	        (*lp)->untracked++;
+	      } else {
+	        (*lp)->tracked++;
+	      }
+	      //- determine pointer-target trackedness
+	      if(aei.Current()->getType().getKind() == TCtype::tcPointer){
+		ExposedStatus es = fromao.pointsToExposed();
+		if(es.isSome() || es.isAll()){
+		  (*lp)->pt_tracked++;
+		} else {
+		  (*lp)->pt_untracked++;
+		}
+	      }
+	    }
+	  } // else function is true fnptr, or implicit (not declared)
+	} // else function is not regular fn or fnptr
+/**/  } else if(aao.getParent().getKind() == AO::aoId){
+/**/    fprintf(stderr, "Assignment into Arg Id _\n");
+      }
+    }
+  }
+  //------- print undefined function summary
+  struct entry * ep;
+  if(list)
+    fprintf(outf, "# undef-fns: (tracked/untracked/pt-tracked/pt-untracked/literal)\n");
+  for(ep = list; ep; ep = ep->next)
+    fprintf(outf, "# undef-fn %s: %d/%d/%d/%d/%d\n",
+			ep->fnname, ep->tracked, ep->untracked,
+				    ep->pt_tracked, ep->pt_untracked,
+				    ep->literal);
+}
+
+void TCstats::print(FILE * outf)
+{
+  fprintf(outf, "# AOs = %d\n"
+		"# AddrOf = %d\n"
+		"# Deref = %d\n"
+		"# Unsafe = %d\n"
+		"# Tracked = %d\n"
+	, num_aos, num_addrof, num_deref, num_unsafe, num_tracked);
+
+  fprintf(outf, "# Malloc = %d\n"
+		"# Malloc-evalsize = %d\n"
+		"# Malloc-constsize = %d\n"
+	, num_malloc, num_malloc_evalsize, num_malloc_constsize);
+
+  fprintf(outf, "# poss-type bottom = %d\n"
+		"# poss-type scalar = %d\n"
+		"# poss-type zero = %d\n"
+		"# poss-type top = %d\n"
+		, num_poss_bottom, num_poss_scalar,
+		  num_poss_zero, num_poss_top);
+
+  fprintf(outf, "# safe ptrs = %d\n"
+		"# unsafe ptrs = %d\n"
+		"# safe ptrs in struct = %d\n"
+		"# unsafe ptrs in struct = %d\n"
+		"# safe written-ptrs = %d\n"
+		"# unsafe written-ptrs = %d\n"
+		"# safe written-ptrs in struct = %d\n"
+		"# unsafe written-ptrs in struct = %d\n"
+		"# safe fnptrs = %d\n"
+		"# unsafe fnptrs = %d\n"
+		"# safe fnptrs in struct = %d\n"
+		"# unsafe fnptrs in struct = %d\n"
+		"# tracked locs = %d\n"
+		"# untracked locs = %d\n"
+		"# tracked fnptrs = %d\n"
+		"# untracked fnptrs = %d\n"
+		"# tracked fnptrs in struct = %d\n"
+		"# untracked fnptrs in struct = %d\n"
+	, num_safe_ptr, num_unsafe_ptr,
+	  num_safe_struct_ptr, num_unsafe_struct_ptr,
+	  num_safe_written_ptr, num_unsafe_written_ptr,
+	  num_safe_struct_written_ptr, num_unsafe_struct_written_ptr,
+	  num_safe_fnptr, num_unsafe_fnptr,
+	  num_safe_struct_fnptr, num_unsafe_struct_fnptr,
+	  num_tracked_loc, num_untracked_loc,
+	  num_tracked_fnptr, num_untracked_fnptr,
+	  num_tracked_struct_fnptr, num_untracked_struct_fnptr);
+
+  if(flag_recycle){
+    fprintf(outf, "# Recycle LocAid Nodes: New = %d, Recycled = %d, Freelist = %d\n"
+		, new_la_nodes, recy_la_nodes, RDAfact::freelistLength());
+    suco_diag_wrapper::suco_write_recycle_stats(outf);
+  }
+
+  fprintf(outf, "# Number of poss-type Constraints = %d\n", num_pt_constraints);
+  fprintf(outf, "# Constraint solving: number of node visits = %d\n", num_constraint_solving_visits);
+
+  if(flag_collapse_inclto_cycle)
+    fprintf(outf, "# Collapsed incl-to %d cycles, %d nodes\n"
+		, cde_incl_num_collapses, cde_incl_nodes_collapsed);
+  if(flag_collapse_ptsto_cycle)
+    fprintf(outf, "# Collapsed pts-to %d cycles, %d nodes\n"
+		, cde_pt_num_collapses, cde_pt_nodes_collapsed);
+
+  fprintf(outf, "# DFA (useless/useful) node visits: expr (%d/%d), cnode (%d/%d)\n",
+		dfa_useless_expr_node_visits, dfa_useful_expr_node_visits,
+		dfa_useless_cfg_node_visits, dfa_useful_cfg_node_visits);
+
+  fprintf(outf, "# range analysis collecting: %d facts / %d nodes = %.2f average; %d max\n",
+		ranc_verify_visit_factsizes,
+		ranc_verify_visits,
+		(float)ranc_verify_visit_factsizes/(float)ranc_verify_visits,
+		ranc_verify_visit_max_factsize);
+
+  if(flag_may_be_uninit)
+    fprintf(outf, "# mbu analysis collecting: %d facts / %d nodes = %.2f average; %d max\n",
+		mbuc_verify_visit_factsizes,
+		mbuc_verify_visits,
+		(float)mbuc_verify_visit_factsizes/(float)mbuc_verify_visits,
+		mbuc_verify_visit_max_factsize);
+}
+
+// prints the current time
+void TCstats::print_now_time(FILE * outf)
+{
+  time_t now;
+  struct tm * tp;
+
+  time(&now);
+  tp = localtime(&now);
+  fprintf(outf, "[%02d:%02d:%02d]", tp->tm_hour, tp->tm_min, tp->tm_sec);
+}
+
+void TCstats::timer(const char * descr)
+{
+#define RDS_SIZE 10
+  struct rudesc {
+    struct rusage ru;
+    const char * desc;
+  };
+  static struct rudesc rdstack[RDS_SIZE];
+  static int rdsndx = 0;
+  static int rdsndx_overflow = 0;
+
+  if(descr){ //- start timer
+    if(rdsndx >= RDS_SIZE){
+      fprintf(stderr, "RTC: timer stack overflow; skipping timer for %s\n", descr);
+      rdsndx_overflow++;
+    } else {
+      getrusage(RUSAGE_SELF, &rdstack[rdsndx].ru);
+      rdstack[rdsndx].desc = descr;
+      fprintf(stderr, "Start %s...", rdstack[rdsndx].desc);
+      TCstats::print_now_time(stderr);
+      fprintf(stderr, "\n");
+      rdsndx++;
+    }
+  } else { //- end timer
+    struct rusage ru_end;
+    getrusage(RUSAGE_SELF, &ru_end);
+
+    if(rdsndx_overflow){
+      rdsndx_overflow--;
+    } else if(rdsndx == 0){
+      fprintf(stderr, "RTC: timer stack underflow!!\n");
+    } else {
+      rdsndx--;
+
+      struct timeval u1 = rdstack[rdsndx].ru.ru_utime;
+      struct timeval u2 = ru_end.ru_utime;
+      struct timeval s1 = rdstack[rdsndx].ru.ru_stime;
+      struct timeval s2 = ru_end.ru_stime;
+
+      fprintf(stderr, "... done %s (%.3f u, %.3f s)\n", rdstack[rdsndx].desc,
+	(double)(u2.tv_sec-u1.tv_sec)+(double)(u2.tv_usec-u1.tv_usec)/1000000,
+	(double)(s2.tv_sec-s1.tv_sec)+(double)(s2.tv_usec-s1.tv_usec)/1000000);
+    }
+  }
+#undef RDS_SIZE
+}
+
+//------------------------------------------------------
+
+@
+
+
+1.29
+log
+@ADDED evaluation of each library function call to determine
+if its target (where relevant) is exposed -- this will mainly
+be used in -vulnw mode to remove instrumentation when a
+function's target is exposed (needed to avoid false positive).
+Eventually, it may also be used in -ptr/ptrw mode to remove
+instrumentation when a library function's target is not
+exposed -- though currently this never happens because of
+context-insensitive analysis and overly-conservative models.
+SUPPLEMENTAL CHANGES to achieve the above:
+ 1. Created ExposedStatus class in ao.cpp/ao.h (was previously
+    an enum in AO class)
+ 2. Changed PExprcall::isDirectCall() to return the ID of the
+    direct call, rather than just a bool.
+ 3. Exported "flag_readwrite" to become a global -- it's about
+    time (I'd been misguidedly trying to avoid this for far
+    too long, creating a bigger mess instead)
+@
+text
+@d36 4
+d366 7
+@
+
+
+1.28
+log
+@Changed AO/ECR relationship: added AO::getECR() function
+that is to be called after pt-analysis finalization of
+ECRs -- so, PRIOR to finalization, must use ECR::getECR()
+(as is now done in pta.cpp), but AFTER, must only use
+AO::getECR() which outputs a fatal error message if ECR
+not found.
+@
+text
+@d262 2
+a263 2
+		AO::exposed_status es = fromao.pointsToExposed();
+		if(es == AO::esSome || es == AO::esAll){
+@
+
+
+1.27
+log
+@1. Removed STRONGER_CPP compile-time flag.
+   This was surrounding two things affected by g++
+   version change:
+   A. inline initialization of static member CFGnode::ALL_AOS.
+      ~~> no big deal.
+   B. ability to define friend function suco_write_recycle_stats
+      as friend of (templated) suco class.
+      ~~> solution: wrap suco_write_recycle_stats in its
+          own class (suco_diag_wrapper).
+2. Added purify target to makefile.
+@
+text
+@d90 1
+a90 1
+  switch(ECR::getECR(ao).possType().getKind()){
+a261 1
+//		if(fromao.hasECR() && ECR::getECR(fromao).pointsToExposed())
+@
+
+
+1.26
+log
+@Fixed bug in num_malloc_evalsize counting.
+@
+text
+@d341 1
+a341 1
+    suco_write_recycle_stats(outf);
+@
+
+
+1.25
+log
+@Added malloc stat counter: number of malloc AOs,
+number with evaluated ty/size and number with
+const ty/size.
+@
+text
+@d85 2
+a86 1
+    if(((AOMalloc&)ao).getMallocType())
+@
+
+
+1.24
+log
+@Semimajor change: eliminated TCtypeList class; replaced
+with suco_llist<TCtype *>.
+The only semantic change is that destruction is not
+recursive, so a lot of leakage is likely.
+(Next change: devise a single-representative storage?
+)
+@
+text
+@d42 4
+d81 7
+d296 5
+@
+
+
+1.23
+log
+@Added output listing of tracked function ptrs.
+@
+text
+@a15 3
+int TCstats::new_ty_nodes = 0,
+    TCstats::recy_ty_nodes = 0;
+
+a321 2
+    fprintf(outf, "# Recycle Ty Nodes: New = %d, Recycled = %d, Freelist = %d\n"
+		, new_ty_nodes, recy_ty_nodes, TCtypeList::freelistLength());
+@
+
+
+1.22
+log
+@Added new stat counters for range analysis: count average
+and max size of RANfact when collecting.
+@
+text
+@d154 1
+a154 1
+	       else
+d156 4
+@
+
+
+1.21
+log
+@Added implementation of cycle detection and elimination
+of points-to cycles (had previously only implemented
+for includes-to cycles).
+CAVEAT: it's unclear whether the two algorithms will
+clash; am now testing.
+@
+text
+@d35 4
+d341 6
+@
+
+
+1.20
+log
+@Added new diagnostic function: TCstats::print_now_time()
+to print the current real time (at start of timer, and
+in DFA::doAnalysis for each function, when intraprocedural)
+which'd be helpful to diagnose when a process is not terminating.
+@
+text
+@d25 5
+d326 7
+@
+
+
+1.19
+log
+@Replaced malloc calls with new calls.
+@
+text
+@d4 1
+d327 11
+d356 3
+a358 1
+      fprintf(stderr, "Start %s...\n", rdstack[rdsndx].desc);
+@
+
+
+1.18
+log
+@Gave the code the -Wall treatment: adjusted things to
+get rid of warnings:
+ - reordered initializers to match declaration order
+ - made some destructors virtual (note that for many
+   classes with no explicit destructors, I did not
+   add explicit virtual destructors, so -Wall warnings
+   remain)
+ - made some signed/unsigned casts
+ - made some pointer/unsigned int casts for printfs
+ - filled in unaccounted-for cases in switch statements
+@
+text
+@a1 1
+#include <stdlib.h> //- for malloc
+d216 1
+a216 1
+	      *lp = (struct entry *)malloc(sizeof(struct entry));
+@
+
+
+1.17
+log
+@Changed TCstats::timer to remember a stack of (up to 10)
+timers, which allows more simultaneous timings.
+@
+text
+@d172 12
+a183 1
+      }
+@
+
+
+1.16
+log
+@Added timer mechanism to output rusage times for various
+phases.
+(current implementation: only one timer at a time, though).
+@
+text
+@d318 8
+a325 2
+  static struct rusage ru_start;
+  static const char * descr_start = 0;
+d328 9
+a336 3
+    getrusage(RUSAGE_SELF, &ru_start);
+    descr_start = descr;
+    fprintf(stderr, "Start %s...\n", descr_start);
+d341 6
+a346 4
+    struct timeval u1 = ru_start.ru_utime;
+    struct timeval u2 = ru_end.ru_utime;
+    struct timeval s1 = ru_start.ru_stime;
+    struct timeval s2 = ru_end.ru_stime;
+d348 6
+a353 1
+    fprintf(stderr, "... done %s (%.3f u, %.3f s)\n", descr_start,
+d356 1
+d358 1
+@
+
+
+1.15
+log
+@Eliminated LocAidNodes from MBUfact -- major strip-down.
+Now MBUfact is implemented as simply a suco_set of AOs.
+Added suco_set::Intersect.
+@
+text
+@d4 1
+d314 24
+@
+
+
+1.14
+log
+@Renamed some mbu-counters to dfa-counters.
+@
+text
+@d303 1
+a303 1
+		, new_la_nodes, recy_la_nodes, MBUfact::freelistLength());
+@
+
+
+1.13
+log
+@Added is_useless flag to CFGnode/DFAnode, to make visits
+faster during DFA.
+@
+text
+@d24 4
+a27 4
+int TCstats::mbu_useless_dfa_node_visits = 0,
+    TCstats::mbu_useful_dfa_node_visits = 0,
+    TCstats::mbu_useless_cfg_node_visits = 0,
+    TCstats::mbu_useful_cfg_node_visits = 0;
+d310 3
+a312 3
+  fprintf(outf, "# MBU (useless/useful) node visits: DFA(%d/%d), CFG(%d/%d)\n",
+		mbu_useless_dfa_node_visits, mbu_useful_dfa_node_visits,
+		mbu_useless_cfg_node_visits, mbu_useful_cfg_node_visits);
+@
+
+
+1.12
+log
+@Suco change (major):
+ 1. Added new file suco_usage.cpp as a hack to instantiate
+    the suco code only once, rather than once-per-file as
+    before.
+ 2. Suco now has node-recycling mechanism in place, which
+    seems to help with rtca performance.
+@
+text
+@d24 5
+d309 4
+@
+
+
+1.11
+log
+@Added #include <stdlib.h> for malloc
+@
+text
+@d299 1
+@
+
+
+1.10
+log
+@Added node-recycling to MBUlist/LocAidNode.
+Speeds up mel test by about 20%!
+@
+text
+@d2 1
+@
+
+
+1.9
+log
+@Reorganized global flags, stat-collection and output;
+moved TCcollectStats to diag.cpp/h, renamed to TCstats,
+and absorbed what used to be in diag.cpp/h.
+Global flags have been moved to flags.h, (they're defined
+in tca.cpp, for now).
+Removed the -stat flag: the "stat" output is now always
+dumped, to the output file rather than stderr.
+Added -mbu# flag, though haven't done anything with the
+different mbu levels yet.
+@
+text
+@d9 1
+d17 3
+d293 1
+a293 1
+  if(flag_recycle)
+d296 3
+@
+
+
+1.8
+log
+@Added Type-safety Category assignment.
+(major change).
+Appears working, tested on gcc, verified on small examples,
+not thoroughly verified.
+Also, added -readable flag.
+@
+text
+@d1 4
+d6 46
+d53 7
+a59 2
+//- fix nargs: use when there is clash in number of function arguments
+bool flag_use_maxnargs = true;
+d61 10
+a70 2
+//- recycle nodes whenever possible
+bool flag_verbose = false;
+d72 13
+a84 2
+//- recycle nodes whenever possible
+bool flag_recycle = true;
+d86 1
+a86 2
+//- collect and print stats
+bool flag_stat = false;
+d88 76
+a163 2
+//- output readable names rather than Tid/Pid
+bool flag_readable_output = false;
+d165 39
+a203 4
+int stat_new_ty_nodes = 0;
+int stat_recy_ty_nodes = 0;
+int stat_num_pt_constraints = 0;
+int stat_num_constraint_solving_visits = 0;
+d205 39
+a243 4
+//- used when generating possible-type constraints
+int poss_type_init_counter = 0;
+int poss_type_assign_counter = 0;
+int poss_type_incl_counter = 0;
+d245 1
+a245 1
+void diag_print_stats(FILE * os)
+d247 48
+a294 5
+  fprintf(os, "STAT: flag_recycle = %s\n", flag_recycle?"true":"false");
+  fprintf(os, "STAT: New Ty Nodes = %d\n", stat_new_ty_nodes);
+  fprintf(os, "STAT: Recycled Ty Nodes = %d\n", stat_recy_ty_nodes);
+  fprintf(os, "STAT: Number of poss-type Constraints = %d\n", stat_num_pt_constraints);
+  fprintf(os, "STAT: Constraint solving: number of node visits = %d\n", stat_num_constraint_solving_visits);
+d296 3
+@
+
+
+1.7
+log
+@Added -verbose-mode dot-output for possible-type constraint
+initialization and assignment-processing.
+@
+text
+@d15 3
+@
+
+
+1.6
+log
+@Added constraint solving -- not thoroughly tested, though
+it appears to work on some sample tests.
+@
+text
+@d20 5
+@
+
+
+1.5
+log
+@Finished (but not tested) initialization of poss-type
+constraints.
+This entailed creation of a root set (encapsulated by
+the class TClatRootSet).
+Also, to manipulate the traverseCounter, TCAstate is now
+a friend of ECR -- I'm not sure I like this arrangement.
+@
+text
+@d18 1
+d26 1
+@
+
+
+1.4
+log
+@Minor cmdline adjustments: added -pta flag; set default
+fixnargs to true.
+@
+text
+@d17 1
+d24 1
+@
+
+
+1.3
+log
+@3) added -fixnargs flag to compute max nargs and use
+   that for all argrets. simpler solution...
+
+4) added fwdptr to argret - necessary to ensure
+   correctness (?).
+   This resulted in a major overhaul - argret::absorb
+   must now be wary of clashes with ecr::absorb -
+   added recursive trick, etc.
+   Currently seems to work, but have not validated results.
+   NOTE: this change resulted in a crash that was eliminated
+   only after I removed both deletes of argrets. FIND BUG!?!
+@
+text
+@d4 1
+a4 1
+bool flag_use_maxnargs = false;
+@
+
+
+1.2
+log
+@Added flag_verbose
+@
+text
+@d3 3
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d4 3
+@

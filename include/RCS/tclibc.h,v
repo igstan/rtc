@@ -1,0 +1,341 @@
+head	1.13;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.13
+date	2004.01.05.21.13.56;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2003.04.03.20.04.36;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.10.31.17.09.51;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.09.05.15.07.54;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.02.26.23.17.19;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.02.26.19.41.38;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2001.05.04.03.25.41;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2001.04.19.19.04.02;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2001.04.14.00.29.03;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2001.04.13.23.48.13;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.10.09.23.05.51;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.07.12.23.56.27;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.02.17.23.38.29;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Header file for _typecheck_ version of libc functions
+(except stdio ones).
+@
+
+
+1.13
+log
+@New handling of [f]printf with the pctn mechanism...
+
+The big picture in printf handling:
+For -ptrw (which turns on -DTC_PCTN_PRINTF), we translate printf
+and fprintf to _typecheck_pctn_printf and _typecheck_pctn_fprintf;
+then, during instrumentation, we preprocess the constructed ast
+to examine the format string argument of each pctn_[f]printf call:
+if it is a string literal that does not contain a "%n", we'll convert
+it back to a plain [f]printf, thus eliding the %d-instrumentation,
+and furthermore (for -ptrw -range, at least), allows static analysis
+to eliminate more tracked locations.
+@
+text
+@#ifndef _TYPECHECK_LIBC_H
+#define _TYPECHECK_LIBC_H
+
+/**************************/
+/******** stdlib.h ********/
+/**************************/
+
+/* Include size_t typedef, so we don't have to include stdlib.h. */
+#ifndef _SIZE_T
+#define _SIZE_T
+typedef unsigned int    size_t;
+#endif
+
+/*************************/
+/******** stdio.h ********/
+/*************************/
+
+extern char   * _typecheck_fgets(char *, int, FILE *);
+extern char   * _typecheck_gets(char *);
+extern size_t   _typecheck_fread(void *, size_t, size_t, FILE *);
+
+extern int _typecheck_scanf(const char * format, ...);
+extern int _typecheck_fscanf(FILE * stream, const char * format, ...);
+extern int _typecheck_sscanf(const char * str, const char * format, ...);
+extern int _typecheck_pctn_printf(const char * format, ...);
+extern int _typecheck_pctn_fprintf(FILE * f, const char * format, ...);
+extern int _typecheck_sprintf(char * str, const char * format, ...);
+extern int _typecheck_snprintf(char * str, size_t size, const char * format, ...);
+
+/**************************/
+/******** malloc.h ********/
+/**************************/
+
+extern void * _typecheck_malloc(size_t size);
+extern void * _typecheck_calloc(size_t nelem, size_t elsize);
+extern void   _typecheck_free(void * ptr);
+extern void   _typecheck_free_partial(void * ptr);
+extern void * _typecheck_memalign(size_t alignment, size_t size);
+extern void * _typecheck_realloc(void * ptr, size_t size);
+extern void * _typecheck_valloc(size_t size);
+
+
+/**************************/
+/******** string.h ********/
+/**************************/
+
+extern void *_typecheck_memcpy(void *, const void *, size_t);
+extern void *_typecheck_memmove(void *, const void *, size_t);
+extern char *_typecheck_strcpy(char *, const char *);
+extern char *_typecheck_strncpy(char *, const char *, size_t);
+
+extern char *_typecheck_strcat(char *, const char *);
+extern char *_typecheck_strncat(char *, const char *, size_t);
+extern size_t _typecheck_strxfrm(char *, const char *, size_t);
+
+extern void _typecheck_bzero(void *, size_t);
+
+extern void *_typecheck_memset(void *, int, size_t);
+/* extern char *_typecheck_strerror(int); */
+extern void *_typecheck_memccpy(void *, const void *, int, size_t);
+/* extern char *_typecheck_strsignal(int); */
+extern char *_typecheck_strdup(const char *);
+
+
+/****************************/
+/******** langinfo.h ********/
+/****************************/
+#include <langinfo.h>
+extern char * _typecheck_nl_langinfo(nl_item item);
+
+/****************************/
+/******** sys/stat.h ********/
+/****************************/
+#include <sys/stat.h>
+extern int _typecheck_stat(const char *path, struct stat *buf);
+extern int _typecheck_lstat(const char *path, struct stat *buf);
+extern int _typecheck_fstat(int fildes, struct stat *buf);
+
+/************************/
+/******** time.h ********/
+/************************/
+#include <time.h>
+extern char *_typecheck_ctime(const time_t *clock);
+extern struct tm *_typecheck_localtime(const time_t *clock);
+extern struct tm *_typecheck_gmtime(const time_t *clock);
+extern char *_typecheck_asctime(const struct tm *tm);
+
+/**************************/
+/******** unistd.h ********/
+/**************************/
+extern char * _typecheck_getpass(const char * prompt);
+extern int    _typecheck_brk(void *endds);
+extern void * _typecheck_sbrk(int incr);
+
+#include <sys/types.h>
+#include <sys/uio.h>
+extern ssize_t _typecheck_read(int fildes, void *buf, size_t nbyte);
+extern ssize_t _typecheck_pread(int fildes, void *buf, size_t nbyte, off_t offset);
+extern ssize_t _typecheck_readv(int fildes, struct iovec *iov, int iovcnt);
+
+/*************************/
+/******** netdb.h ********/
+/****** sys/socket.h *****/
+/*************************/
+#include <netdb.h>
+#include <sys/socket.h>
+struct hostent *_typecheck_gethostbyname(const char *name);
+struct hostent *_typecheck_gethostbyaddr(const char *addr, int len, int type);
+
+#endif /* #ifndef TYPECHECK_LIBC_H */
+@
+
+
+1.12
+log
+@Added fscanf, sscanf.
+@
+text
+@d25 2
+@
+
+
+1.11
+log
+@Added _typecheck_free_partial protos.
+@
+text
+@d23 2
+@
+
+
+1.10
+log
+@Added _typecheck_sprintf and _typecheck_snprintf
+@
+text
+@d33 1
+@
+
+
+1.9
+log
+@Added _typecheck_bzero.
+@
+text
+@d23 2
+@
+
+
+1.8
+log
+@Added scanf (only; later add *scanf).
+@
+text
+@d49 2
+@
+
+
+1.7
+log
+@Uncommented tclibc prototypes (now [partially] implemented in tclibc.c).
+@
+text
+@d22 2
+@
+
+
+1.6
+log
+@Added prototypes for time.h library functions - to be implemented.
+@
+text
+@d57 2
+a58 3
+/*
+extern char * nl_langinfo(nl_item item);
+*/
+d63 1
+a63 1
+/* coming soon?
+a66 1
+*/
+d71 1
+a71 1
+/*
+a75 1
+*/
+a79 1
+/*
+a89 2
+*/
+
+d94 2
+a95 1
+/*
+a97 1
+*/
+@
+
+
+1.5
+log
+@Added more placeholder library functions to be written:
+read, pread, readv; gethostby{name,addr}.
+@
+text
+@d70 10
+@
+
+
+1.4
+log
+@Added placeholder for "getpass" library function (to be written).
+@
+text
+@d77 16
+@
+
+
+1.3
+log
+@Added a few (commented-out) functions to be done.
+@
+text
+@d74 1
+@
+
+
+1.2
+log
+@Added stdio functions (fgets, gets, fread).
+@
+text
+@d55 7
+a63 1
+
+d68 8
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d14 8
+@

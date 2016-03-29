@@ -1,0 +1,484 @@
+head	1.5;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+1.5
+date	2004.05.25.14.24.16;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2004.05.24.20.08.15;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2004.05.24.19.48.33;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2004.05.24.19.10.09;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2004.05.20.19.22.41;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@vp-May-Be-Uninit analysis.
+@
+
+
+1.5
+log
+@Bug Fix: was entering infinite loop because was
+using getAliasECRs, which filters in only loc/arg/ret
+aos.
+@
+text
+@#include "cfg.h"
+#include "ecr.h"
+#include "flags.h" //- for flag_readable_output
+#include "pmbu.h"
+
+//----------------------------------
+// vp MAY-BE-UNINIT ANALYSIS
+//----------------------------------
+
+suco_set<ECR *> pMBUfactHandler::relevant_ecrs;
+
+bool pMBUfactHandler::collectStartingPoints(PgmExpr& pe)
+{
+  if(pe.getKind() == PgmExpr::fVerify){
+    PExprVerify& pv = (PExprVerify &)pe;
+    if((pv.getVpKind() == PExprVerify::vpPtrW) ||
+	(pMBUfactHandler::readwrite && (pv.getVpKind() == PExprVerify::vpPtr))){
+      suco_iterator<AO *> aoi(pv.getDesc().getAOs());
+      while(aoi.Iterate()){
+        if(aoi.Current()->getTSC() > AO::TSC_POSS_INVALID){
+          AO * ao = aoi.Current()->derefOneLevel();
+          if(ao && !ao->isVal()){
+            pMBUfactHandler::relevant_ecrs.Union(ao->getECR().getAliasECRs());
+          }
+        }
+      }
+    }
+  }
+
+  return true; //- continue traversal
+}
+
+void pMBUfactHandler::doInsensitiveAnalysis(CFG& cfg)
+{
+  //- 1. collect starting points (into relevant_ecrs)
+  cfg.traverseRootNodes(pMBUfactHandler::collectStartingPoints);
+
+  //- 2. follow assignment edges backwards
+  suco_set<ECR *> worklist;
+  worklist.Union(pMBUfactHandler::relevant_ecrs);
+  while(!worklist.IsEmpty()){
+    ECR& ecr = *worklist.RemoveHead();
+    //- for each ecr in worklist: traverse its aos
+    suco_iterator<AO *> aoi(ecr.getAOset());
+    while(aoi.Iterate()){
+      //  1. collect locs in results
+      if(aoi.Current()->isLocArgRet()){
+        pMBUfactHandler::results.Insert(aoi.Current());
+      }
+      //  2. follow incl-edges backwards
+      //NOTE: technically, only want to follow "copy" edges,
+      // and skip assignments from a (+) node; but the existence
+      // of such a node would've rendered the starting point
+      // "unsafe", so it should never be encountered!?
+      suco_iterator<TCassignEdge *> edi(aoi.Current()->getIncomingAssignEdges());
+      while(edi.Iterate()){
+        ECR& fecr = edi.Current()->getFrom().getECR();
+        if(!pMBUfactHandler::relevant_ecrs.Contains(&fecr)){
+          suco_set<ECR *> fecr_aliases;
+          fecr.collectAliasECRs(fecr_aliases);	//- using this because getAliasECRs filters loc/arg/ret
+//          fecr_aliases.Subtract(pMBUfactHandler::relevant_ecrs);	//-TODO: avoid repetition
+          pMBUfactHandler::relevant_ecrs.Union(fecr_aliases);
+          worklist.UnionConsume(fecr_aliases);
+        }
+      }
+    }
+  }
+}
+
+void pMBUfactHandler::writeResults(CFG& cfg, FILE * outf)
+{
+  { //- write p-MBU results
+    suco_iterator<AO *> aoi(pMBUfactHandler::results);
+    while(aoi.Iterate()){
+      fprintf(outf, "M ");
+      aoi.Current()->write_string_rep(outf, flag_readable_output);
+      fprintf(outf, "\n");
+    }
+  }
+  { //- write p-MBU unsafe aos
+    suco_iterator<AO *> aoi(pMBUfactHandler::unsafe);
+    while(aoi.Iterate()){
+      fprintf(outf, "U ");
+      aoi.Current()->write_string_rep(outf, flag_readable_output);
+      fprintf(outf, "\n");
+    }
+  }
+  { //- write p-MBU tracked aos
+    suco_iterator<AO *> aoi(pMBUfactHandler::tracked);
+    while(aoi.Iterate()){
+      fprintf(outf, "T ");
+      aoi.Current()->write_string_rep(outf, flag_readable_output);
+      fprintf(outf, "\n");
+    }
+  }
+}
+
+//----------------------------------
+
+suco_set<AO *> pMBUfactHandler::results;
+suco_set<AO *> pMBUfactHandler::unsafe;
+suco_set<AO *> pMBUfactHandler::tracked;
+bool pMBUfactHandler::readwrite = false;
+
+//- collect PMBU unsafe and tracked aos:
+//  unsafe = all (safe) deref aos affected by something in pmbu_results
+//  tracked = all (untracked) locs aliased by a (newly-)unsafe ao
+void pMBUfactHandler::collectUnsafeTracked(AO& ao)
+{
+
+  if(ao.isRef() && (ao.getTSC() > AO::TSC_POSS_INVALID)
+	&& (pMBUfactHandler::readwrite || ao.isAssigned())){
+    suco_set<ECR *> affecrs;
+    ao.getECR().collectAliasECRs(affecrs, true);	//- using this, because getAliasECRs filters loc/argret
+    suco_iterator<ECR *> afecri(affecrs);
+    while(afecri.Iterate()){
+      if(afecri.Current()->getAOset().Intersects(pMBUfactHandler::results)){
+        //- found pmbu-unsafe ao
+        pMBUfactHandler::unsafe.Insert(&ao);
+        //- collect pmbu-tracked = loc aliases
+        suco_iterator<ECR *> alecri(ao.getECR().getAliasECRs());
+        while(alecri.Iterate()){
+          suco_iterator<AO *> aoi(alecri.Current()->getAOset());
+          while(aoi.Iterate()){
+            if(aoi.Current()->isLocArgRet() && aoi.Current()->getTSC() == AO::TSC_SAFE){
+              pMBUfactHandler::tracked.Insert(aoi.Current());
+            }
+          }
+        }
+        return;
+      }
+    }
+  }
+}
+
+//----------------------------------
+
+void pMBUfactHandler::intraProcInitializeEntryFact(DFAfact& df, CFGnode& cn)
+{
+  MBUfact& mf = (MBUfact&) df;
+  mf.aoset.Clear();
+}
+
+bool pMBUfactHandler::handleDecl(DFAfact& df, PExprDecl& dd)
+{
+  MBUfact& mf = (MBUfact&) df;
+  if((!dd.isZeroed()) &&
+	(dd.isLocal() || dd.isFormal() || dd.isMalloc())){
+//Future change: collect sdot/udot members also?
+    AO& ao = dd.getAO();
+    if(ao.dfa_relevant){
+      mf.aoset.Insert(&ao);
+    }
+    return false; //- not useless
+  } else return true; //- useless
+}
+
+bool pMBUfactHandler::handleFormal(DFAfact& df, PExprDecl& dd, CFGfunction& parfn, bool interproc)
+{
+//TODO: check callsites
+  return handleDecl(df, dd);
+}
+
+bool pMBUfactHandler::handleStrongAssign(DFAfact& df, AO& lhs, ExpDescr& rhs, PgmExpr * dnode, PgmStmt * cnode, PExprArg * arg)
+{
+  MBUfact& mf = (MBUfact&) df;
+  if(pMBUfactHandler::check_pmbu(rhs, mf.aoset)){ //- rhs may be uninit
+    mf.aoset.Insert(&lhs);	//-TODO: beware structs and sdot/udot
+  } else { //- rhs definitely init
+    mf.aoset.Remove(&lhs);	//-TODO: beware structs and sdot/udot
+  }
+  return false; //- not useless
+}
+
+bool pMBUfactHandler::handleWeakAssign(DFAfact& df, ExpDescr& lhs, ExpDescr& rhs, PExprAssign& dnode)
+{
+  MBUfact& mf = (MBUfact&) df;
+  if(pMBUfactHandler::check_pmbu(rhs, mf.aoset)){ //- rhs may be uninit
+    mf.addRelevantAliasLocs(lhs.getAOs());	//-TODO: beware structs and sdot/udot
+  } // else cannot kill (weak assignment)
+  return false; //- not useless
+}
+
+void pMBUfactHandler::intraProcHandleCall(DFAfact& df, PExprCall& dc)
+{
+  MBUfact& mf = (MBUfact&) df;
+  suco_iterator<CFGfunction *> fni(dc.getTargetFns());
+  while(fni.Iterate()){
+    CFGfunction& fn = *fni.Current();
+    if(fn.getGREF().Intersects(mf.aoset)){	//-TODO: beware structs and sdot/udot
+      //- if function references anything in pmbu
+      //  add gmod set to pmbu
+      fni.Current()->getGMOD().addToAOset(mf.aoset);	//-TODO: filter out strlit?/sdot/udot
+    } // else (if function doesn't reference anything in pmbu) no change
+  }
+}
+
+bool pMBUfactHandler::handleVerify(DFAfact& df, PExprVerify& dv)
+{
+  MBUfact& mf = (MBUfact&) df;
+  if((dv.getVpKind() == PExprVerify::vpPtrW) ||
+        (pMBUfactHandler::readwrite && (dv.getVpKind() == PExprVerify::vpPtr))){
+    this->moveToResults(mf.aoset, dv.getDesc(), true);
+  }
+
+  return false; //- not useless
+}
+
+//- for each (relevant-loc)AO in uninit_aos,
+//  if it affects use_exp, move it to results
+//  (move = delete from uninit_aos, add to results)
+void pMBUfactHandler::moveToResults(suco_set<AO *>& uninit_aos, ExpDescr& use_exp, bool deref)
+{
+//TODO: handle deref=true case: deref use_exp one level?
+  if(!uninit_aos.IsEmpty()){
+    suco_set<ECR *> affecrs;
+    use_exp.collectAffectingAliasLocECRs(affecrs);
+    suco_iterator<AO *> ui(uninit_aos);
+    while(ui.Iterate()){
+      if(affecrs.Contains(&ui.Current()->getECR())){
+        this->results.Insert(ui.Current());
+        ui.DeleteCurrent();
+      }
+    }
+  }
+}
+
+void pMBUfactHandler::moveToResults(suco_set<AO *>& uninit_aos, LocSet& use_locs)
+{
+  if(!uninit_aos.IsEmpty()){
+    suco_set<ECR *> affecrs;
+    use_locs.addToEcrSet(affecrs);
+    suco_iterator<AO *> ui(uninit_aos);
+    while(ui.Iterate()){
+      if(affecrs.Contains(&ui.Current()->getECR())){
+        this->results.Insert(ui.Current());
+        ui.DeleteCurrent();
+      }
+    }
+  }
+}
+
+//- Check ed to see if it may be uninitialized
+bool pMBUfactHandler::check_pmbu(ExpDescr& ed, suco_set<AO *>& pmbu_set)
+{
+//TODO
+  return true;
+}
+
+@
+
+
+1.4
+log
+@Added CFG::traverseRootNodes, used by pmbu and tca.
+The thing to remember is that this function traverses
+first the enter node (if any) before going through
+each function's root nodes.
+@
+text
+@d40 1
+a40 1
+  worklist.Copy(pMBUfactHandler::relevant_ecrs);
+d59 5
+a63 3
+          // note: assumes that getAlaisECRs() caches results
+          pMBUfactHandler::relevant_ecrs.Union(fecr.getAliasECRs());
+          worklist.Union(fecr.getAliasECRs());
+@
+
+
+1.3
+log
+@1. Moved pMBU "write results" code from TCAstate
+to pMBUfactHandler class.
+2. Removed pMBU filterResults -- just output everything
+and let sml decide which to instrument.
+@
+text
+@d36 1
+a36 7
+  suco_iterator<CFGfunction *> cfi(cfg.getFunctionList());
+  while(cfi.Iterate()){
+    suco_iterator<PgmStmt *> psi(cfi.Current()->getStmtList());
+    while(psi.Iterate()){
+      psi.Current()->traverseRootNodes(pMBUfactHandler::collectStartingPoints);
+    }
+  }
+@
+
+
+1.2
+log
+@1. Wrote flow-insensitive pmbu analysis; the flow-sensitive
+   portion is now in a non-working state, and needs to be
+   rewritten.
+2. Moved some pmbu-related code from TCAstate to
+   pMBUfactHandler class.
+So now: pmbu-sensitive is working, but not pmbu-insensitive.
+@
+text
+@d3 1
+d36 5
+a40 7
+  {
+    suco_iterator<CFGfunction *> cfi(cfg.getFunctionList());
+    while(cfi.Iterate()){
+      suco_iterator<PgmStmt *> psi(cfi.Current()->getStmtList());
+      while(psi.Iterate()){
+        psi.Current()->traverseRootNodes(pMBUfactHandler::collectStartingPoints);
+      }
+d72 1
+d74 16
+a89 8
+  //- 3. filter results (remove zero-init'ed aos)
+  {
+    suco_iterator<CFGfunction *> cfi(cfg.getFunctionList());
+    while(cfi.Iterate()){
+      suco_iterator<PgmStmt *> psi(cfi.Current()->getStmtList());
+      while(psi.Iterate()){
+        psi.Current()->traverseRootNodes(pMBUfactHandler::filterResults);
+      }
+d92 6
+a97 8
+}
+
+bool pMBUfactHandler::filterResults(PgmExpr& pe)
+{
+  if(pe.getKind() == PgmExpr::fDecl){
+    PExprDecl& pd = (PExprDecl &)pe;
+    if(pd.isZeroed()){
+      pMBUfactHandler::results.Remove(&pd.getAO());
+a99 1
+  return true; //- continue traversal
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d2 1
+d9 3
+a11 4
+//- for each (relevant-loc)AO in uninit_aos,
+//  if it affects use_exp, move it to results
+//  (move = delete from uninit_aos, add to results)
+void pMBUfactHandler::moveToResults(suco_set<AO *>& uninit_aos, ExpDescr& use_exp, bool deref)
+d13 12
+a24 9
+//TODO: handle deref=true case: deref use_exp one level?
+  if(!uninit_aos.IsEmpty()){
+    suco_set<ECR *> affecrs;
+    use_exp.collectAffectingAliasLocECRs(affecrs);
+    suco_iterator<AO *> ui(uninit_aos);
+    while(ui.Iterate()){
+      if(affecrs.Contains(&ui.Current()->getECR())){
+        this->results.Insert(ui.Current());
+        ui.DeleteCurrent();
+d28 2
+d32 1
+a32 1
+void pMBUfactHandler::moveToResults(suco_set<AO *>& uninit_aos, LocSet& use_locs)
+d34 47
+a80 8
+  if(!uninit_aos.IsEmpty()){
+    suco_set<ECR *> affecrs;
+    use_locs.addToEcrSet(affecrs);
+    suco_iterator<AO *> ui(uninit_aos);
+    while(ui.Iterate()){
+      if(affecrs.Contains(&ui.Current()->getECR())){
+        this->results.Insert(ui.Current());
+        ui.DeleteCurrent();
+d86 1
+a86 1
+bool pMBUfactHandler::handleStrongAssign(DFAfact& df, AO& lhs, ExpDescr& rhs, PgmExpr * dnode, PgmStmt * cnode, PExprArg * arg)
+d88 7
+a94 4
+  MBUfact& mf = (MBUfact&) df;
+  this->moveToResults(mf.aoset, rhs, false);
+  mf.aoset.Remove(&lhs);
+  return false; //- not useless
+d97 11
+a107 1
+bool pMBUfactHandler::handleWeakAssign(DFAfact& df, ExpDescr& lhs, ExpDescr& rhs, PExprAssign& dnode)
+d109 24
+a132 3
+  MBUfact& mf = (MBUfact&) df;
+  this->moveToResults(mf.aoset, rhs, false);
+  return false; //- not useless
+d135 3
+a137 1
+bool pMBUfactHandler::handleFormal(DFAfact& df, PExprDecl& dd, CFGfunction& parfn, bool interproc)
+d139 2
+a140 1
+  return handleDecl(df, dd);
+a142 1
+//TODO: structs? handle individually?
+d148 1
+a153 3
+  } else if(dd.isZeroed()){
+    mf.aoset.Remove(&dd.getAO());	//- may have been added during intraProcInitializeEntryFact()
+    return false; //- not useless
+d157 40
+d201 1
+a201 1
+        (this->readwrite && (dv.getVpKind() == PExprVerify::vpPtr))){
+d208 4
+a211 1
+void pMBUfactHandler::intraProcInitializeEntryFact(DFAfact& df, CFGnode& cn)
+d213 13
+a225 1
+  MBUfact& mf = (MBUfact&) df;
+d227 11
+a237 12
+  cn.getParentFunction().getGREF().addToAOset(mf.aoset);
+
+  //-optimization: keep only "relevant" aos, and exclude strlits:
+// FOR NOW, exclude also sdot/udot (may change in future)
+  suco_iterator<AO *> aoi(mf.aoset);
+  while(aoi.Iterate()){
+    AO& ao = *aoi.Current();
+    if(!ao.dfa_relevant ||
+	ao.getKind() == AO::aoStringLit ||
+	ao.getKind() == AO::aoSDot ||
+	ao.getKind() == AO::aoUDot){
+      aoi.DeleteCurrent();
+d242 2
+a243 1
+void pMBUfactHandler::intraProcHandleCall(DFAfact& df, PExprCall& dc)
+d245 2
+a246 5
+  MBUfact& mf = (MBUfact&) df;
+  suco_iterator<CFGfunction *> fni(dc.getTargetFns());
+  while(fni.Iterate()){
+    this->moveToResults(mf.aoset, fni.Current()->getGREF());
+  }
+@

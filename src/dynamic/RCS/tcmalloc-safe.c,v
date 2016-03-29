@@ -1,0 +1,27 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.1
+date	2003.03.18.20.26.22;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Safe-malloc version -- is just a wrapper
+of tcmalloc.c with #define TC_SAFE_MALLOC
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@#define TC_SAFE_MALLOC
+#include "tcmalloc.c"
+@

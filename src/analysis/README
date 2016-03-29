@@ -1,0 +1,24 @@
+ISSUES:
+
+ - TCA_BUF_SIZE (declared in tca.h) -- currently, if any
+     lines in any -assign input file is longer than this,
+     the behavior is undefined (it'll probably crash).
+     A TODO would be to write a more robust input function;
+     otherwise, an easy hack if such a long line is encountered
+     is to just bump up this #define (only one buffer is ever
+     allocated, so making it huge shouldn't hurt performance).
+ - dataflow analysis: function call unsafe unless -callmeet
+   - currently, by default, at a callsite, if there's more
+     than one callee function, the post-fact for that node
+     is the meet of the callee-return facts.
+     However, it is pathologically possible that at run-time
+     the call-node will resolve to an unmodeled function.
+     The current solution is to turn on the -callmeet flag,
+     which will meet the callsite facts with the callsite
+     pre-facts.  A more elegant solution would be to identify
+     the common case direct-calls, and callmeet for all other
+     calls.
+	~> fixed: currently, by default, don't meet with
+	   pre-facts only if it's a direct call and not
+	   recursive (and flag -callmeet is off) <~
+

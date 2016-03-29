@@ -1,0 +1,6860 @@
+head	1.91;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.91
+date	2004.07.16.18.56.21;	author suan;	state Exp;
+branches;
+next	1.90;
+
+1.90
+date	2004.06.03.00.31.55;	author suan;	state Exp;
+branches;
+next	1.89;
+
+1.89
+date	2004.05.18.21.40.37;	author suan;	state Exp;
+branches;
+next	1.88;
+
+1.88
+date	2003.03.28.19.36.23;	author suan;	state Exp;
+branches;
+next	1.87;
+
+1.87
+date	2003.02.05.19.39.28;	author suan;	state Exp;
+branches;
+next	1.86;
+
+1.86
+date	2003.01.23.20.29.37;	author suan;	state Exp;
+branches;
+next	1.85;
+
+1.85
+date	2003.01.21.21.50.37;	author suan;	state Exp;
+branches;
+next	1.84;
+
+1.84
+date	2002.11.04.21.46.24;	author suan;	state Exp;
+branches;
+next	1.83;
+
+1.83
+date	2002.10.31.17.28.36;	author suan;	state Exp;
+branches;
+next	1.82;
+
+1.82
+date	2002.10.23.00.07.04;	author suan;	state Exp;
+branches;
+next	1.81;
+
+1.81
+date	2002.10.10.13.59.40;	author suan;	state Exp;
+branches;
+next	1.80;
+
+1.80
+date	2002.10.07.22.10.54;	author suan;	state Exp;
+branches;
+next	1.79;
+
+1.79
+date	2002.09.04.19.34.27;	author suan;	state Exp;
+branches;
+next	1.78;
+
+1.78
+date	2002.05.02.23.31.46;	author suan;	state Exp;
+branches;
+next	1.77;
+
+1.77
+date	2002.05.02.20.51.43;	author suan;	state Exp;
+branches;
+next	1.76;
+
+1.76
+date	2002.04.30.20.38.02;	author suan;	state Exp;
+branches;
+next	1.75;
+
+1.75
+date	2002.04.22.20.17.53;	author suan;	state Exp;
+branches;
+next	1.74;
+
+1.74
+date	2002.03.16.23.09.18;	author suan;	state Exp;
+branches;
+next	1.73;
+
+1.73
+date	2002.03.12.23.48.08;	author suan;	state Exp;
+branches;
+next	1.72;
+
+1.72
+date	2002.03.04.19.39.53;	author suan;	state Exp;
+branches;
+next	1.71;
+
+1.71
+date	2002.03.01.19.54.42;	author suan;	state Exp;
+branches;
+next	1.70;
+
+1.70
+date	2002.02.26.23.20.35;	author suan;	state Exp;
+branches;
+next	1.69;
+
+1.69
+date	2002.02.26.17.33.15;	author suan;	state Exp;
+branches;
+next	1.68;
+
+1.68
+date	2002.02.25.17.03.02;	author suan;	state Exp;
+branches;
+next	1.67;
+
+1.67
+date	2002.02.22.22.32.55;	author suan;	state Exp;
+branches;
+next	1.66;
+
+1.66
+date	2001.06.28.16.49.09;	author suan;	state Exp;
+branches;
+next	1.65;
+
+1.65
+date	2001.06.13.22.38.44;	author suan;	state Exp;
+branches;
+next	1.64;
+
+1.64
+date	2001.06.13.21.38.34;	author suan;	state Exp;
+branches;
+next	1.63;
+
+1.63
+date	2001.06.13.21.04.13;	author suan;	state Exp;
+branches;
+next	1.62;
+
+1.62
+date	2001.05.31.22.44.29;	author suan;	state Exp;
+branches;
+next	1.61;
+
+1.61
+date	2001.05.25.21.32.38;	author suan;	state Exp;
+branches;
+next	1.60;
+
+1.60
+date	2001.05.25.02.54.04;	author suan;	state Exp;
+branches;
+next	1.59;
+
+1.59
+date	2001.05.18.22.25.06;	author suan;	state Exp;
+branches;
+next	1.58;
+
+1.58
+date	2001.05.14.22.55.56;	author suan;	state Exp;
+branches;
+next	1.57;
+
+1.57
+date	2001.05.04.03.24.03;	author suan;	state Exp;
+branches;
+next	1.56;
+
+1.56
+date	2001.05.04.01.03.22;	author suan;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2001.05.03.22.44.37;	author suan;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2001.05.03.19.45.20;	author suan;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2001.04.19.20.43.40;	author suan;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2001.04.19.18.45.19;	author suan;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2001.04.17.21.43.03;	author suan;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2001.04.17.20.44.40;	author suan;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2001.04.16.23.26.20;	author suan;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2001.04.16.22.38.11;	author suan;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2001.04.16.20.49.02;	author suan;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2001.04.15.03.54.51;	author suan;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2001.04.15.03.17.06;	author suan;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2000.10.30.17.40.08;	author suan;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2000.10.15.22.32.58;	author suan;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2000.09.12.16.22.47;	author suan;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2000.09.12.16.19.04;	author suan;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2000.07.13.16.40.26;	author suan;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2000.07.12.21.08.24;	author suan;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2000.07.12.01.25.10;	author suan;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2000.07.12.00.59.37;	author suan;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2000.07.12.00.27.25;	author suan;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2000.07.11.20.33.49;	author suan;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2000.07.11.04.12.13;	author suan;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2000.07.09.20.12.27;	author suan;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2000.07.09.19.50.21;	author suan;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2000.07.09.06.27.47;	author suan;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2000.07.09.02.50.01;	author suan;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2000.07.07.20.24.34;	author suan;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2000.07.07.00.39.44;	author alexey;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2000.07.06.23.33.38;	author suan;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2000.07.06.22.47.41;	author suan;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2000.07.06.21.08.08;	author suan;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2000.07.06.17.24.00;	author suan;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2000.07.05.20.23.59;	author alexey;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2000.06.30.16.15.47;	author suan;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2000.06.30.14.42.14;	author suan;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2000.06.30.04.06.05;	author suan;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2000.06.29.01.13.38;	author suan;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2000.06.28.22.08.26;	author suan;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2000.06.28.21.15.40;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.06.27.23.44.05;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.06.27.17.31.34;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.06.24.23.56.08;	author alexey;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.06.23.22.25.49;	author alexey;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.06.23.16.17.47;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.06.23.16.13.55;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.06.22.23.14.31;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.06.22.22.44.19;	author alexey;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.06.21.22.25.52;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.06.21.22.17.58;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.06.16.21.50.25;	author alexey;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.06.15.21.04.06;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.06.15.19.07.37;	author alexey;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.06.09.19.55.36;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.06.09.01.24.34;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.08.14.05.28;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Most stuff done by Alexey.
+@
+
+
+1.91
+log
+@Added -vtfix flag!
+To "correct" tags when verifyTag fails, as advertised
+in our paper(s)!?
+@
+text
+@#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/resource.h> /* for getrusage timing stuff */
+
+#define TC_DEFINE_MSGS
+#include "tcinternal.h"
+#undef TC_DEFINE_MSGS
+
+/******************/
+/* Run time flags */
+/******************/
+
+/* turn on/off sending of signal on error/warning */
+static int signalflags[_tc_numstreams] = {0};
+
+/* limit to this many error messages per stream (0 means no limit) */
+/* when limit reached; count number of messages skipped */
+static int output_limit[_tc_numstreams] = {0};
+static int overflow_count[_tc_numstreams] = {0};
+
+int tc_flag_summarize = 0; /* "summarize" errors and warnings, by line number,
+				at end of execution; may not print on crash */
+
+int tc_flag_terse = 0; /* "terse" output of errors and warnings */
+
+int tc_flag_trackfree = 0; /* keep track of free'd memory for diagnostic lookup */
+
+int tc_flag_vtfix = 0; /* fix tags on verifyTag? */
+
+#define _TC_NONE	0
+#define _TC_SEGS_ONLY	1
+#define _TC_TO_SCALAR	2
+#define _TC_TO_AGGR	3
+#define _TC_TO_HIGHEST	4
+int tc_flag_clear = _TC_SEGS_ONLY; /* on function return, different modes of
+				      clearing the stack frame w.r.t. formals */
+
+/*********************************/
+/* Instrumentation Call counters */
+/*********************************/
+static unsigned long tot_dynamic_num_calls = 0;
+static unsigned long tot_dynamic_num_calls_overflow = 0;
+
+/****************************/
+/* Macro statistic counters */
+/****************************/
+int  _vpctr = 0, _vpcctr = 0, _vpactr = 0, /* verifyPtr */
+    _vpfctr = 0,_vpcfctr = 0,_vpafctr = 0;
+int  _vtctr = 0, _vtcctr = 0, _vtactr = 0, /* verifyTag */
+    _vtfctr = 0,_vtcfctr = 0,_vtafctr = 0;
+int  _ctctr = 0, _ctcctr = 0, _ctactr = 0, /* copyTag */
+    _ctfctr = 0,_ctcfctr = 0,_ctafctr = 0;
+int  _sstctr = 0, _sstcctr = 0, /* setScalarTag */
+    _sstfctr = 0,_sstcfctr = 0;
+int  _ssutctr = 0, _ssutcctr = 0, /* setScalarUninitTag */
+    _ssutfctr = 0,_ssutcfctr = 0;
+int _patctr = 0, _patactr = 0, _patpctr = 0, /* processArgTag */
+    _patfctr = 0,_patafctr = 0;
+
+/**********************/
+/* Compile time flags */
+/**********************/
+/* the values for these are or-ed by the initialization functions
+   from the instrumented output. Each file in a given compilation
+   should have used the same flags; otherwise the behavior can be
+   a bit odd. */
+
+int strictPointer = 0;
+
+/********************************/
+/* Paged mirror data structures */
+/********************************/
+
+/* the mirrormap lookup table */
+void * mirrormap[MIRRORMAP_NUMELEMENTS] = {_typetag_unalloc};
+
+/* for now, freelist assumes tags-per-byte ratio is 2.
+   - to be more general introduces unnecessary complications? */
+void * mirrormap_freelist = 0;
+
+/******************/
+/* Auxiliary data */
+/******************/
+
+const char * _typeDesc[] = {"UNA", "UNI", "INT",
+                            "FLT", "PTR", "INI", "BIT"};
+
+/******************************/
+/* "private" API data members */
+/******************************/
+
+/* typechecker output streams */
+/* these are initialized in main() */
+static FILE * streams[_tc_numstreams] = {0};
+
+/********************/
+/* API data members */
+/********************/
+char _ini_static_rep[64];
+
+int _int_static_rep[2];
+char _char_static_rep[2];
+short _short_static_rep[2];
+long _long_static_rep[2];
+long long _longlong_static_rep[2];
+float _float_static_rep[2];
+double _double_static_rep[2];
+#ifdef LONGDOUBLE
+long double _longdouble_static_rep[2];
+#endif /* LONGDOUBLE */
+void * _pointer_static_rep[2];
+
+_addr_and_size_t * _globalArgAddrs = 0;
+int _globalArgCount = 0;
+void * _globalCallTarget = 0;
+void * _dummyAddr;
+char * _globalErrlocFile = "<none>";
+int _globalErrlocLine = 0, _globalErrlocCol = 0;
+
+/* for bitfields */
+long long _dummyInt;
+
+/***********/
+/* Globals */
+/***********/
+int _tc_init_mode = 0; /* set to true when initializing globals, and to false when program starts */
+
+/***********************/
+/* More auxiliary data */
+/***********************/
+
+_typeinfo_t typeinfo[] = {
+
+/* note: ordering must coincide with enum _ctype
+	 (which will be used to index into this table) */
+
+  { 0, _typetag_unalloc, 0, 0, 0, _ctype_void_invalid, "void" },
+  { &_int_static_rep[0], _typetag_int, sizeof(int), 0, 0,
+						_ctype_int, "int" },
+  { &_char_static_rep[0], _typetag_int, sizeof(char), 0, 0,
+						_ctype_int, "char" },
+  { &_short_static_rep[0], _typetag_int, sizeof(short), 0, 0,
+						_ctype_int, "short" },
+  { &_long_static_rep[0], _typetag_int, sizeof(long), 0, 0,
+						_ctype_long, "long" },
+  { &_longlong_static_rep[0], _typetag_int, sizeof(long long), 0, 0,
+						_ctype_longlong, "long long" },
+  { &_float_static_rep[0], _typetag_float, sizeof(float), 0, 0,
+						_ctype_double, "float" },
+  { &_double_static_rep[0], _typetag_float, sizeof(double), 0, 0,
+						_ctype_double, "double" },
+#ifdef LONGDOUBLE
+  { &_longdouble_static_rep[0], _typetag_float, sizeof(long double), 0, 0,
+					_ctype_longdouble, "long double" },
+#else /* !LONGDOUBLE */
+  /* This preserves correspondence between this table and enum ctype_t */
+  { 0, _typetag_float, sizeof(long double), 0, 0,
+					_ctype_void_invalid, "long double" },
+#endif /* !LONGDOUBLE */
+  { &_pointer_static_rep[0], _typetag_ptr, sizeof(void *), 0, 0,
+						_ctype_pointer, "pointer" },
+  { 0, _typetag_unalloc, 0, 0, 0, _ctype_aggregate, "aggregate" }
+};
+
+static void initStaticRep()
+{
+  int i;
+
+  _setByteTags("<init static rep>",0,0, _ini_static_rep, sizeof(_ini_static_rep), _typetag_init, _typetag_unalloc);
+  if(!tot_dynamic_num_calls--) tot_dynamic_num_calls_overflow--; /* adjust count */
+
+  for(i = 0; i < sizeof(typeinfo)/sizeof(typeinfo[0]); ++i) {
+
+    if(typeinfo[i].staticrep_ptr){ /* skips void, aggregate */
+
+      /* compute log of size */
+      int j;
+      unsigned long unum = (unsigned long) typeinfo[i].size;
+      for(j = -1; unum; ++j)
+          unum >>= 1;
+      if(j == -1 || (1 << j != typeinfo[i].size)/* || (j&SIZE_BITS_MASK != j)*/)
+	exit(fprintf(stderr,
+		     "TC: Fatal error: incompatible scalar size (sizeof(%s) = %d)\n",
+		     typeinfo[i].desc, typeinfo[i].size));
+      typeinfo[i].logsize = j;
+
+      typeinfo[i].tagbyte = ((CONT_BIT_MASK | j) << BITS_PER_TAG )
+		| typeinfo[i].typetag;
+
+      /* set the static tag */
+      _setScalarTag("<init static rep>",0,0, typeinfo[i].staticrep_ptr, i);
+      if(!tot_dynamic_num_calls--) tot_dynamic_num_calls_overflow--; /* adjust count */
+    }
+  }
+}
+
+/*************************/
+/* register extern stuff */
+/*************************/
+
+struct fnCallNode {
+  enum { setUninitTag, setScalarTag, replicateTag } function;
+  union {
+    struct { const char * fname; int line; int col;
+             void * addr; size_t size; } sut;
+    struct { const char * fname; int line; int col;
+             const void * addr; _ctype_t type; } sst;
+    struct { const char * fname; int line; int col;
+             void * addr; size_t size; int nelem; } rt;
+  } args;
+  struct fnCallNode * next;
+} * externInitFns = 0,
+ ** externInitFnsIter = &externInitFns;
+
+struct externVarNode {
+  /*--errloc--*/
+  const char * fname;
+  int line;
+  int col;
+
+  /*--variable info--*/
+  const char * varname;  /* NOTE: not currently used */
+  void * addr;
+  _ctype_t type;
+  struct fnCallNode * initfns;
+
+  /*--next--*/
+  struct externVarNode * next;
+} * externVarList = 0;
+
+/**********************************/
+/* Auxiliary function definitions */
+/**********************************/
+
+/* executes the initialization functions encoded in list */
+/* also, free memory used up by list */
+static void executeFnCalls(struct fnCallNode * list)
+{
+  struct fnCallNode * iter = list;
+  while(iter){
+    struct fnCallNode * temp;
+    switch(iter->function){
+      case setUninitTag:
+        _setUninitTag(	iter->args.sut.fname,
+			iter->args.sut.line,
+			iter->args.sut.col,
+			iter->args.sut.addr,
+			iter->args.sut.size);
+        break;
+      case setScalarTag:
+        _setScalarTag(	iter->args.sst.fname,
+			iter->args.sst.line,
+			iter->args.sst.col,
+			iter->args.sst.addr,
+			iter->args.sst.type);
+        break;
+      case replicateTag:
+        _replicateTag(	iter->args.rt.fname,
+			iter->args.rt.line,
+			iter->args.rt.col,
+			iter->args.rt.addr,
+			iter->args.rt.size,
+			iter->args.rt.nelem);
+        break;
+    }
+    temp = iter;
+    iter = iter->next;
+    free(temp);
+  }
+}
+
+/************************************************/
+/* GDB-friendly function for setting breakpoint */
+/************************************************/
+
+int _brk_msgid = 0;
+int _brk_line = 0;
+
+/* call with 0,0 to clear breakpoints */
+void _tcSetBreak(int msgid, int line){
+  /* remember signal flags */
+  static int old_signalflags[_tc_numstreams] = {0};
+
+  if(_brk_msgid == 0 && _brk_line == 0){
+    int i;
+    for(i = 0; i < _tc_numstreams; ++i){
+      old_signalflags[i] = signalflags[i];
+      signalflags[i] = 0;
+    }
+  } else if(msgid == 0 && line == 0){
+    int i;
+    for(i = 0; i < _tc_numstreams; ++i)
+      signalflags[i] = old_signalflags[i];
+  }
+
+  /* output informative message */
+
+  fprintf(stderr, "TC: Changing breakpoint from %d:%d to %d:%d\n",
+		_brk_msgid, _brk_line, msgid, line);
+
+  if(msgid == 0){
+    fprintf(stderr, "\t(clear breakpoints)\n");
+  } else if (msgid < MSGS_LAST){
+    fprintf(stderr, "\t(%d-%s)\n", msgid, _msgs[msgid].msg);
+  } else {
+    fprintf(stderr, "\t(%d-invalid message id)\n", msgid);
+  }
+
+  /* update breakpoint */
+
+  _brk_msgid = msgid;
+  _brk_line  = line;
+}
+
+/***********************************************************************/
+/* Output manager (more or less centralizes log/warning/error outputs) */
+/***********************************************************************/
+
+#ifdef TC_MULTILINE
+#define IF_MULTILINE(x) x
+#else
+#define IF_MULTILINE(x)
+#endif
+
+/********************/
+/* Output functions */
+/********************/
+
+void _print_simple(FILE * stream, int msgid)
+{
+  if(tc_flag_terse){
+    fprintf(stream, "%d\n", msgid);
+  } else {
+    fprintf(stream, "%d-%s\n", msgid, _msgs[msgid].msg);
+  }
+}
+
+void _print_flc(FILE * stream, const char * file, int line, int col,
+		int msgid)
+{
+  if(tc_flag_terse){
+    fprintf(stream, "%d[%s:%d.%d]\n", msgid, file,line,col);
+  } else {
+    fprintf(stream, "[%s:%d.%d] %d-%s\n", file, line, col, msgid, _msgs[msgid].msg);
+  }
+}
+
+void _print_si(FILE * stream, const char * file, int line, int col,
+		int msgid,
+		const char *s1, const char *s2, const char *s3, const char *s4,
+		int i1, int i2, int i3, int i4)
+{
+  if(tc_flag_terse){
+    fprintf(stream, "%d[%s:%d.%d]\n", msgid, file,line,col);
+  } else {
+    fprintf(stream, "[%s:%d.%d] %d-%s ", file, line, col, msgid, _msgs[msgid].msg);
+    switch(_msgs[msgid].sargs){
+      case 4:
+        IF_MULTILINE(fprintf(stream, "\n "));
+        fprintf(stream, "(%s) = (%s:%s:%s:%s)", _msgs[msgid].sdesc,s1,s2,s3,s4);
+        break;
+      case 3:
+        IF_MULTILINE(fprintf(stream, "\n "));
+        fprintf(stream, "(%s) = (%s:%s:%s)", _msgs[msgid].sdesc, s1,s2,s3);
+        break;
+      case 2:
+        IF_MULTILINE(fprintf(stream, "\n "));
+        fprintf(stream, "(%s) = (%s:%s)", _msgs[msgid].sdesc, s1,s2);
+        break;
+      case 1:
+        IF_MULTILINE(fprintf(stream, "\n "));
+        fprintf(stream, "(%s) = (%s)", _msgs[msgid].sdesc, s1);
+        break;
+    }
+    switch(_msgs[msgid].iargs){
+      case 4:
+        IF_MULTILINE(fprintf(stream, "\n "));
+        fprintf(stream, "(%s) = (%i:%i:%i:%i)", _msgs[msgid].idesc,i1,i2,i3,i4);
+        break;
+      case 3:
+        IF_MULTILINE(fprintf(stream, "\n "));
+        fprintf(stream, "(%s) = (%i:%i:%i)", _msgs[msgid].idesc, i1,i2,i3);
+        break;
+      case 2:
+        IF_MULTILINE(fprintf(stream, "\n "));
+        fprintf(stream, "(%s) = (%i:%i)", _msgs[msgid].idesc, i1,i2);
+        break;
+      case 1:
+        IF_MULTILINE(fprintf(stream, "\n "));
+        fprintf(stream, "(%s) = (%i)", _msgs[msgid].idesc, i1);
+        break;
+    }
+    fprintf(stream, "\n");
+  }
+}
+
+void _print_full(FILE * stream, const char * file, int line, int col,
+		int msgid,
+		const char *s1,
+		int i1, int i2, int i3,
+		const void *a1, const void *a2,
+		const void *t1, const void *t2, const void *t3)
+{
+  if(tc_flag_terse){
+    fprintf(stream, "%d[%s:%d.%d]\n", msgid, file,line,col);
+  } else {
+    fprintf(stream, "[%s:%d.%d] %d-%s ", file, line, col, msgid, _msgs[msgid].msg);
+    if(_msgs[msgid].sargs){
+      IF_MULTILINE(fprintf(stream, "\n "));
+      fprintf(stream, "(%s) = (%s)", _msgs[msgid].sdesc, s1);
+    }
+    switch(_msgs[msgid].iargs){
+      case 3:
+        IF_MULTILINE(fprintf(stream, "\n "));
+        fprintf(stream, "(%s) = (%i:%i:%i)", _msgs[msgid].idesc, i1,i2,i3);
+        break;
+      case 2:
+        IF_MULTILINE(fprintf(stream, "\n "));
+        fprintf(stream, "(%s) = (%i:%i)", _msgs[msgid].idesc, i1,i2);
+        break;
+      case 1:
+        IF_MULTILINE(fprintf(stream, "\n "));
+        fprintf(stream, "(%s) = (%i)", _msgs[msgid].idesc, i1);
+        break;
+    }
+    switch(_msgs[msgid].aargs){
+      case 2:
+        IF_MULTILINE(fprintf(stream, "\n "));
+        fprintf(stream, "(%s) = (0x%x:0x%x)", _msgs[msgid].adesc, (unsigned int)a1,(unsigned int)a2);
+        break;
+      case 1:
+        IF_MULTILINE(fprintf(stream, "\n "));
+        fprintf(stream, "(%s) = (0x%x)", _msgs[msgid].adesc, (unsigned int)a1);
+        break;
+    }
+    if(_msgs[msgid].targs){
+      IF_MULTILINE(fprintf(stream, "\n "));
+      fprintf(stream, "(%s) = (", _msgs[msgid].tdesc);
+      if(_msgs[msgid].targs >= 1){
+          _printTag(stream, t1, i1);
+      }
+      if(_msgs[msgid].targs >= 2){
+          fprintf(stream, ")(");
+          _printTag(stream, t2, i2);
+      }
+      if(_msgs[msgid].targs >= 3){
+          fprintf(stream, ")(");
+          _printTag(stream, t3, i3);
+      }
+      fprintf(stream, ")");
+    }
+    fprintf(stream, "\n");
+  }
+}
+
+/**************************
+ * summarize output stuff *
+ **************************/
+
+struct msg_entry {
+  int msgid;
+  int count;
+  const char * file;
+  int line, col;
+  enum { _msg_simple, _msg_flc, _msg_si, _msg_full } mode;
+  const char *s1, *s2, *s3, *s4;
+  int i1, i2, i3, i4;
+  const void *a1, *a2;
+  void *t1, *t2, *t3;
+  struct msg_entry * hnext; /* "hash next": for msg_store search */
+  struct msg_entry * onext; /* "order next": for output ordering */
+} * _msg_store[MSGS_LAST] = {0},
+  * _msg_head = 0,
+ ** _msg_tail = &_msg_head;
+
+/* prints output to stat stream */
+/* also frees _msg_entry nodes */
+int _print_all_msgs()
+{
+  FILE * statstream = streams[_tc_stat];
+  int msg_count = 0;
+  while(_msg_head){
+    struct msg_entry * t = _msg_head;
+    _msg_head = _msg_head->onext;
+    fprintf(statstream, "{%d}%s:", t->count, stream_descr[_msgs[t->msgid].str]);
+    msg_count += t->count;
+    switch(t->mode){
+      case _msg_simple:
+          _print_simple(statstream, t->msgid);
+          break;
+      case _msg_flc:
+          _print_flc(statstream, t->file, t->line, t->col, t->msgid);
+          break;
+      case _msg_si:
+          _print_si(statstream, t->file, t->line, t->col, t->msgid,
+		t->s1, t->s2, t->s3, t->s4,
+		t->i1, t->i2, t->i3, t->i4);
+          break;
+      case _msg_full:
+          _print_full(statstream, t->file, t->line, t->col, t->msgid,
+		t->s1, t->i1, t->i2, t->i3,
+		t->a1, t->a2, t->t1, t->t2, t->t3);
+          break;
+    }
+    if(t->t3) free(t->t3);
+    if(t->t2) free(t->t2);
+    if(t->t1) free(t->t1);
+    free(t);
+  }
+  _msg_tail = &_msg_head;
+  return msg_count;
+}
+
+static struct msg_entry * find(FILE * stream, int msgid, const char * file, int line, int col,
+			int i1, int i2, int i3, const void * t1, const void * t2, const void * t3)
+{
+  struct msg_entry * n;
+
+  for(n = _msg_store[msgid]; n; n = n->hnext){
+    if(n->line == line && n->col == col &&
+	(n->file == file || !strcmp(n->file, file))){
+      char tb, ntb;
+      switch(_msgs[msgid].targs){
+        case 3: tb = GET_TAG_BYTE(t3);
+		ntb = GET_TAG_BYTE(n->t3);
+		if((i3 == 1)
+		    ? (GET_CHAR_TAG(ntb, (unsigned long)(n->t3)&0x1)
+			!= GET_CHAR_TAG(tb, (unsigned long)(t3)&0x1))
+		    : (ntb != tb)) continue;
+        case 2: tb = GET_TAG_BYTE(t2);
+		ntb = GET_TAG_BYTE(n->t2);
+		if((i2 == 1)
+		    ? (GET_CHAR_TAG(ntb, (unsigned long)(n->t2)&0x1)
+			!= GET_CHAR_TAG(tb, (unsigned long)(t2)&0x1))
+		    : (ntb != tb)) continue;
+        case 1: tb = GET_TAG_BYTE(t1);
+		ntb = GET_TAG_BYTE(n->t1);
+		if((i1 == 1)
+		    ? (GET_CHAR_TAG(ntb, (unsigned long)(n->t1)&0x1)
+			!= GET_CHAR_TAG(tb, (unsigned long)(t1)&0x1))
+		    : (ntb != tb)) continue;
+        case 0: return n;
+      }
+    }
+  }
+  return 0;
+}
+
+/********************/
+/* Output functions */
+/********************/
+
+void _output_internal_error(const char * context, const char * msg)
+{
+  FILE * errstr = (streams[_tc_error])?(streams[_tc_error]):(stderr);
+  fprintf(errstr, "TC INTERNAL ERROR (%s): %s\n", context, msg);
+  fflush(errstr);
+}
+
+/* check whether to output message */
+int check_limit(enum _tc_stream stream_id)
+{
+  if(output_limit[stream_id] >= 0){ /* limit is set */
+    if(output_limit[stream_id] >= 1){ /* limit not reached: decrement */
+      output_limit[stream_id]--;
+      return 1;
+    } else { /* limit reached: count */
+      overflow_count[stream_id]++;
+      return 0;
+    }
+  } else return 1; /* no limit */
+}
+
+void _output_simple(int msgid)
+{
+  FILE * stream = streams[_msgs[msgid].str];
+  if(stream){
+    if(tc_flag_summarize){
+      struct msg_entry * n = find(stream, msgid, 0,0,0, 0,0,0, 0,0,0);
+      if(n) n->count ++;
+      else if(check_limit(_msgs[msgid].str)){
+        /* print first time */
+        _print_simple(stream, msgid);
+        if(signalflags[_msgs[msgid].str]) TCKILL;
+        else if(_brk_msgid == msgid) TCKILL;
+
+        /* add entry to _msg_store */
+        n = (struct msg_entry *)malloc(sizeof(struct msg_entry));
+        if(!n){
+          _output_internal_error("_output_simple", "Malloc out of memory");
+          return;
+        }
+        n->msgid = msgid;
+        n->count = 1;
+        n->file = 0; n->line = 0; n->col = 0;
+        n->mode = _msg_simple;
+        n->s1 = 0; n->s2 = 0; n->s3 = 0; n->s4 = 0;
+        n->i1 = 0; n->i2 = 0; n->i3 = 0; n->i4 = 0;
+        n->a1 = 0; n->a2 = 0; n->t1 = 0; n->t2 = 0; n->t3 = 0;
+        n->hnext = _msg_store[msgid];
+        _msg_store[msgid] = n;
+        n->onext = 0;
+        *_msg_tail = n;
+        _msg_tail = &n->onext;
+      }
+    } else if(check_limit(_msgs[msgid].str)){
+      _print_simple(stream, msgid);
+      if(signalflags[_msgs[msgid].str]) TCKILL;
+      else if(_brk_msgid == msgid) TCKILL;
+    }
+  }
+}
+
+void _output_flc(const char * file, int line, int col,
+		int msgid)
+{
+  FILE * stream = streams[_msgs[msgid].str];
+  if(stream){
+    if(tc_flag_summarize){
+      struct msg_entry * n = find(stream, msgid, file,line,col, 0,0,0, 0,0,0);
+      if(n) n->count ++;
+      else if(check_limit(_msgs[msgid].str)){
+        /* print first time */
+        _print_flc(stream, file, line, col, msgid);
+        if(signalflags[_msgs[msgid].str]) TCKILL;
+        else if(_brk_msgid == msgid && _brk_line == line) TCKILL;
+
+        /* add entry to _msg_store */
+        n = (struct msg_entry *)malloc(sizeof(struct msg_entry));
+        if(!n){
+          _output_internal_error("_output_flc", "Malloc out of memory");
+          return;
+        }
+        n->msgid = msgid;
+        n->count = 1;
+        n->file = file; n->line = line; n->col = col;
+        n->mode = _msg_flc;
+        n->s1 = 0; n->s2 = 0; n->s3 = 0; n->s4 = 0;
+        n->i1 = 0; n->i2 = 0; n->i3 = 0; n->i4 = 0;
+        n->a1 = 0; n->a2 = 0; n->t1 = 0; n->t2 = 0; n->t3 = 0;
+        n->hnext = _msg_store[msgid];
+        _msg_store[msgid] = n;
+        n->onext = 0;
+        *_msg_tail = n;
+        _msg_tail = &n->onext;
+      }
+    } else if(check_limit(_msgs[msgid].str)){
+      _print_flc(stream, file, line, col, msgid);
+      if(signalflags[_msgs[msgid].str]) TCKILL;
+      else if(_brk_msgid == msgid && _brk_line == line) TCKILL;
+    }
+  }
+}
+
+void _output_si(const char * file, int line, int col,
+		int msgid,
+		const char *s1, const char *s2, const char *s3, const char *s4,
+		int i1, int i2, int i3, int i4)
+{
+  FILE * stream = streams[_msgs[msgid].str];
+  if(stream){
+    if(tc_flag_summarize){
+      struct msg_entry * n = find(stream, msgid, file,line,col, 0,0,0, 0,0,0);
+      if(n) n->count ++;
+      else if(check_limit(_msgs[msgid].str)){
+        /* print first time */
+        _print_si(stream, file, line, col, msgid,
+		s1,s2,s3,s4, i1,i2,i3,i4);
+        if(signalflags[_msgs[msgid].str]) TCKILL;
+        else if(_brk_msgid == msgid && _brk_line == line) TCKILL;
+
+        /* add entry to _msg_store */
+        n = (struct msg_entry *)malloc(sizeof(struct msg_entry));
+        if(!n){
+          _output_internal_error("_output_si", "Malloc out of memory");
+          return;
+        }
+        n->msgid = msgid;
+        n->count = 1;
+        n->file = file; n->line = line; n->col = col;
+        n->mode = _msg_si;
+        n->s1 = s1;   n->i1 = i1;
+        n->s2 = s2;   n->i2 = i2;
+        n->s3 = s3;   n->i3 = i3;
+        n->s4 = s4;   n->i4 = i4;
+        n->a1 = 0; n->a2 = 0; n->t1 = 0; n->t2 = 0; n->t3 = 0;
+        n->hnext = _msg_store[msgid];
+        _msg_store[msgid] = n;
+        n->onext = 0;
+        *_msg_tail = n;
+        _msg_tail = &n->onext;
+      }
+    } else if(check_limit(_msgs[msgid].str)){
+      _print_si(stream, file, line, col, msgid,
+		s1,s2,s3,s4, i1,i2,i3,i4);
+      if(signalflags[_msgs[msgid].str]) TCKILL;
+      else if(_brk_msgid == msgid && _brk_line == line) TCKILL;
+    }
+  }
+}
+
+void _output_full(const char * file, int line, int col,
+		int msgid,
+		const char *s1,
+		int i1, int i2, int i3,
+		const void *a1, const void *a2,
+		const void *t1, const void *t2, const void *t3)
+{
+  FILE * stream = streams[_msgs[msgid].str];
+  if(stream){
+    if(tc_flag_summarize){
+      struct msg_entry * n = find(stream, msgid, file,line,col, i1,i2,i3, t1,t2,t3);
+      if(n) n->count ++;
+      else if(check_limit(_msgs[msgid].str)){
+        /* print first time */
+        _print_full(stream, file, line, col, msgid,
+		s1, i1,i2,i3, a1,a2, t1,t2,t3);
+        if(signalflags[_msgs[msgid].str]) TCKILL;
+        else if(_brk_msgid == msgid && _brk_line == line) TCKILL;
+
+        /* add entry to _msg_store */
+        n = (struct msg_entry *)malloc(sizeof(struct msg_entry));
+        if(!n){
+          _output_internal_error("_output_full", "Malloc out of memory");
+          return;
+        }
+        n->msgid = msgid;
+        n->count = 1;
+        n->file = file; n->line = line; n->col = col;
+        n->mode = _msg_full;
+        n->s1 = s1;
+        n->s2 = 0;
+        n->s3 = 0;
+        n->s4 = 0;
+        n->i1 = i1; n->i2 = i2; n->i3 = i3;
+        n->i4 = 0;
+        n->a1 = a1; n->a2 = a2;
+        n->t1 = 0; n->t2 = 0; n->t3 = 0;
+        switch(_msgs[msgid].targs){
+          case 3: n->t3 = (void *)malloc(i3+1);
+                  _copyTagSilent(n->t3, t3, i3);
+          case 2: n->t2 = (void *)malloc(i2+1);
+                  _copyTagSilent(n->t2, t2, i2);
+          case 1: n->t1 = (void *)malloc(i1+1);
+                  _copyTagSilent(n->t1, t1, i1);
+          case 0: ;
+        }
+        n->hnext = _msg_store[msgid];
+        _msg_store[msgid] = n;
+        n->onext = 0;
+        *_msg_tail = n;
+        _msg_tail = &n->onext;
+      }
+    } else if(check_limit(_msgs[msgid].str)){
+      _print_full(stream, file, line, col, msgid,
+		s1, i1,i2,i3, a1,a2, t1,t2,t3);
+      if(signalflags[_msgs[msgid].str]) TCKILL;
+      else if(_brk_msgid == msgid && _brk_line == line) TCKILL;
+    }
+  }
+}
+
+/*************************/
+/* tagpos functions, etc */
+/*************************/
+
+/* temporary hack, to get the address associated with tagpos
+   NOTE: does the reverse of _getTagPos */
+static char * getAddrForPos(_mirror_pos_t tagpos)
+{
+  unsigned long i;
+  void * mapaddr = (void *)((unsigned long)tagpos.ptr & ~(MIRRORPAGE_MASK>>1));
+  unsigned long pageaddr = ((unsigned long)tagpos.ptr & (MIRRORPAGE_MASK>>1));
+
+  for(i = 0; i < MIRRORMAP_NUMELEMENTS; ++i){
+    if(mirrormap[i] == mapaddr){
+      return (char *)(i << MIRRORPAGE_NUMBITS)
+	+ pageaddr * 2
+	+ tagpos.bit/BITS_PER_TAG;
+    }
+  }
+  _output_internal_error("getAddForPos", "failed!");
+  return 0;
+}
+
+void overflowTagPos(_mirror_pos_t * tagpos, int offset)
+{
+  char * tpaddr = getAddrForPos(*tagpos) + offset;
+  GET_TAG_POS(*tagpos, tpaddr); //- remember, GET_TAG_POS is a macro, args cannot have side effect!!
+}
+
+
+/* used by "setScalarTag"
+ * stray tags should be cleared to "_typetag_uninit"
+ * and warn (only if tag wasn't uninit [or unalloc?] before)
+ */
+static void initTag(const char * fname, int line, int col,
+		    void * addr, _ctype_t type)
+{
+  int i;
+  /* Get the position of the tag for the address. */
+  _mirror_pos_t tagpos;
+
+  /* First nibble has tag 0xxx, where xxx is the typetag;
+     second nibble is 1yyy, where yyy is the log of the size;
+     third nibble is 0zzz, where zzz is unalloc typetag (really 0). */
+  uchar first_nibble = typeinfo[type].typetag;
+  uchar size_nibble = CONT_BIT_MASK | typeinfo[type].logsize;
+  uchar subsequent_nibble = CONT_BIT_MASK | _typetag_unalloc;
+
+  GET_TAG_POS(tagpos, addr);
+
+  /* Clear off stray tags to the left */
+  if(CONT_BIT(tagpos)){
+    _mirror_pos_t iter = tagpos;
+    int overwritten = 1;
+
+    PREV_POS(iter);
+    while(CONT_BIT(iter)){
+      WRITE_TAG(iter,_typetag_uninit);
+      PREV_POS(iter);
+      overwritten++;
+    }
+
+    if(TAG_BITS(iter) != _typetag_uninit){
+        _output_full(fname, line, col, SST_ONM,
+		_typeDesc[TYPE_BITS(iter)],
+		overwritten,0,0,   addr,0,   0,0,0);
+    }
+
+    WRITE_TAG(iter,_typetag_uninit);
+  }
+
+  /* write tags for initial byte */
+  WRITE_TAG(tagpos, first_nibble);
+  if (typeinfo[type].size > 1) {
+    NEXT_POS(tagpos);
+    WRITE_TAG(tagpos, size_nibble);
+  }
+
+  for(i = 2; i < typeinfo[type].size; ++i){
+    /* write tag for subsequent bytes */
+    NEXT_POS(tagpos);
+    WRITE_TAG(tagpos, subsequent_nibble);
+  }
+
+  /* Clear off stray tags to the right */
+  NEXT_POS(tagpos);
+  while(CONT_BIT(tagpos)){
+    WRITE_TAG(tagpos,_typetag_uninit)
+    NEXT_POS(tagpos);
+  }
+}
+
+/* If addr's tag is init, return 1 (and set to reftype if fix==1).
+ * Otherwise, return 0;
+ */
+int _checkIfInit(const void * addr, _ctype_t reftype /* must be scalar */, int fix)
+{
+  _mirror_pos_t tpi;
+  int i;
+
+  GET_TAG_POS(tpi, addr);
+
+  for(i = 0; i < typeinfo[reftype].size; ++i){
+    if(TAG_BITS(tpi) != _typetag_init)
+      return 0;
+    NEXT_POS(tpi);
+  }
+
+  if(fix){
+    _setScalarTag("(tc:_checkIfInit)", 0, 0, addr, reftype);
+    if(!tot_dynamic_num_calls--) tot_dynamic_num_calls_overflow--; /* adjust count */
+  }
+
+  return 1;
+}
+
+/* Equivalent to _verifyTag, except instead of reporting an error,
+   it returns status (1 = verify succeeded, 0 = verify failed).
+   - used by _promoteTag, _processArgTag/_processRetTag
+   - not part of API
+   - Note: reftype cannot be aggregate
+*/
+int _verifyTagSilent(const void * addr, _ctype_t reftype)
+{
+  _mirror_pos_t tpi;
+  _mirror_pos_t stpi;
+
+  GET_TAG_POS(tpi, addr);
+  GET_TAG_POS(stpi, typeinfo[reftype].staticrep_ptr);
+
+  /* Compare tags */
+  while(TAG_BITS(stpi) != _typetag_unalloc){
+    if(TAG_BITS(tpi) != TAG_BITS(stpi)
+	&& !_checkIfInit(addr, reftype, 0))
+      return 0; /* type mismatch */
+    NEXT_POS(tpi);
+    NEXT_POS(stpi);
+  }
+
+  /* Make sure tagpos has "ended" */
+  if(CONT_BIT(tpi))
+    return 0; /* type size mismatch */
+
+  /* Verify succeeded, return 1 */
+  return 1;
+}
+
+/* plain uncomplicated copyTag:
+    - don't check alloc
+    - don't complain
+   but DO clear stray tags to left and right
+ */
+void _copyTagSilent(const void * dstaddr, const void * srcaddr, size_t size)
+{
+  int i;
+  _mirror_pos_t dst;
+  _mirror_pos_t src;
+
+  GET_TAG_POS(dst, dstaddr);
+  GET_TAG_POS(src, srcaddr);
+
+  /* Clear off stray tags to the left */
+  if(CONT_BIT(dst)){
+    _mirror_pos_t iter = dst;
+    PREV_POS(iter);
+    while(CONT_BIT(iter)){
+      /* AAL: unalloc or uninit? */
+      WRITE_TAG(iter,_typetag_uninit);
+      PREV_POS(iter);
+    }
+    WRITE_TAG(iter,_typetag_uninit);
+  }
+
+  /* Copy tags */
+  for(i = 0; i < size; ++i){
+    WRITE_TAG(dst,TAG_BITS(src))
+    NEXT_POS(src);
+    NEXT_POS(dst);
+  }
+
+  /* Clear off stray tags to the right */
+  while(CONT_BIT(dst)){
+    /* AAL: unalloc or uninit? */
+    WRITE_TAG(dst,_typetag_uninit)
+    NEXT_POS(dst);
+  }
+}
+
+/* stuff used by verifyAlloc, copyTag, and possibly other functions;
+   will eventually want to move to appropriate header file or something */
+/* AAL: Macrofy! - after NEXT_POS must somehow PREV_POS! */
+#if 0 /* { */
+#define TAG_SIZE(pos) ( \
+	CONT_BIT(pos) ? -1 : \
+		(NEXT_POS(pos), CONT_BIT(pos) ? (1 << TYPE_BITS(pos)) : 1) \
+	)
+#endif /* } 0 */
+int TAG_SIZE(_mirror_pos_t pos)
+{
+  /* If the CONT_BIT is set on pos, then we're not even at the start
+     of a tag.  Return -1.
+     If the CONT_BIT is set on the next pos, return the size as encoded
+     in the type bits for the next pos.  Otherwise, it is 1. */
+  return CONT_BIT(pos) ? -1 :
+    (NEXT_POS(pos), CONT_BIT(pos) ? (1 << TYPE_BITS(pos)) : 1);
+}
+
+/* verify that memory at tagpos, for size size, is not _typetag_unalloc.
+ */
+int verifyAlloc(const void * addr, size_t size)
+{
+  _mirror_pos_t tp;
+  _mirror_pos_t tpi;
+  int i;
+
+  if(!mirrormap[MIRRORMAP_INDEX(addr)])
+    return 0; /* unallocated page */
+
+  GET_TAG_POS(tp, addr);
+  tpi = tp;
+
+  if (TAG_BITS(tp) == _typetag_unalloc)
+    return 0; /* unallocated memory */
+  else if (!CONT_BIT(tp) && /* optimize for scalars: */
+	   (NEXT_POS(tp), CONT_BIT(tp) && (1 << TYPE_BITS(tp) >= size)))
+    return 1;
+  else {
+    for(i = 0; i < size; ++i){
+      if(TAG_BITS(tpi) == _typetag_unalloc)
+	return 0; /* unallocated memory */
+      NEXT_POS(tpi);
+    }
+  }
+
+  /* Verify succeeded, return 1 */
+  return 1;
+}
+
+/* called by "our" main() after calling the various init
+   functions, to process the collected externVarList */
+void processExternVars(void)
+{
+  struct externVarNode * eviter;
+
+  eviter = externVarList;
+  while(eviter){
+    _mirror_pos_t tagpos;
+    struct externVarNode * evcurr = eviter;
+
+    eviter = eviter->next;
+
+    /*--see if tagpos is already initialized */
+    GET_TAG_POS(tagpos, evcurr->addr);
+    if(TAG_BITS(tagpos) == _typetag_unalloc){
+      /*--tagpos has not been allocated; initialize*/
+      if(evcurr->type == _ctype_aggregate){
+        /* Aggregate type: call initfns */
+        if(evcurr->initfns){
+          /* note: executeFnCalls will free fnCallNode memory */
+          executeFnCalls(evcurr->initfns);
+        } else {
+          /* Incomplete type: warn? log for now */
+	  /* This message is kinda useless; temporarily set aside */
+          _output_flc(evcurr->fname, evcurr->line, evcurr->col, PEV_IT);
+        }
+      } else {
+        /* Scalar type: just initialize the tag */
+        _setScalarTag(evcurr->fname, evcurr->line, evcurr->col,
+			evcurr->addr, evcurr->type);
+      }
+    } else {
+      /*--tagpos has been initialized */
+      /*  TODO: may want to verify; do nothing for now */
+    }
+
+    free(evcurr);
+  }
+}
+
+/**************************************/
+/* "private" API function definitions */
+/**************************************/
+
+/* Summarize if size is bigger than, say, 50, and limit to output of 50 "items" */
+void _printTagPos(FILE * f, _mirror_pos_t tagpos, size_t size)
+{
+  if(size == 0){
+    fprintf(f, "<void>");
+  } else if(size > 50) { /* summarize */
+    int output_count = 0;
+
+    char memo_type = 0;
+    int  memo_size = 0;
+    char temp_type = 0;
+    char temp_size = 0;
+    int  memo_count = 0;
+
+    int i = 0;
+
+    for(; i < size; ++i){ /* left-strays */
+      if(!CONT_BIT(tagpos)) break;
+      else fprintf(f, ":...");
+      NEXT_POS(tagpos);
+    }
+    temp_type = TYPE_BITS(tagpos);
+    NEXT_POS(tagpos);
+    i++;
+    temp_size = 1;
+    for(; i < size; ++i){ /* first tag */
+      if(!CONT_BIT(tagpos)) break;
+      else temp_size++;
+      NEXT_POS(tagpos);
+    }
+    for(; i < size+1; ++i){ /* main loop - go one more step */
+      if(!CONT_BIT(tagpos)){
+        if(temp_type == memo_type && temp_size == memo_size){
+          memo_count++;
+        } else {
+          if(memo_count){
+            if(memo_count == 1)
+              fprintf(f, "<%s,%d>", _typeDesc[memo_type], memo_size);
+            else
+              fprintf(f, "(<%s,%d>x%d)", _typeDesc[memo_type], memo_size, memo_count);
+            if(++output_count >= 50){
+              fprintf(f, "...remaining %d bytes suppressed...", size-i-temp_size);
+              return;
+            }
+          }
+          memo_type = temp_type;
+          memo_size = temp_size;
+          memo_count = 1;
+        }
+        temp_type = TYPE_BITS(tagpos);
+        temp_size = 1;
+      } else {
+        temp_size++;
+      }
+      NEXT_POS(tagpos);
+    }
+    if(memo_count == 1)
+      fprintf(f, "<%s,%d>", _typeDesc[memo_type], memo_size);
+    else
+      fprintf(f, "(<%s,%d>x%d)", _typeDesc[memo_type], memo_size, memo_count);
+    /* unfinished business */
+    PREV_POS(tagpos);
+    if(CONT_BIT(tagpos)){
+      fprintf(f, "<%s,%d+...>", _typeDesc[temp_type], temp_size-1);
+    }
+  } else {
+    int i;
+    const char * type_desc = "...";
+    for(i = 0; i < size; ++i){
+      fprintf(f, "%c%s", CONT_BIT(tagpos)?':':'<',
+	      CONT_BIT(tagpos) ? type_desc : (type_desc = _typeDesc[TYPE_BITS(tagpos)]));
+      NEXT_POS(tagpos);
+    }
+    fprintf(f, "%s", CONT_BIT(tagpos)?":...":">");
+  }
+}
+
+void _printTag(FILE * f, const void * addr, size_t size)
+{
+  _printTagPos(f, _getTagPos(addr), size);
+}
+
+void _printTagStdout(void * addr, size_t size)
+{
+  _printTagPos(stdout, _getTagPos(addr), size);
+}
+
+void _printTagStderr(void * addr, size_t size)
+{
+  _printTagPos(stderr, _getTagPos(addr), size);
+  fprintf(stderr, "\n");
+}
+
+/**********************************************/
+/* Wrappers for macros - useful for debugging */
+/**********************************************/
+
+_mirror_pos_t _getTagPos(const void * addr)
+{
+  _mirror_pos_t ret;
+
+  GET_TAG_POS(ret,addr);
+/*
+  unsigned long mapindex = MIRRORMAP_INDEX(addr);
+  unsigned long pageindex = MIRRORPAGE_INDEX(addr);
+
+  if(!mirrormap[mapindex])
+    _touchMirrorPage(mapindex);
+
+  ret.ptr = (unsigned char *)mirrormap[mapindex] + pageindex/2;
+  ret.bit = pageindex%2 * BITS_PER_TAG;
+*/
+  return ret;
+}
+
+void _printConstsStderr()
+{
+#define EXPAND_PRINT_STMT(CID) fprintf(stderr, #CID " = %d (0x%08x)\n", CID, CID)
+  EXPAND_PRINT_STMT(MIRRORPAGE_NUMBITS);
+  EXPAND_PRINT_STMT(MIRRORPAGE_NUMBYTES);
+  EXPAND_PRINT_STMT(MIRRORPAGE_MASK);
+  EXPAND_PRINT_STMT(MIRRORMAP_NUMBITS);
+  EXPAND_PRINT_STMT(MIRRORMAP_NUMELEMENTS);
+  EXPAND_PRINT_STMT(BITS_PER_TAG);
+  EXPAND_PRINT_STMT(LOG_BITS_PER_TAG);
+  EXPAND_PRINT_STMT(CONT_BIT_MASK);
+  EXPAND_PRINT_STMT(TYPE_BITS_MASK);
+  EXPAND_PRINT_STMT(TAG_BITS_MASK);
+  EXPAND_PRINT_STMT(EVEN_TAG_MASK);
+  EXPAND_PRINT_STMT(EVEN_TYPE_MASK);
+  EXPAND_PRINT_STMT(EVEN_CONT_MASK);
+  EXPAND_PRINT_STMT(ODD_TAG_MASK);
+  EXPAND_PRINT_STMT(ODD_TYPE_MASK);
+  EXPAND_PRINT_STMT(ODD_CONT_MASK);
+#undef EXPAND_PRINT_STMT
+}
+
+void _tcfn_SET_UNALLOC_TAG(const void * start_addr, const void * end_addr)
+	{ SET_UNALLOC_TAG("_tcfn_SET_UNALLOC_TAG",__FILE__,__LINE__,0, start_addr, end_addr); }
+const void * _tcfn_MIRRORMAP_INDEX(const void * addr) { return (const void *) MIRRORMAP_INDEX(addr); }
+const void * _tcfn_MIRRORPAGE_INDEX(const void * addr) { return (const void *) MIRRORPAGE_INDEX(addr); }
+int _tcfn_SAME_MIRROR_PAGE(const void * addr1, const void * addr2) { return SAME_MIRROR_PAGE(addr1, addr2); }
+unsigned char _tcfn_TAG_BITS(_mirror_pos_t pos) { return TAG_BITS(pos); }
+unsigned char _tcfn_CONT_BIT(_mirror_pos_t pos) { return CONT_BIT(pos); }
+unsigned char _tcfn_TYPE_BITS(_mirror_pos_t pos) { return TYPE_BITS(pos); }
+void _tcfn_WRITE_TAG(_mirror_pos_t * posptr, unsigned char tag) { WRITE_TAG(*posptr,tag); }
+_mirror_pos_t _tcfn_get_NEXT_POS(_mirror_pos_t pos) { NEXT_POS(pos); return pos; }
+_mirror_pos_t _tcfn_get_PREV_POS(_mirror_pos_t pos) { PREV_POS(pos); return pos; }
+unsigned char _tcfn_ODD_TAG_BITS(unsigned char byte) { return ODD_TAG_BITS(byte); }
+unsigned char _tcfn_ODD_TYPE_BITS(unsigned char byte) { return ODD_TYPE_BITS(byte); }
+unsigned char _tcfn_EVEN_TAG_BITS(unsigned char byte) { return EVEN_TAG_BITS(byte); }
+unsigned char _tcfn_EVEN_TYPE_BITS(unsigned char byte) { return EVEN_TYPE_BITS(byte); }
+unsigned char _tcfn_GET_TAG_BYTE(const void * addr) { return GET_TAG_BYTE(addr); }
+const void * _tcfn_GET_TAG_BYTE_addr(const void * addr) { return &GET_TAG_BYTE(addr); }
+unsigned char _tcfn_GET_CHAR_TAG(unsigned char byte, int isOdd) { return GET_CHAR_TAG(byte, isOdd); }
+void _tcfn_SET_CHAR_TAG(unsigned char * lhsptr, unsigned char * rhsptr, int isOdd)
+	{ SET_CHAR_TAG(*lhsptr, *rhsptr, isOdd); }
+
+/****************************/
+/* API function definitions */
+/****************************/
+
+/* function version of SET_UNALLOC_TAG macro */
+static void _fn_SET_UNALLOC_TAG(const char * caller, const char * fname, int line, int col,
+			const void * start_addr, const void * end_addr)
+{ SET_UNALLOC_TAG(caller,fname,line,col, start_addr, end_addr); }
+
+/* NOTE: (type == _ctype_aggregate && externInitFns == 0) means
+	 type is incomplete, so don't initialize (?) */
+void _registerExtern_nosize(const char * fname, int line, int col,
+		void * addr, _ctype_t type)
+{
+  struct externVarNode * evcurr;
+  struct externVarNode ** eviter;
+
+  if(!++tot_dynamic_num_calls) ++tot_dynamic_num_calls_overflow; /* count */
+
+  /*--FIRST: look for addr in externVarList */
+  eviter = &externVarList;
+  while(*eviter && (*eviter)->addr < addr)
+    eviter = &(*eviter)->next;
+
+  evcurr = *eviter;
+
+  if(evcurr && evcurr->addr == addr){
+
+    /*--addr found: check for matching types*/
+    if(evcurr->type != type){
+
+      /*--type mismatch; warn */
+      _output_si(fname, line, col,
+		RE_PDEF, 
+		fname, evcurr->fname,
+		typeinfo[type].desc, typeinfo[evcurr->type].desc,
+		line, evcurr->line,
+		col, evcurr->col);
+
+    } else if (type == _ctype_aggregate){
+
+      /*--if type matches and is aggregate */
+
+      /*--if new version is complete, and old version is incomplete,
+	  adopt new version */
+      if(externInitFns && !evcurr->initfns){
+
+        evcurr->fname = fname;
+        evcurr->line = line;
+        evcurr->col = col;
+        evcurr->addr = addr;
+        evcurr->type = type;
+        evcurr->initfns = externInitFns;
+        externInitFns = 0;
+        externInitFnsIter = &externInitFns;
+
+      } else if(externInitFns && evcurr->initfns){
+
+        /*--we have two complete aggregate initfns; compare them */
+        /* TODO */
+
+      }
+    }
+
+    /*--discard init functions (if any) */
+    while(externInitFns){
+      struct fnCallNode * temp = externInitFns;
+      externInitFns = externInitFns->next;
+      free(temp);
+    }
+    externInitFnsIter = &externInitFns;
+
+  } else {
+
+    /*--addr not found; insert info */
+    (*eviter) = (struct externVarNode *)malloc(sizeof(struct externVarNode));
+    (*eviter)->fname = fname;
+    (*eviter)->line = line;
+    (*eviter)->col = col;
+    (*eviter)->addr = addr;
+    (*eviter)->type = type;
+    (*eviter)->initfns = externInitFns;
+    (*eviter)->next = evcurr;
+
+    /*--reset externInitFns */
+    externInitFns = 0;
+    externInitFnsIter = &externInitFns;
+  }
+}
+
+void _touchMirrorPage(unsigned long mapindex)
+{
+    if(mirrormap_freelist){ /*see comment about freelist above*/
+      mirrormap[mapindex] = mirrormap_freelist;
+      mirrormap_freelist = 0;
+    } else {
+      mirrormap[mapindex] = (void *) memalign(MIRRORPAGE_NUMBYTES, MIRRORPAGE_NUMBYTES);
+      if(!mirrormap[mapindex])
+        exit((_output_internal_error("_touchMirrorPage/FATAL", "memalign out of memory"),-1));
+      mirrormap_freelist = (char *)mirrormap[mapindex] + MIRRORPAGE_NUMBYTES/2;
+    }
+    /* initialize mirror to 0 (_typetag_unalloc) */
+    memset(mirrormap[mapindex], _typetag_unalloc, MIRRORPAGE_NUMBYTES/2);
+}
+
+/* dereference addr and see if it is allocated (for up to size bytes)
+ */
+void _verifyPtr(const char * fname, int line, int col, const char * exp,
+		const void * addr, size_t size)
+{
+  if(!++tot_dynamic_num_calls) ++tot_dynamic_num_calls_overflow; /* count */
+
+  /* for now a function call, optimize later when stable */
+  if(!verifyAlloc(addr, size)){
+    _output_full(fname, line, col, VP_UNA,
+		exp, 0,0,0, addr,0, 0,0,0);
+	/* prepare to die!  Could return another value from
+	   verifyAlloc to say that there is no allocated page
+	   in the region.  Could try to exit instead in some cases? */
+  }
+}
+
+/* Note: we don't fully verify aggregate types;
+	 to implement this in the future, we'd need
+	 to pass in more info (e.g. size_aggr) */
+void _verifyTag(const char * fname, int line, int col, const char * exp,
+		const void * addr, _ctype_t reftype /*, size_t size_aggr */)
+{
+  _mirror_pos_t tpi, stpi;
+  _mirror_pos_t staticpos; /* formerly a param */
+  _mirror_pos_t tagpos;
+  int size;
+
+  if(!++tot_dynamic_num_calls) ++tot_dynamic_num_calls_overflow; /* count */
+
+  /* verifying aggregate: currently just verifyPointer on first byte */
+  if(reftype == _ctype_aggregate){
+    _verifyPtr(fname,line,col, exp, addr, 1 /* size_aggr */);
+    if(!tot_dynamic_num_calls--) tot_dynamic_num_calls_overflow--; /* adjust count */
+    return;
+  }
+
+  GET_TAG_POS(tagpos, addr);
+  GET_TAG_POS(staticpos, typeinfo[reftype].staticrep_ptr);
+
+  size = typeinfo[reftype].size;
+
+  /* Compare tags */
+  tpi = tagpos;
+  stpi = staticpos;
+
+  if (size > 1) {
+    /* AAL: assert(!tpi.bit && !stpi.bit); */
+    /* Compare the first bytes of the tags.  The first
+       byte of a tag contains both the type and the size. */
+    if (*(char *)tpi.ptr != *(char *)stpi.ptr
+	&& !_checkIfInit(addr, reftype, 1)) { /*SY: do we really need to fix??*/
+
+      _output_full(fname, line, col, VT_TMM,
+		exp, size,size,0, addr,0,
+		typeinfo[reftype].staticrep_ptr,addr,0);
+
+      /* if vtfix, or if destination is unallocated,
+         suppress future messages by setting to declared type */
+      /* note: should check for all = unalloc, instead of any = unalloc? */
+      if(tc_flag_vtfix || (!verifyAlloc(addr,size))){
+        _copyTagSilent(addr,typeinfo[reftype].staticrep_ptr,size);
+      }
+
+      return;
+    }
+  }
+  else { /* A single byte. */
+    if(TAG_BITS(tpi) != TAG_BITS(stpi)
+	&& !_checkIfInit(addr, reftype, 1)) { /* could optimize by inlining? */ /*SY: do we really need to fix??*/
+      /* type mismatch; verify fails */
+
+      _output_full(fname, line, col, VT_TMM,
+		exp, size,size,0, addr,0,
+		typeinfo[reftype].staticrep_ptr,addr,0);
+
+      /* if destination is unallocated,
+         suppress future messages by setting to declared type */
+      if(tc_flag_vtfix || (TAG_BITS(tpi) == _typetag_unalloc)){
+        _copyTagSilent(addr,typeinfo[reftype].staticrep_ptr,size);
+      }
+
+      return;
+    }
+
+    NEXT_POS(tpi);
+    /* Make sure tagpos has "ended" */
+    if(CONT_BIT(tpi)){
+      /* tagpos is longer than staticpos */
+      _output_full(fname, line, col, VT_TSM,
+		exp, size,2*size,0, addr,0, 
+		typeinfo[reftype].staticrep_ptr,addr,0);
+    }
+  }
+}
+
+#if !defined(TC_CHECK_SET_UNALLOC) /* { */
+
+#define SBT_NEM_TEST(cond,posn,size,addr)
+
+#else /* } if defined(TC_CHECK_SET_UNALLOC) { */
+/* if setByteTags overwrites non-zero (non-Unalloc) memory, issue SBT_NEM warning */
+
+static int _mc; /* used by SBT_NEM_TEST conditionals */
+
+/* _tc_init_mode prevents check for multiple definitions of same location */
+/* clear_tag is an argument to setByteTags that indicates whether NEM-check should be done */
+#define SBT_NEM_TEST(cond,posn,size,addr) \
+	if(!clear_tag && !_tc_init_mode && cond) { \
+	  _output_full(fname,line,col, SBT_NEM, 0, size,posn,0, addr,0, addr,0,0); \
+	}
+
+/* check a block of (mirror) memory for non-zero (non-Unalloc) memory. */
+static int memcheck(void * saddr, size_t n)
+{
+  if(n <= sizeof(int)){
+    char * cp = (char *) saddr;
+    int i;
+    for(i = 0; i < n; ++i)
+      if(cp[i]) return i*2+1;
+  } else {
+    /* walk up to first int boundary */
+    char * cp = (char *) saddr;
+    while(((unsigned long)cp) % sizeof(int)){
+      if(*cp) return (cp-(char *)saddr)*2+1;
+      cp++;
+      n--;
+    }
+
+    /* check last bytes up to int boundary */
+    while(n % sizeof(int))
+      if(cp[--n]) return (cp-(char *)saddr)*2+1;
+
+    /* walk in int-sized strides; could go bigger (double-sized strides)? */
+    {
+      int * ip = (int *) cp;
+      int * ep = (int *) (cp + n);
+      while(ip < ep){
+        if(*ip) return (((char *)ip)-(char *)saddr)*2+1;
+        ip++;
+      }
+    }
+  }
+  return 0;
+}
+
+#endif /* } defined(TC_CHECK_SET_UNALLOC) */
+
+void _setByteTags(const char * fname, int line, int col,
+		const void * addr, size_t size, int set_tag, int clear_tag)
+{
+  _mirror_pos_t spos, epos;
+  char * saddr = (char *)addr;
+  char * eaddr = (char *)addr + size;
+  unsigned char set_tag_pair = set_tag|(set_tag<<BITS_PER_TAG);
+
+  if(!++tot_dynamic_num_calls) ++tot_dynamic_num_calls_overflow; /* count */
+
+  if(saddr != eaddr) {
+    /* Check stray tags to left */
+    GET_TAG_POS(spos, saddr);
+    if(CONT_BIT(spos)){
+      _mirror_pos_t tmp;
+
+      _output_flc(fname,line,col, SBT_STB);
+
+      tmp = spos;
+      PREV_POS(tmp);
+      while(CONT_BIT(tmp)){
+        WRITE_TAG(tmp,clear_tag);
+        PREV_POS(tmp);
+      }
+      WRITE_TAG(tmp,_typetag_unalloc);
+    }
+
+    /* Align saddr to even address */
+    if((unsigned long)saddr & 0x1){
+      SBT_NEM_TEST(TAG_BITS(spos),0,size,addr);
+      WRITE_TAG(spos,set_tag);
+      saddr++;
+    }
+
+    /* Check stray tags to right */
+    GET_TAG_POS(epos, eaddr);
+    if(CONT_BIT(epos)){
+      _mirror_pos_t tmp;
+
+      _output_flc(fname,line,col, SBT_STA);
+
+      tmp = epos;
+      while(CONT_BIT(tmp)){
+        WRITE_TAG(tmp,clear_tag)
+        NEXT_POS(tmp);
+      }
+    }
+    /* Align eaddr to even address */
+    if((unsigned long)eaddr & 0x1){
+      --eaddr;
+      GET_TAG_POS(epos, eaddr); /* note: eaddr is (char *) */
+      SBT_NEM_TEST(TAG_BITS(epos),size,size,addr);
+      WRITE_TAG(epos,set_tag);
+    }
+
+    if(SAME_MIRROR_PAGE(saddr,eaddr-1)){
+      SBT_NEM_TEST((_mc = memcheck(&GET_TAG_BYTE(saddr), (eaddr-saddr)/2)),
+			_mc + (saddr-(char *)addr),size,addr);
+      memset(&GET_TAG_BYTE(saddr), set_tag_pair, (eaddr-saddr)/2);
+    } else {
+      int sindex = MIRRORMAP_INDEX(saddr);
+      int eindex = MIRRORMAP_INDEX(eaddr-1);
+      SBT_NEM_TEST((_mc = memcheck(&GET_TAG_BYTE(saddr),
+		(MIRRORPAGE_NUMBYTES - MIRRORPAGE_INDEX(saddr))/2)),
+		_mc + (saddr-(char *)addr),size,addr);
+      memset(&GET_TAG_BYTE(saddr), set_tag_pair,
+		(MIRRORPAGE_NUMBYTES - MIRRORPAGE_INDEX(saddr))/2);
+      for(++sindex; sindex < eindex; sindex++){
+        SBT_NEM_TEST((_mc = memcheck(&GET_TAG_BYTE((char *)(sindex << MIRRORPAGE_NUMBITS)),
+		MIRRORPAGE_NUMBYTES/2)),_mc + (saddr-(char *)addr),size,addr);
+        memset(&GET_TAG_BYTE((char *)(sindex << MIRRORPAGE_NUMBITS)),
+		set_tag_pair, MIRRORPAGE_NUMBYTES/2);
+      }
+      SBT_NEM_TEST((_mc = memcheck(&GET_TAG_BYTE((char *)(sindex << MIRRORPAGE_NUMBITS)),
+		MIRRORPAGE_INDEX(eaddr)/2)),_mc + (saddr-(char *)addr),size,addr);
+      memset(&GET_TAG_BYTE((char *)(sindex << MIRRORPAGE_NUMBITS)),
+		set_tag_pair, MIRRORPAGE_INDEX(eaddr)/2);
+    }
+  }
+}
+
+#if 0 /* { */
+#ifdef TC_LOG_DIRTY_COPY /* { */
+#define COPYTAG_TYPE_MISMATCH(dst,src) \
+( \
+  TYPE_BITS(dst) != _typetag_uninit && \
+  (( \
+     strictPointer && \
+     !CONT_BIT(src) && /* AAL: unnecessary now? */ \
+     (( \
+        TAG_SIZE(src) != TAG_SIZE(dst) \
+      )||( \
+        TAG_BITS(src) != TAG_BITS(dst) && \
+        !(TYPE_BITS(src) == _typetag_int && TYPE_BITS(dst) == _typetag_ptr) && \
+        !(TYPE_BITS(src) == _typetag_ptr && TYPE_BITS(dst) == _typetag_int) \
+     )) \
+   )||( \
+     !strictPointer && \
+     TAG_BITS(src) != TAG_BITS(dst) \
+  )) \
+)
+#endif /* } TC_LOG_DIRTY_COPY */
+#endif /* } if 0 */
+
+/* stray tags are cleared to "uninit", since we're merely corrupting
+ * it, not unallocating it.
+ */
+void _copyTag(const char * fname, int line, int col,
+		const void * dstaddr, const void * srcaddr,
+		size_t size, _ctype_t type)
+{
+  int log_written = 0, warn_written = 0;
+  int i;
+  _mirror_pos_t dst;
+  _mirror_pos_t src;
+
+  if(!++tot_dynamic_num_calls) ++tot_dynamic_num_calls_overflow; /* count */
+
+  GET_TAG_POS(dst, dstaddr);
+  GET_TAG_POS(src, srcaddr);
+
+  if(!verifyAlloc(srcaddr, size)){
+    /* copying from unallocated memory! */
+    _output_full(fname,line,col, CT_CFU,
+		0, 0,0,0, srcaddr,dstaddr, 0,0,0);
+    
+    if(type != _ctype_aggregate){
+      /* if static type is scalar, we can continue */
+
+      GET_TAG_POS(src, typeinfo[type].staticrep_ptr);
+
+    } else {
+      /* if static type is aggregate, do nothing */
+
+      if(!verifyAlloc(dstaddr, size)){
+        /* copying into unallocated memory! */
+        _output_flc(fname,line,col, CT_AIU);
+      }
+      return;
+    }
+  }
+
+  if(!verifyAlloc(dstaddr, size)){
+    /* copying into unallocated memory! */
+    _output_full(fname,line,col, CT_CIU,
+		0, 0,0,0, srcaddr,dstaddr, 0,0,0);
+  }
+
+  /* -- Check src against static_type and warn on mismatch */
+  if(streams[_msgs[CT_TMM].str]
+	&& (type != _ctype_aggregate)
+	&& ((TAG_SIZE(src) != typeinfo[type].size)
+	    || (TAG_BITS(src) != typeinfo[type].typetag))
+	&& !_checkIfInit(srcaddr, type, 0)){
+    /* WARN mismatch */ 
+    _output_full(fname,line,col, CT_TMM,
+		0, size,size,size, srcaddr,dstaddr,
+		typeinfo[type].staticrep_ptr,srcaddr,dstaddr);
+    log_written = 1;
+  }
+
+#ifdef TC_LOG_DIRTY_COPY /* { */
+  /* -- Check dst against static_type and warn on mismatch */
+  if(streams[_msgs[CT_TDM].str]
+	&& (type != _ctype_aggregate)
+	&& (TAG_BITS(dst) != _typetag_uninit)
+	&& ((TAG_SIZE(dst) != typeinfo[type].size)
+	    || (TAG_BITS(dst) != typeinfo[type].typetag))){
+    /* WARN mismatch */ 
+    _output_full(fname,line,col, CT_TDM,
+		0, size,size,size, srcaddr,dstaddr,
+		typeinfo[type].staticrep_ptr,srcaddr,dstaddr);
+    log_written = 1;
+  }
+#endif /* } TC_LOG_DIRTY_COPY */
+
+  /* Clear off stray tags to the left */
+  if(CONT_BIT(dst)){
+    _mirror_pos_t iter = dst;
+    PREV_POS(iter);
+    while(CONT_BIT(iter)){
+      /* AAL: unalloc or uninit? */
+      WRITE_TAG(iter,_typetag_uninit);
+      PREV_POS(iter);
+    }
+    WRITE_TAG(iter,_typetag_uninit);
+  }
+
+  /* Main copying loop. */
+  for(i = 0; i < size; ){
+
+    size_t src_size;
+
+    /* Is this the start of a tag; does it fit within the size to be copied? */
+    if(!CONT_BIT(src) && (src_size = TAG_SIZE(src)) <= size - i) {
+
+      int j;
+
+#if 0 /* { */ /* This will catch aggregate mismatches - pointless? */
+      /* Warn if we haven't yet and there is a type or size mismatch.
+	 The destination being uninit does not count as a mismatch. */
+      /* AAL: May not want to warn if size doesn't match when dst is uninit. */
+#ifdef TC_LOG_DIRTY_COPY /* { */
+      if(streams[_msgs[CT_TDM].str] && !log_written && 
+	 (COPYTAG_TYPE_MISMATCH(dst,src) || TAG_SIZE(dst) != TAG_SIZE(src)) &&
+	 TYPE_BITS(dst) != _typetag_uninit){
+	/* copying into memory initialized with different type */
+        _output_full(fname,line,col, CT_TDM,
+		0, typeinfo[type].size,size,size, srcaddr,dstaddr,
+		typeinfo[type].staticrep_ptr,srcaddr,dstaddr);
+	log_written = 1;
+      }
+#endif /* } TC_LOG_DIRTY_COPY */
+#endif /* } if 0 */
+
+      /* Now do the actual tag copy. */
+      /* AAL: Should do this in one shot if possible. */
+      for(j = 0; j < src_size; ++j){
+	WRITE_TAG(dst, TAG_BITS(src));
+	NEXT_POS(src);
+	NEXT_POS(dst);
+      }
+      i += src_size;
+
+    } else {  /* AAL: Copying from the middle of src!  Warn! */
+
+      if (!warn_written) {
+	/* This is not the start of src or
+	   it is longer than the data to be copied? */
+        _output_full(fname,line,col, CT_SI,
+		0, size,size,0, srcaddr,dstaddr, srcaddr,dstaddr,0);
+	warn_written = 1;
+      }
+
+      /* Set dst's type to uninit. */
+      /* SY: New change: set to INIT instead. */
+      do {
+	WRITE_TAG(dst, _typetag_init);
+	NEXT_POS(src);
+	NEXT_POS(dst);
+	i++;
+      } while (CONT_BIT(src) && i < size);
+    }
+  }
+
+  /* Clear off stray tags to the right */
+  while(CONT_BIT(dst)){
+    /* AAL: unalloc or uninit? */
+    WRITE_TAG(dst,_typetag_uninit);
+    NEXT_POS(dst);
+  }
+}
+
+/* SY: currently unused: discard? Don't remember its intended purpose -27feb02 */
+void _extern_registerVar(const char * fname, int line, int col,
+		const char * varname, void * addr, size_t size)
+{
+  if(externInitFns)
+    _output_flc(fname,line,col, ERV_ENN);
+  externInitFns = 0;
+  externInitFnsIter = &externInitFns;
+}
+
+void _extern_setUninitTag(const char * fname, int line, int col,
+			void * addr, size_t size)
+{
+  *externInitFnsIter = (struct fnCallNode *)malloc(sizeof(struct fnCallNode));
+  (*externInitFnsIter)->function = setUninitTag;
+  (*externInitFnsIter)->args.sut.fname = fname;
+  (*externInitFnsIter)->args.sut.line = line;
+  (*externInitFnsIter)->args.sut.col = col;
+  (*externInitFnsIter)->args.sut.addr = addr;
+  (*externInitFnsIter)->args.sut.size = size;
+  (*externInitFnsIter)->next = 0;
+  externInitFnsIter = &(*externInitFnsIter)->next;
+}
+
+void _extern_setScalarTag(const char * fname, int line, int col,
+			const void * addr, _ctype_t type)
+{
+  *externInitFnsIter = (struct fnCallNode *)malloc(sizeof(struct fnCallNode));
+  (*externInitFnsIter)->function = setScalarTag;
+  (*externInitFnsIter)->args.sst.fname = fname;
+  (*externInitFnsIter)->args.sst.line = line;
+  (*externInitFnsIter)->args.sst.col = col;
+  (*externInitFnsIter)->args.sst.addr = addr;
+  (*externInitFnsIter)->args.sst.type = type;
+  (*externInitFnsIter)->next = 0;
+  externInitFnsIter = &(*externInitFnsIter)->next;
+}
+
+void _extern_replicateTag(const char * fname, int line, int col,
+			void * addr, size_t size, int nelem)
+{
+  *externInitFnsIter = (struct fnCallNode *)malloc(sizeof(struct fnCallNode));
+  (*externInitFnsIter)->function = replicateTag;
+  (*externInitFnsIter)->args.rt.fname = fname;
+  (*externInitFnsIter)->args.rt.line = line;
+  (*externInitFnsIter)->args.rt.col = col;
+  (*externInitFnsIter)->args.rt.addr = addr;
+  (*externInitFnsIter)->args.rt.size = size;
+  (*externInitFnsIter)->args.rt.nelem = nelem;
+  (*externInitFnsIter)->next = 0;
+  externInitFnsIter = &(*externInitFnsIter)->next;
+}
+
+/* SY: currently unused: discard? Don't remember its intended purpose -27feb02 */
+void _registerVar(const char * fname, int line, int col,
+		const char * varname, void * addr, size_t size)
+{
+}
+
+/* AAL: Produces uninits of byte size only. */
+void _setScalarUninitTag(const char * fname, int line, int col,
+			 void * addr, _ctype_t type)
+{
+  /* AAL: was initTag(fname, line, col, addr, _typetag_uninit); */
+
+  int i;
+  /* Get the position of the tag for the address. */
+  _mirror_pos_t tagpos;
+
+  /* First nibble has tag 0xxx, where xxx is _typetag_uninit;
+     second nibble is 1yyy, where yyy is the log of the size;
+     third nibble is 0zzz, where zzz is unalloc typetag (really 0). */
+  uchar first_nibble = _typetag_uninit;
+  uchar size_nibble = CONT_BIT_MASK | typeinfo[type].logsize;
+  uchar subsequent_nibble = CONT_BIT_MASK | _typetag_unalloc;
+
+  if(!++tot_dynamic_num_calls) ++tot_dynamic_num_calls_overflow; /* count */
+
+  GET_TAG_POS(tagpos, addr);
+
+  /* Clear off stray tags to the left */
+  if(CONT_BIT(tagpos)){
+    _mirror_pos_t iter = tagpos;
+
+    _output_flc(fname,line,col, SSUT_NEM);
+
+    PREV_POS(iter);
+    while(CONT_BIT(iter)){
+      /* AAL: unalloc or uninit? */
+      WRITE_TAG(iter,_typetag_unalloc);
+      PREV_POS(iter);
+    }
+    WRITE_TAG(iter,_typetag_unalloc);
+  }
+
+  /* write tags for initial byte */
+  WRITE_TAG(tagpos, first_nibble);
+  if (typeinfo[type].size > 1) {
+    NEXT_POS(tagpos);
+    WRITE_TAG(tagpos, size_nibble);
+  }
+
+  for(i = 2; i < typeinfo[type].size; ++i){
+    /* write tag for subsequent bytes */
+    NEXT_POS(tagpos);
+    WRITE_TAG(tagpos, subsequent_nibble);
+  }
+
+  /* Clear off stray tags to the right */
+  NEXT_POS(tagpos);
+  while(CONT_BIT(tagpos)){
+    /* AAL: unalloc or uninit? */
+    WRITE_TAG(tagpos,_typetag_unalloc)
+    NEXT_POS(tagpos);
+  }
+}
+
+/* if type is pointer, initialize to int */
+void _setScalarTagPtrToInt(const char * fname, int line, int col,
+		const void * addr, _ctype_t type)
+{
+  if(!++tot_dynamic_num_calls) ++tot_dynamic_num_calls_overflow; /* count */
+  if(type == _ctype_pointer){
+    initTag(fname, line, col, (void *)addr, _ctype_int);
+  } else {
+    initTag(fname, line, col, (void *)addr, type);
+  }
+}
+
+void _setScalarTag(const char * fname, int line, int col,
+		const void * addr, _ctype_t type)
+{
+  if(!++tot_dynamic_num_calls) ++tot_dynamic_num_calls_overflow; /* count */
+  initTag(fname, line, col, (void *)addr, type);
+}
+
+void _replicateTag(const char * fname, int line, int col,
+		void * addr, size_t size, int nelem)
+{
+  int i;
+  char * dst = addr;
+
+  if(!++tot_dynamic_num_calls) ++tot_dynamic_num_calls_overflow; /* count */
+
+/* temporary ASSERT */
+  if(nelem == 0){
+    fprintf(stderr, "TC: replicating 0 elements!\n");
+    return;
+  }
+
+  for(i = 1; i < nelem; ++i)
+    _copyTagSilent(dst += size, addr, size);
+}
+
+/*
+ * if opnd_size == expr_size
+ * then do nothing //-- memcopy => no change
+ * else if verifyTag(*addrptr, opnd_staticpos)
+ *      then *addrptr = expr_staticpos //-- `enforce' mode
+ *      else do truncation/expansion //-- the messy case
+ *
+ * Note: tmpspace must be of size >= exptype. tmpspace's mirror is used
+ *       to return the promoted tags only if it's a funny case.
+ */
+void _promoteTag(const char * fname, int line, int col,
+		const void ** addrptr, _ctype_t optype, _ctype_t exptype,
+		void * tmpspace)
+{
+  if(!++tot_dynamic_num_calls) ++tot_dynamic_num_calls_overflow; /* count */
+  if(typeinfo[optype].size != typeinfo[exptype].size){
+    if(_verifyTagSilent(*addrptr, optype)){
+      *addrptr = typeinfo[exptype].staticrep_ptr;
+    } else {
+      /* do dirty work here */
+      *addrptr = typeinfo[exptype].staticrep_ptr;
+    }
+  }
+}
+
+#ifdef TC_COUNT_PROC_RET /* { */
+int _numEmptyProcessReturn = 0;
+int _numCommonProcessReturn = 0;
+int _numProcessReturn = 0;
+#endif /* } TC_COUNT_PROC_RET */
+
+/* debugging stuff to trace calls */
+#ifdef TC_TRACECALL /* { */
+#define TC_FNSTACK_SIZE 2048
+const char * _tc_fnstack[TC_FNSTACK_SIZE];
+int _tc_fnstack_i = 0;
+#endif /* } TC_TRACECALL */
+
+void _tcdebug_processCall_func(const char * fnname)
+{
+#ifdef TC_TRACECALL /* { */
+  fprintf(stderr, "<<%d>>CALLED %s\n", _tc_fnstack_i, fnname);
+
+  if(_tc_fnstack_i < TC_FNSTACK_SIZE)
+    _tc_fnstack[_tc_fnstack_i] = fnname;
+
+  _tc_fnstack_i++;
+#endif /* } TC_TRACECALL */
+}
+
+/* Note: aargaddrs serves two purposes:
+      2 - (void *)aargaddrs marks the start of the stack frame
+      2 - *aargaddrs points to the argaddrs array, if any
+*/
+/* addr == null indicates void return */
+void _processReturn(const char * fname, int line, int col,
+		void * scaf_start, void * scaf_end, void * agrf_start, void * agrf_end,
+		_addr_and_size_t ** aargaddrs, const void * addr, size_t size)
+{
+  static int debugflag = 0;
+
+  /* mark end of stack frame */
+  void * sf_top = &sf_top;
+
+#ifdef TC_TRACECALL /* { */
+  {
+    const char * fnname = "-overflow-";
+
+    _tc_fnstack_i--;
+    if(_tc_fnstack_i < TC_FNSTACK_SIZE)
+      fnname = _tc_fnstack[_tc_fnstack_i];
+
+    fprintf(stderr, "<<%d>>RETURNING %s\n", _tc_fnstack_i, fnname);
+
+    if(agrf_start){
+      fprintf(stderr, "\tagrf_end   = %p (%6d)\n", agrf_end  , ((char *)agrf_end  ) - (char *)sf_top);
+      fprintf(stderr, "\tagrf_start = %p (%6d)\n", agrf_start, ((char *)agrf_start) - (char *)sf_top);
+    }
+    if(scaf_start){
+      fprintf(stderr, "\tscaf_end   = %p (%6d)\n", scaf_end  , ((char *)scaf_end  ) - (char *)sf_top);
+      fprintf(stderr, "\tscaf_start = %p (%6d)\n", scaf_start, ((char *)scaf_start) - (char *)sf_top);
+    }
+    fprintf(stderr, "\taargaddrs  = %p (%6d)\n", aargaddrs , ((char *)aargaddrs ) - (char *)sf_top);
+    fprintf(stderr, "\tsf_top     = %p (%6d)\n", sf_top    , ((char *)sf_top    ) - (char *)sf_top);
+  }
+#endif /* } TC_TRACECALL */
+
+  /* Process Return Tag */
+  _processReturnNoClear(fname,line,col,*aargaddrs,addr,size);
+
+  /* Clear the stack frame between sf_bottom and sf_top */
+
+  /* mark start of stack */
+  if(((void *)aargaddrs) > sf_top){ /* stack grows downward */
+
+    void * sf_bottom = aargaddrs;
+
+    switch(tc_flag_clear){
+      case _TC_TO_HIGHEST:
+           if(scaf_start && scaf_end > sf_bottom) sf_bottom = scaf_end;
+           if(agrf_start && agrf_end > sf_bottom) sf_bottom = agrf_end;
+           break;
+      case _TC_TO_SCALAR:
+           if(scaf_start && scaf_end > sf_bottom) sf_bottom = scaf_end;
+           if(agrf_start && agrf_end > scaf_end) {
+             _fn_SET_UNALLOC_TAG("processReturn/toScalar",fname,line,col, agrf_start, agrf_end);
+           }
+           break;
+      case _TC_TO_AGGR:
+           if(agrf_start && agrf_end > sf_bottom) sf_bottom = agrf_end;
+           if(scaf_start && scaf_end > agrf_end) {
+             _fn_SET_UNALLOC_TAG("processReturn/toAggr",fname,line,col, scaf_start, scaf_end);
+           }
+           break;
+      case _TC_SEGS_ONLY:
+           if(scaf_start) {
+             _fn_SET_UNALLOC_TAG("processReturn/Segs",fname,line,col, scaf_start, scaf_end);
+           }
+           if(agrf_start) {
+             _fn_SET_UNALLOC_TAG("processReturn/Segs",fname,line,col, agrf_start, agrf_end);
+           }
+      case _TC_NONE:
+           ;
+    }
+
+    SET_UNALLOC_TAG("processReturn", fname,line,col, sf_top, sf_bottom);
+
+    if(!debugflag++ && streams[_tc_debug])
+      fprintf(streams[_tc_debug], "Note: stack grows decreasingly!\n");
+
+  } else {                /* stack grows upward   */
+
+    void * sf_bottom = aargaddrs;
+
+    switch(tc_flag_clear){
+      case _TC_TO_HIGHEST:
+           if(scaf_start && scaf_start < sf_bottom) sf_bottom = scaf_start;
+           if(agrf_start && agrf_start < sf_bottom) sf_bottom = agrf_start;
+           break;
+      case _TC_TO_SCALAR:
+           if(scaf_start && scaf_start < sf_bottom) sf_bottom = scaf_start;
+           if(agrf_start && agrf_start < scaf_start) {
+             _fn_SET_UNALLOC_TAG("processReturn/toScalar", fname,line,col, agrf_start, agrf_end);
+           }
+           break;
+      case _TC_TO_AGGR:
+           if(agrf_start && agrf_start < sf_bottom) sf_bottom = agrf_end;
+           if(scaf_start && scaf_start < agrf_start) {
+             _fn_SET_UNALLOC_TAG("processReturn/toAggr", fname,line,col, scaf_start, scaf_end);
+           }
+           break;
+      case _TC_SEGS_ONLY:
+           if(scaf_start) {
+             _fn_SET_UNALLOC_TAG("processReturn/Segs", fname,line,col, scaf_start, scaf_end);
+           }
+           if(agrf_start) {
+             _fn_SET_UNALLOC_TAG("processReturn/Segs", fname,line,col, agrf_start, agrf_end);
+           }
+      case _TC_NONE:
+           ;
+    }
+
+    SET_UNALLOC_TAG("processReturn", fname,line,col, sf_bottom, sf_top);
+
+    if(!debugflag++ && streams[_tc_debug])
+      fprintf(streams[_tc_debug], "Note: stack grows increasingly\n");
+
+  }
+}
+
+/* addr == null and size == 0 indicates void return */
+/* addr == null and size != 0 indicates copyTag should be elided */
+void _processReturnNoClear(const char * fname, int line, int col,
+		_addr_and_size_t * argaddrs, const void * addr, size_t size)
+{
+  if(!++tot_dynamic_num_calls) ++tot_dynamic_num_calls_overflow; /* count */
+
+  /* process return tag: return value is in <addr,size>,
+     the caller's expectation is in argaddrs[0].<addr,size>. */
+#ifdef TC_COUNT_PROC_RET /* { */
+_numProcessReturn++;
+#endif /* } TC_COUNT_PROC_RET */
+
+  if((!(size && !addr)) /* (size && !addr) indicates tag-copy should be elided */
+     && (argaddrs && argaddrs[0].size)){ /* indicates caller is instrumented, and expects a return value */
+					 /* (else do nothing) */
+    if(size == argaddrs[0].size){
+      /* -- same size -- */
+
+      /* -- common case: if  - size > 1, and     - even addresses, and
+                             - tags match, and   - tag size matches size
+            then we're done checking.
+       */
+      if(!(size > 1
+	 && !(((unsigned long)addr | (unsigned long)argaddrs[0].addr) & 0x1)
+	 && GET_TAG_BYTE(addr) == GET_TAG_BYTE(argaddrs[0].addr)
+	 && (1 << (ODD_TYPE_BITS(GET_TAG_BYTE(addr)))) == size)){
+
+        /* else: either size = 1,         or non-aligned addresses,
+                     or tags don't match, or tag size doesn't match size
+		     or addr is <INI>
+           do things slowly */
+
+        size_t i;
+        _mirror_pos_t tpi;
+        _mirror_pos_t rtpi;
+
+        GET_TAG_POS(tpi, addr);
+        GET_TAG_POS(rtpi, argaddrs[0].addr);
+
+        /* Compare tags */
+        for(i = 0; i < size; ++i){
+          if(TAG_BITS(tpi) != TAG_BITS(rtpi)
+		&& TAG_BITS(tpi) != _typetag_init){ /* INI comparison */
+            /* type mismatch */
+
+            _output_full(fname,line,col, PR_TMM,
+			0, size,size,0, 0,0, argaddrs[0].addr,addr,0);
+            break;
+          }
+          NEXT_POS(tpi);
+          NEXT_POS(rtpi);
+        }
+        if(i < size){ /* mismatch occurred: copy */
+          _copyTagSilent(argaddrs[0].addr, addr, size);
+        }
+        /* No mismatch: Make sure tagpos has "ended" */
+        if(i == size && CONT_BIT(tpi)){
+          /* type size mismatch */
+          _output_full(fname,line,col, PR_TSM,
+			0, size,2*size,0, 0,0, argaddrs[0].addr,addr,0);
+        }
+#ifdef TC_COUNT_PROC_RET
+      } else {
+_numCommonProcessReturn++;
+#endif /* TC_COUNT_PROC_RET */
+      }
+    } else {
+      /* -- size mismatch -- */
+
+      /* OUTPUT WARNING HERE */
+      _output_full(fname,line,col, PR_TMC,
+		0, argaddrs[0].size,size,0, 0,0, argaddrs[0].addr,addr,0);
+
+      /* -- leave declared type -- */
+    }
+#ifdef TC_COUNT_PROC_RET
+  } else {
+_numEmptyProcessReturn++;
+#endif /* TC_COUNT_PROC_RET */
+  }
+}
+
+void _processArgTag(const char * fname, int line, int col,
+		_addr_and_size_t * argaddrs,
+		/*int argCount,*/ int index,
+		void * addr, _ctype_t type, size_t size_aggr)
+{
+  if(!++tot_dynamic_num_calls) ++tot_dynamic_num_calls_overflow; /* count */
+  if(index <= _globalArgCount){
+
+    if(type == _ctype_aggregate){
+      /* -- Aggregate type -- */
+
+      /** same size, just copy **/
+      if(argaddrs[index].size == size_aggr){
+        /*NOTE: copyTag won't cough _typetag_unalloc; memory is pre-initialized*/
+        _copyTag(fname,line,col,
+		addr, argaddrs[index].addr, argaddrs[index].size, type);
+        if(!tot_dynamic_num_calls--) tot_dynamic_num_calls_overflow--; /* adjust count */
+
+      /** size mismatch, output warning and leave declared type? **/
+      } else {
+        /* OUTPUT WARNING HERE */
+        _output_si(fname,line,col, PAT_TMA,
+		0,0,0,0, size_aggr,argaddrs[index].size,index,0);
+
+        /* leave declared type, or attempt partial copy? */
+      }
+    } else {
+      /* -- Scalar type -- */
+
+      /** same size, just copy **/
+      if(argaddrs[index].size == typeinfo[type].size){
+        /* NOTE: copyTag won't cough _typetag_unalloc; memory is pre-initialized */
+        /* NOTE: if arg is INI, we'll just maintain INI tag (copyTag won't complain) */
+        _copyTag(fname,line,col,
+		addr, argaddrs[index].addr, argaddrs[index].size, type);
+        if(!tot_dynamic_num_calls--) tot_dynamic_num_calls_overflow--; /* adjust count */
+
+      /** type matches promotion, set to declared type **/
+      } else if(argaddrs[index].size == typeinfo[typeinfo[type].promo].size &&
+		_verifyTagSilent(argaddrs[index].addr, typeinfo[type].promo)){
+        /* note: verifyTagSilent fixes INI types */
+        _setScalarTag(fname,line,col, addr, type);
+        if(!tot_dynamic_num_calls--) tot_dynamic_num_calls_overflow--; /* adjust count */
+
+      /** size/type mismatch, output warning and leave declared type? **/
+      } else {
+        /* OUTPUT WARNING HERE */
+        _output_full(fname,line,col, PAT_TMS,
+		0, typeinfo[type].size,argaddrs[index].size,index,
+		0,0, typeinfo[type].staticrep_ptr,argaddrs[index].addr,0);
+
+        /* leave declared type; or attempt partial copy? */
+      }
+    }
+  } else {
+    /* we're out of bounds */
+    /* WARN: not enough arguments passed to function, set uninit (?) */
+    _output_si(fname,line,col, PAT_NEA,
+		0,0,0,0, index,_globalArgCount,0,0);
+
+    _setUninitTag(fname, line, col, addr, typeinfo[type].size);
+    if(!tot_dynamic_num_calls--) tot_dynamic_num_calls_overflow--; /* adjust count */
+    /* alt: leave declared type */
+  }
+}
+
+/*****************************************/
+/* report static instrumentation numbers */
+/*****************************************/
+struct static_count_node {
+  const char * descr;
+  unsigned long count;
+  struct static_count_node * next;
+} * static_count_head = 0;
+
+void _reportStaticCounts(const char * fname, const char * descr, int count)
+{
+  struct static_count_node ** np;
+  for(np = &static_count_head; *np; np = &(*np)->next){
+    if(!strcmp(descr, (*np)->descr)){
+      (*np)->count += count;
+      break;
+    }
+  }
+  if(!*np){
+    *np = (struct static_count_node *) malloc(sizeof(struct static_count_node));
+    (*np)-> descr = descr;
+    (*np)->count = count;
+    (*np)->next = 0;
+  }
+}
+
+/*****************************************/
+/* print user and system time difference */
+/*****************************************/
+static void printdelta(FILE * s, struct rusage * r1, struct rusage * r2)
+{
+  struct timeval u1 = r1->ru_utime;
+  struct timeval u2 = r2->ru_utime;
+  struct timeval s1 = r1->ru_stime;
+  struct timeval s2 = r2->ru_stime;
+
+  fprintf(s, "%.3f u, %.3f s\n",
+	(double)(u2.tv_sec-u1.tv_sec)+(double)(u2.tv_usec-u1.tv_usec)/1000000,
+	(double)(s2.tv_sec-s1.tv_sec)+(double)(s2.tv_usec-s1.tv_usec)/1000000
+	);
+}
+
+struct rusage ru0, ru1, ru2, ru3, ru4, ru5;
+/***********************************/
+/* cleanup: registered with atexit */
+/***********************************/
+static void cleanup()
+{
+  FILE * statstream = streams[_tc_stat];
+  int msg_count;
+
+#ifdef TC_DOSTATS
+  getrusage(RUSAGE_SELF, &ru5);
+#endif /* TC_DOSTATS */
+
+  msg_count = _print_all_msgs();
+
+  /* output overflow count */
+  {
+    int i;
+    for(i = 0; i < _tc_numstreams; ++i){
+      if(overflow_count[i]){
+        fprintf(statstream, "Messages skipped for stream %s: %d\n",
+		stream_descr[i], overflow_count[i]);
+      }
+    }
+  }
+
+  /* report static stats & dynamic numbers of instrumentation calls */
+  if(statstream){
+    struct static_count_node * np;
+    for(np = static_count_head; np; np = np->next)
+      fprintf(statstream, "Static %s = %lu\n", np->descr, np->count);
+
+    fprintf(statstream, "Dynamic inst-calls: %lu + %lu * (%lu+1)\n",
+			tot_dynamic_num_calls,
+			tot_dynamic_num_calls_overflow,
+			(unsigned long)-1);
+    fprintf(statstream, "Error/warning/log messages: %d\n", msg_count);
+  }
+
+#ifdef TC_DOSTATS
+  if(statstream){
+
+    fprintf(statstream, "Total time: ");
+    printdelta(statstream, &ru0, &ru5);
+
+    fprintf(statstream, "Call init functions: ");
+    printdelta(statstream, &ru1, &ru2);
+
+    fprintf(statstream, "Process externs: ");
+    printdelta(statstream, &ru2, &ru3);
+
+    fprintf(statstream, "Prog_main: ");
+    printdelta(statstream, &ru4, &ru5);
+
+#ifdef TC_COUNT_PROC_RET /* { */
+    fprintf(statstream, "processReturns : tot %d, empty %d, common %d\n",
+			_numProcessReturn,
+			_numCommonProcessReturn,
+			_numEmptyProcessReturn);
+#endif /* } TC_COUNT_PROC_RET */
+
+    if(_vpctr || _vpcctr || _vpactr
+	|| _vtctr || _vtcctr || _vtactr
+	|| _ctctr || _ctcctr || _ctactr
+	|| _sstctr || _sstcctr
+	|| _ssutctr || _ssutcctr
+	|| _patctr || _patpctr || _patactr){
+
+      fprintf(statstream, "Macro counts (function counts):\n");
+
+      fprintf(statstream,
+	"verifyPtr : char %d(%d), aggr %d(%d), etc %d(%d)\n",
+	_vpcctr, _vpcfctr, _vpactr, _vpafctr, _vpctr, _vpfctr);
+
+      fprintf(statstream,
+	"verifyTag : char %d(%d), aggr %d(%d), etc %d(%d)\n",
+	_vtcctr, _vtcfctr, _vtactr, _vtafctr, _vtctr, _vtfctr);
+
+      fprintf(statstream,
+	"  copyTag : char %d(%d), aggr %d(%d), etc %d(%d)\n",
+	_ctcctr, _ctcfctr, _ctactr, _ctafctr, _ctctr, _ctfctr);
+
+      fprintf(statstream,
+	"      setScalarTag : char %d(%d), etc %d(%d)\n",
+	_sstcctr, _sstcfctr, _sstctr, _sstfctr);
+
+      fprintf(statstream,
+	"setScalarUninitTag : char %d(%d), etc %d(%d)\n",
+	_ssutcctr, _ssutcfctr, _ssutctr, _ssutfctr);
+
+      fprintf(statstream,
+	"processArgTag : scalar %d(%d) (promo %d), aggr %d(%d)\n",
+	_patctr, _patfctr, _patpctr, _patactr, _patafctr);
+    }
+  }
+#endif /* TC_DOSTATS */
+}
+
+static int stringToStreamId(const char * cp, const char ** endptr)
+{
+  int i;
+  for(i = 0; i < _tc_numstreams; ++i){
+    int slen = strlen(stream_descr[i]);
+    if(!strncmp(cp,stream_descr[i],slen)){
+      if(endptr) *endptr = cp + slen;
+      return i;
+    }
+  }
+  return -1;
+}
+
+
+/************************/
+/* "real" main function */
+/************************/
+#ifndef STANDALONE /* { */
+
+int main(int argc, char * argv[], char * envp[])
+{
+  extern void callInitFunctions(void);
+  extern int _prog_main(int argc, char * argv[], char * envp[]);
+  int i;
+
+  /* typechecker output streams */
+  /* if set to 0, nothing will be output */
+  streams[_tc_stat] = stderr;
+  streams[_tc_log] = stderr;
+  streams[_tc_debug] = 0; /* debug messages are just meaninglessly annoying */
+  streams[_tc_warn] = stderr;
+  streams[_tc_error] = stderr;
+
+  /* initialize signal flags */
+  signalflags[_tc_log] = 1;
+  signalflags[_tc_warn] = 1;
+  signalflags[_tc_error] = 1;
+
+  /* Initialize output limits */
+  output_limit[_tc_error] = 100;
+  output_limit[_tc_warn] = 100;
+  output_limit[_tc_log] = 100;
+
+  TC_DO_TIMINGS(getrusage(RUSAGE_SELF, &ru0));
+
+#ifndef TC_NOSIGNAL
+  signal(TCSIG,SIG_IGN);
+#endif
+
+  /* register the cleanup function with atexit() */
+  atexit(cleanup);
+
+  /* intercept TC command-line arguments */
+  for(i = 0; i < argc; ++i){
+    if(!strncmp(argv[i],"-tc-",4)){
+      int j;
+      if(!strcmp(argv[i]+4,"summarize")) tc_flag_summarize = 1;
+      else if(!strcmp(argv[i]+4,"terse")) tc_flag_terse = 1;
+      else if(!strcmp(argv[i]+4,"trackfree")) tc_flag_trackfree = 1;
+      else if(!strcmp(argv[i]+4,"vtfix")) tc_flag_vtfix = 1;
+      else if(!strcmp(argv[i]+4,"no-vtfix")) tc_flag_vtfix = 0;
+      else if(!strcmp(argv[i]+4,"allsig"))
+		signalflags[_tc_log] = signalflags[_tc_warn] = signalflags[_tc_error] = 1;
+      else if(!strcmp(argv[i]+4,"clearsig")){
+             int i;
+             for(i = 0; i < _tc_numstreams; ++i)
+               signalflags[i] = 0;
+      } else if(!strncmp(argv[i]+4,"sig-",4)){
+             int stream_id;
+             stream_id = stringToStreamId(argv[i]+8, 0);
+             if(stream_id != -1){
+               signalflags[stream_id] = 1;
+               fprintf(stderr, "TC: Turning on signal for %s stream\n", stream_descr[stream_id]);
+             } else fprintf(stderr, "TC: Malformed -tc- flag ignored (%s)\n", argv[i]);
+      } else if(!strncmp(argv[i]+4,"nosig-",6)){
+             int stream_id;
+             stream_id = stringToStreamId(argv[i]+10, 0);
+             if(stream_id != -1){
+               signalflags[stream_id] = 0;
+               fprintf(stderr, "TC: Turning off signal for %s stream\n", stream_descr[stream_id]);
+             } else fprintf(stderr, "TC: Malformed -tc- flag ignored (%s)\n", argv[i]);
+      } else if(!strncmp(argv[i]+4,"clear=",6)){
+             if(!strcmp(argv[i]+10,"none"))
+		tc_flag_clear = _TC_NONE;
+             else if(!strcmp(argv[i]+10,"segs"))
+		tc_flag_clear = _TC_SEGS_ONLY;
+             else if(!strcmp(argv[i]+10,"scalar"))
+		tc_flag_clear = _TC_TO_SCALAR;
+             else if(!strcmp(argv[i]+10,"aggr"))
+		tc_flag_clear = _TC_TO_AGGR;
+             else if(!strcmp(argv[i]+10,"highest"))
+		tc_flag_clear = _TC_TO_HIGHEST;
+             else fprintf(stderr, "TC: Unrecognized -tc- flag ignored (%s)\n", argv[i]);
+      } else if(!strncmp(argv[i]+4,"limit-",6)){
+             int stream_id;
+             const char * stream_limit_str = 0;
+             int stream_limit;
+
+             stream_id = stringToStreamId(argv[i]+10, &stream_limit_str);
+             if(stream_limit_str && *stream_limit_str == '=')
+               stream_limit = atoi(stream_limit_str+1);
+             if(stream_id != -1){
+               output_limit[stream_id] = stream_limit;
+               fprintf(stderr, "TC: setting %s stream limit to %d\n", stream_descr[stream_id], stream_limit);
+             } else fprintf(stderr, "TC: Malformed -tc- flag ignored (%s)\n", argv[i]);
+      } else if(!strncmp(argv[i]+4,"send-",5)){
+             int stream_id;
+             const char * msgid_str = 0;
+	     int msgid = 0;
+
+             stream_id = stringToStreamId(argv[i]+9, &msgid_str);
+             if(msgid_str && *msgid_str == '=')
+               msgid = atoi(msgid_str+1);
+             if(stream_id != -1 && msgid > MSGS_0 && msgid < MSGS_LAST){
+               _msgs[msgid].str = stream_id;
+               fprintf(stderr, "TC: sending message %d to %s stream (%d:%s)\n", msgid, stream_descr[stream_id], msgid, _msgs[msgid].msg);
+             } else fprintf(stderr, "TC: Malformed -tc- flag ignored (%s)\n", argv[i]);
+      } else if(!strncmp(argv[i]+4,"stream-",7)){
+             int stream_id;
+             const char * fname = 0;
+
+             stream_id = stringToStreamId(argv[i]+11, &fname);
+             if(fname && *fname == '=') fname++;
+             if(stream_id != -1 && stream_id != _tc_null){
+               if(!strcmp(fname,"")){
+                 streams[stream_id] = 0;
+                 fprintf(stderr, "TC: Disabling %s stream\n", stream_descr[stream_id]);
+               } else if(!strcmp(fname,"-")){
+                 streams[stream_id] = stdout;
+                 fprintf(stderr, "TC: Setting %s stream to stdout\n", stream_descr[stream_id]);
+               } else if(!strcmp(fname,"=")){
+                 streams[stream_id] = stderr;
+                 fprintf(stderr, "TC: Setting %s stream to stderr\n", stream_descr[stream_id]);
+               } else {
+                 if((streams[stream_id] = fopen(fname, "w")))
+                   fprintf(stderr, "TC: Redirecting %s stream to file %s\n", stream_descr[stream_id], fname);
+                 else
+                   fprintf(stderr, "TC: Error opening file %s for %s output\n", fname, stream_descr[stream_id]);
+               }
+             } else fprintf(stderr, "TC: Malformed -tc- flag ignored (%s)\n", argv[i]);
+      } else fprintf(stderr, "TC: Unrecognized -tc- flag ignored (%s)\n", argv[i]);
+
+      for(j = i+1; j < argc; ++j) argv[j-1] = argv[j];
+      argv[--argc] = 0;
+      i--;
+    }
+  }
+
+  /* Initialize static reps */
+  initStaticRep();
+
+  /* Initialize globals and externs */
+  _tc_init_mode = 1;
+  TC_DO_TIMINGS(getrusage(RUSAGE_SELF, &ru1));
+  callInitFunctions();
+  TC_DO_TIMINGS(getrusage(RUSAGE_SELF, &ru2));
+  processExternVars();
+  TC_DO_TIMINGS(getrusage(RUSAGE_SELF, &ru3));
+  _tc_init_mode = 0;
+
+  /* debug output: compile time flags */
+  if(streams[_tc_debug])
+    fprintf(streams[_tc_debug], "Note: strictPointer mode is %s\n",
+			 strictPointer?"ON":"OFF");
+
+  /* initialize argv */
+  for(i = 0; i < argc; ++i){
+    _setScalarTag(__FILE__,__LINE__,0,&argv[i],_ctype_pointer);
+    _setStringTag(__FILE__,__LINE__,0,argv[i],strlen(argv[i]));
+  }
+  /* (terminating null pointer) */
+  _setScalarTag(__FILE__,__LINE__,0,&argv[i],_ctype_pointer); /*TODO: set null tag*/
+
+  /* initialize envp */
+  for(i = 0; envp[i]; ++i){
+    _setScalarTag(__FILE__,__LINE__,0,&envp[i],_ctype_pointer);
+    _setStringTag(__FILE__,__LINE__,0,envp[i],strlen(envp[i]));
+  }
+  /* (terminating null pointer) */
+  _setScalarTag(__FILE__,__LINE__,0,&envp[i],_ctype_pointer); /*TODO: set null tag*/
+
+  TC_DO_TIMINGS(getrusage(RUSAGE_SELF, &ru4));
+  return _prog_main(argc, argv, envp);
+}
+
+#else /* } ifdef STANDALONE { */
+/****************/
+/* Debug main() */
+/****************/
+
+int main()
+{
+  long tmpspace;
+  _mirror_pos_t  pos1, pos2, pos3, pos4;
+  void		*adr1,*adr2,*adr3,*adr4;
+
+  initStaticRep();
+
+  printf("Mirrorpage Numbytes = %d\n", MIRRORPAGE_NUMBYTES);
+  printf("Mirrorpage Mask = 0x%08x\n", MIRRORPAGE_MASK);
+  printf("Mirrormap Numbits = %d\n", MIRRORMAP_NUMBITS);
+  printf("Mirrormap Numelements = %d\n", MIRRORMAP_NUMELEMENTS);
+
+  fprintf(stderr, "SetScalarUninitTag 82-ffc:\n");
+  _setScalarUninitTag("test", __LINE__, 0, (void *)0x82ffffc, _ctype_double);
+  fprintf(stderr, "Print 82-ff0 16:\n");
+  _printTagStderr((void *)0x82ffff0, 16);
+  fprintf(stderr, "Print 83-000 16:\n");
+  _printTagStderr((void *)0x8300000, 16);
+  fprintf(stderr, "Done\n");
+
+  return 0;
+}
+#endif /* } ifdef STANDALONE */
+@
+
+
+1.90
+log
+@Added -tc-limit- flag support, to limit the output
+(default 100).
+@
+text
+@d29 2
+d1367 1
+a1367 1
+      /* if destination is unallocated,
+d1370 1
+a1370 1
+      if(!verifyAlloc(addr,size))
+d1372 1
+d1388 1
+a1388 1
+      if(TAG_BITS(tpi) == _typetag_unalloc)
+d1390 1
+d2383 2
+@
+
+
+1.89
+log
+@Minor fixes as detected by -Wall compilation.
+@
+text
+@d17 5
+d559 14
+d580 1
+a580 1
+      else {
+d605 1
+a605 1
+    } else {
+d621 1
+a621 1
+      else {
+d646 1
+a646 1
+    } else {
+d664 1
+a664 1
+      else {
+d692 1
+a692 1
+    } else {
+d713 1
+a713 1
+      else {
+d753 1
+a753 1
+    } else {
+d2237 11
+d2358 5
+d2411 12
+@
+
+
+1.88
+log
+@BUG FIX: overflowTagPos was erroneously calling
+GET_TAG_POS with a side-effect argument
+(getAddrForPos) -- this was resulting in wrong,
+sometimes crashing, behavior during tagpos overflows.
+@
+text
+@d423 1
+a423 1
+        fprintf(stream, "(%s) = (0x%x:0x%x)", _msgs[msgid].adesc, a1,a2);
+d427 1
+a427 1
+        fprintf(stream, "(%s) = (0x%x)", _msgs[msgid].adesc, a1);
+a511 1
+  int match = 0;
+a2313 1
+  int ret;
+@
+
+
+1.87
+log
+@Fixed printTagPos to output correct tag summaries when
+in "summary" mode (dumping more than 50 bytes); verified
+that this works accurately (only possible error, if overflow,
+the "remaining bytes suppressed" number may be off-by-one-ish,
+though I don't *think* it is).
+Previously this routine suffered from a couple of off-by-one-like
+bugs.
+@
+text
+@d769 2
+a770 1
+  GET_TAG_POS(*tagpos, getAddrForPos(*tagpos) + offset);
+d2466 2
+a2467 2
+  _mirror_pos_t  pos00, posfe, pos78, pos76;
+  void		*adr00,*adrfe,*adr78,*adr76;
+d2476 7
+a2482 72
+  /* testing overflow stuff */
+  adrfe = (void *)0x120ffffe;
+  posfe = _getTagPos(adrfe);
+  printf("getAddrForPos 120ffffe = 0x%08x\n",
+	(unsigned int)getAddrForPos(posfe));
+  _printTagPos(stdout, posfe, 1);
+  printf(" ==> print fe 1\n");
+  _printTagPos(stdout, posfe, 2);
+  printf(" ==> print fe 2\n");
+  /* end testing overflow stuff */
+
+  /* testing underflow stuff */
+  adr00 = (void *)0x12000000;
+  pos00 = _getTagPos(adr00);
+  printf("getAddrForPos 12000000 = 0x%08x\n",
+	(unsigned int)getAddrForPos(pos00));
+
+/* AAL: do we want to change this? */
+
+  WRITE_TAG(pos00, CONT_BIT_MASK | _typetag_float);
+  _printTagPos(stdout, pos00, 4);
+  printf(" ==> print 00 4\n");
+  _setUninitTag("",0,0, adr00, 1);
+  /* end testing overflow stuff */
+
+  printf("getAddrForPos 12345677 = 0x%08x\n",
+	(unsigned int)getAddrForPos(_getTagPos((void *)0x12345677)));
+
+  adr78 = (void *)0x12345678;
+  pos78 = _getTagPos(adr78);
+  printf("getTagPos(0x12345678) = 0x%08x\n", (unsigned int)pos78.ptr);
+  printf("getAddrForPos 12345678 = 0x%08x\n",
+	(unsigned int)getAddrForPos(pos78));
+
+  _printTagPos(stdout, pos78, 10);
+  printf(" == pos78\n");
+
+  _copyTag("",0,0, adr78, &_float_static_rep[0], sizeof(float), _ctype_float);
+
+  _printTagPos(stdout, pos78, 10);
+  printf(" == pos78 after copytag int\n");
+
+  _verifyTag("",0,0, "pos78", adr78, _ctype_int);
+  _verifyTag("",0,0, "pos78", adr78, _ctype_long);
+  _verifyTag("",0,0, "pos78", adr78, _ctype_short);
+  _verifyTag("",0,0, "pos78", adr78, _ctype_float);
+  _verifyTag("",0,0, "pos78", adr78, _ctype_double);
+
+  adr76 = (void *)0x12345676;
+  pos76 = _getTagPos(adr76);
+  printf("getTagPos(0x12345676) = 0x%08x\n", (unsigned int)pos76.ptr);
+  printf("getAddrForPos 12345676 = 0x%08x\n",
+	(unsigned int)getAddrForPos(pos76));
+
+  _printTagPos(stdout, pos76, 10);
+  printf(" == pos76\n");
+
+  _copyTag("",0,0, adr76, &_float_static_rep[0], sizeof(float), _ctype_float);
+
+  _printTagPos(stdout, pos76, 10);
+  printf(" == pos76 after copytag float\n");
+
+  _copyTag("",0,0, adr78, &_short_static_rep[0], sizeof(short), _ctype_short);
+
+  _printTagPos(stdout, pos76, 10);
+  printf(" == pos76 after copytag 78 short\n");
+
+  _promoteTag("",0,0, &adr76, _ctype_long, _ctype_short, &tmpspace);
+
+  printf("Printing 0-size tagpos:");
+  _printTagPos(stdout, pos76, 0);
+  printf("\n");
+@
+
+
+1.86
+log
+@Added handling of envp argument (third argument to main).
+@
+text
+@a1031 1
+    int i = size;
+d1040 3
+a1042 1
+    for(i = 0; i < size; ++i){ /* left-strays */
+d1048 2
+d1056 1
+a1056 1
+    for(; i < size; ++i){ /* main loop */
+d1086 5
+a1090 2
+    if(temp_size)
+      fprintf(f, "<%s,%d%s", _typeDesc[memo_type], memo_size, CONT_BIT(tagpos)?":...":">");
+@
+
+
+1.85
+log
+@Augmented processReturn(NoCall) to add a new case:
+if tagptr is null but size is non-null, this means the
+tag-copying should be elided (as determined by static
+analysis).
+@
+text
+@d2303 1
+a2303 1
+int main(int argc, char * argv[])
+d2306 1
+a2306 1
+  extern int _prog_main(int argc, char * argv[]);
+d2437 9
+a2445 1
+  _setScalarTag(__FILE__,__LINE__,0,&argv[i],_ctype_pointer);
+d2448 1
+a2448 1
+  return _prog_main(argc, argv);
+@
+
+
+1.84
+log
+@Split processReturn to new function _processReturnNoClear()
+@
+text
+@d2006 2
+a2007 1
+/* addr == null indicates void return */
+d2019 3
+a2021 4
+  if(argaddrs && argaddrs[0].size){
+    /* if caller is instrumented, and expects a return value */
+    /* (else do nothing) */
+
+@
+
+
+1.83
+log
+@Added collection and handling of arbitrary static statistics
+(copied form tcptr implementation).
+@
+text
+@a1899 10
+  _addr_and_size_t * argaddrs = *aargaddrs;
+
+  if(!++tot_dynamic_num_calls) ++tot_dynamic_num_calls_overflow; /* count */
+
+  /* process return tag: return value is in <addr,size>,
+     the caller's expectation is in argaddrs[0].<addr,size>. */
+#ifdef TC_COUNT_PROC_RET /* { */
+_numProcessReturn++;
+#endif /* } TC_COUNT_PROC_RET */
+
+d1923 2
+a1924 69
+  if(argaddrs && argaddrs[0].size){
+    /* if caller is instrumented, and expects a return value */
+    /* (else do nothing) */
+
+    if(size == argaddrs[0].size){
+      /* -- same size -- */
+
+      /* -- common case: if  - size > 1, and     - even addresses, and
+                             - tags match, and   - tag size matches size
+            then we're done checking.
+       */
+      if(!(size > 1
+	 && !(((unsigned long)addr | (unsigned long)argaddrs[0].addr) & 0x1)
+	 && GET_TAG_BYTE(addr) == GET_TAG_BYTE(argaddrs[0].addr)
+	 && (1 << (ODD_TYPE_BITS(GET_TAG_BYTE(addr)))) == size)){
+
+        /* else: either size = 1,         or non-aligned addresses,
+                     or tags don't match, or tag size doesn't match size
+		     or addr is <INI>
+           do things slowly */
+
+        size_t i;
+        _mirror_pos_t tpi;
+        _mirror_pos_t rtpi;
+
+        GET_TAG_POS(tpi, addr);
+        GET_TAG_POS(rtpi, argaddrs[0].addr);
+
+        /* Compare tags */
+        for(i = 0; i < size; ++i){
+          if(TAG_BITS(tpi) != TAG_BITS(rtpi)
+		&& TAG_BITS(tpi) != _typetag_init){ /* INI comparison */
+            /* type mismatch */
+
+            _output_full(fname,line,col, PR_TMM,
+			0, size,size,0, 0,0, argaddrs[0].addr,addr,0);
+            break;
+          }
+          NEXT_POS(tpi);
+          NEXT_POS(rtpi);
+        }
+        if(i < size){ /* mismatch occurred: copy */
+          _copyTagSilent(argaddrs[0].addr, addr, size);
+        }
+        /* No mismatch: Make sure tagpos has "ended" */
+        if(i == size && CONT_BIT(tpi)){
+          /* type size mismatch */
+          _output_full(fname,line,col, PR_TSM,
+			0, size,2*size,0, 0,0, argaddrs[0].addr,addr,0);
+        }
+#ifdef TC_COUNT_PROC_RET
+      } else {
+_numCommonProcessReturn++;
+#endif /* TC_COUNT_PROC_RET */
+      }
+    } else {
+      /* -- size mismatch -- */
+
+      /* OUTPUT WARNING HERE */
+      _output_full(fname,line,col, PR_TMC,
+		0, argaddrs[0].size,size,0, 0,0, argaddrs[0].addr,addr,0);
+
+      /* -- leave declared type -- */
+    }
+#ifdef TC_COUNT_PROC_RET
+  } else {
+_numEmptyProcessReturn++;
+#endif /* TC_COUNT_PROC_RET */
+  }
+d2004 1
+d2006 81
+@
+
+
+1.82
+log
+@renamed reportNumCalls to reportStaticCounts, taking an extra
+parameter describing the count.
+currently, only tcptr.c collects the count correctly.
+@
+text
+@a34 1
+static unsigned long tot_static_num_calls = 0;
+d2153 6
+d2161 13
+a2173 1
+  tot_static_num_calls += count; /* placeholder; TODO: fully process static counts */
+d2207 1
+a2207 1
+  /* report numbers of instrumentation calls */
+d2209 4
+a2212 1
+    fprintf(statstream, "Static  inst-calls: %lu\n", tot_static_num_calls);
+@
+
+
+1.81
+log
+@Renamed registerExtern to registerExtern_nosize
+@
+text
+@d2154 1
+a2154 1
+void _reportNumCalls(const char * fname, int num_calls)
+d2156 1
+a2156 1
+  tot_static_num_calls += num_calls;
+@
+
+
+1.80
+log
+@Added const to promoteTag arg#4 type to suppress
+type mismatch warnings.
+@
+text
+@d1190 1
+a1190 1
+void _registerExtern(const char * fname, int line, int col,
+@
+
+
+1.79
+log
+@Changed it so that verifyTagSilent does not convert
+INI tags into static types, as was previously done.
+Two more instances may need to be altered, but are
+currently just commented with "SY: do we really need to fix??"
+@
+text
+@d1848 1
+a1848 1
+		void ** addrptr, _ctype_t optype, _ctype_t exptype,
+@
+
+
+1.78
+log
+@Further refined stream/signal/etc.
+For one, summary messages now all go to statstream.
+@
+text
+@d877 1
+a877 1
+	&& !_checkIfInit(addr, reftype, 1))
+d1335 1
+a1335 1
+	&& !_checkIfInit(addr, reftype, 1)) {
+d1352 1
+a1352 1
+	&& !_checkIfInit(addr, reftype, 1)) { /* could optimize by inlining? */
+@
+
+
+1.77
+log
+@Restructured output mechanism to associate stream with error message;
+also, generalized signalflag mechanism (TCKILL now called by _output_
+functions), and enhanced run-time flags to allow better control of
+streams, message-destinations, and signal-flags.
+Also, added function _fn_SET_UNALLOC_TAG to reduce code bloat in
+processReturn.
+@
+text
+@a159 19
+/* AAL: will probably not need
+int sizelogs[256] = { -1, 0, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3,
+		       4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+		       5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
+		       5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
+		       6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+		       6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+		       6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+		       6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+		       7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7,
+		       7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7,
+		       7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7,
+		       7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7,
+		       7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7,
+		       7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7,
+		       7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7,
+		       7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7};
+*/
+
+a276 5
+/*
+  static int old_logsignal  = 0;
+  static int old_warnsignal = 0;
+  static int old_errsignal  = 0;
+*/
+a284 8
+/*
+    old_logsignal  = tc_flag_logsignal;
+    old_warnsignal = tc_flag_warnsignal;
+    old_errsignal  = tc_flag_errsignal;
+    tc_flag_logsignal  = 0;
+    tc_flag_warnsignal = 0;
+    tc_flag_errsignal  = 0;
+*/
+a288 5
+/*
+    tc_flag_logsignal  = old_logsignal;
+    tc_flag_warnsignal = old_warnsignal;
+    tc_flag_errsignal  = old_errsignal;
+*/
+a457 1
+  FILE * stream;
+d471 1
+d473 1
+a473 1
+void _print_all_msgs()
+d475 2
+d480 2
+a481 1
+    fprintf(t->stream, "{%d}", t->count);
+d484 1
+a484 1
+          _print_simple(t->stream, t->msgid);
+d487 1
+a487 1
+          _print_flc(t->stream, t->file, t->line, t->col, t->msgid);
+d490 1
+a490 1
+          _print_si(t->stream, t->file, t->line, t->col, t->msgid,
+d495 1
+a495 1
+          _print_full(t->stream, t->file, t->line, t->col, t->msgid,
+d506 1
+d516 1
+a516 1
+    if(n->stream == stream && n->line == line && n->col == col &&
+a576 1
+        n->stream = stream;
+a617 1
+        n->stream = stream;
+a661 1
+        n->stream = stream;
+a710 1
+        n->stream = stream;
+d2181 3
+d2188 1
+a2188 1
+  _print_all_msgs();
+d2191 3
+a2193 3
+  if(streams[_tc_stat]){
+    fprintf(streams[_tc_stat], "Static  inst-calls: %lu\n", tot_static_num_calls);
+    fprintf(streams[_tc_stat], "Dynamic inst-calls: %lu + %lu * (%lu+1)\n",
+d2197 1
+d2201 1
+a2201 1
+  if(streams[_tc_stat]){
+d2203 2
+a2204 2
+    fprintf(streams[_tc_stat], "Total time: ");
+    printdelta(streams[_tc_stat], &ru0, &ru5);
+d2206 2
+a2207 2
+    fprintf(streams[_tc_stat], "Call init functions: ");
+    printdelta(streams[_tc_stat], &ru1, &ru2);
+d2209 2
+a2210 2
+    fprintf(streams[_tc_stat], "Process externs: ");
+    printdelta(streams[_tc_stat], &ru2, &ru3);
+d2212 2
+a2213 2
+    fprintf(streams[_tc_stat], "Prog_main: ");
+    printdelta(streams[_tc_stat], &ru4, &ru5);
+d2216 1
+a2216 1
+    fprintf(streams[_tc_stat], "processReturns : tot %d, empty %d, common %d\n",
+d2229 1
+a2229 1
+      fprintf(streams[_tc_stat], "Macro counts (function counts):\n");
+d2231 1
+a2231 1
+      fprintf(streams[_tc_stat],
+d2235 1
+a2235 1
+      fprintf(streams[_tc_stat],
+d2239 1
+a2239 1
+      fprintf(streams[_tc_stat],
+d2243 1
+a2243 1
+      fprintf(streams[_tc_stat],
+d2247 1
+a2247 1
+      fprintf(streams[_tc_stat],
+d2251 1
+a2251 1
+      fprintf(streams[_tc_stat],
+d2294 3
+a2296 3
+  signalflags[_tc_log] = 0;
+  signalflags[_tc_warn] = 0;
+  signalflags[_tc_error] = 0;
+@
+
+
+1.76
+log
+@Added overflow mechanism for counting tot_dynamic_num_calls
+(without relying on existence of long long).
+@
+text
+@d13 3
+a15 3
+int tc_flag_logsignal = 0; /* turn on/off sending of signal on error/warning */
+int tc_flag_warnsignal = 1;
+int tc_flag_errsignal = 1;
+d20 2
+d89 1
+a89 5
+FILE * statstream = 0;
+FILE * logstream = 0;
+FILE * debugstream = 0;
+FILE * warnstream = 0;
+FILE * errorstream = 0;
+d296 1
+d300 2
+d304 6
+d316 1
+d318 4
+d325 1
+d363 1
+a363 1
+#ifdef TC_TERSE_OUTPUT /* { */
+d365 1
+a365 1
+#else /* } !TC_TERSE_OUTPUT { */
+d367 1
+a367 1
+#endif /* } !TC_TERSE_OUTPUT */
+d373 1
+a373 1
+#ifdef TC_TERSE_OUTPUT /* { */
+d375 1
+a375 1
+#else /* } !TC_TERSE_OUTPUT { */
+d377 1
+a377 1
+#endif /* } !TC_TERSE_OUTPUT */
+d385 1
+a385 1
+#ifdef TC_TERSE_OUTPUT /* { */
+d387 1
+a387 1
+#else /* } !TC_TERSE_OUTPUT { */
+d426 1
+a426 1
+#endif /* } !TC_TERSE_OUTPUT */
+d436 1
+a436 1
+#ifdef TC_TERSE_OUTPUT /* { */
+d438 1
+a438 1
+#else /* } !TC_TERSE_OUTPUT { */
+d485 1
+a485 1
+#endif /* } !TC_TERSE_OUTPUT */
+d582 8
+a589 1
+void _output_simple(FILE * stream, int msgid)
+d591 2
+a592 1
+  if(_msgs[msgid].active){
+d599 3
+d605 1
+a605 1
+          fprintf(stderr, "TC: INTERNAL ERROR: Malloc out of memory\n");
+d624 2
+a627 1
+  if(_brk_msgid == msgid) TCKILL;
+d630 1
+a630 1
+void _output_flc(FILE * stream, const char * file, int line, int col,
+d633 2
+a634 1
+  if(_msgs[msgid].active){
+d641 3
+d647 1
+a647 1
+          fprintf(stderr, "TC: INTERNAL ERROR: Malloc out of memory\n");
+d666 2
+a669 1
+  if(_brk_msgid == msgid && _brk_line == line) TCKILL;
+d672 1
+a672 1
+void _output_si(FILE * stream, const char * file, int line, int col,
+d677 2
+a678 1
+  if(_msgs[msgid].active){
+d685 4
+a688 1
+		s1, s2, s3, s4, i1, i2, i3, i4);
+d692 1
+a692 1
+          fprintf(stderr, "TC: INTERNAL ERROR: Malloc out of memory\n");
+d713 3
+a715 1
+		s1, s2, s3, s4, i1, i2, i3, i4);
+a717 1
+  if(_brk_msgid == msgid && _brk_line == line) TCKILL;
+d720 1
+a720 1
+void _output_full(FILE * stream, const char * file, int line, int col,
+d727 2
+a728 1
+  if(_msgs[msgid].active){
+d735 4
+a738 1
+		s1, i1, i2, i3, a1, a2, t1, t2, t3);
+d742 1
+a742 1
+          fprintf(stderr, "TC: INTERNAL ERROR: Malloc out of memory\n");
+d775 3
+a777 1
+		s1, i1, i2, i3, a1, a2, t1, t2, t3);
+a779 1
+  if(_brk_msgid == msgid && _brk_line == line) TCKILL;
+d801 1
+a801 1
+  if(errorstream) _output_simple(errorstream, GAFP_FAIL);
+d843 2
+a844 2
+    if(warnstream && TAG_BITS(iter) != _typetag_uninit){
+        _output_full(warnstream, fname, line, col, SST_ONM,
+a846 1
+	TC_WARN_SIGNAL;
+d1044 1
+a1044 3
+          if(debugstream)
+            _output_flc(debugstream, evcurr->fname, evcurr->line, evcurr->col,
+			PEV_IT);
+d1195 2
+a1196 2
+void _tcfn_SET_UNALLOC_TAG(const void * saddr, const void * eaddr)
+	{ SET_UNALLOC_TAG("_setUnallocTag",__LINE__,0, saddr, eaddr); }
+d1220 5
+d1248 1
+a1248 2
+      if(warnstream){
+        _output_si(warnstream, fname, line, col,
+a1253 2
+	TC_WARN_SIGNAL;
+      }
+d1314 1
+a1314 2
+        exit(errorstream &&
+		fprintf(errorstream, "FATAL ERROR: memalign out of memory\n"));
+d1330 1
+a1330 2
+    if(warnstream){
+      _output_full(warnstream, fname, line, col, VP_UNA,
+a1334 2
+      TC_WARN_SIGNAL;
+    }
+d1374 1
+a1374 2
+      if(warnstream){
+	_output_full(warnstream, fname, line, col, VT_TMM,
+a1376 2
+	TC_WARN_SIGNAL;
+      }
+d1392 1
+a1392 2
+      if(warnstream){
+	_output_full(warnstream, fname, line, col, VT_TMM,
+a1394 2
+	TC_WARN_SIGNAL;
+      }
+d1408 1
+a1408 2
+      if(warnstream){
+        _output_full(warnstream, fname, line, col, VT_TSM,
+a1410 2
+	TC_WARN_SIGNAL;
+      }
+d1427 2
+a1428 3
+	if(!clear_tag && !_tc_init_mode && warnstream && cond) { \
+	  _output_full(warnstream, fname,line,col, SBT_NEM, 0, size,posn,0, addr,0, addr,0,0); \
+	  TC_WARN_SIGNAL; \
+d1482 3
+a1484 4
+      if(warnstream){
+        _output_flc(warnstream, fname,line,col, SBT_STB);
+        TC_WARN_SIGNAL;
+      }
+d1505 3
+a1507 4
+      if(warnstream){
+        _output_flc(warnstream, fname,line,col, SBT_STA);
+        TC_WARN_SIGNAL;
+      }
+d1590 1
+a1590 2
+    if(errorstream){
+      _output_full(errorstream, fname,line,col, CT_CFU,
+a1591 2
+      TC_ERR_SIGNAL;
+    }
+d1603 1
+a1603 4
+        if(errorstream){
+          _output_flc(errorstream, fname,line,col, CT_AIU);
+          TC_ERR_SIGNAL;
+        }
+d1611 1
+a1611 2
+    if(errorstream){
+      _output_full(errorstream, fname,line,col, CT_CIU,
+a1612 2
+      TC_ERR_SIGNAL;
+    }
+d1616 5
+a1620 4
+  if(logstream  && (type != _ctype_aggregate)
+		&& ((TAG_SIZE(src) != typeinfo[type].size)
+		    || (TAG_BITS(src) != typeinfo[type].typetag))
+		&& !_checkIfInit(srcaddr, type, 0)){
+d1622 1
+a1622 1
+    _output_full(logstream, fname,line,col, CT_TMM,
+a1624 1
+    TC_LOG_SIGNAL;
+d1630 5
+a1634 4
+  if(logstream  && (type != _ctype_aggregate)
+		&& (TAG_BITS(dst) != _typetag_uninit)
+		&& ((TAG_SIZE(dst) != typeinfo[type].size)
+		    || (TAG_BITS(dst) != typeinfo[type].typetag))){
+d1636 1
+a1636 1
+    _output_full(logstream, fname,line,col, CT_TDM,
+a1638 1
+    TC_LOG_SIGNAL;
+d1670 1
+a1670 1
+      if(logstream && !log_written && 
+d1674 1
+a1674 1
+        _output_full(logstream, fname,line,col, CT_TDM,
+a1676 1
+	TC_LOG_SIGNAL;
+d1693 1
+a1693 1
+      if (warnstream && !warn_written) {
+d1696 1
+a1696 1
+        _output_full(warnstream, fname,line,col, CT_SI,
+a1697 1
+	TC_WARN_SIGNAL;
+d1724 2
+a1725 2
+  if(externInitFns && errorstream)
+    _output_flc(errorstream, fname,line,col, ERV_ENN);
+d1804 1
+a1804 4
+    if(warnstream){
+        _output_flc(warnstream, fname,line,col, SSUT_NEM);
+	TC_WARN_SIGNAL;
+    }
+d2004 2
+a2005 2
+            if(warnstream){
+              _output_full(warnstream, fname,line,col, PR_TMM,
+d2007 1
+a2007 3
+	      TC_WARN_SIGNAL;
+              break;
+            }
+d2018 1
+a2018 2
+          if(warnstream){
+            _output_full(warnstream, fname,line,col, PR_TSM,
+a2019 2
+            TC_WARN_SIGNAL;
+          }
+d2030 1
+a2030 2
+      if(warnstream){
+        _output_full(warnstream, fname,line,col, PR_TMC,
+d2032 1
+a2032 2
+	TC_WARN_SIGNAL;
+      }
+d2056 1
+a2056 1
+             SET_UNALLOC_TAG(fname,line,col, agrf_start, agrf_end);
+d2062 1
+a2062 1
+             SET_UNALLOC_TAG(fname,line,col, scaf_start, scaf_end);
+d2067 1
+a2067 1
+             SET_UNALLOC_TAG(fname,line,col, scaf_start, scaf_end);
+d2070 1
+a2070 1
+             SET_UNALLOC_TAG(fname,line,col, agrf_start, agrf_end);
+d2076 1
+a2076 1
+    SET_UNALLOC_TAG(fname,line,col, sf_top, sf_bottom);
+d2078 2
+a2079 2
+    if(!debugflag++ && debugstream)
+      fprintf(debugstream, "Note: stack grows decreasingly!\n");
+d2093 1
+a2093 1
+             SET_UNALLOC_TAG(fname,line,col, agrf_start, agrf_end);
+d2099 1
+a2099 1
+             SET_UNALLOC_TAG(fname,line,col, scaf_start, scaf_end);
+d2104 1
+a2104 1
+             SET_UNALLOC_TAG(fname,line,col, scaf_start, scaf_end);
+d2107 1
+a2107 1
+             SET_UNALLOC_TAG(fname,line,col, agrf_start, agrf_end);
+d2113 1
+a2113 1
+    SET_UNALLOC_TAG(fname,line,col, sf_bottom, sf_top);
+d2115 2
+a2116 2
+    if(!debugflag++ && debugstream)
+      fprintf(debugstream, "Note: stack grows increasingly\n");
+d2143 1
+a2143 2
+        if(warnstream){
+          _output_si(warnstream, fname,line,col, PAT_TMA,
+d2145 1
+a2145 2
+	  TC_WARN_SIGNAL;
+        }
+d2169 1
+a2169 2
+        if(warnstream){
+          _output_full(warnstream, fname,line,col, PAT_TMS,
+d2172 1
+a2172 2
+	  TC_WARN_SIGNAL;
+        }
+d2179 1
+a2179 2
+    if(warnstream){
+      _output_si(warnstream, fname,line,col, PAT_NEA,
+d2181 1
+a2181 2
+      TC_WARN_SIGNAL;
+    }
+d2225 3
+a2227 3
+  if(statstream){
+    fprintf(statstream, "Static  inst-calls: %lu\n", tot_static_num_calls);
+    fprintf(statstream, "Dynamic inst-calls: %lu + %lu * (%lu+1)\n",
+d2234 1
+a2234 1
+  if(statstream){
+d2236 2
+a2237 2
+    fprintf(statstream, "Total time: ");
+    printdelta(statstream, &ru0, &ru5);
+d2239 2
+a2240 2
+    fprintf(statstream, "Call init functions: ");
+    printdelta(statstream, &ru1, &ru2);
+d2242 2
+a2243 2
+    fprintf(statstream, "Process externs: ");
+    printdelta(statstream, &ru2, &ru3);
+d2245 2
+a2246 2
+    fprintf(statstream, "Prog_main: ");
+    printdelta(statstream, &ru4, &ru5);
+d2249 1
+a2249 1
+    fprintf(statstream, "processReturns : tot %d, empty %d, common %d\n",
+d2262 1
+a2262 1
+      fprintf(statstream, "Macro counts (function counts):\n");
+d2264 1
+a2264 1
+      fprintf(statstream,
+d2268 1
+a2268 1
+      fprintf(statstream,
+d2272 1
+a2272 1
+      fprintf(statstream,
+d2276 1
+a2276 1
+      fprintf(statstream,
+d2280 1
+a2280 1
+      fprintf(statstream,
+d2284 1
+a2284 1
+      fprintf(statstream,
+d2292 14
+d2318 12
+a2329 15
+/* typechecker output streams */
+/* if set to 0, nothing will be output */
+#ifdef TC_SILENT /* { */
+  statstream = stderr;
+  logstream = 0;
+  debugstream = 0;
+  warnstream = 0;
+  errorstream = 0;
+#else /* } ! TC_SILENT { */
+  statstream = stderr;
+  logstream = stderr;
+  debugstream = 0; /* debug messages are just meaninglessly annoying */
+  warnstream = stderr;
+  errorstream = stderr;
+#endif /* } ! TC_SILENT */
+d2345 1
+a2346 2
+      else if(!strcmp(argv[i]+4,"nosig"))
+		tc_flag_logsignal = tc_flag_warnsignal = tc_flag_errsignal = 0;
+d2348 20
+a2367 2
+		tc_flag_logsignal = tc_flag_warnsignal = tc_flag_errsignal = 1;
+      else if(!strncmp(argv[i]+4,"clear=",6)){
+d2379 12
+d2392 6
+a2397 14
+             FILE ** stream = 0;
+             char * fname = 0;
+             if(!strncmp(argv[i]+11,"stat=",5)){
+		stream = &statstream;	fname = argv[i]+16;
+             } else if(!strncmp(argv[i]+11,"debug=",6)){
+		stream = &debugstream;	fname = argv[i]+17;
+             } else if(!strncmp(argv[i]+11,"log=",4)){
+		stream = &logstream;	fname = argv[i]+14;
+             } else if(!strncmp(argv[i]+11,"warn=",5)){
+		stream = &warnstream;	fname = argv[i]+16;
+             } else if(!strncmp(argv[i]+11,"error=",5)){
+		stream = &errorstream;	fname = argv[i]+17;
+             }
+             if(stream){
+d2399 2
+a2400 1
+                 *stream = 0;
+d2402 2
+a2403 1
+                 *stream = stdout;
+d2405 2
+a2406 1
+                 *stream = stderr;
+d2408 4
+a2411 3
+                 if(!(*stream = fopen(fname, "w"))){
+                   fprintf(stderr, "TC: Error opening file %s for output\n", fname);
+                 }
+d2413 1
+a2413 1
+             } else fprintf(stderr, "TC: Unrecognized -tc- flag ignored (%s)\n", argv[i]);
+d2435 2
+a2436 2
+  if(debugstream)
+    fprintf(debugstream, "Note: strictPointer mode is %s\n",
+@
+
+
+1.75
+log
+@Added reportNumCalls, along with stuff to count and
+report number of calls to instrumented functions
+(both static and dynamic numbers)
+@
+text
+@d35 1
+d186 1
+a186 1
+  tot_dynamic_num_calls--; /* adjust count */
+d208 1
+a208 1
+      tot_dynamic_num_calls--; /* adjust count */
+d852 1
+a852 1
+    tot_dynamic_num_calls--; /* adjust count */
+d1191 1
+a1191 1
+  tot_dynamic_num_calls++; /* count */
+d1288 1
+a1288 1
+  tot_dynamic_num_calls++; /* count */
+d1314 1
+a1314 1
+  tot_dynamic_num_calls++; /* count */
+d1319 1
+a1319 1
+    tot_dynamic_num_calls--; /* adjust count */
+d1450 1
+a1450 1
+  tot_dynamic_num_calls++; /* count */
+d1560 1
+a1560 1
+  tot_dynamic_num_calls++; /* count */
+d1784 1
+a1784 1
+  tot_dynamic_num_calls++; /* count */
+d1832 1
+a1832 1
+  tot_dynamic_num_calls++; /* count */
+d1843 1
+a1843 1
+  tot_dynamic_num_calls++; /* count */
+d1853 1
+a1853 1
+  tot_dynamic_num_calls++; /* count */
+d1879 1
+a1879 1
+  tot_dynamic_num_calls++; /* count */
+d1931 1
+a1931 1
+  tot_dynamic_num_calls++; /* count */
+d2125 1
+a2125 1
+  tot_dynamic_num_calls++; /* count */
+d2136 1
+a2136 1
+        tot_dynamic_num_calls--; /* adjust count */
+d2157 1
+a2157 1
+        tot_dynamic_num_calls--; /* adjust count */
+d2164 1
+a2164 1
+        tot_dynamic_num_calls--; /* adjust count */
+d2187 1
+a2187 1
+    tot_dynamic_num_calls--; /* adjust count */
+a2196 2
+  if(statstream)
+    fprintf(statstream, "Instrumented\t%d\t%s\n", num_calls, fname);
+d2230 5
+a2234 2
+    fprintf(statstream, "Static  inst-calls: %ld\n", tot_static_num_calls);
+    fprintf(statstream, "Dynamic inst-calls: %ld\n", tot_dynamic_num_calls);
+@
+
+
+1.74
+log
+@Added GDB-callable wrappers for macros, and also _printConstsStderr();
+also, changed _getTagPos to call GET_TAG_POS macro.
+@
+text
+@d30 6
+d185 1
+d207 1
+d849 1
+a849 1
+  if(fix)
+d851 2
+d1190 2
+d1287 2
+d1313 2
+d1318 1
+d1449 2
+d1559 2
+d1783 2
+d1831 1
+d1842 1
+d1852 2
+d1878 1
+d1930 2
+d2124 1
+d2135 1
+d2156 1
+d2163 1
+d2186 1
+d2192 10
+d2228 6
+@
+
+
+1.73
+log
+@Added _ini_static_rep.
+@
+text
+@d1103 65
+a1267 15
+}
+
+_mirror_pos_t _getTagPos(const void * addr)
+{
+  _mirror_pos_t ret;
+
+  unsigned long mapindex = MIRRORMAP_INDEX(addr);
+  unsigned long pageindex = MIRRORPAGE_INDEX(addr);
+
+  if(!mirrormap[mapindex])
+    _touchMirrorPage(mapindex);
+
+  ret.ptr = (unsigned char *)mirrormap[mapindex] + pageindex/2;
+  ret.bit = pageindex%2 * BITS_PER_TAG;
+  return ret;
+@
+
+
+1.72
+log
+@Deleted deprecated old code.
+@
+text
+@d89 2
+d177 2
+@
+
+
+1.71
+log
+@Added stuff to handle new INI typetag.
+@
+text
+@a1098 7
+/* DEPRECATED?
+void _printTagPosStdout(_mirror_pos_t tagpos, size_t size)
+{
+  _printTagPos(stdout, tagpos, size);
+}
+*/
+
+d1317 5
+a1321 1
+#ifdef TC_CHECK_SET_UNALLOC /* { */
+a1326 9
+#if 0 /* { DEPRECATED */
+#define SUT_NEM_TEST(cond,posn,size,addr) \
+	if(!_tc_init_mode && warnstream && cond) { \
+	  _output_full(warnstream, fname,line,col, SUT_NEM, 0, size,posn,0, addr,0, addr,0,0); \
+	  TC_WARN_SIGNAL; \
+	}
+#endif /* } 0 */
+
+/* _tc_init_mode prevents check for multiple definitions of same location */
+d1368 1
+a1368 1
+#endif /* } TC_CHECK_SET_UNALLOC */
+a1450 96
+/* stray tags are cleared to "_typetag_unalloc"; they should be
+ * _typetag_unalloc already.
+ * if they're not, it's probably because we haven't freed memory
+ * (e.g. popped the stack) correctly, in which case they should be
+ * _typetag_unalloc anyway.
+ */
+/* DEPRECATED
+void _setUninitTag(const char * fname, int line, int col,
+		void * addr, size_t size)
+{
+  _setByteTags(fname, line, col, addr, size, _typetag_uninit, _typetag_unalloc);
+}
+*/
+#if 0 /* { OLD setUninitTag; now subsumed by setByteTags */
+{
+  _mirror_pos_t spos, epos;
+  char * saddr = (char *)addr;
+  char * eaddr = (char *)addr + size;
+  unsigned char uninit_pair = _typetag_uninit|(_typetag_uninit<<BITS_PER_TAG);
+
+  if(saddr != eaddr) {
+    /* Check stray tags to left */
+    GET_TAG_POS(spos, saddr);
+    if(CONT_BIT(spos)){
+      _mirror_pos_t tmp;
+      if(warnstream){
+        _output_flc(warnstream, fname,line,col, SUT_STB);
+        TC_WARN_SIGNAL;
+      }
+      tmp = spos;
+      PREV_POS(tmp);
+      while(CONT_BIT(tmp)){
+        /* AAL: unalloc or uninit? */
+        WRITE_TAG(tmp,_typetag_unalloc);
+        PREV_POS(tmp);
+      }
+      WRITE_TAG(tmp,_typetag_unalloc);
+    }
+
+    /* Align saddr to even address */
+    if((unsigned long)saddr & 0x1){
+      SUT_NEM_TEST(TAG_BITS(spos),0,size,addr);
+      WRITE_TAG(spos,_typetag_uninit);
+      saddr++;
+    }
+
+    /* Check stray tags to right */
+    GET_TAG_POS(epos, eaddr);
+    if(CONT_BIT(epos)){
+      _mirror_pos_t tmp;
+      if(warnstream){
+        _output_flc(warnstream, fname,line,col, SUT_STA);
+        TC_WARN_SIGNAL;
+      }
+      tmp = epos;
+      while(CONT_BIT(tmp)){
+        /* AAL: unalloc or uninit? */
+        WRITE_TAG(tmp,_typetag_unalloc)
+        NEXT_POS(tmp);
+      }
+    }
+    /* Align eaddr to even address */
+    if((unsigned long)eaddr & 0x1){
+      --eaddr;
+      GET_TAG_POS(epos, eaddr); /* note: eaddr is (char *) */
+      SUT_NEM_TEST(TAG_BITS(epos),size,size,addr);
+      WRITE_TAG(epos,_typetag_uninit);
+    }
+
+    if(SAME_MIRROR_PAGE(saddr,eaddr-1)){
+      SUT_NEM_TEST((_mc = memcheck(&GET_TAG_BYTE(saddr), (eaddr-saddr)/2)),
+			_mc + (saddr-(char *)addr),size,addr);
+      memset(&GET_TAG_BYTE(saddr), uninit_pair, (eaddr-saddr)/2);
+    } else {
+      int sindex = MIRRORMAP_INDEX(saddr);
+      int eindex = MIRRORMAP_INDEX(eaddr-1);
+      SUT_NEM_TEST((_mc = memcheck(&GET_TAG_BYTE(saddr),
+		(MIRRORPAGE_NUMBYTES - MIRRORPAGE_INDEX(saddr))/2)),
+		_mc + (saddr-(char *)addr),size,addr);
+      memset(&GET_TAG_BYTE(saddr), uninit_pair,
+		(MIRRORPAGE_NUMBYTES - MIRRORPAGE_INDEX(saddr))/2);
+      for(++sindex; sindex < eindex; sindex++){
+        SUT_NEM_TEST((_mc = memcheck(&GET_TAG_BYTE((char *)(sindex << MIRRORPAGE_NUMBITS)),
+		MIRRORPAGE_NUMBYTES/2)),_mc + (saddr-(char *)addr),size,addr);
+        memset(&GET_TAG_BYTE((char *)(sindex << MIRRORPAGE_NUMBITS)),
+		uninit_pair, MIRRORPAGE_NUMBYTES/2);
+      }
+      SUT_NEM_TEST((_mc = memcheck(&GET_TAG_BYTE((char *)(sindex << MIRRORPAGE_NUMBITS)),
+		MIRRORPAGE_INDEX(eaddr)/2)),_mc + (saddr-(char *)addr),size,addr);
+      memset(&GET_TAG_BYTE((char *)(sindex << MIRRORPAGE_NUMBITS)),
+		uninit_pair, MIRRORPAGE_INDEX(eaddr)/2);
+    }
+  }
+}
+#endif /* } if 0 */
+
+a1630 52
+
+/* stray tags are cleared to "uninit", since we're merely corrupting
+ * it, not unallocating it.
+ */
+/* DEPRECATED
+void _setStringTag(const char * fname, int line, int col,
+		const char * addr, size_t str_len)
+{
+  _setByteTags(fname, line, col, addr, str_len+1, _typetag_int, _typetag_uninit);
+}
+*/
+#if 0 /* { OLD setStringTag; now subsumed by setByteTags */
+{
+  int i;
+  _mirror_pos_t pos;
+
+  GET_TAG_POS(pos, addr);
+
+  /* Clear off stray tags to the left */
+  if(CONT_BIT(pos)){
+    _mirror_pos_t iter = pos;
+
+    if(warnstream){
+      _output_flc(warnstream, fname,line,col, SSTT_NEM);
+      TC_WARN_SIGNAL;
+    }
+
+    PREV_POS(iter);
+    while(CONT_BIT(iter)){
+      /* AAL: unalloc or uninit? */
+      WRITE_TAG(iter,_typetag_uninit);
+      PREV_POS(iter);
+    }
+    WRITE_TAG(iter,_typetag_uninit);
+  }
+
+/* ASSUMPTION: char == _typetag_int of size 1. */
+
+  /* Set tags */
+  for(i = 0; i < str_len+1; ++i){
+    WRITE_TAG(pos,_typetag_int)
+    NEXT_POS(pos);
+  }
+
+  /* Clear off stray tags to the right */
+  while(CONT_BIT(pos)){
+    /* AAL: unalloc or uninit? */
+    WRITE_TAG(pos,_typetag_uninit)
+    NEXT_POS(pos);
+  }
+}
+#endif /* } endif 0 */
+@
+
+
+1.70
+log
+@Added _setByteTags; added redirection macros to point
+_setUninitTag and _setStringTag to _setByteTag; old stuff
+commented out, will next be deleted.
+Also, added _typetag_init;
+and added _typecheck_bzero to tcstring.c
+@
+text
+@d821 22
+d859 2
+a860 1
+    if(TAG_BITS(tpi) != TAG_BITS(stpi))
+d950 1
+a950 2
+  else if (!CONT_BIT(tp) &&
+	   /* AAL: Should we use TAG_SIZE instead of SIZE_BITS? */
+d953 1
+a953 1
+  else
+d959 1
+d1012 1
+a1012 1
+/* Summarize, if size is bigger than, say, 50, and limit to output of 50 "items" */
+d1099 1
+d1104 1
+d1110 1
+a1110 1
+/* NOTE: (type == _ctype_aggregate && size_aggr == 0) means
+a1111 2
+/* NOTE: size_aggr is now redundant: can check externInitFns
+	 instead? */
+d1113 1
+a1113 1
+		void * addr, _ctype_t type, size_t size_aggr)
+a1229 7
+
+#ifndef TC_VERIFY_UNALLOC
+  /* HACK: assuming string literal, set tag to declared type */
+  if(size == sizeof(char)){
+    _setScalarTag(fname, line, col, addr, _ctype_char);
+  } else {
+#endif
+a1237 3
+#ifndef TC_VERIFY_UNALLOC
+  }
+#endif
+d1271 3
+a1273 1
+    if (*(char *)tpi.ptr != *(char *)stpi.ptr) {
+d1291 2
+a1292 1
+    if(TAG_BITS(tpi) != TAG_BITS(stpi)){
+d1325 1
+a1325 1
+/* if setUninitTag overwrites non-zero (non-Unalloc) memory, issue SUT_NEM warning */
+d1327 1
+a1327 1
+static int _mc; /* used by SUT_NEM_TEST conditionals */
+d1330 1
+d1336 1
+d1636 2
+a1637 1
+		    || (TAG_BITS(src) != typeinfo[type].typetag))){
+a1647 6
+#if 0 /* { Old Version - requires uninit to be properly sized */
+  if(logstream  && (type != _ctype_aggregate)
+		&& ((TAG_SIZE(dst) != typeinfo[type].size)
+		    || (TAG_BITS(dst) != _typetag_uninit
+			&& TAG_BITS(dst) != typeinfo[type].typetag))){
+#endif /* } if 0 - replaced with new version: */
+a1708 1
+    }
+d1710 1
+a1710 1
+    else {  /* AAL: Copying from the middle of src!  Warn! */
+d1722 1
+d1724 1
+a1724 1
+	WRITE_TAG(dst, _typetag_uninit);
+d1792 1
+d1845 1
+d2055 1
+d2057 1
+d2067 2
+a2068 1
+          if(TAG_BITS(tpi) != TAG_BITS(rtpi)){
+d2080 4
+a2083 2
+
+        /* Make sure tagpos has "ended" */
+a2091 2
+        /* -- just copy -- */
+        _copyTagSilent(argaddrs[0].addr, addr, size);
+d2226 2
+a2227 1
+        /*NOTE: copyTag won't cough _typetag_unalloc; memory is pre-initialized*/
+d2234 1
+@
+
+
+1.69
+log
+@Added TC_DEFINE_MSGS directive to define the msgs array only once.
+(See tcinternal.h)
+@
+text
+@d72 1
+a72 1
+                            "FLT", "PTR", "BIT"};
+d1311 3
+a1313 2
+/* used by SUT_NEM_TEST conditionals */
+static int _mc;
+d1320 8
+d1364 81
+d1451 1
+d1455 5
+d1539 1
+d1730 1
+d1734 5
+d1777 1
+@
+
+
+1.68
+log
+@Moved compile-time flags to tcinternal.h; renamed some to include TC_ prefix.
+@
+text
+@d6 1
+d8 1
+@
+
+
+1.67
+log
+@Added "summarize" mode for tags longer than 50 bytes.
+Also, added "_tc_init_mode" flag to suppress multiple global decl errors;
+may want to change to optionally output warning?
+@
+text
+@a7 35
+/**********************/
+/* Compile time flags */
+/**********************/
+/* -- debugging: trace call stack bounds */
+/* #define TC_TRACECALL */
+
+/* -- turn on/off printing of stats */
+#define TC_DOSTATS
+
+/* -- turn on/off getrusage timing */
+/* #define TC_DO_TIMINGS(x) x */
+#define TC_DO_TIMINGS(x)
+
+/* -- if we want multiline (human-readable) output */
+#define TC_MULTILINE
+
+/* -- if we want compact (minimal) output */
+/* #define TC_TERSE_OUTPUT */
+
+/* -- log if we're copying INTO mismatched memory */
+#define LOG_DIRTY_COPY
+
+/* -- warn if setUninitTag overwrites non-zero (non-Unalloc) memory */
+#define CHECK_SET_UNALLOC
+
+/* -- Suppresses all output, though we still "do all the work" */
+/* #define TC_SILENT */
+
+/* -- Counts process return "efficiency" */
+/* #define COUNT_PROC_RET */
+
+/* -- With this on, VerifyPtr will complain when a character is unallocated.
+      else, it will assume an uninitialized character, and set it */
+#define VERIFY_UNALLOC
+
+d1206 1
+a1206 1
+#ifndef VERIFY_UNALLOC
+d1220 1
+a1220 1
+#ifndef VERIFY_UNALLOC
+d1306 1
+a1306 1
+#ifdef CHECK_SET_UNALLOC /* { */
+d1351 1
+a1351 1
+#endif /* } CHECK_SET_UNALLOC */
+d1443 1
+a1443 1
+#ifdef LOG_DIRTY_COPY /* { */
+d1462 1
+a1462 1
+#endif /* } LOG_DIRTY_COPY */
+d1528 1
+a1528 1
+#ifdef LOG_DIRTY_COPY /* { */
+d1547 1
+a1547 1
+#endif /* } LOG_DIRTY_COPY */
+d1575 1
+a1575 1
+#ifdef LOG_DIRTY_COPY /* { */
+d1586 1
+a1586 1
+#endif /* } LOG_DIRTY_COPY */
+d1846 1
+a1846 1
+#ifdef COUNT_PROC_RET /* { */
+d1850 1
+a1850 1
+#endif /* } COUNT_PROC_RET */
+d1889 1
+a1889 1
+#ifdef COUNT_PROC_RET /* { */
+d1891 1
+a1891 1
+#endif /* } COUNT_PROC_RET */
+d1968 1
+a1968 1
+#ifdef COUNT_PROC_RET
+d1971 1
+a1971 1
+#endif /* COUNT_PROC_RET */
+d1984 1
+a1984 1
+#ifdef COUNT_PROC_RET
+d1987 1
+a1987 1
+#endif /* COUNT_PROC_RET */
+d2179 1
+a2179 1
+#ifdef COUNT_PROC_RET /* { */
+d2184 1
+a2184 1
+#endif /* } COUNT_PROC_RET */
+@
+
+
+1.66
+log
+@Changed function "find" to be static, since it's such a common
+function name. May need to do the same for other functions?
+@
+text
+@d144 5
+d1022 1
+d1027 54
+d1082 1
+a1082 1
+    int i = size;
+d1347 1
+a1347 1
+	if(warnstream && cond) { \
+d1570 1
+a1570 1
+#endif 0 /* } replaced with new version: */
+a2294 13
+  initStaticRep();
+
+  TC_DO_TIMINGS(getrusage(RUSAGE_SELF, &ru1));
+  callInitFunctions();
+  TC_DO_TIMINGS(getrusage(RUSAGE_SELF, &ru2));
+  processExternVars();
+  TC_DO_TIMINGS(getrusage(RUSAGE_SELF, &ru3));
+
+  /* debug output: compile time flags */
+  if(debugstream)
+    fprintf(debugstream, "Note: strictPointer mode is %s\n",
+			 strictPointer?"ON":"OFF");
+
+a2345 2
+
+
+d2351 17
+@
+
+
+1.65
+log
+@Renamed _tcdebug_processCall to _tcdebug_processCall_func
+@
+text
+@d544 1
+a544 1
+struct msg_entry * find(FILE * stream, int msgid, const char * file, int line, int col,
+@
+
+
+1.64
+log
+@Added semicolons to empty switch case, just to please
+Solaris' cc.
+@
+text
+@d1834 1
+a1834 1
+void _tcdebug_processCall(const char * fnname)
+@
+
+
+1.63
+log
+@Added TC_TRACECALL stuff -- which prints (when enabled)
+a trace of function calls and returns, along with the
+addresses of the various stack frame regions as used by
+tc to clear the frame.
+Added -tc-clear- flags, and modified processReturn to clear
+the stack frame with the various possible modes (clearing
+only the non-formal area; clearing each region only; clearing
+up to the scalar formals region, or the aggregate formals
+region, or the "highest" of the two).
+@
+text
+@d1997 1
+d2034 1
+@
+
+
+1.62
+log
+@Modified SUT_NEM_TEST macro to include TC_WARN_SIGNAL
+@
+text
+@d11 3
+d55 8
+d1827 23
+d1852 2
+a1853 2
+		void * f1_ptr, size_t f1_siz, void * fn_ptr, size_t fn_siz,
+		_addr_and_size_t * argaddrs, const void * addr, size_t size)
+d1858 3
+a1860 1
+  void * sf_end = &sf_end;
+d1868 23
+d1965 1
+a1965 1
+  /* Clear the stack frame between sf_start and sf_end */
+d1967 31
+a1997 2
+  /* mark start of stack - one of (f1_ptr, fn_ptr) */
+  if(f1_ptr > sf_end){ /* stack grows downward */
+d1999 1
+a1999 2
+    void * sf_start = (f1_ptr > fn_ptr) ?
+		((char *)f1_ptr+f1_siz) : ((char *)fn_ptr+fn_siz);
+d2004 3
+a2006 1
+    SET_UNALLOC_TAG(fname,line,col, sf_end, sf_start);
+d2008 26
+a2033 1
+  } else {                /* stack grows upward   */
+d2035 1
+a2035 1
+    void * sf_start = (f1_ptr < fn_ptr) ? f1_ptr : fn_ptr;
+d2040 1
+a2040 1
+    SET_UNALLOC_TAG(fname,line,col, sf_start, sf_end);
+a2041 1
+  }
+d2256 13
+a2268 1
+      else if(!strncmp(argv[i]+4,"stream-",7)){
+@
+
+
+1.61
+log
+@Removed obsolete comments (mainly commented-out debug code).
+@
+text
+@d1275 5
+a1279 2
+#define SUT_NEM_TEST(cond,posn,size,addr) if(warnstream && cond) \
+	_output_full(warnstream, fname,line,col, SUT_NEM, 0, size,posn,0, addr,0, addr,0,0);
+@
+
+
+1.60
+log
+@Added quick "verifyPtr" to at least do something for copyTag of
+aggregates; should eventually expand to include a size_aggr
+argument to do proper "verifyPtr".
+@
+text
+@a792 7
+/*  AAL: debug
+fprintf(warnstream,
+	"initTag:  first_nibble = %d  size_nibble = %d  subsequent_nibble = %d  "
+	"desc = %s  size = %d  logsize = %d\n", first_nibble, size_nibble, subsequent_nibble,
+	typeinfo[type].desc, typeinfo[type].size, typeinfo[type].logsize);
+*/
+
+a1166 6
+/* NOTE: in the future, when we get rid of "getTagPos" in enough places,
+	 then verifyAlloc will take a void *, and it can then be smart
+	 enough to first check for the existence of a page, and not
+	 allocate one if it is not there.
+ */
+
+d1169 1
+a1169 1
+/* HACK: assuming string literal, set tag to declared type */
+d1171 4
+a1174 3
+if(size == sizeof(char)){
+  _setScalarTag(fname, line, col, addr, _ctype_char);
+}else{
+d1185 1
+a1185 1
+}
+a1220 6
+
+/*  AAL: debug
+fprintf(warnstream, "*(char *)tpi.ptr != *(char *)stpi.ptr: "
+	"*(char *)tpi.ptr = %x  *(char *)stpi.ptr = %x  size = %d\n",
+	*(char *)tpi.ptr, *(char *)stpi.ptr, size);
+*/
+a1221 3
+/*  AAL: debug
+fprintf(warnstream, "1: reftype = %d  desc = %s\n", reftype, typeinfo[reftype].desc);
+*/
+a1241 3
+/*  AAL: debug
+fprintf(warnstream, "2: reftype = %d  desc = %s\n", reftype, typeinfo[reftype].desc);
+*/
+a1260 3
+/*  AAL: debug
+fprintf(warnstream, "3: reftype = %d  desc = %s\n", reftype, typeinfo[reftype].desc);
+*/
+@
+
+
+1.59
+log
+@Added -tc-trackfree flag;
+Embellished output of _tcSetBreak();
+@
+text
+@d1202 1
+a1202 1
+/* Note: we currently don't verify aggregate types;
+d1206 1
+a1206 1
+		const void * addr, _ctype_t reftype)
+d1213 3
+a1215 2
+  /* verifying aggregate: currently do nothing */
+  if(reftype == _ctype_aggregate)
+d1217 1
+@
+
+
+1.58
+log
+@Redid the LOG_DIRTY_COPY condition to not output warning when
+destination is uninitialized (regardless of size).
+This circumvents the common "malloc"-caused warnings.
+@
+text
+@d43 1
+a43 2
+/* turn on/off sending of signal on error/warning */
+int tc_flag_logsignal = 0;
+d46 1
+d50 2
+d324 8
+d2160 5
+a2164 4
+      else if(!strcmp(argv[i]+4,"nosig")){
+		tc_flag_logsignal = tc_flag_warnsignal = tc_flag_errsignal = 0; }
+      else if(!strcmp(argv[i]+4,"allsig")){
+		tc_flag_logsignal = tc_flag_warnsignal = tc_flag_errsignal = 1; }
+@
+
+
+1.57
+log
+@Added -tc-stream- flags; also prepended "TC" to diagnostic output.
+@
+text
+@d1506 1
+d1511 5
+@
+
+
+1.56
+log
+@Changed verifyTag so that it sets destination to proper type
+ONLY IF destination was unalloc; otherwise leave old data
+there.
+@
+text
+@d202 1
+a202 1
+		     "Fatal error: incompatible scalar size (sizeof(%s) = %d)\n",
+d319 1
+a319 1
+  fprintf(stderr, "Changing breakpoint from %d:%d to %d:%d\n",
+d575 1
+a575 1
+          fprintf(stderr, "INTERNAL ERROR: Malloc out of memory\n");
+d612 1
+a612 1
+          fprintf(stderr, "INTERNAL ERROR: Malloc out of memory\n");
+d652 1
+a652 1
+          fprintf(stderr, "INTERNAL ERROR: Malloc out of memory\n");
+d697 1
+a697 1
+          fprintf(stderr, "INTERNAL ERROR: Malloc out of memory\n");
+d1784 1
+a1784 1
+    fprintf(stderr, "replicating 0 elements!\n");
+d2148 30
+a2177 1
+      else fprintf(stderr, "Unrecognized -tc- flag ignored (%s)\n", argv[i]);
+@
+
+
+1.55
+log
+@Changed LOG_DIRTY_COPY behavior to only check scalars; let
+aggregates go.
+@
+text
+@d1237 5
+a1241 2
+      /* suppress future messages by setting to declared type */
+      _copyTagSilent(addr,typeinfo[reftype].staticrep_ptr,size);
+d1260 4
+a1263 2
+      /* suppress future messages by setting to declared type */
+      _copyTagSilent(addr,typeinfo[reftype].staticrep_ptr,size);
+a1549 4
+/*
+        _output_full(logstream, fname,line,col, CT_TDM,
+		0, size,size,0, srcaddr,dstaddr, srcaddr,dstaddr,0);
+*/
+@
+
+
+1.54
+log
+@Added stuff for CHECK_SET_UNALLOC, includes function
+memcheck, etc.
+@
+text
+@d1413 2
+d1433 2
+d1499 15
+d1536 1
+d1545 1
+d1548 4
+d1556 1
+@
+
+
+1.53
+log
+@Added _tcSetBreak capability (for use with GDB); entails adding
+a couple of globals, the function, and changing the output
+functions to TCKILL when the breakpoint is reached.
+@
+text
+@d25 4
+a28 1
+/* #define LOG_DIRTY_COPY */
+d1280 44
+d1356 1
+d1359 1
+d1383 1
+d1388 2
+d1394 3
+d1400 2
+d1405 2
+d1526 1
+a1526 1
+		0, size,size,0, srcaddr,dstaddr, srcaddr,dstaddr,0)
+@
+
+
+1.52
+log
+@Small change to printTagPos: exclude trailing ... except when
+printing an incomplete tag.
+@
+text
+@d287 38
+d344 1
+a344 1
+    fprintf(stream, "%s\n", _msgs[msgid].msg);
+d354 1
+a354 1
+    fprintf(stream, "[%s:%d.%d] %s\n", file, line, col, _msgs[msgid].msg);
+d366 1
+a366 1
+    fprintf(stream, "[%s:%d.%d] %s ", file, line, col, _msgs[msgid].msg);
+d417 1
+a417 1
+    fprintf(stream, "[%s:%d.%d] %s ", file, line, col, _msgs[msgid].msg);
+d593 1
+d630 1
+d673 1
+d730 1
+@
+
+
+1.51
+log
+@NOW fixed the bug in find() (previous fix was incomplete).
+@
+text
+@d970 1
+a970 1
+    fprintf(f, "%c...", CONT_BIT(tagpos)?':':'>');
+@
+
+
+1.50
+log
+@Fixed but with find() function.
+@
+text
+@d483 1
+a483 1
+			const void * t1, const void * t2, const void * t3)
+d491 1
+a491 1
+      char tb;
+d494 5
+a498 2
+		if((unsigned long)t3 & 0x1) tb = ODD_TAG_BITS(tb);
+		if(GET_TAG_BYTE(n->t3) != tb) continue;
+d500 5
+a504 2
+		if((unsigned long)t2 & 0x1) tb = ODD_TAG_BITS(tb);
+		if(GET_TAG_BYTE(n->t2) != tb) continue;
+d506 5
+a510 2
+		if((unsigned long)t1 & 0x1) tb = ODD_TAG_BITS(tb);
+		if(GET_TAG_BYTE(n->t1) != tb) continue;
+d526 1
+a526 1
+      struct msg_entry * n = find(stream, msgid, 0, 0, 0, 0, 0, 0);
+d562 1
+a562 1
+      struct msg_entry * n = find(stream, msgid, file, line, col, 0, 0, 0);
+d600 1
+a600 1
+      struct msg_entry * n = find(stream, msgid, file, line, col, 0, 0, 0);
+d644 1
+a644 1
+      struct msg_entry * n = find(stream, msgid, file, line, col, t1, t2, t3);
+@
+
+
+1.49
+log
+@Added tc_flag_{log,warn,err}signal flags and commandline flags
+-tc-nosig/-tc-allsig to turn on/off signals.
+@
+text
+@d491 1
+d493 9
+a501 3
+        case 3: if(GET_TAG_BYTE(n->t3) != GET_TAG_BYTE(t3)) continue;
+        case 2: if(GET_TAG_BYTE(n->t2) != GET_TAG_BYTE(t2)) continue;
+        case 1: if(GET_TAG_BYTE(n->t1) != GET_TAG_BYTE(t1)) continue;
+@
+
+
+1.48
+log
+@Changed initTag to output non-aligned/non-empty warning
+only if dest is not UNINIT; restructured that output message
+(see tcinternal.h).
+Also, these overwrites are now padded with uninits rather
+than unallocs.
+@
+text
+@d40 6
+a45 2
+int flag_summarize = 0; /* "summarize" errors and warnings, by line number,
+			   at end of execution; may not print on crash */
+d509 1
+a509 1
+    if(flag_summarize){
+d545 1
+a545 1
+    if(flag_summarize){
+d583 1
+a583 1
+    if(flag_summarize){
+d627 1
+a627 1
+    if(flag_summarize){
+d660 1
+a660 1
+          case 0:
+d1999 5
+a2003 2
+      if(!strcmp(argv[i]+4,"summarize")) flag_summarize = 1;
+/*    else if(!strcmp(argv[i]+4,"verbose")) */
+@
+
+
+1.47
+log
+@Added mechanism to print summarized output
+(activated with -tc-summarize flag into instrumented executable)
+@
+text
+@d700 3
+a702 3
+/* used internally to initialize mirrors, and by "setScalarTag"
+ * in either case, stray tags are cleared to "_typetag_unalloc" (in fact,
+ * we could verify that the memory is _typetag_unalloc)
+d730 1
+a730 5
+
+    if(warnstream){
+	_output_flc(warnstream, fname,line,col, IT_INM);
+	TC_WARN_SIGNAL;
+    }
+d734 1
+a734 2
+      /* AAL: unalloc or uninit? */
+      WRITE_TAG(iter,_typetag_unalloc);
+d736 1
+d738 9
+a746 1
+    WRITE_TAG(iter,_typetag_unalloc);
+d765 1
+a765 2
+    /* AAL: unalloc or uninit? */
+    WRITE_TAG(tagpos,_typetag_unalloc)
+@
+
+
+1.46
+log
+@Added mechanism in main() to intercept command-line arguments;
+next, implement "-tc-summarize" mode of output.
+@
+text
+@d297 1
+a297 1
+void _output_simple(FILE * stream, int msgid)
+a298 1
+  if(_msgs[msgid].active){
+a303 1
+  }
+d306 1
+a306 1
+void _output_flc(FILE * stream, const char * file, int line, int col,
+a308 1
+  if(_msgs[msgid].active){
+a313 1
+  }
+d316 1
+a316 2
+
+void _output_si(FILE * stream, const char * file, int line, int col,
+a320 1
+  if(_msgs[msgid].active){
+a362 1
+  }
+d365 1
+a365 1
+void _output_full(FILE * stream, const char * file, int line, int col,
+a371 1
+  if(_msgs[msgid].active){
+d422 246
+d670 1
+d1873 1
+d1875 3
+d1879 1
+d1935 1
+a1972 1
+#ifdef TC_DOSTATS
+a1973 1
+#endif /* TC_DOSTATS */
+@
+
+
+1.45
+log
+@Removed old output fprintfs (was previously commented out)
+@
+text
+@d37 6
+d1744 14
+@
+
+
+1.44
+log
+@Modified verifyAlloc to not touch a new page if not needed.
+@
+text
+@d445 1
+a445 4
+/*
+  if(errorstream) fprintf(errorstream, "ERROR: getAddrForPos failed!\n");
+*/
+/**/if(errorstream) _output_simple(errorstream, GAFP_FAIL);
+a486 5
+/*
+	fprintf(warnstream,
+		"[%s:%d.%d] WARNING! Initializing non-empty memory.\n",
+		fname, line, col);
+*/
+a668 6
+/*
+            fprintf(debugstream,
+		"[%s:%d.%d] WARNING: extern with incomplete type"
+		" not initialized\n",
+		evcurr->fname, evcurr->line, evcurr->col);
+*/
+a754 8
+/*
+        fprintf(warnstream,
+	  "[%s:%d.%d] WARNING: extern previously defined with different type\n"
+	  "(defined here as %s, at [%s:%d.%d] as %s)\n",
+	  fname, line, col, typeinfo[type].desc,
+	  evcurr->fname,evcurr->line,evcurr->col,
+	  typeinfo[evcurr->type].desc);
+*/
+a865 6
+/*
+      fprintf(warnstream,
+		"[%s:%d.%d] verifyPtr: "
+		"Pointer (0x%08x) points to unallocated memory %s",
+		fname, line, col,  (unsigned int) addr, exp);
+*/
+a917 10
+/*
+	fprintf(warnstream,
+		"[%s:%d.%d] verifyTag: Type mismatch in expression (0x%x) %s",
+			fname, line, col, (unsigned int) addr, exp);
+        fprintf(warnstream,  "  --> expecting: ");
+        _printTagPos(warnstream, staticpos, size);
+        fprintf(warnstream,"\n  -->     found: ");
+        _printTagPos(warnstream, tagpos, size);
+        fprintf(warnstream,"\n");
+*/
+a937 10
+/*
+	fprintf(warnstream,
+		"[%s:%d.%d] verifyTag: Type mismatch in expression (0x%x) %s",
+			fname, line, col, (unsigned int) addr, exp);
+        fprintf(warnstream,  "  --> expecting: ");
+        _printTagPos(warnstream, staticpos, size);
+        fprintf(warnstream,"\n  -->     found: ");
+        _printTagPos(warnstream, tagpos, size);
+        fprintf(warnstream,"\n");
+*/
+a957 10
+/*
+	fprintf(warnstream,
+		"[%s:%d.%d] verifyTag: Type size mismatch in expression (0x%x) %s",
+		fname, line, col, (unsigned int) addr, exp);
+	fprintf(warnstream, "  --> expecting: ");
+	_printTagPos(warnstream, staticpos, size);
+	fprintf(warnstream, "\n  -->     found: ");
+	_printTagPos(warnstream, tagpos, 2*size);
+	fprintf(warnstream, "...\n");
+*/
+a986 5
+/*
+        fprintf(warnstream,
+		"[%s:%d.%d]setUninitTag: cleaning stray tags (before).\n",
+		fname, line, col);
+*/
+a1009 5
+/*
+        fprintf(warnstream,
+		"[%s:%d.%d]setUninitTag: cleaning stray tags (after).\n",
+		fname, line, col);
+*/
+a1080 6
+/*
+      fprintf(errorstream,
+		"[%s:%d.%d] copyTag: copying from unallocated memory! "
+		"(0x%x -> 0x%x)\n",
+		fname,line,col, (unsigned int)srcaddr,(unsigned int)dstaddr);
+*/
+a1096 6
+/*
+          fprintf(errorstream,
+		"[%s:%d.%d] copyTag: ... and into unallocated memory! "
+		"(0x%x -> 0x%x)\n",
+		fname,line,col, (unsigned int)srcaddr,(unsigned int)dstaddr);
+*/
+a1107 6
+/*
+      fprintf(errorstream,
+		"[%s:%d.%d] copyTag: copying into unallocated memory! "
+		"(0x%x -> 0x%x)\n",
+		fname,line,col, (unsigned int)srcaddr,(unsigned int)dstaddr);
+*/
+a1118 13
+/*
+    fprintf(logstream,
+		"[%s:%d.%d] copyTag: type mismatch "
+		"(0x%x -> 0x%x)\n",
+		fname,line,col, (unsigned int)srcaddr,(unsigned int)dstaddr);
+    fprintf(logstream,   "  --> expecting: ");
+    _printTag(logstream, typeinfo[type].staticrep_ptr, size);
+    fprintf(logstream, "\n  -->   copying: ");
+    _printTag(logstream, srcaddr, size);
+    fprintf(logstream, "\n  -->      into: ");
+    _printTag(logstream, dstaddr, size);
+    fprintf(logstream, "\n");
+*/
+a1155 11
+/*
+	fprintf(logstream,
+		"[%s:%d.%d] copyTag: type mismatch "
+		"(0x%x -> 0x%x)\n",
+		fname,line,col, (unsigned int)srcaddr,(unsigned int)dstaddr);
+	fprintf(logstream,   "  --> copying: ");
+	_printTag(logstream, srcaddr, size);
+	fprintf(logstream, "\n  -->    into: ");
+	_printTag(logstream, dstaddr, size);
+	fprintf(logstream, "\n");
+*/
+a1177 11
+/*
+	fprintf(warnstream,
+		"[%s:%d.%d] copyTag: source invalid "
+		"(0x%x -> 0x%x)\n",
+		fname,line,col, (unsigned int)srcaddr,(unsigned int)dstaddr);
+	fprintf(warnstream,   "  --> copying: ");
+	_printTag(warnstream, srcaddr, size);
+	fprintf(warnstream, "\n  -->    into: ");
+	_printTag(warnstream, dstaddr, size);
+	fprintf(warnstream, "\n");
+*/
+a1217 5
+/*
+      fprintf(warnstream,
+	"[%s:%d.%d] WARNING! setStringTag initializing non-empty memory.\n",
+	        fname, line, col);
+*/
+a1250 5
+/*
+    fprintf(errorstream,
+	"ERROR: extern_registerVar[%s:%d.%d]: externInitFns is not null\n",
+	fname, line, col);
+*/
+a1327 5
+/*
+	fprintf(warnstream,
+		"[%s:%d.%d] WARNING! Initializing non-empty memory.\n",
+		fname, line, col);
+*/
+a1472 11
+/*
+              fprintf(warnstream,
+		"[%s:%d.%d] processReturn: type mismatch", fname, line, col);
+              fprintf(warnstream,"\n  --> expecting: ");
+              _printTag(warnstream, argaddrs[0].addr, size);
+              fprintf(warnstream,"\n  -->     found: ");
+              _printTag(warnstream, addr, size);
+              fprintf(warnstream,"\n");
+              fprintf(warnstream, " => continuing with bad type "
+			      "(may cause further warnings)\n");
+*/
+a1486 12
+/*
+            fprintf(warnstream,
+		"[%s:%d.%d] processReturn: type size mismatch",
+		fname, line, col);
+            fprintf(warnstream,"\n  --> expecting: ");
+            _printTag(warnstream, argaddrs[0].addr, size);
+            fprintf(warnstream,"\n  -->     found: ");
+            _printTag(warnstream, addr, 2*size);
+            fprintf(warnstream,"\n");
+            fprintf(warnstream, " => continuing with bad type "
+			      "(may cause further warnings)\n");
+*/
+a1503 12
+/*
+        fprintf(warnstream,
+		"[%s:%d.%d] processReturn: type mismatch",
+		fname, line, col);
+        fprintf(warnstream,"\n  --> expecting: ");
+        _printTag(warnstream, argaddrs[0].addr, argaddrs[0].size);
+        fprintf(warnstream,"\n  -->     found: ");
+        _printTag(warnstream, addr, size);
+        fprintf(warnstream,"\n");
+        fprintf(warnstream, " => continuing with declared type"
+			    " (may suppress further errors)\n");
+*/
+a1560 8
+/*
+          fprintf(warnstream,
+		"[%s:%d.%d] processArgTag: type mismatch (aggregate) ",
+		fname, line, col);
+          fprintf(warnstream, "in argument #%d\n", index);
+          fprintf(warnstream, "  size expected = %d, size passed = %d\n",
+		size_aggr, argaddrs[index].size);
+*/
+a1584 13
+/*
+          fprintf(warnstream,
+		"[%s:%d.%d] processArgTag: type mismatch (scalar) ",
+		fname, line, col);
+          fprintf(warnstream, "in argument #%d\n", index);
+          fprintf(warnstream,  "  --> expecting: ");
+          _printTagPos(warnstream, _getTagPos(typeinfo[type].staticrep_ptr),
+				  typeinfo[type].size);
+          fprintf(warnstream,"\n  -->     found: ");
+          _printTagPos(warnstream, _getTagPos(argaddrs[index].addr),
+				  argaddrs[index].size);
+          fprintf(warnstream,"\n");
+*/
+a1596 7
+/*
+      fprintf(warnstream,
+	"[%s:%d.%d]: processArgTag: not enough arguments passed to function.\n",
+	fname, line, col);
+      fprintf(warnstream, "  expecting at least %d; passed %d\n",
+		index, _globalArgCount);
+*/
+@
+
+
+1.43
+log
+@Added long long _dummyInt, for use by bitfield handling code;
+Changed setScalarTag prototype to take const void * instead of void *;
+Added (void *) cast to memalign call to elide compiler warning.
+@
+text
+@d628 3
+@
+
+
+1.42
+log
+@Moved initialization of warnstream, errorstream, etc to main(), since
+certain platforms don't allow initialization of FILE * to stderr
+directly (i.e. stdin, stdout, stderr aren't always constants).
+@
+text
+@a2 1
+#include <alloca.h>
+d12 1
+a12 1
+/* #define TC_DOSTATS */
+d115 2
+d212 1
+a212 1
+             void * addr; _ctype_t type; } sst;
+d840 1
+a840 1
+      mirrormap[mapindex] = memalign(MIRRORPAGE_NUMBYTES, MIRRORPAGE_NUMBYTES);
+d1399 1
+a1399 1
+			void * addr, _ctype_t type)
+d1498 1
+a1498 1
+		void * addr, _ctype_t type)
+d1501 1
+a1501 1
+    initTag(fname, line, col, addr, _ctype_int);
+d1503 1
+a1503 1
+    initTag(fname, line, col, addr, type);
+d1508 1
+a1508 1
+		void * addr, _ctype_t type)
+d1510 1
+a1510 1
+  initTag(fname, line, col, addr, type);
+@
+
+
+1.41
+log
+@Surrounded timing stuff (getrusage) with TC_DO_TIMINGS
+Added #define TC_DOSTATS stuff
+@
+text
+@d87 6
+a92 14
+/* if set to 0, nothing will be output */
+#ifdef TC_SILENT /* { */
+ FILE * statstream = stderr;
+ FILE * logstream = 0;
+ FILE * debugstream = 0;
+ FILE * warnstream = 0;
+ FILE * errorstream = 0;
+#else /* } ! TC_SILENT { */
+ FILE * statstream = stderr;
+ FILE * logstream = stderr;
+ FILE * debugstream = 0; /* debug messages are just meaninglessly annoying */
+ FILE * warnstream = stderr;
+ FILE * errorstream = stderr;
+#endif /* } ! TC_SILENT */
+d1893 16
+@
+
+
+1.40
+log
+@Commented out "COUNT_PROC_RET"
+@
+text
+@d12 7
+d1902 1
+a1902 1
+  getrusage(RUSAGE_SELF, &ru0);
+d1909 1
+d1911 1
+d1915 1
+a1915 1
+  getrusage(RUSAGE_SELF, &ru1);
+d1917 1
+a1917 1
+  getrusage(RUSAGE_SELF, &ru2);
+d1919 1
+a1919 1
+  getrusage(RUSAGE_SELF, &ru3);
+d1934 1
+a1934 1
+  getrusage(RUSAGE_SELF, &ru4);
+@
+
+
+1.39
+log
+@Redirected useless "processExternVars: extern with incomplete type" (PEV_IT)
+message to debugstream;
+set debugstream to 0.
+@
+text
+@d25 1
+a25 1
+#define COUNT_PROC_RET
+@
+
+
+1.38
+log
+@Corrected bug in _output_full which output tags in reverse order.
+@
+text
+@d90 1
+a90 1
+ FILE * debugstream = stderr;
+d672 2
+a673 1
+          if(logstream)
+d675 1
+a675 1
+            fprintf(logstream,
+d680 1
+a680 1
+            _output_flc(logstream, evcurr->fname, evcurr->line, evcurr->col,
+@
+
+
+1.37
+log
+@Renamed "TC_COMPACT_OUTPUT" to "TC_TERSE_OUTPUT"; turned it of by default.
+@
+text
+@d409 4
+a412 3
+      switch(_msgs[msgid].targs){
+        case 3:
+          _printTag(stream, t3, i3);
+a413 1
+        case 2:
+d415 2
+d418 1
+a418 4
+        case 1:
+          _printTag(stream, t1, i1);
+          fprintf(stream, ")");
+        break;
+d420 1
+d1983 1
+a1983 1
+  _copyTag("",0,0, adr78, &_float_static_rep[0], sizeof(float));
+d2003 1
+a2003 1
+  _copyTag("",0,0, adr76, &_float_static_rep[0], sizeof(float));
+d2008 1
+a2008 1
+  _copyTag("",0,0, adr78, &_short_static_rep[0], sizeof(short));
+@
+
+
+1.36
+log
+@Added "output manager" functions (_output_*) for diagnostic output.
+@
+text
+@d16 1
+a16 1
+#define TC_COMPACT_OUTPUT
+d294 1
+a294 1
+#ifdef TC_COMPACT_OUTPUT /* { */
+d296 1
+a296 1
+#else /* } !TC_COMPACT_OUTPUT { */
+d298 1
+a298 1
+#endif /* } !TC_COMPACT_OUTPUT */
+d306 1
+a306 1
+#ifdef TC_COMPACT_OUTPUT /* { */
+d308 1
+a308 1
+#else /* } !TC_COMPACT_OUTPUT { */
+d310 1
+a310 1
+#endif /* } !TC_COMPACT_OUTPUT */
+d321 1
+a321 1
+#ifdef TC_COMPACT_OUTPUT /* { */
+d323 1
+a323 1
+#else /* } !TC_COMPACT_OUTPUT { */
+d362 1
+a362 1
+#endif /* } !TC_COMPACT_OUTPUT */
+d374 1
+a374 1
+#ifdef TC_COMPACT_OUTPUT /* { */
+d376 1
+a376 1
+#else /* } !TC_COMPACT_OUTPUT { */
+d423 1
+a423 1
+#endif /* } !TC_COMPACT_OUTPUT */
+@
+
+
+1.35
+log
+@Added "typetag" field to typeinfo.
+@
+text
+@d12 9
+d128 14
+a141 8
+  { &_int_static_rep[0], _typetag_int, sizeof(int), 0, 0, _ctype_int, "int" },
+  { &_char_static_rep[0], _typetag_int, sizeof(char), 0, 0, _ctype_int, "char" },
+  { &_short_static_rep[0], _typetag_int, sizeof(short), 0, 0, _ctype_int, "short" },
+  { &_long_static_rep[0], _typetag_int, sizeof(long), 0, 0, _ctype_long, "long" },
+  { &_longlong_static_rep[0], _typetag_int, sizeof(long long), 0, 0, _ctype_longlong,
+							"long long" },
+  { &_float_static_rep[0], _typetag_float, sizeof(float), 0, 0, _ctype_double, "float" },
+  { &_double_static_rep[0], _typetag_float, sizeof(double), 0, 0, _ctype_double, "double" },
+d143 9
+a151 7
+  { &_longdouble_static_rep[0], _typetag_float, sizeof(long double), 0, 0, _ctype_longdouble,
+							"long double" },
+#else /* LONGDOUBLE */
+  /* This preserves the correspondence between this table and the ctype_t _enum. */
+  { 0, _typetag_float, sizeof(long double), 0, 0, _ctype_void_invalid, "long double" },
+#endif /* LONGDOUBLE */
+  { &_pointer_static_rep[0], _typetag_ptr, sizeof(void *), 0, 0, _ctype_pointer, "pointer" },
+d277 153
+d445 1
+d447 2
+d490 1
+d494 2
+d673 1
+d678 3
+d765 1
+d772 7
+d884 1
+d889 3
+d942 1
+d951 4
+d972 1
+d981 4
+d1002 1
+d1011 4
+d1041 1
+d1045 2
+d1069 1
+d1073 2
+d1145 1
+d1150 3
+d1167 1
+d1172 2
+d1184 1
+d1189 3
+d1201 1
+d1213 4
+d1246 1
+d1251 1
+d1261 3
+d1267 1
+d1284 1
+d1294 3
+d1335 1
+d1339 2
+d1373 1
+d1377 2
+d1455 1
+d1459 2
+d1605 1
+d1615 3
+d1630 1
+d1641 3
+d1659 1
+d1670 3
+d1728 1
+d1735 3
+d1760 1
+d1770 1
+a1770 1
+				   argaddrs[index].size);
+d1772 4
+d1785 1
+d1791 3
+@
+
+
+1.34
+log
+@ Added more checks to _copyTag to match new semantics: output warning
+ if source does not match type of assignment. Also, we don't just quit
+ if dest is unalloc.
+ Also: eliminated sorig and dorig (can just use srcaddr and dstaddr).
+@
+text
+@d118 6
+a123 6
+  { 0, _typetag_unalloc, 0, 0, _ctype_void_invalid, "void" },
+  { &_int_static_rep[0], _typetag_int, sizeof(int), 0, _ctype_int, "int" },
+  { &_char_static_rep[0], _typetag_int, sizeof(char), 0, _ctype_int, "char" },
+  { &_short_static_rep[0], _typetag_int, sizeof(short), 0, _ctype_int, "short" },
+  { &_long_static_rep[0], _typetag_int, sizeof(long), 0, _ctype_long, "long" },
+  { &_longlong_static_rep[0], _typetag_int, sizeof(long long), 0, _ctype_longlong,
+d125 2
+a126 2
+  { &_float_static_rep[0], _typetag_float, sizeof(float), 0, _ctype_double, "float" },
+  { &_double_static_rep[0], _typetag_float, sizeof(double), 0, _ctype_double, "double" },
+d128 1
+a128 1
+  { &_longdouble_static_rep[0], _typetag_float, sizeof(long double), 0, _ctype_longdouble,
+d132 1
+a132 1
+  { 0, _typetag_float, sizeof(long double), 0, _ctype_void_invalid, "long double" },
+d134 2
+a135 2
+  { &_pointer_static_rep[0], _typetag_ptr, sizeof(void *), 0, _ctype_pointer, "pointer" },
+  { 0, _typetag_unalloc, 0, 0, _ctype_aggregate, "aggregate" }
+d175 3
+@
+
+
+1.33
+log
+@Fixed minor problem with copyTag: we were just checking the first
+element (for complaint) and then copying the rest of the block;
+now, we check and copy one element at a time.
+@
+text
+@d915 2
+a916 1
+		const void * dstaddr, const void * srcaddr, size_t size)
+a919 1
+  _typetag_t type = _typetag_uninit;
+a922 4
+/* hacks for log output; probably want to reverse roles */
+  _mirror_pos_t dorig;
+  _mirror_pos_t sorig;
+
+a924 2
+  dorig = dst;
+  sorig = src;
+d936 12
+a947 4
+    if(!verifyAlloc(dstaddr, size)){
+      /* copying into unallocated memory! */
+      if(errorstream){
+        fprintf(errorstream,
+d951 2
+a952 1
+        TC_ERR_SIGNAL;
+d954 1
+a955 2
+    /* for now do nothing. otherwise, best we can do is setUninitTag */
+    return;
+d969 20
+d1006 1
+a1006 1
+    /* Is this the start of src and is it no longer than the data to be copied? */
+d1014 1
+a1014 1
+      if(!log_written && logstream &&
+d1023 1
+a1023 1
+	_printTagPos(logstream, sorig, size);
+d1025 1
+a1025 1
+	_printTagPos(logstream, dorig, size);
+d1043 1
+a1043 1
+      if (!warn_written && warnstream) {
+d1051 1
+a1051 1
+	_printTagPos(warnstream, sorig, size);
+d1053 1
+a1053 1
+	_printTagPos(warnstream, dorig, size);
+d1459 1
+a1459 1
+		addr, argaddrs[index].addr, argaddrs[index].size);
+d1482 1
+a1482 1
+		addr, argaddrs[index].addr, argaddrs[index].size);
+@
+
+
+1.32
+log
+@Added TC_SILENT flag;
+added statstream.
+@
+text
+@d980 3
+a982 1
+  for(i = 0; i < size; )
+d985 3
+a987 1
+    if(!CONT_BIT(src) && TAG_SIZE(src) <= size - i) {
+d1011 1
+a1011 1
+      for( ; i < size; ++i){
+d1016 1
+d1045 1
+@
+
+
+1.31
+log
+@ Made file cc-friendly (cast all arithmetic pointers from void* to char*).
+@
+text
+@d9 6
+d72 13
+a84 4
+FILE * logstream = stderr;
+FILE * debugstream = stderr;
+FILE * warnstream = stderr;
+FILE * errorstream = stderr;
+d1521 1
+a1521 1
+  if(debugstream){
+d1523 2
+a1524 2
+    fprintf(debugstream, "Total time: ");
+    printdelta(debugstream, &ru0, &ru5);
+d1526 2
+a1527 2
+    fprintf(debugstream, "Call init functions: ");
+    printdelta(debugstream, &ru1, &ru2);
+d1529 2
+a1530 2
+    fprintf(debugstream, "Process externs: ");
+    printdelta(debugstream, &ru2, &ru3);
+d1532 2
+a1533 2
+    fprintf(debugstream, "Prog_main: ");
+    printdelta(debugstream, &ru4, &ru5);
+d1536 1
+a1536 1
+    fprintf(debugstream, "processReturns : tot %d, empty %d, common %d\n",
+d1549 1
+a1549 1
+      fprintf(debugstream, "Macro counts (function counts):\n");
+d1551 1
+a1551 1
+      fprintf(debugstream,
+d1555 1
+a1555 1
+      fprintf(debugstream,
+d1559 1
+a1559 1
+      fprintf(debugstream,
+d1563 1
+a1563 1
+      fprintf(debugstream,
+d1567 1
+a1567 1
+      fprintf(debugstream,
+d1571 1
+a1571 1
+      fprintf(debugstream,
+@
+
+
+1.30
+log
+@Suppressed copyTag output if destination is uninit.
+Also attempted to macrofy TAG_SIZE but failed; bad version left
+#if 0'ed out.
+@
+text
+@d244 1
+a244 1
+static void * getAddrForPos(_mirror_pos_t tagpos)
+d252 1
+a252 1
+      return (void *)(i << MIRRORPAGE_NUMBITS)
+d637 1
+a637 1
+      mirrormap_freelist = mirrormap[mapindex] + MIRRORPAGE_NUMBYTES/2;
+d653 1
+a653 1
+  ret.ptr = mirrormap[mapindex] + pageindex/2;
+d1222 1
+a1222 1
+  void * dst = addr;
+d1382 2
+a1383 1
+    void * sf_start = (f1_ptr > fn_ptr) ? (f1_ptr+f1_siz) : (fn_ptr+fn_siz);
+@
+
+
+1.29
+log
+@applied GET_TAG_POS macro (to replace _getTagPos function call);
+removed _setUnallocTag function definition (obsolete);
+rewrote printdelta timer output (old way was stupid, and would overflow
+too quickly);
+reformatted COUNT_PROC_RET output.
+@
+text
+@d409 7
+a415 1
+/* AAL: Macrofy! */
+d973 3
+a975 2
+      if((COPYTAG_TYPE_MISMATCH(dst,src) || TAG_SIZE(dst) != TAG_SIZE(src)) &&
+	 !log_written && logstream) {
+@
+
+
+1.28
+log
+@Made typeinfo visible to tcapi.h (for processArgTag macros).
+Added _ to copyTagSilent and verifyTagSilent.  Made the latter
+non-static.  Added initialization and output of processArgTag
+macro counts.
+@
+text
+@d9 1
+a9 1
+/* Counts process return "efficiency" */
+d11 3
+a13 1
+/*
+d15 1
+a15 1
+*/
+d263 1
+a263 1
+  *tagpos = _getTagPos(getAddrForPos(*tagpos) + offset);
+d276 1
+a276 1
+  _mirror_pos_t tagpos = _getTagPos(addr);
+d292 1
+d344 5
+a348 2
+  _mirror_pos_t tpi = _getTagPos(addr);
+  _mirror_pos_t stpi = _getTagPos(typeinfo[reftype].staticrep_ptr);
+d374 5
+a378 2
+  _mirror_pos_t dst = _getTagPos(dstaddr);
+  _mirror_pos_t src = _getTagPos(srcaddr);
+d424 2
+a425 2
+  _mirror_pos_t tp = _getTagPos(addr);
+  _mirror_pos_t tpi = tp;
+d428 3
+d462 1
+a462 1
+    tagpos = _getTagPos(evcurr->addr);
+a532 40
+void _setUnallocTag(const char * fname, int line, int col,
+			void * addr, size_t size)
+{
+  size_t i;
+  _mirror_pos_t pos = _getTagPos(addr);
+
+  /* Clear off stray tags to the left */
+  if(CONT_BIT(pos)){
+    _mirror_pos_t iter = pos;
+
+    if(warnstream){
+	fprintf(warnstream,
+		"[%s:%d.%d]setUnallocTag: cleaning stray tags (before).\n",
+		fname, line, col);
+	TC_WARN_SIGNAL;
+    }
+
+    PREV_POS(iter);
+    while(CONT_BIT(iter)){
+      /* AAL: unalloc or uninit? */
+      WRITE_TAG(iter,_typetag_unalloc);
+      PREV_POS(iter);
+    }
+    WRITE_TAG(iter,_typetag_unalloc);
+  }
+
+  /* Clear off memory until epos */
+  for(i = 0; i < size; ++i){
+    WRITE_TAG(pos, _typetag_unalloc);
+    NEXT_POS(pos);
+  }
+
+  /* Clear off stray tags to the right */
+  while(CONT_BIT(pos)){
+    /* AAL: unalloc or uninit? */
+    WRITE_TAG(pos,_typetag_unalloc)
+    NEXT_POS(pos);
+  }
+}
+
+d695 1
+a695 1
+  _mirror_pos_t tagpos = _getTagPos(addr);
+d702 3
+a704 1
+  staticpos = _getTagPos(typeinfo[reftype].staticrep_ptr);
+d806 1
+a806 1
+    spos = _getTagPos(saddr);
+d831 1
+a831 1
+    epos = _getTagPos(eaddr);
+d850 1
+a850 1
+      epos = _getTagPos(eaddr); /* note: eaddr is (char *) */
+d899 2
+a900 2
+  _mirror_pos_t dst = _getTagPos(dstaddr);
+  _mirror_pos_t src = _getTagPos(srcaddr);
+d903 7
+a909 2
+  _mirror_pos_t dorig = dst;
+  _mirror_pos_t sorig = src;
+d1034 3
+a1036 1
+  _mirror_pos_t pos = _getTagPos(addr);
+d1141 1
+a1141 1
+  _mirror_pos_t tagpos = _getTagPos(addr);
+d1150 2
+d1293 5
+a1297 2
+        _mirror_pos_t tpi = _getTagPos(addr);
+        _mirror_pos_t rtpi = _getTagPos(argaddrs[0].addr);
+d1340 1
+a1340 1
+#ifdef COUNT_PROC_RET /* { */
+d1343 1
+a1343 1
+#endif /* } COUNT_PROC_RET */
+d1364 1
+a1364 1
+#ifdef COUNT_PROC_RET /* { */
+d1367 1
+a1367 1
+#endif /* } COUNT_PROC_RET */
+d1485 2
+a1486 2
+	(double)((u2.tv_sec-u1.tv_sec)*1000000+u2.tv_usec-u1.tv_usec)/1000000,
+	(double)((s2.tv_sec-s1.tv_sec)*1000000+s2.tv_usec-s1.tv_usec)/1000000
+d1513 4
+a1516 5
+    fprintf(debugstream, "# Process Returns = %d\n", _numProcessReturn);
+    fprintf(debugstream, "# Common-case Process Returns %d\n",
+				_numCommonProcessReturn);
+    fprintf(debugstream, "# Empty Process Returns %d\n",
+				_numEmptyProcessReturn);
+@
+
+
+1.27
+log
+@Added "const" to _printTag prototype.
+@
+text
+@d27 2
+d96 1
+a96 8
+struct {
+  void * staticrep_ptr;
+  _typetag_t typetag;
+  size_t size;
+  int logsize;
+  _ctype_t promo;
+  const char * desc;
+} typeinfo[] = {
+d339 1
+a339 1
+static int verifyTagSilent(const void * addr, _ctype_t reftype)
+d365 1
+a365 1
+void copyTagSilent(const void * dstaddr, const void * srcaddr, size_t size)
+d764 1
+a764 1
+      copyTagSilent(addr,typeinfo[reftype].staticrep_ptr,size);
+d789 1
+a789 1
+      copyTagSilent(addr,typeinfo[reftype].staticrep_ptr,size);
+d1241 1
+a1241 1
+    copyTagSilent(dst += size, addr, size);
+d1259 1
+a1259 1
+    if(verifyTagSilent(*addrptr, optype)){
+d1353 1
+a1353 1
+        copyTagSilent(argaddrs[0].addr, addr, size);
+d1449 1
+a1449 1
+		verifyTagSilent(argaddrs[index].addr, typeinfo[type].promo)){
+d1538 2
+a1539 1
+	|| _ssutctr || _ssutcctr){
+d1562 4
+@
+
+
+1.26
+log
+@Streamlined _processReturn to optimize for common case.
+Absorbed "compareTags" function.
+@
+text
+@d505 1
+a505 1
+void _printTag(FILE * f, void * addr, size_t size)
+@
+
+
+1.25
+log
+@Rewrote _setUninitTag to be smarter. Looks just like the
+SET_UNALLOC_TAG macro.
+@
+text
+@d8 3
+a337 24
+/* similar to verifyTags[Silent](), with different arguments.
+   called by processReturn. */
+static int compareTags(const void * addr, const void * refaddr, size_t size)
+{
+  size_t i;
+  _mirror_pos_t tpi = _getTagPos(addr);
+  _mirror_pos_t rtpi = _getTagPos(refaddr);
+
+  /* Compare tags */
+  for(i = 0; i < size; ++i){
+    if(TAG_BITS(tpi) != TAG_BITS(rtpi))
+      return 0; /* type mismatch */
+    NEXT_POS(tpi);
+    NEXT_POS(rtpi);
+  }
+
+  /* Make sure tagpos has "ended" */
+  if(CONT_BIT(tpi))
+    return 0; /* type size mismatch */
+
+  /* Verify succeeded, return 1 */
+  return 1;
+}
+
+d1273 6
+d1291 3
+a1298 1
+    /* -- same size -- */
+d1300 39
+d1340 6
+a1345 6
+      /* -- verify -- */
+      if(!compareTags(addr, argaddrs[0].addr, size)){
+        /* OUTPUT WARNING HERE */
+        if(warnstream){
+          fprintf(warnstream,
+		"[%s:%d.%d] processReturn: type mismatch",
+d1347 6
+a1352 6
+          fprintf(warnstream,"\n  --> expecting: ");
+          _printTagPos(warnstream, _getTagPos(argaddrs[0].addr), size);
+          fprintf(warnstream,"\n  -->     found: ");
+          _printTagPos(warnstream, _getTagPos(addr), size);
+          fprintf(warnstream,"\n");
+          fprintf(warnstream, " => continuing with bad type "
+d1354 2
+a1355 1
+	  TC_WARN_SIGNAL;
+d1357 6
+a1363 4
+
+      /* -- just copy -- */
+      copyTagSilent(argaddrs[0].addr, addr, size);
+
+d1373 1
+a1373 1
+        _printTagPos(warnstream, _getTagPos(argaddrs[0].addr), argaddrs[0].size);
+d1375 1
+a1375 1
+        _printTagPos(warnstream, _getTagPos(addr), size);
+d1383 4
+d1530 8
+@
+
+
+1.24
+log
+@Added timers (getrusage) to time different parts of program.
+@
+text
+@d842 5
+a846 3
+/* stray tags are cleared to "_typetag_unalloc"; they should be _typetag_unalloc already.
+ * if they're not, it's probably because we haven't freed memory (e.g.
+ * popped the stack) correctly, in which case they should be _typetag_unalloc anyway.
+d851 30
+a880 2
+  _mirror_pos_t tagpos = _getTagPos(addr);
+  int i;
+d882 7
+a888 7
+  /* Clear off stray tags to the left */
+  if(CONT_BIT(tagpos)){
+    _mirror_pos_t iter = tagpos;
+
+    if(warnstream){
+	fprintf(warnstream,
+		"[%s:%d.%d] setUninitTag: Uninitializing non-empty memory.\n",
+d890 14
+a903 1
+	TC_WARN_SIGNAL;
+d906 13
+a918 5
+    PREV_POS(iter);
+    while(CONT_BIT(iter)){
+      /* AAL: unalloc or uninit? */
+      WRITE_TAG(iter,_typetag_unalloc);
+      PREV_POS(iter);
+a919 13
+    WRITE_TAG(iter,_typetag_unalloc);
+  }
+
+  for(i = 0; i < size; ++i){
+    WRITE_TAG(tagpos, _typetag_uninit);
+    NEXT_POS(tagpos);
+  }
+
+  /* Clear off stray tags to the right */
+  while(CONT_BIT(tagpos)){
+    /* AAL: unalloc or uninit? */
+    WRITE_TAG(tagpos,_typetag_unalloc)
+    NEXT_POS(tagpos);
+d1532 1
+a1532 1
+#ifndef STANDALONE
+d1575 1
+a1575 1
+#else
+d1668 1
+a1668 1
+#endif /* if(n)def STANDALONE */
+@
+
+
+1.23
+log
+@Removed if(!mirrormap[mapindex]) checks from _touchMirrorPage
+since all calls to it do the check prior to the call (in order
+not to incur the call overhead unnecessarilly).
+@
+text
+@d5 1
+d1422 17
+d1444 9
+a1452 5
+  if(debugstream && (_vpctr || _vpcctr || _vpactr
+			|| _vtctr || _vtcctr || _vtactr
+			|| _ctctr || _ctcctr || _ctactr
+			|| _sstctr || _sstcctr
+			|| _ssutctr || _ssutcctr)){
+d1454 2
+a1455 1
+    fprintf(debugstream, "Macro counts (function counts):\n");
+d1457 12
+a1468 1
+    fprintf(debugstream,
+d1472 1
+a1472 1
+    fprintf(debugstream,
+d1476 1
+a1476 1
+    fprintf(debugstream,
+d1480 1
+a1480 1
+    fprintf(debugstream,
+d1484 1
+a1484 1
+    fprintf(debugstream,
+d1487 1
+d1503 2
+d1514 1
+d1516 1
+d1518 1
+d1533 1
+@
+
+
+1.22
+log
+@Eliminated markStackStart call; replaced with a more complicated
+processReturn call that takes in four arguments (_f1_ptr, _f1_siz,
+_fn_ptr, _fn_siz) instead of just sf_start.
+Also, if stack grows decreasingly, we increment the stack start
+by its size.
+@
+text
+@a675 1
+  if(!mirrormap[mapindex]){
+a687 1
+  }
+@
+
+
+1.21
+log
+@Upgraded _touchMirrorPage, extracting the check for emptyness to the
+callsite. In intelligible terms: getTagPos now calls touchMirrorPage
+only when it really needs to.
+Also, introduced MIRRORPAGE_INDEX macro.
+@
+text
+@a1256 12
+void _markStackStart(const char * fname, int line, int col,
+			void ** sf_start, void * formal0, void * formaln)
+{
+  int dummy;
+
+  /* mark start of stack - one of (formal0, formaln) */
+  if(formal0 > (void *) &dummy) /* stack grows downward */
+    *sf_start = (formal0 > formaln) ? formal0 : formaln;
+  else                 /* stack grows upward   */
+    *sf_start = (formal0 < formaln) ? formal0 : formaln;
+}
+
+d1259 2
+a1260 2
+			void * sf_start, _addr_and_size_t * argaddrs,
+                        const void * addr, size_t size)
+d1321 14
+a1334 1
+  if(sf_start < sf_end){ /* stack grows upwards */
+d1337 1
+d1339 1
+a1339 4
+  } else {               /* stack grows downwards */
+    if(!debugflag++ && debugstream)
+      fprintf(debugstream, "Note: stack grows decreasingly!\n");
+    SET_UNALLOC_TAG(fname,line,col, sf_end, sf_start+1);
+@
+
+
+1.20
+log
+@Replaced _setUnallocTag with call to SET_UNALLOC_TAG macro;
+other minor changes (use MIRRORMAP_INDEX macro).
+@
+text
+@d674 1
+a674 1
+void _touchMirrorPage(const void * addr)
+a675 2
+  unsigned long mapindex = MIRRORMAP_INDEX(addr);
+
+d697 1
+a697 1
+  unsigned long pageindex = (unsigned long)addr & MIRRORPAGE_MASK;
+d699 2
+a700 1
+  _touchMirrorPage(addr);
+@
+
+
+1.19
+log
+@Modified output of processReturn to correctly output expected size when
+there is a size mismatch.
+@
+text
+@d387 1
+a387 1
+    - don't complaining
+d676 1
+a676 1
+  unsigned long mapindex = (unsigned long)addr >> MIRRORPAGE_NUMBITS;
+d698 1
+a698 1
+  unsigned long mapindex = (unsigned long)addr >> MIRRORPAGE_NUMBITS;
+d1337 1
+a1337 2
+
+    _setUnallocTag(fname, line, col, sf_start, sf_end-sf_start);
+d1341 1
+a1341 2
+
+    _setUnallocTag(fname, line, col, sf_end, sf_start-sf_end);
+@
+
+
+1.18
+log
+@Changed COUNT_MACROSto count occurrences of char,nonchar, and aggr
+(and corresponding function call cases).
+@
+text
+@d1320 1
+a1320 1
+        _printTagPos(warnstream, _getTagPos(argaddrs[0].addr), size);
+@
+
+
+1.17
+log
+@Removed "VERIFY_UNALLOC" filter for verifyTag (which suppressed
+verifyTag warnings when the destination is unallocated).
+@
+text
+@d13 10
+a22 5
+int _vpctr = 0, _vpfctr = 0; /* verifyPtr */
+int _vtctr = 0, _vtfctr = 0; /* verifyTag */
+int _ctctr = 0, _ctfctr = 0; /* copyTag */
+int _sstctr = 0, _sstfctr = 0; /* setScalarTag */
+int _ssutctr = 0, _ssutfctr = 0; /* setScalarUninitTag */
+d1432 27
+a1458 11
+  if(debugstream){
+    if(_vpctr)
+      fprintf(debugstream, "          verifyPtr : tot %d, fun %d\n", _vpctr, _vpfctr);
+    if(_vtctr)
+      fprintf(debugstream, "          verifyTag : tot %d, fun %d\n", _vtctr, _vtfctr);
+    if(_ctctr)
+      fprintf(debugstream, "            copyTag : tot %d, fun %d\n", _ctctr, _ctfctr);
+    if(_sstctr)
+      fprintf(debugstream, "       setScalarTag : tot %d, fun %d\n", _sstctr, _sstfctr);
+    if(_ssutctr)
+      fprintf(debugstream, " setScalarUninitTag : tot %d, fun %d\n", _ssutctr, _ssutfctr);
+@
+
+
+1.16
+log
+@Extracted COUNT_MACRO counters into a cleanup() function that is
+registered with atexit().
+@
+text
+@a6 1
+
+a9 1
+
+a795 3
+#ifndef VERIFY_UNALLOC
+     if(TAG_BITS(tpi) != _typetag_unalloc)
+#endif
+@
+
+
+1.15
+log
+@Removed "DEBUG: overflowTagPos" message.
+@
+text
+@d1427 19
+d1462 3
+d1483 1
+a1483 16
+  ret = _prog_main(argc, argv);
+
+  if(debugstream){
+    if(_vpctr)
+      fprintf(debugstream, "          verifyPtr : tot %d, fun %d\n", _vpctr, _vpfctr);
+    if(_vtctr)
+      fprintf(debugstream, "          verifyTag : tot %d, fun %d\n", _vtctr, _vtfctr);
+    if(_ctctr)
+      fprintf(debugstream, "            copyTag : tot %d, fun %d\n", _ctctr, _ctfctr);
+    if(_sstctr)
+      fprintf(debugstream, "       setScalarTag : tot %d, fun %d\n", _sstctr, _sstfctr);
+    if(_ssutctr)
+      fprintf(debugstream, " setScalarUninitTag : tot %d, fun %d\n", _ssutctr, _ssutfctr);
+  }
+
+  return ret;
+@
+
+
+1.14
+log
+@Fixed _copyTag again.  Put most of error messaging and
+testing into the big loop.  Now correctly handling copying
+from the middle of src (or not to the end) and structures.
+Also, now returning -1 from TAG_SIZE if the passed in tag
+position is not the start of a tag.
+@
+text
+@a258 4
+  if(debugstream)
+	fprintf(debugstream, "DEBUG: overflowTagPos: 0x%08x / %d %+d\n",
+		(unsigned int)tagpos->ptr, tagpos->bit, offset);
+  
+@
+
+
+1.13
+log
+@Fixed _copyTag.  It is now more correct in the way it
+outputs error messages and handles copying from the middle
+of src or not all the way to the end of src.
+@
+text
+@d429 3
+a431 3
+  /* AAL: Do we care if this is not the start of a tag? */
+  int i;
+  /* If the CONT_BIT is set on the next pos, return the size as encoded
+d433 2
+a434 4
+  NEXT_POS(pos);
+  i = CONT_BIT(pos) ? 1 << TYPE_BITS(pos) : 1;
+  PREV_POS(pos);
+  return i;
+d916 2
+a917 2
+  int mismatch = 0;
+  int i = 0;
+a945 1
+
+a946 1
+
+a958 1
+    mismatch = 1;
+d961 7
+a967 32
+  /* Check if the src type is the same as the dest type.
+     If it is, then do nothing.  The type itself, as well
+     as the tags on the left and on the right should be valid.
+     Otherwise, do the tag copying (and stray clearing if needed). */
+  if(TAG_BITS(dst) != TAG_BITS(src) ||  /* Are their typetags the same? */
+     /* Are their sizes the same, and do they match size? */
+     (NEXT_POS(dst), NEXT_POS(src),
+      /* Is everything of size 1? */
+      i = (size == 1 && !CONT_BIT(dst) && !CONT_BIT(src) ||
+	   /* Otherwise, is everything of the same size > 1? */
+	   CONT_BIT(dst) &&
+	   TAG_BITS(dst) == TAG_BITS(src) &&
+	   (1 << TYPE_BITS(dst)) == size),
+      src = sorig, dst = dorig, !i)) {
+
+    if(!mismatch && (COPYTAG_TYPE_MISMATCH(dst,src) || !i) && logstream) {
+      /* copying into memory initialized with different type */
+      fprintf(logstream,
+	      "[%s:%d.%d] copyTag: type mismatch "
+	      "(0x%x -> 0x%x)\n",
+	      fname,line,col, (unsigned int)srcaddr,(unsigned int)dstaddr);
+      fprintf(logstream,   "  --> copying: ");
+      _printTagPos(logstream, sorig, size);
+      fprintf(logstream, "\n  -->    into: ");
+      _printTagPos(logstream, dorig, size);
+      fprintf(logstream, "\n");
+      TC_LOG_SIGNAL;
+    }
+
+    /* Clear off stray tags to the left */
+    if(CONT_BIT(dst)){
+      _mirror_pos_t iter = dst;
+d969 35
+a1003 4
+      while(CONT_BIT(iter)){
+	/* AAL: unalloc or uninit? */
+	WRITE_TAG(iter,_typetag_uninit);
+	PREV_POS(iter);
+a1004 1
+      WRITE_TAG(iter,_typetag_uninit);
+d1007 17
+a1023 16
+    /* Do the actual tag copy. */
+    for(i = 0; i < size; )
+      if(!CONT_BIT(src) && TAG_SIZE(src) <= size - i)
+	/* AAL: Should do this in one shot if possible. */
+	for( ; i < size; ++i){
+	  WRITE_TAG(dst, TAG_BITS(src));
+	  NEXT_POS(src);
+	  NEXT_POS(dst);
+	}
+      else  /* AAL: Copying from the middle of src!  Warn! */
+	do {
+	  WRITE_TAG(dst, _typetag_uninit);
+	  NEXT_POS(src);
+	  NEXT_POS(dst);
+	  i++;
+	} while (CONT_BIT(src) && i < size);
+d1025 7
+a1031 5
+    /* Clear off stray tags to the right */
+    while(CONT_BIT(dst)){
+      /* AAL: unalloc or uninit? */
+      WRITE_TAG(dst,_typetag_uninit);
+      NEXT_POS(dst);
+d1033 6
+@
+
+
+1.12
+log
+@Minor change: added newline output for printTagStderr.
+@
+text
+@d426 1
+d920 1
+d970 10
+a979 4
+  if(TAG_BITS(dst) != TAG_BITS(src) ||
+     size > 1 && (NEXT_POS(dst), NEXT_POS(src),
+		  i = (TAG_BITS(dst) != TAG_BITS(src)),
+		  src = sorig, dst = dorig, i)) {
+d981 1
+a981 1
+    if(!mismatch && (COPYTAG_TYPE_MISMATCH(dst,src) || i) && logstream) {
+d1007 16
+a1022 6
+    /* AAL: Should do this in one shot if possible. */
+    for(i = 0; i < size; ++i){
+      WRITE_TAG(dst,TAG_BITS(src));
+      NEXT_POS(src);
+      NEXT_POS(dst);
+    }
+d1027 2
+a1028 2
+      WRITE_TAG(dst,_typetag_uninit)
+	NEXT_POS(dst);
+@
+
+
+1.11
+log
+@Added _printTagStderr for debugging.
+@
+text
+@d540 1
+@
+
+
+1.10
+log
+@Changed ifdef TC_SIGNAL to ifndef TC_NOSIGNAL
+@
+text
+@d537 5
+@
+
+
+1.9
+log
+@Repaired _copyTag and made a small bug fix in verifyAlloc.
+@
+text
+@d1410 1
+a1410 1
+#ifdef TC_SIGNAL
+@
+
+
+1.8
+log
+@Added _printTagStdout();
+@
+text
+@d450 1
+a450 1
+	   (NEXT_POS(tp), CONT_BIT(tp) && TAG_SIZE(tp) /* 1 << SIZE_BITS(tp) >= size) */))
+d886 1
+a886 1
+#define COPYTAG_MISMATCH(dst,src) \
+d912 1
+a912 1
+  int i;
+d958 21
+a978 8
+  /* Clear off stray tags to the left */
+  if(CONT_BIT(dst)){
+    _mirror_pos_t iter = dst;
+    PREV_POS(iter);
+    while(CONT_BIT(iter)){
+      /* AAL: unalloc or uninit? */
+      WRITE_TAG(iter,_typetag_uninit);
+      PREV_POS(iter);
+a979 2
+    WRITE_TAG(iter,_typetag_uninit);
+  }
+d981 8
+a988 17
+  /* Copy tags */
+  /* AAL: Should do this in one shot if possible. */
+  for(i = 0; i < size; ++i){
+
+    if(!mismatch && COPYTAG_MISMATCH(dst,src)){
+      /* copying into memory initialized with different type */
+      if(logstream){
+        fprintf(logstream,
+		"[%s:%d.%d] copyTag: type mismatch "
+		"(0x%x -> 0x%x)\n",
+		fname,line,col, (unsigned int)srcaddr,(unsigned int)dstaddr);
+        fprintf(logstream,   "  --> copying: ");
+        _printTagPos(logstream, sorig, size);
+        fprintf(logstream, "\n  -->    into: ");
+        _printTagPos(logstream, dorig, size);
+        fprintf(logstream, "\n");
+	TC_LOG_SIGNAL;
+d990 1
+a990 1
+      mismatch = 1;
+d993 6
+a998 4
+    WRITE_TAG(dst,TAG_BITS(src))
+    NEXT_POS(src);
+    NEXT_POS(dst);
+  }
+d1000 6
+a1005 5
+  /* Clear off stray tags to the right */
+  while(CONT_BIT(dst)){
+    /* AAL: unalloc or uninit? */
+    WRITE_TAG(dst,_typetag_uninit)
+    NEXT_POS(dst);
+@
+
+
+1.7
+log
+@Added signal stuff (turn off by defining TC_NOSIGNAL in tcinternal.h).
+@
+text
+@d532 5
+@
+
+
+1.6
+log
+@Added printing out and initialization of setScalarUninitTag
+macro counters.
+@
+text
+@d297 1
+a297 1
+    if(warnstream)
+d301 2
+d547 1
+a547 1
+    if(warnstream)
+d551 2
+d604 1
+a604 1
+      if(warnstream)
+d606 7
+a612 5
+	"[%s:%d.%d] WARNING: extern previously defined with different type\n"
+	"(defined here as %s, at [%s:%d.%d] as %s)",
+	fname, line, col, typeinfo[type].desc,
+	evcurr->fname,evcurr->line,evcurr->col,
+	typeinfo[evcurr->type].desc);
+d726 1
+d779 1
+d807 1
+d832 1
+d852 1
+a852 1
+    if(warnstream)
+d856 2
+d917 1
+a917 1
+    if(errorstream)
+d922 2
+d927 1
+a927 1
+      if(errorstream)
+d932 2
+d948 1
+d981 1
+d1012 1
+a1012 1
+    if(warnstream)
+d1016 2
+d1124 1
+a1124 1
+    if(warnstream)
+d1128 2
+d1265 1
+d1287 1
+d1334 1
+d1367 1
+d1381 1
+d1399 4
+@
+
+
+1.5
+log
+@Streamlined include files (includes only tcinternal.h)
+also, no more #define NEWTAGS
+@
+text
+@d19 1
+d1395 1
+a1395 1
+      fprintf(debugstream, "verifyPtr: tot %d, fun %d\n", _vpctr, _vpfctr);
+d1397 1
+a1397 1
+      fprintf(debugstream, "verifyTag: tot %d, fun %d\n", _vtctr, _vtfctr);
+d1399 1
+a1399 1
+      fprintf(debugstream, " copyTag : tot %d, fun %d\n", _ctctr, _ctfctr);
+d1401 3
+a1403 1
+      fprintf(debugstream, "setScalarTag : tot %d, fun %d\n", _sstctr, _sstfctr);
+@
+
+
+1.4
+log
+@Added initialization and output of setScalarTag macro counters.
+@
+text
+@d6 1
+a6 3
+#define NEWTAGS
+#include <tcapi.h>
+#include "pmirror.h"
+@
+
+
+1.3
+log
+@Added copyTag counters.
+@
+text
+@d20 1
+d1401 2
+@
+
+
+1.2
+log
+@unrenamed verifyPtr from func_verifyPtr;
+Added output for macro stat counting.
+@
+text
+@d19 1
+d1398 2
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d14 6
+d694 1
+a694 1
+void _func_verifyPtr(const char * fname, int line, int col, const char * exp,
+d1370 1
+d1390 10
+a1399 1
+  return _prog_main(argc, argv);
+@

@@ -1,0 +1,969 @@
+head	1.15;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.15
+date	2002.05.02.20.51.43;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2002.02.26.23.20.35;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2001.06.29.16.56.29;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2001.05.22.22.54.30;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2001.05.04.22.25.34;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2001.05.04.22.20.53;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2001.05.04.20.34.10;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.07.12.00.51.53;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.07.11.04.13.33;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.07.07.20.23.38;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.06.21.22.17.58;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.06.15.21.02.03;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.05.21.16.22.30;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.02.17.23.58.21;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.12.23.23.45.48;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Typechecked version ("library stubs") for string.h library functions.
+@
+
+
+1.15
+log
+@Restructured output mechanism to associate stream with error message;
+also, generalized signalflag mechanism (TCKILL now called by _output_
+functions), and enhanced run-time flags to allow better control of
+streams, message-destinations, and signal-flags.
+Also, added function _fn_SET_UNALLOC_TAG to reduce code bloat in
+processReturn.
+@
+text
+@#include <string.h>
+#include <limits.h> /* for INT_MAX */
+
+#include "tcinternal.h"
+#include <tclibc.h>
+
+void *_typecheck_memcpy(void * s1, const void * s2, size_t n)
+{
+  if(n){
+    if(!verifyAlloc(s2, n)){
+      /* source is unallocated; warn */
+      _output_flc(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, TCMC_CFU);
+
+      if(!verifyAlloc(s1, n)){
+        /* destination is unallocated; warn */
+/* NOTE: this check is only done here since _copyTag does a verifyAlloc
+	 on its destination. */
+        _output_flc(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, TCMC_CIU);
+      }
+    } else {
+      _copyTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		s1, s2, n, _ctype_aggregate);
+    }
+  }
+  return memcpy(s1, s2, n);
+}
+
+void *_typecheck_memmove(void * s1, const void * s2, size_t n)
+{
+  if(n){
+    if(!verifyAlloc(s2, n)){
+      /* source is unallocated; warn */
+      _output_flc(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, TCMM_CFU);
+
+      if(!verifyAlloc(s1, n)){
+        /* destination is unallocated; warn */
+/* NOTE: this check is only done here since _copyTag does a verifyAlloc
+	 on its destination. */
+        _output_flc(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, TCMM_CIU);
+      }
+    } else {
+      _copyTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		s1, s2, n, _ctype_aggregate);
+    }
+  }
+  return memmove(s1, s2, n);
+}
+
+/* if unalloc, return 0 - number of allocated bytes
+ * else, return number of bytes checked
+ * e.g. return 0 => s[0] unallocated
+ *      (assume lim > 0)
+ */
+static int checkCharAllocUpTo(const char * s, int c, size_t lim)
+{
+  int i = 0;
+  _mirror_pos_t tagpos;
+
+  GET_TAG_POS(tagpos, s);
+
+  while(i < lim) {
+    if(TAG_BITS(tagpos) == _typetag_unalloc) return -i;
+    if(s[i] == c) return i+1;
+    NEXT_POS(tagpos);
+    i++;
+  }
+
+  return i;
+}
+
+char *_typecheck_strcpy(char * dst, const char * src)
+{
+    int i = checkCharAllocUpTo((const char *) src, 0, INT_MAX);
+    if(i <= 0){
+      /* source is not fully allocated; warn */
+      _output_si(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		TCLIB_CFU, "strcpy",0,0,0, -1,-i,0,0);
+
+      i = strlen(src);
+      if(!verifyAlloc(dst, i)){
+        /* destination is unallocated; warn */
+/* NOTE: this check is only done here since _copyTag does a verifyAlloc
+	 on its destination. */
+        _output_si(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		TCLIB_CIU, "strcpy",0,0,0, i,0,0,0);
+      }
+      _setStringTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, dst,i);
+    } else {
+      /* copy i bytes */
+      _copyTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		dst, src, i, _ctype_aggregate);
+    }
+  return strcpy(dst, src);
+}
+
+char *_typecheck_strncpy(char * dst, const char * src, size_t n)
+{
+  if(n){
+    int i = checkCharAllocUpTo((const char *) src, 0, n);
+    if(i <= 0){
+      /* source is not fully allocated; warn */
+      _output_si(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		TCLIB_CFU, "strncpy",0,0,0, n,-i,0,0);
+
+      if(!verifyAlloc(dst, n)){
+        /* destination is unallocated; warn */
+        _output_si(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		TCLIB_CIU, "strncpy",0,0,0, n,0,0,0);
+      }
+      _setStringTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, dst,n);
+    } else {
+      if(!verifyAlloc(dst, n)){
+        /* destination is unallocated; warn */
+        _output_si(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		TCLIB_CIU, "strncpy",0,0,0, n,0,0,0);
+      }
+      /* copy i bytes */
+      _copyTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		dst, src, i, _ctype_aggregate);
+      /* pad n-i bytes */
+      if(n - i){
+        _setStringTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, dst+i,n-i-1);
+      }
+    }
+  }
+  return strncpy(dst, src, n);
+}
+
+char *_typecheck_strcat(char * dst, const char * src)
+{
+    int j;
+    int i = checkCharAllocUpTo((const char *) src, 0, INT_MAX);
+    if(i <= 0){
+      /* source is not fully allocated; warn */
+      _output_si(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		TCLIB_CFU, "strcat",0,0,0, -1,-i,0,0);
+
+      i = strlen(src);
+
+      j = checkCharAllocUpTo((const char *) dst, 0, INT_MAX);
+      if(j <= 0 || !verifyAlloc(dst+j, i)){
+        /* destination is unallocated; warn */
+/* NOTE: this check is only done here since _copyTag does a verifyAlloc
+	 on its destination. */
+        _output_si(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		TCLIB_CIU, "strcat",0,0,0, i,0,0,0);
+      }
+      _setStringTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, dst,strlen(dst)+i);
+    } else {
+      j = checkCharAllocUpTo((const char *) dst, 0, INT_MAX);
+      if(j <= 0){
+        /* first part of destination is unallocated; warn */
+        _output_si(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		TCLIB_CIU, "strcat",0,0,0, i,0,0,0);
+
+        _setStringTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, dst,strlen(dst));
+      }
+      /* copy i bytes */
+      _copyTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		dst+strlen(dst), src, i, _ctype_aggregate);
+    }
+  return strcat(dst, src);
+}
+
+char *_typecheck_strncat(char * dst, const char * src, size_t n)
+{
+  if(n){
+    int j;
+    int i = checkCharAllocUpTo((const char *) src, 0, n);
+    if(i <= 0){
+      /* source is not fully allocated; warn */
+      _output_si(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		TCLIB_CFU, "strncat",0,0,0, n,-i,0,0);
+
+      i = strlen(src);
+      if(i > n) i = n;
+
+      j = checkCharAllocUpTo((const char *) dst, 0, INT_MAX);
+      if(j <= 0 || !verifyAlloc(dst+j, i)){
+        /* destination is unallocated; warn */
+/* NOTE: this check is only done here since _copyTag does a verifyAlloc
+	 on its destination. */
+        _output_si(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		TCLIB_CIU, "strncat",0,0,0, i,0,0,0);
+      }
+      _setStringTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, dst,strlen(dst)+i);
+    } else {
+      j = checkCharAllocUpTo((const char *) dst, 0, INT_MAX);
+      if(j <= 0){
+        /* first part of destination is unallocated; warn */
+        _output_si(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		TCLIB_CIU, "strncat",0,0,0, i,0,0,0);
+
+        _setStringTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, dst,strlen(dst));
+      }
+      /* copy i bytes */
+      _copyTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		dst+strlen(dst), src, i, _ctype_aggregate);
+      if(i == n){
+        _verifyTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+			"_tc_strncat:dest[n]", dst+strlen(dst)+i, _ctype_char);
+        _setScalarTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+			dst+strlen(dst)+i, _ctype_char);
+      }
+    }
+  }
+  return strncat(dst, src, n);
+}
+
+size_t _typecheck_strxfrm(char * s1, const char * s2, size_t n)
+{
+  return strxfrm(s1, s2, n);
+}
+
+void _typecheck_bzero(void * s, size_t n)
+{
+  if(!verifyAlloc(s, n)){
+    /* target is unallocated; warn */
+    _output_flc(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, TCMS_SUM);
+  }
+  _setByteTags(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		s, n, _typetag_init, _typetag_uninit);
+  bzero(s, n);
+}
+
+void *_typecheck_memset(void * s, int c, size_t n)
+{
+  if(!verifyAlloc(s, n)){
+    /* target is unallocated; warn */
+    _output_flc(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, TCMS_SUM);
+  }
+  if(c == 0)
+    _setByteTags(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		s, n, _typetag_init, _typetag_uninit);
+  else
+    _setStringTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, s,n-1);
+  return memset(s, c, n);
+}
+
+/* initialize type for returned string? */
+/* char *_typecheck_strerror(int errnum); */
+
+void *_typecheck_memccpy(void * s1, const void * s2, int c, size_t n)
+{
+  if(n){
+    int i = checkCharAllocUpTo((const char *) s2, c, n);
+    if(i <= 0){
+      /* source is not fully allocated; warn */
+      _output_si(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		TCLIB_CFU, "memccpy",0,0,0, n,-i,0,0);
+
+      if(!verifyAlloc(s1, i)){
+        /* destination is unallocated; warn */
+/* NOTE: this check is only done here since _copyTag does a verifyAlloc
+	 on its destination. */
+        _output_si(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		TCLIB_CIU, "memccpy",0,0,0, i,0,0,0);
+      }
+    } else {
+      /* copy i bytes */
+      _copyTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		s1, s2, i, _ctype_aggregate);
+    }
+  }
+  return memccpy(s1, s2, c, n);
+}
+
+/* initialize type for returned string? */
+/* char *_typecheck_strsignal(int sig); */
+
+char *_typecheck_strdup(const char * s1)
+{
+  char * ret;
+  int i = checkCharAllocUpTo((const char *) s1, 0, INT_MAX);
+  if(i <= 0){
+    /* source is not fully allocated; warn */
+    _output_si(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		TCLIB_CFU, "strdup",0,0,0, -1,-i,0,0);
+  }
+
+  ret = strdup(s1);
+  if(ret) _setStringTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, ret,strlen(ret));
+  return ret;
+}
+
+#ifdef STANDALONE
+
+int foofoo()
+{
+  char * c = "abc";
+  _setUninitTag("foo",0,0, c, 4);
+  printf("Verify abc up to c,1 = %d\n",
+	checkCharAllocUpTo(c,'c',1));
+  printf("Verify abc up to c,10 = %d\n",
+	checkCharAllocUpTo(c,'c',10));
+  printf("Verify abc up to 0,10 = %d\n",
+	checkCharAllocUpTo(c, 0 ,10));
+  printf("Verify abc up to d,3 = %d\n",
+	checkCharAllocUpTo(c,'d',3));
+  printf("Verify abc up to d,10 = %d\n",
+	checkCharAllocUpTo(c,'d',10));
+}
+
+#endif
+
+@
+
+
+1.14
+log
+@Added _setByteTags; added redirection macros to point
+_setUninitTag and _setStringTag to _setByteTag; old stuff
+commented out, will next be deleted.
+Also, added _typetag_init;
+and added _typecheck_bzero to tcstring.c
+@
+text
+@d12 2
+a13 4
+      if(warnstream){
+        _output_flc(warnstream, _globalErrlocFile,_globalErrlocLine,_globalErrlocCol, TCMC_CFU);
+        TC_WARN_SIGNAL;
+      }
+d18 1
+a18 4
+        if(warnstream){
+          _output_flc(warnstream, _globalErrlocFile,_globalErrlocLine,_globalErrlocCol, TCMC_CIU);
+          TC_WARN_SIGNAL;
+        }
+d33 2
+a34 4
+      if(warnstream){
+        _output_flc(warnstream, _globalErrlocFile,_globalErrlocLine,_globalErrlocCol, TCMM_CFU);
+        TC_WARN_SIGNAL;
+      }
+d39 1
+a39 4
+        if(warnstream){
+          _output_flc(warnstream, _globalErrlocFile,_globalErrlocLine,_globalErrlocCol, TCMM_CIU);
+          TC_WARN_SIGNAL;
+        }
+d76 1
+a76 2
+      if(warnstream){
+        _output_si(warnstream, _globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+d78 1
+a78 2
+        TC_WARN_SIGNAL;
+      }
+d84 1
+a84 2
+        if(warnstream){
+          _output_si(warnstream, _globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+a85 2
+          TC_WARN_SIGNAL;
+        }
+d102 1
+a102 2
+      if(warnstream){
+        _output_si(warnstream, _globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+d104 1
+a104 2
+        TC_WARN_SIGNAL;
+      }
+d107 1
+a107 2
+        if(warnstream){
+          _output_si(warnstream, _globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+a108 2
+          TC_WARN_SIGNAL;
+        }
+d114 1
+a114 2
+        if(warnstream){
+          _output_si(warnstream, _globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+a115 2
+          TC_WARN_SIGNAL;
+        }
+d135 1
+a135 2
+      if(warnstream){
+        _output_si(warnstream, _globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+d137 1
+a137 2
+        TC_WARN_SIGNAL;
+      }
+d145 1
+a145 2
+        if(warnstream){
+          _output_si(warnstream, _globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+a146 2
+          TC_WARN_SIGNAL;
+        }
+d153 1
+a153 2
+        if(warnstream){
+          _output_si(warnstream, _globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+d155 1
+a155 2
+          TC_WARN_SIGNAL;
+        }
+d172 1
+a172 2
+      if(warnstream){
+        _output_si(warnstream, _globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+d174 1
+a174 2
+        TC_WARN_SIGNAL;
+      }
+d183 1
+a183 2
+        if(warnstream){
+          _output_si(warnstream, _globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+a184 2
+          TC_WARN_SIGNAL;
+        }
+d191 1
+a191 2
+        if(warnstream){
+          _output_si(warnstream, _globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+d193 1
+a193 2
+          TC_WARN_SIGNAL;
+        }
+d219 1
+a219 4
+    if(warnstream){
+      _output_flc(warnstream, _globalErrlocFile,_globalErrlocLine,_globalErrlocCol, TCMS_SUM);
+      TC_WARN_SIGNAL;
+    }
+d230 1
+a230 4
+    if(warnstream){
+      _output_flc(warnstream, _globalErrlocFile,_globalErrlocLine,_globalErrlocCol, TCMS_SUM);
+      TC_WARN_SIGNAL;
+    }
+d249 1
+a249 2
+      if(warnstream){
+        _output_si(warnstream, _globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+d251 1
+a251 2
+        TC_WARN_SIGNAL;
+      }
+d256 1
+a256 2
+        if(warnstream){
+          _output_si(warnstream, _globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+a257 2
+          TC_WARN_SIGNAL;
+        }
+d277 1
+a277 2
+    if(warnstream){
+      _output_si(warnstream, _globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+a278 2
+      TC_WARN_SIGNAL;
+    }
+@
+
+
+1.13
+log
+@Added globalErrloc stuff to output function calls;
+Also, modified strncpy to check dest always (since strncpy will
+null-pad the destination up to n).
+@
+text
+@d252 14
+d275 5
+a279 1
+  _setStringTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, s,n-1);
+@
+
+
+1.12
+log
+@Modified output functions to use _globalErrloc* variables
+which are now set by instr-ast.sml.
+@
+text
+@d13 1
+a13 1
+        _output_simple(warnstream, TCMC_CFU);
+d21 1
+a21 1
+          _output_simple(warnstream, TCMC_CIU);
+d39 1
+a39 1
+        _output_simple(warnstream, TCMM_CFU);
+d47 1
+a47 1
+          _output_simple(warnstream, TCMM_CIU);
+a123 2
+/* NOTE: this check is only done here since _copyTag does a verifyAlloc
+	 on its destination. */
+d132 8
+d257 1
+a257 1
+      _output_simple(warnstream, TCMS_SUM);
+@
+
+
+1.11
+log
+@Added #include <limits.h> (for INT_MAX).
+@
+text
+@d26 1
+a26 1
+      _copyTag("_typecheck_memcpy",__LINE__,0,
+d52 1
+a52 1
+      _copyTag("_typecheck_memmove",__LINE__,0,
+d87 2
+a88 2
+        _output_si(warnstream, "(_tc_strcpy)",0,0, TCLIB_CFU,
+		"strcpy",0,0,0, -1,-i,0,0);
+d97 2
+a98 2
+          _output_si(warnstream, "(_tc_strcpy)",0,0, TCLIB_CIU,
+		"strcpy",0,0,0, i,0,0,0);
+d102 1
+a102 1
+      _setStringTag("(_tc_strcpy)",__LINE__,0, dst,i);
+d105 1
+a105 1
+      _copyTag("_typecheck_strcpy",__LINE__,0,
+d118 2
+a119 2
+        _output_si(warnstream, "(_tc_strncpy)",0,0, TCLIB_CFU,
+		"strncpy",0,0,0, n,-i,0,0);
+d127 2
+a128 2
+          _output_si(warnstream, "(_tc_strncpy)",0,0, TCLIB_CIU,
+		"strncpy",0,0,0, n,0,0,0);
+d132 1
+a132 1
+      _setStringTag("(_tc_strncpy)",__LINE__,0, dst,n);
+d135 1
+a135 1
+      _copyTag("_typecheck_strcpy",__LINE__,0,
+d139 1
+a139 1
+        _setStringTag("(_tc_strncpy)",__LINE__,0, dst+i,n-i-1);
+d153 2
+a154 2
+        _output_si(warnstream, "(_tc_strcat)",0,0, TCLIB_CFU,
+		"strcat",0,0,0, -1,-i,0,0);
+d165 2
+a166 2
+          _output_si(warnstream, "(_tc_strcat)",0,0, TCLIB_CIU,
+		"strcat",0,0,0, i,0,0,0);
+d170 1
+a170 1
+      _setStringTag("(_tc_strcat)",__LINE__,0, dst,strlen(dst)+i);
+d176 2
+a177 2
+          _output_si(warnstream, "(_tc_strcat)",0,0, TCLIB_CIU,
+		"strcat",0,0,0, i,0,0,0);
+d180 1
+a180 1
+        _setStringTag("(_tc_strcat)",__LINE__,0, dst,strlen(dst));
+d183 1
+a183 1
+      _copyTag("_typecheck_strcat",__LINE__,0,
+d197 2
+a198 2
+        _output_si(warnstream, "(_tc_strncat)",0,0, TCLIB_CFU,
+		"strncat",0,0,0, n,-i,0,0);
+d210 2
+a211 2
+          _output_si(warnstream, "(_tc_strncat)",0,0, TCLIB_CIU,
+		"strncat",0,0,0, i,0,0,0);
+d215 1
+a215 1
+      _setStringTag("(_tc_strncat)",__LINE__,0, dst,strlen(dst)+i);
+d221 2
+a222 2
+          _output_si(warnstream, "(_tc_strncat)",0,0, TCLIB_CIU,
+		"strncat",0,0,0, i,0,0,0);
+d225 1
+a225 1
+        _setStringTag("(_tc_strncat)",__LINE__,0, dst,strlen(dst));
+d228 1
+a228 1
+      _copyTag("_typecheck_strncat",__LINE__,0,
+d231 3
+a233 3
+        _verifyTag("_typecheck_strncat",__LINE__,0, "_tc_strncat:dest[n]",
+			dst+strlen(dst)+i, _ctype_char);
+        _setScalarTag("_typecheck_strncat",__LINE__,0,
+d255 1
+a255 1
+  _setStringTag("(_typecheck_memset)",__LINE__,0, s,n-1);
+d269 2
+a270 2
+        _output_si(warnstream, "(_tc_memccpy)",0,0, TCLIB_CFU,
+		"memccpy",0,0,0, n,-i,0,0);
+d278 2
+a279 2
+          _output_si(warnstream, "(_tc_memccpy)",0,0, TCLIB_CIU,
+		"memccpy",0,0,0, i,0,0,0);
+d285 1
+a285 1
+      _copyTag("_typecheck_memccpy",__LINE__,0,
+d302 2
+a303 2
+      _output_si(warnstream, "(_tc_strdup)",0,0, TCLIB_CFU,
+		"strdup",0,0,0, -1,-i,0,0);
+d309 1
+a309 1
+  if(ret) _setStringTag("(_tc_strdup)",__LINE__,0, ret,strlen(ret));
+@
+
+
+1.10
+log
+@Wrote tc stuff for str(n)cpy and strdup
+@
+text
+@d2 1
+@
+
+
+1.9
+log
+@Added instr stuff for strcpy, strncpy;
+fixed(?) small bug with memccpy (untested);
+also, removed old commented-out stuff.
+@
+text
+@d87 1
+a87 1
+		"strcpy",0,0,0, 0,-i,0,0);
+d90 1
+d101 1
+d131 1
+d147 38
+d190 47
+d296 14
+a309 1
+  return strdup(s1);
+@
+
+
+1.8
+log
+@Converted output to _output_* functions (new output manager).
+@
+text
+@a11 4
+/*
+        fprintf(warnstream, "[_typecheck_memcpy]"
+		"WARNING! Copying from unallocated memory.\n");
+*/
+a19 4
+/*
+          fprintf(warnstream, "[_typecheck_memcpy]"
+		"WARNING! Copying into unallocated memory.\n");
+*/
+a37 4
+/*
+        fprintf(warnstream, "[_typecheck_memmove]"
+		"WARNING! Copying from unallocated memory.\n");
+*/
+a45 4
+/*
+          fprintf(warnstream, "[_typecheck_memmove]"
+		"WARNING! Copying into unallocated memory.\n");
+*/
+d82 23
+d110 29
+a161 4
+/*
+      fprintf(warnstream, "[_typecheck_memset]"
+		"WARNING! Setting unallocated memory.\n");
+*/
+d180 2
+a181 7
+/*
+        fprintf(warnstream, "[_typecheck_memccpy] WARNING! "
+		"Copying up to %d bytes from %d bytes of allocated memory.\n",
+		n, -i);
+*/
+        _output_si(warnstream, "(_tc_memccpy)",0,0, TCMCC_CFU,
+		0,0,0,0, n,-i,0,0);
+d184 1
+a184 1
+      if(!verifyAlloc(s1, n)){
+d189 2
+a190 5
+/*
+          fprintf(warnstream, "[_typecheck_memmove]"
+		"WARNING! Copying into unallocated memory.\n");
+*/
+          _output_simple(warnstream, TCMCC_CIU);
+d196 1
+a196 1
+      _copyTag("_typecheck_memmove",__LINE__,0,
+@
+
+
+1.7
+log
+@Incorporated new _copyTag (which takes a _ctype_t for its last argument).
+@
+text
+@d12 1
+d15 2
+d24 1
+d27 2
+d46 1
+d49 2
+d58 1
+d61 2
+d126 1
+d129 2
+d134 1
+a134 1
+  _setStringTag("[_typecheck_memset]",__LINE__,0, s,n-1);
+d148 1
+d152 3
+d162 1
+d165 2
+@
+
+
+1.6
+log
+@applied GET_TAG_POS macro (to replace _getTagPos function call);
+@
+text
+@d28 1
+a28 1
+		s1, s2, n);
+d56 1
+a56 1
+		s1, s2, n);
+d151 1
+a151 1
+		s1, s2, i);
+@
+
+
+1.5
+log
+@Added signal stuff (turn off by defining TC_NOSIGNAL in tcinternal.h).
+@
+text
+@d70 3
+a72 1
+  _mirror_pos_t tagpos = _getTagPos(s);
+@
+
+
+1.4
+log
+@Streamlined include files (includes only tcinternal.h);
+renamed Unalloc to _typetag_unalloc.
+@
+text
+@d11 1
+a11 1
+      if(warnstream)
+d14 2
+d20 1
+a20 1
+        if(warnstream)
+d23 2
+d39 1
+a39 1
+      if(warnstream)
+d42 2
+d48 1
+a48 1
+        if(warnstream)
+d51 2
+d111 1
+a111 1
+    if(warnstream)
+d114 2
+d130 1
+a130 1
+      if(warnstream)
+d134 2
+d140 1
+a140 1
+        if(warnstream)
+d143 2
+@
+
+
+1.3
+log
+@de-tagpos-ified.
+@
+text
+@d3 1
+a3 1
+#include <tcapi.h>
+a5 2
+#include "tcinternal.h"
+
+d65 1
+a65 1
+    if(TAG_BITS(tagpos) == Unalloc) return -i;
+@
+
+
+1.2
+log
+@Instrumented memcpy, memmove, memccpy, memset.
+Added helper function checkCharAllocUpTo() and
+test function foofoo();
+replaced #include <tcstring.h> with <tclibc.h>
+@
+text
+@d11 1
+a11 3
+    _mirror_pos_t s1pos = _getTagPos(s1);
+    _mirror_pos_t s2pos = _getTagPos(s2);
+    if(!verifyAlloc(s2pos, n)){
+d16 1
+a16 1
+      if(!verifyAlloc(s1pos, n)){
+d26 1
+a26 1
+		s1pos, s2pos, n);
+d35 1
+a35 3
+    _mirror_pos_t s1pos = _getTagPos(s1);
+    _mirror_pos_t s2pos = _getTagPos(s2);
+    if(!verifyAlloc(s2pos, n)){
+d40 1
+a40 1
+      if(!verifyAlloc(s1pos, n)){
+d50 1
+a50 1
+		s1pos, s2pos, n);
+d103 1
+a103 2
+  _mirror_pos_t spos = _getTagPos(s);
+  if(!verifyAlloc(spos, n)){
+d126 1
+a126 1
+      if(!verifyAlloc(_getTagPos(s1), n)){
+d137 1
+a137 1
+		_getTagPos(s1), _getTagPos(s2), i);
+d156 1
+a156 1
+  _setUninitTag("foo",0,0, _getTagPos(c), 4);
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d4 3
+a6 1
+#include <tcstring.h>
+d10 21
+d36 21
+d60 20
+d107 8
+d123 22
+d155 20
+@

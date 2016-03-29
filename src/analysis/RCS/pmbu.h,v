@@ -1,0 +1,120 @@
+head	1.3;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.3
+date	2004.05.24.19.48.33;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2004.05.24.19.10.09;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2004.05.20.19.22.41;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@vp-May-Be-Uninit analysis.
+@
+
+
+1.3
+log
+@1. Moved pMBU "write results" code from TCAstate
+to pMBUfactHandler class.
+2. Removed pMBU filterResults -- just output everything
+and let sml decide which to instrument.
+@
+text
+@#ifndef TC_PMBU_H /* { */
+#define TC_PMBU_H
+
+#include "edge.h"
+#include "mbu.h"
+
+//----------------------------------
+//- pMBU: vp may-be-uninit analysis
+
+class pMBUfactHandler : public MBUfactHandler
+{
+  public:
+    bool handleStrongAssign(DFAfact& df, AO& lhs, ExpDescr& rhs,
+			    PgmExpr * dnode = 0, PgmStmt * cnode = 0, PExprArg * arg = 0);
+    bool handleWeakAssign(DFAfact& df, ExpDescr& lhs, ExpDescr& rhs, PExprAssign& dnode);
+    bool handleFormal(DFAfact& df, PExprDecl& dd, CFGfunction& parfn, bool interproc);
+    bool handleDecl(DFAfact& df, PExprDecl& dd);
+    bool handleVerify(DFAfact& df, PExprVerify& dv);
+    void intraProcInitializeEntryFact(DFAfact& df, CFGnode& cn);
+    void intraProcHandleCall(DFAfact& df, PExprCall& dc);
+
+  public:
+    pMBUfactHandler() {}
+
+    static void doInsensitiveAnalysis(CFG& cfg);
+    static void writeResults(CFG& cfg, FILE * outf);
+
+    //- public, so they can be accessed by TCAstate
+    static suco_set<AO *> results;
+    static suco_set<AO *> unsafe;
+    static suco_set<AO *> tracked;
+    static bool readwrite;	//- used by collectPMBUtrackedUnsafe
+    static void collectUnsafeTracked(AO& ao);
+
+  private:
+    static bool collectStartingPoints(PgmExpr& pe); //- helper for doInsensitiveAnalysis
+    static suco_set<ECR *> relevant_ecrs; //- used by collectSatrtingPoints
+
+    void moveToResults(suco_set<AO *>& uninit_aos, ExpDescr& use_exp, bool deref);
+    void moveToResults(suco_set<AO *>& uninit_aos, LocSet& use_locs);
+    static bool check_pmbu(ExpDescr& ed, suco_set<AO *>& pmbu_set);
+
+};
+
+//----------------------------------
+
+#endif /* } ifndef TC_PMBU_H */
+
+@
+
+
+1.2
+log
+@1. Wrote flow-insensitive pmbu analysis; the flow-sensitive
+   portion is now in a non-working state, and needs to be
+   rewritten.
+2. Moved some pmbu-related code from TCAstate to
+   pMBUfactHandler class.
+So now: pmbu-sensitive is working, but not pmbu-insensitive.
+@
+text
+@d26 1
+a36 1
+    static bool filterResults(PgmExpr& pe); //- helper for doInsensitiveAnalysis
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d4 1
+d23 10
+a32 1
+    pMBUfactHandler(suco_set<AO *>& res, bool rw) : MBUfactHandler(), results(res), readwrite(rw) {}
+d35 3
+a37 1
+    pMBUfactHandler();
+d41 1
+a42 2
+    suco_set<AO *>& results;
+    bool readwrite;
+@

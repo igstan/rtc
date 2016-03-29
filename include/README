@@ -1,0 +1,15 @@
+10june00:
+
+CT_CHAR may need to be simplified for a better tradeoff
+between cases handled in the macro and the size of the macro.
+
+_setStringTag and _setUninitTag need looping and so may not be
+macrofiable.
+
+_setScalarUninitTag needs looping in all cases except when
+the tag had been set to something of the same size before
+(e.g. when the same stack frame is allocated to a function).
+This is too much of a special case to deserve special handling.
+
+tcapi-convoluted.h contains a backup of convoluted ps/is/ts version
+(compatible with the even scarier pmirror-convoluted.c).

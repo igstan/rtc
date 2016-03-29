@@ -1,0 +1,3295 @@
+head	1.80;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.80
+date	2004.07.16.18.48.54;	author suan;	state Exp;
+branches;
+next	1.79;
+
+1.79
+date	2004.06.23.19.03.07;	author suan;	state Exp;
+branches;
+next	1.78;
+
+1.78
+date	2004.06.23.18.33.08;	author suan;	state Exp;
+branches;
+next	1.77;
+
+1.77
+date	2004.06.23.15.15.23;	author suan;	state Exp;
+branches;
+next	1.76;
+
+1.76
+date	2004.06.03.21.37.29;	author suan;	state Exp;
+branches;
+next	1.75;
+
+1.75
+date	2004.06.03.00.29.40;	author suan;	state Exp;
+branches;
+next	1.74;
+
+1.74
+date	2004.06.03.00.12.24;	author suan;	state Exp;
+branches;
+next	1.73;
+
+1.73
+date	2004.03.03.16.43.50;	author suan;	state Exp;
+branches;
+next	1.72;
+
+1.72
+date	2004.02.10.18.59.27;	author suan;	state Exp;
+branches;
+next	1.71;
+
+1.71
+date	2004.02.06.21.37.04;	author suan;	state Exp;
+branches;
+next	1.70;
+
+1.70
+date	2004.01.05.21.14.26;	author suan;	state Exp;
+branches;
+next	1.69;
+
+1.69
+date	2003.12.25.17.21.28;	author suan;	state Exp;
+branches;
+next	1.68;
+
+1.68
+date	2003.12.10.00.25.53;	author suan;	state Exp;
+branches;
+next	1.67;
+
+1.67
+date	2003.12.05.23.11.57;	author suan;	state Exp;
+branches;
+next	1.66;
+
+1.66
+date	2003.12.01.16.25.51;	author suan;	state Exp;
+branches;
+next	1.65;
+
+1.65
+date	2003.11.28.21.45.51;	author suan;	state Exp;
+branches;
+next	1.64;
+
+1.64
+date	2003.10.02.15.20.05;	author suan;	state Exp;
+branches;
+next	1.63;
+
+1.63
+date	2003.07.10.15.50.54;	author suan;	state Exp;
+branches;
+next	1.62;
+
+1.62
+date	2003.07.03.23.08.57;	author suan;	state Exp;
+branches;
+next	1.61;
+
+1.61
+date	2003.07.03.18.32.47;	author suan;	state Exp;
+branches;
+next	1.60;
+
+1.60
+date	2003.07.01.22.22.28;	author suan;	state Exp;
+branches;
+next	1.59;
+
+1.59
+date	2003.06.14.17.19.55;	author suan;	state Exp;
+branches;
+next	1.58;
+
+1.58
+date	2003.06.14.17.15.29;	author suan;	state Exp;
+branches;
+next	1.57;
+
+1.57
+date	2003.05.14.20.43.52;	author suan;	state Exp;
+branches;
+next	1.56;
+
+1.56
+date	2003.05.14.19.43.21;	author suan;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2003.04.23.16.36.43;	author suan;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2003.04.22.14.51.44;	author suan;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2003.03.18.20.25.27;	author suan;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2003.03.11.16.30.06;	author suan;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2003.02.05.16.10.42;	author suan;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2003.01.13.19.07.11;	author suan;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2002.11.04.19.09.49;	author suan;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2002.10.28.23.27.17;	author suan;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2002.10.25.00.34.27;	author suan;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2002.10.21.21.45.35;	author suan;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2002.10.21.15.14.54;	author suan;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2002.10.15.01.53.58;	author suan;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2002.10.14.20.01.04;	author suan;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2002.10.11.00.14.37;	author suan;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2002.08.28.22.56.43;	author suan;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2002.08.21.14.00.16;	author suan;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2002.07.25.15.40.14;	author suan;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2002.07.25.15.36.38;	author suan;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2002.04.12.22.49.10;	author suan;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2002.03.11.19.07.32;	author suan;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2002.02.27.16.23.42;	author suan;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2002.02.04.20.09.35;	author suan;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2002.01.30.20.38.56;	author suan;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2001.09.24.20.58.39;	author suan;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2001.06.13.22.20.12;	author suan;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2001.06.13.21.00.00;	author suan;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2001.05.18.22.16.28;	author suan;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2001.05.04.02.10.32;	author suan;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2001.04.23.23.45.05;	author suan;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2000.11.02.20.03.55;	author suan;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2000.10.18.19.41.12;	author suan;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2000.10.09.23.10.41;	author suan;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2000.10.09.22.29.01;	author alexey;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2000.07.12.23.59.14;	author suan;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2000.07.12.01.24.48;	author suan;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2000.07.11.21.13.30;	author suan;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2000.07.11.15.33.56;	author suan;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2000.07.07.00.18.01;	author suan;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2000.07.06.16.22.53;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.07.05.21.54.06;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.07.05.20.59.25;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.07.05.20.45.26;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.07.05.20.31.20;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.06.23.16.54.20;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.06.19.18.57.00;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.06.16.00.48.32;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.06.15.19.27.49;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.06.15.15.34.32;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.06.09.00.14.41;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.05.30.19.04.29;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.05.29.16.50.38;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.05.29.16.08.15;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.05.24.21.45.11;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.05.24.02.50.48;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.05.14.22.11.09;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Script to replace "gcc" in makefiles.
+@
+
+
+1.80
+log
+@Added vtfix usage messge
+@
+text
+@#!/bin/sh
+
+#
+# environment
+#
+if [ "$COMPUTERNAME" = "SUAN-HSI-DELL" ]
+then
+  TCDIR=/home/research/TypecheckDebugger
+  TC_SML_PATH="c:/hsi/cygwin/home/research/TypecheckDebugger/bin"
+
+  RTDIR=/home/research/RangeTracking
+  RT_SML_PATH="c:/hsi/cygwin/home/research/RangeTracking/bin"
+
+  SML=/etc/sml/bin/.run/run.x86-win32.exe
+else
+  TCDIR=/p/wpis/people/students/suan/TypecheckDebugger
+  TC_SML_PATH=/p/wpis/people/students/suan/TypecheckDebugger/bin
+
+  RTDIR=/u/s/u/suan/RangeTracking
+  RT_SML_PATH=/u/s/u/suan/RangeTracking/bin
+
+  SML=sml
+fi
+
+
+TCINCDIR=$TCDIR/include
+TCLIBDIR=$TCDIR/lib
+
+RTINCDIR=$RTDIR/include
+RTLIBDIR=$RTDIR/lib
+
+TCLINK_NEWTAGS_LIBS="-L$TCLIBDIR -ltcapint"
+TCLINK_NEWTAGS_G_LIBS="-L$TCLIBDIR -ltcapintg"
+TCLINK_NEWTAGS_SM_LIBS="-L$TCLIBDIR -ltcapintsm"
+TCLINK_NEWTAGS_SM_G_LIBS="-L$TCLIBDIR -ltcapintsmg"
+TCLINK_PTR_LIBS="-L$TCLIBDIR -ltcptr"
+TCLINK_PTR_G_LIBS="-L$TCLIBDIR -ltcptrg"
+TCLINK_PTRW_LIBS="-L$TCLIBDIR -ltcptrw"
+TCLINK_PTRW_G_LIBS="-L$TCLIBDIR -ltcptrwg"
+TCLINK_VULNW_LIBS="-L$TCLIBDIR -ltcvulnw"
+TCLINK_VULNW_G_LIBS="-L$TCLIBDIR -ltcvulnwg"
+TCLINK_NOOP_LIBS="-L$TCLIBDIR -ltcnoop"
+TCLINK_NOSIG_LIBS="-L$TCLIBDIR -ltcapintns"
+TCLINK_PG_LIBS="-L$TCLIBDIR -ltcapintpg"
+TCLINK_TRS_LIBS="-L$TCLIBDIR -ltcapinttrs"
+TCLINK_MIR_LIBS="-L$TCLIBDIR -ltcapimir"
+
+RTLINK_FLOWTEST_LIBS="-L$RTLIBDIR -lrtft"
+RTLINK_FLOWTEST_G_LIBS="-L$RTLIBDIR -lrtftg"
+RTLINK_RANGETRACK_LIBS="-L$RTLIBDIR -lrt"
+RTLINK_RANGETRACK_G_LIBS="-L$RTLIBDIR -lrtg"
+
+
+INCDIR=$TCINCDIR
+LIBDIR=$TCLIBDIR
+
+TCLINK_DO_INIT=yes
+TCLINK_LIBS=$TCLINK_NEWTAGS_LIBS
+TCLINK_G_LIBS=$TCLINK_NEWTAGS_G_LIBS
+
+#
+# for gdb -g flag (to link in appropriate library, if available)
+#
+G_OPTION=
+
+#
+# set DEBUG to echo to suppress actual execution
+#
+DEBUG=
+
+#
+# for the -persist flag
+#
+PERSIST=
+
+#
+# for the -va_arg flag
+# For now: leave this on by default
+#
+VA_ARG=yes
+
+#
+# for the -keeptmp flag
+#
+KEEP_TMP=
+
+#
+# compiler to use
+#
+CC=gcc
+CFLAGS=
+
+#
+# preprocessor to use (null implies default of "gcc -E")
+#
+PP=""
+#
+# Preprocessor flags: flags for the included typecheck.h file
+#
+#  TC_PREINSTR - [required] signifies that we're in the pre-instrument
+#		phase (will rename main to _prog_main, etc)
+#
+#  TC_MALLOC - include tc version of malloc functions
+#  TC_STRING - include tc version of string functions
+#  TC_STDIO  - include tc version of stdio functions
+#  TC_SCANF  - include tc version of scanf functions
+#  TC_PRINTF - include tc version of printf functions (currently, only sprintf/snprintf)
+#  TC_PCTN_PRINTF - include tc version of printf functions to handle %n (currently, -ptrw only, for printf/fprintf)
+#
+TCPPFLAGS="-I$TCINCDIR -DTC_PREINSTR -DTC_STRING -DTC_MALLOC -DTC_STDIO -DTC_SCANF -DTC_PRINTF"
+
+#
+# Additional options for gcc -E, to ensure ansi compliance
+# (a.k.a. platform-dependent hacks)
+#
+#  -U__GNUC__
+#     turns off some gnu-C keywords (like __extension__)
+#  -D__STDC__=0
+#     makes <sys/types.h> use long long instead of some stupid union
+#     for longlong_t
+#     -- not tested for other side-effects -Suan 09feb00
+#     -- On Linux: this screws up math.h, which uses a __CONCAT macro
+#        that doesn't work when __STDC__ is zero.
+#
+case `uname` in
+     Linux)
+# suddenly, the gcc on Linux started screwing up on mel.c which uses
+# S_IWRITE etc from sys/stat.h, unless these flags are disabled. -13jun01
+ #	GCC_E_FLAGS="-ansi -pedantic"
+	GCC_E_FLAGS=""
+	;;
+     SunOS)
+	GCC_E_FLAGS="-ansi -pedantic -U__GNUC__ -D__STDC__=0"
+	;;
+     *)
+ #	GCC_E_FLAGS="-ansi -pedantic"
+	GCC_E_FLAGS="-ansi -pedantic -U__GNUC__ -D__STDC__=0"
+	;;
+esac
+
+#
+# Path to SML module files
+#
+SML_PARSE_MOD=$TC_SML_PATH/fileToC
+SML_MIR_MOD=$TC_SML_PATH/fileToMirCFile
+SML_TYPE_MOD=$TC_SML_PATH/fileToTypedCFile
+SML_INSTR_MOD=$TC_SML_PATH/filesToInstrCFiles
+SML_OINSTR_MOD=$TC_SML_PATH/filesToInstrCFiles-18aug02-istracked-isunsafe
+SML_RTFT_MOD=$RT_SML_PATH/fileToFlowTestC
+SML_RT_MOD=$RT_SML_PATH/fileToRangeTrackC
+
+#
+# Extensions
+#
+
+# pp and assign suffixes
+# .ppi, .tc_iasgs for RTC instrumentation
+# .ppp, .tc_pasgs for -ptr/ptrw instrumentation
+PP_SUFFIX=.ppi.c
+ASG_SUFFIX=.tc_iasgs
+
+# instr mode:
+# .instr for RTC instrumentation
+# .pinstr for -ptr instrumentation
+# .pwinstr for -ptrw instrumentation
+INSTR_INFIX=.instr
+
+# opt mode:
+# .opt when optimization is turned on
+OPT_INFIX=
+
+# macro mode:
+# .mac when macros are turned on
+# .macstm for static-mirror macros
+# .mpg when -pg is turned on
+MAC_INFIX_TO_USE=.mac
+MAC_INFIX=
+
+#
+# Set by -pg
+#
+LDFLAGS=
+
+#
+# constants
+#
+ENUM_CKIT=0
+ENUM_MIR=1
+ENUM_TYPED=2
+ENUM_PP=3
+ENUM_ASSIGN=4
+ENUM_INSTR=5
+ENUM_CC=6
+ENUM_LINK=7
+
+FILES=""
+
+#
+# usage message
+#
+
+if [ -z "$1" ]
+then echo 'Usage: tc [options|files]'
+     echo '       accepts (hopefully) most standard gcc flags, plus:'
+     echo '       -aid            Output aid-annotated source (to <file>.aids)'
+     echo '       -assign         Output assignment edges (to <file>.tc_?asgs)'
+     echo '       -ckit           Do ckit parsing (fileToC) only'
+     echo '       -mir            Compile for mirror-test (see -mirlink)'
+     echo '       -ptr            Compile for verifyPtr-only check (security tool)'
+     echo '       -ptrw           Compile for verifyPtr-write-only check (security tool)'
+     echo '       -ptr-vuln       Vulnerable verifyPtr checks (NOT YET SUPPORTED)'
+     echo '       -ptrw-vuln      Vulnerable verifyPtr checks (alternate security tool)'
+     echo '       -rt             Compile for range-tracking'
+     echo '       -rtft           Compile for flow-test (range-tracking tool)'
+     echo '       -sm             Compile with safe-mallocs (newtags)'
+     echo '       -stm            Use static mirror (ptr/ptrw)'
+     echo '       -type           Do type-casting pass (fileToTypedCFile) only'
+     echo '       -pp=<pp>        Set preprocessor to <pp> (default "$cc -E")'
+     echo '       -ppflag-<flag>  Add -<flag> to flags for pp'
+     echo '       -cc=<cc>        Set compiler to <cc> (default "gcc")'
+     echo '       -cflag-<flag>   Add -<flag> to flags for cc'
+     echo '       -instr          Stops after the instrumentation phase'
+     echo '       -instr-<iflag>  Passes "-<iflag>" to tcinstr'
+     echo '       -imod-<suffix>  Instrument with module filesToInstrCFiles-<suffix>'
+     echo '     ( -oinstr         TEMPHACK: use older isTracked/isUnsafe version )'
+     echo '       -noop           Use noop library (-ltcnoop)'
+     echo '       -g              Compile for GDB (-g; link -ltcapintg)'
+     echo '       -pg             Compile for gprof (-pg; link -ltcapintpg)'
+     echo '       -macros         Use newtag macros (-DTC_USE_MACROS, -ltcapint)'
+     echo '       -mirlink        Link for mirror-test (-ltcapimir)'
+     echo '       -persist        Ignore instrumentation errors'
+     echo '       -va_arg         Specially handle va_arg (temporarily on by default)'
+     echo '       -no-varg        Turn off va_arg (temporarily on by default)'
+     echo '       -keeptmp        Do not delete tmp files (for debugging)'
+     echo '       -nosig          Suppress sending of signals on error'
+     echo '       -terse          Print messages in "terse" mode stats'
+     echo '       -tsl-<file>     Instrument with ts_levels from <file>'
+     echo ' Filename extension assumptions are:'
+     echo '       .ckit.c      ckit-parsed file'
+     echo '       .mir.c       mir-parsed file'
+     echo '       .typed.c     type-parsed file'
+     echo '       .pp*.c       tc-preprocessed file (rtc)'
+     echo '       .*instr.c     instrumented file'
+     echo '       .opt.*instr.c optimized instrumented file'
+     echo '       .*instr.o     compiled instrumented file'
+     echo '       .mac.*instr.o compiled macro-instrumented file'
+     echo '       .mpg.*instr.o compiled macro and -pg instrumented file'
+     echo '           *: i = rtc'
+     echo '              p = ptr/ptrw'
+     echo '              f = range-track/flow-test'
+     echo '              r = range-track'
+     echo ' Default output file is a.out.instr'
+     echo ' Instrumented executable accepts the following flags:'
+     echo '   -tc-summarize   Summarize output'
+     echo '   -tc-vtfix/-tc-no-vtfix'
+     echo '                   For rtc: fix tags on verifyTag (default=no)'
+     echo '   -tc-info        For ptr/ptrw: Just dump info (e.g. static counts) without running main'
+     echo '   -tc-dont-die    For ptr/ptrw: do not die on error'
+     echo '   -tc-hashopt=N   For ptr/ptrw: set hash-opt threshhold to N bytes (def=64)'
+     echo "   -tc-trackfree   Keep track of free'd memory"
+     echo "   -tc-no-argv     } (ptr/ptrw mode): don't initialize"
+     echo "   -tc-no-envp     }                  tags for argv/envp"
+     echo '   -tc-allsig      Turn on sending of signals to log,warn,error'
+     echo '   -tc-clearsig    Turn off sending of all signals'
+     echo '   -tc-sig-X       } Turn on or off sending of signal to stream X, where'
+     echo '   -tc-nosig-X     } X = {null|stat|debug|log|warn|error}'
+     echo '   -tc-clear=X     Mode for clearing stack frame on function return'
+     echo '                     X = {none|segs|scalar|aggr|highest}'
+     echo '   -tc-limit-X=N   Limit stream X output to N (-1 for no limit)'
+     echo '                     X = {log|warn|error}'
+     echo '   -tc-send-X=N    Send message N to output stream X, where'
+     echo '                     X = {null|stat|debug|log|warn|error}'
+     echo '   -tc-stream-X=Y  Set output stream X to Y, where'
+     echo '                     X = {stat|debug|log|warn|error}'
+     echo '                     Y = {"":no output|"-":stdout|"=":stderr|"filename"}'
+     echo 'Instrumentation usage:'
+     $SML @@SMLload=$SML_INSTR_MOD
+     echo 'Useful for reading tc_*asgs files in vi:'
+     echo ':g/^% [AHS] /s//:g\/I /'
+     echo ':g/^:g/s/ \./\\>\/s\/\/I</'
+     echo ':g/^:g/s/$/>\/g/'
+     exit
+fi
+
+#################################################################
+# FUNCTION: PARSE CKIT, TYPED, or MIR
+compile_other () { 
+
+  FILESTEM=$2
+
+  case $1 in
+    $ENUM_CKIT)
+	AFFIX=ckit
+	SML_MODULE=$SML_PARSE_MOD
+        cat /dev/null > $FILESTEM.tmp.c
+	;;
+    $ENUM_MIR)
+	AFFIX=mir
+	SML_MODULE=$SML_MIR_MOD
+	echo "void _mirrortest_function();" > $FILESTEM.tmp.c
+	;;
+    $ENUM_TYPED)
+	AFFIX=typed
+	SML_MODULE=$SML_TYPE_MOD
+        cat /dev/null > $FILESTEM.tmp.c
+	;;
+    *)
+	return;
+	;;
+  esac
+
+  shift 2
+  PP_OPTIONS="$*"
+
+  echo ---- preprocessing for $AFFIX $FILESTEM.c '=>' $FILESTEM.tmp.c
+
+  if [ -z "$PP" ]
+  then
+    ##############################
+    # default preprocessor: $CC -E
+    PP="$CC -E"
+
+    ########################
+    # extra flags for gcc -E
+    if [ $CC = "gcc" ]
+    then PP_OPTIONS="$GCC_E_FLAGS $PP_OPTIONS"
+    fi
+  fi
+
+  echo ' ---' $PP $PP_OPTIONS $FILESTEM.c '>' $FILESTEM.tmp.c
+  $DEBUG $PP $PP_OPTIONS $FILESTEM.c >> $FILESTEM.tmp.c
+
+  if [ $? != 0 ]
+  then	echo ' ---' preprocessing for $AFFIX failed
+        if [ "$KEEP_TMP" != yes ]
+	then # rm can be dangerous!
+	     touch /tmp/deleteme
+	     rm -f /tmp/deleteme $FILESTEM.tmp.c
+	fi
+	exit 1
+  fi
+
+  echo ---- $AFFIX parsing $FILESTEM.tmp.c '=>' $FILESTEM.$AFFIX.c
+
+  #
+  # call SML
+  #
+  echo ' ---' $SML @@SMLload=$SML_MODULE $FILESTEM.tmp.c '=>' $FILESTEM.$AFFIX.c
+  $DEBUG $SML @@SMLload=$SML_MODULE $FILESTEM.tmp.c
+
+  RETSTAT=$?
+
+  if [ "$KEEP_TMP" != yes ]
+  then	# rm can be dangerous!
+	touch /tmp/deleteme
+	rm -f /tmp/deleteme $FILESTEM.tmp.c
+  fi
+
+  if [ $RETSTAT != 0 ]
+  then	echo ' ---' $AFFIX parsing failed
+	exit 1
+  fi
+}
+
+#################################################################
+# FUNCTION: PREPROCESS
+compile_pp () { 
+  if [ $1 -ge $ENUM_PP ]
+  then
+    FILESTEM=$2
+    shift 2
+    PP_OPTIONS="$TCPPFLAGS $PPFLAGS $*"
+
+    echo ---- preprocessing $FILESTEM.c '=>' $FILESTEM$PP_SUFFIX
+
+    if [ -z "$PP" ]
+    then
+      ##############################
+      # default preprocessor: $CC -E
+      PP="$CC -E"
+
+      ########################
+      # extra flags for gcc -E
+      if [ $CC = "gcc" ]
+      then PP_OPTIONS="$GCC_E_FLAGS $PP_OPTIONS"
+      fi
+    fi
+
+    echo '#include <typecheck.h>' > $FILESTEM.tmp.c
+    echo '#line 1 "'$FILESTEM.c'"' >> $FILESTEM.tmp.c
+    
+    if [ "$VA_ARG" = yes ]
+    then sed -e 's/\<va_arg\>/TCvarg/g' < $FILESTEM.c >> $FILESTEM.tmp.c
+    else cat $FILESTEM.c >> $FILESTEM.tmp.c
+    fi
+
+    echo ' ---' $PP $PP_OPTIONS $FILESTEM.tmp.c '>' $FILESTEM$PP_SUFFIX
+    $DEBUG $PP $PP_OPTIONS $FILESTEM.tmp.c > $FILESTEM$PP_SUFFIX
+
+    RETSTAT=$?
+
+    if [ "$KEEP_TMP" != yes ]
+    then # rm can be dangerous!
+	 touch /tmp/deleteme
+	 rm -f /tmp/deleteme $FILESTEM.tmp.c
+    fi
+
+    if [ $RETSTAT != 0 ]
+    then  echo ' ---' Preprocessing failed
+	  exit 1
+    fi
+  fi
+}
+
+#################################################################
+# FUNCTION: WRITE ASSIGNMENT EDGES / AID
+compile_assign () { 
+  if [ $1 = $ENUM_ASSIGN ]  # only do if mode is *exactly* ENUM_ASSIGN
+  then			    # ASSIGN_FLAG = assign | aid
+    FILESTEM=$2
+    shift 2
+    INSTR_OPTIONS="$* -$ASSIGN_FLAG"
+
+    echo ---- writing $ASSIGN_FLAG $FILESTEM$PP_SUFFIX '=>' $FILESTEM$ASG_SUFFIX
+
+    #
+    # call SML
+    #
+    echo ' ---' $SML @@SMLload=$SML_INSTR_MOD $INSTR_OPTIONS $FILESTEM$PP_SUFFIX
+    $DEBUG $SML @@SMLload=$SML_INSTR_MOD $INSTR_OPTIONS $FILESTEM$PP_SUFFIX
+
+    if [ $? != 0 ]
+    then  if [ "$PERSIST" = yes ]
+	  then echo ' ---' Instrumentation failed ... continuing
+	  else echo ' ---' Instrumentation failed
+	       exit 1
+          fi
+    fi
+  fi
+}
+
+#################################################################
+# FUNCTION: INSTRUMENT
+compile_instr () { 
+  if [ $1 -ge $ENUM_INSTR ]
+  then
+    FILESTEM=$2
+    shift 2
+    INSTR_OPTIONS=$*
+
+    echo ---- instrumenting $FILESTEM$PP_SUFFIX '=>' $FILESTEM$OPT_INFIX$INSTR_INFIX.c
+
+    #
+    # call SML
+    #
+    echo ' ---' $SML @@SMLload=$SML_INSTR_MOD $INSTR_OPTIONS $FILESTEM$PP_SUFFIX
+    $DEBUG $SML @@SMLload=$SML_INSTR_MOD $INSTR_OPTIONS $FILESTEM$PP_SUFFIX
+
+    if [ $? != 0 ]
+    then  if [ "$PERSIST" = yes ]
+	  then echo ' ---' Instrumentation failed ... continuing
+	  else echo ' ---' Instrumentation failed
+	       exit 1
+          fi
+    fi
+  fi
+}
+
+#################################################################
+# FUNCTION: COMPILE
+compile_cc () { 
+  if [ $1 -ge $ENUM_CC ]
+  then
+    C_FILESTEM=$2
+    shift 2
+    CC_OPTIONS="-I$INCDIR $CFLAGS $*"
+
+    CFILENAME=$C_FILESTEM.c
+    OFILENAME=$C_FILESTEM$MAC_INFIX.o
+
+    echo ---- compiling $CFILENAME '=>' $OFILENAME
+
+    echo '#include <typecheck.h>' > $C_FILESTEM.tmp.c
+    echo '#line 1 "'$CFILENAME'"' >> $C_FILESTEM.tmp.c
+    cat $CFILENAME >> $C_FILESTEM.tmp.c
+
+    echo ' ---' $CC -c $CC_OPTIONS $C_FILESTEM.tmp.c -o $OFILENAME
+    $DEBUG $CC -c $CC_OPTIONS $C_FILESTEM.tmp.c -o $OFILENAME
+
+    RETSTAT=$?
+
+    if [ "$KEEP_TMP" != yes ]
+    then # rm can be dangerous!
+	 touch /tmp/deleteme
+	 rm -f /tmp/deleteme $C_FILESTEM.tmp.c
+    fi
+
+    if [ $RETSTAT != 0 ]
+    then echo --- Compile failed
+	 exit 1
+    fi
+  fi
+}
+
+#################################################################
+# PART ONE:
+#	- FIND OUT WHAT OUR TARGET IS
+#	- COLLECT INSTR OPTIONS
+#	- COLLECT -D AND -U OPTIONS
+
+TODO=$ENUM_LINK
+
+INSTR_OPTIONS=""
+D_OPTIONS=""
+U_OPTIONS=""
+
+OUTSTEM=""
+OUTSTEMNEXT="no"
+
+CMDLINE=""
+
+##################################
+# HACK: pre-filter -stm modifier
+# TODO: some other flags can/should be prefiltered this way also?
+##################################
+for ARG in $*
+do
+  case $ARG in
+    -stm)
+	MAC_INFIX_TO_USE=.macstm
+	D_OPTIONS="$D_OPTIONS -DTC_STATIC_MIRROR"
+	TCLINK_PTR_LIBS="-L$TCLIBDIR -ltcptrstm"
+	TCLINK_PTR_G_LIBS="-L$TCLIBDIR -ltcptrstmg"
+	TCLINK_PTRW_LIBS="-L$TCLIBDIR -ltcptrwstm"
+	TCLINK_PTRW_G_LIBS="-L$TCLIBDIR -ltcptrwstmg"
+	TCLINK_VULNW_LIBS="-L$TCLIBDIR -ltcvulnwstm"
+	TCLINK_VULNW_G_LIBS="-L$TCLIBDIR -ltcvulnwstmg"
+	;;
+  esac
+done
+
+##################################
+# main cmdline arg loop
+##################################
+
+for ARG in $*
+do
+  if [ $OUTSTEMNEXT = "yes" ]
+  then
+	OUTSTEM=$ARG
+	OUTSTEMNEXT="no"
+	continue
+  fi
+
+  case $ARG in
+    -stm)
+	# already handled in pre-loop above, so do nothing
+	;;
+    -E)
+	TODO=$ENUM_PP
+	;;
+    -pp=*)
+	PP=`echo $ARG | cut -c5-`
+	;;
+    -ppflag-*)
+	PPFLAGS="$PPFLAGS `echo $ARG | cut -c8-`"
+	;;
+    -c)
+	TODO=$ENUM_CC
+	;;
+    -cc=*)
+	CC=`echo $ARG | cut -c5-`
+	;;
+    -cflag-*)
+	CFLAGS="$CFLAGS `echo $ARG | cut -c7-`"
+	;;
+    -ckit)
+	TODO=$ENUM_CKIT
+	;;
+    -type)
+	TODO=$ENUM_TYPED
+	;;
+    -mir)
+	TODO=$ENUM_MIR
+	D_OPTIONS="$D_OPTIONS \
+		-Dmalloc=_typecheck_malloc \
+		-Dcalloc=_typecheck_calloc \
+		-Dmemalign=_typecheck_memalign \
+		-Drealloc=_typecheck_realloc \
+		-Dvalloc=_typecheck_valloc"
+	;;
+    -o)
+	OUTSTEMNEXT="yes"
+	;;
+    -D*)
+	D_OPTIONS="$D_OPTIONS $ARG"
+	;;
+    -U*)
+	U_OPTIONS="$U_OPTIONS $ARG"
+	;;
+    -aid)
+	TODO=$ENUM_ASSIGN
+	ASSIGN_FLAG="aid"
+	ASG_SUFFIX=.aids
+	;;
+    -assign)
+	TODO=$ENUM_ASSIGN
+	ASSIGN_FLAG="assign"
+	;;
+    -instr)
+	TODO=$ENUM_INSTR
+	;;
+    -oinstr)
+	SML_INSTR_MOD=$SML_OINSTR_MOD
+	;;
+    -instr-*)
+	INSTR_OPTIONS="$INSTR_OPTIONS `echo $ARG | cut -c7-`"
+	;;
+    -imod-*)
+	SML_INSTR_MOD=$SML_INSTR_MOD`echo $ARG | cut -c6-`
+	;;
+    -tsl-*)
+	INSTR_OPTIONS="$INSTR_OPTIONS -tslfile-`echo $ARG | cut -c6-`"
+	OPT_INFIX=.opt
+	;;
+    -ptr)
+	PP_SUFFIX=.ppp.c
+	ASG_SUFFIX=.tc_pasgs
+	INSTR_INFIX=.pinstr
+	TCPPFLAGS="$TCPPFLAGS -DTC_PRINTF -DTC_PCTN_PRINTF"
+	D_OPTIONS="$D_OPTIONS -DTC_VERIFYPTR_CHECK"
+	INSTR_OPTIONS="$INSTR_OPTIONS -ptr"
+	TCLINK_LIBS=$TCLINK_PTR_LIBS
+	TCLINK_G_LIBS=$TCLINK_PTR_G_LIBS
+	;;
+    -ptrw)
+	PP_SUFFIX=.ppp.c
+	ASG_SUFFIX=.tc_pasgs
+	INSTR_INFIX=.pwinstr
+	TCPPFLAGS="$TCPPFLAGS -DTC_PRINTF -DTC_PCTN_PRINTF"
+	D_OPTIONS="$D_OPTIONS -DTC_VERIFYPTR_CHECK"
+	INSTR_OPTIONS="$INSTR_OPTIONS -ptrw"
+	TCLINK_LIBS=$TCLINK_PTRW_LIBS
+	TCLINK_G_LIBS=$TCLINK_PTRW_G_LIBS
+	;;
+    -ptr-vuln)
+        echo 'NOTE: -ptr-vuln MODE NOT CURRENTLY SUPPORTED. TERMINATING.'
+        exit
+	;;
+    -ptrw-vuln)
+	PP_SUFFIX=.ppp.c
+	ASG_SUFFIX=.tc_pasgs
+	INSTR_INFIX=.vwinstr
+	TCPPFLAGS="$TCPPFLAGS -DTC_PRINTF -DTC_PCTN_PRINTF"
+	D_OPTIONS="$D_OPTIONS -DTC_VERIFYPTR_CHECK -DTC_VULNERABLE_VP"
+	INSTR_OPTIONS="$INSTR_OPTIONS -ptrw -vuln"
+	TCLINK_LIBS=$TCLINK_VULNW_LIBS
+	TCLINK_G_LIBS=$TCLINK_VULNW_G_LIBS
+	;;
+    -rt)
+	PP_SUFFIX=.ppr.c
+	ASG_SUFFIX=.tc_rasgs
+	INSTR_INFIX=.rinstr
+	INCDIR=$RTINCDIR
+	#
+	# -RT_SCANF turns on scanf
+	#
+	TCPPFLAGS="-I$RTINCDIR -DRT_PREINSTR -DRT_SCANF"
+	SML_INSTR_MOD=$SML_RT_MOD
+	TCLINK_DO_INIT=yes
+	TCLINK_LIBS=$RTLINK_RANGETRACK_LIBS
+	TCLINK_G_LIBS=$RTLINK_RANGETRACK_G_LIBS
+	;;
+    -rtft)
+	PP_SUFFIX=.ppf.c
+	ASG_SUFFIX=.tc_fasgs
+	INSTR_INFIX=.finstr
+	INCDIR=$RTINCDIR
+	#
+	# -RT_SCANF turns on scanf
+	#
+	TCPPFLAGS="-I$RTINCDIR -DRT_PREINSTR -DRT_SCANF"
+	D_OPTIONS="-DRT_FLOWTEST"
+	SML_INSTR_MOD=$SML_RTFT_MOD
+	TCLINK_DO_INIT=no
+	TCLINK_LIBS=$RTLINK_FLOWTEST_LIBS
+	TCLINK_G_LIBS=$RTLINK_FLOWTEST_G_LIBS
+	;;
+    -sm)
+	TCLINK_LIBS=$TCLINK_NEWTAGS_SM_LIBS
+	TCLINK_G_LIBS=$TCLINK_NEWTAGS_SM_G_LIBS
+	;;
+    -g)
+	CFLAGS="$CFLAGS -g"
+	G_OPTION=yes
+	;;
+    -pg)
+	CFLAGS="$CFLAGS -pg"
+	TCLINK_LIBS=$TCLINK_PG_LIBS
+	TCLINK_G_LIBS=$TCLINK_PG_LIBS
+	MAC_INFIX=.mpg
+	LDFLAGS=-pg
+	;;
+    -mirlink)
+	TCLINK_LIBS=$TCLINK_MIR_LIBS
+	TCLINK_G_LIBS=$TCLINK_MIR_LIBS
+	;;
+    -noop)
+	TCLINK_LIBS=$TCLINK_NOOP_LIBS
+	TCLINK_G_LIBS=$TCLINK_NOOP_LIBS
+	;;
+    -nosig)
+	TCLINK_LIBS=$TCLINK_NOSIG_LIBS
+	TCLINK_G_LIBS=$TCLINK_NOSIG_LIBS
+	;;
+    -terse)
+	TCLINK_LIBS=$TCLINK_TRS_LIBS
+	TCLINK_G_LIBS=$TCLINK_TRS_LIBS
+	;;
+    -persist)
+	PERSIST=yes
+	;;
+    -va_arg)
+	VA_ARG=yes
+	;;
+    -no-varg)
+	VA_ARG=
+	;;
+    -keeptmp)
+	KEEP_TMP=yes
+	;;
+    -macros)
+	D_OPTIONS="$D_OPTIONS -DTC_USE_MACROS"
+#
+# temporary hack
+#
+	MAC_INFIX=$MAC_INFIX_TO_USE
+	;;
+    *)
+	CMDLINE="$CMDLINE $ARG"
+	;;
+  esac
+done
+
+#################################################################
+# PART TWO: DO PP,INSTR,CC
+
+OPTIONS=""
+OPTIONNEXT=""
+LINK_OBJS=""
+LINK_LIBS=""
+INSTR_INIT_FILES=""
+
+for ARG in $CMDLINE
+do
+  if [ -n "$OPTIONNEXT" ]
+  then
+	OPTIONS="$OPTIONS $OPTIONNEXT $ARG"
+	OPTIONNEXT=""
+	continue
+  fi
+
+  case $ARG in
+#################################################################
+# options that take the next item as parameter
+    -x) OPTIONNEXT=$ARG ;;
+    -idirafter) OPTIONNEXT=$ARG ;;
+    -include) OPTIONNEXT=$ARG ;;
+    -imacro) OPTIONNEXT=$ARG ;;
+    -iprefix) OPTIONNEXT=$ARG ;;
+    -iwithprefix) OPTIONNEXT=$ARG ;;
+    -b) OPTIONNEXT=$ARG ;;
+    -u) OPTIONNEXT=$ARG ;;
+    -V) OPTIONNEXT=$ARG ;;
+#################################################################
+    -l*)
+	LINK_LIBS="$LINK_LIBS $ARG"
+	;;
+    -*)
+	OPTIONS="$OPTIONS $ARG"
+	;;
+#################################################################
+#    *.mac.instr.o)
+#	FILESTEM=`echo $ARG | sed -e 's/\.mac.instr\.o$//'`
+#	LINK_OBJS="$LINK_OBJS $ARG"
+#	INSTR_INIT_FILES="$INSTR_INIT_FILES $FILESTEM.instr.c"
+#	;;
+    *.mac.o)
+	INSTR_FILESTEM=`echo $ARG | sed -e 's/\.mac\.o$//'`
+	LINK_OBJS="$LINK_OBJS $ARG"
+	INSTR_INIT_FILES="$INSTR_INIT_FILES $INSTR_FILESTEM.c"
+	;;
+    *.macstm.o)
+	INSTR_FILESTEM=`echo $ARG | sed -e 's/\.macstm\.o$//'`
+	LINK_OBJS="$LINK_OBJS $ARG"
+	INSTR_INIT_FILES="$INSTR_INIT_FILES $INSTR_FILESTEM.c"
+	;;
+#    *.mpg.instr.o)
+#	FILESTEM=`echo $ARG | sed -e 's/\.mpg.instr\.o$//'`
+#	LINK_OBJS="$LINK_OBJS $ARG"
+#	INSTR_INIT_FILES="$INSTR_INIT_FILES $FILESTEM.instr.c"
+#	;;
+    *.mpg.o)
+	INSTR_FILESTEM=`echo $ARG | sed -e 's/\.mpg\.o$//'`
+	LINK_OBJS="$LINK_OBJS $ARG"
+	INSTR_INIT_FILES="$INSTR_INIT_FILES $INSTR_FILESTEM.c"
+	;;
+#    *.instr.o)
+#	FILESTEM=`echo $ARG | sed -e 's/\.instr\.o$//'`
+#	LINK_OBJS="$LINK_OBJS $ARG"
+#	INSTR_INIT_FILES="$INSTR_INIT_FILES $FILESTEM.instr.c"
+#	;;
+ #    *$INSTR_INFIX.o)
+ #	INSTR_FILESTEM=`echo $ARG | sed -e 's/\.o$//'`
+ #	LINK_OBJS="$LINK_OBJS $ARG"
+ #	INSTR_INIT_FILES="$INSTR_INIT_FILES $INSTR_FILESTEM.c"
+ #	;;
+    *.instr.o|*.finstr.o|*.pinstr.o|*.pwinstr.o|*.rinstr.o|*.vinstr.o|*.vwinstr.o)
+	INSTR_FILESTEM=`echo $ARG | sed -e 's/\.o$//'`
+	LINK_OBJS="$LINK_OBJS $ARG"
+	INSTR_INIT_FILES="$INSTR_INIT_FILES $INSTR_FILESTEM.c"
+	;;
+    *.o)
+	LINK_OBJS="$LINK_OBJS $ARG"
+	;;
+    *.a)
+	LINK_LIBS="$LINK_LIBS $ARG"
+	;;
+#    *$OPT_INFIX$INSTR_INFIX.c)
+#	FILESTEM=`echo $ARG | sed -e "s/$OPT_INFIX$INSTR_INFIX\.c$//"`
+#	compile_cc $TODO $FILESTEM $D_OPTIONS $U_OPTIONS $OPTIONS
+#	LINK_OBJS="$LINK_OBJS $FILESTEM$OPT_INFIX$INSTR_INFIX$MAC_INFIX.o"
+#	INSTR_INIT_FILES="$INSTR_INIT_FILES $FILESTEM$OPT_INFIX$INSTR_INFIX.c"
+#	;;
+ #    *$INSTR_INFIX.c)
+ #	INSTR_FILESTEM=`echo $ARG | sed -e "s/$INSTR_INFIX\.c$//"`
+ #	FILESTEM=`echo $INSTR_FILESTEM | sed -e "s/\.opt$//"`
+ #	compile_cc $TODO $FILESTEM $D_OPTIONS $U_OPTIONS $OPTIONS
+ #	LINK_OBJS="$LINK_OBJS $INSTR_FILESTEM$INSTR_INFIX$MAC_INFIX.o"
+ #	INSTR_INIT_FILES="$INSTR_INIT_FILES $INSTR_FILESTEM$INSTR_INFIX.c"
+ #	;;
+    *.instr.c|*.finstr.c|*.pinstr.c|*.pwinstr.c|*.rinstr.c|*.vinstr.c|*.vwinstr.c)
+	C_FILESTEM=`echo $ARG | sed -e "s/\.c$//"`
+	compile_cc $TODO $C_FILESTEM $D_OPTIONS $U_OPTIONS $OPTIONS
+	LINK_OBJS="$LINK_OBJS $C_FILESTEM$MAC_INFIX.o"
+	INSTR_INIT_FILES="$INSTR_INIT_FILES $C_FILESTEM.c"
+	;;
+    *.ppi.c|*.ppp.c|*.ppf.c|*.ppr.c)
+	FILESTEM=`echo $ARG | sed -e 's/\.pp.\.c$//'`
+	compile_assign $TODO $FILESTEM $INSTR_OPTIONS
+	compile_instr $TODO $FILESTEM $INSTR_OPTIONS
+	compile_cc $TODO $FILESTEM$OPT_INFIX$INSTR_INFIX $D_OPTIONS $U_OPTIONS $OPTIONS
+	LINK_OBJS="$LINK_OBJS $FILESTEM$OPT_INFIX$INSTR_INFIX$MAC_INFIX.o"
+	INSTR_INIT_FILES="$INSTR_INIT_FILES $FILESTEM$OPT_INFIX$INSTR_INFIX.c"
+	;;
+    *.c)
+	FILESTEM=`echo $ARG | sed -e 's/\.c$//'`
+	compile_other $TODO $FILESTEM $D_OPTIONS $U_OPTIONS $OPTIONS
+	compile_pp $TODO $FILESTEM $D_OPTIONS $U_OPTIONS $OPTIONS
+	compile_assign $TODO $FILESTEM $INSTR_OPTIONS
+	compile_instr $TODO $FILESTEM $INSTR_OPTIONS
+	compile_cc $TODO $FILESTEM$OPT_INFIX$INSTR_INFIX $D_OPTIONS $U_OPTIONS $OPTIONS
+	LINK_OBJS="$LINK_OBJS $FILESTEM$OPT_INFIX$INSTR_INFIX$MAC_INFIX.o"
+	INSTR_INIT_FILES="$INSTR_INIT_FILES $FILESTEM$OPT_INFIX$INSTR_INFIX.c"
+	;;
+    *)
+	echo ---- ignoring unrecognized argument '"'$ARG'"'
+	;;
+  esac
+
+done
+
+#################################################################
+# PART THREE: DO LINK
+
+if [ -z "$LINK_OBJS" ]
+then echo ---- Error: no files to link.
+     exit 1
+fi
+
+if [ $TODO -ge $ENUM_LINK ]
+then
+    if [ -z "$OUTSTEM" ]
+    then OUTSTEM="a.out"
+    fi
+
+    if [ "$TCLINK_DO_INIT" = yes ]
+    then
+	#########################################################
+	# CREATE INIT FILE
+	INITFILE=$OUTSTEM.init.c
+	INITTAILFILE=/tmp/$OUTSTEM.init.tail.c
+
+	echo ---- collecting init functions from $INSTR_INIT_FILES
+
+	if [ -z "$DEBUG" ]
+	then
+	    echo ' ' > $INITFILE
+	    echo ' ' > $INITTAILFILE
+
+	    # initfile function header
+	    echo 'void callInitFunctions(void) {' >> $INITFILE
+
+	    for INSTR_CFILE in $INSTR_INIT_FILES
+	    do
+		# initfile prototype
+		head -2 $INSTR_CFILE >> $INITFILE
+		# initfile function call
+		head -2 $INSTR_CFILE | cut -b 5- >> $INITTAILFILE
+	    done
+
+	    # close up initfile
+	    cat $INITTAILFILE >> $INITFILE
+	    echo '}' >> $INITFILE
+
+	    rm -f $INITTAILFILE
+	fi
+    else
+	INITFILE=""
+    fi
+
+    #########################################################
+    # NOW LINK
+
+    echo ---- linking $LINK_OBJS $LINK_LIBS '=>' $OUTSTEM$INSTR_INFIX
+
+    if [ "$G_OPTION" = "yes" ]
+    then TCLINK_LIBS=$TCLINK_G_LIBS
+    fi
+    
+    echo '  --' $CC $LDFLAGS -o $OUTSTEM$INSTR_INFIX $OPTIONS $INITFILE $LINK_OBJS $TCLINK_LIBS $LINK_LIBS
+    if $DEBUG $CC $LDFLAGS -o $OUTSTEM$INSTR_INFIX $OPTIONS $INITFILE $LINK_OBJS $TCLINK_LIBS $LINK_LIBS
+    then echo ' ---' Link succeeded
+    else echo ' ---' Link failed
+         exit 1
+    fi
+fi
+@
+
+
+1.79
+log
+@Added vuln-stm stuff (missed in earlier change).
+@
+text
+@d255 3
+a257 1
+     echo '   -tc-info        Just dump info (e.g. static counts) without running main'
+@
+
+
+1.78
+log
+@Added -DTC_VULNERABLE_VP flag for vuln mode.
+@
+text
+@d534 2
+@
+
+
+1.77
+log
+@Added -vuln stuff.
+@
+text
+@d651 1
+a651 1
+	D_OPTIONS="$D_OPTIONS -DTC_VERIFYPTR_CHECK"
+@
+
+
+1.76
+log
+@Re-enabled -DTC_SCANF by default
+(why was it disabled?)
+@
+text
+@d40 2
+d211 2
+d642 14
+d814 1
+a814 1
+    *.instr.o|*.finstr.o|*.pinstr.o|*.rinstr.o|*.pwinstr.o)
+d838 1
+a838 1
+    *.instr.c|*.finstr.c|*.pinstr.c|*.rinstr.c|*.pwinstr.c)
+@
+
+
+1.75
+log
+@Changed limit usage message
+@
+text
+@d108 1
+a108 1
+TCPPFLAGS="-I$TCINCDIR -DTC_PREINSTR -DTC_STRING -DTC_MALLOC -DTC_STDIO -DTC_SCANF"
+@
+
+
+1.74
+log
+@Added -tc-limit usage message
+@
+text
+@d263 1
+a263 1
+     echo '   -tc-limit-X=N   Limit stream X output to N (0 for no limit)'
+@
+
+
+1.73
+log
+@Added -tc-info usage line
+@
+text
+@d263 2
+@
+
+
+1.72
+log
+@Modified -tc-hashopt= message to say default is 64.
+@
+text
+@d251 1
+@
+
+
+1.71
+log
+@Added hashopt usage message
+@
+text
+@d250 17
+a266 17
+     echo '       -tc-summarize   Summarize output'
+     echo '       -tc-dont-die    For ptr/ptrw: do not die on error'
+     echo '       -tc-hashopt=N   For ptr/ptrw: set hash-opt threshhold to N bytes'
+     echo "       -tc-trackfree   Keep track of free'd memory"
+     echo "       -tc-no-argv     } (ptr/ptrw mode): don't initialize"
+     echo "       -tc-no-envp     }                  tags for argv/envp"
+     echo '       -tc-allsig      Turn on sending of signals to log,warn,error'
+     echo '       -tc-clearsig    Turn off sending of all signals'
+     echo '       -tc-sig-X       } Turn on or off sending of signal to stream X, where'
+     echo '       -tc-nosig-X     } X = {null|stat|debug|log|warn|error}'
+     echo '       -tc-clear=X     Mode for clearing stack frame on function return'
+     echo '                        X = {none|segs|scalar|aggr|highest}'
+     echo '       -tc-send-X=N    Send message N to output stream X, where'
+     echo '                        X = {null|stat|debug|log|warn|error}'
+     echo '       -tc-stream-X=Y  Set output stream X to Y, where'
+     echo '                        X = {stat|debug|log|warn|error}'
+     echo '                        Y = {"":no output|"-":stdout|"=":stderr|"filename"}'
+@
+
+
+1.70
+log
+@Added -DTC_PCTN_PRINTF flag to -ptr/ptrw mode.
+
+The big picture in printf handling:
+For -ptrw (which turns on -DTC_PCTN_PRINTF), we translate printf
+and fprintf to _typecheck_pctn_printf and _typecheck_pctn_fprintf;
+then, during instrumentation, we preprocess the constructed ast
+to examine the format string argument of each pctn_[f]printf call:
+if it is a string literal that does not contain a "%n", we'll convert
+it back to a plain [f]printf, thus eliding the %d-instrumentation,
+and furthermore (for -ptrw -range, at least), allows static analysis
+to eliminate more tracked locations.
+@
+text
+@d252 1
+@
+
+
+1.69
+log
+@Removed -DTC_PRINTF from default (rtc) mode.
+@
+text
+@d105 2
+a106 1
+#  TC_PRINTF - include tc version of printf functions (so far, -ptrw only, for %n)
+d618 1
+d628 1
+a628 1
+	TCPPFLAGS="$TCPPFLAGS -DTC_PRINTF"
+@
+
+
+1.68
+log
+@Added -DTC_PRINTF flag.
+@
+text
+@d107 1
+a107 1
+TCPPFLAGS="-I$TCINCDIR -DTC_PREINSTR -DTC_STRING -DTC_MALLOC -DTC_STDIO -DTC_SCANF -DTC_PRINTF"
+@
+
+
+1.67
+log
+@Added usage message for -tc-no-{argv/envp}
+@
+text
+@d105 1
+d107 1
+a107 1
+TCPPFLAGS="-I$TCINCDIR -DTC_PREINSTR -DTC_STRING -DTC_MALLOC -DTC_STDIO -DTC_SCANF"
+d626 1
+@
+
+
+1.66
+log
+@BUG FIX: added recognition of macstm.o suffix when
+collecting init files: previously was not including
+them properly, so was not initializing tags of globals!
+@
+text
+@d251 2
+@
+
+
+1.65
+log
+@Added -stm flag for STATIC_MIRROR implementation of
+ptr/ptrw.
+Makefile.template now has macstm targets to make
+macro versions that use the static mirror.
+@
+text
+@d761 5
+@
+
+
+1.64
+log
+@Added -tc-dont-die to usage message.
+@
+text
+@d170 1
+d172 1
+d210 1
+d508 22
+d540 3
+d705 1
+a705 1
+	MAC_INFIX=.mac
+@
+
+
+1.63
+log
+@moved -DRT_FLOWTEST from TCPPFLAGS to D_OPTIONS, so it's
+included in post-instr stages.
+@
+text
+@d246 1
+@
+
+
+1.62
+log
+@Switched -rt to TCLINK_DO_INIT
+@
+text
+@d621 2
+a622 1
+	TCPPFLAGS="-I$RTINCDIR -DRT_PREINSTR -DRT_SCANF -DRT_FLOWTEST"
+@
+
+
+1.61
+log
+@Small typo fix
+@
+text
+@d609 1
+a609 1
+	TCLINK_DO_INIT=no
+@
+
+
+1.60
+log
+@Added -rt.
+@
+text
+@d48 2
+a49 2
+RTLINK_FLOWTEST_LIBS="-L$RTLIBDIR -lrt"
+RTLINK_FLOWTEST_G_LIBS="-L$RTLIBDIR -lrtg"
+@
+
+
+1.59
+log
+@Modified vi hints slighly.
+@
+text
+@d48 2
+d146 1
+d205 1
+d233 10
+a242 8
+     echo '       .ppi.c       tc-preprocessed file (rtc)'
+     echo '       .ppp.c       tc-preprocessed file (-ptr/ptrw mode)'
+     echo '       .ppf.c       rt/ft-preprocessed file'
+     echo '       .instr.c     tc-instrumented file'
+     echo '       .opt.instr.c optimized tc-instrumented file'
+     echo '       .instr.o     compiled tc-instrumented file'
+     echo '       .mac.instr.o compiled macro-instrumented file'
+     echo '       .mpg.instr.o compiled macro and -pg instrumented file'
+d599 14
+d621 1
+a621 1
+	TCPPFLAGS="-I$RTINCDIR -DRT_PREINSTR -DRT_SCANF"
+d751 1
+a751 1
+    *.instr.o|*.finstr.o|*.pinstr.o|*.pwinstr.o)
+d775 1
+a775 1
+    *.instr.c|*.finstr.c|*.pinstr.c|*.pwinstr.c)
+d781 1
+a781 1
+    *.ppi.c|*.ppp.c|*.ppf.c)
+@
+
+
+1.58
+log
+@Added vi hints to usage message.
+@
+text
+@d255 2
+a256 2
+     echo ':g/^% [AHS] /s//:g\/\\</'
+     echo ':g/^:g/s/ /\\>\/s\/\/</'
+@
+
+
+1.57
+log
+@Added recognition of .ppf.c
+@
+text
+@d254 4
+@
+
+
+1.56
+log
+@Added -DRT_SCANF flag.
+@
+text
+@d231 1
+d757 1
+a757 1
+    *.ppi.c|*.ppp.c)
+@
+
+
+1.55
+log
+@Added TCLINK_DO_INIT, since -rtft doesn't (as yet) need to
+collect init functions.
+@
+text
+@d593 4
+a596 1
+	TCPPFLAGS="-I$RTINCDIR -DRT_PREINSTR"
+@
+
+
+1.54
+log
+@Added -rtft support (first draft).
+@
+text
+@d53 1
+d595 1
+d792 1
+a792 8
+    #########################################################
+    # CREATE INIT FILE
+    INITFILE=$OUTSTEM.init.c
+    INITTAILFILE=/tmp/$OUTSTEM.init.tail.c
+
+    echo ---- collecting init functions from $INSTR_INIT_FILES
+
+    if [ -z "$DEBUG" ]
+d794 26
+a819 2
+	echo ' ' > $INITFILE
+	echo ' ' > $INITTAILFILE
+d821 4
+a824 16
+	# initfile function header
+	echo 'void callInitFunctions(void) {' >> $INITFILE
+
+	for INSTR_CFILE in $INSTR_INIT_FILES
+	do
+	   # initfile prototype
+	   head -2 $INSTR_CFILE >> $INITFILE
+	   # initfile function call
+	   head -2 $INSTR_CFILE | cut -b 5- >> $INITTAILFILE
+	done
+
+	# close up initfile
+	cat $INITTAILFILE >> $INITFILE
+	echo '}' >> $INITFILE
+
+	rm -f $INITTAILFILE
+d830 1
+a830 1
+    echo ---- linking $LINK_OBJS $LINK_LIBS '=>' $OUTSTEM.instr
+d836 2
+a837 2
+    echo '  --' $CC $LDFLAGS -o $OUTSTEM.instr $OPTIONS $INITFILE $LINK_OBJS $TCLINK_LIBS $LINK_LIBS
+    if $DEBUG $CC $LDFLAGS -o $OUTSTEM.instr $OPTIONS $INITFILE $LINK_OBJS $TCLINK_LIBS $LINK_LIBS
+@
+
+
+1.53
+log
+@Added -sm (safe mallocs) targets.
+@
+text
+@d10 4
+d18 4
+d29 3
+a31 1
+INC_TYPECHECK_H_OPTION="-include $TCINCDIR/typecheck.h"
+d46 7
+d86 1
+a86 1
+CFLAGS="-I$TCINCDIR"
+d103 1
+a103 1
+PPFLAGS="-I$TCINCDIR -DTC_PREINSTR -DTC_STRING -DTC_MALLOC -DTC_STDIO -DTC_SCANF"
+d142 1
+d201 1
+d342 1
+a342 1
+    PP_OPTIONS="$PPFLAGS $*"
+d446 1
+a446 1
+    CC_OPTIONS="$CFLAGS $*"
+d587 10
+d721 1
+a721 1
+    *.instr.o|*.pinstr.o|*.pwinstr.o)
+d745 1
+a745 1
+    *.instr.c|*.pinstr.c|*.pwinstr.c)
+@
+
+
+1.52
+log
+@Enhanced usage message to include sml usage (by calling
+sml w/o args)
+@
+text
+@d24 2
+d183 1
+d567 4
+@
+
+
+1.51
+log
+@Added -keeptmp flag.
+Also, added -no-varg flag.
+@
+text
+@a3 63
+# usage message
+#
+
+if [ -z "$1" ]
+then echo 'Usage: tc [options|files]'
+     echo '       accepts (hopefully) most standard gcc flags, plus:'
+     echo '       -aid            Output aid-annotated source (to <file>.aids)'
+     echo '       -assign         Output assignment edges (to <file>.tc_?asgs)'
+     echo '       -ckit           Do ckit parsing (fileToC) only'
+     echo '       -mir            Compile for mirror-test (see -mirlink)'
+     echo '       -ptr            Compile for verifyPtr-only check (security tool)'
+     echo '       -ptrw           Compile for verifyPtr-write-only check (security tool)'
+     echo '       -type           Do type-casting pass (fileToTypedCFile) only'
+     echo '       -pp=<pp>        Set preprocessor to <pp> (default "$cc -E")'
+     echo '       -ppflag-<flag>  Add -<flag> to flags for pp'
+     echo '       -cc=<cc>        Set compiler to <cc> (default "gcc")'
+     echo '       -cflag-<flag>   Add -<flag> to flags for cc'
+     echo '       -instr          Stops after the instrumentation phase'
+     echo '       -instr-<iflag>  Passes "-<iflag>" to tcinstr'
+     echo '       -imod-<suffix>  Instrument with module filesToInstrCFiles-<suffix>'
+     echo '     ( -oinstr         TEMPHACK: use older isTracked/isUnsafe version )'
+     echo '       -noop           Use noop library (-ltcnoop)'
+     echo '       -g              Compile for GDB (-g; link -ltcapintg)'
+     echo '       -pg             Compile for gprof (-pg; link -ltcapintpg)'
+     echo '       -macros         Use newtag macros (-DTC_USE_MACROS, -ltcapint)'
+     echo '       -mirlink        Link for mirror-test (-ltcapimir)'
+     echo '       -persist        Ignore instrumentation errors'
+     echo '       -va_arg         Specially handle va_arg (temporarily on by default)'
+     echo '       -no-varg        Turn off va_arg (temporarily on by default)'
+     echo '       -keeptmp        Do not delete tmp files (for debugging)'
+     echo '       -nosig          Suppress sending of signals on error'
+     echo '       -terse          Print messages in "terse" mode stats'
+     echo '       -tsl-<file>     Instrument with ts_levels from <file>'
+     echo ' Filename extension assumptions are:'
+     echo '       .ckit.c      ckit-parsed file'
+     echo '       .mir.c       mir-parsed file'
+     echo '       .typed.c     type-parsed file'
+     echo '       .ppi.c       tc-preprocessed file (rtc)'
+     echo '       .ppp.c       tc-preprocessed file (-ptr/ptrw mode)'
+     echo '       .instr.c     tc-instrumented file'
+     echo '       .opt.instr.c optimized tc-instrumented file'
+     echo '       .instr.o     compiled tc-instrumented file'
+     echo '       .mac.instr.o compiled macro-instrumented file'
+     echo '       .mpg.instr.o compiled macro and -pg instrumented file'
+     echo ' Default output file is a.out.instr'
+     echo ' Instrumented executable accepts the following flags:'
+     echo '       -tc-summarize   Summarize output'
+     echo "       -tc-trackfree   Keep track of free'd memory"
+     echo '       -tc-allsig      Turn on sending of signals to log,warn,error'
+     echo '       -tc-clearsig    Turn off sending of all signals'
+     echo '       -tc-sig-X       } Turn on or off sending of signal to stream X, where'
+     echo '       -tc-nosig-X     } X = {null|stat|debug|log|warn|error}'
+     echo '       -tc-clear=X     Mode for clearing stack frame on function return'
+     echo '                        X = {none|segs|scalar|aggr|highest}'
+     echo '       -tc-send-X=N    Send message N to output stream X, where'
+     echo '                        X = {null|stat|debug|log|warn|error}'
+     echo '       -tc-stream-X=Y  Set output stream X to Y, where'
+     echo '                        X = {stat|debug|log|warn|error}'
+     echo '                        Y = {"":no output|"-":stdout|"=":stderr|"filename"}'
+     exit
+fi
+
+#
+d167 65
+@
+
+
+1.50
+log
+@Added -aid flag, whose functionality rides on the -assign
+mechanism.
+@
+text
+@d32 2
+d122 5
+d281 5
+a285 3
+	# rm can be dangerous!
+	touch /tmp/deleteme
+	rm -f /tmp/deleteme $FILESTEM.tmp.c
+d299 5
+a303 3
+  # rm can be dangerous!
+  touch /tmp/deleteme
+  rm -f /tmp/deleteme $FILESTEM.tmp.c
+d348 5
+a352 3
+    # rm can be dangerous!
+    touch /tmp/deleteme
+    rm -f /tmp/deleteme $FILESTEM.tmp.c
+d438 5
+a442 3
+    # rm can be dangerous!
+    touch /tmp/deleteme
+    rm -f /tmp/deleteme $C_FILESTEM.tmp.c
+d595 6
+@
+
+
+1.49
+log
+@Fixed bug in do_compile: renamed $FILESTEM to $C_FILESTEM
+Interestingly, script still worked with buggy version.
+@
+text
+@d10 1
+d349 1
+a349 1
+# FUNCTION: WRITE ASSIGNMENT EDGES
+d352 1
+a352 1
+  then
+d355 1
+a355 1
+    INSTR_OPTIONS="$* -assign"
+d357 1
+a357 1
+    echo ---- writing assign edges $FILESTEM$PP_SUFFIX '=>' $FILESTEM$ASG_SUFFIX
+d505 5
+d512 1
+@
+
+
+1.48
+log
+@Split .pp.c suffix into .ppi.c and .ppp.c;
+also, .tc_asgs into .tc_iasgs and .tc_pasgs;
+this way, can make nt and ptr/w targets in same
+directory without cleaning.
+@
+text
+@d415 3
+a417 3
+    echo '#include <typecheck.h>' > $FILESTEM.tmp.c
+    echo '#line 1 "'$CFILENAME'"' >> $FILESTEM.tmp.c
+    cat $CFILENAME >> $FILESTEM.tmp.c
+d419 2
+a420 2
+    echo ' ---' $CC -c $CC_OPTIONS $FILESTEM.tmp.c -o $OFILENAME
+    $DEBUG $CC -c $CC_OPTIONS $FILESTEM.tmp.c -o $OFILENAME
+d426 1
+a426 1
+    rm -f /tmp/deleteme $FILESTEM.tmp.c
+@
+
+
+1.47
+log
+@Split LINK_OBJS into LINK_OBJS and LINK_LIBS, the latter for -l
+and .a files. This is so that we can insert our -ltcapint/ptr/etc
+before the user-specified libraries. This is needed because, for
+example, -lfl (flex) also defines its own "main" function, which
+would preempt ours if they're listed first.
+@
+text
+@d10 1
+a10 1
+     echo '       -assign         Output assignment edges (to <file>.tc_asgs)'
+d38 2
+a39 1
+     echo '       .pp.c        tc-preprocessed file'
+d183 6
+d308 1
+a308 1
+    echo ---- preprocessing $FILESTEM.c '=>' $FILESTEM.pp.c
+d331 2
+a332 2
+    echo ' ---' $PP $PP_OPTIONS $FILESTEM.tmp.c '>' $FILESTEM.pp.c
+    $DEBUG $PP $PP_OPTIONS $FILESTEM.tmp.c > $FILESTEM.pp.c
+d356 1
+a356 1
+    echo ---- writing assign edges $FILESTEM.pp.c '=>' $FILESTEM.tc_asgs
+d361 2
+a362 2
+    echo ' ---' $SML @@SMLload=$SML_INSTR_MOD $INSTR_OPTIONS $FILESTEM.pp.c
+    $DEBUG $SML @@SMLload=$SML_INSTR_MOD $INSTR_OPTIONS $FILESTEM.pp.c
+d383 1
+a383 1
+    echo ---- instrumenting $FILESTEM.pp.c '=>' $FILESTEM$OPT_INFIX$INSTR_INFIX.c
+d388 2
+a389 2
+    echo ' ---' $SML @@SMLload=$SML_INSTR_MOD $INSTR_OPTIONS $FILESTEM.pp.c
+    $DEBUG $SML @@SMLload=$SML_INSTR_MOD $INSTR_OPTIONS $FILESTEM.pp.c
+d524 2
+d533 2
+d685 2
+a686 2
+    *.pp.c)
+	FILESTEM=`echo $ARG | sed -e 's/\.pp\.c$//'`
+@
+
+
+1.46
+log
+@Added -ltcptrw/-ltcptrwg library support.
+@
+text
+@d582 1
+d608 1
+a608 1
+	LINK_OBJS="$LINK_OBJS $ARG"
+d653 1
+a653 1
+	LINK_OBJS="$LINK_OBJS $ARG"
+d746 1
+a746 1
+    echo ---- linking $LINK_OBJS '=>' $OUTSTEM.instr
+d752 2
+a753 2
+    echo '  --' $CC $LDFLAGS -o $OUTSTEM.instr $OPTIONS $INITFILE $LINK_OBJS $TCLINK_LIBS
+    if $DEBUG $CC $LDFLAGS -o $OUTSTEM.instr $OPTIONS $INITFILE $LINK_OBJS $TCLINK_LIBS
+@
+
+
+1.45
+log
+@MAJOR OVERHAUL:
+Added -ptrw
+Changed target instr'ed filenames: instr, pinstr, pwinstr
+Changed rtca output filenames: tc_tca, tc_ptr, tc_ptrw
+Optimized version has opt prepended
+Macro version has mac appended
+So, we have file[.opt].[p[w]]instr[.mac].c
+@
+text
+@d85 2
+d527 2
+a528 2
+	TCLINK_LIBS=$TCLINK_PTR_LIBS
+	TCLINK_G_LIBS=$TCLINK_PTR_G_LIBS
+@
+
+
+1.44
+log
+@Added conditional to identify home machine (SUAN-HSI-DELL)
+and set paths accordingly.
+@
+text
+@d14 1
+d178 16
+a193 7
+# Set this to opt.instr.c when using tslfile
+# This is only used for diagnostic output!
+INSTR_C=instr.c
+#
+# Set this to mac.instr.o when macros are turned on
+# Set this to mpg.instr.o when -pg is turned on
+INSTR_O=instr.o
+d345 1
+a345 1
+    INSTR_OPTIONS="-assign $*"
+d374 1
+a374 1
+    echo ---- instrumenting $FILESTEM.pp.c '=>' $FILESTEM.$INSTR_C
+d397 1
+a397 1
+    FILESTEM=$2
+d401 4
+a404 1
+    echo ---- compiling $FILESTEM.instr.c '=>' $FILESTEM.$INSTR_O
+d407 2
+a408 2
+    echo '#line 1 "'$FILESTEM.instr.c'"' >> $FILESTEM.tmp.c
+    cat $FILESTEM.instr.c >> $FILESTEM.tmp.c
+d410 2
+a411 2
+    echo ' ---' $CC -c $CC_OPTIONS $FILESTEM.tmp.c -o $FILESTEM.$INSTR_O
+    $DEBUG $CC -c $CC_OPTIONS $FILESTEM.tmp.c -o $FILESTEM.$INSTR_O
+d512 1
+a512 1
+	INSTR_C=opt.instr.c
+d515 1
+d521 7
+d536 1
+a536 1
+	INSTR_O=mpg.instr.o
+d566 1
+a566 3
+	if [ "$INSTR_O" = instr.o ]
+	then INSTR_O=mac.instr.o
+	fi
+d611 7
+a617 2
+    *.mac.instr.o)
+	FILESTEM=`echo $ARG | sed -e 's/\.mac.instr\.o$//'`
+d619 1
+a619 1
+	INSTR_INIT_FILES="$INSTR_INIT_FILES $FILESTEM.instr.c"
+d621 7
+a627 2
+    *.mpg.instr.o)
+	FILESTEM=`echo $ARG | sed -e 's/\.mpg.instr\.o$//'`
+d629 1
+a629 1
+	INSTR_INIT_FILES="$INSTR_INIT_FILES $FILESTEM.instr.c"
+d631 12
+a642 2
+    *.instr.o)
+	FILESTEM=`echo $ARG | sed -e 's/\.instr\.o$//'`
+d644 1
+a644 1
+	INSTR_INIT_FILES="$INSTR_INIT_FILES $FILESTEM.instr.c"
+d652 18
+a669 5
+    *.instr.c)
+	FILESTEM=`echo $ARG | sed -e 's/\.instr\.c$//'`
+	compile_cc $TODO $FILESTEM $D_OPTIONS $U_OPTIONS $OPTIONS
+	LINK_OBJS="$LINK_OBJS $FILESTEM.$INSTR_O"
+	INSTR_INIT_FILES="$INSTR_INIT_FILES $FILESTEM.instr.c"
+d675 3
+a677 3
+	compile_cc $TODO $FILESTEM $D_OPTIONS $U_OPTIONS $OPTIONS
+	LINK_OBJS="$LINK_OBJS $FILESTEM.$INSTR_O"
+	INSTR_INIT_FILES="$INSTR_INIT_FILES $FILESTEM.instr.c"
+d685 3
+a687 3
+	compile_cc $TODO $FILESTEM $D_OPTIONS $U_OPTIONS $OPTIONS
+	LINK_OBJS="$LINK_OBJS $FILESTEM.$INSTR_O"
+	INSTR_INIT_FILES="$INSTR_INIT_FILES $FILESTEM.instr.c"
+d717 4
+a720 2
+    echo ' ' > $INITFILE
+    echo ' ' > $INITTAILFILE
+d722 2
+a723 2
+    # initfile function header
+    echo 'void callInitFunctions(void) {' >> $INITFILE
+d725 11
+a735 11
+    for INSTR_CFILE in $INSTR_INIT_FILES
+    do
+       # initfile prototype
+       head -2 $INSTR_CFILE >> $INITFILE
+       # initfile function call
+       head -2 $INSTR_CFILE | cut -b 5- >> $INITTAILFILE
+    done
+
+    # close up initfile
+    cat $INITTAILFILE >> $INITFILE
+    echo '}' >> $INITFILE
+d737 2
+a738 1
+    rm -f $INITTAILFILE
+@
+
+
+1.43
+log
+@Added support for libtcptrg (triggered by -g flag)
+@
+text
+@d64 10
+a73 4
+TCDIR=/p/wpis/people/students/suan/TypecheckDebugger
+TC_SML_PATH=/p/wpis/people/students/suan/TypecheckDebugger/bin
+ # TCDIR=/home/research/TypecheckDebugger
+ # TC_SML_PATH="c:/hsi/cygwin/home/research/TypecheckDebugger/bin"
+a74 2
+SML=sml
+ # SML=/home/research/sml-110.0.7/bin/.run/run.x86-win32.exe
+@
+
+
+1.42
+log
+@Added -ptr flag.
+@
+text
+@d77 1
+d79 1
+a81 1
+TCLINK_G_LIBS="-L$TCLIBDIR -ltcapintg"
+d87 6
+d501 1
+d505 1
+a505 1
+	TCLINK_LIBS=$TCLINK_G_LIBS
+d510 1
+d516 1
+d520 1
+d524 1
+d528 1
+d686 4
+@
+
+
+1.41
+log
+@Changed extensions: optimized instr file extension is
+now opt.instr.c, and mac is mac.instr.o, etc.
+@
+text
+@d13 1
+d67 1
+a67 1
+ # TC_SML_PATH="c:/cygwin/home/research/TypecheckDebugger/bin"
+d77 1
+d489 5
+@
+
+
+1.40
+log
+@Added -imod-<suffix> flag; also temporary -oinstr flag.
+@
+text
+@d33 9
+a41 8
+     echo '       .ckit.c     ckit-parsed file'
+     echo '       .mir.c      mir-parsed file'
+     echo '       .typed.c    type-parsed file'
+     echo '       .pp.c       tc-preprocessed file'
+     echo '       .instr.c    tc-instrumented file'
+     echo '       .instr.o    compiled tc-instrumented file'
+     echo '       .instrm.o   compiled macro-instrumented file'
+     echo '       .instrmpg.o compiled macro and -pg instrumented file'
+d164 6
+a169 2
+# Set this to instrm.o when macros are turned on
+# Set this to instrmpg.o when -pg is turned on
+d351 1
+a351 1
+    echo ---- instrumenting $FILESTEM.pp.c '=>' $FILESTEM.instr.c
+d486 1
+d495 1
+a495 1
+	INSTR_O=instrmpg.o
+d522 1
+a522 1
+	then INSTR_O=instrm.o
+d568 2
+a569 2
+    *.instr.o)
+	FILESTEM=`echo $ARG | sed -e 's/\.instr\.o$//'`
+d573 2
+a574 2
+    *.instrm.o)
+	FILESTEM=`echo $ARG | sed -e 's/\.instrm\.o$//'`
+d578 2
+a579 2
+    *.instrmpg.o)
+	FILESTEM=`echo $ARG | sed -e 's/\.instrmpg\.o$//'`
+@
+
+
+1.39
+log
+@Updated environment variables to be more easily compatible
+with cygwin.
+@
+text
+@d20 2
+d63 1
+a63 1
+TC_SML_PATH=/p/wpis/people/students/suan/TypecheckDebugger/bin/
+d159 1
+d470 3
+d475 3
+@
+
+
+1.38
+log
+@refined usage description of sig, send, and stream options
+@
+text
+@d60 10
+a69 2
+TCINCDIR=/p/wpis/people/students/suan/TypecheckDebugger/include
+TCLIBDIR=/p/wpis/people/students/suan/TypecheckDebugger/lib
+d138 1
+a138 1
+#	GCC_E_FLAGS="-ansi -pedantic"
+d145 2
+a146 1
+	GCC_E_FLAGS="-ansi -pedantic"
+d153 4
+a156 4
+SML_PARSE_MOD=/p/wpis/people/students/suan/TypecheckDebugger/bin/fileToC
+SML_MIR_MOD=/p/wpis/people/students/suan/TypecheckDebugger/bin/fileToMirCFile
+SML_TYPE_MOD=/p/wpis/people/students/suan/TypecheckDebugger/bin/fileToTypedCFile
+SML_INSTR_MOD=/p/wpis/people/students/suan/TypecheckDebugger/bin/filesToInstrCFiles
+d244 2
+a245 2
+  echo ' ---' sml @@SMLload=$SML_MODULE $FILESTEM.tmp.c '=>' $FILESTEM.$AFFIX.c
+  $DEBUG sml @@SMLload=$SML_MODULE $FILESTEM.tmp.c
+d321 2
+a322 2
+    echo ' ---' sml @@SMLload=$SML_INSTR_MOD $INSTR_OPTIONS $FILESTEM.pp.c
+    $DEBUG sml @@SMLload=$SML_INSTR_MOD $INSTR_OPTIONS $FILESTEM.pp.c
+d348 2
+a349 2
+    echo ' ---' sml @@SMLload=$SML_INSTR_MOD $INSTR_OPTIONS $FILESTEM.pp.c
+    $DEBUG sml @@SMLload=$SML_INSTR_MOD $INSTR_OPTIONS $FILESTEM.pp.c
+@
+
+
+1.37
+log
+@Added stuff to do addrof analysis:
+For tc: -assign flag to output assignment edges
+        -tsl-<> flag to read ts-levels from file
+For makefile: added nt-addrof target, and new complicated
+        conditionals to do the right thing (calling tc
+        with above new flags)
+@
+text
+@d43 4
+a46 2
+     echo '       -tc-nosig       Turn off sending of signals'
+     echo '       -tc-allsig      Turn on sending of signals'
+d49 3
+a51 1
+     echo '       -tc-stream-X=Y  Set output stream X to Y where'
+@
+
+
+1.36
+log
+@Fixed compile_other to work correctly with -ckit and -type
+@
+text
+@d10 1
+d29 1
+d124 1
+a124 1
+# suddently, the gcc on Linux started screwing up on mel.c which uses
+d163 4
+a166 3
+ENUM_INSTR=4
+ENUM_CC=5
+ENUM_LINK=6
+d295 27
+d448 3
+d457 3
+d569 1
+d579 1
+@
+
+
+1.35
+log
+@Added -DTC_SCANF flag.
+@
+text
+@d223 1
+a223 1
+  echo ---- $AFFIX parsing $FILESTEM.tmp.c '=>' $FILESTEM.ckit.c
+d228 2
+a229 2
+  echo ' ---' sml @@SMLload=$SML_MODULE $FILESTEM.tmp.c '>' $FILESTEM.$AFFIX.c
+  $DEBUG sml @@SMLload=$SML_MODULE $FILESTEM.tmp.c > $FILESTEM.$AFFIX.c
+@
+
+
+1.34
+log
+@melded compile_ckit, compile_type, into compile_other.
+added stuff to do -mir and -mirlink
+@
+text
+@d103 1
+d105 1
+a105 1
+PPFLAGS="-I$TCINCDIR -DTC_PREINSTR -DTC_STRING -DTC_MALLOC -DTC_STDIO"
+@
+
+
+1.33
+log
+@Changed -macros to define TC_USE_MACROS instead of USE_MACROS
+Added -mirrortest flag, but does not work.
+@
+text
+@d11 1
+d23 1
+a23 1
+     echo '       -mirrortest     Test mirrors (-ltcapimir)'
+d29 7
+a35 6
+     echo '       .ckit.c   ckit-parsed file'
+     echo '       .typed.c  type-parsed file'
+     echo '       .pp.c     tc-preprocessed file'
+     echo '       .instr.c  tc-instrumented file'
+     echo '       .instr.o  compiled tc-instrumented file'
+     echo '       .instrm.o compiled macro-instrumented file'
+d138 1
+d156 7
+a162 6
+ENUM_TYPE=0
+ENUM_CKIT=1
+ENUM_PP=2
+ENUM_INSTR=3
+ENUM_CC=4
+ENUM_LINK=5
+d167 2
+a168 7
+# FUNCTION: TYPE PARSE
+compile_type () { 
+  if [ $1 = $ENUM_TYPE ]
+  then
+    FILESTEM=$2
+    shift 2
+    PP_OPTIONS="$*"
+d170 1
+a170 1
+    echo ---- preprocessing for type $FILESTEM.c '=>' $FILESTEM.tmp.c
+d172 20
+a191 5
+    if [ -z "$PP" ]
+    then
+      ##############################
+      # default preprocessor: $CC -E
+      PP="$CC -E"
+d193 2
+a194 6
+      ########################
+      # extra flags for gcc -E
+      if [ $CC = "gcc" ]
+      then PP_OPTIONS="$GCC_E_FLAGS $PP_OPTIONS"
+      fi
+    fi
+d196 1
+a196 2
+    echo ' ---' $PP $PP_OPTIONS $FILESTEM.c '>' $FILESTEM.tmp.c
+    $DEBUG $PP $PP_OPTIONS $FILESTEM.c > $FILESTEM.tmp.c
+d198 10
+a207 6
+    if [ $? != 0 ]
+    then  echo ' ---' preprocessing for type failed
+	  # rm can be dangerous!
+	  touch /tmp/deleteme
+	  rm -f /tmp/deleteme $FILESTEM.tmp.c
+	  exit 1
+d209 1
+d211 2
+a212 9
+    echo ---- type parsing $FILESTEM.tmp.c '=>' $FILESTEM.typed.c
+
+    #
+    # call SML
+    #
+    echo ' ---' sml @@SMLload=$SML_TYPE_MOD $FILESTEM.tmp.c
+    $DEBUG sml @@SMLload=$SML_TYPE_MOD $FILESTEM.tmp.c
+
+    RETSTAT=$?
+d214 6
+a219 8
+    # rm can be dangerous!
+    touch /tmp/deleteme
+    rm -f /tmp/deleteme $FILESTEM.tmp.c
+
+    if [ $RETSTAT != 0 ]
+    then  echo ' ---' type parsing failed
+	  exit 1
+    fi
+a220 28
+}
+
+#################################################################
+# FUNCTION: CKIT PARSE
+compile_ckit () { 
+  if [ $1 = $ENUM_CKIT ]
+  then
+    FILESTEM=$2
+    shift 2
+    PP_OPTIONS="$*"
+
+    echo ---- preprocessing for ckit $FILESTEM.c '=>' $FILESTEM.tmp.c
+
+    if [ -z "$PP" ]
+    then
+      ##############################
+      # default preprocessor: $CC -E
+      PP="$CC -E"
+
+      ########################
+      # extra flags for gcc -E
+      if [ $CC = "gcc" ]
+      then PP_OPTIONS="$GCC_E_FLAGS $PP_OPTIONS"
+      fi
+    fi
+
+    echo ' ---' $PP $PP_OPTIONS $FILESTEM.c '>' $FILESTEM.tmp.c
+    $DEBUG $PP $PP_OPTIONS $FILESTEM.c > $FILESTEM.tmp.c
+d222 1
+a222 7
+    if [ $? != 0 ]
+    then  echo ' ---' preprocessing for ckit failed
+	  # rm can be dangerous!
+	  touch /tmp/deleteme
+	  rm -f /tmp/deleteme $FILESTEM.tmp.c
+	  exit 1
+    fi
+d224 15
+a238 18
+    echo ---- ckit parsing $FILESTEM.tmp.c '=>' $FILESTEM.ckit.c
+
+    #
+    # call SML
+    #
+    echo ' ---' sml @@SMLload=$SML_PARSE_MOD $FILESTEM.tmp.c '>' $FILESTEM.ckit.c
+    $DEBUG sml @@SMLload=$SML_PARSE_MOD $FILESTEM.tmp.c > $FILESTEM.ckit.c
+
+    RETSTAT=$?
+
+    # rm can be dangerous!
+    touch /tmp/deleteme
+    rm -f /tmp/deleteme $FILESTEM.tmp.c
+
+    if [ $RETSTAT != 0 ]
+    then  echo ' ---' ckit parsing failed
+	  exit 1
+    fi
+d397 10
+a406 1
+	TODO=$ENUM_TYPE
+d433 3
+a450 4
+    -mirrortest)
+	D_OPTIONS="$D_OPTIONS -DTC_MIRROR_TEST"
+	TCLINK_LIBS=$TCLINK_MIR_LIBS
+	;;
+d539 1
+a539 2
+	compile_type $TODO $FILESTEM $D_OPTIONS $U_OPTIONS $OPTIONS
+	compile_ckit $TODO $FILESTEM $D_OPTIONS $U_OPTIONS $OPTIONS
+@
+
+
+1.32
+log
+@Updated directory to /p/wpis/people/students/suan/TypecheckDebugger
+@
+text
+@d21 2
+a22 1
+     echo '       -macros         Use newtag macros (-DUSE_MACROS, -ltcapint)'
+d62 1
+d471 4
+d476 1
+a476 1
+	D_OPTIONS="$D_OPTIONS -DUSE_MACROS"
+@
+
+
+1.31
+log
+@Disabled -ansi -pedantic flags for Linux.
+@
+text
+@d51 2
+a52 2
+TCINCDIR=/u/a/l/alexey/types/include
+TCLIBDIR=/u/a/l/alexey/types/lib
+d133 3
+a135 3
+SML_PARSE_MOD=/u/a/l/alexey/types/bin/fileToC
+SML_TYPE_MOD=/u/a/l/alexey/types/bin/fileToTypedCFile
+SML_INSTR_MOD=/u/a/l/alexey/types/bin/filesToInstrCFiles
+@
+
+
+1.30
+log
+@Added -tc-clear- usage message
+@
+text
+@d117 4
+a120 1
+	GCC_E_FLAGS="-ansi -pedantic"
+@
+
+
+1.29
+log
+@Added -tc-trackfree help message
+@
+text
+@d40 2
+@
+
+
+1.28
+log
+@removed nowarn and silent flags; functionality replaced by
+runtime -tc-stream flags.
+Added usage info for runtime -tc- flags.
+@
+text
+@d37 1
+@
+
+
+1.27
+log
+@Added recognition of -g flag, to link in -ltcapintg instead of -ltcapint.
+No change to Makefile.template needed.
+@
+text
+@a24 2
+     echo '       -nowarn         Turn off "warnings"; pipe stats to stat.out'
+     echo '       -silent         Turn off all messages except stats'
+d35 7
+a50 3
+TCNOWARN_CODE=$TCINCDIR/nowarn.h
+TCSILENT_CODE=$TCINCDIR/silent.h
+
+a66 5
+# for the -nowarn and -silent flag
+#
+NOWARN=
+
+#
+a453 6
+    -nowarn)
+	NOWARN=$TCNOWARN_CODE
+	;;
+    -silent)
+	NOWARN=$TCSILENT_CODE
+	;;
+a589 4
+    if [ "$NOWARN" ]
+    then echo '#include <stdio.h>' > $INITFILE
+    fi
+
+a599 4
+
+    if [ "$NOWARN" ]
+    then cat $NOWARN >> $INITFILE
+    fi
+@
+
+
+1.26
+log
+@Added -typed option to "type" a file's expressions.
+@
+text
+@d19 1
+d53 1
+d440 4
+@
+
+
+1.25
+log
+@Added -va_arg flag.
+Also, removed -U__GNUC__ from linux's GCC_E_FLAGS
+@
+text
+@d11 1
+d29 1
+d129 1
+d146 6
+a151 5
+ENUM_CKIT=0
+ENUM_PP=1
+ENUM_INSTR=2
+ENUM_CC=3
+ENUM_LINK=4
+d156 56
+d421 3
+d554 1
+@
+
+
+1.24
+log
+@The last revision's comment should be: changed GCC_E_FLAGS to
+be hackishly platform dependent (just checks `uname`). So far,
+includes cases for SunOS and Linux only.
+@
+text
+@d21 1
+d71 6
+d113 1
+a113 1
+	GCC_E_FLAGS="-ansi -pedantic -U__GNUC__"
+d233 5
+a237 1
+    cat $FILESTEM.c >> $FILESTEM.tmp.c
+d399 3
+@
+
+
+1.23
+log
+@*** empty log message ***
+@
+text
+@d101 1
+a101 1
+#     On Linux: this screws up math.h, which uses a __CONCAT macro
+@
+
+
+1.22
+log
+@Added -DTC_STDIO flag to default flags.
+@
+text
+@d73 1
+a73 1
+CFLAGS="-g -I$TCINCDIR"
+d93 1
+d101 2
+d104 11
+a114 1
+GCC_E_FLAGS="-ansi -pedantic -U__GNUC__ -D__STDC__=0"
+@
+
+
+1.21
+log
+@Added -nosig and -terse flags.
+@
+text
+@d87 1
+a87 1
+#  TC_STDIO  - include tc version of stdio functions (from iostdio)
+d89 1
+a89 1
+PPFLAGS="-I$TCINCDIR -DTC_PREINSTR -DTC_STRING -DTC_MALLOC"
+@
+
+
+1.20
+log
+@Added -silent flag for silent mode (all errors and warnings off, except
+stats). The "sil" libraries are now obsolete.
+@
+text
+@d21 1
+d24 1
+d48 1
+d50 1
+d361 3
+d369 3
+@
+
+
+1.19
+log
+@Removed oldtags; default behavior is now -newtags (that flag is obsolete).
+Added -nowarn flag, which includes the file $INCDIR/nowarn.h that initializes
+output streams.
+@
+text
+@d22 1
+d41 1
+d56 1
+a56 1
+# for the -nowarn flag
+d358 4
+a361 1
+	NOWARN=yes
+d492 1
+a492 1
+    if [ "$NOWARN" = yes ]
+d507 2
+a508 2
+    if [ "$NOWARN" = yes ]
+    then cat $TCNOWARN_CODE >> $INITFILE
+@
+
+
+1.18
+log
+@Removed -ltcstdio
+@
+text
+@d17 1
+a17 2
+     echo '       -newtags        Use newtags (-ltcapint)'
+     echo '       -noop           Use newtags (-ltcnoop)'
+d21 1
+d38 3
+a41 3
+#TCLINK_LIBS="-L$TCLIBDIR -ltcapi -ltcstdio"
+TCLINK_LIBS="-L$TCLIBDIR -ltcapi"
+#TCLINK_NEWTAGS_LIBS="-L$TCLIBDIR -ltcapint -ltcstdio"
+a42 1
+#TCLINK_NOOP_LIBS="-L$TCLIBDIR -ltcnoop -ltcstdio"
+d46 2
+d54 5
+a351 3
+    -newtags)
+	TCLINK_LIBS=$TCLINK_NEWTAGS_LIBS
+	;;
+d355 3
+d366 2
+a367 3
+	if [ "$TCLINK_LIBS" != "$TCLINK_PG_LIBS" ]
+	then TCLINK_LIBS=$TCLINK_NEWTAGS_LIBS
+	     INSTR_O=instrm.o
+d484 7
+d492 1
+a492 2
+    echo 'void callInitFunctions(void) {' > $INITFILE
+    echo ' ' > $INITTAILFILE
+d502 4
+d509 2
+@
+
+
+1.17
+log
+@Fixed bug with .instrmpg.o extension.
+@
+text
+@d39 6
+a44 2
+TCLINK_LIBS="-L$TCLIBDIR -ltcapi -ltcstdio"
+TCLINK_NEWTAGS_LIBS="-L$TCLIBDIR -ltcapint -ltcstdio"
+a45 1
+TCLINK_NOOP_LIBS="-L$TCLIBDIR -ltcnoop -ltcstdio"
+@
+
+
+1.16
+log
+@Fixed bug with -pg at link phase.
+@
+text
+@d28 1
+d97 1
+d412 5
+@
+
+
+1.15
+log
+@Added "instrmpg.o" extension for -pg compilation objects.
+@
+text
+@d99 5
+d339 1
+d490 2
+a491 2
+    echo '  --' $CC -o $OUTSTEM.instr $OPTIONS $INITFILE $LINK_OBJS $TCLINK_LIBS
+    if $DEBUG $CC -o $OUTSTEM.instr $OPTIONS $INITFILE $LINK_OBJS $TCLINK_LIBS
+@
+
+
+1.14
+log
+@Fixed -pg flag (w.r.t. -macros flag).
+@
+text
+@d333 1
+d351 1
+a352 1
+	INSTR_O=instrm.o
+@
+
+
+1.13
+log
+@Added -pg flag, which automatically links tcapintpg.
+@
+text
+@d345 6
+a350 1
+	TCLINK_LIBS=$TCLINK_NEWTAGS_LIBS
+@
+
+
+1.12
+log
+@Added -persist flag;
+Made -macro output *.instrm.o.
+@
+text
+@d19 1
+d40 1
+d329 4
+@
+
+
+1.11
+log
+@Fixed small "deletion of tmp files" bug with -ckit.
+@
+text
+@d20 1
+d26 1
+d47 5
+d92 5
+d225 5
+a229 2
+    then  echo ' ---' Instrumentation failed
+	  exit 1
+d243 1
+a243 1
+    echo ---- compiling $FILESTEM.instr.c '=>' $FILESTEM.instr.o
+d249 2
+a250 2
+    echo ' ---' $CC -c $CC_OPTIONS $FILESTEM.tmp.c -o $FILESTEM.instr.o
+    $DEBUG $CC -c $CC_OPTIONS $FILESTEM.tmp.c -o $FILESTEM.instr.o
+d328 1
+a328 1
+    -newtags*)
+d331 1
+a331 1
+    -noop*)
+d334 4
+a337 1
+    -macros*)
+d340 1
+d390 5
+d404 1
+a404 1
+	LINK_OBJS="$LINK_OBJS $FILESTEM.instr.o"
+d411 1
+a411 1
+	LINK_OBJS="$LINK_OBJS $FILESTEM.instr.o"
+d420 1
+a420 1
+	LINK_OBJS="$LINK_OBJS $FILESTEM.instr.o"
+@
+
+
+1.10
+log
+@Added -noop flag.
+@
+text
+@d138 7
+a144 1
+    if [ $? != 0 ]
+a145 3
+	  # rm can be dangerous!
+	  touch /tmp/deleteme
+	  rm -f /tmp/deleteme $FILESTEM.tmp.c
+@
+
+
+1.9
+log
+@Added -ckit flag to do equivalent of tcparse (with preprocessing).
+@
+text
+@d18 1
+d37 1
+d312 3
+@
+
+
+1.8
+log
+@Changed "-newtags" to simply link in tcapint
+Added "-macros" flag to mean: use newtags macros.
+@
+text
+@d10 1
+d20 1
+d77 1
+a77 1
+# Path to SML file
+d79 2
+a80 1
+SMLFILE=/u/a/l/alexey/types/bin/filesToInstrCFiles
+d85 5
+a89 4
+ENUM_PP=0
+ENUM_INSTR=1
+ENUM_CC=2
+ENUM_LINK=3
+d94 53
+d204 2
+a205 2
+    echo ' ---' sml @@SMLload=$SMLFILE $INSTR_OPTIONS $FILESTEM.pp.c
+    $DEBUG sml @@SMLload=$SMLFILE $INSTR_OPTIONS $FILESTEM.pp.c
+d290 3
+d384 1
+@
+
+
+1.7
+log
+@Added "-newtags" flag.
+@
+text
+@d16 2
+a17 1
+     echo '       -newtags        Use newtags: uses -DNEWTAGS and -ltcapint'
+d249 4
+a252 1
+	D_OPTIONS="$D_OPTIONS -DNEWTAGS"
+@
+
+
+1.6
+log
+@Undid debug echoing.
+@
+text
+@d16 1
+d32 1
+d247 4
+d307 1
+a307 1
+	compile_cc $TODO $FILESTEM $OPTIONS
+d314 1
+a314 1
+	compile_cc $TODO $FILESTEM $OPTIONS
+d322 1
+a322 1
+	compile_cc $TODO $FILESTEM $OPTIONS
+@
+
+
+1.5
+log
+@Now supports -pp=___, -ppflag-___, -cc=____, -cflag-___ options.
+Also "cleaner" in general, I think.
+@
+text
+@d35 1
+a35 1
+DEBUG=echo
+@
+
+
+1.4
+log
+@No longer calls tcpp,tcinstr,tccc;
+supports different CC, though not cleanly (yet).
+@
+text
+@d10 4
+a13 2
+     echo '       -cpp=<cpp>      Use <cpp> preprocessor (instead of "gcc -E")'
+     echo '       -cc=<cc>        Use <cc> instead of "gcc"'
+d33 5
+d41 1
+d44 1
+a44 1
+# use cpp (instead of default gcc -E)?
+d46 3
+a48 3
+CPP=""
+
+# Preprocessor options: options for the included typecheck.h file
+d57 1
+a57 1
+TC_CPP_OPTIONS="-I$TCINCDIR -DTC_PREINSTR -DTC_STRING -DTC_MALLOC"
+d69 1
+a69 1
+GCC_E_OPTIONS="-ansi -pedantic -U__GNUC__ -D__STDC__=0 $TC_CPP_OPTIONS"
+d93 1
+a93 1
+    PP_OPTIONS=$*
+d97 1
+a97 1
+    if [ "$CPP" ]
+d99 10
+a108 2
+      ################
+      # CPP VERSION
+d110 3
+a112 1
+      PP_OPTIONS="$TC_CPP_OPTIONS $PP_OPTIONS"
+d114 2
+a115 3
+      echo '#include <typecheck.h>' > $FILESTEM.tmp.c
+      echo '#line 1 "'$FILESTEM.c'"' >> $FILESTEM.tmp.c
+      cat $FILESTEM.c >> $FILESTEM.tmp.c
+d117 1
+a117 2
+      echo ' ---' $CPP $PP_OPTIONS $FILESTEM.tmp.c '>' $FILESTEM.pp.c
+      $CPP $PP_OPTIONS $FILESTEM.tmp.c > $FILESTEM.pp.c
+d119 3
+a121 16
+      RETSTAT=$?
+
+      # rm can be dangerous!
+      touch /tmp/deleteme
+      rm -f /tmp/deleteme $FILESTEM.tmp.c
+
+    else
+      ######################
+      # GCC -E VERSION
+
+      PP_OPTIONS="$GCC_E_OPTIONS $PP_OPTIONS $INC_TYPECHECK_H_OPTION"
+
+      echo ' ---' $CC -E $PP_OPTIONS $FILESTEM.c '>' $FILESTEM.pp.c
+      $CC -E $PP_OPTIONS $FILESTEM.c > $FILESTEM.pp.c
+      RETSTAT=$?
+    fi
+d145 1
+a145 1
+    sml @@SMLload=$SMLFILE $INSTR_OPTIONS $FILESTEM.pp.c
+d161 1
+a161 1
+    CC_OPTIONS="-g -I$TCINCDIR $*"
+a164 2
+    PP_OPTIONS="$TC_CPP_OPTIONS $PP_OPTIONS"
+
+d170 1
+a170 1
+    $CC -c $CC_OPTIONS $FILESTEM.tmp.c -o $FILESTEM.instr.o
+d215 5
+a219 2
+    -cpp=*)
+	CPP=`echo $ARG | cut -c6-`
+d226 3
+a228 1
+	CPP="$CC -E"
+a368 1
+    # temporary
+d370 1
+a370 1
+    if $CC -o $OUTSTEM.instr $OPTIONS $INITFILE $LINK_OBJS $TCLINK_LIBS
+@
+
+
+1.3
+log
+@Added option to use tccpp instead of tcpp;
+added usage message; cleaned up output echoes.
+@
+text
+@d10 2
+a11 1
+     echo '       -tccpp          Use "cpp" preprocessor (instead of "gcc -E")'
+d25 1
+d27 1
+d30 37
+a66 1
+TC_CPP="tcpp"
+d84 1
+a84 2
+    shift
+    shift
+d89 34
+a122 5
+    # temporary
+    echo '  --' $TC_CPP $PP_OPTIONS $FILESTEM
+    $TC_CPP $PP_OPTIONS $FILESTEM
+    if [ $? != 0 ]
+    then exit 1
+d133 1
+a133 2
+    shift
+    shift
+d138 6
+a143 3
+    # temporary
+    echo '  --' tcinstr $INSTR_OPTIONS $FILESTEM
+    tcinstr $INSTR_OPTIONS $FILESTEM
+d145 2
+a146 1
+    then exit 1
+d157 2
+a158 3
+    shift
+    shift
+    CC_OPTIONS=$*
+d162 18
+a179 5
+    # temporary
+    echo '  --' tccc $CC_OPTIONS $FILESTEM
+    tccc $CC_OPTIONS $FILESTEM
+    if [ $? != 0 ]
+    then exit 1
+d214 2
+a215 2
+    -tccpp)
+	TC_CPP="tccpp"
+d220 4
+d364 2
+a365 2
+    echo '  --' gcc -o $OUTSTEM.instr $OPTIONS $INITFILE $LINK_OBJS $TCLINK_LIBS
+    if gcc -o $OUTSTEM.instr $OPTIONS $INITFILE $LINK_OBJS $TCLINK_LIBS
+@
+
+
+1.2
+log
+@Version works (still uses tcpp,tcinstr,tccc).
+@
+text
+@d8 10
+a17 1
+then echo 'Usage: tc'
+d27 2
+d49 1
+a49 2
+    echo preprocessing $FILESTEM.c '=>' $FILESTEM.pp.c
+    echo with the command line $PP_OPTIONS
+d52 2
+a53 2
+    echo -- tcpp $PP_OPTIONS $FILESTEM
+    tcpp $PP_OPTIONS $FILESTEM
+a56 3
+
+  else echo not preprocessing $2
+
+d70 1
+a70 2
+    echo instrumenting $FILESTEM.pp.c '=>' $FILESTEM.instr.c
+    echo with the command line $INSTR_OPTIONS
+d73 1
+a73 1
+    echo -- tcinstr $INSTR_OPTIONS $FILESTEM
+a77 3
+
+  else echo not instrumenting $2
+
+d91 1
+a91 2
+    echo compiling $FILESTEM.instr.c '=>' $FILESTEM.instr.o
+    echo with the command line $CC_OPTIONS
+d94 1
+a94 1
+    echo -- tccc $CC_OPTIONS $FILESTEM
+a98 3
+
+  else echo not compiling $2
+
+d132 3
+a158 2
+echo cmdline = $CMDLINE
+
+d229 1
+a229 1
+	echo ignoring $ARG
+d238 5
+d254 1
+a254 1
+    echo collecting init functions from $INSTR_INIT_FILES
+d275 1
+a275 2
+    echo linking $LINK_OBJS '=>' $OUTSTEM.instr
+    echo with option $OPTIONS
+d278 1
+a278 1
+    echo -- gcc -o $OUTSTEM.instr $OPTIONS $INITFILE $LINK_OBJS $TCLINK_LIBS
+d280 2
+a281 2
+    then echo --- Link succeeded
+    else echo --- Link failed
+a283 2
+else
+    echo not linking $LINK_OBJS
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d7 14
+a25 5
+if [ -z "$2" ]
+then echo 'Usage: tc'
+     exit
+fi
+
+d41 7
+d66 7
+d91 7
+d115 2
+a116 2
+OUTFILE=""
+OUTFILENEXT="no"
+d122 1
+a122 1
+  if [ $OUTFILENEXT = "yes" ]
+d124 2
+a125 2
+	OUTFILE=$ARG
+	OUTFILENEXT="no"
+d137 1
+a137 1
+	$OUTFILENEXT="yes"
+d160 1
+a160 1
+# PART TWO: DO EVERYTHING
+d164 2
+d189 3
+d196 5
+d211 1
+d218 1
+d226 1
+d235 3
+d240 40
+a279 2
+	echo linking $LINK_OBJS
+	echo with option $OPTIONS
+d281 1
+a281 1
+	echo not linking $LINK_OBJS
+@

@@ -1,0 +1,1110 @@
+head	1.27;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.27
+date	2003.03.18.20.26.43;	author suan;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2002.10.31.17.10.19;	author suan;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2002.10.24.20.08.46;	author suan;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2002.10.14.20.01.53;	author suan;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2002.08.25.00.43.01;	author suan;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2002.08.09.16.58.49;	author suan;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2002.05.02.20.51.43;	author suan;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2002.03.16.20.50.23;	author suan;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2002.02.26.23.20.35;	author suan;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2002.02.25.17.03.02;	author suan;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2001.06.29.16.57.16;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2001.06.21.22.00.22;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2001.05.24.20.22.11;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2001.05.22.22.54.30;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2001.05.19.20.34.05;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2001.05.18.23.12.28;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.10.15.22.34.23;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.07.12.00.51.53;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.07.11.04.13.33;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.07.09.06.28.04;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.06.30.04.06.55;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.06.21.22.17.58;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.06.15.21.02.44;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.05.21.16.22.30;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.02.17.23.57.14;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.12.27.04.20.26;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.12.23.23.45.21;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Typechecked version ("library stubs") for malloc library functions.
+@
+
+
+1.27
+log
+@Added TC_SAFE_MALLOC (sm) version of malloc functions
+(allocated bytes are INIT rather than UNINIT).
+@
+text
+@#include <stdlib.h>
+
+#include "tcinternal.h"
+#include "tcmalloc-hash.h"
+#include <tclibc.h>
+
+/* Define following to make *alloc functions all zero-init memory */
+/* #define TC_SAFE_MALLOC */
+
+/***********************************************/
+/*********  trackfree data structures  *********/
+/***********************************************/
+
+struct free_rec
+{
+  void * ptr;
+  size_t siz;
+  struct free_rec * nxt;
+  const char * file;
+  int line, col;
+  char * status;
+};
+struct free_rec * freed_list = 0; /* in reverse temporal order (always insert at head) */
+
+static void trackfree_alloc(void * ptr, size_t siz)
+{
+  struct free_rec * q = (struct free_rec *) malloc(sizeof(struct free_rec));
+  if(q){ /* in reverse temporal order */
+    q->ptr = ptr;
+    q->siz = siz;
+    q->file = _globalErrlocFile;
+    q->line = _globalErrlocLine;
+    q->col  = _globalErrlocCol;
+    q->status = "alloc'ed";
+    q->nxt = freed_list;
+    freed_list = q;
+  } else {
+    /* out of memory */
+    _output_internal_error("trackfree_alloc", "malloc freed list out of memory");
+  }
+}
+
+static void trackfree_free(void * ptr, size_t siz)
+{
+  struct free_rec * q = (struct free_rec *) malloc(sizeof(struct free_rec));
+  if(q){ /* in reverse temporal order */
+    q->ptr = ptr;
+    q->siz = siz;
+    q->file = _globalErrlocFile;
+    q->line = _globalErrlocLine;
+    q->col  = _globalErrlocCol;
+    q->status = "freed";
+    q->nxt = freed_list;
+    freed_list = q;
+  } else {
+    /* out of memory */
+    _output_internal_error("trackfree_free", "malloc free list out of memory");
+  }
+}
+
+void _tcMallocStatus(void * ptr)
+{
+  struct free_rec * q;
+  for(q = freed_list; q; q = q->nxt)
+    if(ptr >= q->ptr &&
+	((char *)ptr) < (char *)q->ptr + q->siz + TC_MALLOC_PADDING){
+      if(((char *)ptr) < (char *)q->ptr + q->siz){
+        fprintf(stderr, "Address %p in block {%p,%d}\n\t%s at [%s:%d.%d]\n",
+		ptr, q->ptr, q->siz, q->status, q->file, q->line, q->col);
+      } else {
+        fprintf(stderr, "Address %p in padding of block {%p,%d}\n\t%s at [%s:%d.%d]\n",
+		ptr, q->ptr, q->siz, q->status, q->file, q->line, q->col);
+      }
+    }
+}
+
+/**************************************/
+/*********  malloc functions  *********/
+/**************************************/
+void * _typecheck_malloc(size_t size)
+{
+  void * newmem;
+
+  newmem = malloc(size + TC_MALLOC_PADDING);
+
+  if(newmem){
+    mhash_insert(newmem, size);
+    if(tc_flag_trackfree) trackfree_alloc(newmem, size);
+#ifdef TC_SAFE_MALLOC /* { */
+    _setByteTags(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		newmem, size, _typetag_init, _typetag_unalloc);
+#else /* } ifndef TC_SAFE_MALLOC { */
+    _setUninitTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, newmem, size);
+#endif /* } ifndef TC_SAFE_MALLOC */
+  }
+
+  return newmem;
+}
+
+/* identical to _typecheck_malloc, except set initTag rather than setUninitTag */
+void * _typecheck_malloc_init(size_t size)
+{
+  void * newmem;
+
+  newmem = malloc(size + TC_MALLOC_PADDING);
+
+  if(newmem){
+    mhash_insert(newmem, size);
+    if(tc_flag_trackfree) trackfree_alloc(newmem, size);
+    _setByteTags(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		newmem, size, _typetag_init, _typetag_unalloc);
+  }
+
+  return newmem;
+}
+
+void * _typecheck_calloc(size_t nelem, size_t elsize)
+{
+  void * newmem;
+
+  newmem = calloc(nelem + TC_MALLOC_PADDING/elsize, elsize);
+
+  if(newmem){
+    size_t size = nelem * elsize;
+    mhash_insert(newmem, size);
+    if(tc_flag_trackfree) trackfree_alloc(newmem, size);
+    _setByteTags(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		newmem, size, _typetag_init, _typetag_unalloc);
+  }
+
+  return newmem;
+}
+
+void _typecheck_free(void * ptr)
+{
+  size_t siz = mhash_remove(ptr);
+  if(tc_flag_trackfree) trackfree_free(ptr, siz);
+
+  if(siz){
+    free(ptr);
+    SET_UNALLOC_TAG("_typecheck_free",_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, ptr, (char *)ptr+siz);
+  } else {
+    _output_flc(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, TCF_FUM);
+  }
+}
+
+/* don't output error if ptr target not allocated */
+void _typecheck_free_partial(void * ptr)
+{
+  size_t siz = mhash_remove(ptr);
+  if(tc_flag_trackfree) trackfree_free(ptr, siz);
+
+  if(siz){
+    free(ptr);
+    SET_UNALLOC_TAG("_typecheck_free",_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, ptr, (char *)ptr+siz);
+  }
+}
+
+void * _typecheck_memalign(size_t alignment, size_t size)
+{
+  void * newmem;
+
+  newmem = (void *) memalign(alignment, size + TC_MALLOC_PADDING);
+
+  if(newmem){
+    mhash_insert(newmem, size);
+    if(tc_flag_trackfree) trackfree_alloc(newmem, size);
+#ifdef TC_SAFE_MALLOC /* { */
+    _setByteTags(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		newmem, size, _typetag_init, _typetag_unalloc);
+#else /* } ifndef TC_SAFE_MALLOC { */
+    _setUninitTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, newmem, size);
+#endif /* } ifndef TC_SAFE_MALLOC */
+  }
+
+  return newmem;
+}
+
+void * _typecheck_memalign_init(size_t alignment, size_t size)
+{
+  void * newmem;
+
+  newmem = (void *) memalign(alignment, size + TC_MALLOC_PADDING);
+
+  if(newmem){
+    mhash_insert(newmem, size);
+    if(tc_flag_trackfree) trackfree_alloc(newmem, size);
+    _setByteTags(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		newmem, size, _typetag_init, _typetag_unalloc);
+  }
+
+  return newmem;
+}
+
+void * _typecheck_realloc_body(void * ptr, size_t size, int init)
+{
+  void * newmem;
+  size_t oldsiz;
+
+  if(ptr == 0) /* behaves like malloc */
+    return _typecheck_malloc(size);
+  if(size == 0){ /* behaves like free */
+    _typecheck_free(ptr);
+    return 0;
+  }
+
+  oldsiz = mhash_remove(ptr);
+  if(tc_flag_trackfree) trackfree_free(ptr, oldsiz);
+
+  newmem = realloc(ptr, size + TC_MALLOC_PADDING);
+
+  if(newmem){
+    mhash_insert(newmem, size);
+    if(tc_flag_trackfree) trackfree_alloc(newmem, size);
+    if(newmem == ptr){ /* memory block extended */
+      if(size < oldsiz){ /* shrink */
+        SET_UNALLOC_TAG("_typecheck_realloc", _globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+			(char *)ptr+size, (char *)ptr+oldsiz);
+      } else { /* extend */
+#ifdef TC_SAFE_MALLOC /* { */
+        _setByteTags(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+			(char *)ptr+oldsiz, size-oldsiz, _typetag_init, _typetag_unalloc);
+#else /* } ifndef TC_SAFE_MALLOC { */
+        if(init) _setByteTags(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+			(char *)ptr+oldsiz, size-oldsiz, _typetag_init, _typetag_unalloc);
+        else _setUninitTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+			(char *)ptr+oldsiz, size-oldsiz);
+#endif /* } ifndef TC_SAFE_MALLOC */
+      }
+    } else { /* new memory block created */
+      if(((char *)ptr > (char *)newmem && (char *)ptr <= (char *)newmem+size) ||
+	 ((char *)newmem > (char *)ptr && (char *)newmem <= (char *)ptr+oldsiz)){
+	/* NOTE: newmem and old block may still overlap, in atypical fashion */
+	/*       When this happens, instead of copying tags, we'll just set it to init */
+        SET_UNALLOC_TAG("_typecheck_realloc", _globalErrlocFile,_globalErrlocLine,_globalErrlocCol, ptr, (char *)ptr+oldsiz);
+#ifdef TC_SAFE_MALLOC /* { */
+        _setByteTags(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+			newmem, size, _typetag_init, _typetag_unalloc);
+#else /* } ifndef TC_SAFE_MALLOC { */
+        if(init) _setByteTags(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+				newmem, size, _typetag_init, _typetag_unalloc);
+	else {
+          if(size < oldsiz){ /* shrinkage: all "init" */
+            _setByteTags(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, newmem, size, _typetag_init, _typetag_unalloc);
+          } else { /* growth: "init"|"uninit" */
+            _setByteTags(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, newmem, oldsiz, _typetag_init, _typetag_unalloc);
+            _setUninitTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, (char *)newmem+oldsiz, size-oldsiz);
+          }
+        }
+#endif /* } ifndef TC_SAFE_MALLOC */
+      } else {
+#ifdef TC_SAFE_MALLOC /* { */
+        _setByteTags(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+			newmem, size, _typetag_init, _typetag_unalloc);
+#else /* } ifndef TC_SAFE_MALLOC { */
+        if(init) _setByteTags(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+			newmem, size, _typetag_init, _typetag_unalloc);
+        else _setUninitTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, newmem, size);
+#endif /* } ifndef TC_SAFE_MALLOC */
+        _copyTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		newmem, ptr, (size<oldsiz)?size:oldsiz, _ctype_aggregate);
+        SET_UNALLOC_TAG("_typecheck_realloc", _globalErrlocFile,_globalErrlocLine,_globalErrlocCol, ptr, (char *)ptr+oldsiz);
+      }
+    }
+  }
+
+  return newmem;
+}
+
+void * _typecheck_realloc(void * ptr, size_t size)
+{
+  return _typecheck_realloc_body(ptr, size, 0);
+}
+
+void * _typecheck_realloc_init(void * ptr, size_t size)
+{
+  return _typecheck_realloc_body(ptr, size, 1);
+}
+
+void * _typecheck_valloc(size_t size)
+{
+  void * newmem;
+
+  newmem = valloc(size + TC_MALLOC_PADDING);
+
+  if(newmem){
+    mhash_insert(newmem, size);
+    if(tc_flag_trackfree) trackfree_alloc(newmem, size);
+#ifdef TC_SAFE_MALLOC /* { */
+    _setByteTags(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		newmem, size, _typetag_init, _typetag_unalloc);
+#else /* } ifndef TC_SAFE_MALLOC { */
+    _setUninitTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, newmem, size);
+#endif /* } ifndef TC_SAFE_MALLOC */
+  }
+
+  return newmem;
+}
+
+void * _typecheck_valloc_init(size_t size)
+{
+  void * newmem;
+
+  newmem = valloc(size + TC_MALLOC_PADDING);
+
+  if(newmem){
+    mhash_insert(newmem, size);
+    if(tc_flag_trackfree) trackfree_alloc(newmem, size);
+    _setByteTags(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		newmem, size, _typetag_init, _typetag_unalloc);
+  }
+
+  return newmem;
+}
+
+/****************************************/
+/*********  test main function  *********/
+/****************************************/
+#ifdef STANDALONE /* { */
+
+int main()
+{
+  void * v, * w, * x;
+  v = _typecheck_malloc(12);
+  w = _typecheck_malloc(42);
+  x = _typecheck_malloc(1);
+  _typecheck_free(w);
+  _typecheck_free(v);
+  _typecheck_free(x);
+  v = _typecheck_malloc(32);
+  _typecheck_free(w);
+  w = _typecheck_malloc(83);
+  _typecheck_free(v);
+  x = _typecheck_malloc(97);
+  _typecheck_free(x);
+  return 0;
+}
+
+#endif /* } STANDALONE */
+@
+
+
+1.26
+log
+@Added _typecheck_free_partial.
+@
+text
+@d7 2
+d89 4
+d94 1
+d163 1
+a163 1
+  newmem = memalign(alignment, size + TC_MALLOC_PADDING);
+d168 4
+d173 1
+d183 1
+a183 1
+  newmem = memalign(alignment, size + TC_MALLOC_PADDING);
+d220 4
+d228 1
+d236 13
+a248 5
+        if(size < oldsiz){ /* shrinkage: all "init" */
+          _setByteTags(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, newmem, size, _typetag_init, _typetag_unalloc);
+        } else { /* growth: "init"|"uninit" */
+          _setByteTags(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, newmem, oldsiz, _typetag_init, _typetag_unalloc);
+          _setUninitTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, (char *)newmem+oldsiz, size-oldsiz);
+d250 1
+d252 8
+a259 1
+        _setUninitTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, newmem, size);
+d289 4
+d294 1
+@
+
+
+1.25
+log
+@realloc bug fix: new memory returned by realloc may
+overlap with old memory and not start from the same
+address; made changes to account for this case
+(previously not handled)
+@
+text
+@d140 12
+@
+
+
+1.24
+log
+@Abstracted out malloc-hash stuff into tcmalloc-hash.c/h; that
+is also used by tcptrmalloc.c
+@
+text
+@d202 14
+a215 2
+      _setUninitTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, newmem, size);
+      _copyTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+d217 2
+a218 1
+      SET_UNALLOC_TAG("_typecheck_realloc", _globalErrlocFile,_globalErrlocLine,_globalErrlocCol, ptr, (char *)ptr+oldsiz);
+@
+
+
+1.23
+log
+@Added malloc_init functions (and relatives).
+@
+text
+@d4 1
+d8 3
+a10 4
+/*******************************************/
+/*********  malloc info hashtable  *********/
+/*******************************************/
+#define MHASHSIZE 1021
+d12 1
+a12 4
+#define MHASHCHUNK 10
+#define MHASHMASK (~((-1)<<MHASHCHUNK))
+
+struct ptr_siz
+a15 7
+  struct ptr_siz * nxt;
+};
+struct ptr_siz * mhash_table[MHASHSIZE] = {0};
+
+struct free_rec
+{
+  struct ptr_siz * pts;
+d23 1
+a23 1
+static int mhash(void * v)
+d25 10
+a34 33
+  unsigned long vl = (unsigned long) v;
+  int h = vl & MHASHMASK;
+  while((vl >>= MHASHCHUNK))
+    h += vl & MHASHMASK;
+  return h % MHASHSIZE;
+}
+
+static void mhash_insert(void * ptr, size_t siz)
+{
+  int hash = mhash(ptr);
+  struct ptr_siz * p = (struct ptr_siz *) malloc(sizeof(struct ptr_siz));
+  if(p){
+    p->ptr = ptr;
+    p->siz = siz;
+    p->nxt = mhash_table[hash];
+    mhash_table[hash] = p;
+    /*------insert into freed_list------*/
+    if(tc_flag_trackfree){
+      struct free_rec * q = (struct free_rec *) malloc(sizeof(struct free_rec));
+      if(q){ /* in reverse temporal order */
+        q->pts = p;
+        q->file = _globalErrlocFile;
+        q->line = _globalErrlocLine;
+        q->col  = _globalErrlocCol;
+        q->status = "alloc'ed";
+        q->nxt = freed_list;
+        freed_list = q;
+      } else {
+        /* out of memory */
+        _output_internal_error("mhash_insert", "malloc freed list out of memory");
+      }
+    }
+    /*----------------------------------*/
+d37 1
+a37 1
+    _output_internal_error("mhash_insert", "malloc hashtable out of memory");
+d41 1
+a41 1
+static size_t mhash_remove(void * ptr)
+d43 14
+a56 30
+  struct ptr_siz ** pp;
+  for(pp = &mhash_table[mhash(ptr)]; *pp; pp = &(*pp)->nxt)
+    if((*pp)->ptr == ptr){
+      struct ptr_siz * tmp = *pp;
+      size_t ret = tmp->siz;
+      *pp = tmp->nxt;
+      /*------free(tmp)------*/
+      if(tc_flag_trackfree){
+        struct free_rec * q = (struct free_rec *) malloc(sizeof(struct free_rec));
+        if(q){ /* in reverse temporal order */
+          q->pts = tmp;
+          q->file = _globalErrlocFile;
+          q->line = _globalErrlocLine;
+          q->col  = _globalErrlocCol;
+          q->status = "freed";
+          q->nxt = freed_list;
+          freed_list = q;
+        } else {
+          /* out of memory */
+          _output_internal_error("mhash_remove", "malloc free list out of memory");
+          free(tmp);
+        }
+      } else {
+        free(tmp);
+      }
+      /*---------------------*/
+      return ret;
+    }
+  /* entry not found! */
+  return 0;
+d63 3
+a65 3
+    if(ptr >= q->pts->ptr &&
+	((char *)ptr) < (char *)q->pts->ptr + q->pts->siz + TC_MALLOC_PADDING){
+      if(((char *)ptr) < (char *)q->pts->ptr + q->pts->siz){
+d67 1
+a67 1
+		ptr, q->pts->ptr, q->pts->siz, q->status, q->file, q->line, q->col);
+d70 1
+a70 1
+		ptr, q->pts->ptr, q->pts->siz, q->status, q->file, q->line, q->col);
+d86 1
+d102 1
+d119 1
+d130 1
+d148 1
+d163 1
+d184 1
+d190 1
+d230 1
+d245 1
+@
+
+
+1.22
+log
+@Fixed small realloc bug: when block extended, was initializing
+wrong block of mirror.
+@
+text
+@d141 16
+d199 16
+a214 1
+void * _typecheck_realloc(void * ptr, size_t size)
+d237 4
+a240 2
+        _setUninitTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		(char *)ptr+oldsiz, size-oldsiz);
+d253 10
+d272 15
+@
+
+
+1.21
+log
+@Restructured output mechanism to associate stream with error message;
+also, generalized signalflag mechanism (TCKILL now called by _output_
+functions), and enhanced run-time flags to allow better control of
+streams, message-destinations, and signal-flags.
+Also, added function _fn_SET_UNALLOC_TAG to reduce code bloat in
+processReturn.
+@
+text
+@d207 1
+a207 1
+		(char *)ptr+size, size-oldsiz);
+@
+
+
+1.20
+log
+@Fixed small realloc bug
+@
+text
+@d64 1
+a64 3
+        if(errorstream)
+          fprintf(errorstream,
+	      "TC:Sub-Fatal error: malloc freed list out of memory\n");
+d70 1
+a70 3
+    if(errorstream)
+      fprintf(errorstream,
+	"TC:Fatal error: malloc hashtable out of memory\n");
+d95 1
+a95 3
+          if(errorstream)
+            fprintf(errorstream,
+	      "TC:Sub-Fatal error: malloc freed list out of memory\n");
+d163 1
+a163 1
+    SET_UNALLOC_TAG(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, ptr, (char *)ptr+siz);
+d165 1
+a165 4
+    if(errorstream){
+      _output_flc(errorstream, _globalErrlocFile,_globalErrlocLine,_globalErrlocCol, TCF_FUM);
+      TC_ERR_SIGNAL;
+    }
+d203 1
+a203 1
+        SET_UNALLOC_TAG(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+d213 1
+a213 1
+      SET_UNALLOC_TAG(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, ptr, (char *)ptr+oldsiz);
+a237 5
+
+FILE * logstream = 0;
+FILE * debugstream = stderr;
+FILE * warnstream = stderr;
+FILE * errorstream = stderr;
+@
+
+
+1.19
+log
+@Added _setByteTags; added redirection macros to point
+_setUninitTag and _setStringTag to _setByteTag; old stuff
+commented out, will next be deleted.
+Also, added _typetag_init;
+and added _typecheck_bzero to tcstring.c
+@
+text
+@d216 1
+a216 1
+		(char *)ptr+size, oldsiz-size);
+@
+
+
+1.18
+log
+@Moved compile-time flags to tcinternal.h; renamed some to include TC_ prefix.
+@
+text
+@d156 2
+a157 1
+    _setUninitTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, newmem, size);
+d246 1
+a246 1
+#ifdef STANDALONE
+d271 1
+a271 1
+#endif STANDALONE
+@
+
+
+1.17
+log
+@Added globalErrloc stuff to output function call.
+@
+text
+@a5 2
+/* This is the size of the extra padding we put between malloc'ed blocks */
+#define TC_MALLOC_PADDING 64
+@
+
+
+1.16
+log
+@Fixed wording of "tcMallocStatus": changed "Pointer" to "Address"
+@
+text
+@d173 1
+a173 1
+      _output_simple(errorstream, TCF_FUM);
+@
+
+
+1.15
+log
+@Updated trackfree stuff to include errloc (file,line,col) info.
+@
+text
+@d123 1
+a123 1
+        fprintf(stderr, "Pointer %p in block {%p,%d}\n\t%s at [%s:%d.%d]\n",
+d126 1
+a126 1
+        fprintf(stderr, "Pointer %p in padding of block {%p,%d}\n\t%s at [%s:%d.%d]\n",
+@
+
+
+1.14
+log
+@Modified output functions to use _globalErrloc* variables
+which are now set by instr-ast.sml.
+@
+text
+@d29 2
+d58 4
+a61 1
+        q->status = "malloc'ed";
+d93 3
+d123 2
+a124 3
+        fprintf(stderr, "Pointer %p is in %s block: %p size: %d\n",
+		ptr, q->status, q->pts->ptr, q->pts->siz);
+        return;
+d126 2
+a127 2
+        fprintf(stderr, "Pointer %p is in padding of %s block: %p size: %d\n",
+		ptr, q->status, q->pts->ptr, q->pts->siz);
+@
+
+
+1.13
+log
+@In _tcMallocStatus(), added void*->char* casts to make cc happy.
+@
+text
+@d136 1
+a136 1
+    _setUninitTag("(typecheck_malloc)", 0, 0, newmem, size);
+d151 1
+a151 1
+    _setUninitTag("(typecheck_calloc)", 0, 0, newmem, size);
+d163 1
+a163 1
+    SET_UNALLOC_TAG("(typecheck_free)", 0, 0, ptr, (char *)ptr+siz);
+a165 4
+/*
+      fprintf(errorstream,
+        "Error: freeing memory not previously allocated!\n");
+*/
+d180 1
+a180 1
+    _setUninitTag("(typecheck_memalign)", 0, 0, newmem, size);
+d206 1
+a206 1
+        SET_UNALLOC_TAG("(typecheck_realloc)",0,0,
+d209 1
+a209 1
+        _setUninitTag("(typecheck_realloc)",0,0,
+d213 2
+a214 2
+      _setUninitTag("(typecheck_realloc)",0,0, newmem, size);
+      _copyTag("(typecheck_realloc)",0,0,
+d216 1
+a216 1
+      SET_UNALLOC_TAG("(typecheck_realloc)",0,0, ptr, (char *)ptr+oldsiz);
+d231 1
+a231 1
+    _setUninitTag("(typecheck_valloc)", 0, 0, newmem, size);
+@
+
+
+1.12
+log
+@Added mechanism to track (malloc'ed and) freed memory,
+enabled with -tc-trackfree flag; accessible via
+_tcMallocStatus function (to be called from GDB).
+@
+text
+@d112 3
+a114 2
+    if(ptr >= q->pts->ptr && ptr < q->pts->ptr + q->pts->siz + TC_MALLOC_PADDING){
+      if(ptr < q->pts->ptr + q->pts->siz){
+@
+
+
+1.11
+log
+@Removed alloca stuff;
+Added TC_MALLOC_PADDING stuff (currently set to 64; could be set to 0
+if no padding is desired).
+@
+text
+@d23 1
+d25 7
+a31 1
+struct ptr_siz * mhash_table[MHASHSIZE] = {0};
+d51 16
+d71 1
+a71 1
+	"Fatal error: malloc hashtable out of memory\n");
+d83 19
+a101 1
+      free(tmp);
+d106 16
+@
+
+
+1.10
+log
+@Converted output to _output_* functions (new output manager).
+@
+text
+@a1 1
+#include <alloca.h>
+d6 3
+d74 1
+a74 1
+  newmem = malloc(size);
+d88 1
+a88 1
+  newmem = calloc(nelem, elsize);
+d122 1
+a122 1
+  newmem = memalign(alignment, size);
+d146 1
+a146 1
+  newmem = realloc(ptr, size);
+d173 1
+a173 1
+  newmem = valloc(size);
+a180 5
+}
+
+void * _typecheck_alloca(size_t size)
+{
+  return alloca(size);
+@
+
+
+1.9
+log
+@Incorporated new _copyTag (which takes a _ctype_t for its last argument).
+@
+text
+@d106 1
+d109 2
+@
+
+
+1.8
+log
+@ Made file cc-friendly (cast all arithmetic pointers from void* to char*).
+@
+text
+@d156 1
+a156 1
+		newmem, ptr, (size<oldsiz)?size:oldsiz);
+@
+
+
+1.7
+log
+@replaced _setUnallocTag with new SET_UNALLOC_TAG macro call;
+also, repaired _typecheck_realloc function (was flawed).
+@
+text
+@d151 1
+a151 1
+		ptr+size, oldsiz-size);
+@
+
+
+1.6
+log
+@Added signal stuff (turn off by defining TC_NOSIGNAL in tcinternal.h).
+@
+text
+@d103 1
+a103 1
+    _setUnallocTag("(typecheck_free)", 0, 0, ptr, siz);
+d147 2
+a148 1
+        _setUnallocTag("(typecheck_realloc)",0,0, ptr+size, oldsiz-size);
+d154 1
+d157 1
+a157 4
+      if(size > oldsiz){ /* extend */
+        _setUninitTag("(typecheck_realloc)",0,0,
+		newmem+size, oldsiz-size);
+      }
+@
+
+
+1.5
+log
+@Streamlined include files (includes only tcinternal.h)
+@
+text
+@d105 1
+a105 1
+    if(errorstream)
+d108 2
+@
+
+
+1.4
+log
+@de-tagpos-ified.
+@
+text
+@d4 1
+a4 1
+#include <tcapi.h>
+a5 2
+
+#include "tcinternal.h"
+@
+
+
+1.3
+log
+@Replaced #include <tcmalloc.h> with <tclibc.h>
+@
+text
+@d78 1
+a78 1
+    _setUninitTag("(typecheck_malloc)", 0, 0, _getTagPos(newmem), size);
+d93 1
+a93 1
+    _setUninitTag("(typecheck_calloc)", 0, 0, _getTagPos(newmem), size);
+d121 1
+a121 1
+    _setUninitTag("(typecheck_memalign)", 0, 0, _getTagPos(newmem), size);
+d150 1
+a150 1
+		_getTagPos(ptr+size), oldsiz-size);
+d154 1
+a154 1
+		_getTagPos(newmem), _getTagPos(ptr), (size<oldsiz)?size:oldsiz);
+d157 1
+a157 1
+		_getTagPos(newmem+size), oldsiz-size);
+d173 1
+a173 1
+    _setUninitTag("(typecheck_valloc)", 0, 0, _getTagPos(newmem), size);
+@
+
+
+1.2
+log
+@Wrote hash function, tables, and function bodies.
+@
+text
+@d5 1
+a5 1
+#include <tcmalloc.h>
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d7 63
+d76 2
+a77 1
+  if(newmem)
+d79 1
+d86 11
+a96 1
+  return calloc(nelem, elsize);
+d101 10
+a110 1
+  free(ptr);
+d115 10
+a124 1
+  return memalign(alignment, size);
+d129 34
+a162 1
+  return realloc(ptr, size);
+d167 10
+a176 1
+  return valloc(size);
+d183 30
+@

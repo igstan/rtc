@@ -1,0 +1,365 @@
+head	1.11;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.11
+date	2004.07.16.21.27.34;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2004.06.28.22.20.13;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2004.02.18.22.33.22;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2003.12.16.22.57.18;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2003.11.13.20.04.29;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2003.06.11.23.07.19;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.11.11.22.23.34;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.10.29.17.14.08;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.04.16.20.06.53;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.04.11.04.21.43;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.04.10.16.19.04;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Header for Identifier and IDlist/map classes.
+@
+
+
+1.11
+log
+@ADDED: is_zeroed field to AO!  (But only outermost (declared)
+	objects will be marked)
+Changed mbu4 so that
+ - function calls don't gen new mbu facts;
+ - at function entry, isZeroed objects are excluded
+   from initial facts (intra mode)
+@
+text
+@#ifndef TC_ID_H /* { */
+#define TC_ID_H
+
+#include <stdio.h>
+
+//------------------------------------------------------
+
+class AO;
+class AOId;
+class AOStringLit;
+class AOMalloc;
+class TCtype;
+
+class ID
+{
+  public:
+    friend class IDlist;
+    enum stClass { AUTO, HEAP, STATIC };
+
+    unsigned int getkey() const { return key; }
+    const char * getname() { return name; }
+    enum stClass getSC() const { return stclass; }
+    AOId& get_AOId(bool mark_zeroed = false);
+    AOStringLit& get_AOStringLit();
+    AOMalloc& get_AOMalloc(bool is_alloca = false, bool mark_zeroed = false);
+
+  private:
+    ID();
+    ID(char * n, char sc, bool isl = false);
+    ~ID();
+    void setkey(unsigned int k) { key = k; }
+    unsigned int key;
+    char * name;
+    AO * ao;
+    bool islib;
+    enum stClass stclass;
+};
+
+//------------------------------------------------------
+
+class IDmap
+{
+  public:
+    IDmap(unsigned int size = 1024);
+    ~IDmap();
+    void debug_dump(FILE * os);
+    void map(unsigned int key, ID& id);
+    ID * lookup(unsigned int key);
+
+  private:
+    void grow(unsigned int upto);
+    ID ** table;
+    unsigned int size;
+};
+
+//------------------------------------------------------
+
+class IDlist
+{
+  public:
+    IDlist(unsigned int size = 1023);
+    ~IDlist();
+    void debug_dump(FILE * os);
+    void output_aliases(FILE * os, char prefix);
+    ID& getID(char * str, char sc);
+    unsigned int assignUIDs(unsigned int start);
+    void traverseAOs(void (*fp)(AO& ao));
+    ID * lookupByName(const char * str);
+    void traverseIDs(void (*fp)(ID&));
+
+  private:
+    unsigned int hash(const char * str);
+    class node {
+      public:
+        node(ID& i, node * n):id(i), next(n){}
+        ID& id;
+        node * next;
+    };
+    node ** table;
+    unsigned int size;
+};
+
+//------------------------------------------------------
+
+#endif /* } ifdef TC_ID_H */
+@
+
+
+1.10
+log
+@Augmented to handle ALLOCA:
+(solution is hackish at best)
+- added is_alloca flag to AOMalloc object.
+  HOWEVER, this is set only by flow_sensitive
+  PgmExpr/MallocDecl case!
+- a second channel of information comes from
+  the (long-forgotten) "stclass" field of ID.
+  (This is the bit used in -ptr-heapstack mode)
+@
+text
+@d23 1
+a23 1
+    AOId& get_AOId();
+d25 1
+a25 1
+    AOMalloc& get_AOMalloc(bool is_alloca = false);
+@
+
+
+1.9
+log
+@REMOVED:
+ - eltype/numelts components of aoMalloc -- new implementation
+        now uses setStaticType mechanism to convey this information,
+        which is a  better solution that this previous unclean
+        approach
+   - note that as a result, Interval::setTgt() is now greatly
+        simplified, since all objects (from array aoIds to
+        aoMallocs to aoStringLits can now be treated uniformly
+        by just getting info from the staticType).
+FIXED:
+ - in CFG::read, I previously had a filter to make sure the
+        globnodes (initializer nodes) are either mStaticDecl
+        or mAssign; but with change to initializer behavior
+        that PARALLEL-izes aggregate initializations, this
+        constraint no longer makes sense; in fact I just
+        removed the filter altogether, so that globnodes can
+        now contain _any_ kind of PgmExpr.
+@
+text
+@d25 1
+a25 1
+    AOMalloc& get_AOMalloc();
+@
+
+
+1.8
+log
+@1. Changed AOMalloc representation to include <eltype, numelts>
+   (previously had single <size> field)
+2. Changed Interval to store <eltype, numelts> rather than AO
+   as "target" field: potentially allows for "smarter" range
+   analysis per Susan's suggestion.
+(Added runtime flag -ran-[no-]malloc to turn on/off handling
+ of malloc objects, now on by default)
+TODO: account for elty in Interval::plus/minus (added signature,
+      but not yet implemented)
+@
+text
+@d25 1
+a25 1
+    AOMalloc& get_AOMalloc(TCtype * elty = 0, int nelts = 0);
+@
+
+
+1.7
+log
+@Augmented malloc declaration to include size component, which is a result
+of trying to compute a constant size from the expression.
+NOTE: there's some trouble with determining the value of sizeof, so for now
+**sizeof expressions are evaluated to the value -1** as an indicator for
+diagnostic purposes.  IOW, the malloc-size value currently generated SHOULD
+NOT BE USED DIRECTLY (should be safe anyways, as long as we're conscious
+that a negative size means something is amiss).
+
+The size is currently stored in AOMalloc objects, but not yet used.
+@
+text
+@d12 1
+d25 1
+a25 1
+    AOMalloc& get_AOMalloc(int size = 0);
+@
+
+
+1.6
+log
+@HEAPSTACK UPDATE: enhance -ptr/-ptrw mode to optionally consider
+freed-heap and stack locations as "possibly invalid" locations.
+
+Added storage class to ID; added helper functions
+lookupByName and traverseIDs used by the new stuff.
+@
+text
+@d24 1
+a24 1
+    AOMalloc& get_AOMalloc();
+@
+
+
+1.5
+log
+@Added initial framework for flow-sensitive stuff in tca.cpp/h.
+Wrote functions to connect call/return nodes to function nodes
+to create supergraph.
+Minor change in id.cpp/h: get_AOId returns reference to AOId
+rather than AO object; similarly for get_AOStringLit/get_AOMalloc.
+@
+text
+@d13 2
+a14 1
+class ID {
+d17 3
+a19 1
+    unsigned int getkey() { return key; }
+d21 1
+d28 1
+a28 1
+    ID(char * n, bool isl = false);
+d35 1
+d40 2
+a41 1
+class IDmap {
+d57 2
+a58 1
+class IDlist {
+d64 1
+a64 1
+    ID& getID(char * str);
+d67 2
+d71 1
+a71 1
+    unsigned int hash(char * str);
+@
+
+
+1.4
+log
+@Normalized vargs/largno/islib:
+1. Directive from instr-ast is now 'f' for defined function,
+   and 'v' for vararg function.
+2. library functions are now processed in rtca/id.cpp, which
+   recognized (and strips out) the _rtclib_ prefix; the islib
+   property is propagated to children AOs as they are created.
+3. stat counters and the undef-fn output both now filter out
+   isLib objects.
+@
+text
+@d9 3
+d18 3
+a20 3
+    AO& get_AOId();
+    AO& get_AOStringLit();
+    AO& get_AOMalloc();
+@
+
+
+1.3
+log
+@Added mechanism to store AOs in an AOlist in each AO.
+Included mechanism for traversing all AOs, and debug output
+functions.
+Fairly complete, but not thoroughly tested (especially TypeList
+destructors?)
+@
+text
+@d21 1
+a21 1
+    ID(char * n);
+d27 1
+@
+
+
+1.2
+log
+@in an ID list.
+@
+text
+@d15 4
+d55 2
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d13 1
+a13 1
+    int getkey() { return key; }
+d19 2
+a20 1
+    int key;
+d48 1
+d50 1
+@

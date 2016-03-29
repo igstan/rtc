@@ -1,0 +1,66 @@
+TOP COMMANDS:
+  SMLofNJ.exportFn("filesToInstrCFiles", ParseToInstrAst.externFileToInstrCFile);
+TO RUN:
+  ParseToInstrAst.fileToC
+  ParseToInstrAst.externFileToInstrCFile ("",["/tmp/test.ppi.c"]);
+  ParseToInstrAst.externFileToInstrCFile ("",["-assign","/tmp/test.ppi.c"]);
+  ParseToInstrAst.externFileToInstrCFile ("",["-ptr","/tmp/test.ppp.c"]);
+  ParseToInstrAst.externFileToInstrCFile ("",["-ptrw","/tmp/test.ppp.c"]);
+  ParseToInstrAst.externFileToInstrCFile ("",["-tslfile-/tmp/test.tc_tca","/tmp/test.ppi.c"]);
+  ParseToInstrAst.externFileToInstrCFile ("",["-ptrw","-tslfile-/tmp/test.tc_ptrw","/tmp/test.ppp.c"]);
+  ParseToInstrAst.externFileToInstrCFile ("",["-opti-locaddrof", "/tmp/test.ppi.c"]);
+  ParseToInstrAst.externFileToTestCFile ("",["/tmp/test.c"]);
+  ParseToInstrAst.externFileToMirCFile ("",["/tmp/test.c"]);
+  ParseToInstrAst.externFileToTypedCFile ("",["/tmp/test.c"]);
+
+TO EXPORT FUNCTION:
+  SMLofNJ.exportFn("filesToInstrCFiles", ParseToInstrAst.externFileToInstrCFile);
+  SMLofNJ.exportFn("fileToTypedCFile", ParseToInstrAst.externFileToTypedCFile);
+  SMLofNJ.exportFn("fileToMirCFile", ParseToInstrAst.externFileToMirCFile);
+  SMLofNJ.exportFn("fileToC", ParseToInstrAst.externFileToC);
+
+TO IMPORT C-FUNCTION INTERFACE:
+  val fnname_in_ml : unit -> (Int32.int) = Unsafe.CInterface.c_function "suanlib" "suanlib_fun"
+  val _ = fnname_in_ml ()
+TO LOAD C-MODULE:
+  ?????
+
+TODO:
+
+ - isPointer returns true for array and function!
+   - may or may not be bad for us?
+
+e.id: new rule: only instance where we touch something before
+	verifying it. Alt would be to take addrof, which would
+	require an lvalue version of all operators that can
+	return a struct: comma, ?:, call, assign...
+-----------------------------------------------------------------
+Problems with ckit:
+-----------------------------------------------------------------
+
+ - qualifiers are stripped in prototypes (and elsewhere?)
+        e.g.    extern int memcmp(const void *, const void *, int);
+        becomes extern int memcmp (void *,void *,int);
+        which prompts a gcc warning "conflicting types for built-in
+        function `memcmp'". Not a big deal, but still...
+
+ - petty annoyance: ! unop does not accept a pointer operand
+	- not sure if this is ANSI?
+
+-----------------------------------------------------------------
+Code for adding runtime type-checking instrumentation.
+                                    -A.Loginov/S.Yong, UW-Madison
+-----------------------------------------------------------------
+
+Q: ParseToInstrAst.fileToAst does not seem to return the symtab or
+   pidtab among its bundle. -Suan 29nov
+
+A: env is a symtab - not sure if it's really useful
+   pidtab and pids have been deprecated: an Ast.id is now a structure
+	that contains everything you'd ever need: name, errloc, ctype...
+	Q: how do we "look up" the id of, say, "getTagPos"?
+	A?:We may have to "create" them from scratch (Pid.new() for new
+	   pid)- which may be good: we may no longer want to prepend
+	   "dynamic.h" before we instrument!  -Suan 30nov
+
+Note: InstrAst no longer needs to be a functor.

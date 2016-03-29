@@ -1,0 +1,2626 @@
+head	1.73;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.73
+date	2004.07.16.21.27.34;	author suan;	state Exp;
+branches;
+next	1.72;
+
+1.72
+date	2004.06.29.20.02.32;	author suan;	state Exp;
+branches;
+next	1.71;
+
+1.71
+date	2004.06.28.22.20.13;	author suan;	state Exp;
+branches;
+next	1.70;
+
+1.70
+date	2004.06.23.17.16.49;	author suan;	state Exp;
+branches;
+next	1.69;
+
+1.69
+date	2004.06.23.14.57.00;	author suan;	state Exp;
+branches;
+next	1.68;
+
+1.68
+date	2004.05.17.22.33.16;	author suan;	state Exp;
+branches;
+next	1.67;
+
+1.67
+date	2004.05.09.18.42.38;	author suan;	state Exp;
+branches;
+next	1.66;
+
+1.66
+date	2004.05.08.23.04.16;	author suan;	state Exp;
+branches;
+next	1.65;
+
+1.65
+date	2004.05.07.23.30.14;	author suan;	state Exp;
+branches;
+next	1.64;
+
+1.64
+date	2004.05.07.21.21.52;	author suan;	state Exp;
+branches;
+next	1.63;
+
+1.63
+date	2004.05.07.19.52.39;	author suan;	state Exp;
+branches;
+next	1.62;
+
+1.62
+date	2004.04.21.15.14.15;	author suan;	state Exp;
+branches;
+next	1.61;
+
+1.61
+date	2004.04.07.22.47.58;	author suan;	state Exp;
+branches;
+next	1.60;
+
+1.60
+date	2004.04.06.00.03.55;	author suan;	state Exp;
+branches;
+next	1.59;
+
+1.59
+date	2004.04.05.18.16.29;	author suan;	state Exp;
+branches;
+next	1.58;
+
+1.58
+date	2004.04.02.02.16.47;	author suan;	state Exp;
+branches;
+next	1.57;
+
+1.57
+date	2004.04.02.01.37.43;	author suan;	state Exp;
+branches;
+next	1.56;
+
+1.56
+date	2004.03.29.20.29.06;	author suan;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2004.03.27.22.12.39;	author suan;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2004.03.18.21.21.28;	author suan;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2004.03.04.20.51.02;	author suan;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2004.02.21.23.25.21;	author suan;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2004.02.19.16.41.34;	author suan;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2004.02.18.23.10.55;	author suan;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2004.02.18.22.33.22;	author suan;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2003.12.16.22.57.18;	author suan;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2003.11.18.00.34.50;	author suan;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2003.11.13.20.04.29;	author suan;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2003.11.12.00.10.31;	author suan;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2003.11.07.20.39.42;	author suan;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2003.06.18.20.08.46;	author suan;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2003.02.25.20.04.46;	author suan;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2003.02.14.20.55.04;	author suan;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2003.01.09.00.18.22;	author suan;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2002.11.15.22.07.32;	author suan;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2002.11.13.01.42.39;	author suan;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2002.11.12.21.16.59;	author suan;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2002.11.07.00.40.47;	author suan;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2002.11.06.20.03.20;	author suan;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2002.10.30.20.47.39;	author suan;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2002.10.29.17.14.08;	author suan;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2002.10.28.22.02.27;	author suan;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2002.10.23.20.26.57;	author suan;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2002.10.21.18.23.51;	author suan;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2002.10.17.15.51.44;	author suan;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2002.09.18.15.35.20;	author suan;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2002.08.19.14.22.25;	author suan;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2002.08.16.16.57.31;	author suan;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2002.08.15.21.16.25;	author suan;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2002.08.15.14.53.04;	author suan;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2002.08.15.14.34.17;	author suan;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2002.08.13.22.45.11;	author suan;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2002.08.10.21.26.24;	author suan;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2002.07.30.19.48.50;	author suan;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2002.07.30.18.16.24;	author suan;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2002.07.29.16.18.09;	author suan;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2002.07.29.13.36.42;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2002.07.28.21.37.24;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2002.05.25.18.58.05;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2002.05.23.22.44.44;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2002.05.23.16.39.37;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2002.04.19.23.54.05;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.04.19.16.45.01;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.04.18.17.18.16;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.04.18.17.06.19;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.04.18.15.55.32;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.04.16.22.43.51;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.04.16.20.57.21;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.04.16.20.06.53;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.04.12.17.17.48;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.04.11.20.34.41;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.04.11.04.21.43;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.04.10.16.19.04;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Header for Abstract Object classes.
+@
+
+
+1.73
+log
+@ADDED: is_zeroed field to AO!  (But only outermost (declared)
+	objects will be marked)
+Changed mbu4 so that
+ - function calls don't gen new mbu facts;
+ - at function entry, isZeroed objects are excluded
+   from initial facts (intra mode)
+@
+text
+@#ifndef TC_AO_H /* { */
+#define TC_AO_H
+
+#include <stdio.h>
+
+#include "ty.h"
+#include "id.h"
+#include "edge.h"
+
+#include "suco.h"
+
+//------------------------------------------------------
+
+class AOlist
+{
+  public:
+    friend class AO;
+
+    AOlist() : head(0) {}
+    ~AOlist();
+
+    //- These used in cataloguing AOs
+    void debug_dump(FILE * os);
+    void foreachAO(void (*fp)(AO& o)); //- only walks this list
+    void traverseAOs(void (*fp)(AO& o)); //- recursively apply to AO lists
+
+    AO& get_AOValue(TCtype& t); //- delete t if found
+
+  private:
+    class node {
+      public:
+	node(AO& o, node * n = 0) : ao(o), next(n) {}
+	AO& ao;
+	node * next;
+      private:
+	node();
+    };
+    node * head;
+};
+
+//------------------------------------------------------
+class ExposedStatus
+{
+  private:
+    enum exp_sta { esAll, esSome, esNone, esNA } status;
+    ExposedStatus(enum exp_sta es = esNA): status(es) {}
+
+  public:
+    static const ExposedStatus All;
+    static const ExposedStatus Some;
+    static const ExposedStatus None;
+    static const ExposedStatus NA;
+
+    bool isAll() const { return status == esAll; }
+    bool isSome() const { return status == esSome; }
+    bool isNone() const { return status == esNone; }
+    bool isNA() const { return status == esNA; }
+
+    char exposedCode();
+    void combine(ExposedStatus es);
+};
+
+//------------------------------------------------------
+class AO
+{
+  public:
+    enum aoKind {
+	 aoId, aoMalloc, aoSDot, aoUDot,
+	 aoReturn, aoArg, aoStar, aoValue,
+	 aoStringLit, aoOp, aoExt, aoAddrOf,
+	 aoFunction
+	};
+
+    //-------------------------
+    //-- old type-safety levels
+    enum ts_level { TS_NONE, TS_SAFE, TS_TRACKED, TS_UNSAFE };
+
+    void setTS_SAFE()    { tsl = TS_SAFE; }
+    void setTS_TRACKED() { tsl = TS_TRACKED; }
+    void setTS_UNSAFE(); //- sets unsafe, and propagates along assign edges 
+    char getTScode(); //- returns 'S'|'T'|'U'|0
+
+    static void writeTSlevel(AO& ao);
+
+    //-----------------------------
+    //-- new type-safety categories
+    enum ts_categ { TSC_POSS_INVALID = 0, // numbers used for comparison
+		    TSC_BADLY_TYPED = 1,
+		    TSC_INFLUENTIAL = 2,
+		    TSC_EXPOSED = 3,
+		    TSC_SAFE = 4 };
+
+    void setTSC(ts_categ c);
+    ts_categ getTSC() const { return tsc; }
+    static ts_categ getSetTSC(suco_set<AO *>& set);
+    char getTSCcode(); //- returns 'P'|'B'|'I'|'E'|'S'|0
+    static void writeTScateg(AO& ao);
+    static void writeUntouchedExposed(AO& ao);
+    static void writeVulnerable(AO& ao);
+
+    //-----------------------------
+
+    friend class ECR; //- to play with ECR
+    friend class ID;  //- to mark is_zeroed
+
+    static FILE * aoWriteStream;
+    static void writeECR(AO& ao);
+
+    void debug_dump(FILE * os);
+    virtual void dump_descr(FILE * os) = 0;
+    virtual void write_string_rep(FILE * os, bool readable);
+    static void write_list_string_rep(FILE * os, suco_llist<AO *>& set, bool readable);
+    aoKind getKind() const { return kind; }
+
+    static void assignEcrNosAndWriteToFile(AO& ao);
+
+    //-NOTE: this function should only be called after pt-analysis and ECRs have been finalized
+    ECR& getECR();
+
+    static AO * stringToAO(char * str, char ** nptr,
+				IDmap& aidmap, IDmap& pidmap, AOlist& valueAOs);
+
+    static suco_llist<AO *>& stringToAOlist(bool do_set, char * str, char ** nptr,
+					IDmap& aidmap, IDmap& pidmap, AOlist& valueAOs);
+
+    AO * find(aoKind k);
+    AO& get_AOAddrOf();
+    AO& get_AOFunction();
+    AO& get_AOStar();
+    AO& get_AOExt(TCtype& t, TCtype& f); //- delete t,f if found
+    AO& get_AOOp(TCtype& t); //- delete t if found
+    AO& get_AOReturn();	//- note: function return node is R F I <fnid>, while callsite return node is R D I <fnid>
+    AO * get_AOArg(int n);
+    AO * get_AOSDot(suco_llist<TCtype *>& l);
+    AO * get_AOUDot(TCtype& t);
+
+    virtual AO& normalize() { return *this; }	//- normalize union members, and struct first members
+							//- TODO: incorporate into PTA?
+    void traverseAOs(void (*fp)(AO& o));
+    AOlist& getAOlist() { return aolist; }
+
+    TCassignEdge * assignTo(AO& tgt, TCtype& ty); //- returns edge if not already there
+    suco_set<TCassignEdge *>& getOutgoingAssignEdges() { return assignsTo; }
+    suco_set<TCassignEdge *>& getIncomingAssignEdges() { return assignsFrom; }
+
+    bool isVal() const { return isValAO; } //- is AO a descendent of an AOValue object?
+    bool isRef() const { return isRefAO; } //- is AO a descendent of a dereference object?
+    bool isLib() const { return isLibAO; } //- is AO from a library function?
+    bool isLoc() const { return isLocAO; } //- is AO a location object (x, x.i, malloc, strlit)?
+    bool isLocArgRet() const { return (isLocAO || kind == aoArg || kind == aoReturn); }
+    bool isAssigned() const { return isAssignedAO; }
+    bool isVulnerableLoc() const { return is_vuln_loc; }
+    bool isZeroed() const { return is_zeroed; }
+    bool isDirectArrayAccess();
+
+    void markVulnerableLocAndPropagate(const char * vuln_fn_name = 0);
+
+    virtual AO& getEnclosingStruct() { return *this; } //- return containing struct/union
+    virtual AO& getRootAO() { return *this; } //- get the root AO object
+
+    virtual AO * derefOneLevel() { return 0; }
+
+    ExposedStatus pointsToExposed(bool limit_malloc = false, bool do_touched = false, bool do_vuln = false);
+
+    void setStaticType(TCtype& ty);	//- must consume ty
+    void setVerifyPtrType(TCtype& ty);	//- must consume ty
+    void setRequiredType(TCtype& ty);
+
+    TClatType::latKind getRequiredType() { return reqdType; }
+    virtual TCtype * getStaticType() { return staticType; }
+
+    bool dfa_relevant; //- this tag is for use by dataflow analyses to filter out
+		       //  unnecesssary AOs from dataflow facts (clients include: MBU, RAN)
+  protected:
+    AO(enum aoKind k, bool iv, bool ir, bool il, bool ic)
+	: dfa_relevant(true),
+	  kind(k),
+	  isValAO(iv),
+	  isRefAO(ir),
+	  isLibAO(il),
+	  isLocAO(ic),
+	  isAssignedAO(false),
+	  is_vuln_loc(false),
+	  is_zeroed(false),
+	  aolist(/*true*/), //- true -> on delete, AOs will be deleted
+	  tsl(TS_NONE),
+	  tsc(TSC_SAFE),
+	  assignsTo(TCassignEdge::compare),
+	  assignsFrom(TCassignEdge::compare),
+	  ecr(0),
+	  staticType(0),
+	  verifyPtrType(0),
+	  reqdType(TClatType::tclBottom) {}
+
+    AO& get_or_create_AOArg(int n);
+    AO& get_or_create_AOSDot(suco_llist<TCtype *>& l, bool delty = true); //- delete l if found
+    AO& get_or_create_AOUDot(TCtype& t, bool delty = true); //- delete t if found
+    void instantiateStructUnionMembers();	//- called by setStaticType
+
+  private:
+    AO();
+    AOlist::node ** findAO(AOlist::node ** n, aoKind k);
+    enum aoKind kind;
+    bool isValAO; //- is this AO a descendent of an AOValue abstract object?
+    bool isRefAO; //- is this AO a descendent of a dereference abstract object?
+    bool isLibAO; //- is this AO in a library function (descended from a library pid/aid)?
+    bool isLocAO; //- is this AO a location object (x, x.i, malloc, strlit)?
+		  //  NOTE: for now, arg/ret are excluded; see isLocArgRet()
+    bool isAssignedAO; //- is this AO the target of an assignment?
+    bool is_vuln_loc; //- identify vulnerable locations
+    bool is_zeroed;
+    AOlist aolist;
+    ts_level tsl;
+    ts_categ tsc;
+    suco_set<TCassignEdge *> assignsTo; //- TODO: have destructor delete edges?
+    suco_set<TCassignEdge *> assignsFrom; //- TODO: have destructor delete edges?
+    ECR * ecr;
+    TCtype * staticType;
+    TCtype * verifyPtrType;
+    TClatType::latKind reqdType;
+};
+
+//------------------------------------------------------
+
+class AOAddrOf : public AO
+{
+  public:  AOAddrOf(AO& o)
+		: AO(aoAddrOf, o.isVal(), false, o.isLib(), false),
+		  ao(o) {}
+	   void dump_descr(FILE * os);
+	   void write_string_rep(FILE * os, bool readable);
+           virtual AO& getRootAO() { return ao.getRootAO(); }
+           // virtual AO * derefOneLevel() { return 0; }
+
+	   AO& getTarget() const { return ao; }
+  private: AOAddrOf();
+	   AO& ao;
+};
+
+class AOFunction : public AO
+{
+  public:  AOFunction(AO& o)
+		: AO(aoFunction, o.isVal(), false, o.isLib(), false),
+		  ao(o), largno(0), isvarg(false) {}
+	   void dump_descr(FILE * os);
+	   void write_string_rep(FILE * os, bool readable);
+           virtual AO& getRootAO() { return ao.getRootAO(); }
+           // virtual AO * derefOneLevel() { return 0; }
+
+	   AO& getTarget() const { return ao; }
+	   void setAttributes(int larg_no, bool is_varg);
+	   int getLargNo() const { return largno; }
+	   bool isVarg() const { return isvarg; }
+  private: AOFunction();
+	   AO& ao;
+	   int largno; //- first unnamed argument; zero indicates undefined function
+	   bool isvarg; //- is var-arg function (with explicit ellipsis)
+};
+
+class AOStar : public AO
+{
+  public:  AOStar(AO& o)
+		: AO(aoStar, o.isVal(), true, o.isLib(), false),
+		  ao(o) {}
+	   void dump_descr(FILE * os);
+	   void write_string_rep(FILE * os, bool readable);
+           virtual AO& getRootAO() { return ao.getRootAO(); }
+           virtual AO * derefOneLevel() { return &this->getTarget(); }
+
+	   AO& getTarget() const { return ao; }
+  private: AOStar();
+	   AO& ao;
+};
+
+class AOExt : public AO
+{
+  public:  AOExt(AO& o, TCtype& t, TCtype& f)
+		: AO(aoExt, o.isVal(), o.isRef(), o.isLib(), false),
+		  ao(o), tty(t), fty(f) {}
+	   void dump_descr(FILE * os);
+	   void write_string_rep(FILE * os, bool readable);
+           virtual AO& getRootAO() { return ao.getRootAO(); }
+           virtual AO * derefOneLevel() { return this->getTarget().derefOneLevel(); }
+
+	   AO& getTarget() const { return ao; }
+	   TCtype& getTty() const { return tty; }
+	   TCtype& getFty() const { return fty; }
+  private: AOExt();
+	   AO& ao;
+	   TCtype& tty;
+	   TCtype& fty;
+};
+
+class AOArg : public AO
+{
+  public:  AOArg(AO& o, int n)
+		: AO(aoArg, o.isVal(), o.isRef(), o.isLib(), false),
+		  no(n), ao(o) {}
+	   void dump_descr(FILE * os);
+	   void write_string_rep(FILE * os, bool readable);
+           virtual AO& getRootAO() { return ao.getRootAO(); }
+           // virtual AO * derefOneLevel() { return 0; }
+
+	   AO& getParent() const { return ao; }
+	   int argNo() const { return no; }
+  private: AOArg();
+	   int no;
+	   AO& ao;
+};
+
+class AOId : public AO
+{
+  public:  AOId(ID& p, bool islib = false)
+		: AO(aoId, false, false, islib, true),
+		  pid(p) {}
+	   void dump_descr(FILE * os);
+	   void write_string_rep(FILE * os, bool readable);
+           // virtual AO& getRootAO() { return *this; }
+           // virtual AO * derefOneLevel() { return 0; }
+
+	   ID& getPid() const { return pid; }
+  private: AOId();
+	   ID& pid;
+};
+
+class AOStringLit : public AO
+{
+  public:  AOStringLit(ID& a, bool islib = false)
+		: AO(aoStringLit, false, false, islib, true),
+		  aid(a) {}
+	   void dump_descr(FILE * os);
+	   void write_string_rep(FILE * os, bool readable);
+           // virtual AO& getRootAO() { return *this; }
+           // virtual AO * derefOneLevel() { return 0; }
+
+  private: AOStringLit();
+	   ID& aid;
+};
+
+class AOMalloc : public AO
+{
+  public:  friend class ID;	//- to set is_alloca (yes, hackish)
+	   AOMalloc(ID& a, bool islib = false)
+		: AO(aoMalloc, false, false, islib, true),
+		  aid(a), mtype(0), msize(0), is_alloca(false) {}
+	   void dump_descr(FILE * os);
+	   void write_string_rep(FILE * os, bool readable);
+           // virtual AO& getRootAO() { return *this; }
+           // virtual AO * derefOneLevel() { return 0; }
+
+	   void meetMallocStaticType(TCtype * ty, unsigned int size);
+	   TCtype * getMallocType() const { return mtype; }
+	   unsigned int getMallocSize() const { return msize; }
+	   bool isAlloca() const { return is_alloca; }
+
+  private: AOMalloc();
+	   ID& aid;
+	   TCtype * mtype;
+	   unsigned msize;
+	   bool is_alloca;
+};
+
+class AOOp : public AO
+{
+  public:  AOOp(AO& o, TCtype& t)
+		: AO(aoOp, o.isVal(), o.isRef(), o.isLib(), false),
+		  ao(o), ty(t) {}
+	   void dump_descr(FILE * os);
+	   void write_string_rep(FILE * os, bool readable);
+           virtual AO& getRootAO() { return ao.getRootAO(); }
+           virtual AO * derefOneLevel() { return this->getTarget().derefOneLevel(); }
+
+	   AO& getTarget() const { return ao; }
+	   TCtype& getTy() const { return ty; }
+  private: AOOp();
+	   AO& ao;
+	   TCtype& ty;
+};
+
+class AOReturn : public AO
+{
+  public:  AOReturn(AO& o)
+		: AO(aoReturn, o.isVal(), o.isRef(), o.isLib(), false),
+		  ao(o) {}
+	   void dump_descr(FILE * os);
+	   void write_string_rep(FILE * os, bool readable);
+           virtual AO& getRootAO() { return ao.getRootAO(); }
+           // virtual AO * derefOneLevel() { return 0; }
+
+	   virtual TCtype * getStaticType();
+
+	   AO& getParent() const { return ao; }
+  private: AOReturn();
+	   AO& ao;
+};
+
+class AOSDot : public AO
+{
+  public:  AOSDot(AO& o, suco_llist<TCtype *>& l)
+		: AO(aoSDot, o.isVal(), o.isRef(), o.isLib(), o.isLoc()),
+		  ao(o), tylist(l) {}
+	   void dump_descr(FILE * os);
+	   void write_string_rep(FILE * os, bool readable);
+           virtual AO& getEnclosingStruct() { return this->ao.getEnclosingStruct(); }
+           virtual AO& getRootAO() { return ao.getRootAO(); }
+           virtual AO * derefOneLevel() { return this->getParent().derefOneLevel(); }
+
+	   TCtype * getStaticType() { return getTyList().Last(); }
+
+	   AO& normalize()		//- normalize struct first member
+		{ return (tylist.IsEmpty()) ? ao.normalize() : *this; }
+	   suco_llist<TCtype *>& getTyList() const { return tylist; }
+	   AO& getParent() const { return ao; }
+  private: AOSDot();
+	   AO& ao;
+	   suco_llist<TCtype *>& tylist;
+};
+
+class AOUDot : public AO
+{
+  public:  AOUDot(AO& o, TCtype& t)
+		: AO(aoUDot, o.isVal(), o.isRef(), o.isLib(), o.isLoc()),
+		  ao(o), ty(t) {}
+	   void dump_descr(FILE * os);
+	   void write_string_rep(FILE * os, bool readable);
+           virtual AO& getRootAO() { return ao.getRootAO(); }
+           virtual AO& getEnclosingStruct() { return this->ao.getEnclosingStruct(); }
+	   TCtype * getStaticType() { return &getTy(); }
+           virtual AO * derefOneLevel() { return this->getParent().derefOneLevel(); }
+
+	   AO& normalize() { return ao.normalize(); }	//- normalize union members
+	   TCtype& getTy() const { return ty; }
+	   AO& getParent() const { return ao; }
+  private: AOUDot();
+	   AO& ao;
+	   TCtype& ty;
+};
+
+class AOValue : public AO
+{
+  public:  AOValue(TCtype& t)
+		: AO(aoValue, true, false, false, false),
+		  ty(t) {}
+	   void dump_descr(FILE * os);
+	   void write_string_rep(FILE * os, bool readable);
+           // virtual AO& getRootAO() { return *this; }
+           // virtual AO * derefOneLevel() { return 0; }
+
+	   TCtype& getTy() const { return ty; }
+  private: AOValue();
+	   TCtype& ty;
+};
+
+//------------------------------------------------------
+
+#endif /* } ifdef TC_AO_H */
+@
+
+
+1.72
+log
+@ADDED evaluation of each library function call to determine
+if its target (where relevant) is exposed -- this will mainly
+be used in -vulnw mode to remove instrumentation when a
+function's target is exposed (needed to avoid false positive).
+Eventually, it may also be used in -ptr/ptrw mode to remove
+instrumentation when a library function's target is not
+exposed -- though currently this never happens because of
+context-insensitive analysis and overly-conservative models.
+SUPPLEMENTAL CHANGES to achieve the above:
+ 1. Created ExposedStatus class in ao.cpp/ao.h (was previously
+    an enum in AO class)
+ 2. Changed PExprcall::isDirectCall() to return the ID of the
+    direct call, rather than just a bool.
+ 3. Exported "flag_readwrite" to become a global -- it's about
+    time (I'd been misguidedly trying to avoid this for far
+    too long, creating a bigger mess instead)
+@
+text
+@d104 1
+d153 1
+d184 1
+d211 1
+@
+
+
+1.71
+log
+@Augmented to handle ALLOCA:
+(solution is hackish at best)
+- added is_alloca flag to AOMalloc object.
+  HOWEVER, this is set only by flow_sensitive
+  PgmExpr/MallocDecl case!
+- a second channel of information comes from
+  the (long-forgotten) "stclass" field of ID.
+  (This is the bit used in -ptr-heapstack mode)
+@
+text
+@d42 20
+d63 1
+d161 1
+a161 3
+    enum exposed_status { esAll, esSome, esNone, esNA };
+    static char exposedCode(exposed_status es);
+    exposed_status pointsToExposed(bool limit_malloc = false, bool do_touched = false, bool do_vuln = false);
+@
+
+
+1.70
+log
+@Added "/V" output (freearg status for vuln mode).
+Entailed hackishly modifying ECR::inclToExposed().
+@
+text
+@d319 2
+a320 1
+  public:  AOMalloc(ID& a, bool islib = false)
+d322 1
+a322 1
+		  aid(a), mtype(0), msize(0) {}
+d331 1
+d337 1
+@
+
+
+1.69
+log
+@MAJOR ADDITION: added -vuln mode computations to output
+1. vulnerable locations (function pointers and first
+   arguments to exec,system,longjmp,...)
+2. vulnerable dereferences (any Ref ao that may point
+   to a vulnerable location)
+@
+text
+@d142 1
+a142 1
+    exposed_status pointsToExposed(bool limit_malloc = false, bool do_touched = false);
+@
+
+
+1.68
+log
+@Moved derefOneLevel() from ExpDescr to AO class.
+@
+text
+@a76 1
+
+d78 1
+d130 1
+d133 2
+d162 1
+d188 1
+@
+
+
+1.67
+log
+@Added assignsFrom member, as needed to compute relevant aos.
+@
+text
+@a116 1
+
+d135 2
+d205 1
+d220 1
+d240 1
+d255 1
+d274 1
+d291 1
+d306 1
+d320 1
+d340 1
+d357 1
+d375 1
+d398 1
+d416 1
+@
+
+
+1.66
+log
+@Towards relevant-aos support for RAN analysis:
+1. tca.cpp: fixed bug in markStartingPoints;
+2. ao.cpp: changed constructor to set dfa_relevant
+   tag to true by default;
+3. ran.cpp: RAN analysis now keeps track of ranges
+   only for dfa_relevant-tagged AOs!
+(I.e., w/o relevant-aos flag, all AOs are marked
+ dfa-relevant=true by default).
+@
+text
+@d122 2
+a123 1
+    suco_set<TCassignEdge *>& getAssignEdges() { return assignsTo; }
+d162 1
+d187 1
+@
+
+
+1.65
+log
+@More work towards filtering relevant AOs:
+ - Added flag -relevant-aos
+ - AO added "dfa_relevant" bit for each AO
+ - ECR added "collectInclFromECRs() helper that's
+   needed when collecting relevant aos
+ - TCA added a bunch of helpers:
+   - markRelevantLocs() which calls
+     1. clearRelevantTags() on each AO, to clear
+        the dfa_relevant tags
+     2. markStartingPoints(), which walks the
+        assignment edges (in the CFG!) to populate
+        the initial set of aos (based on readwrite
+        flag and whether we want to mark safe AOs
+        (for MBU) or unsafe ones (for RAN)).
+     3. propagate along (flow-insensitive) assign
+        edges.
+@
+text
+@d146 1
+a146 1
+    bool dfa_relevant; //- this tag is for use by dataflow analyses to filter in/out
+d150 1
+a150 1
+	: dfa_relevant(false),
+@
+
+
+1.64
+log
+@FIXED VARARG HANDLING:
+- to be compliant with new "finalizeECR" phase change
+  model, I had to change AO::get_AOArg to possibly
+  return null, and create new AO::get_or_create_AOArg
+  for early use to construct AOArg objects as needed.
+- the above change required more careful handling
+  (in ran.cpp) of function call argument passing:
+  specifically, at callsite fp(i,j,n) where fp
+  points to foo(i), there will be only two AOArg
+  objects created for foo (F X I foo i and l where
+  l is "last argno/largno"), so we will do:
+  - strong assign for actuals up to largno:
+    F X I foo i <=strong= actual(i)
+    F X I foo l <=strong= actual(j)
+  - weak assign for actuals beyond that point:
+    F X I foo l <=weak= actual(n)
+  Note that this nicely handles varargs, where
+  the ellipsis maps to largno.
+@
+text
+@d122 1
+d146 2
+d150 2
+a151 1
+	: kind(k),
+@
+
+
+1.63
+log
+@Changed AO/ECR relationship: added AO::getECR() function
+that is to be called after pt-analysis finalization of
+ECRs -- so, PRIOR to finalization, must use ECR::getECR()
+(as is now done in pta.cpp), but AFTER, must only use
+AO::getECR() which outputs a fatal error message if ECR
+not found.
+@
+text
+@a108 1
+    AO& get_AOArg(int n);
+d111 1
+d162 5
+a184 4
+
+    AO& get_or_create_AOSDot(suco_llist<TCtype *>& l, bool delty = true); //- delete l if found
+    AO& get_or_create_AOUDot(TCtype& t, bool delty = true); //- delete t if found
+    void instantiateStructUnionMembers();	//- called by setStaticType
+d213 1
+a213 1
+	   void setAttributes(int no, bool isv) { largno = no; isvarg = isv; }
+@
+
+
+1.62
+log
+@Fixed memory leak in setStaticType and setVerifyPtrType.
+@
+text
+@d93 4
+a96 2
+    static void assignEcrNos(AO& ao);
+    int getEcrNo();
+a133 1
+    bool hasECR() const { return (ecr != 0); }
+@
+
+
+1.61
+log
+@AO: removed isPartOf(), replaced with getEnclosingStruct()
+which returns the outermost non-S/U-dotted AO.
+
+RAN: added removeArgIntervalsExceptFor() and
+removeRetIntervalsExcept(), which are used to
+clean up AOArg and AOReturn objects that would
+otherwise be unnecessarily propagated around.
+
+RAN: changed reconstitute so that if there is
+a clash, take the rf_local version rather than
+the default (previous) incoming-df version.
+@
+text
+@d137 2
+a138 2
+    void setStaticType(TCtype& ty);
+    void setVerifyPtrType(TCtype& ty);
+@
+
+
+1.60
+log
+@Added Malloc arg-evaluation mechanism:
+
+- RAN: added evalSizeOfExpr() and evalMallocSize();
+- AOMalloc: added mtype/msize members, and meetMallocStaticType()
+  function to set those at each MallocDecl node;
+- Interval::setTgt now checks for AOMalloc, and uses its
+  mtype/msize members to set tgt_ty/tgt_numelts;
+- Interval addedisNullTgted() helper;
+@
+text
+@d129 1
+a129 1
+    virtual bool isPartOf(AO& ao) const { return (this == &ao); } //- is this part of ao? i.e., (this==ao || this==ao._)
+d353 1
+a354 1
+           virtual bool isPartOf(AO& ao) const { return (this == &ao) || (this->ao.isPartOf(ao)); }
+d375 1
+a375 1
+           virtual bool isPartOf(AO& ao) const { return (this == &ao) || (this->ao.isPartOf(ao)); }
+@
+
+
+1.59
+log
+@Semi-bug fix: remember that function return node is
+represented by R F I <fn> not R I <fn>, which was
+not the case, so I've fixed it throughout (occurs
+mainly in handleReturnStmt() in the various analyses).
+
+Also, added AOReturn::getStaticType() as a separate
+function to look up the underlying function's return
+type if staticType is not set;
+added TCfunctionType::getReturnType() accessor to
+assist.
+@
+text
+@d299 1
+a299 1
+		  aid(a) {}
+d304 4
+d310 2
+@
+
+
+1.58
+log
+@Changed the whole AO::get_AO[SU]Dot mechanism -- now
+split into two sets of functions:
+ - get_or_create_AO[SU]Dot() is AO-protected, and is
+   called to get, or create if not found, and follows
+   the old semantics of get_AO[SU]Dot (deleting the
+   type if found, etc).
+ - get_AO[SU]Dot() not returns a pointer, and returns
+   null if not found.
+
+So now, interval calls the public version which may
+return null; cascadingly, Interval::adjustStructOffset
+no longer consumes tylist -- the consumption is now
+taken care of by the RAN callsites.
+@
+text
+@d109 1
+a109 1
+    AO& get_AOReturn();
+d332 2
+@
+
+
+1.57
+log
+@Changed behavior of AO::setStaticType() so that if the
+type is a struct or union or array of (array of) struct
+or union, then instantiate all constituent AOSDot/AOUDot
+members, as they will all be used for struct assignments
+(in RAN analysis, at least).
+Entailed addition of instantiateStructUnionMembers helper
+function.
+
+Also, modified get_AOSDot() and get_AOUDot() to take a
+flag indicating whether the type/typelist passed in as
+argument should be deleted on failure.
+@
+text
+@d110 2
+a111 2
+    AO& get_AOSDot(suco_llist<TCtype *>& l, bool delty = true); //- delete l if found
+    AO& get_AOUDot(TCtype& t, bool delty = true); //- delete t if found
+d180 2
+@
+
+
+1.56
+log
+@Added mechanism to report static RAN-count of
+direct-array accesses (all, and in-bounds only).
+Entailed adding AO::isDirectArrayAccess() helper
+funciton; a couple of counting helpers in
+RANcFactHandler, and a place to store the
+results in TCAstate.
+@
+text
+@d110 2
+a111 2
+    AO& get_AOSDot(suco_llist<TCtype *>& l); //- delete l if found
+    AO& get_AOUDot(TCtype& t); //- delete t if found
+d179 2
+@
+
+
+1.55
+log
+@Added getRootAO() function, used by Interval::cond_intersect.
+@
+text
+@d127 1
+@
+
+
+1.54
+log
+@Changed AO::write_string_rep and write_list_string_rep
+to take a "readable" flag.
+So now, flag_readable_output only affects the parts intended
+for machine-reading by sml; the other auxiliary output
+(e.g. via debug_dump, or for longjmp targets) will be
+always readable.
+@
+text
+@d129 1
+d189 2
+d203 2
+d222 2
+d236 2
+d254 2
+d270 2
+d284 2
+d297 2
+d310 2
+d326 2
+d340 1
+a340 1
+
+d361 2
+a364 2
+           virtual bool isPartOf(AO& ao) const { return (this == &ao) || (this->ao.isPartOf(ao)); }
+
+d380 1
+@
+
+
+1.53
+log
+@Minor bug fix(es):
+ 1. Interval::ptrs_minus()
+    Need to account for has_zero -- if either argument
+    has zero, return bottom.
+ 2. RANfactHandled::handleDecl()
+    When declaring x, need to remove both
+    1. fact for x, and
+    2. facts whose interval target ao is x
+    because of new scope/aliasing potential.
+    (Entailed introduction of helpers in many
+    classes, including AO.)
+Note: 2 is the clean solution, but appears to be
+technically unnecessary with context-insensitive
+analysis, since any recursive loop (for which the
+new scope/aliasing problem arises) must have an
+external in-edge which should bottom out any facts
+affecting x.
+@
+text
+@d89 2
+a90 2
+    virtual void write_string_rep(FILE * os);
+    static void write_list_string_rep(FILE * os, suco_llist<AO *>& set);
+d187 1
+a187 1
+	   void write_string_rep(FILE * os);
+d199 1
+a199 1
+	   void write_string_rep(FILE * os);
+d216 1
+a216 1
+	   void write_string_rep(FILE * os);
+d228 1
+a228 1
+	   void write_string_rep(FILE * os);
+d244 1
+a244 1
+	   void write_string_rep(FILE * os);
+d258 1
+a258 1
+	   void write_string_rep(FILE * os);
+d270 1
+a270 1
+	   void write_string_rep(FILE * os);
+d281 1
+a281 1
+	   void write_string_rep(FILE * os);
+d292 1
+a292 1
+	   void write_string_rep(FILE * os);
+d306 1
+a306 1
+	   void write_string_rep(FILE * os);
+d318 1
+a318 1
+	   void write_string_rep(FILE * os);
+d339 1
+a339 1
+	   void write_string_rep(FILE * os);
+d358 1
+a358 1
+	   void write_string_rep(FILE * os);
+@
+
+
+1.52
+log
+@Semimajor change: eliminated TCtypeList class; replaced
+with suco_llist<TCtype *>.
+The only semantic change is that destruction is not
+recursive, so a lot of leakage is likely.
+(Next change: devise a single-representative storage?
+)
+@
+text
+@d128 2
+d320 2
+d341 2
+@
+
+
+1.51
+log
+@Changed AO::getStaticType() to a virtual function, so that
+for SDot it'll return tylist.tail, and for UDot, it'll
+return the type.
+Entailed adding TCtypeList::tail() function.
+
+Note: UDot version not currently used (because UDots are
+normalized by RAN/Interval).
+@
+text
+@d110 1
+a110 1
+    AO& get_AOSDot(TCtypeList& l); //- delete l if found
+d312 1
+a312 1
+  public:  AOSDot(AO& o, TCtypeList& l)
+d318 1
+a318 1
+	   TCtype * getStaticType() { return getTyList().tail(); }
+d321 2
+a322 2
+		{ return (tylist.isEmpty()) ? ao.normalize() : *this; }
+	   TCtypeList& getTyList() const { return tylist; }
+d326 1
+a326 1
+	   TCtypeList& tylist;
+@
+
+
+1.50
+log
+@Deleted obsolete function lvalType()
+-- can't remember now what it was used for.
+@
+text
+@d138 1
+a138 1
+    TCtype * getStaticType() const { return staticType; }
+d317 3
+d336 2
+d353 1
+@
+
+
+1.49
+log
+@REMOVED:
+ - eltype/numelts components of aoMalloc -- new implementation
+        now uses setStaticType mechanism to convey this information,
+        which is a  better solution that this previous unclean
+        approach
+   - note that as a result, Interval::setTgt() is now greatly
+        simplified, since all objects (from array aoIds to
+        aoMallocs to aoStringLits can now be treated uniformly
+        by just getting info from the staticType).
+FIXED:
+ - in CFG::read, I previously had a filter to make sure the
+        globnodes (initializer nodes) are either mStaticDecl
+        or mAssign; but with change to initializer behavior
+        that PARALLEL-izes aggregate initializations, this
+        constraint no longer makes sense; in fact I just
+        removed the filter altogether, so that globnodes can
+        now contain _any_ kind of PgmExpr.
+@
+text
+@a132 2
+    TCtype& lvalType(); //- computes lval-type, tcZero or tcVoid if invalid
+
+@
+
+
+1.48
+log
+@1. Changed AOMalloc representation to include <eltype, numelts>
+   (previously had single <size> field)
+2. Changed Interval to store <eltype, numelts> rather than AO
+   as "target" field: potentially allows for "smarter" range
+   analysis per Susan's suggestion.
+(Added runtime flag -ran-[no-]malloc to turn on/off handling
+ of malloc objects, now on by default)
+TODO: account for elty in Interval::plus/minus (added signature,
+      but not yet implemented)
+@
+text
+@d277 1
+a277 2
+  public:  friend class ID;  //- to access eltype,numelts
+	   AOMalloc(ID& a, TCtype * elty = 0, int nelts = 0, bool islib = false)
+d279 1
+a279 1
+		  aid(a), eltype(elty), numelts(nelts) {}
+a281 2
+	   TCtype * getElType() const { return eltype; }
+	   int getNumElts() const { return numelts; }
+a283 2
+	   TCtype * eltype;
+	   int numelts;
+@
+
+
+1.47
+log
+@Added AO::normalize, to normalize union members and struct
+first members to a normal representative (the outermost
+object).  This might eventually be useful for extending
+points-to analysis to handle structs.
+For now, it's used by Interval, to normalize the ao
+representative.  This improves the precision in the
+benchmark _vortex_ which has (had) many instances of
+mismatched AOs due to one being an outermost struct
+and the other being a first-member of a struct.
+@
+text
+@d277 2
+a278 2
+  public:  friend class ID;  //- to access size
+	   AOMalloc(ID& a, int s = 0, bool islib = false)
+d280 1
+a280 1
+		  aid(a), size(s) {}
+d283 2
+d287 2
+a288 1
+	   int size;
+@
+
+
+1.46
+log
+@Augmented malloc declaration to include size component, which is a result
+of trying to compute a constant size from the expression.
+NOTE: there's some trouble with determining the value of sizeof, so for now
+**sizeof expressions are evaluated to the value -1** as an indicator for
+diagnostic purposes.  IOW, the malloc-size value currently generated SHOULD
+NOT BE USED DIRECTLY (should be safe anyways, as long as we're conscious
+that a negative size means something is amiss).
+
+The size is currently stored in AOMalloc objects, but not yet used.
+@
+text
+@d113 3
+d321 2
+d337 1
+@
+
+
+1.45
+log
+@1. Adjustment to "_" (untouched exposed aos) behavior: reports only
+   one status, rather than a separate status for ptr/ptrw as was done
+   before.  This is because the tsl analysis is already dependent on
+   ptr/ptrw-ness, so it makes no sense to report both when doing one
+   particular analysis.
+   Involved change to ECR class definition (used to have two booleans
+   touched_ptr/touched_ptrw; now just one).
+
+2. Updated "/" (freearg) to account for untouched-ness: by adding
+   a flag to AO::pointsToExposed/ECR::inclToExposed saying whether
+   or not to check the touched flag.
+@
+text
+@d274 2
+a275 1
+  public:  AOMalloc(ID& a, bool islib = false)
+d277 1
+a277 1
+		  aid(a) {}
+d282 1
+@
+
+
+1.44
+log
+@1. Added code to find untouched exposed locations (so they
+   can be unexposed/untracked):
+   - in ECR, added members touched_ptr, touched_ptrw
+   - in RANc(FactHandler), for each Verify, touch the
+     affected ECRs
+   - at the end, traverse all AOs, and for each EXPOSED
+     ao that's untouched, output a "_ [T|U] [T|U] <O>"
+     line (T=touched, U=untouched; 1st=ptr, 2nd=ptrw).
+   - (sml code has concurrently been modified to read
+     those lines and treat <O> as SAFE when untouched)
+2. Behavioral change: -cde-incl and -cde-pt are now
+   on by default!
+@
+text
+@d128 1
+a128 1
+    exposed_status pointsToExposed(bool limit_malloc = false);
+@
+
+
+1.43
+log
+@Gave the code the -Wall treatment: adjusted things to
+get rid of warnings:
+ - reordered initializers to match declaration order
+ - made some destructors virtual (note that for many
+   classes with no explicit destructors, I did not
+   add explicit virtual destructors, so -Wall warnings
+   remain)
+ - made some signed/unsigned casts
+ - made some pointer/unsigned int casts for printfs
+ - filled in unaccounted-for cases in switch statements
+@
+text
+@d78 2
+@
+
+
+1.42
+log
+@Added -cde-incl and -cde-pt flags -- only the latter
+has been implemented: in ECR::includesTo, check for
+cycle, and collapse these ECRs; also, remove redundant
+inclTo/inclFrom edges as a result of the collapse.
+Also, the output for -pta mode has been modified to
+be more a summary, to allow better comparison between differnet
+versions.
+@
+text
+@d237 1
+a237 1
+		  ao(o), no(n) {}
+@
+
+
+1.41
+log
+@Changed affloc from a set to a list -- this is because
+of the change in estr representation, with IDs represented
+by a placeholder "V" (no more "V(#)"), and the affloc list
+storing the aoIds in "V" left-to-right order!
+Note -- made some hack-ish adjustments to some ao functions
+to avoid repetition by multiplexing between set and list
+mode -- kinda ugly, though!
+@
+text
+@a82 1
+    static bool writeAO(AO& ao);
+@
+
+
+1.40
+log
+@Added helper function isLocArgRet, not currently used,
+but may be needed soon?
+@
+text
+@d89 1
+a89 1
+    static void write_set_string_rep(FILE * os, suco_set<AO *>& set);
+d98 2
+a99 2
+    static suco_set<AO *>& stringToAOset(char * str, char ** nptr,
+				IDmap& aidmap, IDmap& pidmap, AOlist& valueAOs);
+@
+
+
+1.39
+log
+@Suco change (major):
+ 1. Added new file suco_usage.cpp as a hack to instantiate
+    the suco code only once, rather than once-per-file as
+    before.
+ 2. Suco now has node-recycling mechanism in place, which
+    seems to help with rtca performance.
+@
+text
+@d121 1
+a121 1
+					   //  NOTE: for now, arg/ret are excluded.
+d163 1
+a163 1
+		  //  NOTE: for now, arg/ret are excluded.
+@
+
+
+1.38
+log
+@CFG: wrote MBUfacts test for intersection between a MBUfact
+and an AOset's alias set (done using ECR::traverseAliases).
+Cascaded changes to AO/ECR include:
+1. AO::ts_categ is now explicitly enumerated to allow >=
+   comparison
+2. ECR::traverseAliases now takes bool functions, and
+   returns a bool, true if all applications return true,
+   and false if *any* application returns false (and also
+   halts traversal -- this is an optimization for the
+   intersection check added: once an intersection is found,
+   no further traversal is needed).
+@
+text
+@a10 1
+#include "suco.cpp"
+@
+
+
+1.37
+log
+@Added isLoc() field to AOs.
+@
+text
+@d67 5
+a71 1
+    enum ts_categ { TSC_POSS_INVALID, TSC_BADLY_TYPED, TSC_INFLUENTIAL, TSC_EXPOSED, TSC_SAFE };
+d75 1
+d84 1
+a84 1
+    static void writeAO(AO& ao);
+@
+
+
+1.36
+log
+@Reduced scope of AOlist class: this is only to be used
+specially within the AO tree to look up AOs.
+All other occurrences (in ecr, cfg, etc) have been converted
+to use suco_set<AO *>.
+Should be no change in behavior.
+@
+text
+@d116 2
+a117 1
+//    bool isLoc() const { return isLocAO; } //- is AO a location object (x, x.i, malloc, strlit, arg/ret)?
+d135 1
+a135 1
+    AO(enum aoKind k, bool iv, bool ir, bool il)
+d140 1
+d158 2
+d175 3
+a177 1
+  public:  AOAddrOf(AO& o) : AO(aoAddrOf, o.isVal(), false, o.isLib()), ao(o) {}
+d187 3
+a189 2
+  public:  AOFunction(AO& o) : AO(aoFunction, o.isVal(), false, o.isLib()),
+			       ao(o), largno(0), isvarg(false) {}
+d204 3
+a206 1
+  public:  AOStar(AO& o) : AO(aoStar, o.isVal(), true, o.isLib()), ao(o) {}
+d217 2
+a218 1
+		: AO(aoExt, o.isVal(), o.isRef(), o.isLib()), ao(o), tty(t), fty(f) {}
+d232 3
+a234 1
+  public:  AOArg(AO& o, int n) : AO(aoArg, o.isVal(), o.isRef(), o.isLib()), ao(o), no(n) {}
+d246 3
+a248 1
+  public:  AOId(ID& p, bool islib = false) : AO(aoId, false, false, islib), pid(p) {}
+d258 3
+a260 1
+  public:  AOStringLit(ID& a, bool islib = false) : AO(aoStringLit, false, false, islib), aid(a) {}
+d269 3
+a271 1
+  public:  AOMalloc(ID& a, bool islib = false) : AO(aoMalloc, false, false, islib), aid(a) {}
+d280 3
+a282 1
+  public:  AOOp(AO& o, TCtype& t) : AO(aoOp, o.isVal(), o.isRef(), o.isLib()), ao(o), ty(t) {}
+d294 3
+a296 1
+  public:  AOReturn(AO& o) : AO(aoReturn, o.isVal(), o.isRef(), o.isLib()), ao(o) {}
+d306 3
+a308 1
+  public:  AOSDot(AO& o, TCtypeList& l) : AO(aoSDot, o.isVal(), o.isRef(), o.isLib()), ao(o), tylist(l) {}
+d320 3
+a322 1
+  public:  AOUDot(AO& o, TCtype& t) : AO(aoUDot, o.isVal(), o.isRef(), o.isLib()), ao(o), ty(t) {}
+d334 3
+a336 1
+  public:  AOValue(TCtype& t) : AO(aoValue, true, false, false), ty(t) {}
+@
+
+
+1.35
+log
+@Augmented cfg DFfacts with references to AOs;
+the respective read functions call AO::stringToAOs,
+which requires the pidmap and aidmap arguments from tca,
+so a new class InputState was created (in tca.h) to
+pass these around conveniently.
+Also, added another helper function AO::stringToAOlist
+to read in lists of AOs, separated by ',', terminated by
+'.'.
+@
+text
+@a18 1
+    friend class AOlistIterator;
+d20 1
+a20 1
+    AOlist(bool del_ao = false) : head(0), delete_ao(del_ao) {}
+a24 1
+    void write_string_rep(FILE * os);
+a29 6
+    //- These used in ECR lists
+    void insert(AO& ao);
+    void remove(AO& ao);
+    void concatenate(AOlist& list); //- clears list
+    bool isEmpty() const { return (head==0); }
+
+a39 17
+    bool delete_ao; //- delete AOs when cleaning up?
+};
+
+//------------------------------------------------------
+
+class AOlistIterator
+{
+  public:
+    AOlistIterator(AOlist& l): list(l), nptr(l.head), initial(true) {}
+    void reset() { nptr = list.head; initial = true; }
+    bool iterate();
+    AO * current();
+  private:
+    AOlistIterator();
+    AOlist& list;
+    AOlist::node * nptr;
+    bool initial;
+d85 1
+d94 1
+a94 1
+    static AOlist& stringToAOlist(char * str, char ** nptr,
+d140 1
+a140 1
+	  aolist(true), //- true -> on delete, AOs will be deleted
+@
+
+
+1.34
+log
+@Added freearg handling: for each assignment to the first
+argument of free, check to see if the argument points to
+none, some, or all exposed objects -- with current implementation
+it is sufficient to check the exposed flag of the corresponding
+ECR objects (but must still follow inclTo edges).
+Note -- attributes for two policies are computed, one considering
+all AOs, another considering only Malloc AOs. The latter is unsafe
+(but "usually safe", one would hope), but likely more efficient.
+Output is "/ A M O" where A is the status for all AOs, M for malloc
+AOs only, and O the AO in question.
+@
+text
+@d26 1
+d116 4
+a119 1
+			IDmap& aidmap, IDmap& pidmap, AOlist& valueAOs);
+@
+
+
+1.33
+log
+@Normalized vargs/largno/islib:
+1. Directive from instr-ast is now 'f' for defined function,
+   and 'v' for vararg function.
+2. library functions are now processed in rtca/id.cpp, which
+   recognized (and strips out) the _rtclib_ prefix; the islib
+   property is propagated to children AOs as they are created.
+3. stat counters and the undef-fn output both now filter out
+   isLib objects.
+@
+text
+@d140 3
+@
+
+
+1.32
+log
+@Removed aoArray object.
+@
+text
+@a132 3
+    void setVargNo(int no) { vargno = no; }
+    int getVargNo() const { return vargno; }
+
+d135 1
+d151 1
+a151 1
+    AO(enum aoKind k, bool iv, bool ir)
+d155 1
+a157 1
+	  vargno(0),
+d172 1
+a174 1
+    int vargno;
+d188 1
+a188 1
+  public:  AOAddrOf(AO& o) : AO(aoAddrOf, o.isVal(), false), ao(o) {}
+d198 2
+a199 2
+  public:  AOFunction(AO& o) : AO(aoFunction, o.isVal(), false),
+			       ao(o), largno(0) {}
+d203 1
+a203 1
+	   void setLargNo(int no) { largno = no; }
+d205 1
+d208 2
+a209 1
+	   int largno;
+d214 1
+a214 1
+  public:  AOStar(AO& o) : AO(aoStar, o.isVal(), true), ao(o) {}
+d225 1
+a225 1
+		: AO(aoExt, o.isVal(), o.isRef()), ao(o), tty(t), fty(f) {}
+d239 1
+a239 1
+  public:  AOArg(AO& o, int n) : AO(aoArg, o.isVal(), o.isRef()), ao(o), no(n) {}
+d251 1
+a251 1
+  public:  AOId(ID& p) : AO(aoId, false, false), pid(p) {}
+d261 1
+a261 1
+  public:  AOStringLit(ID& a) : AO(aoStringLit, false, false), aid(a) {}
+d270 1
+a270 1
+  public:  AOMalloc(ID& a) : AO(aoMalloc, false, false), aid(a) {}
+d279 1
+a279 1
+  public:  AOOp(AO& o, TCtype& t) : AO(aoOp, o.isVal(), o.isRef()), ao(o), ty(t) {}
+d291 1
+a291 1
+  public:  AOReturn(AO& o) : AO(aoReturn, o.isVal(), o.isRef()), ao(o) {}
+d301 1
+a301 1
+  public:  AOSDot(AO& o, TCtypeList& l) : AO(aoSDot, o.isVal(), o.isRef()), ao(o), tylist(l) {}
+d313 1
+a313 1
+  public:  AOUDot(AO& o, TCtype& t) : AO(aoUDot, o.isVal(), o.isRef()), ao(o), ty(t) {}
+d325 1
+a325 1
+  public:  AOValue(TCtype& t) : AO(aoValue, true, false), ty(t) {}
+@
+
+
+1.31
+log
+@Added mechanism to collect stats about safe/unsafe tracked/untracked
+pointer/fnptr/ptrs-in-structs/locations; involved various new additions
+(including 'f' defined-function directive from instr-ast.sml)
+@
+text
+@d75 1
+a75 1
+	 aoArray, aoFunction
+a118 1
+    AO& get_AOArray();
+a194 10
+	   AO& ao;
+};
+
+class AOArray : public AO
+{
+  public:  AOArray(AO& o) : AO(aoArray, o.isVal(), false), ao(o) {}
+	   void dump_descr(FILE * os);
+	   void write_string_rep(FILE * os);
+	   AO& getTarget() const { return ao; }
+  private: AOArray();
+@
+
+
+1.30
+log
+@Wrote -ptrw version, which only propagates exposed and
+influential from assigned-to invalid AOs.
+@
+text
+@d117 1
+a121 1
+    AO * find_AOStar();
+d130 1
+d142 2
+d211 2
+a212 1
+  public:  AOFunction(AO& o) : AO(aoFunction, o.isVal(), false), ao(o) {}
+d215 3
+d220 1
+d265 1
+@
+
+
+1.29
+log
+@Added vargno handling:
+Each AO now has a vargno argument, which if nonzero indicates
+a vararg function. This is set by the new "v" directive from
+tc-assign. When an AO has a non-zero vargno, we merge the ECRs
+of all argret nodes from vargno up to maxnargs.
+NOTE: may want to reimplement better: make vargno an argument
+of only aoFunction...
+@
+text
+@d139 1
+d155 1
+d172 1
+@
+
+
+1.28
+log
+@Major Revision: include ECR number and incl-to edges in output.
+@
+text
+@d15 2
+a16 1
+class AOlist {
+d52 2
+a53 1
+class AOlistIterator{
+d68 2
+a69 1
+class AO {
+d133 3
+d155 1
+d171 1
+@
+
+
+1.27
+log
+@Added Type-safety Category assignment.
+(major change).
+Appears working, tested on gcc, verified on small examples,
+not thoroughly verified.
+Also, added -readable flag.
+@
+text
+@d108 3
+@
+
+
+1.26
+log
+@Added setting of required-types:
+ - file interface now delivers two kinds of assignment edges:
+   "true" ('=') and "pseudo" ('-'), the latter for function
+   and array object assignments as well as void return assignments.
+ - added to AO reqdType member, which is just an enum;
+   modified TClatType meet/join functions to work directly on
+   enums;
+The setting of required types is done:
+ 1. on file input, for each typed-true-assignment and verify-tag
+ 2. during arg/ret assignment adding
+Finally, AO's debug_dump function has been modified to supply
+more diagnostic information; this entailed the renaming of
+the virtual portion of the function to dump_descr.
+@
+text
+@d75 2
+d84 13
+a100 1
+    static void writeTSlevel(AO& ao);
+d137 1
+d147 1
+d162 1
+@
+
+
+1.25
+log
+@Added routine to mark dereference nodes.
+@
+text
+@d89 2
+a90 1
+    virtual void debug_dump(FILE * os);
+a119 1
+    void setVerifyTagType(TCtype& ty);
+d121 1
+d135 2
+a136 2
+	  verifyTagType(0),
+	  verifyPtrType(0) {}
+a148 1
+    TCtype * verifyTagType;
+d150 1
+d158 1
+a158 1
+	   void debug_dump(FILE * os);
+d168 1
+a168 1
+	   void debug_dump(FILE * os);
+d178 1
+a178 1
+	   void debug_dump(FILE * os);
+d187 1
+a187 1
+	   void debug_dump(FILE * os);
+d198 1
+a198 1
+	   void debug_dump(FILE * os);
+d212 1
+a212 1
+	   void debug_dump(FILE * os);
+d224 1
+a224 1
+	   void debug_dump(FILE * os);
+d233 1
+a233 1
+	   void debug_dump(FILE * os);
+d242 1
+a242 1
+	   void debug_dump(FILE * os);
+d251 1
+a251 1
+	   void debug_dump(FILE * os);
+d263 1
+a263 1
+	   void debug_dump(FILE * os);
+d273 1
+a273 1
+	   void debug_dump(FILE * os);
+d285 1
+a285 1
+	   void debug_dump(FILE * os);
+d297 1
+a297 1
+	   void debug_dump(FILE * os);
+@
+
+
+1.24
+log
+@Renamed TCassignEdge::edgeCompare to TCassignEdge::compare;
+@
+text
+@d100 1
+@
+
+
+1.23
+log
+@ELIMINATED TCassignEdgeList, TCassignEdgeSet, and TCassignEdgeIterator;
+replaced by SUCO equivalents;
+entailed writing a new edge compare function.
+@
+text
+@d130 1
+a130 1
+	  assignsTo(TCassignEdge::edgeCompare),
+@
+
+
+1.22
+log
+@Added AOlistIterator class, though currently not (yet) used.
+Also added accessor getStaticType().
+@
+text
+@d10 3
+d130 1
+a130 1
+	  assignsTo(),
+d144 1
+a144 1
+    TCassignEdgeSet assignsTo; //- TODO: write destructor to delete edges?
+@
+
+
+1.21
+log
+@Added points-to set output option: -pta now dumps points-to sets
+(alias groups)...
+ - ao: added isRef flag/accessor
+ - ecr.cpp/h: modified traversePointsToSet - is now traverseAliases
+ - tca.cpp/h: top level callers.
+@
+text
+@d15 2
+d48 15
+d117 2
+@
+
+
+1.20
+log
+@Added skeleton for lvalType(), with initial seeding rules
+in tca.cpp, and ECR debug_dump to include rttype.
+Must rethink strategy for solving constraints before
+proceeding
+@
+text
+@d91 3
+a93 1
+    bool isVal() const { return isValueAO; } //- is AO a descendent of an AOValue object?
+d102 1
+a102 1
+    AO(enum aoKind k, bool iv)
+d104 2
+a105 1
+	  isValueAO(iv),
+d118 2
+a119 1
+    bool isValueAO; //- is this AO a descendent of an AOValue abstract object?
+d133 1
+a133 1
+  public:  AOAddrOf(AO& o) : AO(aoAddrOf, o.isVal()), ao(o) {}
+d143 1
+a143 1
+  public:  AOArray(AO& o) : AO(aoArray, o.isVal()), ao(o) {}
+d153 1
+a153 1
+  public:  AOFunction(AO& o) : AO(aoFunction, o.isVal()), ao(o) {}
+d162 1
+a162 1
+  public:  AOStar(AO& o) : AO(aoStar, o.isVal()), ao(o) {}
+d173 1
+a173 1
+		: AO(aoExt, o.isVal()), ao(o), tty(t), fty(f) {}
+d187 1
+a187 1
+  public:  AOArg(AO& o, int n) : AO(aoArg, o.isVal()), ao(o), no(n) {}
+d199 1
+a199 1
+  public:  AOId(ID& p) : AO(aoId, false), pid(p) {}
+d208 1
+a208 1
+  public:  AOStringLit(ID& a) : AO(aoStringLit, false), aid(a) {}
+d217 1
+a217 1
+  public:  AOMalloc(ID& a) : AO(aoMalloc, false), aid(a) {}
+d226 1
+a226 1
+  public:  AOOp(AO& o, TCtype& t) : AO(aoOp, o.isVal()), ao(o), ty(t) {}
+d238 1
+a238 1
+  public:  AOReturn(AO& o) : AO(aoReturn, o.isVal()), ao(o) {}
+d248 1
+a248 1
+  public:  AOSDot(AO& o, TCtypeList& l) : AO(aoSDot, o.isVal()), ao(o), tylist(l) {}
+d260 1
+a260 1
+  public:  AOUDot(AO& o, TCtype& t) : AO(aoUDot, o.isVal()), ao(o), ty(t) {}
+d272 1
+a272 1
+  public:  AOValue(TCtype& t) : AO(aoValue, true), ty(t) {}
+@
+
+
+1.19
+log
+@Added staticType (+).
+@
+text
+@d93 2
+@
+
+
+1.18
+log
+@Changed verifyPtr from a boolean flag to a type.
+@
+text
+@d93 1
+d105 1
+d118 1
+@
+
+
+1.17
+log
+@Updated Ext object to take two types.
+@
+text
+@d94 1
+a94 1
+    void setVerifyPtrFlag() { verifyPtrFlag = true; }
+d105 1
+a105 1
+	  verifyPtrFlag(false) {}
+d117 1
+a117 1
+    bool verifyPtrFlag;
+@
+
+
+1.16
+log
+@Incorporated new format that includes typed-assignments
+(: <T> <O>) and verifyTag/verifyPtr (} <T> <O>, ] <O>).
+@
+text
+@d80 1
+a80 1
+    AO& get_AOExt(TCtype& t); //- delete t if found
+d163 2
+a164 1
+  public:  AOExt(AO& o, TCtype& t) : AO(aoExt, o.isVal()), ao(o), ty(t) {}
+d168 2
+a169 1
+	   TCtype& getTy() const { return ty; }
+d172 2
+a173 1
+	   TCtype& ty;
+@
+
+
+1.15
+log
+@Major change: added ArgRet handling stuff:
+defined ECRargRet class, wrote functions
+ECR::processArgRetFlow/simulateAssign/collectArgRetFrontier...
+Only aspect not handled: after simulating assignment for
+argrets with different nargs, must propagate the delta
+(forward or backward) - requires non-trivial change
+to data structure.
+@
+text
+@d89 1
+a89 1
+    TCassignEdge * assignTo(AO& tgt); //- returns edge if not already there
+d93 3
+d103 3
+a105 1
+	  ecr(0) {}
+d116 2
+@
+
+
+1.14
+log
+@Added AOFunction object.
+@
+text
+@d171 1
+d222 1
+@
+
+
+1.13
+log
+@Added AOOp/AOExt.getTarget();
+initializeECR_collapseAlways() now properly sets op and ext
+nodes to point to the same target as their parents.
+@
+text
+@d52 1
+a52 1
+	 aoArray
+d78 1
+d132 9
+@
+
+
+1.12
+log
+@Changed setTS_UNSAFE to propagate along assign edges.
+@
+text
+@d149 1
+d199 1
+@
+
+
+1.11
+log
+@Added traverser foreachAO and static output function writeAO.
+@
+text
+@d59 1
+a59 1
+    void setTS_UNSAFE()  { tsl = TS_UNSAFE; }
+@
+
+
+1.10
+log
+@Added isValueAO flag to signify descendents of AOValue objects.
+@
+text
+@d20 2
+a21 1
+    void traverseAOs(void (*fp)(AO& o));
+d28 1
+a28 1
+    void concatenate(AOlist& list);
+d65 1
+@
+
+
+1.9
+log
+@Added concatenate function.
+@
+text
+@d88 2
+d91 7
+a97 5
+    AO(enum aoKind k) : kind(k),
+			aolist(true), //- true -> on delete, AOs will be deleted
+			tsl(TS_NONE),
+			assignsTo(),
+			ecr(0) {}
+d103 1
+d114 1
+a114 1
+  public:  AOAddrOf(AO& o) : AO(aoAddrOf), ao(o) {}
+d124 1
+a124 1
+  public:  AOArray(AO& o) : AO(aoArray), ao(o) {}
+d134 1
+a134 1
+  public:  AOStar(AO& o) : AO(aoStar), ao(o) {}
+d144 1
+a144 1
+  public:  AOExt(AO& a, TCtype& t) : AO(aoExt), ao(a), ty(t) {}
+d155 1
+a155 1
+  public:  AOArg(AO& o, int n) : AO(aoArg), ao(o), no(n) {}
+d166 1
+a166 1
+  public:  AOId(ID& p) : AO(aoId), pid(p) {}
+d175 1
+a175 1
+  public:  AOStringLit(ID& a) : AO(aoStringLit), aid(a) {}
+d184 1
+a184 1
+  public:  AOMalloc(ID& a) : AO(aoMalloc), aid(a) {}
+d193 1
+a193 1
+  public:  AOOp(AO& a, TCtype& t) : AO(aoOp), ao(a), ty(t) {}
+d204 1
+a204 1
+  public:  AOReturn(AO& o) : AO(aoReturn), ao(o) {}
+d213 1
+a213 1
+  public:  AOSDot(AO& a, TCtypeList& l) : AO(aoSDot), ao(a), tylist(l) {}
+d225 1
+a225 1
+  public:  AOUDot(AO& a, TCtype& t) : AO(aoUDot), ao(a), ty(t) {}
+d237 1
+a237 1
+  public:  AOValue(TCtype& t) : AO(aoValue), ty(t) {}
+@
+
+
+1.8
+log
+@Added ECR; extended functionality of AOlist (for ECR use)
+@
+text
+@d27 1
+d112 1
+a112 1
+	   AO& target() const { return ao; }
+@
+
+
+1.7
+log
+@Added assignEdgeSet to AOs, and mechanism to insert into
+the set without duplication.
+Next: use this info to propagate UNSAFE from addr-taken
+nodes.
+@
+text
+@d15 1
+a15 1
+    AOlist() : head(0) {}
+d17 2
+d22 6
+a27 1
+    AO& get_AOValue(TCtype &t); //- delete t if found
+d39 1
+d54 1
+d60 3
+a62 1
+    static FILE * writeTSstream;
+d64 1
+d76 1
+a76 1
+    AO& get_AOExt(TCtype &t); //- delete t if found
+d78 1
+a78 1
+    AO& get_AOOp(TCtype &t); //- delete t if found
+d80 2
+a81 2
+    AO& get_AOSDot(TCtypeList &l); //- delete l if found
+    AO& get_AOUDot(TCtype &t); //- delete t if found
+d88 5
+a92 1
+    AO(enum aoKind k) : kind(k), aolist(), tsl(TS_NONE), assignsTo() {}
+d101 1
+d108 1
+a108 1
+  public:  AOAddrOf(AO &o) : AO(aoAddrOf), ao(o) {}
+d118 1
+a118 1
+  public:  AOArray(AO &o) : AO(aoArray), ao(o) {}
+d121 1
+d123 1
+a123 1
+	   AO &ao;
+d128 1
+a128 1
+  public:  AOStar(AO &o) : AO(aoStar), ao(o) {}
+d131 1
+d133 1
+a133 1
+	   AO &ao;
+d138 1
+a138 1
+  public:  AOExt(AO &a, TCtype &t) : AO(aoExt), ao(a), ty(t) {}
+d143 2
+a144 2
+	   AO &ao;
+	   TCtype &ty;
+d149 1
+a149 1
+  public:  AOArg(AO &o, int n) : AO(aoArg), ao(o), no(n) {}
+d155 1
+a155 1
+	   AO &ao;
+d160 1
+a160 1
+  public:  AOId(ID &p) : AO(aoId), pid(p) {}
+d164 1
+a164 1
+	   ID &pid;
+d169 1
+a169 1
+  public:  AOStringLit(ID &a) : AO(aoStringLit), aid(a) {}
+d173 1
+a173 1
+	   ID &aid;
+d178 1
+a178 1
+  public:  AOMalloc(ID &a) : AO(aoMalloc), aid(a) {}
+d182 1
+a182 1
+	   ID &aid;
+d187 1
+a187 1
+  public:  AOOp(AO &a, TCtype &t) : AO(aoOp), ao(a), ty(t) {}
+d192 2
+a193 2
+	   AO &ao;
+	   TCtype &ty;
+d198 1
+a198 1
+  public:  AOReturn(AO &o) : AO(aoReturn), ao(o) {}
+d202 1
+a202 1
+	   AO &ao;
+d207 1
+a207 1
+  public:  AOSDot(AO &a, TCtypeList &l) : AO(aoSDot), ao(a), tylist(l) {}
+d211 1
+d213 2
+a214 2
+	   AO &ao;
+	   TCtypeList &tylist;
+d219 1
+a219 1
+  public:  AOUDot(AO &a, TCtype &t) : AO(aoUDot), ao(a), ty(t) {}
+d223 1
+d225 2
+a226 2
+	   AO &ao;
+	   TCtype &ty;
+d231 1
+a231 1
+  public:  AOValue(TCtype &t) : AO(aoValue), ty(t) {}
+d236 1
+a236 1
+	   TCtype &ty;
+@
+
+
+1.6
+log
+@Added type-safety level to AO; improved analysis output
+function to tag address-taken objects as UNSAFE, and later
+output them; the old function (writeAddrofTSlevels) is now
+obsolete and should be removed.
+@
+text
+@d8 1
+d18 1
+a18 1
+    void traverse(void (*fp)(AO& o));
+d71 3
+a73 1
+    void traverse(void (*fp)(AO& o));
+d76 1
+a76 1
+    AO(enum aoKind k) : kind(k), aolist(), tsl(TS_NONE) {}
+d84 1
+@
+
+
+1.5
+log
+@Added mechanism to store AOs in an AOlist in each AO.
+Included mechanism for traversing all AOs, and debug output
+functions.
+Fairly complete, but not thoroughly tested (especially TypeList
+destructors?)
+@
+text
+@d44 9
+d73 1
+a73 1
+    AO(enum aoKind k) : kind(k), aolist() {}
+d80 1
+@
+
+
+1.4
+log
+@Added target accessor for AOAddrOf.
+@
+text
+@d11 24
+a43 1
+    static AO * stringToAO(char * str, char ** nptr, IDmap& aidmap, IDmap& pidmap);
+d48 15
+d64 1
+a64 1
+    AO(enum aoKind k) : kind(k) {}
+d68 1
+d70 1
+a70 9
+/*
+    class node {
+      public:
+      private:
+        AO& ao;
+        node * next;
+    };
+    node * aolist;
+*/
+d108 1
+d119 1
+d157 1
+d177 1
+d188 1
+d199 1
+@
+
+
+1.3
+log
+@Added aoArray object.
+@
+text
+@d49 1
+d51 1
+a51 1
+	   AO &ao;
+@
+
+
+1.2
+log
+@Added write_string_rep to output intermediate file format.
+@
+text
+@d16 2
+a17 1
+	 aoStringLit, aoOp, aoExt, aoAddrOf
+d50 9
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d21 2
+d47 1
+d56 1
+d65 1
+d75 1
+d85 1
+d94 1
+d103 1
+d112 1
+d122 1
+d131 1
+d141 1
+d151 1
+@

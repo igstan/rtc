@@ -1,0 +1,9 @@
+#!/bin/sh
+
+LIBC_ASGS=/p/wpis/people/students/suan/TypecheckDebugger/scripts/libc.tc_asgs
+RTCA_RAW=/p/wpis/people/students/suan/TypecheckDebugger/bin/rtca-raw
+
+if [ -z "$*" ]
+then $RTCA_RAW
+else $RTCA_RAW $LIBC_ASGS $*
+fi

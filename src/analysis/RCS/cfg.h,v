@@ -1,0 +1,5025 @@
+head	1.115;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.115
+date	2004.07.19.22.59.54;	author suan;	state Exp;
+branches;
+next	1.114;
+
+1.114
+date	2004.07.16.19.46.35;	author suan;	state Exp;
+branches;
+next	1.113;
+
+1.113
+date	2004.06.29.20.02.32;	author suan;	state Exp;
+branches;
+next	1.112;
+
+1.112
+date	2004.06.28.22.20.13;	author suan;	state Exp;
+branches;
+next	1.111;
+
+1.111
+date	2004.06.22.16.19.28;	author suan;	state Exp;
+branches;
+next	1.110;
+
+1.110
+date	2004.06.15.18.55.35;	author suan;	state Exp;
+branches;
+next	1.109;
+
+1.109
+date	2004.05.24.20.08.15;	author suan;	state Exp;
+branches;
+next	1.108;
+
+1.108
+date	2004.05.17.22.33.16;	author suan;	state Exp;
+branches;
+next	1.107;
+
+1.107
+date	2004.05.13.15.37.59;	author suan;	state Exp;
+branches;
+next	1.106;
+
+1.106
+date	2004.05.11.21.50.54;	author suan;	state Exp;
+branches;
+next	1.105;
+
+1.105
+date	2004.05.11.15.01.15;	author suan;	state Exp;
+branches;
+next	1.104;
+
+1.104
+date	2004.05.10.14.50.59;	author suan;	state Exp;
+branches;
+next	1.103;
+
+1.103
+date	2004.05.07.14.37.59;	author suan;	state Exp;
+branches;
+next	1.102;
+
+1.102
+date	2004.05.04.15.31.15;	author suan;	state Exp;
+branches;
+next	1.101;
+
+1.101
+date	2004.05.03.22.56.17;	author suan;	state Exp;
+branches;
+next	1.100;
+
+1.100
+date	2004.05.03.20.45.59;	author suan;	state Exp;
+branches;
+next	1.99;
+
+1.99
+date	2004.05.02.18.26.36;	author suan;	state Exp;
+branches;
+next	1.98;
+
+1.98
+date	2004.04.29.15.09.01;	author suan;	state Exp;
+branches;
+next	1.97;
+
+1.97
+date	2004.04.14.00.22.35;	author suan;	state Exp;
+branches;
+next	1.96;
+
+1.96
+date	2004.04.12.20.14.03;	author suan;	state Exp;
+branches;
+next	1.95;
+
+1.95
+date	2004.04.08.23.20.42;	author suan;	state Exp;
+branches;
+next	1.94;
+
+1.94
+date	2004.04.08.18.08.11;	author suan;	state Exp;
+branches;
+next	1.93;
+
+1.93
+date	2004.04.02.00.26.12;	author suan;	state Exp;
+branches;
+next	1.92;
+
+1.92
+date	2004.03.29.17.17.32;	author suan;	state Exp;
+branches;
+next	1.91;
+
+1.91
+date	2004.03.29.16.29.36;	author suan;	state Exp;
+branches;
+next	1.90;
+
+1.90
+date	2004.03.22.20.08.26;	author suan;	state Exp;
+branches;
+next	1.89;
+
+1.89
+date	2004.02.25.22.12.54;	author suan;	state Exp;
+branches;
+next	1.88;
+
+1.88
+date	2004.02.18.16.06.52;	author suan;	state Exp;
+branches;
+next	1.87;
+
+1.87
+date	2004.02.17.20.22.40;	author suan;	state Exp;
+branches;
+next	1.86;
+
+1.86
+date	2004.01.16.21.47.26;	author suan;	state Exp;
+branches;
+next	1.85;
+
+1.85
+date	2003.12.18.20.05.49;	author suan;	state Exp;
+branches;
+next	1.84;
+
+1.84
+date	2003.12.11.21.03.59;	author suan;	state Exp;
+branches;
+next	1.83;
+
+1.83
+date	2003.11.14.22.47.57;	author suan;	state Exp;
+branches;
+next	1.82;
+
+1.82
+date	2003.11.14.15.58.36;	author suan;	state Exp;
+branches;
+next	1.81;
+
+1.81
+date	2003.11.13.00.23.51;	author suan;	state Exp;
+branches;
+next	1.80;
+
+1.80
+date	2003.10.29.20.33.46;	author suan;	state Exp;
+branches;
+next	1.79;
+
+1.79
+date	2003.10.28.20.22.42;	author suan;	state Exp;
+branches;
+next	1.78;
+
+1.78
+date	2003.10.22.21.23.32;	author suan;	state Exp;
+branches;
+next	1.77;
+
+1.77
+date	2003.10.10.16.55.55;	author suan;	state Exp;
+branches;
+next	1.76;
+
+1.76
+date	2003.10.08.23.31.07;	author suan;	state Exp;
+branches;
+next	1.75;
+
+1.75
+date	2003.10.08.16.31.43;	author suan;	state Exp;
+branches;
+next	1.74;
+
+1.74
+date	2003.10.02.22.59.37;	author suan;	state Exp;
+branches;
+next	1.73;
+
+1.73
+date	2003.10.01.22.18.32;	author suan;	state Exp;
+branches;
+next	1.72;
+
+1.72
+date	2003.06.18.20.08.46;	author suan;	state Exp;
+branches;
+next	1.71;
+
+1.71
+date	2003.03.20.23.01.22;	author suan;	state Exp;
+branches;
+next	1.70;
+
+1.70
+date	2003.02.26.21.11.26;	author suan;	state Exp;
+branches;
+next	1.69;
+
+1.69
+date	2003.02.25.16.43.05;	author suan;	state Exp;
+branches;
+next	1.68;
+
+1.68
+date	2003.02.24.21.53.17;	author suan;	state Exp;
+branches;
+next	1.67;
+
+1.67
+date	2003.02.22.18.04.11;	author suan;	state Exp;
+branches;
+next	1.66;
+
+1.66
+date	2003.02.21.20.37.30;	author suan;	state Exp;
+branches;
+next	1.65;
+
+1.65
+date	2003.02.21.17.40.11;	author suan;	state Exp;
+branches;
+next	1.64;
+
+1.64
+date	2003.02.18.23.27.37;	author suan;	state Exp;
+branches;
+next	1.63;
+
+1.63
+date	2003.02.17.20.21.32;	author suan;	state Exp;
+branches;
+next	1.62;
+
+1.62
+date	2003.02.17.19.29.23;	author suan;	state Exp;
+branches;
+next	1.61;
+
+1.61
+date	2003.02.17.17.44.25;	author suan;	state Exp;
+branches;
+next	1.60;
+
+1.60
+date	2003.02.14.20.55.04;	author suan;	state Exp;
+branches;
+next	1.59;
+
+1.59
+date	2003.02.14.18.24.47;	author suan;	state Exp;
+branches;
+next	1.58;
+
+1.58
+date	2003.02.14.17.41.44;	author suan;	state Exp;
+branches;
+next	1.57;
+
+1.57
+date	2003.02.14.17.12.21;	author suan;	state Exp;
+branches;
+next	1.56;
+
+1.56
+date	2003.01.16.17.45.59;	author suan;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2003.01.13.17.39.03;	author suan;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2002.12.25.17.03.50;	author suan;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2002.12.24.21.22.32;	author suan;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2002.12.21.00.01.06;	author suan;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2002.12.20.23.06.38;	author suan;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2002.12.20.19.22.33;	author suan;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2002.12.19.22.03.44;	author suan;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2002.12.19.20.28.49;	author suan;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2002.12.19.00.24.06;	author suan;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2002.12.18.00.24.34;	author suan;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2002.12.17.22.01.28;	author suan;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2002.12.09.22.29.44;	author suan;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2002.12.04.00.43.03;	author suan;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2002.11.29.21.26.17;	author suan;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2002.11.28.00.28.46;	author suan;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2002.11.27.22.23.07;	author suan;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2002.11.27.21.15.17;	author suan;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2002.11.27.19.52.44;	author suan;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2002.11.27.18.46.20;	author suan;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2002.11.27.17.16.25;	author suan;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2002.11.27.17.11.24;	author suan;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2002.11.27.00.28.10;	author suan;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2002.11.26.23.18.36;	author suan;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2002.11.26.00.57.59;	author suan;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2002.11.25.22.49.51;	author suan;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2002.11.25.19.30.25;	author suan;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2002.11.22.17.25.23;	author suan;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2002.11.21.20.44.57;	author suan;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2002.11.21.00.35.53;	author suan;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2002.11.20.19.09.02;	author suan;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2002.11.19.20.09.12;	author suan;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2002.11.18.22.49.59;	author suan;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2002.11.18.22.15.52;	author suan;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2002.11.15.23.20.38;	author suan;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2002.11.15.22.07.32;	author suan;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2002.11.15.20.28.52;	author suan;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2002.11.15.01.22.27;	author suan;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2002.11.14.21.26.46;	author suan;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2002.11.14.16.53.55;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2002.11.14.16.48.12;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2002.11.13.01.42.39;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2002.11.12.21.17.30;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2002.11.12.20.08.51;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2002.11.12.16.04.54;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.11.12.00.44.01;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.11.11.22.23.34;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.11.11.19.32.15;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.11.07.21.04.04;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.11.07.00.40.47;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.11.06.20.03.20;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.11.05.21.20.30;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.10.01.16.55.22;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.09.30.21.04.24;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.09.30.18.03.34;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.09.27.17.28.44;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@CFG data structures.
+@
+
+
+1.115
+log
+@Added -mbu-intra-iref flag to collect iref in addition
+to gref, and to just use iref for MBU analysis -- hopefully
+will lead to smaller facts and faster analysis.
+Also: observed that "gmodref_skip_locals" has been set
+all along (for ran?), so mbu may not have been correct??
+Fixed --- at least partially, for mbu --- I think...
+@
+text
+@#ifndef TC_CFG_H /* { */
+#define TC_CFG_H
+
+#include "suco.h"
+#include "ao.h"
+#include "id.h"
+
+//----------------------------------
+
+#define mPfx         '!'  // flow-sensitive prefix
+#define  mStart      '{'
+#define  mNext       ';'
+#define  mEnd        '}'
+#define   mParallel  'p'
+#define   mBranch    'b'
+#define   mWhile     'w'
+#define   mDoWhile   'd'
+#define   mFor       'f'
+#define   mIf        'i'
+#define   mSwitch    's'
+#define   mNode      'n'
+#define   mFunction  'x'
+#define  mLabel      ':'
+#define  mJump       '>'
+#define   mGoto      'g'
+#define   mBreak     'b'
+#define   mContinue  'c'
+#define   mReturn    'r'
+#define   mVReturn   'v'
+#define   mCase      's'
+#define   mDefault   'd'
+#define  mCall       'c'
+#define  mAssign     'a'
+#define  mPredicate  'p'
+#define   mPrAnd     'a'
+#define   mPrOr      'o'
+#define   mPrQC      'q'
+#define   mPrStmt    's'
+#define   mPrSwitch  'w'
+#define  mFormal     'f'
+#define  mLocalDecl  'l'
+#define  mStaticDecl 's'
+#define  mMallocDecl 'm'
+#define  mVerify     'v'
+#define   mVTag      't'
+#define   mVTagPtr   'u'
+#define   mVTagPtrW  'v'
+#define   mVRhs      'r'
+#define   mVRhsPtr   's'
+#define   mVPtr      'p'
+#define   mVPtrW     'w'
+
+//----------------------------------
+
+class AID
+{
+  public:
+    AID(int fsid = 0, int aidno = 0) : filestem_id(fsid), aid(aidno) {}
+
+    int filestem_id;
+    int aid;
+
+    bool isZero() const { return (this->filestem_id == 0) && (this->aid == 0); }
+    const char * lookupFileStem();
+
+    static void writeFileStemMap(FILE * outf);
+
+    static int compare(AID * l, AID * r)
+	{ return (l->filestem_id-r->filestem_id)?(l->filestem_id-r->filestem_id):(l->aid-r->aid); }
+
+    static AID zero;
+
+    static suco_llist<const char *> filestemlist;
+};
+
+//----------------------------------
+
+class Dependency
+{
+  public:
+    Dependency(AO& k) : key(k), aoset() {}
+    AO& getKey() { return key; }
+    suco_set<AO *>& getAOs() { return aoset; }
+
+    static int compare(Dependency * ldep, Dependency * rdep);
+
+  private:
+    AO& key;
+    suco_set<AO *> aoset;
+};
+
+class DependencyMap
+{
+  public:
+    DependencyMap() : deps(Dependency::compare),
+		      aosets(DependencyMap::aoset_compare) {}
+
+    void addDirectedDependency(suco_set<AO *>& keyset, suco_set<AO *>& depset); //- consumes depset
+    void addDependencySet(suco_set<AO *>& depset); //- consumes depset
+    void debug_dump(FILE * outf);
+
+    suco_set<Dependency *>& getDirectedDependencies() { return deps; }
+    suco_set<suco_set<AO *> *>& getDependencySets() { return aosets; }
+
+    static int aoset_compare(suco_set<AO *> * laos, suco_set<AO *> * raos);
+
+  private:
+    suco_set<Dependency *> deps;
+    suco_set<suco_set<AO *> *> aosets;
+};
+
+//----------------------------------
+
+class ExpDescr
+{
+  public:
+    ExpDescr(suco_llist<AO *>& el, char * es, suco_set<AO *>& s)
+	: aos(s), estr_aos(el), estr(es), affecrs(0), aliasecrs(0) {}
+
+    ~ExpDescr();
+
+    suco_set<AO *>& getAOs() const { return aos; }
+    suco_llist<AO *>& getEstrAOs() const { return estr_aos; }
+    char * getEstr() const { return estr; }
+
+    AO * getSingletonLoc(); //-- return AO if this is single location, 0 otherwise
+
+    //- "afflocs": locations that affect the value of this expression,
+    //  which includes estr_aos and aos deref'ed one level
+    //  It isn't stored as a set, but is computed when needed via these
+    //  helpers.
+    bool affLocsIntersects(suco_set<AO *>& aoset);
+    bool affLocsIntersects(suco_set<ECR *>& ecrset);
+
+    suco_set<ECR *>& getAliasECRs();
+    void collectAffectingAliasLocECRs(suco_set<ECR *>& eset);
+    void collectDependencies(suco_set<AO *>& dep, bool uncaptured);
+
+    void debug_dump(FILE * outf, int indent = 0);
+
+    static char * stringToEstr(char * str, char ** nptr);
+    static int compare(ExpDescr * lex, ExpDescr * rex);
+
+  private:
+    ExpDescr();
+
+    suco_set<AO *>& aos;
+    suco_llist<AO *>& estr_aos;
+    char * estr; //-- TODO: should destruct?
+
+    suco_set<ECR *> * affecrs; // cache-on-demand
+    suco_set<ECR *> * aliasecrs; // cache-on-demand
+
+    void instantiateAffEcrs(); //- called by affLocsIntersects
+};
+
+//----------------------------------
+// Represents a set of location
+// Implementation choices include storing set of:
+//  - AOs
+//  - AOs, one per struct
+//  - ECRs
+//  - ECRs mapped from a loc-ao
+// This set is used to store GMOD, GREF, (GFree?),
+// and backedge filters.
+
+class BaseLocSet
+{
+  public:
+    virtual int numAOs() = 0;
+    virtual int Size() = 0;
+    virtual void Union(BaseLocSet& lset) = 0;
+    virtual void AbsorbConsume(suco_set<ECR *>& ecrset) = 0;
+    virtual void Clear() = 0;
+    virtual bool Insert(AO& ao) = 0;
+    virtual void addToEcrSet(suco_set<ECR *>& ecrset) = 0;
+    virtual void addToAOset(suco_set<AO *>& aoset) = 0;
+    virtual bool interferesWithAffLocs(ExpDescr& edesc) = 0;
+    virtual bool Contains(AO& ao) = 0;
+    virtual bool Intersects(suco_set<AO *>& aoset) = 0;
+    virtual bool Intersects(suco_set<ECR *>& ecrset) = 0;
+    virtual void writeIntersectingAOs(BaseLocSet& lset, suco_set<AO *>& aoset) = 0;
+    virtual void debug_dump(FILE * outf) = 0;
+};
+
+class ECRlocSet : public BaseLocSet
+{
+  public:
+    ECRlocSet() : ecrset() {}
+
+    int numAOs();
+    int Size() { return this->ecrset.Length(); }
+    void Union(BaseLocSet& lset) { this->ecrset.Union(((ECRlocSet&)lset).ecrset); }
+    void AbsorbConsume(suco_set<ECR *>& ecrset);
+    void Clear() { this->ecrset.Clear(); }
+    bool Insert(AO& ao);
+    void addToEcrSet(suco_set<ECR *>& ecrset) { ecrset.Union(this->ecrset); }
+    void addToAOset(suco_set<AO *>& aoset);
+    bool interferesWithAffLocs(ExpDescr& edesc) { return edesc.affLocsIntersects(this->ecrset); }
+    bool Contains(AO& ao);
+    bool Intersects(suco_set<AO *>& aoset);
+    bool Intersects(suco_set<ECR *>& ecrset) { return this->ecrset.Intersects(ecrset); }
+    void writeIntersectingAOs(BaseLocSet& lset, suco_set<AO *>& aoset);
+
+    void debug_dump(FILE * outf);
+
+  private:
+    suco_set<ECR *> ecrset;
+};
+
+class AOlocSet : public BaseLocSet
+{
+  public:
+    AOlocSet() : aoset() {}
+
+    int numAOs() { return this->aoset.Length(); }
+    int Size() { return this->aoset.Length(); }
+    void Union(BaseLocSet& lset) { this->aoset.Union(((AOlocSet&)lset).aoset); }
+    void AbsorbConsume(suco_set<ECR *>& ecrset);
+    void Clear() { this->aoset.Clear(); }
+    bool Insert(AO& ao) { return this->aoset.Insert(&ao); }
+    void addToEcrSet(suco_set<ECR *>& ecrset);
+    void addToAOset(suco_set<AO *>& aoset) { aoset.Union(this->aoset); }
+    bool interferesWithAffLocs(ExpDescr& edesc) { return edesc.affLocsIntersects(this->aoset); }
+    bool Contains(AO& ao) { return this->aoset.Contains(&ao); }
+    bool Intersects(suco_set<AO *>& aoset) { return this->aoset.Intersects(aoset); }
+    bool Intersects(suco_set<ECR *>& ecrset);
+    void writeIntersectingAOs(BaseLocSet& lset, suco_set<AO *>& aoset);
+
+    void debug_dump(FILE * outf) { AO::write_list_string_rep(outf, this->aoset, true); }
+
+  private:
+    suco_set<AO *> aoset;
+};
+
+//typedef AOlocSet LocSet;
+typedef ECRlocSet LocSet;
+
+//----------------------------------
+
+#include "dfa.h"
+#include "mbu.h"
+#include "rda.h"
+#include "rdmb.h"
+#include "ran.h"
+#include "red.h"
+
+//----------------------------------
+
+class InputState;
+class PgmStmt;
+
+class PgmExpr
+{
+  public:
+    friend class CFG;
+
+    enum Kind { fCall, fAssign, fPredicate, fDecl, fVerify,
+		fParallel, fBranch };
+
+    static PgmExpr * read(InputState& is, char * buf, PgmStmt * parent);
+    static void readlist(InputState& is, char * buf, suco_llist<PgmExpr *>& nodelist, PgmStmt * parent);
+    virtual void debug_dump(FILE * outf, int indent = 0, bool brief = false) = 0;
+
+    const char * getKindString() const;
+
+    PgmStmt * getParentNode() const { return parent; }
+
+    bool traverseRootNodes(bool (*fp)(PgmExpr& dn));
+
+    enum Kind getKind() const { return kind; }
+
+    bool isLib(); //- is this part of library function?
+
+    bool MBUisUseless() const { return mbu_is_useless; }
+    void MBUsetUseless() { mbu_is_useless = true; }
+
+    bool RANisUseless() const { return ran_is_useless; }
+    void RANsetUseless() { ran_is_useless = true; }
+
+    bool RDAisUseless() const { return rda_is_useless; }
+    void RDAsetUseless() { rda_is_useless = true; }
+
+    bool REDisUseless() const { return red_is_useless; }
+    void REDsetUseless() { red_is_useless = true; }
+
+    static bool notFunctionCall(PgmExpr& dn);
+
+  protected:
+    PgmExpr(enum Kind k, PgmStmt * par)
+	: kind(k), parent(par),
+	  mbu_is_useless(false),
+	  ran_is_useless(false),
+	  rda_is_useless(false),
+	  red_is_useless(false) {}
+
+  private:
+    PgmExpr();
+    enum Kind kind;
+    PgmStmt * parent;
+
+    //-- DFA analysis stuff
+    bool mbu_is_useless;
+    bool ran_is_useless;
+    bool rda_is_useless;
+    bool red_is_useless;
+
+};
+
+class CFGfunction;
+
+class PExprArg
+{
+  public:
+    PExprArg(AID a, suco_set<AO *>& aos, suco_llist<AO *>& estr_aos, char * estr)
+	: aid(a), edesc(estr_aos, estr, aos) {}
+
+    AID& getAid() { return aid; }
+    ExpDescr& getDesc() { return edesc; }
+
+  private:
+    PExprArg();
+    AID aid;
+    ExpDescr edesc;
+};
+
+class PExprCall : public PgmExpr
+{
+  public:
+    friend class PgmExpr;
+    friend class CFG;
+    friend class CFGnode; //- to initialize widen_aos
+
+    PExprCall(AID a, suco_set<AO *>& f, int n, PgmStmt * par)
+	: PgmExpr(fCall, par),
+	  debug_trigger_counter(0),
+	  aid(a), faos(f), nargs(n), args(n?(new PExprArg*[n]):0),
+	  targetfns(), undef_tgtfns(), widen_locs(0),
+	  ran_fact(), rda_fact(), rda_local(), mbu_fact(),
+	  rdmb_fact(rda_fact,mbu_fact), red_fact()
+	  {}
+
+    AID& getAid() { return aid; }
+    suco_set<AO *>& getFaos() { return faos; }
+    PExprArg * getArg(int argno) const //- argno is one-based!
+	{ return (argno <= nargs)?(args[argno-1]):((PExprArg *)0); }
+    suco_set<CFGfunction *>& getTargetFns() { return targetfns; }
+    suco_set<AOId *>& getUndefTargetFns() { return undef_tgtfns; }
+    LocSet * getWidenLocs() const { return widen_locs; }
+    bool callsFree(); //- does this callnode call free()?
+    RANfact& getRANfact() { return ran_fact; }
+    RDAfact& getRDAfact() { return rda_fact; }
+    RDAfact& getRDAlocal() { return rda_local; }
+    MBUfact& getMBUfact() { return mbu_fact; }
+    RDMBfact& getRDMBfact() { return rdmb_fact; }
+    REDfactPair& getREDfactPair() { return red_fact; }
+
+    ID * isDirectCall();
+    bool isRecursiveCall();
+
+    int debug_trigger_counter;
+
+    virtual void debug_dump(FILE * outf, int indent = 0, bool brief = false);
+
+  private:
+    AID aid;
+    suco_set<AO *>& faos;
+    int nargs;
+    PExprArg ** args;
+    suco_set<CFGfunction *> targetfns; //- defined target functions
+    suco_set<AOId *> undef_tgtfns; //- undefined (library) target function ids
+    LocSet * widen_locs; //- widening points (recursive call): 0 means don't widen, ALL_AOS means don't filter, else filter
+
+    //-- dataflow analysis facts
+    RANfact ran_fact; //- RAN "POST-call" fact cache
+    RDAfact rda_fact; //- RDA "POST-call" fact cache
+    RDAfact rda_local; //- RDA GMOD-filtered fact cache
+    MBUfact mbu_fact; //- MBU "POST-call" fact cache
+    RDMBfact rdmb_fact; //- MBU collection only
+    REDfactPair red_fact; //- RED: actually not used! because intra-procedural
+};
+
+class PExprAssign : public PgmExpr
+{
+  public:
+    PExprAssign(AID a, suco_set<AO *>& e1l, suco_llist<AO *>& e1al, char * e1s,
+		suco_set<AO *>& e2l, suco_llist<AO *>& e2al, char * e2s,
+		PgmStmt * par)
+	: PgmExpr(fAssign, par), aid(a),
+	  e1desc(e1al, e1s, e1l), e2desc(e2al, e2s, e2l) {}
+
+    virtual void debug_dump(FILE * outf, int indent = 0, bool brief = false);
+
+    AID& getAid() { return aid; }
+    ExpDescr& getLHS() { return e1desc; }
+    ExpDescr& getRHS() { return e2desc; }
+
+  private:
+    AID aid;
+    ExpDescr e1desc;
+    ExpDescr e2desc;
+};
+
+class PExprPredicate : public PgmExpr
+{
+  public:
+    enum prKind { prAnd, prOr, prQC, prStmt, prSwitch };
+
+    PExprPredicate(AID a, suco_llist<AO *>& afflocs, char * estr, prKind k, PgmStmt * par)
+	: PgmExpr(fPredicate, par), aid(a), edesc(afflocs, estr, empty_aos), pkind(k) {}
+
+    virtual void debug_dump(FILE * outf, int indent = 0, bool brief = false);
+
+    AID& getAid() { return aid; }
+    ExpDescr& getDesc() { return edesc; }
+
+    const char * getPrKindString() const;
+    bool isSwitch() const { return pkind == prSwitch; }
+    bool isStmtOrQC() const { return ((pkind == prStmt) || (pkind == prQC)); }
+
+  private:
+    AID aid;
+    ExpDescr edesc;
+    enum prKind pkind;
+
+    static suco_set<AO *> empty_aos; //- static placeholder
+};
+
+class PExprDecl : public PgmExpr
+{
+  public:
+    enum dKind { dFormal, dLocal, dStatic, dMalloc };
+
+    PExprDecl(AO& o, int fsid, enum dKind k, PgmStmt * par, bool isz, int arg_no = 0, ExpDescr * msize = 0)
+	: PgmExpr(fDecl, par), ao(o), filestem_id(fsid), dkind(k),
+	  argno(arg_no), mallocsize(msize), iszeroed(isz) {}
+
+    virtual void debug_dump(FILE * outf, int indent = 0, bool brief = false);
+
+    bool isFormal() const { return (dkind == dFormal); }
+    bool isLocal() const { return (dkind == dLocal); }
+    bool isStatic() const { return (dkind == dStatic); }
+    bool isMalloc() const { return (dkind == dMalloc); }
+    bool isAlloca() const { return (dkind == dMalloc) && (ao.getKind() == AO::aoMalloc) && ((AOMalloc&)ao).isAlloca(); }
+    AO& getAO() const { return ao; }
+    int getFSid() const { return filestem_id; }
+    int getArgNo() const { return argno; }
+    ExpDescr * getMallocSize() const { return mallocsize; }
+    bool isZeroed() const { return iszeroed; }
+
+    const char * getDkindString() const;
+
+  private:
+    AO& ao;
+    int filestem_id;
+    enum dKind dkind;
+    int argno; //- argno is one-based!!
+    ExpDescr * mallocsize;
+    bool iszeroed;
+};
+
+class PExprVerify : public PgmExpr
+{
+  public:
+    enum vtKind { vtTag, vtRhs, vtNone};
+    enum vpKind { vpPtr, vpPtrW, vpNone};
+
+    PExprVerify(enum vtKind vtk, enum vpKind vpk, AID a,
+		suco_set<AO *>& s, suco_llist<AO *>& al,
+		char * str, PgmStmt * par)
+	: PgmExpr(fVerify, par), vtkind(vtk), vpkind(vpk), aid(a),
+	  desc(al, str, s) {}
+
+    virtual void debug_dump(FILE * outf, int indent = 0, bool brief = false);
+
+    enum vtKind getVtKind() const { return vtkind; }
+    enum vpKind getVpKind() const { return vpkind; }
+
+    const char * getVtKindString() const;
+    const char * getVpKindString() const;
+
+    suco_set<AO *>& getAOs() { return desc.getAOs(); }
+    ExpDescr& getDesc() { return desc; }
+
+    AID& getAid() { return aid; }
+
+  private:
+    PExprVerify();
+    enum vtKind vtkind;
+    enum vpKind vpkind;
+    AID aid;
+    ExpDescr desc;
+};
+
+class PExprParallel : public PgmExpr
+{
+  public:
+    friend class PgmExpr;
+    PExprParallel(PgmStmt * par)
+		: PgmExpr(fParallel, par), nodelists(),
+		  ran_fact(), rda_fact(), mbu_fact(), rdmb_fact(rda_fact,mbu_fact),
+		  red_fact() {}
+
+    static PExprParallel& read(InputState& is, char * buf, PgmStmt * parent);
+    virtual void debug_dump(FILE * outf, int indent = 0, bool brief = false);
+
+    suco_llist<suco_llist<PgmExpr *> *>& getNodeLists() { return nodelists; }
+
+    RANfact& getRANfact() { return ran_fact; }
+    RDAfact& getRDAfact() { return rda_fact; }
+    MBUfact& getMBUfact() { return mbu_fact; }
+    RDMBfact& getRDMBfact() { return rdmb_fact; }
+    REDfactPair& getREDfactPair() { return red_fact; }
+
+  private:
+    suco_llist<suco_llist<PgmExpr *> *> nodelists;
+
+    //-- dataflow analysis facts
+    RANfact ran_fact; //- RAN POST-fact
+    RDAfact rda_fact; //- RDA POST-fact
+    MBUfact mbu_fact; //- MBU POST-fact
+    RDMBfact rdmb_fact; //- MBU collection only
+    REDfactPair red_fact; //- RED POST-fact
+};
+
+class PExprBranch : public PgmExpr
+{
+  public:
+    friend class PgmExpr;
+    PExprBranch(PgmStmt * par) : PgmExpr(fBranch, par), prednode(0), tnodelist(), fnodelist() {}
+
+    static PExprBranch& read(InputState& is, char * buf, PgmStmt * parent);
+    virtual void debug_dump(FILE * outf, int indent = 0, bool brief = false);
+
+    PgmExpr * getPredNode() { return prednode; }
+    suco_llist<PgmExpr *>& getTrueNodes() { return tnodelist; }
+    suco_llist<PgmExpr *>& getFalseNodes() { return fnodelist; }
+
+  private:
+    PExprPredicate * prednode;
+    suco_llist<PgmExpr *> tnodelist, fnodelist;
+};
+
+//----------------------------------
+
+class CFGnode
+{
+  public:
+    friend class CFG; //- one instance of addSuccessor(); updateBackEdge(); findRemainingBackedges()
+    friend class CFGbblock; //- access to predecessors/successors, for bblock construction
+    friend class WorkList; //- access to worklist_flag
+
+    CFGfunction& getParentFunction() const { return parent; }
+    bool isEntryNode() const;
+    virtual bool isExitNode() = 0;
+
+    virtual bool traverseRootNodes(bool (*fp)(PgmExpr& dn)) = 0;
+    virtual suco_llist<PgmStmt *>& getStmtList() = 0;
+    virtual void debug_dump(FILE * outf, int indent = 0, bool brief = false) = 0;
+
+    int getId() const { return traverse_id; }
+
+    LocSet * getBackEdge() const;
+    LocSet * getBackEdge(bool tf) const;
+    static LocSet * const ALL_AOS;  // = (LocSet *)1;
+
+    DFAfactPair& getRANfactPair() { return ran_fact_pair; }
+    RDAfact& getRDAfact() { return rda_fact; }
+    MBUfact& getMBUfact() { return mbu_fact; }
+    RDMBfact& getRDMBfact() { return rdmb_fact; }
+    REDfactPair& getREDfactPair() { return red_fact; }
+
+    bool MBUisUseless() const { return mbu_is_useless; }
+    void MBUsetUseless() { mbu_is_useless = true; }
+
+    bool RANisUseless() const { return ran_is_useless; }
+    void RANsetUseless() { ran_is_useless = true; }
+
+    bool RDAisUseless() const { return rda_is_useless; }
+    void RDAsetUseless() { rda_is_useless = true; }
+
+    bool REDisUseless() const { return red_is_useless; }
+    void REDsetUseless() { red_is_useless = true; }
+
+    CFGnode * getSucc(int i) const { return (i < nsuccs)?succs[i]:0; }
+    int getNsuccs() const { return nsuccs; }
+    CFGnode * getPred(int i) const { return (i < npreds)?preds[i]:0; }
+    int getNpreds() const { return npreds; }
+
+    int debug_trigger_counter;
+
+  protected:
+    CFGnode(CFGfunction& par)
+		: debug_trigger_counter(0),
+		  succs(0), nsuccs(0),
+		  preds(0), npreds(0),
+		  parent(par),
+		  traverse_id(0),
+		  worklist_flag(false),
+		  ran_fact_pair(ran_fact),
+		  rda_fact(),
+		  mbu_fact(),
+		  rdmb_fact(rda_fact,mbu_fact),
+		  red_fact(),
+		  ran_is_useless(false),
+		  rda_is_useless(false),
+		  mbu_is_useless(false),
+		  red_is_useless(false),
+		  find_remaining_backedges_touched(0),
+		  hascall(false),
+		  ran_fact()
+		  {
+		    backedge_locs[0] = 0;
+		    backedge_locs[1] = 0;
+		  }
+
+    CFGnode ** succs; //-- array of nsuccs+1 elements, except when 0
+    int nsuccs;
+    CFGnode ** preds; //-- array of npreds+1 elements, except when 0
+    int npreds;
+
+    CFGfunction& parent;
+
+    //-- dataflow analysis stuff
+    int traverse_id;
+    bool worklist_flag;
+    LocSet * backedge_locs[2]; //- 0 means not backedge, ALL_AOS means don't filter, else filter
+
+    DFAfactPair ran_fact_pair; //- RAN POST fact
+    RDAfact rda_fact; //- RDA POST fact
+    MBUfact mbu_fact; //- MBU POST fact
+    RDMBfact rdmb_fact; //- MBU collection only
+    REDfactPair red_fact; //- RED POST fact
+
+    bool ran_is_useless;
+    bool rda_is_useless;
+    bool mbu_is_useless;
+    bool red_is_useless;
+
+    //--- pred/succ stuff
+    void addSuccessor(CFGnode& n);
+    void initSuccsCount(int n);
+    void initPredsCount(int n);
+    int countPreds() const;
+    int countSuccs() const;
+
+    void updateBackEdgeIfSet(CFGnode& tgtnode, LocSet& lset);
+    static bool computeWidenAOs(PgmExpr& pe); //- called in CFG initialization cycle
+
+    void findRemainingBackedges(CFGfunction * entryfn = 0); //- called in CFG initialization cycle
+    static bool findRemainingCallBackedges(PgmExpr& pe);
+    char find_remaining_backedges_touched; //- used by CFGnode::findRemainingBackedges
+
+    bool hascall;
+
+  private:
+    CFGnode();
+
+    RANfact ran_fact; //- RAN primary fact: access through ran_fact_pair
+};
+
+//----------------------------------
+
+class PgmStmt : public CFGnode
+{
+  public:
+    friend class CFG;
+    friend class CFGnode;
+    friend class CFGbblock; //- to assign to bblock only
+    friend class CFGfunction; //- read, readentry, etc?
+    friend class DFA;	//- access to exprlist, parent
+    friend class BBA;	//- access to exprlist, parent
+
+    bool isExitNode();
+
+    bool traverseRootNodes(bool (*fp)(PgmExpr& dn));
+    PgmStmt * getTailStmt() { return this; }
+    suco_llist<PgmStmt *>& getStmtList() { return stmtlist; }
+
+    void debug_dump(FILE * outf, int indent = 0, bool brief = false);
+
+    bool isReturn() const { return (annot.kind == Annot::aReturn); }
+    bool isGoto() const { return (annot.kind == Annot::aGoto); }
+    const char * getGotoLabel() const { return isGoto()?annot.u.string:0; }
+    ExpDescr * getReturnDesc() const
+	{ return (annot.kind == Annot::aReturn)?(annot.u.edesc):((ExpDescr *)0); }
+
+    AID& getAid() { return aid; }
+
+    bool hasLabel(const char * s = 0) const;
+
+    CFGbblock * getBBlock() const { return bblock; }
+    CFGnode * getCFGactiveNode();	//- returns bblock or this, depending on flag_use_bblocks
+
+    PgmStmt * getSuccStmt(int i) const { return (PgmStmt *) getSucc(i); }
+    PgmStmt * getPredStmt(int i) const { return (PgmStmt *) getPred(i); }
+
+  private:
+    PgmStmt();
+
+    //-- construct only by read functions
+    PgmStmt(CFGfunction& par, AID a = AID::zero)
+	: CFGnode(par), exprlist(), stmtlist(),
+	  aid(a), labels(0), nlabels(0),
+	  bblock(0), annot()
+	{ stmtlist.Insert(this); }
+
+    //-- input functions, called by friend CFGfunction
+    static PgmStmt& read(InputState& is, CFGfunction& par, char * buf);
+    static bool readentry(InputState& is, CFGfunction& par, char * buf, PgmStmt *& current, suco_llist<PgmStmt *>& nodelist);
+    static void readlist(InputState& is, CFGfunction& par, char * buf, PgmStmt *& current, suco_llist<PgmStmt *>& nodelist);
+
+    //- called by CFGbblock constructor; sets this->hascall
+    bool hasFunctionCalls();
+
+    //-- helper for read
+    bool hasSwitchPred() const;
+
+    //--- data
+    suco_llist<PgmExpr *> exprlist;
+    suco_llist<PgmStmt *> stmtlist;	//- singleton list containing this
+
+    AID aid;
+    char ** labels;
+    int nlabels;
+
+    CFGbblock * bblock;
+
+    class Annot {
+      public:
+        friend class CFG;
+        friend class PgmStmt;
+        friend class CFGfunction;
+        enum Kind { aNone = 0,
+		    aGoto, aBreak, aContinue, aReturn,
+		    aWhile, aDoWhile, aFor, aIf, aSwitch,
+		    aCaseLabel, aDefaultLabel,
+		    aOutNode
+		  };
+
+	Annot() : kind(aNone) { u.string = 0; }
+      private:
+	enum Kind kind;
+	union {
+	  const char * string;	//-- for Goto
+	  int integer;		//-- for CaseLabel
+          ExpDescr * edesc;	//-- for Return
+	} u;
+    } annot;
+};
+
+//----------------------------------
+
+class CFGbblock : public CFGnode
+{
+  public:
+    friend class DFA; //- to access stmtlist
+    friend class BBA; //- to access stmtlist
+    friend class CFGfunction; //- for constructing basic blocks
+
+    CFGbblock(PgmStmt& headnode, suco_set<PgmStmt *>& pendingnodes);
+
+    void debug_dump(FILE * outf, int indent = 0, bool brief = false);
+
+    bool isExitNode();
+    bool traverseRootNodes(bool (*fp)(PgmExpr& dn));
+    suco_llist<PgmStmt *>& getStmtList() { return stmtlist; }
+
+  private:
+    CFGbblock();
+
+    suco_llist<PgmStmt *> stmtlist;
+};
+
+//----------------------------------
+
+class CFGfunction
+{
+  public:
+    friend class CFG; //- callsites, callgraph, etc
+
+    CFGfunction(AOId& ao, AID a) :
+		cfglist(), entrystmt(0), exitnodes(),
+		idao(ao), aid(a),
+		callsites(), localvars(), gfreestack(),
+		gmod(), gref(), iref(), gfreeheap_ecrs(),
+		bblocks(), entryblock(0),
+		callgraph(), callgraph_id(0), recursion_id(0) {}
+
+    static CFGfunction& read(InputState& is, char * buf, int filestem_id);
+    void debug_dump(FILE * outf, bool brief = false);
+    void writeCallgraphDotEntry(FILE * outf);
+    void write_descr(FILE * outf, const char * prefix, int indent);
+    void bottomUpWriteCalltrace(FILE * outf, int indent);
+    void topDownWriteCalltree(FILE * outf, int indent);
+
+    void collectLocalsAndIMODREF();
+
+    CFGnode * getEntryNode() const;
+
+    suco_llist<PgmStmt *>& getStmtList() { return cfglist; }
+    suco_llist<CFGbblock *>& getBBlist() { return bblocks; }
+    suco_llist<PgmStmt *>& getExitNodes() { return exitnodes; }
+    AOId& getId() const { return idao; }
+    int getFileStemId() const { return aid.filestem_id; }
+    suco_llist<PExprCall *>& getCallSites() { return callsites; }
+    suco_set<AOId *>& getLocalVars() { return localvars; }
+    LocSet& getGREF() { return gref; }
+    LocSet& getIREF() { return iref; }
+    LocSet& getGMOD() { return gmod; }
+    suco_set<ECR *>& getGFreeHeap_ecrs() { return gfreeheap_ecrs; }
+    suco_set<AO *>& getGFreeStack() { return gfreestack; }
+    int getCallGraphId() const { return callgraph_id; }
+    int getRecursionId() const { return recursion_id; }
+
+    bool GFreeHeapAffects(AO& ao);
+
+    static int compareByCallgraphId(CFGfunction * fn1, CFGfunction * fn2);
+    static void collectCallers(CFGfunction& fn, suco_set<CFGfunction *>& fns); //- used by RDMBfact
+
+  private:
+    suco_llist<PgmStmt *> cfglist;
+    PgmStmt * entrystmt;
+    suco_llist<PgmStmt *> exitnodes;	//-- TODO: convert to bblocks?
+    AOId& idao; // function pid
+    AID aid; // verification aid
+    suco_llist<PExprCall *> callsites;
+    suco_set<AOId *> localvars;
+    LocSet gmod;
+    LocSet gref;
+    LocSet iref;
+    suco_set<ECR *> gfreeheap_ecrs;
+    suco_set<AO *> gfreestack;
+
+    suco_llist<CFGbblock *> bblocks;
+    CFGbblock * entryblock;
+
+    //-- callgraph stuff
+    suco_set<CFGfunction *> callgraph;
+    int callgraph_id;  //- -1=active, 0=inactive, positive=visited
+    int recursion_id;  //- 0=nonrecursive
+    int traverseCallGraph(int recursing);
+
+    //-- construct basic blocks -- called by friend CFG
+    void constructBBlocks();
+
+    //-- static stuff to collect local decls recursively
+    // - NOTE: clie_imod_ecrs and collectIMODREF are also used by CFG backedge filter stuff
+    static suco_set<AOId *> * clie_curlvars;
+    static suco_set<AO *> * clie_ifree_stack;
+    static suco_set<ECR *> clie_ifree_heap_ecrs;
+    static suco_set<ECR *> clie_imod_ecrs;
+    static suco_set<ECR *> clie_iref_ecrs;
+    static suco_set<AO *> clie_callsite_retaos;
+    static void collectIMODREF(suco_set<AO *>& aoset, bool iref);
+    static bool collectLocalsAndIMODREFexpr(PgmExpr& df);
+};
+
+//----------------------------------
+
+class CFG
+{
+  public:
+    CFG() : fnlist(), globnodes(), entry(0), mainfn(0), prepared(false), assignIds_counter(0) {}
+
+    void read(InputState& is, char * buf, const char * filestem);
+    void debug_dump(FILE * outf);
+
+    void writeCallgraph(FILE * outf, bool dot, char * trace_fn);
+    void prepareCFG(bool prepare_widen);
+
+    suco_llist<CFGfunction *>& getFunctionList() { return fnlist; }
+    CFGnode * getEntryNode() const { return entry; }
+
+    bool traverseRootNodes(bool (*fp)(PgmExpr& dn));
+
+  private:
+    suco_llist<CFGfunction *> fnlist;
+    suco_llist<PgmExpr *> globnodes;	//- these will be absorbed into entry node
+    CFGnode * entry;
+    CFGfunction * mainfn;
+    bool prepared; //- has this CFG been "prepared" (callgraph,modref)
+
+    //-- cfg initialization methods
+    void collectLocalsAndIMODREF();
+    void prepareSuperGraph();
+    void connectSuperGraph();
+    void remapRecursionId();
+    void constructBBlocks();
+    void collectGMODREF();
+
+    void assignId(CFGnode& cnode);
+    void assignIds(); //- also marks backedges for widen/narrow
+    int assignIds_counter;
+
+    //-- collecting backedge filters
+    // - NOTE these make use of CFGfunction::clie_imod_ecrs and CFGfunction::collectIMODREF
+    void computeBackedgeFilters();
+    static bool collectModSetUntil(PgmStmt * exitnode, suco_iterator<PgmStmt *>& si, LocSet& modlocs);
+    static bool collectMODecrs(PgmExpr& pe);
+
+    //-- static helpers to connect call/fndefns recursively
+    static PExprCall * act_caller_node;
+    static suco_llist<CFGfunction *> * act_fnlist;
+    static bool addAOtoCallTarget(AO& ao);
+    static bool assignCallTargets(PgmExpr& dn);
+};
+
+//----------------------------------
+
+#endif /* } ifndef TC_CFG_H */
+@
+
+
+1.114
+log
+@CHANGES:
+1. Moved PExprAssign::getSingletonLHSloc() to
+   ExpDescr::getSingletonLoc(), so it can be used
+   elsewhere to determine strong update.
+1a. FIXED BUG (??) in getSingletonLoc(): previously
+    for sdot object, was returning enclosing struct!?!
+2. Added -vtfix flag, which enables/disables RED and
+   MBU treatment of verifyTag as fixing the type on
+   mismatch.
+3. Added MBU handling of verifyTag vtfix.
+4. Changed so that MBU uses the RED parallel hackery
+   (PM_RED_UNSAFE) when vtfix is on.
+@
+text
+@d182 1
+d203 1
+d228 1
+d786 1
+a786 1
+		gmod(), gref(), gfreeheap_ecrs(),
+d809 1
+d831 1
+@
+
+
+1.113
+log
+@ADDED evaluation of each library function call to determine
+if its target (where relevant) is exposed -- this will mainly
+be used in -vulnw mode to remove instrumentation when a
+function's target is exposed (needed to avoid false positive).
+Eventually, it may also be used in -ptr/ptrw mode to remove
+instrumentation when a library function's target is not
+exposed -- though currently this never happens because of
+context-insensitive analysis and overly-conservative models.
+SUPPLEMENTAL CHANGES to achieve the above:
+ 1. Created ExposedStatus class in ao.cpp/ao.h (was previously
+    an enum in AO class)
+ 2. Changed PExprcall::isDirectCall() to return the ID of the
+    direct call, rather than just a bool.
+ 3. Exported "flag_readwrite" to become a global -- it's about
+    time (I'd been misguidedly trying to avoid this for far
+    too long, creating a bigger mess instead)
+@
+text
+@d126 2
+a389 2
+
+    AO * getSingletonLHSloc(); //-- return AO if lhs is singleton location, 0 otherwise
+@
+
+
+1.112
+log
+@Augmented to handle ALLOCA:
+(solution is hackish at best)
+- added is_alloca flag to AOMalloc object.
+  HOWEVER, this is set only by flow_sensitive
+  PgmExpr/MallocDecl case!
+- a second channel of information comes from
+  the (long-forgotten) "stclass" field of ID.
+  (This is the bit used in -ptr-heapstack mode)
+@
+text
+@d353 1
+a353 1
+    bool isDirectCall();
+@
+
+
+1.111
+log
+@BUG FIX: isDirectCall() was only checking getTargetFns(),
+which failed when the direct call target is undefined!
+(Also, added flag "prepared" to CFG).
+@
+text
+@d441 1
+@
+
+
+1.110
+log
+@Added argument to prepareCFG indicating whether or not
+to prepare the CFG for widening (along backedges).
+Those steps are (currently) needed only for range analysis.
+@
+text
+@d343 1
+a343 1
+    suco_set<AOId *>& getUndefTargetFns() { return undef_tgtfns; } //- currently unused
+d858 1
+a858 1
+    CFG() : fnlist(), globnodes(), entry(0), mainfn(0), assignIds_counter(0) {}
+d876 1
+@
+
+
+1.109
+log
+@Added CFG::traverseRootNodes, used by pmbu and tca.
+The thing to remember is that this function traverses
+first the enter node (if any) before going through
+each function's root nodes.
+@
+text
+@d864 1
+a864 1
+    void prepareCFG();
+@
+
+
+1.108
+log
+@Moved derefOneLevel() from ExpDescr to AO class.
+@
+text
+@d869 2
+@
+
+
+1.107
+log
+@Just added parentheses for readability
+@
+text
+@a151 1
+    AO * derefOneLevel(AO& ao); //- migrate to AO class?
+@
+
+
+1.106
+log
+@RELEVANT AOS DONE (but some parts not efficient):
+ - Added Dependency and DependencyMap classes, to record
+   dependencies not captured by flow-insensitive assign
+   edges.
+ - Revamped tca relevant-aos collecting mechanism.
+Note: certain recent changes rendered certain operations
+less efficient, like getAliasECRs.
+@
+text
+@d417 1
+a417 1
+    bool isStmtOrQC() const { return (pkind == prStmt) || (pkind == prQC); }
+@
+
+
+1.105
+log
+@MAJOR UPDATE: towards relevant aos.
+THIS VERSION RELIES ON ExpDescr's aoset TO CAPTURE
+ALL DEPENDENCE INFORMATION, WHICH IS NOT THE CASE.
+@
+text
+@d78 36
+d135 1
+@
+
+
+1.104
+log
+@1. Renamed ExpDescr's affaos to estr_aos, to avoid confusion
+   with "affecting aos" (affecrs).
+2. tca: more refinement of relevant-aos computation:
+   - specially handle op/ext/star AOs -- not quite
+     there yet (this is hopefully the last bit that
+     needs to be fixed)
+   - in RAN mode, starting points must include malloc
+     sizes.
+@
+text
+@d81 1
+a81 1
+    ExpDescr(suco_llist<AO *>& el, char * es, suco_set<AO *>& s = empty_aos)
+a95 1
+    void affLocsMarkRelevant();
+d98 1
+a106 1
+    static suco_set<AO *> empty_aos; //- static placeholder
+d371 1
+a371 1
+	: PgmExpr(fPredicate, par), aid(a), edesc(afflocs, estr), pkind(k) {}
+d386 2
+@
+
+
+1.103
+log
+@Changed LocSet::Insert() to return bool;
+added numAOs for better stats.
+@
+text
+@d81 2
+a82 2
+    ExpDescr(suco_llist<AO *>& al, char * es, suco_set<AO *>& s = empty_aos)
+	: aos(s), affaos(al), estr(es), affecrs(0), aliasecrs(0) {}
+d87 1
+a87 1
+    suco_llist<AO *>& getAffAOs() const { return affaos; }
+d90 4
+d96 1
+d110 1
+a110 1
+    suco_llist<AO *>& affaos;
+d275 2
+a276 2
+    PExprArg(AID a, suco_set<AO *>& aos, suco_llist<AO *>& affaos, char * estr)
+	: aid(a), edesc(affaos, estr, aos) {}
+@
+
+
+1.102
+log
+@Modified format of calltrace output.
+@
+text
+@d128 1
+d133 1
+a133 1
+    virtual void Insert(AO& ao) = 0;
+d148 1
+d153 1
+a153 1
+    void Insert(AO& ao);
+d172 1
+d177 1
+a177 1
+    void Insert(AO& ao) { this->aoset.Insert(&ao); }
+@
+
+
+1.101
+log
+@Added -calltrace= option.
+@
+text
+@d744 1
+a744 1
+    void write_descr(FILE * outf, int indent);
+@
+
+
+1.100
+log
+@Added -callgraph/-callgraph-dot support to output
+callgraph in tree form or in dot format.
+Unfortunately, both formats are likely to be too
+long to be useful for all but small programs.
+@
+text
+@d744 2
+d818 1
+a818 1
+    void writeCallgraph(FILE * outf, bool dot);
+@
+
+
+1.99
+log
+@MAJOR UPDATE:
+- Created new class LocSet to encapsulate a set of
+  locations, used to store GMOD, GREF, and backedge
+  filters.
+  (Previously, was suco_set<AO *>, later changed to
+  suco_set<ECR *>.)
+- Created two versions, one storing AOs, another
+  storing ECRs.  Verified that results are the
+  same, though performance is not (but only when
+  computing backedge filters).
+@
+text
+@d64 1
+d743 2
+d816 1
+d830 1
+@
+
+
+1.98
+log
+@1. Removed STRONGER_CPP compile-time flag.
+   This was surrounding two things affected by g++
+   version change:
+   A. inline initialization of static member CFGnode::ALL_AOS.
+      ~~> no big deal.
+   B. ability to define friend function suco_write_recycle_stats
+      as friend of (templated) suco class.
+      ~~> solution: wrap suco_write_recycle_stats in its
+          own class (suco_diag_wrapper).
+2. Added purify target to makefile.
+@
+text
+@d115 76
+d289 1
+a289 1
+	  targetfns(), undef_tgtfns(), widen_aos(0),
+d300 1
+a300 1
+    suco_set<AO *> * getWidenAOs() const { return widen_aos; }
+d323 1
+a323 1
+    suco_set<AO *> * widen_aos; //- widening points (recursive call): 0 means don't widen, ALL_AOS means don't filter, else filter
+d513 3
+a515 3
+    suco_set<AO *> * getBackEdge() const;
+    suco_set<AO *> * getBackEdge(bool tf) const;
+    static suco_set<AO *> * const ALL_AOS;  // = (suco_set <AO *> *)1;
+d563 2
+a564 2
+		    backedge_aos[0] = 0;
+		    backedge_aos[1] = 0;
+d577 1
+a577 1
+    suco_set<AO *> * backedge_aos[2]; //- 0 means not backedge, ALL_AOS means don't filter, else filter
+d597 1
+a597 1
+    void updateBackEdgeIfSet(CFGnode& tgtnode, suco_set<AO *>& aoset);
+d735 2
+a736 2
+		callsites(), localvars(), gmod(), gref(),
+		gfreeheap(), gfreeheap_ecrs(0), gfreestack(),
+d754 3
+a756 4
+    suco_set<AO *>& getGMOD() { return gmod; }
+    suco_set<AO *>& getGREF() { return gref; }
+    suco_set<AO *>& getGFreeHeap() { return gfreeheap; }
+    suco_set<ECR *>& getGFreeHeapEcrs();
+d761 1
+a761 1
+    bool GrefOrFreeHeapAffects(AO& ao); //-- helper used by RAN (at least)
+d774 3
+a776 4
+    suco_set<AO *> gmod;
+    suco_set<AO *> gref;
+    suco_set<AO *> gfreeheap;
+    suco_set<ECR *> * gfreeheap_ecrs;	//- cached ecrset corresponding to gfreeheap
+d838 1
+a838 1
+    static bool collectModSetUntil(PgmStmt * exitnode, suco_iterator<PgmStmt *>& si, suco_set<ECR *>& modecrs);
+@
+
+
+1.97
+log
+@Major overhaul, to handle function call filtering.
+See dfa.cpp for documentation.
+ - filterRetnodeFact() eliminated; replaced by
+ - interProcHandleRetvalAssign -- responsible for
+   assigning from R X I <fn> to R D I <fp>.
+ - interProcPrepareReturnCollector() -- special
+    pre-processor for indirect calls to set "intersection"
+   AOs to "top".
+ - meetFiltered() -- does meet, but constrained by a
+   window (defined by a function's GREF/MayFree set).
+Supporting changes:
+ - eliminated removeArgIntervalsExceptFor(); rendered obsolete
+   by
+ - filterGrefMayFree() -- called at function entry
+ - RANfact::isTop()
+ - collectAOset, createTopMappings, in support of
+   interProcPrepareReturnCollector()
+ - PExprCall::isDirectCall() and isRecursiveCall()
+ - CFGfunction::GrefOrFreeHeapAffects()
+@
+text
+@d439 1
+a439 5
+    static suco_set<AO *> * const ALL_AOS
+#ifndef STRONGER_CPP
+			= (suco_set <AO *> *)1
+#endif // ifndef STRONGER_CPP
+			;
+@
+
+
+1.96
+log
+@Added findRemainingBackedges() function to search for
+any backedges that remain after the
+ 1. intra-procedural depth-first search, and
+ 2. recursion widen-aos search.
+The remaining backedges should all be "false" backedges
+that arise due to context-insensitivity.
+@
+text
+@d142 1
+a142 1
+    PgmStmt * getParentNode() { return parent; }
+d233 3
+d689 2
+@
+
+
+1.95
+log
+@Fixed computeWidenAOs() to handle the other half of
+recursive loops (previously only fixed half).
+(Note: entails moving the function from PExprCall to CFGnode)
+@
+text
+@d420 1
+a420 1
+    friend class CFG; //- one instance of addSuccessor(); updateBackEdge
+d484 2
+d525 5
+a548 1
+    bool hasFunctionCalls();
+d588 3
+a647 1
+    bool hascall;
+@
+
+
+1.94
+log
+@MAJOR FIX: previously, was not widening on
+recursive-call edges (only on backedges),
+so analysis may not terminate.
+
+FIX: PExprCall: added widen_aos filter set;
+added PExprCall::computeWidenAOs() to compute
+this, called from CFG::prepareCFG().
+
+Also changed: Argument nodes (F X I <fn>) are
+now included in both GMOD and GREF (previously,
+only GREF) -- this is a shortcut to simplify
+computeWidenAOs() above... not sure if this is
+the cleanest solution.
+
+(Also changed: hoisted CFG::remapRecursionId()
+into its own function, for readability; formerly
+was just inlined in CFG::prepareCFG()).
+@
+text
+@d207 1
+a232 2
+    static bool computeWidenAOs(PgmExpr& pe); //- called in CFG initialization cycle
+
+d521 2
+@
+
+
+1.93
+log
+@Added iszeroed flag to PExprDecl, which is passed from
+sml front end to indicate that a declared variable is
+zero-initialized -- i.e., statics, and autos with an
+initializer.  (So maybe "iszeroed" is a bit of a misnomer;
+"is_initialized" would probably be better.)
+Also, calloc's are iszeroed, while malloc's are not.
+And currently, formals are not marked as iszeroed.
+@
+text
+@d212 1
+a212 1
+	  targetfns(), undef_tgtfns(),
+d223 1
+d232 2
+d245 1
+a424 2
+    typedef suco_set<AO *> * backedge_aoset;
+
+a740 1
+    void collectGMODREF();
+d743 1
+d745 1
+@
+
+
+1.92
+log
+@Added flag_range_handle_predicates to control whether
+or not to try to improve ranges for predicates.
+
+Predicate handling (cond_intersect) updated so that
+two non-aliasing-loc -targeted ranges can set to top
+only if they're both in-bounds.
+
+Known-predicate stat-counter now only counts STMT and
+QC predicates -- previously was double counting &&/||
+predicates within a STMT predicate.
+*NOTE*: the current flow-sensitive representation for
+predicates are _BROKEN_ -- they're ad-hoc (OK for
+redundant checks?), and don't look entirely correct
+for RAN analysis evaluation!  Try e.g. (i++>0).
+@
+text
+@d303 1
+a303 1
+    PExprDecl(AO& o, int fsid, enum dKind k, PgmStmt * par, int arg_no = 0, ExpDescr * msize = 0)
+d305 1
+a305 1
+	  argno(arg_no), mallocsize(msize) {}
+d317 1
+d327 1
+@
+
+
+1.91
+log
+@Added filter for RAN stat collection to filter out
+derefs in libraries.
+Entailed adding PgmExpr::isLib() helper.
+@
+text
+@d290 1
+@
+
+
+1.90
+log
+@Added code to read in, for Malloc declaration, the
+ExpDescr for the size.
+Streamlined ExpDescr constructor a little, and cleaned
+up some leftover garbage.
+@
+text
+@d148 2
+@
+
+
+1.89
+log
+@Another fix for callsite-filter, to prevent "reconstitute
+clash" error caused by Return nodes (R I <fn>, R D I <fp>):
+three changes:
+ 1. For each fn, add R I <fn> to gref (and gmod)
+ 2. For each callsite to fp, add R D I <fp> to gref (and gmod)
+    Note: this entailed non-trivial changes to collectIMODREF
+    mechanism, which is really ugly to begin with.
+ 3. In RAN::filterCallsiteFacts, for callsite to fp, still need
+    to separately include R D I <fp>.
+@
+text
+@d80 1
+a80 1
+    ExpDescr(suco_set<AO *>& s, suco_llist<AO *>& al = empty_affaos, char * es = 0)
+d101 1
+a106 2
+    static suco_llist<AO *> empty_affaos; //- static placeholder
+
+d189 1
+a189 1
+	: aid(a), edesc(aos, affaos, estr) {}
+d257 1
+a257 1
+	  e1desc(e1l, e1al, e1s), e2desc(e2l, e2al, e2s) {}
+d279 1
+a279 1
+	: PgmExpr(fPredicate, par), aid(a), edesc(empty_aos, afflocs, estr), pkind(k) {}
+a289 1
+    static suco_set<AO *> empty_aos;
+d300 3
+a302 2
+    PExprDecl(AO& o, int fsid, enum dKind k, PgmStmt * par, int arg_no = 0)
+	: PgmExpr(fDecl, par), ao(o), filestem_id(fsid), dkind(k), argno(arg_no) {}
+d313 1
+d322 1
+d335 1
+a335 1
+	  desc(s, al, str) {}
+@
+
+
+1.88
+log
+@CHANGE 1: wrote ECR::getAliasECRs(), which collects and
+  caches an ecrset of alias ECRs.
+  This function replaces the functionality of
+  collectAliasECRs(), but should only be called after
+  the points-to graph is finalized.
+CHANGE 2: changed RAN and REDp to account for MayFree
+  set (CFGfunction::getGFreeHeap()).
+  For RAN, this affected: filterCallsiteFact,
+  intraProcHandleCall, and handleFreeCall (previously
+  empty).
+  For RED, this affected only REDp::intraProcHandleCall.
+  For CFGfunction: added gfreeheap_ecrs/getGFreeHeapEcrs()
+  to cache the freeheap ecrset for use in the above
+  phases.
+@
+text
+@d706 1
+@
+
+
+1.87
+log
+@Added computation of GFreeHeap and GFreeStack.
+Next: use this in analyses (in particular, redundant analysis).
+@
+text
+@d643 2
+a644 1
+		callsites(), localvars(), gmod(), gref(), gfreeheap(), gfreestack(),
+d665 1
+d684 1
+@
+
+
+1.86
+log
+@Added "STRONGER_CPP" flag to shift some definitions
+so they compile on solaris.
+@
+text
+@d309 1
+d643 2
+a644 1
+		callsites(), localvars(), gmod(), gref(), bblocks(), entryblock(0),
+d663 2
+d681 2
+d699 3
+a702 1
+    static suco_set<ECR *> clie_imod_ecrs;
+@
+
+
+1.85
+log
+@Update to handling of global initializers (for inter-procedural analysis):
+BEFORE: the (global) entry node was an empty dummy, and the
+ global decl/init expressions were stored separately (in
+ CFG::globnodes) and hackishly accounted for prior to the
+ "proper" run of the analysis with the worklist mechanism.
+ For RAN, this resulted in a "warnNotLE" warning at each
+ entry node, where the initial "top" fact was being meet-ed
+ into the global-init-computed fact.
+NOW: built "proper" entry node, and stick globnodes into it.
+ Take out the hackish initialization code, so now "regular"
+ worklist handling will correctly and cleanly compute the
+ appropriate facts.
+NOTES: removed deprecated "getGlobalNodes()" and one
+ CFGbblock constructor.
+@
+text
+@d428 5
+a432 1
+    static suco_set<AO *> * const ALL_AOS = (suco_set <AO *> *)1;
+@
+
+
+1.84
+log
+@Another change: RETURN argument is now an ExpDescr
+instead of an aoset (as was before); with a corresponding
+change to the argument of handleReturnStmt.
+
+Independently: updated RAN's handleFormal (wrote but
+not tested).
+@
+text
+@a612 3
+    CFGbblock(CFGfunction& par)
+	: CFGnode(par), stmtlist(), hascall(false)
+	  {}
+a707 1
+    suco_llist<PgmExpr *>& getGlobalNodes() { return globnodes; }
+d712 1
+a712 1
+    suco_llist<PgmExpr *> globnodes;
+@
+
+
+1.83
+log
+@DONE implementing backedge filter stuff:
+ - introduced new helper ECR::setToNonLocAOset
+   (also used by earlier code for IMOD/IREF collection)
+ - "borrowed" use of CFGfunction stuff that's used for
+   IMOD/IREF collection.
+ - Appears to work.
+@
+text
+@d189 2
+a190 1
+    PExprArg(AID a, suco_set<AO *>& argaos) : aid(a), aos(argaos) {}
+d193 2
+a194 2
+    suco_set<AO *>& getAOs() { return aos; }
+        
+d198 1
+a198 1
+    suco_set<AO *>& aos;
+d540 2
+a541 2
+    suco_set<AO *> * getReturnAOset() const
+	{ return (annot.kind == Annot::aReturn)?(annot.u.aoset):((suco_set<AO *> *)0); }
+d597 3
+a599 3
+	  const char * string;		//-- for Goto
+	  int integer;			//-- for CaseLabel
+          suco_set<AO *> * aoset;	//-- for Return
+@
+
+
+1.82
+log
+@1. SUCO UPDATE: added copy constructor to suco_iterator,
+   that sets the "list" pointer to the current pointer
+   (this feature will be used in collecting backedge
+   filter).
+2. compute backedge filters: reshuffled interface, and
+   wrote some preliminary untested code!
+   The old version tried to recursively walk the cfg;
+   the new one just walks the sequential list of nodes.
+   Also added command line flag (-ran-[no-]filter-backedge).
+TODO: fix high level bug that only handles true-false
+edges differently when the predicate node gives a pair
+of facts.
+@
+text
+@d409 1
+a409 1
+    friend class CFG; //- one instance of addSuccessor()
+d507 2
+d547 1
+d689 1
+d729 2
+d732 2
+a733 1
+    bool collectModSetUntil(PgmStmt * exitnode, suco_iterator<PgmStmt *>& si, suco_set<ECR *>& modecrs);
+@
+
+
+1.81
+log
+@Infrastructure update: CFGnode backedge indicator has
+been upgraded from a boolean to an AO set pointer, for
+which a value of:
+  0 indicates non-backedge
+  1 (constant CFGnode::ALL_AOS) indicates a backedge
+    with no AO-filter information (i.e. widen all intervals)
+  otherwise, contains the set of AOs that may be modified
+    in the loop body, and constitutes a safe superset of
+    AOs whose interval needs to be widened.
+So far, added the necessary interface and skeletal function
+bodies; NOT YET DONE: write the engine to compute the may-mod
+sets.
+@
+text
+@d420 1
+d519 1
+d522 2
+a523 2
+    friend class DFA;	//- access to nodelist, parent
+    friend class BBA;	//- access to nodelist, parent
+d529 2
+d554 1
+a554 1
+	: CFGnode(par), nodelist(),
+d557 1
+a557 1
+	{}
+d568 2
+a569 1
+    suco_llist<PgmExpr *> nodelist;
+d605 2
+a606 2
+    friend class DFA; //- to access nodelist
+    friend class BBA; //- to access nodelist
+d610 1
+a610 1
+	: CFGnode(par), nodelist(), hascall(false)
+d618 1
+a618 1
+    PgmStmt * getTailStmt() { return nodelist.Last(); }
+d623 1
+a623 1
+    suco_llist<PgmStmt *> nodelist;
+a720 1
+    void computeBackedgeFilters(CFGnode& repnode, PgmStmt * stmt);
+d724 3
+@
+
+
+1.80
+log
+@SMALL BUG IMPORTANT BUG FIX: isBackEdge was looking it
+up backwards!
+@
+text
+@d413 2
+d424 3
+a426 2
+    bool isBackEdge() { return (is_backedge[0] || is_backedge[1]); }
+    bool isBackEdge(bool tf) { return is_backedge[tf?0:1]; }
+d472 2
+a473 2
+		    is_backedge[0] = false;
+		    is_backedge[1] = false;
+d486 1
+a486 1
+    bool is_backedge[2];
+d574 1
+d613 1
+d716 1
+@
+
+
+1.79
+log
+@Added isSwitch accessor, used by RAN::handlePredicate
+@
+text
+@d423 1
+a423 1
+    bool isBackEdge(bool tf) { return is_backedge[tf?1:0]; }
+@
+
+
+1.78
+log
+@Added accessors getPred/getSucc/getNpreds/getNsuccs
+to CFGnode class.
+Previously-defined getPred/getSucc in PgmStmt have been
+renamed to getPredStmt/getSuccStmt.
+This allows un-friending fo a few classes.
+@
+text
+@d287 1
+@
+
+
+1.77
+log
+@Filled in code and data components for Range analysis.
+Only partway done: compiles, but run doesn't terminate.
+@
+text
+@a409 2
+    friend class DFA;	//- access to predecessors/successors
+    friend class BBA;	//- access to predecessors/successors
+d442 4
+d538 2
+a539 2
+    PgmStmt * getSucc(int i) const;
+    PgmStmt * getPred(int i) const;
+@
+
+
+1.76
+log
+@1. Added code (to CFG::assignId) to mark backedges in
+   the CFG.
+   May be buggy -- must test.
+2. -MAJOR UPDATE-
+   Added ran.cpp/ran.h for range checking.
+   Thusfar, ran.cpp contains only empty skeletons to be
+   filled in - do not run!
+3. Renamed widen_narrow in CFG to is_backedge;
+   also, now widen/narrow are specific to RAN/RANfact,
+   rather than generic to DFA/DFAfact.
+@
+text
+@d121 1
+d152 3
+d166 4
+a169 1
+	  mbu_is_useless(false), rda_is_useless(false), red_is_useless(false) {}
+d178 1
+d211 1
+a211 1
+	  rda_fact(), rda_local(), mbu_fact(),
+d222 1
+d242 2
+a243 1
+    RDAfact rda_fact; //- RDA "PRE-call" fact cache
+d245 1
+a245 1
+    MBUfact mbu_fact; //- MBU "PRE-call" fact cache
+d360 1
+a360 1
+		  rda_fact(), mbu_fact(), rdmb_fact(rda_fact,mbu_fact),
+d368 1
+d378 3
+a380 2
+    RDAfact rda_fact; //- RDA PRE-fact
+    MBUfact mbu_fact; //- MBU PRE-fact
+d382 1
+a382 1
+    REDfactPair red_fact; //- RED PRE-fact
+d426 1
+d435 3
+d455 1
+d460 1
+d463 2
+a464 1
+		  red_is_useless(false)
+d482 1
+d488 1
+d502 2
+@
+
+
+1.75
+log
+@Added infrastructure for widening/narrowing:
+ - added widen/narrow flag to CFGnode and DFA
+ - added widen/narrow flag to absorbAndCompare to
+   trigger widening/narrowing
+Also, extended lookupNodeFact to take an extra argument:
+a CFGnode to guide lookup of branch successors.
+@
+text
+@d411 2
+a412 2
+    bool widenNarrow() { return (widen_narrow[0] || widen_narrow[1]); }
+    bool widenNarrow(bool tf) { return widen_narrow[tf?1:0]; }
+d447 2
+a448 2
+		    widen_narrow[0] = false;
+		    widen_narrow[1] = false;
+d461 1
+a461 1
+    bool widen_narrow[2];
+d686 1
+a686 1
+    void assignIds();
+@
+
+
+1.74
+log
+@Added Predicate Node, which is generated at these locations
+(and labeled with the respective types):
+ - &&, || (prAnd, prOr)
+ - ?: (prQC)
+ - for,while,do-while,if-then,if-then-else  (prStmt)
+ - switch (prSwitch)
+@
+text
+@d411 3
+d446 4
+a449 1
+		  {}
+d461 1
+@
+
+
+1.73
+log
+@Changed rhs argument of Assign node from an aolist to an exp-descr
+triplet: <aolist, aff-aolist, estr>.
+Added ExpDescr::stringToEstr static function for converting
+input.
+Changed ExpDescr constructor to be able to take just one
+aoset argument -- used by MBU analysis which just needs
+a "placeholder" ExpDescr for an aoset.  Includes static
+empty_affaos list which is used for all such placeholder
+objects created.
+@
+text
+@d34 6
+d133 1
+a133 1
+    enum Kind { fCall, fAssign, fDecl, fVerify,
+d263 22
+d377 1
+a377 1
+    PExprBranch(PgmStmt * par) : PgmExpr(fBranch, par), tnodelist(), fnodelist() {}
+d382 1
+d387 1
+@
+
+
+1.72
+log
+@Gave the code the -Wall treatment: adjusted things to
+get rid of warnings:
+ - reordered initializers to match declaration order
+ - made some destructors virtual (note that for many
+   classes with no explicit destructors, I did not
+   add explicit virtual destructors, so -Wall warnings
+   remain)
+ - made some signed/unsigned casts
+ - made some pointer/unsigned int casts for printfs
+ - filled in unaccounted-for cases in switch statements
+@
+text
+@d74 1
+a74 1
+    ExpDescr(suco_set<AO *>& s, suco_llist<AO *>& al, char * es)
+d90 1
+d100 2
+d237 2
+a238 2
+    PExprAssign(AID a, suco_set<AO *>& e1l, suco_set<AO *>& e2l,
+		suco_llist<AO *>& e1al, char * e1s,
+d241 1
+a241 1
+	  e1desc(e1l, e1al, e1s), e2aos(e2l) {}
+d249 1
+a249 1
+    suco_set<AO *>& getRHS() { return e2aos; }
+d254 1
+a254 1
+    suco_set<AO *>& e2aos;
+@
+
+
+1.71
+log
+@Fixed REDt -- previous version was naive and didn't account
+for aliases.
+Removed REDfact::remove, which is no longer needed.
+Added ExpDescr::aliasecrs cache (with accessor getAliasECRs()).
+Added to suco GetSingleton function.
+@
+text
+@d103 1
+a103 1
+    bool instantiateAffEcrs(); //- called by intersectsAffLocs
+d190 3
+a192 2
+	: PgmExpr(fCall, par), aid(a), faos(f),
+	  nargs(n), args(n?(new PExprArg*[n]):0),
+d195 2
+a196 2
+	  rdmb_fact(rda_fact,mbu_fact), red_fact(),
+	  debug_trigger_counter(0) {}
+d397 2
+a398 1
+		: succs(0), nsuccs(0),
+d409 2
+a410 2
+		  red_is_useless(false),
+		  debug_trigger_counter(0) {}
+@
+
+
+1.70
+log
+@Major reshuffling (non-final):
+1. output of RED realigned to be of one of four classes:
+    -ptr all, -ptr write, -tag verify, -tag assign
+2. specialized written RED analysis for ptr/ptrw only,
+   wrote -ptr pieces though doesn't seem to work.
+   TODO: split further between ptr and ptrw modes,
+   since these are differentiated anyways by rtca!
+@
+text
+@d75 1
+a75 1
+	: aos(s), affaos(al), estr(es), affecrs(0) {}
+d77 1
+a77 1
+    ~ExpDescr() { if(affecrs) delete affecrs; }
+d83 4
+a86 2
+    bool intersectsAffLocs(suco_set<AO *>& aoset);
+    bool intersectsAffLocs(suco_set<ECR *>& ecrset);
+d99 2
+a100 1
+    suco_set<ECR *> * affecrs;
+@
+
+
+1.69
+log
+@Rewrote collectLocalsAndIMODREF mechanism to use
+ECR::collectAliasECRs, which should be faster
+(avoids multiple re-traversal of the same alias
+graph).
+Verified consistency with old version on go and ijpeg.
+@
+text
+@d297 1
+@
+
+
+1.68
+log
+@Added handleFreeCall to dfa framework (PExprCall now has
+extra set of undeclared functions to which it might point,
+and a helper callsFree() to determine if it may call free()).
+For mbu/rda/rdmb, handleFreeCall is a noop; for RED: wrote
+handleFreeCall to remove expressions affected by *p (p is
+arg 1 of free call).
+@
+text
+@d605 2
+a606 4
+    static suco_set<AO *> * clie_iref;
+    static suco_set<AO *> * clie_imod;
+    static bool addToIREF(AO& ao);
+    static bool addToIMOD(AO& ao);
+@
+
+
+1.67
+log
+@For Redundant analysis, wrote function call case --
+entailed re-adjusting intersectAffLocs to take an aoset
+rather than just a single ao.
+Should be complete, except for free().
+(Free might work anyways -- because model GMOD captures
+all malloc'ed locs?)
+@
+text
+@d189 1
+a189 1
+	  targetfns(),
+d199 2
+d216 2
+a217 1
+    suco_set<CFGfunction *> targetfns;
+@
+
+
+1.66
+log
+@Added ExpDescr::compare function, which will be used
+by REDfact's edescset -- to eliminate duplication.
+@
+text
+@d83 1
+a83 1
+    bool intersectsAffLocs(AO& ao);
+@
+
+
+1.65
+log
+@Updated redundant analysis: strong and weak assignments written;
+to do: function calls and result collection.
+Entailed following changes:
+  PExprAssign::getLHS to return ExpDescr instead of AO set.
+  DFA handleWeakAssign's second argument is now ExpDescr rather than AO set.
+  ECR: added helper collectAliasECRs (not tested!)
+@
+text
+@d88 2
+a100 1
+
+@
+
+
+1.64
+log
+@Wrote some code -- incomplete, compiles but probably won't
+do the right thing yet.
+Entailed enriching ExpDescr class with intersectsAffLocs
+function and helpers (some, not all written yet).
+@
+text
+@d83 1
+a83 1
+    bool intersectsAffLocs(suco_set<AO *>& aoset);
+d237 1
+a237 1
+    suco_set<AO *>& getLHS() { return e1desc.getAOs(); }
+@
+
+
+1.63
+log
+@Added REDfactPair class, which will be the "main" fact
+processed by RED analysis -- that class contains two
+REDfact sets, one for redundant verifyPtrs, another
+for verifyTags.  Only the former will be used by -ptr/ptrw
+mode, for example.
+Skeletons are still hollow
+@
+text
+@d75 3
+a77 1
+	: aos(s), affaos(al), estr(es) {}
+d83 3
+d94 6
+@
+
+
+1.62
+log
+@Filled in skeleton of REDundant analysis -- including
+CFG nodes' red_fact and red_is_useless members.
+TODO: fill in the important meat of the analysis in
+handleVerify, handle*Assign, etc.
+Also, must write REDc collector.
+@
+text
+@d191 1
+a191 1
+    REDfact& getREDfact() { return red_fact; }
+d209 1
+a209 1
+    REDfact red_fact; //- RED: actually not used! because intra-procedural
+d310 1
+a310 1
+    REDfact& getREDfact() { return red_fact; }
+d319 1
+a319 1
+    REDfact red_fact; //- RED PRE-fact
+d361 1
+a361 1
+    REDfact& getREDfact() { return red_fact; }
+d405 1
+a405 1
+    REDfact red_fact; //- RED POST fact
+@
+
+
+1.61
+log
+@Added red.cpp/h as target to Makefile.
+Modified cfg nodes to include REDfacts.
+Added ExpDescr sets to suco_usage.
+@
+text
+@d130 3
+d138 1
+a138 1
+	  mbu_is_useless(false), rda_is_useless(false) {}
+d148 1
+d363 3
+d369 3
+a371 2
+    bool MBUisUseless() const { return mbu_is_useless; }
+    void MBUsetUseless() { mbu_is_useless = true; }
+d388 1
+d409 1
+@
+
+
+1.60
+log
+@Changed affloc from a set to a list -- this is because
+of the change in estr representation, with IDs represented
+by a placeholder "V" (no more "V(#)"), and the affloc list
+storing the aoIds in "V" left-to-right order!
+Note -- made some hack-ish adjustments to some ao functions
+to avoid repetition by multiplexing between set and list
+mode -- kinda ugly, though!
+@
+text
+@d97 1
+d175 1
+a175 1
+	  rdmb_fact(rda_fact,mbu_fact),
+d187 1
+d205 1
+d295 2
+a296 1
+		  rda_fact(), mbu_fact(), rdmb_fact(rda_fact,mbu_fact) {}
+d306 1
+d315 1
+d357 1
+d377 1
+d396 1
+@
+
+
+1.59
+log
+@Added class ExpDescr to encapsulate AOs, AffAOs, and estr.
+Currently, PExprAssign and PExprVerify contain this.
+Plan is for REDundant analysis to store set of these as
+facts.
+@
+text
+@d74 2
+a75 2
+    ExpDescr(suco_set<AO *>& s, suco_set<AO *>& as, char * es)
+	: aos(s), affaos(as), estr(es) {}
+d78 1
+a78 1
+    suco_set<AO *>& getAffAOs() const { return affaos; }
+d87 1
+a87 1
+    suco_set<AO *>& affaos;
+d209 1
+a209 1
+		suco_set<AO *>& e1as, char * e1s,
+d212 1
+a212 1
+	  e1desc(e1l, e1as, e1s), e2aos(e2l) {}
+d261 1
+a261 1
+		suco_set<AO *>& s, suco_set<AO *>& as,
+d264 1
+a264 1
+	  desc(s, as, str) {}
+@
+
+
+1.58
+log
+@Split dfa.h into mbu.h, rda.h, rdmb.h.
+@
+text
+@d71 22
+d211 2
+a212 2
+	: PgmExpr(fAssign, par), aid(a), e1aos(e1l), e2aos(e2l),
+	  e1affaos(e1as), e1str(e1s) {}
+d219 1
+a219 1
+    suco_set<AO *>& getLHS() { return e1aos; }
+d224 1
+a224 1
+    suco_set<AO *>& e1aos;
+a225 2
+    suco_set<AO *>& e1affaos;
+    char * e1str; //-- TODO: must destruct
+d264 1
+a264 1
+	  aos(s), affaos(as), estr(str) {}
+d274 1
+a274 1
+    suco_set<AO *>& getAOs() { return aos; }
+d283 1
+a283 3
+    suco_set<AO *>& aos; //- should probably destruct also?
+    suco_set<AO *>& affaos; //- should probably destruct also?
+    char * estr; //-- TODO: must destruct
+@
+
+
+1.57
+log
+@Updated input function to conform to latest tsls format change:
+Assign and Verify nodes now include affaos and estr (expression
+string) arguments.
+@
+text
+@d72 3
+@
+
+
+1.56
+log
+@Major restructuring:
+ 1. added DFAfactHandler class to encapsulate functions
+    that process a DFAfact based on the CFG node.
+    Created a handler for each fact class thusfar
+    (MBU, RDA, cMBU->RDMB)
+ 2. renamed cMBU to RDMB, to represent the pair (RDA,MBU).
+    The collection analysis class is now called RDMBc.
+    Use this new convention for naming?: end in "c" for
+    a "collecting" analysis class (and "a" for "analysis"?)
+@
+text
+@d183 5
+a187 2
+    PExprAssign(AID a, suco_set<AO *>& e1l, suco_set<AO *>& e2l, PgmStmt * par)
+	: PgmExpr(fAssign, par), aid(a), e1aos(e1l), e2aos(e2l) {}
+d201 2
+d237 5
+a241 2
+    PExprVerify(enum vtKind vtk, enum vpKind vpk, AID a, suco_set<AO *>& s, char * str, PgmStmt * par)
+		: PgmExpr(fVerify, par), vtkind(vtk), vpkind(vpk), aid(a), aos(s), estr(str) {}
+d260 2
+a261 1
+    suco_set<AO *>& aos;
+@
+
+
+1.55
+log
+@Expanded verify-kind to have two 3-valued flags:
+verifyTag_kind (vtKind) = Tag, Rhs, None
+verifyPtr_kind (vpKind) = Ptr, PtrW, None
+
+Also, cmbu.cpp has some RHS collection stuff commented out:
+don't think it's necessary now, with verify-ptr/verify-rhs
+handling.
+@
+text
+@d149 1
+a149 1
+	  cmbu_fact(rda_fact,mbu_fact),
+d160 1
+a160 1
+    cMBUfact& getCMBUfact() { return cmbu_fact; }
+d177 1
+a177 1
+    cMBUfact cmbu_fact; //- MBU collection only
+d262 1
+a262 1
+		  rda_fact(), mbu_fact(), cmbu_fact(rda_fact,mbu_fact) {}
+d271 1
+a271 1
+    cMBUfact& getCMBUfact() { return cmbu_fact; }
+d279 1
+a279 1
+    cMBUfact cmbu_fact; //- MBU collection only
+d320 1
+a320 1
+    cMBUfact& getCMBUfact() { return cmbu_fact; }
+d339 1
+a339 1
+		  cmbu_fact(rda_fact,mbu_fact),
+d357 1
+a357 1
+    cMBUfact cmbu_fact; //- MBU collection only
+d514 1
+a514 1
+    static void collectCallers(CFGfunction& fn, suco_set<CFGfunction *>& fns); //- used by cMBUfact
+@
+
+
+1.54
+log
+@Wrote final piece to GMOD-filter mechanism: cMBU verifyTag
+now collects facts from the cached GMOD-filtered flags of
+call-parents.
+@
+text
+@d38 8
+a45 3
+#define  mVT         't'
+#define  mVP         'p'
+
+d83 1
+a83 1
+    enum Kind { fCall, fAssign, fDecl, fVT, fVP,
+d90 1
+a90 1
+    const char * getKindString();
+d217 1
+a217 1
+    const char * getDkindString();
+d229 5
+a233 2
+    PExprVerify(enum Kind k, AID a, suco_set<AO *>& s, char * str, PgmStmt * par)
+		: PgmExpr(k, par), aid(a), aos(s), estr(str) {}
+d237 6
+d248 3
+@
+
+
+1.53
+log
+@1. changed GMOD/GREF filtering mechanism -- now controlled
+   by a BBA function, rather than a DFAfact function --
+   this allows BBA-specific choice of filter, and also
+   allows RDA to cache local facts
+2. per above, added RDAlocal cache to PExprCall
+3. added a parent PgmStmt pointer to PgmExpr (previously
+   only defined for PExprCall, as a reference) -- this
+   will allow cMBU to lookup the containing function of
+   any PgmExpr (and will likely be useful later as well).
+   Note that this is a pointer, and may be null for
+   PgmExprs at global scope.
+   Also, current assumption is that all PExprCalls have
+   a non-null parent (asserted during input in one of
+   the read() functions).
+@
+text
+@d497 1
+@
+
+
+1.52
+log
+@Added GMOD/IMOD computation.
+Modified DFA to have different call-filtering modes:
+by GMOD, GREF, or NONE.
+Renamed DFAfact::filter to filterOut (which performs
+the opposite of what filter used to).
+Currently, RDA is GMOD-filtered, MBU and cMBU are
+GREF-filtered.
+@
+text
+@d87 2
+d102 3
+a104 1
+    PgmExpr(enum Kind k) : kind(k), mbu_is_useless(false), rda_is_useless(false) {}
+d106 2
+d109 2
+d114 1
+d139 2
+a140 2
+    PExprCall(AID a, suco_set<AO *>& f, int n, PgmStmt& par)
+	: PgmExpr(fCall), aid(a), faos(f),
+d142 3
+a144 2
+	  targetfns(), parent(par),
+	  rda_fact(), mbu_fact(), cmbu_fact(rda_fact,mbu_fact),
+a151 1
+    PgmStmt& getParentNode() { return parent; }
+d153 1
+a166 1
+    PgmStmt& parent;
+d169 2
+a170 1
+    RDAfact rda_fact; //- MBU "PRE-call" fact cache
+d178 2
+a179 2
+    PExprAssign(AID a, suco_set<AO *>& e1l, suco_set<AO *>& e2l)
+	: PgmExpr(fAssign), aid(a), e1aos(e1l), e2aos(e2l) {}
+d200 2
+a201 2
+    PExprDecl(AO& o, int fsid, enum dKind k, int arg_no = 0)
+	: PgmExpr(fDecl), ao(o), filestem_id(fsid), dkind(k), argno(arg_no) {}
+d224 2
+a225 2
+    PExprVerify(enum Kind k, AID a, suco_set<AO *>& s, char * str)
+		: PgmExpr(k), aid(a), aos(s), estr(str) {}
+d243 3
+a245 2
+    PExprParallel() : PgmExpr(fParallel), nodelists(),
+		      rda_fact(), mbu_fact(), cmbu_fact(rda_fact,mbu_fact) {}
+d269 1
+a269 1
+    PExprBranch() : PgmExpr(fBranch), tnodelist(), fnodelist() {}
+@
+
+
+1.51
+log
+@Cleaned up a few things:
+ - eliminated dmode (mode_iterating/mode_collecting);
+ - added checkParallelProgress;
+ - migrated absorbAndCompare from DFAfact to DFA;
+ - rewrote fParallel case incorporating these changes;
+ - added a cMBUfact as a member of each CFG node, call,
+   and parallel, so cMBU can also define lookupNodeFact.
+@
+text
+@d463 1
+a463 1
+		callsites(), localvars(), gref(), bblocks(), entryblock(0),
+d469 1
+a469 1
+    void collectLocalsAndIREF();
+d480 1
+d495 1
+d513 1
+d515 3
+a517 2
+    static void collectIREF(suco_set<AO *>& aoset);
+    static bool collectLocalsAndIREFexpr(PgmExpr& df);
+d543 2
+a544 2
+    void collectGREF();
+    void collectLocalsAndIREF();
+@
+
+
+1.50
+log
+@Start of Major Revision:
+ Split DFA into BBA and DFA, with BBA parenting DFA.
+ Did not yet change behavior.
+@
+text
+@d134 2
+a135 1
+	  mbu_fact(), rda_fact(), debug_trigger_counter(0) {}
+d143 1
+d145 1
+a145 1
+    RDAfact& getRDAfact() { return rda_fact; }
+d160 1
+d162 1
+a162 1
+    RDAfact rda_fact; //- MBU "PRE-call" fact cache
+d233 2
+a234 1
+    PExprParallel() : PgmExpr(fParallel), nodelists(), mbu_fact(), rda_fact() {}
+d241 1
+d243 1
+a243 1
+    RDAfact& getRDAfact() { return rda_fact; }
+d249 1
+d251 1
+a251 1
+    RDAfact rda_fact; //- RDA PRE-fact
+d290 1
+d292 4
+a299 5
+    RDAfact& getRDAfact() { return rda_fact; }
+
+    bool RDAisUseless() const { return rda_is_useless; }
+    void RDAsetUseless() { rda_is_useless = true; }
+
+d309 1
+d311 2
+a313 2
+		  rda_fact(),
+		  rda_is_useless(false),
+d326 2
+d329 3
+a332 2
+    RDAfact rda_fact; //- RDA POST fact
+    bool rda_is_useless;
+d482 1
+a482 1
+    bool isRecursive() const { return recursion_id; }
+@
+
+
+1.49
+log
+@Major update:
+Added -rda (reaching-defs analysis) in new class RDA:DFA.
+Basically, copied the meat from MBU, making minimal changes.
+Compiles, runs, verified against small examples.
+NEED TO REVIEW CODE IN DETAIL, and verify against larger
+examples.
+Potential problem: seems rather slow, may want to compute
+GMOD?
+@
+text
+@d272 1
+d344 1
+d423 1
+@
+
+
+1.48
+log
+@Removed experimental CFG numbering schemes (in-order DFS, post-order DFS,
+successor-wait), sticking with post-order DFS as the only reasonable scheme.
+Also, updated certain flag defaults: -leaf and -gref are now on by default.
+@
+text
+@d90 1
+d94 3
+d100 1
+a100 1
+    PgmExpr(enum Kind k) : kind(k), mbu_is_useless(false) {}
+d105 1
+d134 1
+a134 1
+	  mbu_fact(), debug_trigger_counter(0) {}
+d143 1
+d159 1
+d230 1
+a230 1
+    PExprParallel() : PgmExpr(fParallel), nodelists(), mbu_fact() {}
+d238 1
+d245 1
+d288 5
+d304 2
+d320 2
+a334 3
+
+class MBUfact;
+class CFGbblock;
+@
+
+
+1.47
+log
+@SIGNIFICANT UPDATE:
+ - added -gref flag, to enable GREF filtering
+ - added code to first compute IREF for each function,
+   then collect them into GREFs
+ - this makes use of recursion_id/callgraph_id traversal
+   order (verify that this correctly computes GREF with
+   complex callgaphs?)
+ - the recursion_id/callgraph_id ordering is encoded by
+   the function CFGfunction::compareByCallgraphId, which
+   has been absorbed into the worklist ordering function,
+   so a slight behavior change there as well.
+@
+text
+@a256 16
+class CFGtraversal
+{
+  public:
+    static void InOrderDFS_assignIds(CFG& cfg);
+    static void PostOrderDFS_assignIds(CFG& cfg);
+    static void successorWait_assignIds(CFG& cfg);
+
+  private:
+    static void InOrderDFS_assignId(CFGnode& cnode);
+    static void PostOrderDFS_assignId(CFGnode& cnode);
+    static void successorWait_assignId(CFGnode& cnode, bool force = false);
+
+    static int traverse_counter;
+    static suco_llist<CFGnode *> successorWait_list;
+};
+
+a263 1
+    friend class CFGtraversal; //- assign to traverse_id
+a430 1
+    friend class CFGtraversal; //- entrystmt, entryblock
+d493 1
+a493 1
+    CFG() : fnlist(), globnodes(), entry(0), mainfn(0) {}
+d515 4
+@
+
+
+1.46
+log
+@Added flag for different DFA traversal mode (numbering
+of CFGnodes in different order).
+Currently has:
+ 1. in-order --> seems the best?
+                 (note: is misnomer -- should in fact be post-order)
+ 2. post-order --> with CFG node ordering, turns out
+                   to be equivalent to in-order?
+ 3. succ-last --> turns out to be logically flawed
+                   (suboptimal).
+In short -- added much overhead for a debug experiment that failed.
+May want to remove succ-last, which numbers them in opposite
+priority order -- so we can simplify worklist comparison function.
+@
+text
+@d133 1
+a133 1
+    PExprArg * getArg(int argno) //- argno is one-based!
+d453 1
+a453 1
+		callsites(), localvars(), bblocks(), entryblock(0),
+d459 1
+a459 1
+    void collectLocalDecls();
+d470 1
+d474 2
+d484 1
+d499 5
+a503 2
+    static suco_set<AOId *> * cld_curlvars;
+    static bool collectLocalVars(PgmExpr& df);
+d529 2
+a530 1
+    void collectLocalDecls();
+@
+
+
+1.45
+log
+@Added class CFGtraversal to encapsulate ways of numbering
+CFG nodes.
+Currently uses InOrderDFS; wrote skeleton (body not written)
+for successorWait algorithm.
+@
+text
+@d261 1
+d266 2
+a267 1
+    static void successorWait_assignId(CFGnode& cnode);
+@
+
+
+1.44
+log
+@Added mbu_fact to parallel node to cache pre-facts,
+each processing of parallel now begins by meet-ing
+its cached pre-facts; otherwise it was possible to
+process nodes with facts higher than a previous
+iteration (when there's a call within a parallel).
+@
+text
+@d257 14
+d278 1
+a287 1
+    void assignId(int& counter);
+d445 2
+a446 1
+    friend class CFG; //- entrystmt, entryblock
+a522 1
+    void assignCFGids();
+@
+
+
+1.43
+log
+@Added debug_trigger_count stat (visible with -v3)
+to display the nodes which trigger node-additions into
+the worklist the most times.
+@
+text
+@d152 1
+a152 1
+    MBUfact mbu_fact;
+d223 1
+a223 1
+    PExprParallel() : PgmExpr(fParallel), nodelists() {}
+d230 2
+d234 3
+a236 1
+    int size;
+d303 1
+a303 1
+    MBUfact mbu_fact;
+@
+
+
+1.42
+log
+@Added worklist traversal mode (fifo, lifo, leaf-first),
+the last sorting the worklist in call-graph leaf-first
+order (non-recursive first), and within each function,
+sorting by a traversal_id which is a bottom-up numbering
+of CFGnodes.
+@
+text
+@d128 2
+a129 1
+	  targetfns(), parent(par), mbu_fact() {}
+d139 2
+d276 2
+d286 2
+a287 1
+		  mbu_is_useless(false) {}
+@
+
+
+1.41
+log
+@Added CFGbblock::debug_dump; now -debug will dump CFG
+with basic blocks.
+Also, fixed bug with callsite : in bblock mode, must getBBlock()
+for the callee return nodes.
+@
+text
+@d265 3
+d278 1
+d291 1
+d400 1
+a400 1
+	: CFGnode(par), nodelist(), hascall(false), uid(++uidcounter)
+a413 3
+
+    int uid;
+    static int uidcounter;
+d421 1
+a421 1
+    friend class CFG;
+d443 1
+d498 1
+@
+
+
+1.40
+log
+@Added bblock field to PgmStmts -- which is now assigned
+during basic block construction time, and is used for
+adding function return callsite nodes to the worklist.
+Bblock algo still not working -- don't know why -- but
+at least it doesn't crash.
+@
+text
+@d263 1
+d394 3
+a396 1
+    CFGbblock(CFGfunction& par) : CFGnode(par), nodelist(), hascall(false) {}
+d399 2
+d408 1
+d410 2
+a411 1
+    bool hascall;
+@
+
+
+1.39
+log
+@Added WorkList class;
+Moved isEntryNode() from PgmStmt to CFGnode;
+Added CFGnode::isExitNode() (virtual function, implemented
+by CFGbblock and PgmStmt)
+@
+text
+@d310 1
+d341 4
+a344 4
+	 : CFGnode(par), nodelist(),
+	   aid(a), labels(0), nlabels(0),
+	   bblock(0), annot()
+	 {}
+d394 1
+a394 2
+    CFGbblock(PgmStmt& headnode, suco_llist<PgmStmt *>& unusednodes, 
+				 suco_llist<PgmStmt *>& pendingnodes);
+a455 4
+
+    //-- map PgmStmt to CFGbblock
+    CFGbblock * lookupBlockByHead(PgmStmt& cn);
+    CFGbblock * lookupBlockByTail(PgmStmt& cn);
+@
+
+
+1.38
+log
+@Added -bblocks flag; partially separated bblock and non-bblock
+mode of DFA; many bblock components not yet written.
+@
+text
+@d255 2
+a256 1
+    friend class DFA;	//- access to predecessors/successors, worklist_flag
+d259 2
+d304 1
+d314 1
+a321 1
+    bool isEntryNode() const;
+d330 2
+d341 2
+a342 1
+	   aid(a), labels(0), nlabels(0), annot()
+d360 2
+d389 1
+d396 1
+@
+
+
+1.37
+log
+@Renamed CFGnode to PgmStmt, then created new base
+class CFGnode from which PgmStmt and CFGbblock are
+derived. Added PgmStmt.getPred/getSucc helper functions
+for cleaner lookups.
+@
+text
+@d253 1
+d259 2
+d311 2
+d382 1
+d386 2
+d404 1
+a404 1
+		cfglist(), entrynode(0), exitnodes(),
+d406 1
+a406 1
+		callsites(), localvars(), bblocks(),
+d414 4
+a417 2
+    suco_llist<PgmStmt *>& getCFGlist() { return cfglist; }
+    PgmStmt * getEntryNode() const { return entrynode; }
+d427 1
+a427 1
+    PgmStmt * entrynode;
+d435 1
+d469 1
+a469 1
+    PgmStmt * getEntryNode() const { return entry; }
+d474 1
+a474 1
+    PgmStmt * entry;
+@
+
+
+1.36
+log
+@Earlier commented-out changes deleted.
+@
+text
+@a69 1
+class PgmExpr;
+d71 1
+a71 1
+class CFGnode;
+d81 2
+a82 2
+    static PgmExpr * read(InputState& is, char * buf, CFGnode * parent);
+    static void readlist(InputState& is, char * buf, suco_llist<PgmExpr *>& nodelist, CFGnode * parent);
+d125 1
+a125 1
+    PExprCall(AID a, suco_set<AO *>& f, int n, CFGnode& par)
+d135 1
+a135 1
+    CFGnode& getParentNode() { return parent; }
+d146 1
+a146 1
+    CFGnode& parent;
+d222 1
+a222 1
+    static PExprParallel& read(InputState& is, char * buf, CFGnode * parent);
+d238 1
+a238 1
+    static PExprBranch& read(InputState& is, char * buf, CFGnode * parent);
+d250 47
+d299 1
+a299 1
+class CFGnode
+a302 1
+    friend class CFGbblock; //- access to predecessors/successors, for bblock construction
+d304 1
+a304 1
+    friend class DFA;	//- access to predecessors/successors, nodelist, parent, worklist_flag
+a316 1
+    CFGfunction& getParentFunction() const { return parent; }
+d321 2
+a322 4
+    MBUfact& getMBUfact() { return mbu_fact; }
+
+    bool MBUisUseless() const { return mbu_is_useless; }
+    void MBUsetUseless() { mbu_is_useless = true; }
+d325 1
+a325 1
+    CFGnode();
+d328 3
+a330 8
+    CFGnode(CFGfunction& par, AID a = AID::zero)
+	 : parent(par), nodelist(),
+	   succs(0), nsuccs(0),
+	   preds(0), npreds(0),
+	   aid(a), labels(0), nlabels(0), annot(),
+	   worklist_flag(false),
+	   mbu_fact(),
+	   mbu_is_useless(false)
+d334 3
+a336 3
+    static CFGnode& read(InputState& is, CFGfunction& par, char * buf);
+    static bool readentry(InputState& is, CFGfunction& par, char * buf, CFGnode *& current, suco_llist<CFGnode *>& nodelist);
+    static void readlist(InputState& is, CFGfunction& par, char * buf, CFGnode *& current, suco_llist<CFGnode *>& nodelist);
+d338 1
+a338 1
+    //--- pred/succ stuff
+a339 5
+    void addSuccessor(CFGnode& n);
+    void initSuccsCount(int n);
+    void initPredsCount(int n);
+    int countPreds() const;
+    int countSuccs() const;
+a341 1
+    CFGfunction& parent;
+a342 4
+    CFGnode ** succs; //-- array of nsuccs+1 elements, except when 0
+    int nsuccs;
+    CFGnode ** preds; //-- array of npreds+1 elements, except when 0
+    int npreds;
+d350 1
+a350 1
+        friend class CFGnode;
+a367 5
+
+    //-- dataflow analysis stuff
+    bool worklist_flag;
+    MBUfact mbu_fact;
+    bool mbu_is_useless;
+d372 1
+a372 1
+class CFGbblock
+a374 1
+    friend class DFA;	//- access to predecessors/successors, worklist_flag
+d377 2
+a378 2
+    CFGbblock(CFGnode& headnode, suco_llist<CFGnode *>& unusednodes, 
+				 suco_llist<CFGnode *>& pendingnodes);
+d383 1
+a383 3
+    suco_llist<CFGnode *> nodelist;
+    CFGbblock ** succs; //- null-terminated list
+    CFGbblock ** preds; //- null-terminated list
+a385 3
+
+    bool worklist_flag;
+    MBUfact mbu_fact;
+d406 3
+a408 3
+    suco_llist<CFGnode *>& getCFGlist() { return cfglist; }
+    CFGnode * getEntryNode() const { return entrynode; }
+    suco_llist<CFGnode *>& getExitNodes() { return exitnodes; }
+d416 3
+a418 3
+    suco_llist<CFGnode *> cfglist;
+    CFGnode * entrynode;
+    suco_llist<CFGnode *> exitnodes;	//-- TODO: convert to bblocks?
+d435 3
+a437 3
+    //-- map CFGnode to CFGbblock
+    CFGbblock * lookupBlockByHead(CFGnode& cn);
+    CFGbblock * lookupBlockByTail(CFGnode& cn);
+d458 1
+a458 1
+    CFGnode * getEntryNode() const { return entry; }
+d463 1
+a463 1
+    CFGnode * entry;
+@
+
+
+1.35
+log
+@"Simplified" CFGnode succ/pred members to contain a single
+array, rather than treating pred1/succ1 specially.
+Old code commented out, will be cleaned out next.
+@
+text
+@d288 2
+a289 2
+	   /*succ1(0),*/ succs(0), nsuccs(0),
+	   /*pred1(0),*/ preds(0), npreds(0),
+a311 1
+//    CFGnode * succ1;
+a313 1
+//    CFGnode * pred1;
+@
+
+
+1.34
+log
+@Rewrote callgraph-traversal to
+1. number each function in depth-first order (can be used for
+   approximate DFA worklist prioritization)
+2. number each recursive group with a unique id
+   (can be used to more precisely identify cases of possible
+    recursion, when the callsite_top stuff and handleReturnDealloc
+    stuff need to be treated differently)
+Tested somewhat, not too thorough.
+@
+text
+@d288 2
+a289 2
+	   succ1(0), succs(0), nsuccs(0),
+	   pred1(0), preds(0), npreds(0),
+d301 1
+a301 1
+    //--- helpers for read functions
+d306 2
+a307 1
+
+d312 2
+a313 2
+    CFGnode * succ1;
+    CFGnode ** succs;
+d315 2
+a316 2
+    CFGnode * pred1;
+    CFGnode ** preds;
+@
+
+
+1.33
+log
+@1. Added callgraph to CFGfunction: wrote traverser to
+   determing if a function is recursive;
+   In DFA/callsite: pre-facts are met only if function
+   is recursive (or flag_callsite_top is false, with -callmeet
+   flag), and also handleReturnDealloc is bypassed when function
+   is recursive.
+2. Fixed bug with Switch case: before fix, nested switches were
+   not handled correctly: pred node was connect to all enclosing
+   case stmts, including those nested in deeper switches.
+@
+text
+@d384 1
+a384 1
+		callgraph(), callgraph_mode(cgm_inactive), recursive(false) {}
+d398 1
+a398 1
+    bool isRecursive() const { return recursive; }
+d413 3
+a415 6
+    enum cgmode { cgm_inactive	= 0,
+		  cgm_active	= 1,
+		  cgm_visited	= 2
+		} callgraph_mode;
+    bool recursive;
+    void traverseCallGraph(bool recursing);
+@
+
+
+1.32
+log
+@1. fixed bug with switch case that was causing "addPredecessor:
+   infrequent case encountered" warnings.
+   --> due to miscount when a switch statement has no default
+   label -- an edge is added from pred_node to the outnode,
+   but that edge was not counted when initializing the predecessor
+   count in the outnode.
+2. reshuffled CFGnode member functions -- privatized a bunch of 'em.
+@
+text
+@d84 1
+a84 1
+    virtual void debug_dump(FILE * outf, int indent = 0) = 0;
+d139 1
+a139 1
+    virtual void debug_dump(FILE * outf, int indent = 0);
+d159 1
+a159 1
+    virtual void debug_dump(FILE * outf, int indent = 0);
+d181 1
+a181 1
+    virtual void debug_dump(FILE * outf, int indent = 0);
+d205 1
+a205 1
+    virtual void debug_dump(FILE * outf, int indent = 0);
+d224 1
+a224 1
+    virtual void debug_dump(FILE * outf, int indent = 0);
+d240 1
+a240 1
+    virtual void debug_dump(FILE * outf, int indent = 0);
+d263 1
+a263 1
+    void debug_dump(FILE * outf, int indent = 0);
+d302 1
+a302 1
+    bool hasPred(CFGnode& n);
+d383 2
+a384 1
+		callsites(), localvars(), bblocks() {}
+d387 1
+a387 1
+    void debug_dump(FILE * outf);
+d398 1
+d411 9
+d437 1
+a437 1
+    CFG() : fnlist(), globnodes(), entry(0) {}
+d452 1
+@
+
+
+1.31
+log
+@Renamed DFAnode to PgmExpr, and its subclasses from
+DFA_ to PExpr_.
+@
+text
+@d258 1
+a258 1
+    friend class CFGfunction;
+a260 14
+    CFGnode(CFGfunction& par, AID a = AID::zero)
+	 : parent(par), nodelist(),
+	   succ1(0), succs(0), nsuccs(0),
+	   pred1(0), preds(0), npreds(0),
+	   aid(a), labels(0), nlabels(0), annot(),
+	   worklist_flag(false),
+	   mbu_fact(),
+	   mbu_is_useless(false)
+	 {}
+
+    void addSuccessor(CFGnode& n);
+    void initSuccsCount(int n);
+    void initPredsCount(int n);
+
+a262 3
+    static CFGnode& read(InputState& is, CFGfunction& par, char * buf);
+    static void readlist(InputState& is, CFGfunction& par, char * buf, CFGnode *& current, suco_llist<CFGnode *>& nodelist);
+    static bool readentry(InputState& is, CFGfunction& par, char * buf, CFGnode *& current, suco_llist<CFGnode *>& nodelist);
+d283 19
+a301 1
+    //--- functions
+d303 4
+@
+
+
+1.30
+log
+@Wrote basic block mechanism, and routines to construct it.
+Currently builds, runs, but not yet used.
+Also, consolidated CFG initialization into one function:
+CFG:: prepareCFG, called by tca.cpp.
+Makefile dependencies updated.
+@
+text
+@d70 1
+a70 1
+class DFAnode;
+d74 1
+a74 1
+class DFAnode
+d82 2
+a83 2
+    static DFAnode * read(InputState& is, char * buf, CFGnode * parent);
+    static void readlist(InputState& is, char * buf, suco_llist<DFAnode *>& nodelist, CFGnode * parent);
+d88 1
+a88 1
+    bool traverseRootNodes(bool (*fp)(DFAnode& dn));
+d94 1
+a94 1
+    static bool notFunctionCall(DFAnode& dn);
+d97 1
+a97 1
+    DFAnode(enum Kind k) : kind(k), mbu_is_useless(false) {}
+d106 1
+a106 1
+class DFAarg
+d109 1
+a109 1
+    DFAarg(AID a, suco_set<AO *>& argaos) : aid(a), aos(argaos) {}
+d115 1
+a115 1
+    DFAarg();
+d120 1
+a120 1
+class DFAcall : public DFAnode
+d123 1
+a123 1
+    friend class DFAnode;
+d126 3
+a128 3
+    DFAcall(AID a, suco_set<AO *>& f, int n, CFGnode& par)
+	: DFAnode(fCall), aid(a), faos(f),
+	  nargs(n), args(n?(new DFAarg*[n]):0),
+d133 2
+a134 2
+    DFAarg * getArg(int argno) //- argno is one-based!
+	{ return (argno <= nargs)?(args[argno-1]):((DFAarg *)0); }
+d145 1
+a145 1
+    DFAarg ** args;
+d153 1
+a153 1
+class DFAassign : public DFAnode
+d156 2
+a157 2
+    DFAassign(AID a, suco_set<AO *>& e1l, suco_set<AO *>& e2l)
+	: DFAnode(fAssign), aid(a), e1aos(e1l), e2aos(e2l) {}
+d173 1
+a173 1
+class DFAdecl : public DFAnode
+d178 2
+a179 2
+    DFAdecl(AO& o, int fsid, enum dKind k, int arg_no = 0)
+	: DFAnode(fDecl), ao(o), filestem_id(fsid), dkind(k), argno(arg_no) {}
+d199 1
+a199 1
+class DFAverify : public DFAnode
+d202 2
+a203 2
+    DFAverify(enum Kind k, AID a, suco_set<AO *>& s, char * str)
+		: DFAnode(k), aid(a), aos(s), estr(str) {}
+d217 1
+a217 1
+class DFAparallel : public DFAnode
+d220 2
+a221 2
+    friend class DFAnode;
+    DFAparallel() : DFAnode(fParallel), nodelists() {}
+d223 1
+a223 1
+    static DFAparallel& read(InputState& is, char * buf, CFGnode * parent);
+d226 1
+a226 1
+    suco_llist<suco_llist<DFAnode *> *>& getNodeLists() { return nodelists; }
+d229 1
+a229 1
+    suco_llist<suco_llist<DFAnode *> *> nodelists;
+d233 1
+a233 1
+class DFAbranch : public DFAnode
+d236 2
+a237 2
+    friend class DFAnode;
+    DFAbranch() : DFAnode(fBranch), tnodelist(), fnodelist() {}
+d239 1
+a239 1
+    static DFAbranch& read(InputState& is, char * buf, CFGnode * parent);
+d242 2
+a243 2
+    suco_llist<DFAnode *>& getTrueNodes() { return tnodelist; }
+    suco_llist<DFAnode *>& getFalseNodes() { return fnodelist; }
+d246 1
+a246 1
+    suco_llist<DFAnode *> tnodelist, fnodelist;
+d266 2
+a267 2
+/**/	   worklist_flag(false),
+/**/	   mbu_fact(),
+d305 1
+a305 1
+    suco_llist<DFAnode *> nodelist;
+d339 2
+a340 2
+/**/    bool worklist_flag;
+/**/    MBUfact mbu_fact;
+d390 1
+a390 1
+    suco_llist<DFAcall *>& getCallSites() { return callsites; }
+d399 1
+a399 1
+    suco_llist<DFAcall *> callsites;
+d413 1
+a413 1
+    static bool collectLocalVars(DFAnode& df);
+d429 1
+a429 1
+    suco_llist<DFAnode *>& getGlobalNodes() { return globnodes; }
+d434 1
+a434 1
+    suco_llist<DFAnode *> globnodes;
+d443 1
+a443 1
+    static DFAcall * act_caller_node;
+d446 1
+a446 1
+    static bool assignCallTargets(DFAnode& dn);
+@
+
+
+1.29
+log
+@Revised collectWorkList to first clear then use worklist_flag,
+rather than checking for worklist membership first -- significant
+speedup.
+Also, made worklist_flag private -- since friend DFA is the only
+class that uses it.
+@
+text
+@d88 1
+a88 1
+    void traverseRootNodes(void (*fp)(DFAnode& dn));
+d94 2
+d257 1
+d266 3
+a268 2
+	   worklist_flag(false),
+	   mbu_fact(), mbu_is_useless(false)
+d275 2
+d339 25
+a365 1
+    bool mbu_is_useless;
+d378 1
+a378 1
+		callsites(), localvars() {}
+d396 1
+a396 1
+    suco_llist<CFGnode *> exitnodes;
+d402 9
+d413 1
+a413 1
+    static void collectLocalVars(DFAnode& df);
+d426 1
+a426 2
+    void connectSuperGraph();
+    void collectLocalDecls();
+d437 5
+d446 1
+a446 1
+    static void assignCallTargets(DFAnode& dn);
+@
+
+
+1.28
+log
+@Changed worklist to a queue/stack, with two execution modes
+(fifo/lifo):
+ - added command-line flags "fifo" or "lifo"
+ - in suco, made stack inherit queue publicly, so a stack
+   object can be used as both a stack and a queue
+   (an unsafe thing to do?)
+ - added a flag in CFGnodes to indicate if a node is in the
+   worklist -- should make it faster than checking for
+   worklist membership each time, though we have to make
+   sure the bookkeeping is correct.
+@
+text
+@d256 1
+a256 1
+    friend class DFA;	//- access to predecessors/successors, nodelist, parent
+d259 1
+a259 2
+	 : parent(par),
+	   worklist_flag(false), nodelist(),
+d263 1
+a292 2
+    bool worklist_flag;
+
+d332 2
+a333 1
+    //-- dataflow analysis facts
+@
+
+
+1.27
+log
+@1. in TCAstate, mbu is now a member -- it stores the results
+   to be output later.
+2. MBU now contains a result fact, and DFA analysis now
+   progresses in two modes: iterating and collecting,
+   the latter calling collectResultsVerifyTag(/Ptr)
+   to accumulate the results.
+3. in cfg.cpp/h, DFAdecl now has filestem_id argument,
+   needed for consistent output.
+Current state of program: compiles, runs without crashing,
+but results are wrong (no output on many examples, suspect
+function call handling error?).
+@
+text
+@d259 2
+a260 1
+	 : parent(par), nodelist(),
+d292 2
+@
+
+
+1.26
+log
+@Major changes -- fixed logical flaws in ability to collect
+MBU results.
+1. Added suco_llist::Copy and suco_set::Union (non-destructive version)
+2. In cfg.cpp/h, added new type DFAarg to represent a function
+   call actual argument.
+3. In dfa.cpp/h, MBUfacts now stores (in LocAidNode) for each
+   AO, in place of just a single set of aids:
+    - nodes:DFAnode - assignments, calls, and formal decls
+    - args::DFAarg - function call arguments
+    - rets:CFGnode - function return node
+@
+text
+@d176 2
+a177 2
+    DFAdecl(AO& o, enum dKind k, int arg_no = 0)
+	: DFAnode(fDecl), ao(o), dkind(k), argno(arg_no) {}
+d185 1
+d192 1
+d205 2
+d353 1
+d362 1
+a362 1
+    suco_llist<CFGnode *> cfglist;  // head is CFG entry, tail is CFG exit
+a366 1
+//    int filestemId;
+d380 1
+a380 1
+    CFG() : fnlist(), /* filestemlist(),*/ globnodes(), entry(0) {}
+d388 1
+a393 1
+//    suco_llist<const char *> filestemlist;
+@
+
+
+1.25
+log
+@Added argaids to DFAcall class (aids for function
+call arguments).
+@
+text
+@d104 14
+d126 1
+a126 2
+	  nargs(n), argaoss(n?(new suco_set<AO *>*[n]):0),
+		    argaids(n?(new AID[n]):0),
+d131 2
+a132 2
+    suco_set<AO *> * getArgAOs(int argno) //- argno is one-based!
+	{ return (argno <= nargs)?(argaoss[argno-1]):((suco_set<AO *> *)0); }
+d143 1
+a143 2
+    suco_set<AO *> ** argaoss;
+    AID * argaids;
+@
+
+
+1.24
+log
+@Removed previously commented-out stuff (old aid/aidnos).
+Also, moved CFG::writeFileStemMap to AID::writeFileStemMap.
+@
+text
+@d47 1
+a47 1
+    AID(int fsid, int aidno) : filestem_id(fsid), aid(aidno) {}
+d113 1
+d131 1
+@
+
+
+1.23
+log
+@Changed CFG nodes' AID member to be of type AID, which
+is a pair <filestem_id, aid>; MBUfacts now tracks a set
+of (references to) these, so we can have access to the
+filestem_id for output.
+Old code commented out -- will clear out in next checkin.
+@
+text
+@d54 2
+d110 2
+a111 2
+    DFAcall(/*int aidno,*/AID a, suco_set<AO *>& f, int n, CFGnode& par)
+	: DFAnode(fCall), aid(/*aidno*/a), faos(f),
+d115 1
+a115 1
+    /*int*/AID& getAid() { return aid; }
+a125 1
+//    int aid;
+d140 2
+a141 2
+    DFAassign(/*int aidno,*/AID a, suco_set<AO *>& e1l, suco_set<AO *>& e2l)
+	: DFAnode(fAssign), aid(/*aidno*/a), e1aos(e1l), e2aos(e2l) {}
+d147 1
+a147 1
+    /*int*/AID& getAid() { return aid; }
+d152 1
+a152 1
+    /*int*/AID aid;
+d184 2
+a185 2
+    DFAverify(enum Kind k, /*int aidno,*/AID a, suco_set<AO *>& s, char * str)
+		: DFAnode(k), aid(/*aidno*/a), aos(s), estr(str) {}
+d189 1
+a189 1
+    /*int*/AID& getAid() { return aid; }
+d192 1
+a192 1
+    /*int*/AID aid;
+d240 1
+a240 1
+    CFGnode(CFGfunction& par, /*unsigned int a = 0*/AID a = AID::zero)
+d265 1
+a265 1
+    /*unsigned int*/AID& getAid() { return aid; }
+d288 1
+a288 1
+    /*unsigned int*/AID aid;
+d325 1
+a325 1
+    CFGfunction(/*int fsid,*/ AOId& ao, /*int aidno*/AID a) :
+d327 1
+a327 1
+		idao(ao), aid(/*aidno*/a), //filestemId(fsid),
+d347 1
+a347 1
+    /*unsigned int*/AID aid; // verification aid
+a365 2
+
+    void writeFileStemMap(FILE * outf);
+@
+
+
+1.22
+log
+@Added is_useless flag to CFGnode/DFAnode, to make visits
+faster during DFA.
+@
+text
+@a6 1
+#include "dfa.h"
+d44 24
+d86 1
+a86 1
+    void traverseRootNodes(void (*fp)(DFAnode& df));
+d108 2
+a109 2
+    DFAcall(int aidno, suco_set<AO *>& f, int n, CFGnode& par)
+	: DFAnode(fCall), aid(aidno), faos(f),
+d113 1
+a113 1
+    int getAid() const { return aid; }
+d124 2
+a125 1
+    int aid;
+d139 2
+a140 2
+    DFAassign(int aidno, suco_set<AO *>& e1l, suco_set<AO *>& e2l)
+	: DFAnode(fAssign), aid(aidno), e1aos(e1l), e2aos(e2l) {}
+d146 1
+a146 1
+    int getAid() const { return aid; }
+d151 1
+a151 1
+    int aid;
+d183 2
+a184 2
+    DFAverify(enum Kind k, int aidno, suco_set<AO *>& s, char * str)
+		: DFAnode(k), aid(aidno), aos(s), estr(str) {}
+d188 2
+d191 1
+a191 1
+    int aid;
+d239 1
+a239 1
+    CFGnode(CFGfunction& par, unsigned int a = 0)
+d264 1
+a264 1
+    unsigned int getAid() const { return aid; }
+d287 1
+a287 1
+    unsigned int aid;
+d324 1
+a324 1
+    CFGfunction(const char * fn, AOId& ao, int aidno) :
+d326 1
+a326 1
+		idao(ao), aid(aidno), filestem(fn),
+d329 1
+a329 1
+    static CFGfunction& read(InputState& is, char * buf, const char * filestem);
+d337 1
+d346 2
+a347 2
+    unsigned int aid; // verification aid
+    const char * filestem;
+d361 1
+a361 1
+    CFG() : fnlist(), globnodes(), entry(0) {}
+d366 2
+d376 1
+d384 1
+a384 1
+    static void assignCallTargets(DFAnode& df);
+@
+
+
+1.21
+log
+@Suco change (major):
+ 1. Added new file suco_usage.cpp as a hack to instantiate
+    the suco code only once, rather than once-per-file as
+    before.
+ 2. Suco now has node-recycling mechanism in place, which
+    seems to help with rtca performance.
+@
+text
+@d66 2
+d70 1
+a70 1
+    DFAnode(enum Kind k) : kind(k) {}
+d73 2
+d218 1
+a218 1
+	   mbu_fact()
+d244 3
+d288 1
+@
+
+
+1.20
+log
+@Removed space, for prettiness (and grep-ability) only.
+@
+text
+@a4 1
+#include "suco.cpp"
+@
+
+
+1.19
+log
+@Filled in final holes: handleFormals and fCall case.
+Other (related) changes:
+ 1. split handleAssign into two different API functions,
+    handleStrongAssign and handleWeakAssign; the former
+    is used as a helper in both handleFormals and the
+    fCall case.
+ 2. in cfg.h, renamed confusing nomenclature "getParent"
+    to getParentNode and getParentFunction.
+@
+text
+@d247 1
+a247 1
+    suco_llist <DFAnode *> nodelist;
+@
+
+
+1.18
+log
+@Resturctured:
+ 1. may-be-uninit analysis is now called directly from
+    tca.cpp to mbu.doAnalysis, rather than with an intermediate
+    cfg.mayBeUninitAnalysis.
+ 2. updated CFG data structures, so that
+    a. each CFG has a unique entry node (with no DFA content,
+       so that its facts can be assigned after computing
+       global facts). Note that while this node's parent is
+       set to main, it doesn't count as main's entry node.
+    b. DFAcall nodes now have mbu_facts, and pointers to
+       their parents.
+ 3. in DFA, refined further analysis process, so that all
+    that remains to be written are
+    a. handleFormal(), which will look up the callsites
+       and compute whatever facts are needed, and
+    b. fCall case, which needs to handle return values
+       as well (may be non-trivial, this one).
+@
+text
+@d87 4
+d92 1
+a92 1
+    CFGnode& getParent() { return parent; }
+d143 1
+d150 1
+a150 1
+    int argno;
+d231 2
+d234 1
+a234 1
+    CFGfunction& getParent() const { return parent; }
+d302 1
+@
+
+
+1.17
+log
+@Deleted previously-commented out stuff (old MBU stuff, now in dfa.cpp/h)
+@
+text
+@d48 1
+d58 2
+a59 2
+    static DFAnode * read(InputState& is, char * buf);
+    static void readlist(InputState& is, char * buf, suco_llist<DFAnode *>& nodelist);
+d82 1
+a82 1
+    DFAcall(int aidno, suco_set<AO *>& f, int n)
+d85 5
+a89 1
+	  targetfns() {}
+d99 4
+d135 1
+d168 1
+a168 1
+    static DFAparallel& read(InputState& is, char * buf);
+d184 1
+a184 1
+    static DFAbranch& read(InputState& is, char * buf);
+d203 1
+a203 1
+    friend class DFA;	//- access to predecessors/successors
+d224 1
+d227 1
+d294 1
+d296 2
+d319 1
+a319 1
+    CFG() : fnlist(), globnodes(), mainfn(0) {}
+d326 3
+a328 1
+    void mayBeUninitAnalysis();
+d333 1
+a333 1
+    CFGfunction * mainfn;
+d335 2
+a336 2
+    //-- static stuff to connect call/fndefns recursively
+    static DFAcall * act_call_target;
+@
+
+
+1.16
+log
+@Wrote much stuff for MBU (may-be-uninit) analysis, but
+changed them, abstracting them out into the new files
+dfa.cpp/dfa.h. That now seems to work, but the old stuff
+have been left behind, commented out. The next checkin will
+delete these commented-out parts.
+@
+text
+@d186 1
+a186 2
+//class MBU_facts;
+/**/class MBUfact;
+d193 1
+a193 3
+//    friend class MBUanalysis;
+/**/friend class DFA;
+//friend class MBU;
+d200 1
+a200 2
+//	   mbu_facts(0),
+/**/	   mbu_fact()
+d220 1
+a220 1
+/**/MBUfact& getMBUfact() { return mbu_fact; }
+d261 2
+a262 3
+    //-- dataflow analysis facts, 0 --> "top"
+//    MBU_facts * mbu_facts;
+/**/MBUfact mbu_fact; //- TODO: convert to non-pointer -- may involve header-include shuffling
+a323 68
+
+//----------------------------------
+//-to be obsolescent, replace by above
+/*
+class MBU_facts
+{
+  public:
+    MBU_facts() : head(0) {}
+    MBU_facts(MBU_facts * mf) //-- create copy
+	: head(0) { this->meet(mf); }
+    ~MBU_facts();
+
+    void stealFrom(MBU_facts& mf); //-- transfer mf's members to this
+
+    void meet(MBU_facts * mf);
+    void join(MBU_facts& mf);
+    bool keysEqual(MBU_facts& mf);
+    void addFact(AO& ao, int aidno = 0);
+    void removeFacts(AO& ao);
+    void addUnsafeAliasLocs(suco_set<AO *>& aoset, int aidno);
+
+    bool intersectsAliases(suco_set<AO *>& aoset);
+
+    void debug_dump(FILE * outf);
+
+  private:
+    MBU_facts(MBU_facts& mf); //-- disable copy constructor
+    class LocAidNode
+    {
+      public:
+        LocAidNode(AO& o, int aid, LocAidNode * nx = 0)
+		: ao(o),
+		  aids(),
+		  next(nx)
+		{ if(aid) aids.Insert(aid); }
+        LocAidNode(LocAidNode& n, LocAidNode * nx = 0)
+		: ao(n.ao),
+		  aids(n.aids), // calls copy constructor
+		  next(nx) {}
+        AO& ao;
+        suco_set<int> aids;
+        LocAidNode * next;
+
+      private:
+        LocAidNode();
+    } * head;
+
+    //-- static helpers for addUnsafeAliasLocs
+    static MBU_facts * aual_facts;
+    static int aual_aid;
+    static bool add_locs_to_aual_facts(AO& ao);
+
+    //-- static helpers for intersectsAliases
+    static suco_set<ECR *> ia_ecrset;
+    static bool is_ia_ecrset(ECR& ecr);
+};
+*/
+/*
+class MBUanalysis
+{
+  public:
+    static void propagateDFAnode(DFAnode& dn, MBU_facts& mf);
+    static void propagateCFGnode(CFGnode& cn);
+    static void doAnalysis(CFGnode& entry);
+  private:
+    static suco_queue<CFGnode *> worklist;
+};
+*/
+@
+
+
+1.15
+log
+@CFG: wrote MBUfacts test for intersection between a MBUfact
+and an AOset's alias set (done using ECR::traverseAliases).
+Cascaded changes to AO/ECR include:
+1. AO::ts_categ is now explicitly enumerated to allow >=
+   comparison
+2. ECR::traverseAliases now takes bool functions, and
+   returns a bool, true if all applications return true,
+   and false if *any* application returns false (and also
+   halts traversal -- this is an optimization for the
+   intersection check added: once an intersection is found,
+   no further traversal is needed).
+@
+text
+@d8 1
+d106 1
+d161 2
+d177 3
+d186 2
+a187 1
+class MBUfacts;
+d194 3
+a196 1
+    friend class MBU;
+d203 2
+a204 1
+	   mbu_facts(0)
+d224 2
+d266 2
+a267 1
+    MBUfacts * mbu_facts;
+d331 3
+a333 2
+
+class MBUfacts
+d336 4
+a339 2
+    MBUfacts() : head(0) {}
+    ~MBUfacts();
+d341 5
+a345 2
+    void meet(MBUfacts * mf);
+    bool keysEqual(MBUfacts& mf);
+d347 3
+d355 1
+d376 5
+d385 3
+a387 2
+
+class MBU
+d390 1
+a390 1
+    static void propagateDFAnode(DFAnode& dn, MBUfacts& mf);
+d396 1
+@
+
+
+1.14
+log
+@Added determination of strong/weak assignments.
+@
+text
+@d312 1
+a312 1
+    static void addAOtoCallTarget(AO& ao);
+d327 1
+d351 4
+@
+
+
+1.13
+log
+@Started writing MBU, MBUfacts classes.
+Skeletal framework started, not done.
+@
+text
+@d52 1
+d103 5
+d125 1
+d325 2
+d355 1
+a355 1
+    static void propagateDFAnode(DFAnode& dn);
+@
+
+
+1.12
+log
+@Added Malloc decl.
+@
+text
+@d172 2
+d179 1
+d185 2
+a186 2
+	   aid(a), labels(0), nlabels(0),
+	   annot()
+d244 3
+d311 43
+@
+
+
+1.11
+log
+@1. Added collectLocalDecls/collectLocalVars to collect
+   the set of local variables in each function.
+2. Readjusted function exit handling so that (a) all exit
+   nodes are annotated RETURN, (b) each function is associated
+   with a set of exitnodes, rather than a single exitnode,
+2a.Each CFGnode now has a pointer to its parent function
+2b.Return nodes now handle the AOs that were previously
+   not output by tc -assign.
+@
+text
+@d38 1
+d45 1
+a45 1
+class DFAfact;
+d48 1
+a48 1
+class DFAfact
+d55 2
+a56 2
+    static DFAfact * read(InputState& is, char * buf);
+    static void readlist(InputState& is, char * buf, suco_llist<DFAfact *>& factlist);
+d61 1
+a61 1
+    void traverseRootFacts(void (*fp)(DFAfact& df));
+d66 1
+a66 1
+    DFAfact(enum Kind k) : kind(k) {}
+d73 1
+a73 1
+class DFAcall : public DFAfact
+d76 1
+a76 1
+    friend class DFAfact;
+d80 1
+a80 1
+	: DFAfact(fCall), aid(aidno), faos(f),
+d94 1
+a94 1
+class DFAassign : public DFAfact
+d98 1
+a98 1
+	: DFAfact(fAssign), aid(aidno), e1aos(e1l), e2aos(e2l) {}
+d108 1
+a108 1
+class DFAdecl : public DFAfact
+d111 1
+a111 1
+    enum dKind { dFormal, dLocal, dStatic };
+d113 2
+a114 2
+    DFAdecl(AOId& ao, enum dKind k, int arg_no = 0)
+	: DFAfact(fDecl), idao(ao), dkind(k), argno(arg_no) {}
+d118 2
+a119 1
+    AOId& getIdAO() const { return idao; }
+d124 1
+a124 1
+    AOId& idao;
+d129 1
+a129 1
+class DFAverify : public DFAfact
+d133 1
+a133 1
+		: DFAfact(k), aid(aidno), aos(s), estr(str) {}
+d143 1
+a143 1
+class DFAparallel : public DFAfact
+d146 2
+a147 2
+    friend class DFAfact;
+    DFAparallel() : DFAfact(fParallel), factlists() {}
+d153 1
+a153 1
+    suco_llist<suco_llist<DFAfact *> *> factlists;
+d157 1
+a157 1
+class DFAbranch : public DFAfact
+d160 2
+a161 2
+    friend class DFAfact;
+    DFAbranch() : DFAfact(fBranch), tfactlist(), ffactlist() {}
+d167 1
+a167 1
+    suco_llist<DFAfact *> tfactlist, ffactlist;
+d179 1
+a179 1
+	 : parent(par), factlist(),
+d209 1
+a209 1
+    suco_llist <DFAfact *> factlist;
+d274 1
+a274 1
+    static void collectLocalVars(DFAfact& df);
+d282 1
+a282 1
+    CFG() : fnlist(), globfacts(), mainfn(0) {}
+d293 1
+a293 1
+    suco_llist<DFAfact *> globfacts;
+d300 1
+a300 1
+    static void assignCallTargets(DFAfact& df);
+@
+
+
+1.10
+log
+@Added initial framework for flow-sensitive stuff in tca.cpp/h.
+Wrote functions to connect call/return nodes to function nodes
+to create supergraph.
+Minor change in id.cpp/h: get_AOId returns reference to AOId
+rather than AO object; similarly for get_AOStringLit/get_AOMalloc.
+@
+text
+@d62 2
+d117 2
+d174 1
+d176 7
+a182 6
+    CFGnode(unsigned int a = 0) : factlist(),
+				  succ1(0), succs(0), nsuccs(0),
+				  pred1(0), preds(0), npreds(0),
+				  aid(a), labels(0), nlabels(0),
+				  annot()
+				{}
+d188 3
+a190 3
+    static CFGnode& read(InputState& is, char * buf);
+    static void readlist(InputState& is, char * buf, CFGnode *& current, suco_llist<CFGnode *>& nodelist);
+    static bool readentry(InputState& is, char * buf, CFGnode *& current, suco_llist<CFGnode *>& nodelist);
+d206 1
+d222 1
+d234 3
+a236 2
+	  const char * string;
+	  int integer;
+a238 1
+
+d249 1
+a249 1
+		cfglist(), entrynode(0), exitnode(0),
+d251 1
+a251 1
+		callsites() {}
+d256 2
+d262 2
+a263 1
+    CFGnode * entrynode, * exitnode;
+d268 5
+d286 1
+d294 1
+a294 1
+    //-- static stuff to do things recursively
+@
+
+
+1.9
+log
+@Added "expression string" (estr) argument to verifyTag and
+verifyPtr facts.
+@
+text
+@d50 1
+d60 2
+d68 2
+d74 1
+d78 2
+a79 1
+	  nargs(n), argaoss(n?(new suco_set<AO *>*[n]):0) {}
+d88 1
+d110 2
+a111 2
+    DFAdecl(AO& idao, enum dKind k, int arg_no = 0)
+	: DFAfact(fDecl), pidao(idao), dkind(k), argno(arg_no) {}
+d118 1
+a118 1
+    AO& pidao;
+d140 1
+d154 1
+d168 2
+a170 1
+  public:
+d238 6
+a243 2
+    CFGfunction(const char * fn, AO& idao, int aidno) :
+		cfglist(), entrynode(0), exitnode(0), pidao(idao), aid(aidno), filestem(fn) {}
+d248 2
+d253 1
+a253 1
+    AO& pidao; // function pid
+d256 1
+d264 1
+a264 1
+    CFG() : fnlist(), globfacts() {}
+d269 3
+d275 7
+@
+
+
+1.8
+log
+@Changed DFAformal to DFAdecl; now accepts three kinds
+of decls: formal, local, and static.
+Also, CFG::read will read in global decls and assignments
+(actually, will accept all facts, but should be restricted
+only to decls and assignments)
+@
+text
+@d118 2
+a119 2
+    DFAverify(enum Kind k, int aidno, suco_set<AO *>& s)
+		: DFAfact(k), aid(aidno), aos(s) {}
+d126 1
+@
+
+
+1.7
+log
+@Reduced scope of AOlist class: this is only to be used
+specially within the AO tree to look up AOs.
+All other occurrences (in ecr, cfg, etc) have been converted
+to use suco_set<AO *>.
+Should be no change in behavior.
+@
+text
+@d36 2
+d41 1
+d50 1
+a50 1
+    enum Kind { fCall, fAssign, fFormal, fVT, fVP,
+d57 1
+a57 1
+    static const char * kindToString(enum Kind k);
+d97 1
+a97 1
+class DFAformal : public DFAfact
+d100 4
+a103 2
+    DFAformal(int arg_no, AO& idao)
+	: DFAfact(fFormal), argno(arg_no), pidao(idao) {}
+d107 2
+d110 2
+a112 1
+    AO& pidao;
+d245 1
+a245 1
+    CFG() : fnlist() {}
+d252 1
+@
+
+
+1.6
+log
+@Augmented cfg DFfacts with references to AOs;
+the respective read functions call AO::stringToAOs,
+which requires the pidmap and aidmap arguments from tca,
+so a new class InputState was created (in tca.h) to
+pass these around conveniently.
+Also, added another helper function AO::stringToAOlist
+to read in lists of AOs, separated by ',', terminated by
+'.'.
+@
+text
+@d67 3
+a69 3
+    DFAcall(int aidno, AOlist& f, int n)
+	: DFAfact(fCall), aid(aidno), faol(f),
+	  nargs(n), argaols(n?(new AOlist*[n]):0) {}
+d75 1
+a75 1
+    AOlist& faol;
+d77 1
+a77 1
+    AOlist ** argaols;
+d83 2
+a84 2
+    DFAassign(int aidno, AOlist& e1l, AOlist& e2l)
+	: DFAfact(fAssign), aid(aidno), e1aol(e1l), e2aol(e2l) {}
+d90 2
+a91 2
+    AOlist& e1aol;
+    AOlist& e2aol;
+d110 2
+a111 2
+    DFAverify(enum Kind k, int aidno, AOlist& l)
+		: DFAfact(k), aid(aidno), aol(l) {}
+d117 1
+a117 1
+    AOlist& aol;
+@
+
+
+1.5
+log
+@Incorporated cfg.cpp/cfg.h into rtca project.
+Modified DFfacts to be abstract, and have many children;
+CFGfunction now stores a "filestem" argument;
+tca -debug mode now dumps the CFG as well;
+currently cfg input reads aid and other integral arguments
+of DFfacts; yet to do: read in AO arguments.
+@
+text
+@d6 2
+d42 1
+d50 2
+a51 2
+    static DFAfact * read(FILE * inf, char * buf);
+    static void readlist(FILE * inf, char * buf, suco_llist<DFAfact *>& factlist);
+d65 5
+a69 1
+    DFAcall(int aidno) : DFAfact(fCall), aid(aidno) {}
+d75 3
+d83 2
+a84 1
+    DFAassign(int aidno) : DFAfact(fAssign), aid(aidno) {}
+d90 2
+d97 2
+a98 2
+    DFAformal(int arg_no, int pidno)
+	: DFAfact(fFormal), argno(arg_no), pid(pidno) {}
+d104 1
+a104 1
+    int pid;
+d110 2
+a111 1
+    DFAverify(enum Kind k, int aidno) : DFAfact(k), aid(aidno) {}
+d117 1
+d125 1
+a125 1
+    static DFAparallel& read(FILE * inf, char * buf);
+d138 1
+a138 1
+    static DFAbranch& read(FILE * inf, char * buf);
+d162 3
+a164 3
+    static CFGnode& read(FILE * inf, char * buf);
+    static void readlist(FILE * inf, char * buf, CFGnode *& current, suco_llist<CFGnode *>& nodelist);
+    static bool readentry(FILE * inf, char * buf, CFGnode *& current, suco_llist<CFGnode *>& nodelist);
+d218 2
+a219 2
+    CFGfunction(const char * fn) :
+		cfglist(), entrynode(0), exitnode(0), pid(0), aid(0), filestem(fn) {}
+d221 1
+a221 1
+    static CFGfunction& read(FILE * inf, char * buf, const char * filestem);
+d227 1
+a227 1
+    unsigned int pid; // function pid
+d239 1
+a239 1
+    void read(FILE * inf, char * buf, const char * filestem);
+@
+
+
+1.4
+log
+@First stable version.
+Can read and successfully (as far as I can tell) build CFG
+from sml output. However, facts are currently rudimentary
+(exp arguments not yet handled), and there are some annoying-looking
+empty parallel node issues that should probably be optimized?
+@
+text
+@d41 2
+a42 1
+class DFAfact {
+d49 1
+a49 1
+    virtual void debug_dump(FILE * outf, int indent = 0);
+d54 22
+a75 1
+    DFAfact(enum Kind k, int a = 0) : aid(a), kind(k) {}
+d77 1
+d79 22
+d102 1
+a102 1
+    enum Kind kind;
+d105 2
+a106 1
+class DFAparallel : public DFAfact {
+d118 2
+a119 1
+class DFAbranch : public DFAfact {
+d132 2
+a133 1
+class CFGnode {
+d200 2
+a201 1
+class CFGfunction {
+d203 2
+a204 1
+    CFGfunction() : cfglist(), entrynode(0), exitnode(0), pid(0), aid(0) {}
+d206 1
+a206 1
+    static CFGfunction& read(FILE * inf, char * buf);
+d214 1
+d219 2
+a220 1
+class CFG {
+d224 1
+a224 1
+    static CFG& read(FILE * inf, char * buf);
+@
+
+
+1.3
+log
+@Version seems correct, but not complete (loop/structures: only
+While case written; now will try to abstract some of that code
+into functions for reuse).
+@
+text
+@d29 2
+d105 6
+d113 4
+d135 2
+a136 1
+		    aCaseLabel, aDefaultLabel
+d138 2
+a139 1
+        Annot(Kind k = aNone, const char * l = 0) : kind(k), label(l) {}
+d141 5
+a145 2
+        enum Kind kind;
+        const char * label;
+d147 1
+d154 1
+a154 1
+    CFGfunction() : cfglist(), pid(0), aid(0) {}
+d161 1
+@
+
+
+1.2
+log
+@Semi-working version -- only while loop handled.
+Appears to still be buggy, but at least stable enough to
+check in.
+@
+text
+@d102 2
+d142 1
+a142 1
+    suco_llist<CFGnode *> cfglist;  // first element is CFG entry
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d44 5
+a48 2
+    static DFAfact * DFAfact::read(FILE * inf, char * buf);
+    static void DFAfact::readlist(FILE * inf, char * buf, suco_llist<DFAfact *>& factlist);
+d62 2
+a63 1
+    static DFAparallel& read(FILE * inf, char * str = 0);
+d74 2
+a75 1
+    static DFAbranch& read(FILE * inf, char * str = 0);
+d86 6
+a91 5
+    CFGnode() : factlist(),
+		succ1(0), succs(0), nsuccs(0),
+		pred1(0), preds(0), npreds(0),
+		aid(0), labels(0), nlabels(0)
+		{}
+d97 4
+a100 1
+    static CFGnode& read(FILE * inf, char * str = 0);
+d114 14
+d136 2
+a137 1
+    static CFGfunction& read(FILE * inf, char * str = 0);
+d151 2
+a152 1
+    static CFG& read(FILE * inf, char * str = 0);
+@

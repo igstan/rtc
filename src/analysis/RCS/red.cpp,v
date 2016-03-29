@@ -1,0 +1,2071 @@
+head	1.31;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+1.31
+date	2004.07.16.19.46.35;	author suan;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2004.06.30.16.20.13;	author suan;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2004.05.07.19.52.39;	author suan;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2004.05.02.18.26.36;	author suan;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2004.04.07.21.07.14;	author suan;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2004.04.07.18.02.03;	author suan;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2004.02.24.23.48.16;	author suan;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2004.02.24.19.29.20;	author suan;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2004.02.18.16.06.52;	author suan;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2003.12.11.21.03.59;	author suan;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2003.12.11.19.18.20;	author suan;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2003.12.11.18.26.35;	author suan;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2003.11.13.00.23.51;	author suan;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2003.10.10.16.55.55;	author suan;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2003.10.08.23.31.07;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2003.10.08.16.31.43;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2003.10.01.22.18.32;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2003.03.20.23.01.22;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2003.03.20.19.38.21;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2003.03.20.00.03.06;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2003.02.27.00.54.40;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2003.02.26.21.11.26;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2003.02.24.21.53.17;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2003.02.22.18.04.11;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2003.02.22.00.11.49;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2003.02.22.00.05.44;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2003.02.21.17.40.11;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.02.18.23.27.37;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.02.17.20.21.32;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.02.17.19.29.23;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.02.17.17.43.28;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Redundant check elimination analysis.
+@
+
+
+1.31
+log
+@CHANGES:
+1. Moved PExprAssign::getSingletonLHSloc() to
+   ExpDescr::getSingletonLoc(), so it can be used
+   elsewhere to determine strong update.
+1a. FIXED BUG (??) in getSingletonLoc(): previously
+    for sdot object, was returning enclosing struct!?!
+2. Added -vtfix flag, which enables/disables RED and
+   MBU treatment of verifyTag as fixing the type on
+   mismatch.
+3. Added MBU handling of verifyTag vtfix.
+4. Changed so that MBU uses the RED parallel hackery
+   (PM_RED_UNSAFE) when vtfix is on.
+@
+text
+@#include "cfg.h"
+#include "ecr.h"
+#include "flags.h" //- for flag_vtfix
+#include "red.h"
+
+//--------------------------------
+// REDresults
+
+void REDresults::debug_dump(FILE * outf)
+{
+  //- write vp results
+  fprintf(outf, "--RED-VP-all results:\n");
+  suco_iterator<PExprVerify *> pai(this->vp_all);
+  while(pai.Iterate())
+    pai.Current()->debug_dump(outf, 3, true);
+
+  fprintf(outf, "--RED-VP-write results:\n");
+  suco_iterator<PExprVerify *> pwi(this->vp_write);
+  while(pwi.Iterate())
+    pwi.Current()->debug_dump(outf, 3, true);
+
+  //- write vt results
+  fprintf(outf, "--RED-VT results:\n");
+  suco_iterator<PExprVerify *> tvi(this->vt_verify);
+  while(tvi.Iterate())
+    tvi.Current()->debug_dump(outf, 3, true);
+  suco_iterator<PExprAssign *> tgi(this->vt_assign);
+  while(tgi.Iterate())
+    tgi.Current()->debug_dump(outf, 3, true);
+}
+
+void REDresults::writeResults(FILE * outf)
+{
+  fprintf(outf, "# REDSTAT-vp_rdwr(red/all): %d/%d\n", stat_num_vp_red, stat_num_vp);
+  fprintf(outf, "# REDSTAT-vp_write(red/all): %d/%d\n", stat_num_vpw_red, stat_num_vpw);
+  fprintf(outf, "# REDSTAT-vt_ver(red/all): %d/%d\n", stat_num_vtv_red, stat_num_vtv);
+  fprintf(outf, "# REDSTAT-vt_asg(red/all): %d/%d\n", stat_num_vta_red, stat_num_vta);
+
+  //- write vp-all results: ! <N> r p a <int>
+  suco_iterator<PExprVerify *> pai(this->vp_all);
+  while(pai.Iterate()){
+    AID& aid = pai.Current()->getAid();
+    fprintf(outf, "! %d r p a %d\n", aid.filestem_id, aid.aid);
+  }
+
+  //- write vp-write results: ! <N> r p w <int>
+  suco_iterator<PExprVerify *> pwi(this->vp_write);
+  while(pwi.Iterate()){
+    AID& aid = pwi.Current()->getAid();
+    fprintf(outf, "! %d r p w %d\n", aid.filestem_id, aid.aid);
+  }
+
+  //- write vt verify results: ! <N> r t v <int>
+  suco_iterator<PExprVerify *> tvi(this->vt_verify);
+  while(tvi.Iterate()){
+    AID& aid = tvi.Current()->getAid();
+    fprintf(outf, "! %d r t v %d\n", aid.filestem_id, aid.aid);
+  }
+  //- write vt assign results: ! <N> r t g <int>
+  suco_iterator<PExprAssign *> tgi(this->vt_assign);
+  while(tgi.Iterate()){
+    AID& aid = tgi.Current()->getAid();
+    fprintf(outf, "! %d r t g %d\n", aid.filestem_id, aid.aid);
+  }
+}
+
+//--------------------------------
+// REDfact
+
+DFAfact& REDfact::newClone(bool preserve)
+{
+  REDfact& nrf = *new REDfact;
+  nrf.meet(*this, preserve);
+  return nrf;
+}
+
+//-- set intersection
+// - preserve=false means we are free to tamper with df
+// - warnNotLE=true: warn if df has elements not in this
+//   --> this warning is not reported in this version!
+// - returns true if meet shrinks the size of this
+bool REDfact::meet(DFAfact& df, bool preserve, bool warnNotLE)
+{
+  REDfact& rf = (REDfact&) df;
+
+  if(rf.is_top){ //- meet with top: do nothing
+
+    return false;
+
+  } else if(this->is_top){ //- this is top, rf is not: set to rf
+
+    this->is_top = false;
+    this->edescset.Clear(); //- should be redundant
+    this->join(rf, preserve);
+
+    return true;
+
+  } else { //- meet non-bot with non-bot
+
+    int precount = this->edescset.Length();
+    this->edescset.Intersect(rf.edescset);
+    int postcount = this->edescset.Length();
+
+    return (postcount < precount);
+  }
+}
+
+//-- set union
+// - preserve=false means we are free to tamper with df
+void REDfact::join(DFAfact& df, bool preserve)
+{
+  REDfact& rf = (REDfact&) df;
+
+  if(this->is_top){ //- already top: do nothing
+    //- nop
+  } else if(rf.is_top){ //- join with top: set to top
+
+    this->is_top = true;
+    this->edescset.Clear();
+
+  } else { //- non-top meet non-top
+
+    if(preserve){
+      this->edescset.Union(rf.edescset);
+    } else {
+      this->edescset.UnionConsume(rf.edescset);
+    }
+  }
+}
+
+void REDfact::debug_dump(FILE * outf, bool brief)
+{
+  if(is_top){
+    fprintf(outf, "top\n");
+  } else if(brief){
+    fprintf(outf, " %d exprs\n", this->edescset.Length());
+  } else {
+
+    fprintf(outf, "\n");
+
+    suco_iterator<ExpDescr *> edi(edescset);
+    while(edi.Iterate()){
+      fprintf(outf, "  ExpDescr:\n");
+      edi.Current()->debug_dump(outf, 4);
+    }
+  }
+}
+
+//--------------------------------
+// REDfactPair
+
+DFAfact& REDfactPair::newClone(bool preserve)
+{
+  REDfactPair& nrfp = *new REDfactPair;
+  nrfp.meet(*this, preserve);
+  return nrfp;
+}
+
+bool REDfactPair::meet(DFAfact& df, bool preserve, bool warnNotLE)
+{
+  REDfactPair& rfp = (REDfactPair&) df;
+  bool triggered = false;
+  triggered |= this->getVPfact().meet(rfp.getVPfact(), preserve, warnNotLE);
+  triggered |= this->getVTfact().meet(rfp.getVTfact(), preserve, warnNotLE);
+  return triggered;
+}
+
+void REDfactPair::join(DFAfact& df, bool preserve)
+{
+  REDfactPair& rfp = (REDfactPair&) df;
+  this->getVPfact().join(rfp.getVPfact(), preserve);
+  this->getVTfact().join(rfp.getVTfact(), preserve);
+}
+
+void REDfactPair::debug_dump(FILE * outf, bool brief)
+{
+  fprintf(outf, "\n\t\tVP-Fact: ");
+  this->getVPfact().debug_dump(outf, brief);
+  fprintf(outf, "\t\tVT-Fact: ");
+  this->getVTfact().debug_dump(outf, brief);
+}
+
+//--------------------------------
+// REDfactHandler
+
+DFAfact& REDfactHandler::lookupNodeFact(CFGnode& cn, CFGnode * tfSucc)
+{
+  return cn.getREDfactPair();
+}
+
+DFAfact& REDfactHandler::lookupNodeFact(PExprCall& dc)
+{
+  return dc.getREDfactPair(); //- actually useless(?) because intraprocedural!
+}
+
+DFAfact& REDfactHandler::lookupNodeFact(PExprParallel& dp)
+{
+  return dp.getREDfactPair();
+}
+
+//--------------------------------
+// REDpFactHandler
+
+REDpFactHandler REDpFactHandler::handler;
+
+bool REDpFactHandler::handleStrongAssign(DFAfact& df, AO& lhs, ExpDescr& rhs,
+                            PgmExpr * dnode, PgmStmt * cnode, PExprArg * arg)
+{
+  REDfact& fact_vp = ((REDfactPair&) df).getVPfact();
+
+  { //- do VP fact: kill {e | lhs in afflocs(e)}
+    //- create singleton set
+    suco_set<AO *> lhsset;
+    lhsset.Insert(&lhs);
+
+    suco_iterator<ExpDescr *> edi(fact_vp.getEDescSet());
+    while(edi.Iterate()){
+      if(edi.Current()->affLocsIntersects(lhsset)){
+        edi.DeleteCurrent(); //- kill
+      }
+    }
+  }
+
+  return false; //- not useless
+}
+
+bool REDpFactHandler::handleWeakAssign(DFAfact& df, ExpDescr& lhs, ExpDescr& rhs, PExprAssign& dnode)
+{
+  REDfact& fact_vp = ((REDfactPair&) df).getVPfact();
+
+  //- collect lhs ecrset == aliases(lhs)
+  suco_set<ECR *> lecrset;
+  { //- collect lhs ecrs
+    suco_iterator<AO *> aoi(lhs.getAOs());
+    while(aoi.Iterate()){
+      AO& lao = *aoi.Current();
+      if(!lao.isVal()){
+        if(lao.isLoc()) lecrset.Insert(&lao.getECR());
+        else lecrset.Union(lao.getECR().getAliasECRs());
+      }
+    }
+  }
+
+  { // - i. kill { e | aliases(lhs) intersects afflocs(e) }
+    suco_iterator<ExpDescr *> edi(fact_vp.getEDescSet());
+    while(edi.Iterate()){
+      if(edi.Current()->affLocsIntersects(lecrset)){
+        edi.DeleteCurrent(); //- kill
+      }
+    }
+
+    // - ii. gen lhs
+    fact_vp.getEDescSet().Insert(&lhs);
+  }
+
+  return false; //- not useless
+}
+
+bool REDpFactHandler::handleVerify(DFAfact& df, PExprVerify& dv)
+{
+  REDfact& fact_vp = ((REDfactPair&) df).getVPfact();
+
+  { //- do VP-all: verify(e) ==> gen e
+    if(dv.getVpKind() == PExprVerify::vpPtr)
+      fact_vp.getEDescSet().Insert(&dv.getDesc());
+
+    //- NOTE: ignore vpPtrW -- that GEN is handled
+    //        in handleWeakAssign (because must kill first)
+    //  --> bad design choice to separate vpPtrW from assign nodes!
+  }
+
+  return false; //- not useless
+}
+
+void REDpFactHandler::handleFreeCall(DFAfact& df, PExprCall& dc)
+{
+  REDfact& fact_vp = ((REDfactPair&) df).getVPfact();
+
+  PExprArg * arg1 = dc.getArg(1);
+  if(arg1){
+    //- collect arg1 ecrset == points-to(arg1)
+    suco_set<ECR *> a1ecrset;
+    { //- collect points-to(arg1) ecrs
+      suco_iterator<AO *> aoi(arg1->getDesc().getAOs());
+      while(aoi.Iterate()){
+        AO& lao = *aoi.Current();
+        if(!lao.isVal()){
+          a1ecrset.Union(lao.getECR().getPointsTo().getAliasECRs());
+        }
+      }
+    }
+
+    { //- do VP fact
+      // - kill { e | points-to(arg1) intersects afflocs(e) }
+      suco_iterator<ExpDescr *> edi(fact_vp.getEDescSet());
+      while(edi.Iterate()){
+        if(edi.Current()->affLocsIntersects(a1ecrset)){
+          edi.DeleteCurrent(); //- kill
+        }
+      }
+    }
+  } //- else: no argument supplied to free: error?
+}
+
+void REDpFactHandler::interProcFilterEntryFact(DFAfact& df, CFGnode& cn)
+{
+//-NOP for now
+}
+
+void REDpFactHandler::intraProcInitializeEntryFact(DFAfact& df, CFGnode& cn)
+{
+  ((REDfactPair&) df).getVPfact().setBottom(); // empty set
+}
+
+void REDpFactHandler::intraProcHandleCall(DFAfact& df, PExprCall& dc)
+{
+  REDfact& fact_vp = ((REDfactPair&) df).getVPfact();
+
+  suco_iterator<CFGfunction *> fni(dc.getTargetFns());
+  while(fni.Iterate()){
+
+    //- do VP fact: kill 2 things:
+    //  1. {e | GMOD(fni) intersects afflocs(e)}
+    //  2. {e | GFreeHeap(fni) intersects aliases(e) }
+
+    suco_set<ECR *>& freeheap_ecrs = fni.Current()->getGFreeHeap_ecrs();
+    suco_iterator<ExpDescr *> edi(fact_vp.getEDescSet());
+    while(edi.Iterate()){
+      if(fni.Current()->getGMOD().interferesWithAffLocs(*edi.Current())
+	|| edi.Current()->getAliasECRs().Intersects(fni.Current()->getGFreeHeap_ecrs())){
+        edi.DeleteCurrent(); //- kill
+      }
+    }
+  }
+}
+
+//--------------------------------
+// REDpcFactHandler
+
+bool REDpcFactHandler::handleVerify(DFAfact& df, PExprVerify& dv)
+{
+  REDfact& fact_vp = ((REDfactPair&) df).getVPfact();
+
+  {
+    //- do VP-all
+    if(dv.getVpKind() == PExprVerify::vpPtr
+	|| dv.getVpKind() == PExprVerify::vpPtrW){
+      if(!dv.isLib()) this->results.stat_num_vp++;
+      if(fact_vp.getEDescSet().Contains(&dv.getDesc())){
+        if(!dv.isLib()) this->results.stat_num_vp_red++;
+        this->results.vp_all.Insert(&dv);
+      }
+    }
+  }
+
+  REDpFactHandler::handler.handleVerify(df, dv);
+  return false; //- not useless
+}
+
+//--------------------------------
+// REDpwFactHandler
+
+REDpwFactHandler REDpwFactHandler::handler;
+
+bool REDpwFactHandler::handleVerify(DFAfact& df, PExprVerify& dv)
+{
+  return true; //- useless in -ptrw mode
+}
+
+//--------------------------------
+// REDpwcFactHandler
+
+bool REDpwcFactHandler::handleVerify(DFAfact& df, PExprVerify& dv)
+{
+  REDfact& fact_vpw = ((REDfactPair&) df).getVPfact();
+
+  {
+    //- do VP-write
+    if(dv.getVpKind() == PExprVerify::vpPtrW){
+      if(!dv.isLib()) this->results.stat_num_vpw++;
+      if(fact_vpw.getEDescSet().Contains(&dv.getDesc())){
+        if(!dv.isLib()) this->results.stat_num_vpw_red++;
+        this->results.vp_write.Insert(&dv);
+      }
+    }
+  }
+
+  // REDpwFactHandler::handler.handleVerify(df, dv); //- NOP anyways
+  return false; //- not useless
+}
+
+//--------------------------------
+// REDtFactHandler
+
+REDtFactHandler REDtFactHandler::handler;
+
+//bool handleFormal(DFAfact& df, PExprDecl& dd, CFGfunction& parfn, bool interproc) { }
+
+//bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, ExpDescr * retedesc, bool interproc) { }
+
+//bool REDtFactHandler::handleDecl(DFAfact& df, PExprDecl& dd) { }
+
+bool REDtFactHandler::handleStrongAssign(DFAfact& df, AO& lhs, ExpDescr& rhs,
+                            PgmExpr * dnode, PgmStmt * cnode, PExprArg * arg)
+{
+  REDfact& fact_vt = ((REDfactPair&) df).getVTfact();
+
+  //- pre-compte/pre-create useful data items:
+  //  - rhs tsc
+  AO::ts_categ rhs_tsc = AO::getSetTSC(rhs.getAOs());
+
+  //  - create singleton aoset for lhs
+  suco_set<AO *> lhs_aoset;
+  lhs_aoset.Insert(&lhs);
+
+  //- loop over fact set
+  suco_iterator<ExpDescr *> edi(fact_vt.getEDescSet());
+  while(edi.Iterate()){
+    ExpDescr& ed = *edi.Current();
+    AO * sing_ao = ed.getAOs().GetSingleton();
+    if(sing_ao && sing_ao->isLoc()){ //- ed is singleton loc ao
+//----//-- a. kill lhs iff rhs badly typed
+      if(sing_ao == &lhs && rhs_tsc <= AO::TSC_BADLY_TYPED)
+        edi.DeleteCurrent();
+      //(else ok: special optimization for singletons)
+      //TODO: note this is more precise than &&-ing the ifs, but may be unsafe wrt unions?
+
+    } else { //- ed is multiple or deref ao
+//----//-- b. kill {e | lhs in afflocs(e)}
+      if(ed.affLocsIntersects(lhs_aoset))
+        edi.DeleteCurrent();
+
+//------//-- c. kill {e | lhs in aliases(e)} if rhs badly typed
+      if(rhs_tsc <= AO::TSC_BADLY_TYPED
+	  && ed.getAliasECRs().Contains(&lhs.getECR())){
+        edi.DeleteCurrent();
+      }
+    }
+  }
+
+  return false;
+}
+
+bool REDtFactHandler::handleWeakAssign(DFAfact& df, ExpDescr& lhs, ExpDescr& rhs, PExprAssign& dnode)
+{
+  REDfact& fact_vt = ((REDfactPair&) df).getVTfact();
+
+  //- pre-compte rhs tsc
+  AO::ts_categ rhs_tsc = AO::getSetTSC(rhs.getAOs());
+
+  //- loop over fact set
+  {
+    suco_iterator<ExpDescr *> edi(fact_vt.getEDescSet());
+    while(edi.Iterate()){
+      ExpDescr& ed = *edi.Current();
+
+//----//-- a. kill lhs iff rhs badly typed
+      if(!ExpDescr::compare(&ed, &lhs)){ //- lhs == ed
+	if(rhs_tsc <= AO::TSC_BADLY_TYPED) //- rhs badly typed
+          edi.DeleteCurrent();
+        //(else don't kill <- key optimization)
+
+      } else {
+//------//-- b. kill {e | aliases(lhs) intersects afflocs(e)}
+	if(ed.affLocsIntersects(lhs.getAliasECRs()))
+          edi.DeleteCurrent();
+
+//------//-- c. kill {e | aliases(lhs) intersects aliases(e)} if rhs badly typed
+        if(rhs_tsc <= AO::TSC_BADLY_TYPED &&
+	    ed.getAliasECRs().Intersects(lhs.getAliasECRs()))
+          edi.DeleteCurrent();
+      }
+    }
+  }
+
+  return false;
+}
+
+bool REDtFactHandler::handleVerify(DFAfact& df, PExprVerify& dv)
+{
+  REDfact& fact_vt = ((REDfactPair&) df).getVTfact();
+
+  if(flag_vtfix){ //- do VT: verifyTag(e) ==> gen e
+    if(dv.getVtKind() == PExprVerify::vtTag){
+      fact_vt.getEDescSet().Insert(&dv.getDesc());
+      return false; //- not useless
+    }
+  }
+  return true; //- useless
+}
+
+void REDtFactHandler::handleFreeCall(DFAfact& df, PExprCall& dc)
+{
+//TODO: NOP for now, since our free(p) doesn't change p's tag (can't implement via fncall)
+}
+
+void REDtFactHandler::interProcFilterEntryFact(DFAfact& df, CFGnode& cn)
+{
+//-NOP for now
+}
+
+void REDtFactHandler::intraProcInitializeEntryFact(DFAfact& df, CFGnode& cn)
+{
+  ((REDfactPair&) df).getVTfact().setBottom(); // empty set
+}
+
+void REDtFactHandler::intraProcHandleCall(DFAfact& df, PExprCall& dc)
+{
+  REDfact& fact_vt = ((REDfactPair&) df).getVTfact();
+
+  suco_iterator<CFGfunction *> fni(dc.getTargetFns());
+  while(fni.Iterate()){
+    //-- do VT facts: kill {e | GMOD(fni.Current) intersects aliases(e)}
+
+    suco_iterator<ExpDescr *> edi(fact_vt.getEDescSet());
+    while(edi.Iterate()){
+      if(fni.Current()->getGMOD().Intersects(edi.Current()->getAliasECRs())){
+        edi.DeleteCurrent(); //- kill
+      }
+    }
+  }
+}
+
+//--------------------------------
+// REDtcFactHandler
+
+bool REDtcFactHandler::handleStrongAssign(DFAfact& df, AO& lhs, ExpDescr& rhs,
+                            PgmExpr * dnode, PgmStmt * cnode, PExprArg * arg)
+{
+  REDtFactHandler::handleStrongAssign(df, lhs, rhs, dnode, cnode, arg); // propagate first, to kill unsafe facts
+
+  if(dnode && dnode->getKind() == PgmExpr::fAssign){
+
+    if(!dnode->isLib()) this->results.stat_num_vta++;
+
+    PExprAssign& pe = *(PExprAssign *) dnode;
+    REDfact& fact_vt = ((REDfactPair&) df).getVTfact();
+
+    if(fact_vt.getEDescSet().Contains(&pe.getLHS())){
+      if(!dnode->isLib()) this->results.stat_num_vta_red++;
+      this->results.vt_assign.Insert(&pe);
+    }
+  }
+  return false; //- collect more: never useless
+}
+
+bool REDtcFactHandler::handleWeakAssign(DFAfact& df, ExpDescr& lhs, ExpDescr& rhs, PExprAssign& dnode)
+{
+  REDtFactHandler::handleWeakAssign(df, lhs, rhs, dnode); // propagate first, to kill unsafe facts
+
+  REDfact& fact_vt = ((REDfactPair&) df).getVTfact();
+  {
+    if(!dnode.isLib()) this->results.stat_num_vta++;
+    //- do VT-Assign
+    if(fact_vt.getEDescSet().Contains(&lhs)){	//- redundancy: lhs should equal dnode.getLHS()
+      if(!dnode.isLib()) this->results.stat_num_vta_red++;
+      this->results.vt_assign.Insert(&dnode);
+    }
+  }
+  return false; //- not useless
+}
+
+bool REDtcFactHandler::handleVerify(DFAfact& df, PExprVerify& dv)
+{
+  REDfact& fact_vt = ((REDfactPair&) df).getVTfact();
+
+  {
+    //- do VT
+    if(dv.getVtKind() != PExprVerify::vtNone){ //- either verifyTag or verifyRhs
+      if(!dv.isLib()) this->results.stat_num_vtv++;
+      if(fact_vt.getEDescSet().Contains(&dv.getDesc())){
+        if(!dv.isLib()) this->results.stat_num_vtv_red++;
+        this->results.vt_verify.Insert(&dv);
+      }
+    }
+  }
+
+  REDtFactHandler::handler.handleVerify(df, dv);
+  return false; //- not useless
+}
+
+//--------------------------------
+// REDtpFactHandler
+
+REDtpFactHandler REDtpFactHandler::handler;
+
+bool REDtpFactHandler::handleFormal(DFAfact& df, PExprDecl& dd, CFGfunction& parfn, bool interproc)
+{
+  bool is_useless = true;
+  is_useless &= REDpFactHandler::handler.handleFormal(df, dd, parfn, interproc);
+  is_useless &= REDtFactHandler::handler.handleFormal(df, dd, parfn, interproc);
+  return is_useless;
+}
+
+bool REDtpFactHandler::handleReturnStmt(DFAfact& df, PgmStmt& retnode, ExpDescr * retedesc, bool interproc)
+{
+  bool is_useless = true;
+  is_useless &= REDpFactHandler::handler.handleReturnStmt(df, retnode, retedesc, interproc);
+  is_useless &= REDtFactHandler::handler.handleReturnStmt(df, retnode, retedesc, interproc);
+  return is_useless;
+}
+
+bool REDtpFactHandler::handleDecl(DFAfact& df, PExprDecl& dd)
+{
+  bool is_useless = true;
+  is_useless &= REDpFactHandler::handler.handleDecl(df, dd);
+  is_useless &= REDtFactHandler::handler.handleDecl(df, dd);
+  return is_useless;
+}
+
+bool REDtpFactHandler::handleStrongAssign(DFAfact& df, AO& lhs, ExpDescr& rhs,
+                            PgmExpr * dnode, PgmStmt * cnode, PExprArg * arg)
+{
+  bool is_useless = true;
+  is_useless &= REDpFactHandler::handler.handleStrongAssign(df, lhs, rhs, dnode, cnode, arg);
+  is_useless &= REDtFactHandler::handler.handleStrongAssign(df, lhs, rhs, dnode, cnode, arg);
+  return is_useless;
+}
+
+bool REDtpFactHandler::handleWeakAssign(DFAfact& df, ExpDescr& lhs, ExpDescr& rhs, PExprAssign& dnode)
+{
+  bool is_useless = true;
+  is_useless &= REDpFactHandler::handler.handleWeakAssign(df, lhs, rhs, dnode);
+  is_useless &= REDtFactHandler::handler.handleWeakAssign(df, lhs, rhs, dnode);
+  return is_useless;
+}
+
+bool REDtpFactHandler::handleVerify(DFAfact& df, PExprVerify& dv)
+{
+  bool is_useless = true;
+  is_useless &= REDpFactHandler::handler.handleVerify(df, dv);
+  is_useless &= REDtFactHandler::handler.handleVerify(df, dv);
+  return is_useless;
+}
+
+void REDtpFactHandler::handleFreeCall(DFAfact& df, PExprCall& dc)
+{
+  REDpFactHandler::handler.handleFreeCall(df, dc);
+  REDtFactHandler::handler.handleFreeCall(df, dc);
+}
+
+void REDtpFactHandler::interProcFilterEntryFact(DFAfact& df, CFGnode& cn)
+{
+  REDpFactHandler::handler.interProcFilterEntryFact(df, cn);
+  REDtFactHandler::handler.interProcFilterEntryFact(df, cn);
+}
+
+void REDtpFactHandler::intraProcInitializeEntryFact(DFAfact& df, CFGnode& cn)
+{
+  REDpFactHandler::handler.intraProcInitializeEntryFact(df, cn);
+  REDtFactHandler::handler.intraProcInitializeEntryFact(df, cn);
+}
+
+void REDtpFactHandler::intraProcHandleCall(DFAfact& df, PExprCall& dc)
+{
+  REDpFactHandler::handler.intraProcHandleCall(df, dc);
+  REDtFactHandler::handler.intraProcHandleCall(df, dc);
+}
+
+//--------------------------------
+// REDtpcFactHandler
+
+bool REDtpcFactHandler::handleStrongAssign(DFAfact& df, AO& lhs, ExpDescr& rhs,
+                            PgmExpr * dnode, PgmStmt * cnode, PExprArg * arg)
+{
+  bool is_useless = true;
+  is_useless &= pcfh.handleStrongAssign(df, lhs, rhs, dnode, cnode, arg);
+  is_useless &= tcfh.handleStrongAssign(df, lhs, rhs, dnode, cnode, arg);
+  return is_useless;
+}
+
+bool REDtpcFactHandler::handleWeakAssign(DFAfact& df, ExpDescr& lhs, ExpDescr& rhs, PExprAssign& dnode)
+{
+  bool is_useless = true;
+  is_useless &= pcfh.handleWeakAssign(df, lhs, rhs, dnode);
+  is_useless &= tcfh.handleWeakAssign(df, lhs, rhs, dnode);
+  return is_useless;
+}
+
+bool REDtpcFactHandler::handleVerify(DFAfact& df, PExprVerify& dv)
+{
+  bool is_useless = true;
+  is_useless &= pcfh.handleVerify(df, dv);
+  is_useless &= tcfh.handleVerify(df, dv);
+  return is_useless;
+}
+
+//--------------------------------
+// RED
+
+bool RED::isUselessNode(CFGnode& cn)
+{
+  return cn.REDisUseless();
+}
+
+bool RED::isUselessNode(PgmExpr& dn)
+{
+  return dn.REDisUseless();
+}
+
+bool RED::markUselessNode(CFGnode& cn)
+{
+  cn.REDsetUseless();
+  return true;
+}
+
+bool RED::markUselessNode(PgmExpr& dn)
+{
+  dn.REDsetUseless();
+  return true;
+}
+
+//- compare df1 with df2: if df2 is lower-than df1, return true
+//  then absorb (meet) df2 into df1
+bool RED::absorbAndCompare(DFAfact& df1, DFAfact& df2, LocSet * backedge_filter /*ignored*/)
+{
+  return df1.meet(df2, false, true); //- (warn=true): if df2 is not <= df1, print warning message
+}
+
+void RED::print_debug_stats(CFG& cfg, FILE * outf)
+{
+//TODO?
+}
+
+@
+
+
+1.30
+log
+@Added stat-output for RED analysis.
+@
+text
+@d3 1
+d483 2
+a484 2
+  { //- do VT: verifyTag(e) ==> gen e
+    if(dv.getVtKind() == PExprVerify::vtTag)
+d486 2
+d489 1
+a489 2
+
+  return false;
+@
+
+
+1.29
+log
+@Changed AO/ECR relationship: added AO::getECR() function
+that is to be called after pt-analysis finalization of
+ECRs -- so, PRIOR to finalization, must use ECR::getECR()
+(as is now done in pta.cpp), but AFTER, must only use
+AO::getECR() which outputs a fatal error message if ECR
+not found.
+@
+text
+@d33 5
+d345 8
+a352 4
+    if((dv.getVpKind() == PExprVerify::vpPtr
+	|| dv.getVpKind() == PExprVerify::vpPtrW)
+	&& fact_vp.getEDescSet().Contains(&dv.getDesc()))
+      this->results.vp_all.Insert(&dv);
+d378 7
+a384 3
+    if(dv.getVpKind() == PExprVerify::vpPtrW
+	&& fact_vpw.getEDescSet().Contains(&dv.getDesc()))
+      this->results.vp_write.Insert(&dv);
+d532 2
+d537 2
+a538 1
+    if(fact_vt.getEDescSet().Contains(&pe.getLHS()))
+d540 1
+d551 1
+d553 2
+a554 1
+    if(fact_vt.getEDescSet().Contains(&lhs))	//- redundancy: lhs should equal dnode.getLHS()
+d556 1
+d567 7
+a573 3
+    if(dv.getVtKind() != PExprVerify::vtNone //- either verifyTag or verifyRhs
+	&& fact_vt.getEDescSet().Contains(&dv.getDesc()))
+      this->results.vt_verify.Insert(&dv);
+@
+
+
+1.28
+log
+@MAJOR UPDATE:
+- Created new class LocSet to encapsulate a set of
+  locations, used to store GMOD, GREF, and backedge
+  filters.
+  (Previously, was suco_set<AO *>, later changed to
+  suco_set<ECR *>.)
+- Created two versions, one storing AOs, another
+  storing ECRs.  Verified that results are the
+  same, though performance is not (but only when
+  computing backedge filters).
+@
+text
+@d231 3
+a233 3
+      if(!lao.isVal() && lao.hasECR()){
+        if(lao.isLoc()) lecrset.Insert(&ECR::getECR(lao));
+        else lecrset.Union(ECR::getECR(lao).getAliasECRs());
+d281 2
+a282 2
+        if(!lao.isVal() && lao.hasECR()){
+          a1ecrset.Union(ECR::getECR(lao).getPointsTo().getAliasECRs());
+d421 1
+a421 1
+	  && ed.getAliasECRs().Contains(&ECR::getECR(lhs))){
+@
+
+
+1.27
+log
+@Added new DFA interface function interProcFilterEntryFact()
+called at each function entry (when doing inter-proc
+analysis).
+@
+text
+@d320 1
+a320 1
+    suco_set<ECR *>& freeheap_ecrs = fni.Current()->getGFreeHeapEcrs();
+d323 2
+a324 2
+      if(edi.Current()->affLocsIntersects(fni.Current()->getGMOD())
+	|| edi.Current()->getAliasECRs().Intersects(fni.Current()->getGFreeHeapEcrs())){
+a498 8
+    //- get GMOD ecrset
+    //TODO: cache this?
+    suco_set<ECR *> gmod_ecrset;
+    suco_iterator<AO *> aoi(fni.Current()->getGMOD());
+    while(aoi.Iterate()){
+      if(aoi.Current()->hasECR()) //- probably needless check
+        gmod_ecrset.Insert(&ECR::getECR(*aoi.Current()));
+    }
+d502 1
+a502 1
+      if(edi.Current()->getAliasECRs().Intersects(gmod_ecrset)){
+d689 1
+a689 1
+bool RED::absorbAndCompare(DFAfact& df1, DFAfact& df2, suco_set<AO *> * backedge_filter /*ignored*/)
+@
+
+
+1.26
+log
+@Changed handleFormal to pass parent-function rather
+than previous "ismain" and "callsites" pair.
+@
+text
+@d299 5
+d482 5
+d622 6
+@
+
+
+1.25
+log
+@PREVIOUSLY: handleReturnStmt was only called for non-void
+return statements.
+NOW: handleReturnStmt is called for ALL return statements.
+This is needed so analyses can properly handle deallocation
+of local variables.
+OTHER CHANGES:
+ 1. RAN: handleReturnStmt now removes intervals pointing
+    to freedStack ECRs.
+ 2. Interval: changed code for narrow() to be more logically
+    sound?
+@
+text
+@d378 1
+a378 1
+//bool handleFormal(DFAfact& df, PExprDecl& dd, bool ismain, suco_llist<PExprCall *>& callsites, bool interproc) { }
+d559 1
+a559 1
+bool REDtpFactHandler::handleFormal(DFAfact& df, PExprDecl& dd, bool ismain, suco_llist<PExprCall *>& callsites, bool interproc)
+d562 2
+a563 2
+  is_useless &= REDpFactHandler::handler.handleFormal(df, dd, ismain, callsites, interproc);
+  is_useless &= REDtFactHandler::handler.handleFormal(df, dd, ismain, callsites, interproc);
+@
+
+
+1.24
+log
+@Modified handleFormal to pass a flag indicating whether
+the function is "main".  This is needed because main's
+argc/argv formals may need to be initialized differently.
+
+For RAN::handleFormal() - if ismain, then set bottom;
+else do top MEET callsite facts.
+
+For MBU::handleFormal() - *BUG FIX* - was previously calling
+handleStrongAssign(), which was _wrong_ (doesn't correctly
+meet facts from multiple callsites); fixed to do "weak"
+assignment.
+@
+text
+@d380 1
+a380 1
+//bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, ExpDescr& retedesc, bool interproc) { }
+d567 1
+a567 1
+bool REDtpFactHandler::handleReturnStmt(DFAfact& df, PgmStmt& retnode, ExpDescr& retedesc, bool interproc)
+@
+
+
+1.23
+log
+@CHANGE 1: wrote ECR::getAliasECRs(), which collects and
+  caches an ecrset of alias ECRs.
+  This function replaces the functionality of
+  collectAliasECRs(), but should only be called after
+  the points-to graph is finalized.
+CHANGE 2: changed RAN and REDp to account for MayFree
+  set (CFGfunction::getGFreeHeap()).
+  For RAN, this affected: filterCallsiteFact,
+  intraProcHandleCall, and handleFreeCall (previously
+  empty).
+  For RED, this affected only REDp::intraProcHandleCall.
+  For CFGfunction: added gfreeheap_ecrs/getGFreeHeapEcrs()
+  to cache the freeheap ecrset for use in the above
+  phases.
+@
+text
+@d378 1
+a378 1
+//bool handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites, bool interproc) { }
+d559 1
+a559 1
+bool REDtpFactHandler::handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites, bool interproc)
+d562 2
+a563 2
+  is_useless &= REDpFactHandler::handler.handleFormal(df, dd, callsites, interproc);
+  is_useless &= REDtFactHandler::handler.handleFormal(df, dd, callsites, interproc);
+@
+
+
+1.22
+log
+@Another change: RETURN argument is now an ExpDescr
+instead of an aoset (as was before); with a corresponding
+change to the argument of handleReturnStmt.
+
+Independently: updated RAN's handleFormal (wrote but
+not tested).
+@
+text
+@d233 1
+a233 1
+        else ECR::getECR(lao).collectAliasECRs(lecrset);
+d282 1
+a282 1
+          ECR::getECR(lao).getPointsTo().collectAliasECRs(a1ecrset);
+d310 6
+a315 1
+    //- do VP fact: kill {e | GMOD(fni) intersects afflocs(e)}
+d318 2
+a319 1
+      if(edi.Current()->affLocsIntersects(fni.Current()->getGMOD())){
+@
+
+
+1.21
+log
+@Interface change: intraProcHandleCall now takes a PExprCall
+rather than a CFGfunction -- consequently, the iteration
+over target functions is now the responsibility of
+intraProcHandleCall rather than in dfa.cpp: BBA::PgmExprPropagate.
+
+Then, one update to body of MBU::intraProcHandleCall -
+to account for assignment of return value, at callsite
+dc to ao, now add "R D ao" to the MBUfact set, so that
+the subsequent assignment of the call's return value
+to a variable will mark that variable as MBU as well.
+This was a bug in the old implemenation.
+@
+text
+@d278 1
+a278 1
+      suco_iterator<AO *> aoi(arg1->getAOs());
+d374 1
+a374 1
+//bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos, bool interproc) { }
+d561 1
+a561 1
+bool REDtpFactHandler::handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos, bool interproc)
+d564 2
+a565 2
+  is_useless &= REDpFactHandler::handler.handleReturnStmt(df, retnode, retaos, interproc);
+  is_useless &= REDtFactHandler::handler.handleReturnStmt(df, retnode, retaos, interproc);
+@
+
+
+1.20
+log
+@Interface update: augmented handleFormal / handleReturnStmt
+with "interproc" flag.
+Not yet used.
+@
+text
+@d304 1
+a304 1
+void REDpFactHandler::intraProcHandleCall(DFAfact& df, CFGfunction& fn)
+d308 3
+a310 1
+  { //- do VP fact: kill {e | GMOD(fn) intersects afflocs(e)}
+d313 1
+a313 1
+      if(edi.Current()->affLocsIntersects(fn.getGMOD())){
+d476 1
+a476 1
+void REDtFactHandler::intraProcHandleCall(DFAfact& df, CFGfunction& fn)
+d480 3
+a482 1
+  { //-- do VT facts: kill {e | GMOD(fn) intersects aliases(e)}
+d486 1
+a486 1
+    suco_iterator<AO *> aoi(fn.getGMOD());
+d614 1
+a614 1
+void REDtpFactHandler::intraProcHandleCall(DFAfact& df, CFGfunction& fn)
+d616 2
+a617 2
+  REDpFactHandler::handler.intraProcHandleCall(df, fn);
+  REDtFactHandler::handler.intraProcHandleCall(df, fn);
+@
+
+
+1.19
+log
+@Infrastructure update: CFGnode backedge indicator has
+been upgraded from a boolean to an AO set pointer, for
+which a value of:
+  0 indicates non-backedge
+  1 (constant CFGnode::ALL_AOS) indicates a backedge
+    with no AO-filter information (i.e. widen all intervals)
+  otherwise, contains the set of AOs that may be modified
+    in the loop body, and constitutes a safe superset of
+    AOs whose interval needs to be widened.
+So far, added the necessary interface and skeletal function
+bodies; NOT YET DONE: write the engine to compute the may-mod
+sets.
+@
+text
+@d370 1
+a370 1
+//bool handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites) { }
+d372 1
+a372 1
+//bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos) { }
+d549 1
+a549 1
+bool REDtpFactHandler::handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites)
+d552 2
+a553 2
+  is_useless &= REDpFactHandler::handler.handleFormal(df, dd, callsites);
+  is_useless &= REDtFactHandler::handler.handleFormal(df, dd, callsites);
+d557 1
+a557 1
+bool REDtpFactHandler::handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos)
+d560 2
+a561 2
+  is_useless &= REDpFactHandler::handler.handleReturnStmt(df, retnode, retaos);
+  is_useless &= REDtFactHandler::handler.handleReturnStmt(df, retnode, retaos);
+@
+
+
+1.18
+log
+@Filled in code and data components for Range analysis.
+Only partway done: compiles, but run doesn't terminate.
+@
+text
+@d671 1
+a671 1
+bool RED::absorbAndCompare(DFAfact& df1, DFAfact& df2, bool is_backedge/*ignored*/)
+@
+
+
+1.17
+log
+@1. Added code (to CFG::assignId) to mark backedges in
+   the CFG.
+   May be buggy -- must test.
+2. -MAJOR UPDATE-
+   Added ran.cpp/ran.h for range checking.
+   Thusfar, ran.cpp contains only empty skeletons to be
+   filled in - do not run!
+3. Renamed widen_narrow in CFG to is_backedge;
+   also, now widen/narrow are specific to RAN/RANfact,
+   rather than generic to DFA/DFAfact.
+@
+text
+@d171 1
+a171 1
+  fprintf(outf, "VP-Fact: ");
+d173 1
+a173 1
+  fprintf(outf, "VT-Fact: ");
+@
+
+
+1.16
+log
+@Added infrastructure for widening/narrowing:
+ - added widen/narrow flag to CFGnode and DFA
+ - added widen/narrow flag to absorbAndCompare to
+   trigger widening/narrowing
+Also, extended lookupNodeFact to take an extra argument:
+a CFGnode to guide lookup of branch successors.
+@
+text
+@d671 1
+a671 1
+bool RED::absorbAndCompare(DFAfact& df1, DFAfact& df2, bool widen_narrow/*ignored*/)
+@
+
+
+1.15
+log
+@Changed rhs argument of Assign node from an aolist to an exp-descr
+triplet: <aolist, aff-aolist, estr>.
+Main effect is changing the type of the rhs argument of
+handle[Strong/Weak]Assign from an aoset to an ExpDescr,
+which has been down-propagated to all subclasses.
+@
+text
+@d180 1
+a180 1
+DFAfact& REDfactHandler::lookupNodeFact(CFGnode& cn)
+d671 1
+a671 1
+bool RED::absorbAndCompare(DFAfact& df1, DFAfact& df2)
+@
+
+
+1.14
+log
+@Fixed REDt -- previous version was naive and didn't account
+for aliases.
+Removed REDfact::remove, which is no longer needed.
+Added ExpDescr::aliasecrs cache (with accessor getAliasECRs()).
+Added to suco GetSingleton function.
+@
+text
+@d200 1
+a200 1
+bool REDpFactHandler::handleStrongAssign(DFAfact& df, AO& lhs, suco_set<AO *>& rhs,
+d221 1
+a221 1
+bool REDpFactHandler::handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& rhs, PExprAssign& dnode)
+d376 1
+a376 1
+bool REDtFactHandler::handleStrongAssign(DFAfact& df, AO& lhs, suco_set<AO *>& rhs,
+d383 1
+a383 1
+  AO::ts_categ rhs_tsc = AO::getSetTSC(rhs);
+d417 1
+a417 1
+bool REDtFactHandler::handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& rhs, PExprAssign& dnode)
+d422 1
+a422 1
+  AO::ts_categ rhs_tsc = AO::getSetTSC(rhs);
+d500 1
+a500 1
+bool REDtcFactHandler::handleStrongAssign(DFAfact& df, AO& lhs, suco_set<AO *>& rhs,
+d516 1
+a516 1
+bool REDtcFactHandler::handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& rhs, PExprAssign& dnode)
+d573 1
+a573 1
+bool REDtpFactHandler::handleStrongAssign(DFAfact& df, AO& lhs, suco_set<AO *>& rhs,
+d582 1
+a582 1
+bool REDtpFactHandler::handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& rhs, PExprAssign& dnode)
+d619 1
+a619 1
+bool REDtpcFactHandler::handleStrongAssign(DFAfact& df, AO& lhs, suco_set<AO *>& rhs,
+d628 1
+a628 1
+bool REDtpcFactHandler::handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& rhs, PExprAssign& dnode)
+@
+
+
+1.13
+log
+@Wrote REDt.  Minimal test seems OK.
+@
+text
+@a142 25
+void REDfact::remove(AO& lhs)
+{
+  suco_iterator<ExpDescr *> edi(edescset);
+  while(edi.Iterate()){
+    if(edi.Current()->getAOs().Contains(&lhs))
+      edi.DeleteCurrent();
+  }
+}
+
+void REDfact::remove(suco_set<ECR *>& lecrset)
+{
+  //NOTE: not very efficient
+  suco_iterator<ExpDescr *> edi(edescset);
+  while(edi.Iterate()){
+    suco_iterator<AO *> aoi(edi.Current()->getAOs());
+    while(aoi.Iterate()){
+      if(aoi.Current()->hasECR()
+	&& lecrset.Contains(&ECR::getECR(*aoi.Current()))){
+        edi.DeleteCurrent();
+        break;
+      }
+    }
+  }
+}
+
+d212 1
+a212 1
+      if(edi.Current()->intersectsAffLocs(lhsset)){
+d241 1
+a241 1
+      if(edi.Current()->intersectsAffLocs(lecrset)){
+d291 1
+a291 1
+        if(edi.Current()->intersectsAffLocs(a1ecrset)){
+d311 1
+a311 1
+      if(edi.Current()->intersectsAffLocs(fn.getGMOD())){
+d381 31
+a411 3
+  //-- do VT fact: kill lhs if rhs badly typed
+  if(AO::getSetTSC(rhs) <= AO::TSC_BADLY_TYPED){
+    fact_vt.remove(lhs);
+d421 8
+a428 2
+  //-- do VT fact: kill aliases(lhs) if rhs badly typed
+  if(AO::getSetTSC(rhs) <= AO::TSC_BADLY_TYPED){
+d430 15
+a444 10
+    //- collect lhs ecrs
+    suco_set<ECR *> lecrset;
+    {
+      suco_iterator<AO *> aoi(lhs.getAOs());
+      while(aoi.Iterate()){
+        AO& lao = *aoi.Current();
+        if(!lao.isVal() && lao.hasECR()){
+          if(lao.isLoc()) lecrset.Insert(&ECR::getECR(lao));
+          else ECR::getECR(lao).collectAliasECRs(lecrset);
+        }
+a446 2
+
+    fact_vt.remove(lecrset);
+d457 1
+a457 3
+    //  but skip verifyPtr(e) nodes, as those are already covered by REDp
+    if(dv.getVtKind() == PExprVerify::vtTag &&
+	dv.getVpKind() == PExprVerify::vpNone)
+d478 10
+a487 1
+  { //- do VT facts: kill {e | GMOD(fn) intersects aliases(e)}
+d490 1
+a490 1
+      if(edi.Current()->getAOs().Intersects(fn.getGMOD())){
+d535 1
+a535 2
+    if((dv.getVtKind() != PExprVerify::vtNone //- either verifyTag or verifyRhs
+	&& dv.getVpKind() == PExprVerify::vpNone) //- filter out vp (already covered)
+@
+
+
+1.12
+log
+@Added REDt* REDtp* skeletons; just need to fill in
+REDt* bodies.
+Note however that there seems to be a logical flaw in REDp*.
+@
+text
+@d143 25
+d326 1
+a326 1
+  df.setBottom(); // empty set
+d399 1
+a399 7
+bool REDtFactHandler::handleDecl(DFAfact& df, PExprDecl& dd)
+{
+  REDfact& fact_vt = ((REDfactPair&) df).getVTfact();
+
+//TODO:
+  return false;
+}
+d406 5
+a410 1
+//TODO:
+d418 19
+a436 1
+//TODO:
+d444 7
+a450 1
+//TODO:
+d456 1
+a456 3
+  REDfact& fact_vt = ((REDfactPair&) df).getVTfact();
+
+//TODO:
+d461 1
+a461 3
+  REDfact& fact_vt = ((REDfactPair&) df).getVTfact();
+
+//TODO:
+d468 8
+a475 1
+//TODO:
+d481 29
+d514 10
+a523 2
+//TODO:
+  return false;
+d601 17
+d622 1
+a622 1
+  is_useless &= pcfh.handleVerify(df, dv);
+@
+
+
+1.11
+log
+@Further split RED*handler classes to differentiate between
+-ptr and -ptrw mode, with the latter inheriting from the former
+(with only one change -- w.r.t. handleVerify).
+Minimally tested.
+@
+text
+@d319 19
+d348 175
+a558 36
+//--------------------------------
+// REDpc
+
+bool REDpcFactHandler::handleVerify(DFAfact& df, PExprVerify& dv)
+{
+  REDfact& fact_vp = ((REDfactPair&) df).getVPfact();
+
+  {
+    //- do VP-all
+    if((dv.getVpKind() == PExprVerify::vpPtr
+	|| dv.getVpKind() == PExprVerify::vpPtrW)
+	&& fact_vp.getEDescSet().Contains(&dv.getDesc()))
+      this->results.vp_all.Insert(&dv);
+  }
+
+  REDpFactHandler::handler.handleVerify(df, dv);
+  return false; //- not useless
+}
+
+//--------------------------------
+// REDpwc
+
+bool REDpwcFactHandler::handleVerify(DFAfact& df, PExprVerify& dv)
+{
+  REDfact& fact_vpw = ((REDfactPair&) df).getVPfact();
+
+  {
+    //- do VP-write
+    if(dv.getVpKind() == PExprVerify::vpPtrW
+	&& fact_vpw.getEDescSet().Contains(&dv.getDesc()))
+      this->results.vp_write.Insert(&dv);
+  }
+
+  // REDpwFactHandler::handler.handleVerify(df, dv); //- NOP anyways
+  return false; //- not useless
+}
+@
+
+
+1.10
+log
+@Major reshuffling (non-final):
+1. output of RED realigned to be of one of four classes:
+    -ptr all, -ptr write, -tag verify, -tag assign
+2. specialized written RED analysis for ptr/ptrw only,
+   wrote -ptr pieces though doesn't seem to work.
+   TODO: split further between ptr and ptrw modes,
+   since these are differentiated anyways by rtca!
+@
+text
+@d157 2
+a158 2
+  triggered |= this->fact_p.meet(rfp.fact_p, preserve, warnNotLE);
+  triggered |= this->fact_q.meet(rfp.fact_q, preserve, warnNotLE);
+d165 2
+a166 2
+  this->fact_p.join(rfp.fact_p, preserve);
+  this->fact_q.join(rfp.fact_q, preserve);
+d171 4
+a174 4
+  fprintf(outf, "Fact-P: ");
+  this->fact_p.debug_dump(outf, brief);
+  fprintf(outf, "Fact-Q: ");
+  this->fact_q.debug_dump(outf, brief);
+d203 1
+a203 2
+  REDfact& fact_vp = ((REDfactPair&) df).fact_p;
+  REDfact& fact_vpw = ((REDfactPair&) df).fact_q;
+d210 4
+a213 11
+    suco_iterator<ExpDescr *> pedi(fact_vp.edescset);
+    while(pedi.Iterate()){
+      if(pedi.Current()->intersectsAffLocs(lhsset)){
+        pedi.DeleteCurrent(); //- kill
+      }
+    }
+
+    suco_iterator<ExpDescr *> wedi(fact_vpw.edescset);
+    while(wedi.Iterate()){
+      if(wedi.Current()->intersectsAffLocs(lhsset)){
+        wedi.DeleteCurrent(); //- kill
+d223 1
+a223 2
+  REDfact& fact_vp = ((REDfactPair&) df).fact_p;
+  REDfact& fact_vpw = ((REDfactPair&) df).fact_q;
+d239 4
+a242 10
+    suco_iterator<ExpDescr *> pedi(fact_vp.edescset);
+    while(pedi.Iterate()){
+      if(pedi.Current()->intersectsAffLocs(lecrset)){
+        pedi.DeleteCurrent(); //- kill
+      }
+    }
+    suco_iterator<ExpDescr *> wedi(fact_vpw.edescset);
+    while(wedi.Iterate()){
+      if(wedi.Current()->intersectsAffLocs(lecrset)){
+        wedi.DeleteCurrent(); //- kill
+d247 1
+a247 1
+    fact_vpw.edescset.Insert(&lhs);
+d255 1
+a255 1
+  REDfact& fact_vp = ((REDfactPair&) df).fact_p;
+d259 1
+a259 1
+      fact_vp.edescset.Insert(&dv.getDesc());
+d271 1
+a271 2
+  REDfact& fact_vp = ((REDfactPair&) df).fact_p;
+  REDfact& fact_vpw = ((REDfactPair&) df).fact_q;
+d289 4
+a292 10
+      suco_iterator<ExpDescr *> pedi(fact_vp.edescset);
+      while(pedi.Iterate()){
+        if(pedi.Current()->intersectsAffLocs(a1ecrset)){
+          pedi.DeleteCurrent(); //- kill
+        }
+      }
+      suco_iterator<ExpDescr *> wedi(fact_vpw.edescset);
+      while(wedi.Iterate()){
+        if(wedi.Current()->intersectsAffLocs(a1ecrset)){
+          wedi.DeleteCurrent(); //- kill
+d306 1
+a306 2
+  REDfact& fact_vp = ((REDfactPair&) df).fact_p;
+  REDfact& fact_vpw = ((REDfactPair&) df).fact_q;
+d309 4
+a312 10
+    suco_iterator<ExpDescr *> pedi(fact_vp.edescset);
+    while(pedi.Iterate()){
+      if(pedi.Current()->intersectsAffLocs(fn.getGMOD())){
+        pedi.DeleteCurrent(); //- kill
+      }
+    }
+    suco_iterator<ExpDescr *> wedi(fact_vpw.edescset);
+    while(wedi.Iterate()){
+      if(wedi.Current()->intersectsAffLocs(fn.getGMOD())){
+        wedi.DeleteCurrent(); //- kill
+d319 10
+a364 1
+
+d370 1
+a370 2
+  REDfact& fact_vp = ((REDfactPair&) df).fact_p;
+  REDfact& fact_vpw = ((REDfactPair&) df).fact_q;
+d374 3
+a376 3
+    if(dv.getVpKind() == PExprVerify::vpPtr
+	&& ( fact_vp.edescset.Contains(&dv.getDesc())) ||
+	    fact_vpw.edescset.Contains(&dv.getDesc())))
+d378 5
+d384 8
+d394 1
+a394 1
+	&& fact_vpw.edescset.Contains(&dv.getDesc()))
+a395 1
+
+d398 1
+a398 1
+  REDpFactHandler::handler.handleVerify(df, dv);
+@
+
+
+1.9
+log
+@Added handleFreeCall to dfa framework (PExprCall now has
+extra set of undeclared functions to which it might point,
+and a helper callsFree() to determine if it may call free()).
+For mbu/rda/rdmb, handleFreeCall is a noop; for RED: wrote
+handleFreeCall to remove expressions affected by *p (p is
+arg 1 of free call).
+@
+text
+@d11 9
+a19 8
+  fprintf(outf, "--RED-VP results:\n");
+  suco_iterator<PExprVerify *> pvi(this->vp_verify);
+  while(pvi.Iterate())
+    pvi.Current()->debug_dump(outf, 3, true);
+
+  suco_iterator<PExprAssign *> pgi(this->vp_assign);
+  while(pgi.Iterate())
+    pgi.Current()->debug_dump(outf, 3, true);
+d33 12
+a44 11
+  //- write vp verify results: ! <N> r p v <int>
+  suco_iterator<PExprVerify *> pvi(this->vp_verify);
+  while(pvi.Iterate()){
+    AID& aid = pvi.Current()->getAid();
+    fprintf(outf, "! %d r p v %d\n", aid.filestem_id, aid.aid);
+  }
+  //- write vp assign results: ! <N> r p g <int>
+  suco_iterator<PExprAssign *> pgi(this->vp_assign);
+  while(pgi.Iterate()){
+    AID& aid = pgi.Current()->getAid();
+    fprintf(outf, "! %d r p g %d\n", aid.filestem_id, aid.aid);
+d157 2
+a158 2
+  triggered |= this->vpfact.meet(rfp.vpfact, preserve, warnNotLE);
+  triggered |= this->vtfact.meet(rfp.vtfact, preserve, warnNotLE);
+d165 2
+a166 2
+  this->vpfact.join(rfp.vpfact, preserve);
+  this->vtfact.join(rfp.vtfact, preserve);
+d171 4
+a174 4
+  fprintf(outf, "VP: ");
+  this->vpfact.debug_dump(outf, brief);
+  fprintf(outf, "VT: ");
+  this->vtfact.debug_dump(outf, brief);
+a179 2
+REDfactHandler REDfactHandler::handler;
+
+d195 6
+a200 1
+bool REDfactHandler::handleStrongAssign(DFAfact& df, AO& lhs, suco_set<AO *>& rhs,
+d203 2
+a204 1
+  REDfactPair& rfp = (REDfactPair&) df;
+d211 4
+a214 4
+    suco_iterator<ExpDescr *> edi(rfp.vpfact.edescset);
+    while(edi.Iterate()){
+      if(edi.Current()->intersectsAffLocs(lhsset)){
+        edi.DeleteCurrent(); //- kill
+a216 1
+  }
+d218 6
+a223 2
+  { //- do VT fact
+//TODO
+d229 1
+a229 1
+bool REDfactHandler::handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& rhs, PExprAssign& dnode)
+d231 2
+a232 1
+  REDfactPair& rfp = (REDfactPair&) df;
+d247 11
+a257 6
+  { //- do VP fact
+    // - i. kill { e | aliases(lhs) intersects afflocs(e) }
+    suco_iterator<ExpDescr *> edi(rfp.vpfact.edescset);
+    while(edi.Iterate()){
+      if(edi.Current()->intersectsAffLocs(lecrset)){
+        edi.DeleteCurrent(); //- kill
+d260 1
+d262 1
+a262 5
+    rfp.vpfact.edescset.Insert(&lhs);
+  }
+
+  { //- do VT fact
+//TODO
+d268 1
+a268 1
+bool REDfactHandler::handleVerify(DFAfact& df, PExprVerify& dv)
+d270 1
+a270 1
+  REDfactPair& rfp = (REDfactPair&) df;
+d272 3
+a274 3
+  { //- do VP fact
+//TODO
+  }
+d276 3
+a278 2
+  { //- do VT fact
+//TODO
+d284 1
+a284 1
+void REDfactHandler::handleFreeCall(DFAfact& df, PExprCall& dc)
+d286 2
+a287 1
+  REDfactPair& rfp = (REDfactPair&) df;
+d305 10
+a314 4
+      suco_iterator<ExpDescr *> edi(rfp.vpfact.edescset);
+      while(edi.Iterate()){
+        if(edi.Current()->intersectsAffLocs(a1ecrset)){
+          edi.DeleteCurrent(); //- kill
+d318 1
+a318 5
+
+    { //- do VT fact
+//TODO
+    }
+  } //- else: no argument supplied to free
+d321 1
+a321 1
+void REDfactHandler::intraProcInitializeEntryFact(DFAfact& df, CFGnode& cn)
+d326 1
+a326 1
+void REDfactHandler::intraProcHandleCall(DFAfact& df, CFGfunction& fn)
+d328 2
+a329 1
+  REDfactPair& rfp = (REDfactPair&) df;
+d332 10
+a341 4
+    suco_iterator<ExpDescr *> edi(rfp.vpfact.edescset);
+    while(edi.Iterate()){
+      if(edi.Current()->intersectsAffLocs(fn.getGMOD())){
+        edi.DeleteCurrent(); //- kill
+a344 4
+
+  { //- do VT fact
+//TODO
+  }
+d386 1
+a386 1
+// REDc
+d388 1
+a388 1
+bool REDcFactHandler::handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& rhs, PExprAssign& dnode)
+d390 2
+a391 1
+  REDfactPair& rfp = (REDfactPair&) df;
+d393 6
+a398 12
+  { //- do VP
+    if(rfp.vpfact.edescset.Contains(&lhs))
+      this->results.vp_assign.Insert(&dnode);
+  }
+
+  { //- do VT
+//TODO
+  }
+
+  REDfactHandler::handler.handleWeakAssign(df, lhs, rhs, dnode);
+  return false; //- not useless
+}
+d400 4
+a403 7
+bool REDcFactHandler::handleVerify(DFAfact& df, PExprVerify& dv)
+{
+  REDfactPair& rfp = (REDfactPair&) df;
+
+  { //- do VP
+//TODO
+  }
+a404 2
+  { //- do VT
+//TODO
+d407 1
+a407 1
+  REDfactHandler::handler.handleVerify(df, dv);
+@
+
+
+1.8
+log
+@For Redundant analysis, wrote function call case --
+entailed re-adjusting intersectAffLocs to take an aoset
+rather than just a single ao.
+Should be complete, except for free().
+(Free might work anyways -- because model GMOD captures
+all malloc'ed locs?)
+@
+text
+@d271 34
+@
+
+
+1.7
+log
+@Changed final argument to handleWeakAssign from PgmExpr
+to PExprAssign!
+@
+text
+@d201 4
+d207 1
+a207 1
+      if(edi.Current()->intersectsAffLocs(lhs)){
+d279 11
+d291 1
+@
+
+
+1.6
+log
+@Wrote redundant analysis collection function.
+Entailed creation of REDresults class and REDcFactHandler, etc.
+Resulted in modifying suco_set (olist, actually) to have a
+different Contains function that uses the compare function
+rather than ==. (Future work: may want to extend to some
+other functions).
+@
+text
+@d216 1
+a216 1
+bool REDfactHandler::handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& rhs, PgmExpr& dnode)
+d319 1
+a319 1
+bool REDcFactHandler::handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& rhs, PgmExpr& dnode)
+d325 1
+a325 2
+//TODO: assert dnode is PExprAssign ?
+      this->results.vp_assign.Insert((PExprAssign*) &dnode);
+@
+
+
+1.5
+log
+@Updated redundant analysis: strong and weak assignments written;
+to do: function calls and result collection.
+Entailed following changes:
+  PExprAssign::getLHS to return ExpDescr instead of AO set.
+  DFA handleWeakAssign's second argument is now ExpDescr rather than AO set.
+  ECR: added helper collectAliasECRs (not tested!)
+@
+text
+@d6 54
+d256 4
+d318 34
+@
+
+
+1.4
+log
+@Wrote some code -- incomplete, compiles but probably won't
+do the right thing yet.
+Entailed enriching ExpDescr class with intersectsAffLocs
+function and helpers (some, not all written yet).
+@
+text
+@a144 3
+  //- collect lhs ecrset == singleton(lhs)
+  suco_set<AO *> lhsaos;
+  lhsaos.Insert(&lhs);
+d146 1
+a146 1
+  { //- do VP fact
+d149 1
+a149 1
+      if(edi.Current()->intersectsAffLocs(lhsaos)){
+d162 1
+a162 1
+bool REDfactHandler::handleWeakAssign(DFAfact& df, suco_set<AO *>& lhs, suco_set<AO *>& rhs, PgmExpr& dnode)
+d169 1
+a169 1
+    suco_iterator<AO *> aoi(lhs);
+d173 2
+a174 1
+        lecrset.Insert(&ECR::getECR(lao));
+a176 1
+    //- collect alias ecrs
+d180 1
+d187 2
+d201 2
+d204 2
+a210 1
+/**/fprintf(stderr, "SET-BOTTOM\n");
+@
+
+
+1.3
+log
+@Added REDfactPair class, which will be the "main" fact
+processed by RED analysis -- that class contains two
+REDfact sets, one for redundant verifyPtrs, another
+for verifyTags.  Only the former will be used by -ptr/ptrw
+mode, for example.
+Skeletons are still hollow
+@
+text
+@d2 1
+d145 14
+d160 2
+d168 24
+d193 2
+@
+
+
+1.2
+log
+@Filled in skeleton of REDundant analysis -- including
+CFG nodes' red_fact and red_is_useless members.
+TODO: fill in the important meat of the analysis in
+handleVerify, handle*Assign, etc.
+Also, must write REDc collector.
+@
+text
+@d87 34
+d127 1
+a127 1
+  return cn.getREDfact();
+d132 1
+a132 1
+  return dc.getREDfact(); //- actually useless(?) because intraprocedural!
+d137 1
+a137 1
+  return dp.getREDfact();
+d143 1
+a143 1
+  REDfact& rf = (REDfact&) rf;
+d150 1
+a150 1
+  REDfact& rf = (REDfact&) rf;
+d157 1
+a157 1
+  REDfact& rf = (REDfact&) rf;
+d164 1
+d170 1
+a170 1
+  REDfact& rf = (REDfact&) rf;
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d14 5
+d21 22
+d45 2
+d49 17
+d70 14
+d89 1
+a89 3
+void REDfactHandler::filterCallsiteFacts(PExprCall& dc, DFAfact& df, DFAfact& df_local)
+{
+}
+d109 3
+d116 3
+a118 12
+}
+
+bool REDfactHandler::handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites)
+{
+}
+
+bool REDfactHandler::handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos)
+{
+}
+
+bool REDfactHandler::handleDecl(DFAfact& df, PExprDecl& dd)
+{
+d123 3
+d130 1
+d135 2
+a138 1
+
+d144 1
+d149 1
+d154 2
+d160 2
+d164 2
+d168 1
+d173 1
+@

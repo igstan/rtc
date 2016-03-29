@@ -1,0 +1,53 @@
+Group is
+	(* The root one *)
+	(* For now, using full path to allow compilation from
+	   independent typecheck-instr directories.
+	   Will eventually want to do something else.
+	 *)
+	(* /unsup/sml/installation/ckit/src/sources.cm *)
+	/p/wpis/imports/LucentFrontEnd/ckit/src/sources.cm
+(*	/hsi/cygwin/home/research/ckit/src/sources.cm	*)
+
+	(* For ORD_MAP/BinaryMayFn *)
+	smlnj-lib.cm
+
+	(* runtime command line flags *)
+	flags.sml
+
+	(* some rtc "top level"? types and functions *)
+	rtc-sig.sml
+	rtc.sml
+
+	(* preprocess interface *)
+	pre-process-sig.sml
+	pre-process.sml
+
+	(* optimization interface *)
+	opt-interface-sig.sml
+	opt-interface.sml
+
+	(* flow-sensitive analysis *)
+	flow-sensitive-sig.sml
+	flow-sensitive.sml
+
+	(* Runtime typechecking instrumentation *)
+	instr-ast-sig.sml
+	instr-ast.sml
+
+	(* AST instrumentation state *)
+	instr-state-sig.sml
+	instr-state.sml
+
+	(* Tool to "type" (by casting) every expression *)
+	type-exprs.sml
+
+	(* Tool to test TC mirror with calls at function entry *)
+	test-instr.sml
+
+	(* Tool to test TC mirror with calls at function entry *)
+	mirror-test.sml
+
+	(* Top level *)
+	parse-to-instr-ast-sig.sml
+	parse-to-instr-ast.sml
+

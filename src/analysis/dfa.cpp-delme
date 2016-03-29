@@ -1,0 +1,938 @@
+#include <stdio.h>
+#include <string.h> // for strcmp
+#include "ao.h"
+#include "cfg.h"
+#include "dfa.h"
+#include "flags.h" // for flag_verbose
+#include "diag.h" // for TCstats
+
+//----------------------------------
+// WORKLIST
+//----------------------------------
+
+void WorkList::Insert(CFGnode& cn)
+{
+  if(!cn.worklist_flag){
+    cn.worklist_flag = true;
+    switch(flag_worklist_mode){
+      case WL_MODE_LEAF_FIRST: {
+          set.Insert(&cn);
+        } break;
+      case WL_MODE_LIFO: {
+          list.Append(&cn);
+        } break;
+      default:
+      case WL_MODE_FIFO: {
+          list.Insert(&cn);
+        } break;
+    }
+  }
+}
+
+bool WorkList::InitialInsert(CFGnode& cn)
+{
+  if(!cn.worklist_flag){
+    cn.worklist_flag = true;
+    if(flag_worklist_init_depth_first)
+      set.Insert(&cn);
+    else
+      list.Append(&cn);
+    return true;
+  } else return false;
+}
+
+//- "cleanup" initialization: if initialized to set, move set into list
+void WorkList::FinishedInitialInserts()
+{
+  list.Attach(set);
+}
+
+CFGnode * WorkList::Remove()
+{
+  CFGnode * cn = list.RemoveHead();
+  if(!cn) cn = set.RemoveHead();
+  cn->worklist_flag = false;
+  return cn;
+}
+
+void WorkList::Clear()
+{
+  list.Clear();
+  set.Clear();
+}
+
+int WorkList::Size()
+{
+  return list.Length() + set.Length();
+}
+
+bool WorkList::IsEmpty()
+{
+  return list.IsEmpty() && set.IsEmpty();
+}
+
+//- give higher priority to nodes in non-recursive
+//  functions with lower callgraph_id
+int WorkList::leaf_first_compare(CFGnode * n1, CFGnode * n2)
+{
+  if(n1 == n2) return 0;
+
+  CFGfunction * fn1 = &n1->getParentFunction();
+  CFGfunction * fn2 = &n2->getParentFunction();
+
+  if(fn1 == fn2){ //- same function: sort by id#
+
+    int id1 = n1->getId();
+    int id2 = n2->getId();
+
+    return (id2-id1)?(id2-id1):(n1-n2);
+
+  } else { //- different function: sort by recursion-adjusted callgraph id
+    return CFGfunction::compareByCallgraphId(fn1, fn2);
+  }
+}
+
+void WorkList::debug_dump(FILE * outf)
+{
+  fprintf(outf, "LIST:");
+  suco_iterator<CFGnode *> li(list);
+  while(li.Iterate())
+    fprintf(outf, " [%d/%d]", li.Current()->getParentFunction().getCallGraphId(),
+			      li.Current()->getId());
+  fprintf(outf, "\n");
+  fprintf(outf, "SET:");
+  suco_iterator<CFGnode *> si(set);
+  while(si.Iterate())
+    fprintf(outf, " [%d/%d]", si.Current()->getParentFunction().getCallGraphId(),
+			      si.Current()->getId());
+  fprintf(outf, "\n");
+}
+
+//----------------------------------
+// DFA fact
+
+void DFAfact::meetFiltered(DFAfact& df, CFGfunction& tgtfn)
+{
+  this->meet(df);
+}
+
+//----------------------------------
+// DFA fact pair (for true/false branch)
+
+void DFAfactPair::flipFacts(DFAfactHandler& dfh)
+{
+  if(fact2){
+    DFAfact * tmp = fact2;
+    fact2 = &fact1.newClone(false);
+    fact1.setTop();
+    fact1.meet(*tmp, false);
+    dfh.deleteFact(*tmp);
+  }
+}
+
+DFAfact& DFAfactPair::meetIfPair(DFAfactHandler& dfh)
+{
+  if(fact2){
+    fact1.meet(*fact2, false);
+    dfh.deleteFact(*fact2);
+    fact2 = 0;
+  }
+  return fact1;
+}
+
+void DFAfactPair::splitIfSingle()
+{
+  if(!fact2) fact2 = &fact1.newClone();
+}
+
+//----------------------------------
+// DFAfactHandler
+
+//- default version: just meet (destructively)
+void DFAfactHandler::reconstituteFilteredFacts(DFAfact& df, DFAfact& df_local)
+{
+  df.meet(df_local, false);
+}
+
+//- default version: outputs a warning message
+DFAfactPair& DFAfactHandler::lookupNodeFactPair(CFGnode& cn)
+{
+  fprintf(stderr, "WARNING(DFAfactHandler::lookupNodeFactPair): default version called\n");
+  return *new DFAfactPair(lookupNodeFact(cn));
+}
+
+//----------------------------------
+// BASIC-BLOCK ANALYSIS (BBA)
+
+bool BBA::PgmExprPropagate(PgmExpr& dn, DFAfactPair& dfp, PgmStmt * parent)
+{
+  if(isUselessNode(dn)){ //-- skip if dn is a useless node (as identified by earlier pass)
+    TCstats::dfa_useless_expr_node_visits++;
+    return true;
+  } else {
+    TCstats::dfa_useful_expr_node_visits++;
+    switch(dn.getKind()){
+      case PgmExpr::fCall: {
+        PExprCall& dc = (PExprCall&) dn;
+
+        //-- do we start our facts at top, or meet with pre-fact? start at top only if
+        bool set_top = flag_callsite_top		//- flag says so, and
+			&& dc.isDirectCall()		//- it's a direct call, and
+			&& !dc.isRecursiveCall();	//- it's not part of a recursive cycle
+        //- NOTE: to be more precise, we could try to identify if this specific call
+        //        is a recursive edge in the callgraph. This would require the callgraph
+        //        traversal to label each callgraph cycle with an id, and a check here
+        //        for a match between this function's id and *any* targetfn's id. (TODO)
+
+        DFAfact& df = dfp.meetIfPair(dfh);	//- if there were true/false branches, meet them
+
+        if(dc.getTargetFns().IsEmpty()){
+
+          //-- no call target: library or undefined function
+          // - for now, be optimistic, and keep facts as is
+
+          // - first, handle free, if free included
+          if(dc.callsFree()){
+            dfh.handleFreeCall(df, dc);
+            return false; //- not useless
+          } else {
+            return markUselessNode(dn); //-- for now, treat as useless
+          }
+
+        } else if(this->do_interprocedural){
+
+// RAN NOTE: there's some very subtle hackery going on here
+// Be careful when perturbing any code in this area!
+// - The Problem: RANfact stores a list of (AO -> Interval) mappings.
+//	By default, the absense of a mapping for AO implies (AO -> bottom).
+//	So, an empty RANfact means all AOs map to bottom.
+//	A "top" RANfact is represented as an empty RANfact with a "top"
+//	flag set.
+//	Note that once "top" is meet-ed with something, most AOs are
+//	suddenly mapped to bottom.
+//	In the "usual" case, this is not a problem (?) -- if we make sure
+//	the nodes are visited in a top-down -- but here at a function call,
+//	we want to filter, to improve precision as well as save space and
+//	time.  But there is much subtlety involved.
+//   - Consider this range analysis example (mm=MayMod/MayRef set):
+//       fact={w1,x1,y1,z1}
+//             call fp --{x1,y1,z1}--> foo(mm={x,y}) --> bar(mm={y,z})
+//              {w1}                      {x1,y1}          {y1,z1}
+//              MEET   <-------------- <--{x2,y2}       <--{y3,z3}
+//      {w1,x1|x2,y2|y3,z1|z3}
+//     NOTES:
+//	- w1 is "df_local", the local version that is not sent
+//	  to the callee.  It is computed by filterCallsiteFacts()
+//	  and recombined with reconstituteFacts().
+//	  The advantage of splitting w1 are that
+//	   1. if only w has changed, no need to add foo/bar
+//	      entry to worklist
+//	   2. w is not polluted by another value of w coming
+//	      from a different call to foo or bar.
+//	- {x1,y1,z1} is df, the callsite-window, and must be
+//	  disjoint from df_local.
+//	- each function's entry node will further filter the
+//	  facts to only their local mm sets.
+//	- the final MEET operation is really tricky, and is
+//	  achieved by:
+//	   1. computing the intersection of foo and bar's mm
+//	      set (y in the example), then setting the fact
+//	      for y in df to "top".
+//	      This is done by interProcPrepareReturnCollector().
+//	   2. meeting each return-node fact in succession,
+//	      but constrained by each callee's mm-set.
+//	      This is done by meetFiltered().
+//     Note that many of the subtleties only matter with indirect
+//	calls and/or clashes between indirect and direct calls.
+
+          dfh.interProcHandleCallArgs(df, dc);
+          {
+            DFAfact& df_local = dfh.newTopFact();
+
+            if(flag_gref_filter) //- coupled with reconstituteFilteredFacts() below
+              dfh.filterCallsiteFacts(dc, df, df_local);
+
+            this->checkCallProgress(dc, df);
+
+            df.setTop(); //-- optimistic: don't meet with pre-call fact
+            if(!set_top){			//-- else: need to redo this, because
+              df.meet(dfh.lookupNodeFact(dc));	//   checkCallProgress will have absorbed df
+	    }
+
+            //-- if indirect call: prepare return collector (currently used by RAN)
+            if(!dc.isDirectCall())
+              dfh.interProcPrepareReturnCollector(df, dc);	//- for RAN: initialize _intersection_ facts to top
+
+            //-- collect facts from return nodes
+            suco_iterator<CFGfunction *> tfi(dc.getTargetFns());
+            while(tfi.Iterate()){
+              suco_iterator<PgmStmt *> eni(tfi.Current()->getExitNodes());
+              while(eni.Iterate()){
+                CFGnode * retnode = eni.Current()->getCFGactiveNode();
+                //-- meet with return-node fact
+                if(retnode){ //- retnode may be null bblock, if unreachable
+                  DFAfact& df_retnode = dfh.lookupNodeFact(*retnode);
+                  df.meetFiltered(df_retnode, *tfi.Current()); //- meet in current-function window (default version just meets)
+                }
+              }
+            }
+
+            if(flag_gref_filter) //- coupled with filterCallsiteFacts() above
+              dfh.reconstituteFilteredFacts(df, df_local);
+            dfh.deleteFact(df_local);
+          }
+          dfh.interProcHandleRetvalAssign(df, dc);
+
+          // - handle free, if free included in call targets
+          //  - NOTE: should technically meet in result separately
+          //          OK for now, if handleFreeCall is "decreasing"?
+          if(dc.callsFree()) dfh.handleFreeCall(df, dc);
+
+          //-FUTURE: add collectResultsCall?
+          return false; //-- function call not useless
+
+        } else { //- intraprocedural
+
+          dfh.intraProcHandleCall(df, dc);
+
+          // - handle free, if free included in call targets
+          //  - NOTE: should technically meet in result separately
+          //          OK for now, if handleFreeCall is "decreasing"?
+          if(dc.callsFree()) dfh.handleFreeCall(df, dc);
+
+          return false; //-- function call not useless
+        }
+      } break;
+      case PgmExpr::fAssign: {
+        //------------------------------------------------------
+        // Classify assigments into STRONG and WEAK assignments.
+        // See getSingletonLHSloc() for details.
+        //------------------------------------------------------
+        bool is_useless;
+        PExprAssign& da = (PExprAssign&) dn;
+        //-FUTURE: add collectResultsAssign?
+        AO * lhsloc = da.getSingletonLHSloc();	//- also filters out array objects repr. a[0], a[0].i
+        if(lhsloc){
+          is_useless = dfh.handleStrongAssign(dfp.getFact1(), *lhsloc, da.getRHS(), &da);
+          if(dfp.getFact2())
+            is_useless &= dfh.handleStrongAssign(*dfp.getFact2(), *lhsloc, da.getRHS(), &da);
+        } else {
+          is_useless = dfh.handleWeakAssign(dfp.getFact1(), da.getLHS(), da.getRHS(), da);
+          if(dfp.getFact2())
+            is_useless = dfh.handleWeakAssign(*dfp.getFact2(), da.getLHS(), da.getRHS(), da);
+        }
+        return (is_useless)?(markUselessNode(dn)):false;
+      } break;
+      case PgmExpr::fPredicate: {
+        bool is_useless = dfh.handlePredicate(dfp, (PExprPredicate&) dn);
+        return (is_useless)?(markUselessNode(dn)):false;
+      } break;
+      case PgmExpr::fDecl: {
+        bool is_useless = true;
+        DFAfact& df = dfp.meetIfPair(dfh);	//- if there were true/false branches, meet them
+        PExprDecl& dd = (PExprDecl&) dn;
+        //-FUTURE: add collectResultsDecl?
+        if(dd.isFormal()){
+          if(parent) is_useless = dfh.handleFormal( df, dd, parent->getParentFunction(), this->do_interprocedural);
+          else fprintf(stderr, "ERROR(BBA::PgmExprPropagate): Formal decl in node with no CFG parent!\n"); //- note: is_useless = true
+        } else {
+          is_useless = dfh.handleDecl(df, dd);
+        }
+        return (is_useless)?(markUselessNode(dn)):false;
+      } break;
+      case PgmExpr::fVerify: {
+        bool is_useless = dfh.handleVerify(dfp.getFact1(), (PExprVerify&) dn);
+        if(dfp.getFact2())	//- should never be true? at least for now.
+          is_useless = dfh.handleVerify(*dfp.getFact2(), (PExprVerify&) dn);
+        return (is_useless)?(markUselessNode(dn)):false;
+      } break;
+      case PgmExpr::fParallel: {
+        PExprParallel& dp = (PExprParallel&) dn;
+
+        DFAfact& df = dfp.meetIfPair(dfh);	//- if there were true/false branches, meet them
+					//- (quick fix for now, as there should never be a fact2 here?)
+
+        if(dp.getNodeLists().IsEmpty()){ //- assert
+          fprintf(stderr, "ERROR(BBA::PgmExprPropagate/DFA parallel: empty parallel node!\n");
+          return markUselessNode(dn); //- useless
+        } else {
+
+          //------------------------------
+          // To handle parallel:
+          //  - basic idea is to pass a copy of the initial fact down
+          //    each branch, and meet the results.  However, we must
+          //    compare the meet of the results with the initial fact
+          //    -- if it's lower in the lattice, we must repeat the
+          //    cycle, using this meet as the initial fact.
+          //  - I'm not sure if a fixed point will always be reached.
+          //    It may be necessary to meet with the initial fact as
+          //    well (currently done), which I suspect will guarantee
+          //    a fixpoint, possibly in only two iterations?
+          //------------------------------
+
+          checkParallelProgress(dp, df, false); //-- meet df into dp (except when collecting)
+
+          int icnt = 0; //- for debug output
+
+          do {
+            icnt++;
+
+            if(icnt == 10) fprintf(stderr, "WARNING(BBA::PgmExprPropagate/PARALLEL): icnt has reached %d\n", icnt);
+
+            df.setTop();
+
+            suco_iterator<suco_llist<PgmExpr *> *> lli(dp.getNodeLists());
+            while(lli.Iterate()){
+              DFAfactPair tdfp(dfh.lookupNodeFact(dp).newClone()); //- tdfp = temp df, for this branch
+              suco_iterator<PgmExpr *> li(*lli.Current());
+              while(li.Iterate()){
+                PgmExprPropagate(*li.Current(), tdfp, parent);
+              }
+              tdfp.meetIfPair(dfh);
+
+              df.meet(tdfp.getFact1(), false);
+              dfh.deleteFact(tdfp.getFact1()); //- tdfp "destructor"
+            }
+          } while(checkParallelProgress(dp, df, true));
+
+          if(icnt > 2) fprintf(stderr, "WARNING(BBA::PgmExprPropagate/PARALLEL): icnt = %d\n", icnt);
+
+          return false; //- because of fact-caching, Parallel is no longer useless!
+        }
+      } break;
+      case PgmExpr::fBranch: {
+        bool is_useless = true;
+        PExprBranch& db = (PExprBranch&) dn;
+
+        dfp.meetIfPair(dfh);	//- if there were true/false branches, meet them
+
+        //-- first, feed through prednode
+        if(db.getPredNode())
+          is_useless &= PgmExprPropagate(*db.getPredNode(), dfp, parent);
+
+        //-- setup true and false dfps
+        DFAfactPair fdfp(dfp.getFact2()?(*dfp.getFact2()):dfp.getFact1().newClone());
+        dfp.resetFact2();
+
+        //-- send dfp through true branch, fdfp through false branch
+        suco_iterator<PgmExpr *> tni(db.getTrueNodes());
+        while(tni.Iterate())
+          is_useless &= PgmExprPropagate(*tni.Current(), dfp, parent);
+        suco_iterator<PgmExpr *> fni(db.getFalseNodes());
+        while(fni.Iterate())
+          is_useless &= PgmExprPropagate(*fni.Current(), fdfp, parent);
+        //-- de-branch dfps
+        dfp.meetIfPair(dfh);
+        fdfp.meetIfPair(dfh);
+        //-- now meet them together
+        dfp.getFact1().meet(fdfp.getFact1(), false);
+        //-- delete fdf
+        dfh.deleteFact(fdfp.getFact1());	//- fdfp "destructor"
+
+        return (is_useless)?(markUselessNode(dn)):false;
+      } break;
+      default: return markUselessNode(dn);
+    }
+  }
+}
+
+bool BBA::PgmStmtPropagate(PgmStmt& ps, DFAfactPair& dfp)
+{
+  bool is_useless = true;
+  suco_iterator<PgmExpr *> pei(ps.exprlist);
+  while(pei.Iterate()){
+    is_useless &= PgmExprPropagate(*pei.Current(), dfp, &ps);
+  }
+
+  //- handle return here!
+  if(ps.isReturn()){
+    DFAfact& df = dfp.meetIfPair(dfh);	//- if there were true/false branches, meet them
+    is_useless &= dfh.handleReturnStmt(df, ps, ps.getReturnDesc(), this->do_interprocedural);
+  }
+
+//  //- in bblock mode, cache facts at stmt level?
+//  if(flag_use_bblocks){
+//    ps.mbu_fact.meet(df);
+//  }
+  return is_useless;
+}
+
+void BBA::processCFGnode(CFGnode& cn)
+{
+  //-- get in-fact, by meeting copies of predecessor fact
+  DFAfact& df = dfh.newTopFact();
+  for(int i = 0; cn.getPred(i); ++i)
+    df.meet(dfh.lookupNodeFact(*cn.getPred(i), &cn), true);
+
+  //-- if we're a function entry node
+  if(cn.isEntryNode()){
+    if(this->do_interprocedural){
+      //- inter-procedural mode: meet callsite facts
+      suco_iterator<PExprCall *> csi(cn.getParentFunction().getCallSites());
+      while(csi.Iterate())
+        df.meet(dfh.lookupNodeFact(*csi.Current()), true);
+      dfh.interProcFilterEntryFact(df, cn);
+    } else {
+      //- intra-procedural mode: initialize conservative entry fact
+      dfh.intraProcInitializeEntryFact(df, cn);
+    }
+  }
+
+  if(flag_verbose == 5){
+    fprintf(stderr, "--{In-fact [%d/%d]:",
+			cn.getParentFunction().getCallGraphId(), cn.getId());
+    df.debug_dump(stderr, false);
+    fprintf(stderr, "--}\n");
+  }
+
+  DFAfactPair dfp(df);
+
+  //-- process CFG node
+  if(!isUselessNode(cn)){ //- skip if cn is a useless node (as identified by earlier pass)
+    TCstats::dfa_useful_cfg_node_visits++;
+    bool is_useless = true;
+
+    if(flag_use_bblocks){
+      CFGbblock& bb = (CFGbblock&)cn;
+      suco_iterator<PgmStmt *> psi(bb.stmtlist);
+      while(psi.Iterate()){
+        is_useless &= PgmStmtPropagate(*psi.Current(), dfp);
+      }
+    } else {
+      is_useless &= PgmStmtPropagate((PgmStmt&)cn, dfp);
+    }
+
+    if(is_useless) markUselessNode(cn);
+  } else TCstats::dfa_useless_cfg_node_visits++;
+
+  checkNodeProgress(cn, dfp);
+
+  //- dfp "destructor": deletes df (if not already deleted)
+  dfh.deleteFact(dfp.getFact1());
+  if(dfp.getFact2()) dfh.deleteFact(*dfp.getFact2());
+  //- dfp deleted
+}
+
+void BBA::collectResults(CFG& cfg, bool skip_libfns)
+{
+  //-- finally, one last pass to collect results
+  if(flag_verbose) TCstats::timer("collecting results");
+    
+  suco_iterator<CFGfunction *> fni(cfg.getFunctionList());
+  while(fni.Iterate()){
+    if((!skip_libfns) || (!fni.Current()->getId().isLib())){
+      if(flag_use_bblocks){
+        suco_iterator<CFGbblock *> bbi(fni.Current()->getBBlist());
+        while(bbi.Iterate()) 
+          processCFGnode(*bbi.Current());
+      } else {
+        suco_iterator<PgmStmt *> sli(fni.Current()->getStmtList());
+        while(sli.Iterate()) 
+          processCFGnode(*sli.Current());
+      }
+    }
+  }
+
+  if(flag_verbose) TCstats::timer(0);
+}
+
+//----------------------------------
+// DATAFLOW-ANALYSIS (GENERIC)
+
+void DFA::checkCallProgress(PExprCall& dc, DFAfact& df)
+{
+  if(flag_verbose == 5){
+    fprintf(stderr, "--{Checking call node progress:\n");
+    dc.debug_dump(stderr, 3);
+    fprintf(stderr, " --In-Fact:");
+    df.debug_dump(stderr, false);
+  }
+  //-- compare with out-fact: if lower, add call successors to worklist
+  if(absorbAndCompare(dfh.lookupNodeFact(dc),df,dc.getWidenLocs())){ //-- absorb and compare cn's fact with df
+    dc.debug_trigger_counter++;
+    if(flag_verbose == 5){
+      fprintf(stderr, " --Call node triggered - adding callee entries:\n");
+    }
+    suco_iterator<CFGfunction *> tfi(dc.getTargetFns());
+    while(tfi.Iterate()){
+      CFGnode * en = tfi.Current()->getEntryNode();
+      if(en){
+        worklist.Insert(*en);
+        if(flag_verbose == 5){
+          en->debug_dump(stderr, 3, true);
+        }
+      }
+    }
+  }
+  if(flag_verbose == 5){
+    fprintf(stderr, "--} End checking call node progress\n");
+  }
+}
+
+void DFA::checkNodeProgress(CFGnode& cn, DFAfactPair& dfp)
+{
+  if(flag_verbose == 5){
+    fprintf(stderr, "--{Checking node progress:\n");
+    cn.debug_dump(stderr, 3);
+    fprintf(stderr, " --In-Fact:");
+    if(dfp.getFact2()){
+      fprintf(stderr, " (TRUE:) ");
+      dfp.getFact1().debug_dump(stderr, false);
+      fprintf(stderr, " (FALSE:) ");
+      dfp.getFact2()->debug_dump(stderr, false);
+    } else {
+      dfp.getFact1().debug_dump(stderr, false);
+    }
+  }
+
+  if(dfp.getFact2() && (cn.getNsuccs() == 2) && !cn.isExitNode()){  //-- handle branch
+
+    DFAfactPair& cnfp = dfh.lookupNodeFactPair(cn);
+    cnfp.splitIfSingle();
+    if(absorbAndCompare(cnfp.getFact1(), dfp.getFact1(), cn.getBackEdge(true))){ //-- meet and compare true fact
+      cn.debug_trigger_counter++; //- will double-count, but what the hell
+
+      if(flag_verbose == 5){
+        fprintf(stderr, " --Node triggered - adding TRUE successor:\n");
+      }
+      //-- add TRUE successor to worklist
+      if(cn.getSucc(0)){
+        worklist.Insert(*cn.getSucc(0));
+        if(flag_verbose == 5){
+          cn.getSucc(0)->debug_dump(stderr, 3, true);
+        }
+      } else fprintf(stderr, "ERROR(DFA::checkProgressNode): true successor is null!\n");
+    }
+
+    if(absorbAndCompare(*cnfp.getFact2(),*dfp.getFact2(), cn.getBackEdge(false))){ //-- meet and compare false fact
+      cn.debug_trigger_counter++; //- will double-count, but what the hell
+
+      if(flag_verbose == 5){
+        fprintf(stderr, " --Node triggered - adding FALSE successor:\n");
+      }
+      //-- add FALSE successor to worklist
+      if(cn.getSucc(1)){
+        worklist.Insert(*cn.getSucc(1));
+        if(flag_verbose == 5){
+          cn.getSucc(1)->debug_dump(stderr, 3, true);
+        }
+      } else fprintf(stderr, "ERROR(DFA::checkProgressNode): false successor is null!\n");
+    }
+
+  } else {
+
+/**/if(dfp.getFact2()) //- assertion
+/**/  fprintf(stderr, "WARNING(DFA::checkNodeProgress): two df facts, but %d successors!\n", cn.getNsuccs());
+
+    DFAfact &df = dfp.meetIfPair(dfh);
+
+    //-- compare with out-fact: if lower, add successors to worklist
+    if(absorbAndCompare(dfh.lookupNodeFact(cn), df, cn.getBackEdge())){ //-- meet and compare cn's fact with df
+      cn.debug_trigger_counter++;
+
+      if(flag_verbose == 5){
+        fprintf(stderr, " --Node triggered - adding successors:\n");
+      }
+      //-- add successors to worklist
+      //-- regular successors
+      for(int i = 0; cn.getSucc(i); ++i){
+        worklist.Insert(*cn.getSucc(i));
+        if(flag_verbose == 5){
+          cn.getSucc(i)->debug_dump(stderr, 3, true);
+        }
+      }
+      //-- function return successors -- only if interprocedural
+      if(this->do_interprocedural && cn.isExitNode()){
+        suco_iterator<PExprCall *> csi(cn.getParentFunction().getCallSites());
+        while(csi.Iterate()){
+          CFGnode * cnode = 0;
+          if(flag_use_bblocks){
+            // Note: parentNode of PExprCalls already verified non-null during input
+            cnode = csi.Current()->getParentNode()->getBBlock();
+          } else {
+            cnode = csi.Current()->getParentNode();
+          }
+          if(cnode) worklist.Insert(*cnode);
+        }
+      }
+    }
+  }
+
+  if(flag_verbose == 5){
+    fprintf(stderr, "--} End checking node progress\n");
+  }
+}
+
+//-- Behavior needs to be:
+// -  1. meet (or widen) dp's fact with df
+// -  2. df needs to be preserved IFF the meet/widen resulted in no change
+//-- This was earlier implemented by meeting with preserve=true always
+//-- Now I'm changing the behavior to meet with preserve=false, then
+//-- if there was no change, reset df's value by meeting with dp's fact.
+bool DFA::checkParallelProgress(PExprParallel& dp, DFAfact& df, bool looping_back)
+{
+  if(absorbAndCompare(dfh.lookupNodeFact(dp), df, looping_back?(CFGnode::ALL_AOS):0)){
+    return true;
+  } else {
+    df.meet(dfh.lookupNodeFact(dp), true);
+    return false;
+  }
+}
+
+bool DFA::absorbAndCompare(DFAfact& df1, DFAfact& df2, LocSet * backedge_filter)
+{
+  return df1.meet(df2, false, true);
+}
+
+DFA * DFA::act_dfa = 0;
+
+bool DFA::addCallTargetsToWorkList(PgmExpr& dn)
+{
+  if(DFA::act_dfa){
+    if(dn.getKind() == PgmExpr::fCall) {
+      PExprCall& dc = (PExprCall&) dn;
+      suco_iterator<CFGfunction *> tfi(dc.getTargetFns());
+      while(tfi.Iterate()){
+        CFGnode * entry = tfi.Current()->getEntryNode();
+        if(entry) DFA::act_dfa->collectWorkListDepthFirst(*entry);
+        else fprintf(stderr, "ERROR(DFA::addCallTargetsToWorkList): Encountered function with no entry node!\n");
+      }
+    }
+  }
+  return true;
+}
+
+void DFA::collectWorkList(CFGnode& cn)
+{
+  collectWorkListDepthFirst(cn);
+  worklist.FinishedInitialInserts();
+}
+
+void DFA::collectWorkListDepthFirst(CFGnode& cn)
+{
+  if(this->worklist.InitialInsert(cn)){ //-- add this
+
+    //-- process successors
+    if(this->do_interprocedural){
+      // - function call successors, only if interprocedural
+      DFA::act_dfa = this;
+      cn.traverseRootNodes(addCallTargetsToWorkList);
+    }
+
+    // - regular successors
+    for(int i = 0; cn.getSucc(i); ++i)
+      collectWorkListDepthFirst(*cn.getSucc(i));
+
+    // - function return successors
+    // : don't need to collect, as they are already covered
+    //   by regular successors of the callsite
+  }
+}
+
+//-- used in countAndPrintTriggerStats (called by doAnalysis)
+struct int_triple
+{
+  int count;
+  int nodes;
+  int calls;
+};
+
+static int it_compare(struct int_triple * it1, struct int_triple * it2)
+{
+  return (it2->count - it1->count);
+}
+static suco_set<struct int_triple *> trigger_counter(it_compare);
+
+static void addTriggerCounts(int count, int nodes, int calls)
+{
+  //-- not the most efficient, but it does the job
+  suco_iterator<struct int_triple *> tci(trigger_counter);
+  while(tci.Iterate()){
+    if(tci.Current()->count == count){
+      tci.Current()->nodes += nodes;
+      tci.Current()->calls += calls;
+      return;
+    }
+  }
+  struct int_triple * sit = new struct int_triple;
+  sit->count = count;
+  sit->nodes = nodes;
+  sit->calls = calls;
+  trigger_counter.Insert(sit);
+}
+
+static bool countCallTriggers(PgmExpr& pn)
+{
+  if(pn.getKind() == PgmExpr::fCall){
+    PExprCall& pe = (PExprCall&)pn;
+    addTriggerCounts(pe.debug_trigger_counter,0,1);
+    pe.debug_trigger_counter = 0; //- reset
+  }
+  return true;
+}
+
+static void countAndPrintTriggerStats(CFG& cfg, FILE * outf)
+{
+  suco_iterator<CFGfunction *> fli(cfg.getFunctionList());
+  while(fli.Iterate()){
+    if(flag_use_bblocks){
+      suco_iterator<CFGbblock *> bbi(fli.Current()->getBBlist());
+      while(bbi.Iterate()){
+        CFGbblock& bb = *bbi.Current();
+
+        addTriggerCounts(bb.debug_trigger_counter,1,0);
+        bb.debug_trigger_counter = 0; //- reset
+        //-- for call nodes
+        bb.traverseRootNodes(countCallTriggers);
+      }
+    } else {
+      suco_iterator<PgmStmt *> sti(fli.Current()->getStmtList());
+      while(sti.Iterate()){
+        PgmStmt& st = *sti.Current();
+
+        addTriggerCounts(st.debug_trigger_counter,1,0);
+        st.debug_trigger_counter = 0; //- reset
+        //-- for call nodes
+        st.traverseRootNodes(countCallTriggers);
+      }
+    }
+  }
+
+  fprintf(outf, "Trigger distribution (count/nodes/calls):\n");
+  suco_iterator<struct int_triple *> tci(trigger_counter);
+  while(tci.Iterate()){
+    fprintf(outf, "	%d	%d	%d\n",
+	tci.Current()->count, tci.Current()->nodes, tci.Current()->calls);
+  }
+}
+
+void DFA::processWorklist(CFG& cfg) //- cfg argument is for verbose output only!
+{
+    //-- main part, do analysis
+    if(flag_verbose >= (this->do_interprocedural?2:3)){
+      TCstats::timer("iterating over worklist");
+      fprintf(stderr, "(wlist mode = %s)\n",
+				(flag_worklist_mode==WL_MODE_LEAF_FIRST)
+				? "leaf-first"
+				:((flag_worklist_mode==WL_MODE_LIFO)
+				? "lifo"
+				: "fifo"));
+    }
+
+    int wlist_counter = 0;
+    while(!this->worklist.IsEmpty()){
+      if(flag_verbose >= 2){
+        if(++wlist_counter % 100 == 0){
+          fprintf(stderr, ".");
+          if(wlist_counter % 5000 == 0){
+            fprintf(stderr, "(%d)\n", this->worklist.Size());
+            if(flag_verbose >= 3){
+              countAndPrintTriggerStats(cfg, stderr);
+              print_debug_stats(cfg, stderr);
+            }
+          }
+        }
+      }
+      processCFGnode(*this->worklist.Remove());
+
+      if(flag_verbose == 5){
+        fprintf(stderr, "--{Worklist:\n");
+        this->worklist.debug_dump(stderr);
+        fprintf(stderr, "--} end worklist.\n");
+      }
+    }
+    if(flag_verbose >= (this->do_interprocedural?2:3)) TCstats::timer(0);
+
+    if(this->do_interprocedural && flag_verbose == 2)
+      countAndPrintTriggerStats(cfg, stderr);
+}
+
+void DFA::doAnalysis(CFG& cfg, bool intra_skip_libfns)
+{
+  if(this->do_interprocedural){
+
+    CFGnode * entry = cfg.getEntryNode();
+    if(entry){
+      //-- collect worklist
+      if(flag_verbose) TCstats::timer("collecting initial worklist (inter-procedural)");
+      this->worklist.Clear();
+      //- first, clear worklist_flags
+      suco_iterator<CFGfunction *> fli(cfg.getFunctionList());
+      while(fli.Iterate()){
+        if(flag_use_bblocks){
+          suco_iterator<CFGbblock *> bbi(fli.Current()->getBBlist());
+          while(bbi.Iterate()) bbi.Current()->worklist_flag = false;
+        } else {
+          suco_iterator<PgmStmt *> sli(fli.Current()->getStmtList());
+          while(sli.Iterate()) sli.Current()->worklist_flag = false;
+        }
+      }
+      collectWorkList(*entry);
+      if(flag_verbose){
+        TCstats::timer(0);
+        fprintf(stderr, "(worklist size = %d)\n", this->worklist.Size());
+        if(flag_verbose == 4)
+          worklist.debug_dump(stderr);
+      }
+
+      //-- main part, do analysis
+      processWorklist(cfg);
+
+    } else {
+      fprintf(stderr, "ERROR(DFA::doAnalysis): cfg has no entrynode: cannot do analysis.\n");
+    }
+  } else { //- intra-procedural analysis
+
+    //-- for each function
+    suco_iterator<CFGfunction *> fli(cfg.getFunctionList());
+    while(fli.Iterate()){
+      CFGfunction& cfn = *fli.Current();
+      if((!intra_skip_libfns) || (!cfn.getId().isLib())){
+
+        if(flag_verbose >= 2){
+          static int nlctr = 0;
+          if(!((nlctr++)%5)) fprintf(stderr, "\n");
+          fprintf(stderr, "(%s)", cfn.getId().getPid().getname());
+          TCstats::print_now_time(stderr);
+        }
+
+        //-- collect worklist
+        if(flag_verbose >= 3){
+          fprintf(stderr, "\n");
+          TCstats::timer("collecting initial worklist");
+        }
+
+        this->worklist.Clear();
+        //- first, clear worklist_flags
+        if(flag_use_bblocks){
+          suco_iterator<CFGbblock *> bbi(cfn.getBBlist());
+          while(bbi.Iterate()) bbi.Current()->worklist_flag = false;
+        } else {
+          suco_iterator<PgmStmt *> sli(cfn.getStmtList());
+          while(sli.Iterate()) sli.Current()->worklist_flag = false;
+        }
+
+        if(cfn.getEntryNode())
+          collectWorkList(*cfn.getEntryNode());
+        else
+          fprintf(stderr, "ERROR(DFA::doAnalysis): function has no entry node\n");
+
+        if(flag_verbose >= 3){
+          TCstats::timer(0);
+          fprintf(stderr, "(worklist size = %d)\n", this->worklist.Size());
+          if(flag_verbose == 4)
+            worklist.debug_dump(stderr);
+        }
+
+        //-- main part, do analysis
+        processWorklist(cfg);
+      }
+    }
+    if(flag_verbose >= 2) fprintf(stderr, "\n");
+  }
+}
+
+//----------------------------------
+// END
+//----------------------------------
+

@@ -1,0 +1,1841 @@
+head	1.74;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.74
+date	2004.07.01.23.36.01;	author suan;	state Exp;
+branches;
+next	1.73;
+
+1.73
+date	2004.06.29.20.02.32;	author suan;	state Exp;
+branches;
+next	1.72;
+
+1.72
+date	2004.06.23.14.57.00;	author suan;	state Exp;
+branches;
+next	1.71;
+
+1.71
+date	2004.05.24.19.10.09;	author suan;	state Exp;
+branches;
+next	1.70;
+
+1.70
+date	2004.05.19.16.59.58;	author suan;	state Exp;
+branches;
+next	1.69;
+
+1.69
+date	2004.05.18.23.32.36;	author suan;	state Exp;
+branches;
+next	1.68;
+
+1.68
+date	2004.05.17.22.34.44;	author suan;	state Exp;
+branches;
+next	1.67;
+
+1.67
+date	2004.05.11.22.26.15;	author suan;	state Exp;
+branches;
+next	1.66;
+
+1.66
+date	2004.05.11.21.50.54;	author suan;	state Exp;
+branches;
+next	1.65;
+
+1.65
+date	2004.05.11.15.01.15;	author suan;	state Exp;
+branches;
+next	1.64;
+
+1.64
+date	2004.05.10.14.50.59;	author suan;	state Exp;
+branches;
+next	1.63;
+
+1.63
+date	2004.05.07.23.30.14;	author suan;	state Exp;
+branches;
+next	1.62;
+
+1.62
+date	2004.05.07.18.54.14;	author suan;	state Exp;
+branches;
+next	1.61;
+
+1.61
+date	2004.05.03.22.56.17;	author suan;	state Exp;
+branches;
+next	1.60;
+
+1.60
+date	2004.05.03.20.45.59;	author suan;	state Exp;
+branches;
+next	1.59;
+
+1.59
+date	2004.05.02.20.13.09;	author suan;	state Exp;
+branches;
+next	1.58;
+
+1.58
+date	2004.04.02.16.15.41;	author suan;	state Exp;
+branches;
+next	1.57;
+
+1.57
+date	2004.03.29.20.29.06;	author suan;	state Exp;
+branches;
+next	1.56;
+
+1.56
+date	2004.03.29.02.24.42;	author suan;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2004.03.08.00.43.51;	author suan;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2004.01.30.22.29.54;	author suan;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2003.12.15.22.57.57;	author suan;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2003.11.05.19.45.57;	author suan;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2003.10.24.22.40.50;	author suan;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2003.10.08.23.31.07;	author suan;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2003.06.16.19.03.12;	author suan;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2003.06.11.23.09.46;	author suan;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2003.03.14.22.38.40;	author suan;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2003.02.27.00.54.40;	author suan;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2003.02.26.21.11.26;	author suan;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2003.02.22.00.05.44;	author suan;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2003.02.12.21.12.14;	author suan;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2003.01.16.19.30.49;	author suan;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2003.01.16.17.45.59;	author suan;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2003.01.14.21.10.06;	author suan;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2002.12.20.20.59.32;	author suan;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2002.12.19.22.03.44;	author suan;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2002.11.21.00.35.53;	author suan;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2002.11.15.17.49.43;	author suan;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2002.11.13.01.42.39;	author suan;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2002.11.11.22.23.34;	author suan;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2002.11.06.20.03.20;	author suan;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2002.11.05.21.20.30;	author suan;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2002.10.30.20.47.39;	author suan;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2002.10.23.20.26.57;	author suan;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2002.10.21.18.23.51;	author suan;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2002.10.17.15.51.44;	author suan;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2002.10.03.23.15.44;	author suan;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2002.08.19.14.22.25;	author suan;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2002.08.18.22.13.53;	author suan;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2002.08.18.21.38.13;	author suan;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2002.08.18.16.15.21;	author suan;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2002.08.16.21.56.08;	author suan;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2002.08.16.20.28.52;	author suan;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2002.08.15.23.39.23;	author suan;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2002.08.15.21.16.25;	author suan;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2002.08.15.14.34.17;	author suan;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2002.08.14.23.03.01;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2002.08.14.19.32.14;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2002.08.10.21.26.24;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2002.07.30.13.27.06;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2002.07.29.22.33.35;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2002.05.16.20.32.06;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.05.08.23.24.24;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.04.25.18.01.17;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.04.19.23.54.05;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.04.18.15.55.32;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.04.16.22.43.51;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.04.16.20.57.21;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.04.16.20.06.53;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.04.11.17.13.14;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.04.11.04.21.43;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.04.10.17.01.07;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.04.10.16.19.04;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Header for top level analysis state class(es?).
+@
+
+
+1.74
+log
+@RAN: added counter to count number of in-bounds
+dereferences that contain an SDot/UDot ('M') or
+Arrow ('W').
+@
+text
+@#ifndef TC_TCA_H /* { */
+#define TC_TCA_H
+
+#include "id.h"
+#include "edge.h"
+#include "ao.h"
+#include "ecr.h"
+#include "cfg.h"
+
+//------------------------------------------------------
+class InputState
+{
+  public:
+    InputState(FILE * f, IDmap& a, IDmap& p, AOlist& v)
+	: inf(f), aidmap(a), pidmap(p), values(v) {}
+    FILE * inf;
+    IDmap& aidmap;
+    IDmap& pidmap;
+    AOlist& values;
+};
+
+//------------------------------------------------------
+
+class TCAstate
+{
+  public:
+    typedef enum { relaos_MBU, relaos_RAN } relaos_mode;	//- for computing relevant aos
+
+    TCAstate() : aidtab(), pidtab(), values(), cfg(),
+		 mbu_results(), red_results(), ran_results(),
+		 ran_num_all_vps(0), ran_num_finite_vps(0), ran_num_half_finite_vps(0),
+		  ran_num_inbounds_vps(0), ran_num_inbounds_sdotarrows(0),
+		 ran_num_array_all_vps(0), ran_num_array_finite_vps(0),
+		  ran_num_array_half_finite_vps(0), ran_num_array_inbounds_vps(0),
+		 ran_num_known_preds(0),
+		 assigns(), arg_ret_assigns() {}
+
+    static bool isVulnFunction(const char * cp);
+
+    void processFile(char *);
+
+    void traverseAOs(void (*fp)(AO&));
+
+    void writeTSoutput(FILE *, bool tsl);
+    void writeAliases(FILE *);
+    void writeCallgraph(FILE *, bool dot, char * trace_fn);
+
+    void addrAssignAnalysis(bool ptrptrw);
+    void ptAnalysis();
+    void supplementalPTanalysis();
+    void possTypeAnalysis();
+    void tscAnalysis();
+    void invalidPtrAnalysis();
+    void allDerefUnsafeAnalysis();
+    void tcFlowSensitiveAnalyses();
+    void ptrFlowSensitiveAnalyses();
+    void markRelevantLocs(bool readwrite, relaos_mode relmode);
+    void computeVulnerable();
+    void writeVulnerable(FILE * outf);
+    void outputLibfnTrackStatus(FILE * outf);
+
+    void debug_dump(FILE *);
+    void summary_dump(FILE *);
+
+  private:
+    IDlist aidtab, pidtab;
+    AOlist values;
+
+    //- flow-sensitive analysis stuff
+    CFG cfg;
+    RDAfact mbu_results;
+    REDresults red_results;
+    suco_set<PExprVerify *> ran_results;
+
+    //- some RAN stats
+    int ran_num_all_vps;
+    int ran_num_finite_vps;
+    int ran_num_half_finite_vps;
+    int ran_num_inbounds_vps;
+    int ran_num_inbounds_sdotarrows;
+
+    int ran_num_array_all_vps;
+    int ran_num_array_finite_vps;
+    int ran_num_array_half_finite_vps;
+    int ran_num_array_inbounds_vps;
+
+    int ran_num_known_preds;
+
+    suco_llist<TCassignEdge *> assigns;
+    suco_llist<TCassignEdge *> arg_ret_assigns;
+
+    static suco_llist<TCassignEdge *> * static_arg_ret_assigns; // used by insertArgRetAssignEdges
+    static suco_set<ECRargRet *> collectInclToArgRets_ECRs; // used by collectInclToArgRets
+    static suco_set<ECRargRet *> insertArgRetAssignEdges_doneset; // used by insertArgRetAssignEdges;
+
+    static void printDerefAliases(AO& ao); // helper for writeAliases
+    static void setAddrofDerefUDotUnsafe(AO& ao); // helper for addrAssignAnalysis
+    static void markDerefUnsafeAddrofTracked(AO& ao); // helper for addrAssignAnalysis
+    static void initPossTypeConstraintsAO(AO& ao); // helper for possTypeAnalysis
+    static void initPossTypeConstraintsInclusion(ECR& ecr); // helper for possTypeAnalysis
+    static void initPossTypeConstraintsAssign(TCassignEdge& edge); // helper for possTypeAnalysis
+    static void addReturnNodeAliases(AO& ao); // called by supplementalPTanalysis
+    static bool collectInclToArgRets(ECR& e); // helper for insertArgRetAssignEdges
+    static void addAssignEdges(ECR * lecr, ECR * recr, AO::aoKind kind); // helper for insertArgRetAssignEdges
+    static void insertArgRetAssignEdges(AO& ao); // helper for supplementalPTanalysis
+    static void markInvalidNode(AO& ao); // helper for supplementalPTanalysis
+    static void markInvalidNodeNonNull(AO& ao); // helper for invalidPtrAnalysis
+    static void markInvalidLocAO(AO& ao); // helper for markAutoInvalidId / invalidPtrAnalysis
+    static void markAutoInvalidId(ID& id); // helper for invalidPtrAnalysis
+    static void propagateInfluential(ECR& ecr); // helper for assignTSC
+    static void propagateExposed(ECR& ecr); // helper for assignTSC
+    static void assignTSC(AO& ao); // helper for tscAnalysis
+    static void assignTSCderef(AO& ao); // helper for invalidPtrAnalysis
+    static void assignTSCderefWrite(AO& ao); // helper for invalidPtrAnalysis
+    static void assignAllUnsafeRW(AO& ao); // helper for allDerefUnsafeAnalysis
+    static void assignAllUnsafeW(AO& ao); // helper for allDerefUnsafeAnalysis
+
+    static bool markStartingPoints(PgmExpr& pe); // helper for markRelevantLocs
+    static relaos_mode msp_relaos_mode; // used by markRelevantLocs/markStartingPoints
+    static DependencyMap msp_misc_dependencies; // used by markRelevantLocs/markStartingPoints
+    static suco_set<ECR *> msp_starting_ecrs; // used by markRelevantLocs/markStartingPoints
+
+    static void TCAstate::markRelevantAndCollectInclFromECRs(suco_set<AO *>& aoset, suco_set<ECR *>& ecrset); // helper for markRelevantLocs
+    static void resetRelevantTag(AO& ao); // helper for -relevant-aos
+    static void clearRelevantTag(AO& ao); // helper for markRelevantLocs
+    static void countRelevantAOs(AO& ao); // helper for markRelevantLocs
+    static int crao_total_aos; // used by countRelevantAOs
+    static int crao_marked_aos; // used by countRelevantAOs
+
+    static bool collectVulnerable(PgmExpr& expr); //- helper for computeVulnerable
+    static bool writeLibfnTrackStatus(PgmExpr& expr); //- helper for outputLibfnTrackStatus
+    static const char * interestingLibFnSignature(ID * fnid); //- helper for writeLibfnTrackStatus
+
+    static TClatRootSet possTypeConstraintRoots; // used for constraint solving
+
+    //- used for verbose output, when generating possible-type constraints
+    static int poss_type_init_counter;
+    static int poss_type_assign_counter;
+    static int poss_type_incl_counter;
+};
+
+#define TCA_BUF_SIZE 65535	// Empirically: mesa has one line with 35848 chars; SHOULD WRITE MORE ROBUSTLY!
+
+//------------------------------------------------------
+
+#endif /* } ifdef TC_TCA_H */
+@
+
+
+1.73
+log
+@ADDED evaluation of each library function call to determine
+if its target (where relevant) is exposed -- this will mainly
+be used in -vulnw mode to remove instrumentation when a
+function's target is exposed (needed to avoid false positive).
+Eventually, it may also be used in -ptr/ptrw mode to remove
+instrumentation when a library function's target is not
+exposed -- though currently this never happens because of
+context-insensitive analysis and overly-conservative models.
+SUPPLEMENTAL CHANGES to achieve the above:
+ 1. Created ExposedStatus class in ao.cpp/ao.h (was previously
+    an enum in AO class)
+ 2. Changed PExprcall::isDirectCall() to return the ID of the
+    direct call, rather than just a bool.
+ 3. Exported "flag_readwrite" to become a global -- it's about
+    time (I'd been misguidedly trying to avoid this for far
+    too long, creating a bigger mess instead)
+@
+text
+@d31 2
+a32 2
+		 ran_num_all_vps(0), ran_num_finite_vps(0),
+		  ran_num_half_finite_vps(0), ran_num_inbounds_vps(0),
+d80 1
+@
+
+
+1.72
+log
+@MAJOR ADDITION: added -vuln mode computations to output
+1. vulnerable locations (function pointers and first
+   arguments to exec,system,longjmp,...)
+2. vulnerable dereferences (any Ref ao that may point
+   to a vulnerable location)
+@
+text
+@d53 2
+a54 2
+    void invalidPtrAnalysis(bool readwrite);
+    void allDerefUnsafeAnalysis(bool readwrite);
+d56 1
+a56 1
+    void ptrFlowSensitiveAnalyses(bool readwrite);
+d60 1
+a117 1
+    static bool msp_readwrite; // used by markRelevantLocs/markStartingPoints
+d130 2
+@
+
+
+1.71
+log
+@1. Wrote flow-insensitive pmbu analysis; the flow-sensitive
+   portion is now in a non-working state, and needs to be
+   rewritten.
+2. Moved some pmbu-related code from TCAstate to
+   pMBUfactHandler class.
+So now: pmbu-sensitive is working, but not pmbu-insensitive.
+@
+text
+@d58 2
+d128 2
+@
+
+
+1.70
+log
+@Refined pMBU tracked/unsafe mechanism to account for
+readwrite -- involves another ugly class-static flag.
+@
+text
+@a71 11
+    //- getting sloppy: I'm starting to prefer the
+    //  convenience of declaring these statically,
+    //  over the "cleanness" of making them member
+    //  fields (of this class which is instantiated
+    //  only once).
+    static suco_set<AO *> pmbu_results;
+    static suco_set<AO *> pmbu_unsafe;
+    static suco_set<AO *> pmbu_tracked;
+    static bool pmbu_readwrite;	//- used by collectPMBUtrackedUnsafe
+    static void collectPMBUtrackedUnsafe(AO& ao);
+
+@
+
+
+1.69
+log
+@pMBU now outputs in two modes:
+mode 1: "M" = may-be-uninit location that may be
+	dereferenced -- this is used by sml when
+	-nullifySafeUninitPtrs is on, to zero-init
+	these may-be-uninit locations.
+mode 2: if -nullifySafeUninitPtrs is off, then
+	treate all may-be-uninit derefs as unsafe,
+	and their pointed-to locations as tracked.
+	This is given by "U" and "T" lines respectively.
+@
+text
+@d80 1
+@
+
+
+1.68
+log
+@Added pMBU: may-be-uninit analysis for ptr/ptrw mode.
+Very conservative, and still slow...
+@
+text
+@d30 1
+a30 1
+		 mbu_results(), pmbu_results(), red_results(), ran_results(),
+a68 1
+    suco_set<AO *> pmbu_results;
+d71 10
+@
+
+
+1.67
+log
+@Deleted ecrSetIsRelevant, which had been obsolesced.
+@
+text
+@d30 1
+a30 1
+		 mbu_results(), red_results(), ran_results(),
+d69 1
+d122 1
+@
+
+
+1.66
+log
+@RELEVANT AOS DONE (but some parts not efficient):
+ - Added Dependency and DependencyMap classes, to record
+   dependencies not captured by flow-insensitive assign
+   edges.
+ - Revamped tca relevant-aos collecting mechanism.
+Note: certain recent changes rendered certain operations
+less efficient, like getAliasECRs.
+@
+text
+@a119 1
+    static bool ecrSetIsRelevant(suco_set<ECR *>& eset); // helper for markRelevantLocs
+@
+
+
+1.65
+log
+@MAJOR UPDATE: towards relevant aos.
+THIS VERSION RELIES ON ExpDescr's aoset TO CAPTURE
+ALL DEPENDENCE INFORMATION, WHICH IS NOT THE CASE.
+@
+text
+@d117 2
+a118 1
+    static suco_set<ECR *> msp_mallocsize_ecrs; // used by markRelevantLocs/markStartingPoints
+d121 1
+a121 1
+    static bool ecrsToAssignEdges(suco_set<ECR *>& eset, suco_set<TCassignEdge *>& edges, bool incoming); // helper for markRelevantLocs
+@
+
+
+1.64
+log
+@1. Renamed ExpDescr's affaos to estr_aos, to avoid confusion
+   with "affecting aos" (affecrs).
+2. tca: more refinement of relevant-aos computation:
+   - specially handle op/ext/star AOs -- not quite
+     there yet (this is hopefully the last bit that
+     needs to be fixed)
+   - in RAN mode, starting points must include malloc
+     sizes.
+@
+text
+@d117 2
+d120 1
+@
+
+
+1.63
+log
+@More work towards filtering relevant AOs:
+ - Added flag -relevant-aos
+ - AO added "dfa_relevant" bit for each AO
+ - ECR added "collectInclFromECRs() helper that's
+   needed when collecting relevant aos
+ - TCA added a bunch of helpers:
+   - markRelevantLocs() which calls
+     1. clearRelevantTags() on each AO, to clear
+        the dfa_relevant tags
+     2. markStartingPoints(), which walks the
+        assignment edges (in the CFG!) to populate
+        the initial set of aos (based on readwrite
+        flag and whether we want to mark safe AOs
+        (for MBU) or unsafe ones (for RAN)).
+     3. propagate along (flow-insensitive) assign
+        edges.
+@
+text
+@d27 2
+d57 1
+a57 1
+    void markRelevantLocs(bool readwrite, bool keep_safe);
+d116 1
+a116 1
+    static bool msp_keep_safe; // used by markRelevantLocs/markStartingPoints
+@
+
+
+1.62
+log
+@Added routines to "finalize" ecrset after pt-analysis:
+- added new factory method to keep the set of all
+  allocated ECRs, to allow garbage collection when
+  "finalizing";
+- finalizers are called in tca.cpp:supplementalPTanalysis.
+In tca.cpp: started adding code to compute filter set
+for ptr-MBU analysis -- current version is very slow.
+@
+text
+@d55 1
+a110 1
+    static bool collectStartingPoints(PgmExpr& pe); // helper for MBU analysis
+d112 9
+a120 2
+    static LocSet * csp_locset; // used by collectStartingPoints
+    static bool csp_readwrite; // used by collectStartingPoints
+@
+
+
+1.61
+log
+@Added -calltrace= option.
+@
+text
+@d110 1
+d112 2
+@
+
+
+1.60
+log
+@Added -callgraph/-callgraph-dot support to output
+callgraph in tree form or in dot format.
+Unfortunately, both formats are likely to be too
+long to be useful for all but small programs.
+@
+text
+@d44 1
+a44 1
+    void writeCallgraph(FILE *, bool dot);
+@
+
+
+1.59
+log
+@Augmented longjmp check to check also
+exec*, system, popen.
+@
+text
+@d44 1
+@
+
+
+1.58
+log
+@Augmented RAN counters to count both "all" and "array"
+versions of all four categories: all-vps, finite, half-finite,
+inbounds.
+@
+text
+@d36 2
+@
+
+
+1.57
+log
+@Added mechanism to report static RAN-count of
+direct-array accesses (all, and in-bounds only).
+Entailed adding AO::isDirectArrayAccess() helper
+funciton; a couple of counting helpers in
+RANcFactHandler, and a place to store the
+results in TCAstate.
+@
+text
+@d29 5
+a33 3
+		 ran_num_all_vps(0), ran_num_finite_vps(0), ran_num_half_finite_vps(0),
+		 ran_num_inbounds_vps(0), ran_num_known_preds(0),
+		 ran_num_all_array_vps(0), ran_num_inbounds_array_vps(0),
+d71 6
+a77 2
+    int ran_num_all_array_vps;
+    int ran_num_inbounds_array_vps;
+@
+
+
+1.56
+log
+@Collecting RAN stats (all-vps, finite-vps, half-finite-vps, inbounds-vps,
+known-preds):
+ - RAN replaced checkInBounds() with getDerefRangeFor()
+ - added reportKnownPredicate() helper to RAN[c]factHandler
+ - added list accumulators to RANcFactHandler
+ - added count holders to TCAstate
+
+Interval::isTop() - now returns true of min > max!
+(was returning only if min = +inf, max = -inf!)
+
+Interval: added "modulo" to compute %.
+
+AO::get_AOUDot/get_AOSDot() - unify ecr if called after pt-analysis.
+@
+text
+@d29 3
+a31 2
+		 ran_num_all_vps(), ran_num_finite_vps(), ran_num_half_finite_vps(),
+		 ran_num_inbounds_vps(), ran_num_known_preds(),
+d70 2
+@
+
+
+1.55
+log
+@Upped the TCA_BUF_SIZE again, this time to 64K!
+Should _really_ use alternate readline mechanism!
+@
+text
+@d29 2
+d62 7
+@
+
+
+1.54
+log
+@Added -unsafe-derefs flag, to do "tracked-only" analysis
+(i.e., all derefs are treated as unsafe).
+@
+text
+@d98 1
+a98 1
+#define TCA_BUF_SIZE 4096	// Empirically, gcc has one line with >2100 chars; SHOULD WRITE MORE ROBUSTLY!
+@
+
+
+1.53
+log
+@Changed TCA_BUG_SIZE
+@
+text
+@d43 2
+a44 1
+    void invalidPtrAnalysis(bool readwrite = true);
+d46 1
+a46 1
+    void ptrFlowSensitiveAnalyses(bool readwrite = true);
+d87 2
+@
+
+
+1.52
+log
+@Removed redundant code:
+ Earlier, there were two different versions of addReturnNodeAliases,
+ with the old one involving an extra helper function.
+ The new version was written but not thoroughly tested;
+ it's now been "reasonably" tested, so I've deleted the old
+ version.
+@
+text
+@d95 1
+a95 1
+#define TCA_BUF_SIZE 2048
+@
+
+
+1.51
+log
+@Added interface skeleton for doing the bounds-check phase,
+including:
+  Interval::inBounds
+  RANfact::checkInBounds
+  RANfact::evalAddrRange (needed by both checkInBounds
+                          and evalSubexpr/addrof case)
+and changed RANc result type from a REDresult to a
+list of PExprVerify's.
+Next need to fill in, mainly evalAddrRange, but must
+think of strategy to store object sizes.
+@
+text
+@a62 1
+    static AO * afr_ao; // used by addReturnNodeAliases/aliasFnReturns
+a72 1
+    static bool aliasFnReturns(AO& ao); // helper for addReturnNodeAliases
+@
+
+
+1.50
+log
+@1. Added code (to CFG::assignId) to mark backedges in
+   the CFG.
+   May be buggy -- must test.
+2. -MAJOR UPDATE-
+   Added ran.cpp/ran.h for range checking.
+   Thusfar, ran.cpp contains only empty skeletons to be
+   filled in - do not run!
+3. Renamed widen_narrow in CFG to is_backedge;
+   also, now widen/narrow are specific to RAN/RANfact,
+   rather than generic to DFA/DFAfact.
+@
+text
+@d58 1
+a58 1
+    REDresults ran_results;
+@
+
+
+1.49
+log
+@Extended -addr flag to do address-taken analysis differently
+under ptr/ptrw mode than in tc mode:
+ the old version (tc mode) reverts to the old tsl of
+  SAFE/UNSAFE: it marks all * and & targets as UNSAFE,
+  and propagates them down various edges.
+ the new version (ptr/ptrw mode only) marks all & targets
+  as TRACKED, all * objects as POSS_INVALID. The code is
+  simpler, and I believe achieves the desired effects.
+  The only caveat was if we take &s.i, the current instrumentation
+  mode will correctly track all of s, even though this
+  -addr analysis will only mark s.i as tracked.
+@
+text
+@d28 1
+a28 1
+		 mbu_results(), red_results(),
+d58 1
+@
+
+
+1.48
+log
+@HEAPSTACK UPDATE: enhance -ptr/-ptrw mode to optionally consider
+freed-heap and stack locations as "possibly invalid" locations.
+
+Changed input function to recognize new format with
+storage-class designator (Auto|Heap|Static);
+Added -ptr-heap -ptr-heapstack cmdline flags;
+Modified assignTSC* functions to set POSS_INVALID only
+on isRef() aos;
+Added code to do the heap/heapstack stuff, including
+adding two static helper functions (markAutoInvalidId,
+markInvalidLocAO);
+ECR::markInvalid has been modified to take an argument:
+a flag indicating whether or not to propagate the
+invalid down dereferences (p invalid =?=> *p invalid):
+true for the old stuff (marking what VALUE_int points-to
+as invalid, etc), and false for the new heapstack stuff
+(marking an auto variable as invalid).
+@
+text
+@d38 1
+a38 1
+    void addrAssignAnalysis();
+d69 1
+@
+
+
+1.47
+log
+@Redefined TCA_BUF_SIZE from 1024 to 2048, to handle m88ksim
+overflow (max col width = 1720).
+@
+text
+@d79 2
+@
+
+
+1.46
+log
+@Further split RED*handler classes to differentiate between
+-ptr and -ptrw mode, with the latter inheriting from the former
+(with only one change -- w.r.t. handleVerify).
+Minimally tested.
+@
+text
+@a21 2
+#define TCA_BUF_SIZE 1024
+
+d93 1
+a93 1
+#define TCA_BUF_SIZE 1024
+@
+
+
+1.45
+log
+@Major reshuffling (non-final):
+1. output of RED realigned to be of one of four classes:
+    -ptr all, -ptr write, -tag verify, -tag assign
+2. specialized written RED analysis for ptr/ptrw only,
+   wrote -ptr pieces though doesn't seem to work.
+   TODO: split further between ptr and ptrw modes,
+   since these are differentiated anyways by rtca!
+@
+text
+@d47 1
+a47 1
+    void ptrFlowSensitiveAnalyses();
+@
+
+
+1.44
+log
+@Wrote redundant analysis collection function.
+Entailed creation of REDresults class and REDcFactHandler, etc.
+Resulted in modifying suco_set (olist, actually) to have a
+different Contains function that uses the compare function
+rather than ==. (Future work: may want to extend to some
+other functions).
+@
+text
+@d46 2
+a47 1
+    void flowSensitiveAnalyses();
+@
+
+
+1.43
+log
+@Added -mbu-intra flag; starting to add intra-procedural
+analysis mechanism -- wrote some skeletal setups, but
+not done.
+Should be only two pieces to write to do MBU intraprocedurally
+(I don't think we can/should do RDA intraprocedurally).
+@
+text
+@d29 2
+a30 2
+    TCAstate() : aidtab(), pidtab(), values(),
+		 cfg(), mbu_results(),
+d58 1
+@
+
+
+1.42
+log
+@Removed RDMBc class; replaced by instantiation of
+general MBUc class (for collecting may-be-uninit
+results in a RDAfact object).
+Added MBUc1factHandler class, and skeleton for MBUc2factHandler.
+@
+text
+@d30 1
+a30 1
+		 cfg(), rda(), mbu(), mbu_results(),
+d55 1
+a55 1
+    //- flow-sensitive analyses
+a56 2
+    RDA rda;
+    MBU mbu;
+@
+
+
+1.41
+log
+@Major restructuring:
+ 1. added DFAfactHandler class to encapsulate functions
+    that process a DFAfact based on the CFG node.
+    Created a handler for each fact class thusfar
+    (MBU, RDA, cMBU->RDMB)
+ 2. renamed cMBU to RDMB, to represent the pair (RDA,MBU).
+    The collection analysis class is now called RDMBc.
+    Use this new convention for naming?: end in "c" for
+    a "collecting" analysis class (and "a" for "analysis"?)
+@
+text
+@d30 1
+a30 1
+		 cfg(), rda(), mbu(), rdmb(),
+d59 1
+a59 1
+    RDMBc rdmb;
+@
+
+
+1.40
+log
+@Change of approach: the points-to graph will now contain
+include-edges for function return nodes, so that the alias
+set of Return(Star(exp)) will include Return(Id(foo)) for
+all exp-aliased functions foo.
+This negates previous hack approaches (treating function
+calls as a special case when handling an assignment RHS),
+which have been removed.
+NOTE: the addition of the new include edges is done in
+tca.cpp (TCAstate); perhaps should migrate to a better
+place (pta.cpp?).
+
+Also, cMBU fact-collection now includes non-location objects,
+and the result set will include the reaching-defs of aliases.
+For example, the cMBU result set might now include
+{ *p : defn(i), defn(j) } where i and j are aliases of *p.
+This was previously omitted, erroneously.
+@
+text
+@d30 1
+a30 1
+		 cfg(), rda(), mbu(), cmbu(rda,mbu),
+d59 1
+a59 1
+    cMBU cmbu;
+@
+
+
+1.39
+log
+@Added cMBU class to collect may-be-uninit results (after
+running RDA and MBU); new class is in cmbu.cpp.
+Appears to be working, though a few open issues remain:
+ - lookupNodeFact needs a complement (releaseNodeFact),
+   since cMBU returns a new node (though neither MBU
+   nor RDA do)
+ - mode_iterating/mode_collecting -- should get rid
+   of this flag cleanly
+ - absorbAndCompare -- should obsolesce this, or migrate
+   it to DFA/MBU/RDA
+Longer term:
+ - RDA should use GMOD, but when collecting, will need
+   to refer to GREF.
+@
+text
+@a39 16
+    static void printDerefAliases(AO& ao); // helper for writeAliases
+    static void setAddrofDerefUDotUnsafe(AO& ao); // helper for addrAssignAnalysis
+    static void initPossTypeConstraintsAO(AO& ao); // helper for possTypeAnalysis
+    static void initPossTypeConstraintsInclusion(ECR& ecr); // helper for possTypeAnalysis
+    static void initPossTypeConstraintsAssign(TCassignEdge& edge); // helper for possTypeAnalysis
+    static bool collectInclToArgRets(ECR& e); // helper for insertArgRetAssignEdges
+    static void addAssignEdges(ECR * lecr, ECR * recr, AO::aoKind kind); // helper for insertArgRetAssignEdges
+    static void insertArgRetAssignEdges(AO& ao); // helper for supplementalPTanalysis
+    static void markInvalidNode(AO& ao); // helper for supplementalPTanalysis
+    static void markInvalidNodeNonNull(AO& ao); // helper for invalidPtrAnalysis
+    static void propagateInfluential(ECR& ecr); // helper for assignTSC
+    static void propagateExposed(ECR& ecr); // helper for assignTSC
+    static void assignTSC(AO& ao); // helper for tscAnalysis
+    static void assignTSCderef(AO& ao); // helper for invalidPtrAnalysis
+    static void assignTSCderefWrite(AO& ao); // helper for invalidPtrAnalysis
+
+d64 1
+d68 18
+@
+
+
+1.38
+log
+@Major update:
+Added -rda (reaching-defs analysis) in new class RDA:DFA.
+Basically, copied the meat from MBU, making minimal changes.
+Compiles, runs, verified against small examples.
+NEED TO REVIEW CODE IN DETAIL, and verify against larger
+examples.
+Potential problem: seems rather slow, may want to compute
+GMOD?
+@
+text
+@d30 1
+a30 1
+		 cfg(), mbu(), rda(),
+d73 1
+d75 1
+a75 1
+    RDA rda;
+@
+
+
+1.37
+log
+@1. in TCAstate, mbu is now a member -- it stores the results
+   to be output later.
+2. MBU now contains a result fact, and DFA analysis now
+   progresses in two modes: iterating and collecting,
+   the latter calling collectResultsVerifyTag(/Ptr)
+   to accumulate the results.
+3. in cfg.cpp/h, DFAdecl now has filestem_id argument,
+   needed for consistent output.
+Current state of program: compiles, runs without crashing,
+but results are wrong (no output on many examples, suspect
+function call handling error?).
+@
+text
+@d30 1
+a30 1
+		 cfg(), mbu(),
+d74 1
+@
+
+
+1.36
+log
+@Reorganized global flags, stat-collection and output;
+moved TCcollectStats to diag.cpp/h, renamed to TCstats,
+and absorbed what used to be in diag.cpp/h.
+Global flags have been moved to flags.h, (they're defined
+in tca.cpp, for now).
+Removed the -stat flag: the "stat" output is now always
+dumped, to the output file rather than stderr.
+Added -mbu# flag, though haven't done anything with the
+different mbu levels yet.
+@
+text
+@d29 3
+a31 1
+    TCAstate() : aidtab(), pidtab(), values(), assigns(), arg_ret_assigns() {}
+d71 1
+d73 1
+@
+
+
+1.35
+log
+@CFG: wrote MBUfacts test for intersection between a MBUfact
+and an AOset's alias set (done using ECR::traverseAliases).
+Cascaded changes to AO/ECR include:
+1. AO::ts_categ is now explicitly enumerated to allow >=
+   comparison
+2. ECR::traverseAliases now takes bool functions, and
+   returns a bool, true if all applications return true,
+   and false if *any* application returns false (and also
+   halts traversal -- this is an optimization for the
+   intersection check added: once an intersection is found,
+   no further traversal is needed).
+@
+text
+@d22 2
+d79 5
+a86 71
+
+//------------------------------------------------------
+
+class TCcollectStats
+{
+  public:
+    static void clear() { num_aos =
+			  num_addrof =
+			  num_deref =
+			  num_unsafe =
+			  num_tracked = 0;
+
+			  num_poss_bottom =
+			  num_poss_scalar =
+			  num_poss_zero =
+			  num_poss_top = 0;
+
+			  num_safe_ptr =
+			  num_unsafe_ptr =
+			  num_safe_struct_ptr =
+			  num_unsafe_struct_ptr =
+			  num_safe_written_ptr =
+			  num_unsafe_written_ptr =
+			  num_safe_struct_written_ptr =
+			  num_unsafe_struct_written_ptr =
+			  num_safe_fnptr =
+			  num_unsafe_fnptr =
+			  num_safe_struct_fnptr =
+			  num_unsafe_struct_fnptr =
+			  num_tracked_loc =
+			  num_untracked_loc =
+			  num_tracked_fnptr =
+			  num_untracked_fnptr =
+			  num_tracked_struct_fnptr =
+			  num_untracked_struct_fnptr = 0;
+			}
+
+    static void doAO(AO& ao);
+    static void doAssigns(FILE * outf, suco_llist<TCassignEdge *>& assigns);
+    static void print(FILE * outf);
+
+  private:
+    TCcollectStats();
+    static int	num_aos,
+		num_addrof,
+		num_deref,
+		num_unsafe,
+		num_tracked;
+    static int	num_poss_bottom,
+		num_poss_scalar,
+		num_poss_zero,
+		num_poss_top;
+    static int	num_safe_ptr,
+		num_unsafe_ptr,
+		num_safe_struct_ptr,
+		num_unsafe_struct_ptr,
+		num_safe_written_ptr,
+		num_unsafe_written_ptr,
+		num_safe_struct_written_ptr,
+		num_unsafe_struct_written_ptr,
+		num_safe_fnptr,
+		num_unsafe_fnptr,
+		num_safe_struct_fnptr,
+		num_unsafe_struct_fnptr,
+		num_tracked_loc,
+		num_untracked_loc,
+		num_tracked_fnptr,
+		num_untracked_fnptr,
+		num_tracked_struct_fnptr,
+		num_untracked_struct_fnptr;
+};
+@
+
+
+1.34
+log
+@Added initial framework for flow-sensitive stuff in tca.cpp/h.
+Wrote functions to connect call/return nodes to function nodes
+to create supergraph.
+Minor change in id.cpp/h: get_AOId returns reference to AOId
+rather than AO object; similarly for get_AOStringLit/get_AOMalloc.
+@
+text
+@d41 1
+a41 1
+    static void collectInclToArgRets(ECR& e); // helper for insertArgRetAssignEdges
+@
+
+
+1.33
+log
+@Augmented cfg DFfacts with references to AOs;
+the respective read functions call AO::stringToAOs,
+which requires the pidmap and aidmap arguments from tca,
+so a new class InputState was created (in tca.h) to
+pass these around conveniently.
+Also, added another helper function AO::stringToAOlist
+to read in lists of AOs, separated by ',', terminated by
+'.'.
+@
+text
+@d58 1
+a58 1
+    void freeArgAnalysis();
+@
+
+
+1.32
+log
+@Incorporated cfg.cpp/cfg.h into rtca project.
+Modified DFfacts to be abstract, and have many children;
+CFGfunction now stores a "filestem" argument;
+tca -debug mode now dumps the CFG as well;
+currently cfg input reads aid and other integral arguments
+of DFfacts; yet to do: read in AO arguments.
+@
+text
+@d11 12
+d24 2
+a25 1
+class TCAstate {
+d83 2
+a84 1
+class TCcollectStats {
+@
+
+
+1.31
+log
+@Added freearg handling: for each assignment to the first
+argument of free, check to see if the argument points to
+none, some, or all exposed objects -- with current implementation
+it is sufficient to check the exposed flag of the corresponding
+ECR objects (but must still follow inclTo edges).
+Note -- attributes for two policies are computed, one considering
+all AOs, another considering only Malloc AOs. The latter is unsafe
+(but "usually safe", one would hope), but likely more efficient.
+Output is "/ A M O" where A is the status for all AOs, M for malloc
+AOs only, and O the AO in question.
+@
+text
+@d8 1
+d53 3
+d58 1
+@
+
+
+1.30
+log
+@Added mechanism to collect stats about safe/unsafe tracked/untracked
+pointer/fnptr/ptrs-in-structs/locations; involved various new additions
+(including 'f' defined-function directive from instr-ast.sml)
+@
+text
+@d13 1
+a13 1
+    TCAstate() : aidtab(), pidtab(), values(), vararglist(), assigns(), arg_ret_assigns() {}
+d44 1
+a51 1
+    AOlist vararglist;
+@
+
+
+1.29
+log
+@Wrote -ptrw version, which only propagates exposed and
+influential from assigned-to invalid AOs.
+@
+text
+@d72 1
+d77 19
+d99 1
+a99 1
+
+d113 18
+@
+
+
+1.28
+log
+@Added vargno handling:
+Each AO now has a vargno argument, which if nonzero indicates
+a vararg function. This is set by the new "v" directive from
+tc-assign. When an AO has a non-zero vargno, we merge the ECRs
+of all argret nodes from vargno up to maxnargs.
+NOTE: may want to reimplement better: make vargno an argument
+of only aoFunction...
+@
+text
+@d36 1
+d43 1
+a43 1
+    void invalidPtrAnalysis();
+@
+
+
+1.27
+log
+@Added invalid-pointer analysis (-ptr flag) that only marks
+non-null possibly-invalid dereferences, and their points-to
+targets as exposed -- to be used by new security tool
+@
+text
+@d13 1
+a13 1
+    TCAstate() : aidtab(), pidtab(), values(), assigns(), arg_ret_assigns() {}
+d50 1
+@
+
+
+1.26
+log
+@Added Type-safety Category assignment.
+(major change).
+Appears working, tested on gcc, verified on small examples,
+not thoroughly verified.
+Also, added -readable flag.
+@
+text
+@d31 1
+d35 1
+d42 1
+@
+
+
+1.25
+log
+@Introduced "write-type" to assist in computation of
+poss-type constraints -- performance improves drastically!
+Verified results on gcc, ijpeg.
+@
+text
+@d19 1
+a19 1
+    void writeTSlevels(FILE *);
+d24 3
+a26 3
+    static void initPossTypeConstraintsAO(AO& ao); // helper for fullAnalysis
+    static void initPossTypeConstraintsInclusion(ECR& ecr); // helper for fullAnalysis
+    static void initPossTypeConstraintsAssign(TCassignEdge& edge); // helper for fullAnalysis
+d31 3
+d39 1
+a39 1
+    void tslAnalysis();
+@
+
+
+1.24
+log
+@Added -summary flag.
+@
+text
+@a23 1
+    static void applyAssignConstraint(ECR& fromECR, ECR& toECR); // helper for initPossTypeConstraintsAssign
+@
+
+
+1.23
+log
+@Fixed oversight in applyAssignConstraint -- was not propagating down
+inclusion edges.
+Added STAT debug output, etc.
+@
+text
+@d36 1
+a36 1
+    void rtAnalysis();
+d40 1
+@
+
+
+1.22
+log
+@Finished (but not tested) initialization of poss-type
+constraints.
+This entailed creation of a root set (encapsulated by
+the class TClatRootSet).
+Also, to manipulate the traverseCounter, TCAstate is now
+a friend of ECR -- I'm not sure I like this arrangement.
+@
+text
+@d63 6
+a68 1
+			  num_tracked = 0; }
+d76 1
+a76 1
+    static int  num_aos,
+d81 4
+@
+
+
+1.21
+log
+@Intermediate checkin: started writing poss-type constraint
+generation: added some needed data structures to ECR and
+TClatType; initialized AO constraints and wrote helper
+to process inclusion edges from a given ECR;
+need to finally process assignments.
+@
+text
+@d24 1
+d50 1
+@
+
+
+1.20
+log
+@Revamped TClatType;
+renamed ECR::rtType to poss_type;
+rewrote TCAstate functions for initializing poss-types;
+also left a skeleton function for generating constraints.
+Todo: augment TClatType with constraint graph capabilities,
+generate contraints, and solve.
+Also, AO needs to have required-type.
+@
+text
+@d25 1
+@
+
+
+1.19
+log
+@Added routine to mark dereference nodes.
+@
+text
+@d24 2
+a25 2
+    static void initializeRTtypes(AO& ao); // helper for fullAnalysis
+    static suco_set<ECR *> rtWorklist; // worklist for RT-analysis
+@
+
+
+1.18
+log
+@ELIMINATED TCassignEdgeList, TCassignEdgeSet, and TCassignEdgeIterator;
+replaced by SUCO equivalents;
+entailed writing a new edge compare function.
+@
+text
+@d29 1
+@
+
+
+1.17
+log
+@Finished "add arg-ret assignment" functionality;
+entailed adding "mainParent" member to ECRargRet, which
+refers to the main parent, which is used as the basis
+for finding function pointer resolutions -- make sure
+mainParent is set correctly -- that is, getArg is only
+called in the PTA initialization function.
+Also added a couple of static helper functions in tca,
+and made a bunch of ECR/ECRargRet accessors public.
+@
+text
+@d41 3
+a43 3
+    TCassignEdgeList assigns;
+    TCassignEdgeList arg_ret_assigns;
+    static TCassignEdgeList * static_arg_ret_assigns; // used by insertArgRetAssignEdges
+@
+
+
+1.16
+log
+@Added skeleton framework for adding argret assignments;
+also replaced ECRset with suco_set.
+@
+text
+@d27 1
+d45 2
+@
+
+
+1.15
+log
+@Added points-to set output option: -pta now dumps points-to sets
+(alias groups)...
+ - ao: added isRef flag/accessor
+ - ecr.cpp/h: modified traversePointsToSet - is now traverseAliases
+ - tca.cpp/h: top level callers.
+@
+text
+@d13 1
+a13 1
+    TCAstate() : aidtab(), pidtab(), values(), assigns() {}
+d25 3
+a27 1
+    static ECRset rtWorklist; // worklist for RT-analysis
+d31 1
+d41 3
+@
+
+
+1.14
+log
+@Minor cmdline adjustments: added -pta flag; set default
+fixnargs to true.
+@
+text
+@d20 1
+d22 1
+@
+
+
+1.13
+log
+@Started adding RT-analysis stuff - barebones only.
+@
+text
+@d26 3
+a28 1
+    void fullAnalysis();
+@
+
+
+1.12
+log
+@Simplified addrof analysis to mark *all* addrof nodes as
+unsafe, not just those immediately on the rhs of an assignment
+(as was previously done). Basically merged setDerefUnsafe and
+setUDotUnsafe and code in addrAssignAnalysis into one helper
+function setAddrofDerefUDotUnsafe().
+@
+text
+@d7 1
+d22 2
+@
+
+
+1.11
+log
+@Added mechanism to count stats about the number of each
+type of node, and prepend it to the output.
+@
+text
+@d20 1
+a20 2
+    static void setDerefUnsafe(AO& ao); // helper for addrAssignAnalysis
+    static void setUDotUnsafe(AO& ao); // helper for addrAssignAnalysis
+@
+
+
+1.10
+log
+@Added TCAstate::setUDotUnsafe to mark all union objects
+as unsafe.
+@
+text
+@d38 23
+@
+
+
+1.9
+log
+@Program now takes two flags: -addr for addr-taken analysis,
+and -full for full analysis (not yet implemented, but currently
+includes points-to analysis); as well as -debug to dump debug
+trace.
+Addr-taken analysis + assign propagation fully done.
+@
+text
+@d21 1
+@
+
+
+1.8
+log
+@Added calls to newly-written ECR-assignment function,
+with debug output.
+@
+text
+@d20 2
+d23 1
+@
+
+
+1.7
+log
+@Added assignEdgeSet to AOs, and mechanism to insert into
+the set without duplication.
+Next: use this info to propagate UNSAFE from addr-taken
+nodes.
+@
+text
+@d15 3
+@
+
+
+1.6
+log
+@Added type-safety level to AO; improved analysis output
+function to tag address-taken objects as UNSAFE, and later
+output them; the old function (writeAddrofTSlevels) is now
+obsolete and should be removed.
+@
+text
+@a18 1
+    void writeAddrofTSlevels(FILE *);
+d20 1
+d24 1
+a24 1
+    TCedgeList assigns;
+@
+
+
+1.5
+log
+@Added mechanism to store AOs in an AOlist in each AO.
+Included mechanism for traversing all AOs, and debug output
+functions.
+Fairly complete, but not thoroughly tested (especially TypeList
+destructors?)
+@
+text
+@d15 6
+a20 2
+    void writeTSlevels(char *);
+    void debug_dump(char *);
+@
+
+
+1.4
+log
+@Added -dump option to dump assignment edges in human-readable form
+@
+text
+@d6 1
+d12 2
+d16 1
+a16 1
+    void dumpAssigns(char *);
+d19 1
+@
+
+
+1.3
+log
+@Added writeTSlevels to output address-taken analysis
+type-safety levels to a file.
+@
+text
+@d13 1
+@
+
+
+1.2
+log
+@Added assignment edge list
+@
+text
+@d12 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d5 1
+d14 1
+@

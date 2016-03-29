@@ -1,0 +1,436 @@
+head	1.16;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.16
+date	2004.04.14.00.22.35;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2004.04.07.21.07.14;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2004.04.07.18.02.03;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2004.04.07.17.38.56;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2004.02.24.23.48.16;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2004.02.24.19.29.20;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2003.12.11.21.03.59;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2003.12.11.19.18.20;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2003.12.11.18.26.35;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2003.10.08.16.31.43;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2003.10.07.23.05.21;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2003.10.01.22.18.32;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.02.24.21.53.17;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.02.22.00.11.49;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.02.21.17.40.11;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.02.14.17.42.10;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Header file for RDMB stuff, split off from dfa.h.
+@
+
+
+1.16
+log
+@Major overhaul, to handle function call filtering.
+See dfa.cpp for documentation.
+ - filterRetnodeFact() eliminated; replaced by
+ - interProcHandleRetvalAssign -- responsible for
+   assigning from R X I <fn> to R D I <fp>.
+ - interProcPrepareReturnCollector() -- special
+    pre-processor for indirect calls to set "intersection"
+   AOs to "top".
+ - meetFiltered() -- does meet, but constrained by a
+   window (defined by a function's GREF/MayFree set).
+Supporting changes:
+ - eliminated removeArgIntervalsExceptFor(); rendered obsolete
+   by
+ - filterGrefMayFree() -- called at function entry
+ - RANfact::isTop()
+ - collectAOset, createTopMappings, in support of
+   interProcPrepareReturnCollector()
+ - PExprCall::isDirectCall() and isRecursiveCall()
+ - CFGfunction::GrefOrFreeHeapAffects()
+@
+text
+@#ifndef TC_RDMB_H /* { */
+#define TC_RDMB_H
+
+#include "dfa.h"
+#include "mbu.h"
+#include "rda.h"
+
+//----------------------------------
+//- RDMB: RDA/MBU combo, for collecting may-be-uninit results
+
+class RDMBfact : public DFAfact
+{
+    friend class RDMBfactHandler;
+
+  public:
+
+    RDMBfact(RDAfact& rf, MBUfact& mf) : rda_fact(rf), mbu_fact(mf) {}
+    ~RDMBfact() {}
+
+  private: //-- inherited interface
+    DFAfact& newClone(bool preserve = true);
+
+    void setTop();
+    void setBottom();
+    bool meet(DFAfact& df, bool preserve = true, bool warnNotLE = false);
+    void join(DFAfact& df, bool preserve = true);
+
+    void debug_dump(FILE * outf, bool brief = true);
+
+  private:
+
+    RDAfact& rda_fact;
+    MBUfact& mbu_fact;
+
+    static RDAfact * results;
+
+    void addFacts(suco_set<AO *>& aoset, PgmExpr& dnode, PgmStmt * cnode = 0, PExprArg * arg = 0);
+    //-- static helper for addFacts
+    static AO * cf_ao;
+    static RDAfact * cf_rda_fact;
+    static PgmStmt * cf_parent_node;
+    static bool collectFacts(AO& ao);
+
+};
+
+//----------------------------------
+//- RDMB: RDA/MBU combo, for collecting may-be-uninit results
+
+class RDMBfactHandler : public DFAfactHandler
+{
+  public:
+
+    DFAfact& newTopFact();
+    void deleteFact(DFAfact& df);
+
+    void filterCallsiteFacts(PExprCall& dc, DFAfact& df, DFAfact& df_local);
+
+    DFAfact& lookupNodeFact(CFGnode& cn, CFGnode * tfSucc = 0);
+    DFAfact& lookupNodeFact(PExprCall& dc);
+    DFAfact& lookupNodeFact(PExprParallel& dp);
+
+    bool handleStrongAssign(DFAfact& df, AO& lhs, ExpDescr& rhs,
+			    PgmExpr * dnode = 0, PgmStmt * cnode = 0, PExprArg * arg = 0);
+    bool handleWeakAssign(DFAfact& df, ExpDescr& lhs, ExpDescr& rhs, PExprAssign& dnode);
+    bool handleFormal(DFAfact& df, PExprDecl& dd, CFGfunction& parfn, bool interproc);
+    bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, ExpDescr * retedesc, bool interproc);
+    bool handleDecl(DFAfact& df, PExprDecl& dd);
+    bool handleVerify(DFAfact& df, PExprVerify& dv);
+    bool handlePredicate(DFAfactPair& dfp, PExprPredicate& dp) { return true; } //- RDMB: do nothing
+
+    void handleFreeCall(DFAfact& df, PExprCall& dc);
+
+    void intraProcInitializeEntryFact(DFAfact& df, CFGnode& cn);
+    void interProcFilterEntryFact(DFAfact& df, CFGnode& cn);
+    void intraProcHandleCall(DFAfact& df, PExprCall& dc);
+    void interProcHandleCallArgs(DFAfact& df, PExprCall& dc);
+    void interProcHandleRetvalAssign(DFAfact& df, PExprCall& dc);
+
+  public:
+    RDMBfactHandler(RDAfact& res) : DFAfactHandler(), results(res)
+	{ RDMBfact::results = &results; }
+
+  private:
+    RDMBfactHandler();
+
+    RDAfact& results;
+};
+
+//----------------------------------
+
+#endif /* } ifndef TC_RDMB_H */
+
+@
+
+
+1.15
+log
+@Added new DFA interface function interProcFilterEntryFact()
+called at each function entry (when doing inter-proc
+analysis).
+@
+text
+@d77 1
+@
+
+
+1.14
+log
+@Changed handleFormal to pass parent-function rather
+than previous "ismain" and "callsites" pair.
+@
+text
+@d74 1
+@
+
+
+1.13
+log
+@Added interProcHandleCallArgs() interface function to
+DFA and all derived classes.
+@
+text
+@d65 1
+a65 1
+    bool handleFormal(DFAfact& df, PExprDecl& dd, bool ismain, suco_llist<PExprCall *>& callsites, bool interproc);
+@
+
+
+1.12
+log
+@PREVIOUSLY: handleReturnStmt was only called for non-void
+return statements.
+NOW: handleReturnStmt is called for ALL return statements.
+This is needed so analyses can properly handle deallocation
+of local variables.
+OTHER CHANGES:
+ 1. RAN: handleReturnStmt now removes intervals pointing
+    to freedStack ECRs.
+ 2. Interval: changed code for narrow() to be more logically
+    sound?
+@
+text
+@d75 1
+@
+
+
+1.11
+log
+@Modified handleFormal to pass a flag indicating whether
+the function is "main".  This is needed because main's
+argc/argv formals may need to be initialized differently.
+
+For RAN::handleFormal() - if ismain, then set bottom;
+else do top MEET callsite facts.
+
+For MBU::handleFormal() - *BUG FIX* - was previously calling
+handleStrongAssign(), which was _wrong_ (doesn't correctly
+meet facts from multiple callsites); fixed to do "weak"
+assignment.
+@
+text
+@d66 1
+a66 1
+    bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, ExpDescr& retedesc, bool interproc);
+@
+
+
+1.10
+log
+@Another change: RETURN argument is now an ExpDescr
+instead of an aoset (as was before); with a corresponding
+change to the argument of handleReturnStmt.
+
+Independently: updated RAN's handleFormal (wrote but
+not tested).
+@
+text
+@d65 1
+a65 1
+    bool handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites, bool interproc);
+@
+
+
+1.9
+log
+@Interface change: intraProcHandleCall now takes a PExprCall
+rather than a CFGfunction -- consequently, the iteration
+over target functions is now the responsibility of
+intraProcHandleCall rather than in dfa.cpp: BBA::PgmExprPropagate.
+
+Then, one update to body of MBU::intraProcHandleCall -
+to account for assignment of return value, at callsite
+dc to ao, now add "R D ao" to the MBUfact set, so that
+the subsequent assignment of the call's return value
+to a variable will mark that variable as MBU as well.
+This was a bug in the old implemenation.
+@
+text
+@d66 1
+a66 1
+    bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos, bool interproc);
+@
+
+
+1.8
+log
+@Interface update: augmented handleFormal / handleReturnStmt
+with "interproc" flag.
+Not yet used.
+@
+text
+@d74 1
+a74 1
+    void intraProcHandleCall(DFAfact& df, CFGfunction& fn);
+@
+
+
+1.7
+log
+@Added infrastructure for widening/narrowing:
+ - added widen/narrow flag to CFGnode and DFA
+ - added widen/narrow flag to absorbAndCompare to
+   trigger widening/narrowing
+Also, extended lookupNodeFact to take an extra argument:
+a CFGnode to guide lookup of branch successors.
+@
+text
+@d65 2
+a66 2
+    bool handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites);
+    bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos);
+@
+
+
+1.6
+log
+@Major Update: added handling of predicates and branches:
+ - added DFAfactPair class
+ - changed Pgm[Expr/Stmt]Propagate to work on DFAfactPairs (dfps)
+ - checkNodeProgress also handles dfps properly
+ - two new virtual functions in DFAfactHandler are
+   - lookupNodeFactPair: default version outputs a warning
+     and allocates a dfp (which probably won't be deleted)
+   - handlePredicate: wrote default { return true; } versions
+     in all the subclasses.
+@
+text
+@d58 1
+a58 1
+    DFAfact& lookupNodeFact(CFGnode& cn);
+@
+
+
+1.5
+log
+@Changed rhs argument of Assign node from an aolist to an exp-descr
+triplet: <aolist, aff-aolist, estr>.
+Main effect is changing the type of the rhs argument of
+handle[Strong/Weak]Assign from an aoset to an ExpDescr,
+which has been down-propagated to all subclasses.
+@
+text
+@d69 1
+@
+
+
+1.4
+log
+@Added handleFreeCall to dfa framework (PExprCall now has
+extra set of undeclared functions to which it might point,
+and a helper callsFree() to determine if it may call free()).
+For mbu/rda/rdmb, handleFreeCall is a noop; for RED: wrote
+handleFreeCall to remove expressions affected by *p (p is
+arg 1 of free call).
+@
+text
+@d62 1
+a62 1
+    bool handleStrongAssign(DFAfact& df, AO& lhs, suco_set<AO *>& rhs,
+d64 1
+a64 1
+    bool handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& rhs, PExprAssign& dnode);
+@
+
+
+1.3
+log
+@Changed final argument to handleWeakAssign from PgmExpr
+to PExprAssign!
+@
+text
+@d70 2
+@
+
+
+1.2
+log
+@Updated redundant analysis: strong and weak assignments written;
+to do: function calls and result collection.
+Entailed following changes:
+  PExprAssign::getLHS to return ExpDescr instead of AO set.
+  DFA handleWeakAssign's second argument is now ExpDescr rather than AO set.
+  ECR: added helper collectAliasECRs (not tested!)
+@
+text
+@d64 1
+a64 1
+    bool handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& rhs, PgmExpr& dnode);
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d64 1
+a64 1
+    bool handleWeakAssign(DFAfact& df, suco_set<AO *>& lhs, suco_set<AO *>& rhs, PgmExpr& dnode);
+@

@@ -1,0 +1,413 @@
+------------------------------------------------------------------
+0. src/variants/ansic/config.sml:
+   A few flags were flipped, are commented as such.
+------------------------------------------------------------------
+1. src/ast/pp/pp-ast-fn.sml: to output the "const" qualifier
+------------------------------------------------------------------
+102c102,103
+<   val printConst = ref false
+---
+>   (* Following changed to true by Suan 21may00 *)
+>   val printConst = ref true
+
+------------------------------------------------------------------
+2. src/ast/build-ast.sml: fix spurious error about struct initialization mismatch
+------------------------------------------------------------------
+623c623
+< 	      let fun f ((fieldType, _, _) :: l, expr :: exprs) =
+---
+> 	      let fun f ((fieldType, SOME mem, _) :: l, expr :: exprs) =
+625a626,627
+> 		    | f ((fieldType, NONE, _) :: l, exprs) =
+> 			 f (l, exprs)
+
+------------------------------------------------------------------
+3. src/ast/build-ast.sml: fix incomplete type problem for initialized arrays
+------------------------------------------------------------------
+902c904,905
+< 	  val (initExprOpt, ty) =
+---
+> 	  (* AAL: now fixing up the id to avoid incomplete types. *)
+> 	  val (id, initExprOpt, ty) =
+904c907
+< 		of PT.EmptyExpr => (NONE, ty)
+---
+> 		of PT.EmptyExpr => (id, NONE, ty)
+910,924c913,927
+< 		     in 
+< 		       if equalType(ty', ty) then ()  (* nothing more to do *)
+< 		       else (* fix up type of id *)
+< 			 (case lookSym varSym of
+< 			    SOME(B.ID x) =>
+< 			      let val {name, uid, location, ctype, stClass, status, global, kind} = x
+< 				val id = 
+< 				  {name=name, uid=uid, location=location, ctype=ty',
+< 				   stClass=stClass, status=status, global=global, kind=kind}
+< 			      in
+< 				bindSym (varSym, ID id)
+< 			      end
+< 			  | _ => ()  (* can never arise: id must have ID binding *)
+< 			 );
+< 		       (SOME e', ty')
+---
+> 		      val id' =
+> 			       if equalType(ty', ty) then id  (* nothing more to do *)
+> 			       else (* fix up type of id *)
+> 				 case lookSym varSym of
+> 				    SOME(B.ID x) =>
+> 				      let val {name, uid, location, ctype, stClass, status, global, kind} = x
+> 					val id = 
+> 					  {name=name, uid=uid, location=location, ctype=ty',
+> 					   stClass=stClass, status=status, global=global, kind=kind}
+> 				      in
+> 					(bindSym (varSym, ID id); id)
+> 				      end
+> 				  | _ => id  (* can never arise: id must have ID binding *)
+> 		    in 
+> 		       (id', SOME e', ty')
+
+------------------------------------------------------------------
+4. src/variants/ansic/config.sml: suppress "undeclared function" error
+------------------------------------------------------------------
+36c36
+<     val undeclared_fun_error = true                    (* ansic *)
+---
+>     val undeclared_fun_error = false                   (* ansic - changed by Suan 26may00 *)
+
+------------------------------------------------------------------
+5. build-ast.sml again: suppress error (sized member appears at least in <sys/stream.h>)
+------------------------------------------------------------------
+2779c2776
+<                         (warn "union member has size spec";
+---
+>                         (error "union member has size spec";
+
+------------------------------------------------------------------
+5. src/parser/util/error.sml: change limit on number of errors/warnings
+------------------------------------------------------------------
+46,47c46,47
+<   val errorsLimit = ref 10  (* flag for suppressing error messages *)
+<   val warningsLimit = ref 10  (* flag for suppressing warning messages *)
+---
+>   val errorsLimit = ref 1000  (* flag for suppressing error messages *)
+>   val warningsLimit = ref 1000  (* flag for suppressing warning messages *)
+
+------------------------------------------------------------------
+6. src/ast/pp/pp-ast-fn.sml: made subexprs 2 and 3 of ?: parenthesized
+------------------------------------------------------------------
+505,506c505
+< 	   (* nested changed to true by Alexey 09jun00 *)
+< 	   ; ppExpr {nested=true} aidinfo tidtab pps e1
+---
+> 	   ; ppExpr {nested=false} aidinfo tidtab pps e1
+508,509c507
+< 	   (* nested changed to true by Alexey 09jun00 *)
+< 	   ; ppExpr {nested=true} aidinfo tidtab pps e2
+---
+> 	   ; ppExpr {nested=false} aidinfo tidtab pps e2
+------------------------------------------------------------------
+6b. src/ast/pp/pp-ast-fn.sml: made lhs of [] parenthesized (15apr02)
+------------------------------------------------------------------
+528,529c525
+<          (* nested changed from nested to true by Suan 15apr02 *)
+<          ( ppExpr {nested=true} aidinfo tidtab pps e0
+---
+>          ( ppExpr {nested=nested} aidinfo tidtab pps e0
+==================================================================
+------------------------------------------------------------------
+7. changed CaseLabel to output exp in addition to largeint, though
+   internally both are still used -12FEB02
+------------------------------------------------------------------
+7a. ast/ast-sig.sml
+------------------------------------------------------------------
+84c84
+<     | CaseLabel of LargeInt.int * expression * statement
+---
+>     | CaseLabel of LargeInt.int * statement
+------------------------------------------------------------------
+7b. ast/ast.sml
+------------------------------------------------------------------
+84c84
+<     | CaseLabel of LargeInt.int * expression * statement
+---
+>     | CaseLabel of LargeInt.int * statement
+------------------------------------------------------------------
+7c. ast/build-ast.sml
+------------------------------------------------------------------
+1558c1558
+<          wrapSTMT(Ast.CaseLabel (n, (#2 (cnvExpression expr)), (cnvStatement stmt)))
+---
+>          wrapSTMT(Ast.CaseLabel (n, (cnvStatement stmt)))
+------------------------------------------------------------------
+7d. ast-utils/copy/copy-ast.sml
+------------------------------------------------------------------
+59c59
+<        | CaseLabel (li,exp,stmt) => CaseLabel (li,copyExpr aidtab expr,copyStmt aidtab stmt)
+---
+>        | CaseLabel (li,stmt) => CaseLabel (li,copyStmt aidtab stmt)
+------------------------------------------------------------------
+7e. ast-utils/equality/eq-ast.sml
+------------------------------------------------------------------
+147c147
+<        | (CaseLabel (li1,exp1,stmt1),CaseLabel (li2,exp2,stmt2)) => 
+---
+>        | (CaseLabel (li1,stmt1),CaseLabel (li2,stmt2)) => 
+------------------------------------------------------------------
+7f. ast-utils/simplifier/simplify-ast.sml
+------------------------------------------------------------------
+377c377
+<            | CaseLabel (li,exp as EXPR (coreExp,aid,loc),stmt) =>
+---
+>            | CaseLabel (li,stmt) =>
+379c379
+<                in {decs=decs,stmts=[mkStmt (CaseLabel (li,EXPR (IntConst li,aid,loc),stmts2stmt [] stmts))]}
+---
+>                in {decs=decs,stmts=[mkStmt (CaseLabel (li,stmts2stmt [] stmts))]}
+------------------------------------------------------------------
+7g. ast/pp/pp-ast-fn.sml
+------------------------------------------------------------------
+428,429c428
+<       (* added exp argument by Suan 12FEB02 *)
+<        | CaseLabel (li, exp,stmt) => 
+---
+>        | CaseLabel (li,stmt) => 
+433c432
+<          ; ppExpr {nested=false} aidinfo tidtab pps exp
+---
+>          ; PPL.ppLI pps li
+------------------------------------------------------------------
+==================================================================
+------------------------------------------------------------------
+8. ast/pp/pp-ast-fn.sml: hack to get __builtin_va_arg's second parameter
+   (a type) to pass through: pre-processor converts __builtin_va_arg(x,t)
+   to __builtin_va_arg(x,(t)_tc_builtin_varg_dummy), here pretty-printer
+   is modified to find "(t)_tc_builtin_varg_dummy" and output "t".
+------------------------------------------------------------------
+574,591c571,577
+<          let fun isBuiltinVargDummyExpr (exp as Ast.EXPR (cexp,_,_)) =
+<                 (case cexp
+<                    of Ast.Id (id as {name=name,...}) => (Symbol.name name) = "_tc_builtin_varg_dummy"
+<                     | _ => false
+<                 )
+<          in if isBuiltinVargDummyExpr exp
+<             then ( ppLParen nested pps 
+<                  ; ppCtype aidinfo tidtab pps ctype
+<                  ; ppRParen nested pps 
+<                  )
+<             else ( ppLParen nested pps 
+<                  ; PPL.addStr pps "("
+<                  ; ppCtype aidinfo tidtab pps ctype
+<                  ; PPL.addStr pps ") "
+<                  ; ppExpr {nested=true} aidinfo tidtab pps exp
+<                  ; ppRParen nested pps 
+<                  )
+<          end
+---
+>          ( ppLParen nested pps 
+>          ; PPL.addStr pps "("
+>          ; ppCtype aidinfo tidtab pps ctype
+>          ; PPL.addStr pps ") "
+>          ; ppExpr {nested=true} aidinfo tidtab pps exp
+>          ; ppRParen nested pps 
+>          )
+------------------------------------------------------------------
+9. src/ast/pp/pp-lib.sml: fixed float/exponent output, replacing ~ with -
+------------------------------------------------------------------
+47,52c47
+<   fun ppReal pps r =
+<       let val rs = Real.toString r
+<           val rs = String.map (fn c => if (c = #"~") then #"-" else c) rs
+<       in
+<           addStr pps rs
+<       end
+---
+>   fun ppReal pps r = addStr pps (Real.toString r)
+------------------------------------------------------------------
+==================================================================
+------------------------------------------------------------------
+10a. src/ckit/src/ast/type-util-sig.sml : added new helper fns
+------------------------------------------------------------------
+68,73d67
+<   val isStruct : bool type_util
+<   (* check if a type is a struct *)
+< 
+<   val isUnion : bool type_util
+<   (* check if a type is a union *)
+< 
+------------------------------------------------------------------
+10b. src/ckit/src/ast/type-util.sml
+------------------------------------------------------------------
+275,286d274
+<   fun isStruct tidtab ty =
+<     case reduceTypedef tidtab ty
+<       of Ast.Qual (_,ty) => isStruct tidtab ty
+<        | Ast.StructRef _ => true
+<        | _ => false
+< 
+<   fun isUnion tidtab ty =
+<     case reduceTypedef tidtab ty
+<       of Ast.Qual (_,ty) => isUnion tidtab ty
+<        | Ast.UnionRef _ => true
+<        | _ => false
+< 
+------------------------------------------------------------------
+==================================================================
+------------------------------------------------------------------
+11. src/ckit/src/ast/type-util.sml : suppressed error messages when
+    function accepts array type and is assigned a pointer.
+    NOTE: isAssignable has another bug (?) which generates an error
+          when signs of pointer target don't match.
+------------------------------------------------------------------
+726,732c714
+< 		 (*SY-30apr02: for function arg, assignments into arrays are allowed *)
+< 		 val param' = if isArray tidtab param
+< 			      then case (deref tidtab param)
+< 				     of SOME dty => Ast.Pointer dty
+< 				      | NONE => param
+< 			      else param
+< 		val strL' = if isAssignable tidtab {lhs=param', rhs=arg, rhsExpr0=isZeroExpr}
+---
+> 		val strL' = if isAssignable tidtab {lhs=param, rhs=arg, rhsExpr0=isZeroExpr}
+------------------------------------------------------------------
+==================================================================
+------------------------------------------------------------------
+12. ast/build-ast.sml
+	Fixed sizeof conversion, so that sizeof("string") is
+	converted to sizeof(char[7]) rather than sizaeof(char *),
+	as is spec-compliant (I believe).
+------------------------------------------------------------------
+2016,2036c2016,2022
+< 		       (* SY fix: sizeof("string") should be strlen("string")+1, not sizeof(char * ) *)
+< 		       let val ty = let fun stringToArray (PT.String s) =
+< 					    let val size = LargeInt.fromInt ((String.size s) + 1)
+< 						val expr = #2 (wrapEXPR (stdInt, Ast.IntConst size))
+< 						val elty = if (!default_signed_char) 
+< 							   then signedNum Ast.CHAR
+< 							   else unsignedNum Ast.CHAR
+< 					    in
+< 						Ast.Array (SOME (size,expr), elty)
+< 					    end
+< 					  | stringToArray (PT.MARKexpression (loc, expr)) = stringToArray expr
+< 					  | stringToArray _ = ty
+< 				    in  stringToArray expr_parseTree  end
+< 		       in
+< 			  if !reduce_sizeof then
+< 			    let val ast = Ast.IntConst(sizeof ty)
+< 			    in
+< 			      wrapEXPR(Ast.Numeric (Ast.NONSATURATE,Ast.WHOLENUM,Ast.UNSIGNED,Ast.INT,Ast.SIGNASSUMED), ast)
+< 			    end
+< 			  else
+< 			    wrapEXPR(Ast.Numeric (Ast.NONSATURATE,Ast.WHOLENUM,Ast.UNSIGNED,Ast.INT,Ast.SIGNASSUMED),
+---
+> 		       if !reduce_sizeof then
+> 			 let val ast = Ast.IntConst(sizeof ty)
+> 			 in
+> 			   wrapEXPR(Ast.Numeric (Ast.NONSATURATE,Ast.WHOLENUM,Ast.UNSIGNED,Ast.INT,Ast.SIGNASSUMED), ast)
+> 			 end
+> 		       else
+> 			 wrapEXPR(Ast.Numeric (Ast.NONSATURATE,Ast.WHOLENUM,Ast.UNSIGNED,Ast.INT,Ast.SIGNASSUMED),
+2038,2039c2024
+< 		       end
+< 		       )
+---
+> 			 )
+------------------------------------------------------------------
+==================================================================
+------------------------------------------------------------------
+13. parser/grammar/c.lex
+    (01 apr 03)
+    - Changed regex for float constant to accept terms like "1."
+    - Also, changed it to accept [fF] suffix
+    - Hacked function that converts float constant string to float
+	value: the sml converter does not recognize "1."-like
+	constructs, so I search for ".[^0-9]" and replace the
+	"." with ".0".
+------------------------------------------------------------------
+84,101c84,87
+< fun mkRealNum (s,a,b,errWarn:errWarn) = (
+< 		let (* hack to resolve diverging behavior between ml and C float constants:	*)
+< 		    (*		replace first occurrence of ".[^0-9]" with ".0&"		*)
+< 		    fun addDecimalZero nil = ""
+< 		      | addDecimalZero ((#".")::(c'::tail)) =
+< 			if not (Char.isDigit c')
+< 			then ".0" ^ (String.str c') ^ (String.implode tail)
+< 			else "." ^ (String.str c') ^ (String.implode tail)
+< 		      | addDecimalZero (c::tail) =
+< 			(String.str c) ^ (addDecimalZero tail)
+< 
+< 		    val s' = addDecimalZero (String.explode s)
+< 
+< 		in (case (StringCvt.scanString Real.scan s')
+< 		      of SOME r => r
+< 		       | _ => ((#err errWarn)(a,b,"trouble in parsing real");0.0))
+< 				handle OverFlow => ((#err errWarn)(a,b,"large real const"); 0.0
+< 		) end )
+---
+> fun mkRealNum (s,a,b,errWarn:errWarn) = ((case (StringCvt.scanString Real.scan s) of
+> 		   SOME r => r
+> 		 | _ => ((#err errWarn)(a,b,"trouble in parsing real");0.0))
+> 			handle OverFlow => ((#err errWarn)(a,b,"large real const"); 0.0))
+144c130
+< realnum = (([0-9]+(\.[0-9]*)?)|(\.[0-9]+))([eE][+-]?[0-9]+)?[fFlL]?;
+---
+> realnum = (([0-9]+(\.[0-9]+)?)|(\.[0-9]+))([eE][+-]?[0-9]+)?[lL]?;
+------------------------------------------------------------------
+==================================================================
+------------------------------------------------------------------
+14. src/ckit/src/ast/type-util.sml (13jun03)
+    If a is an array, then a+i,i+a,a-i were typed as arrays as well.
+    I've changed it so that the +/- expressions will now be typed
+    as pointers.  (Not sure if implicit is automatically generated:
+    CHECK???).
+    Anyhow, as it turns out I don't really need this feature anymore,
+    but I still think it's a fix-worthy "bug".
+------------------------------------------------------------------
+678c666
+<      | (Ast.Pointer pty1', Ast.Numeric _) => 
+---
+>      | (Ast.Pointer _, Ast.Numeric _) => 
+680,682c668
+<             then SOME{ty1=ty1, ty2=stdInt, resTy=(if isArray tidtab ty1
+<                                                   then (Ast.Pointer pty1')
+<                                                   else ty1)}
+---
+>             then SOME{ty1=ty1, ty2=stdInt, resTy=ty1}
+684c670
+<      | (Ast.Numeric _, Ast.Pointer pty2') => 
+---
+>      | (Ast.Numeric _, Ast.Pointer _) => 
+686,688c672
+<             then SOME{ty1=stdInt, ty2=ty2, resTy=(if isArray tidtab ty2
+<                                                   then (Ast.Pointer pty2')
+<                                                   else ty2)}
+---
+>             then SOME{ty1=stdInt, ty2=ty2, resTy=ty2}
+702,706c686,687
+<      | (Ast.Pointer pty1', Ast.Numeric _) => 
+<           if isIntegral tidtab ty2
+<           then SOME{ty1=ty1, ty2=stdInt, resTy=(if isArray tidtab ty1
+<                                                 then (Ast.Pointer pty1')
+<                                                 else ty1)}
+---
+>      | (Ast.Pointer _, Ast.Numeric _) => 
+>           if isIntegral tidtab ty2 then SOME{ty1=ty1, ty2=stdInt, resTy=ty1}
+------------------------------------------------------------------
+==================================================================
+------------------------------------------------------------------
+15. ckit/src/parser/grammar/c.grm
+    - Previously: char consts were translated to their numeric
+	values; e.g. 'a' --> 97, '\377' --> 255.
+    - However, this is sometimes a problem, because 'a' is of
+	of char type while 97 is of int type.  One problem is
+	when matching against -1 (EOF):
+	  char c = -1;
+	  if(c == 255) //-- never matches (on gcc 3.3.2)
+    - Solution: replace each 'a' with (char)97.
+------------------------------------------------------------------
+488c488
+<       | CCONST                        (markExpression srcMap (Cast ({qualifiers=[],specifiers=[Char]}, IntConst CCONST), CCONSTleft,CCONSTright))
+---
+>       | CCONST                        (markExpression srcMap (IntConst CCONST, CCONSTleft,CCONSTright))
+------------------------------------------------------------------
+==================================================================
+------------------------------------------------------------------

@@ -1,0 +1,1031 @@
+head	1.38;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.38
+date	2004.07.16.19.46.35;	author suan;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2004.05.24.19.48.33;	author suan;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2004.05.24.19.10.09;	author suan;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2004.05.20.19.23.48;	author suan;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2004.05.02.17.43.23;	author suan;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2004.04.29.15.09.01;	author suan;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2004.04.06.15.02.24;	author suan;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2004.03.31.18.26.19;	author suan;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2004.03.04.20.51.02;	author suan;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2004.02.13.22.22.49;	author suan;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2004.01.16.22.59.49;	author suan;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2004.01.16.21.47.26;	author suan;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2004.01.05.21.15.40;	author suan;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2003.11.06.21.38.03;	author suan;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2003.11.05.21.26.08;	author suan;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2003.10.27.22.41.44;	author suan;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2003.10.24.17.15.24;	author suan;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2003.10.22.23.34.31;	author suan;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2003.10.21.22.20.31;	author suan;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2003.10.08.23.31.07;	author suan;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2003.03.26.15.53.05;	author suan;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2003.02.25.20.04.46;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2003.02.17.17.44.25;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2003.02.14.17.41.44;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2003.01.16.17.45.59;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2003.01.10.16.31.00;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2002.12.20.21.03.50;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.12.20.00.08.17;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.11.25.19.30.25;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.11.15.22.08.58;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.11.15.17.51.53;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.11.05.21.20.30;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.10.29.17.14.08;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.08.28.22.58.13;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.05.21.21.50.01;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.05.21.21.35.18;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.04.16.21.14.49;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.04.11.04.25.26;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Makefile.
+@
+
+
+1.38
+log
+@CHANGES:
+1. Moved PExprAssign::getSingletonLHSloc() to
+   ExpDescr::getSingletonLoc(), so it can be used
+   elsewhere to determine strong update.
+1a. FIXED BUG (??) in getSingletonLoc(): previously
+    for sdot object, was returning enclosing struct!?!
+2. Added -vtfix flag, which enables/disables RED and
+   MBU treatment of verifyTag as fixing the type on
+   mismatch.
+3. Added MBU handling of verifyTag vtfix.
+4. Changed so that MBU uses the RED parallel hackery
+   (PM_RED_UNSAFE) when vtfix is on.
+@
+text
+@#
+# -DSTRONGER_CPP changes and bypasses some code that
+# used to work with gcc (3.2.1) but no longer works
+# with (3.3.2):
+#  - static const defined inline
+#  - friend function no longer recognized!?
+#
+############################################################
+
+CXX = g++
+CXXFLAGS = -g -Wreturn-type
+LDFLAGS =
+
+STEMS = ao cfg dfa diag ecr edge id interval mbu pmbu pta ran rda rdmb red suco_usage tca ty
+
+SRCS = $(addsuffix .cpp, $(STEMS))
+OBJS = $(addsuffix .o, $(STEMS))
+
+rtca-raw: $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $@@ $^ $(LDFLAGS)
+
+pure: rtca-raw-pure
+
+rtca-raw-pure: $(OBJS)
+	purify -chain-length=12 $(CXX) $(CXXFLAGS) -o $@@ $^ $(LDFLAGS)
+
+condor: CXX=/usr/bin/g++
+condor: $(OBJS)
+	condor_compile $(CXX) $(CXXFLAGS) -o rtca-raw-condor $^ $(LDFLAGS)
+
+libc: libc.c
+	tc -assign -instr-no-printfPctN libc.c
+	cp -f libc.tc_iasgs ../../scripts/libc.tc_asgs
+	@@echo '*******************************************************'
+	@@echo 'FOR CONDOR: COPY libc.tc_iasgs TO ~/CONDOR/libc.tc_asgs'
+	@@echo '*******************************************************'
+
+depend:
+	makedepend -Y $(SRCS)
+
+clean:
+	rm -f *.o
+
+# DO NOT DELETE
+
+ao.o: ao.h ty.h suco.h id.h edge.h flags.h ecr.h
+cfg.o: ao.h ty.h suco.h id.h edge.h ecr.h cfg.h dfa.h mbu.h rda.h flags.h
+cfg.o: rdmb.h ran.h red.h interval.h tca.h diag.h
+dfa.o: ao.h ty.h suco.h id.h edge.h cfg.h dfa.h mbu.h rda.h flags.h rdmb.h
+dfa.o: ran.h red.h interval.h diag.h
+diag.o: flags.h diag.h ao.h ty.h suco.h id.h edge.h ecr.h cfg.h dfa.h mbu.h
+diag.o: rda.h rdmb.h ran.h red.h interval.h
+ecr.o: diag.h ao.h ty.h suco.h id.h edge.h ecr.h flags.h
+edge.o: edge.h ao.h ty.h suco.h id.h
+id.o: id.h ao.h ty.h suco.h edge.h
+interval.o: ao.h ty.h suco.h id.h edge.h flags.h interval.h
+mbu.o: ao.h ty.h suco.h id.h edge.h ecr.h cfg.h dfa.h mbu.h rda.h flags.h
+mbu.o: rdmb.h ran.h red.h interval.h diag.h
+pmbu.o: cfg.h suco.h ao.h ty.h id.h edge.h dfa.h mbu.h rda.h flags.h rdmb.h
+pmbu.o: ran.h red.h interval.h ecr.h pmbu.h
+pta.o: flags.h diag.h ao.h ty.h suco.h id.h edge.h ecr.h pta.h
+ran.o: cfg.h suco.h ao.h ty.h id.h edge.h dfa.h mbu.h rda.h flags.h rdmb.h
+ran.o: ran.h red.h interval.h diag.h ecr.h
+rda.o: ao.h ty.h suco.h id.h edge.h ecr.h cfg.h dfa.h mbu.h rda.h flags.h
+rda.o: rdmb.h ran.h red.h interval.h diag.h
+rdmb.o: ecr.h ao.h ty.h suco.h id.h edge.h cfg.h dfa.h mbu.h rda.h flags.h
+rdmb.o: rdmb.h ran.h red.h interval.h
+red.o: cfg.h suco.h ao.h ty.h id.h edge.h dfa.h mbu.h rda.h flags.h rdmb.h
+red.o: ran.h red.h interval.h ecr.h
+suco_usage.o: suco.h suco.cpp
+tca.o: flags.h diag.h ao.h ty.h suco.h id.h edge.h tca.h ecr.h cfg.h dfa.h
+tca.o: mbu.h rda.h rdmb.h ran.h red.h interval.h pta.h pmbu.h
+ty.o: flags.h diag.h ao.h ty.h suco.h id.h edge.h
+@
+
+
+1.37
+log
+@1. Moved pMBU "write results" code from TCAstate
+to pMBUfactHandler class.
+2. Removed pMBU filterResults -- just output everything
+and let sml decide which to instrument.
+@
+text
+@d47 4
+a50 4
+cfg.o: ao.h ty.h suco.h id.h edge.h ecr.h cfg.h dfa.h mbu.h rda.h rdmb.h
+cfg.o: ran.h red.h interval.h tca.h flags.h diag.h
+dfa.o: ao.h ty.h suco.h id.h edge.h cfg.h dfa.h mbu.h rda.h rdmb.h ran.h
+dfa.o: red.h interval.h flags.h diag.h
+d57 4
+a60 4
+mbu.o: ao.h ty.h suco.h id.h edge.h ecr.h cfg.h dfa.h mbu.h rda.h rdmb.h
+mbu.o: ran.h red.h interval.h flags.h diag.h
+pmbu.o: cfg.h suco.h ao.h ty.h id.h edge.h dfa.h mbu.h rda.h rdmb.h ran.h
+pmbu.o: red.h interval.h ecr.h flags.h pmbu.h
+d62 8
+a69 8
+ran.o: cfg.h suco.h ao.h ty.h id.h edge.h dfa.h mbu.h rda.h rdmb.h ran.h
+ran.o: red.h interval.h diag.h ecr.h flags.h
+rda.o: ao.h ty.h suco.h id.h edge.h ecr.h cfg.h dfa.h mbu.h rda.h rdmb.h
+rda.o: ran.h red.h interval.h flags.h diag.h
+rdmb.o: ecr.h ao.h ty.h suco.h id.h edge.h cfg.h dfa.h mbu.h rda.h rdmb.h
+rdmb.o: ran.h red.h interval.h flags.h
+red.o: cfg.h suco.h ao.h ty.h id.h edge.h dfa.h mbu.h rda.h rdmb.h ran.h
+red.o: red.h interval.h ecr.h
+@
+
+
+1.36
+log
+@1. Wrote flow-insensitive pmbu analysis; the flow-sensitive
+   portion is now in a non-working state, and needs to be
+   rewritten.
+2. Moved some pmbu-related code from TCAstate to
+   pMBUfactHandler class.
+So now: pmbu-sensitive is working, but not pmbu-insensitive.
+@
+text
+@d60 1
+a60 1
+pmbu.o: red.h interval.h ecr.h pmbu.h
+@
+
+
+1.35
+log
+@Extracted pMBU from mbu.c/mbu.h into its own files
+pmbu.c/pmbu.h
+@
+text
+@d60 1
+a60 1
+pmbu.o: red.h interval.h pmbu.h
+@
+
+
+1.34
+log
+@Minor change to output message.
+@
+text
+@d14 1
+a14 1
+STEMS = ao cfg dfa diag ecr edge id interval mbu pta ran rda rdmb red suco_usage tca ty
+d59 2
+d72 1
+a72 1
+tca.o: mbu.h rda.h rdmb.h ran.h red.h interval.h pta.h
+@
+
+
+1.33
+log
+@1. Removed STRONGER_CPP compile-time flag.
+   This was surrounding two things affected by g++
+   version change:
+   A. inline initialization of static member CFGnode::ALL_AOS.
+      ~~> no big deal.
+   B. ability to define friend function suco_write_recycle_stats
+      as friend of (templated) suco class.
+      ~~> solution: wrap suco_write_recycle_stats in its
+          own class (suco_diag_wrapper).
+2. Added purify target to makefile.
+@
+text
+@d34 3
+a36 3
+	@@echo '******************************************'
+	@@echo 'FOR CONDOR: COPY libc.tc_iasgs TO ~/CONDOR'
+	@@echo '******************************************'
+@
+
+
+1.32
+log
+@Added condor target -- but will only work after
+make clean
+@
+text
+@d11 1
+a11 1
+CXXFLAGS = -g -DSTRONGER_CPP -Wreturn-type
+d21 5
+@
+
+
+1.31
+log
+@Added -Wreturn-type to CXX_FLAGS, to report functions
+with missing return stmts.
+@
+text
+@d22 4
+@
+
+
+1.30
+log
+@Minor bug fix(es):
+ 1. Interval::ptrs_minus()
+    Need to account for has_zero -- if either argument
+    has zero, return bottom.
+ 2. RANfactHandled::handleDecl()
+    When declaring x, need to remove both
+    1. fact for x, and
+    2. facts whose interval target ao is x
+    because of new scope/aliasing potential.
+    (Entailed introduction of helpers in many
+    classes, including AO.)
+Note: 2 is the clean solution, but appears to be
+technically unnecessary with context-insensitive
+analysis, since any recursive loop (for which the
+new scope/aliasing problem arises) must have an
+external in-edge which should bottom out any facts
+affecting x.
+@
+text
+@d11 1
+a11 1
+CXXFLAGS = -g -DSTRONGER_CPP
+@
+
+
+1.29
+log
+@Added condor reminder
+@
+text
+@d52 1
+a52 1
+ran.o: red.h interval.h diag.h ecr.h
+@
+
+
+1.28
+log
+@Actually, it's the new version of gcc (3.3.2, was 3.2.1)
+that no longer recognizes the stuff, nothing to do with
+Solaris.
+For now, I've just changed the Makefile to always have
+-DSTRONGER_CPP on.
+@
+text
+@d25 3
+@
+
+
+1.27
+log
+@Added "STRONGER_CPP" flag to shift some definitions
+so they compile on solaris.
+@
+text
+@a0 3
+# Between Linux and Solaris, there's some g++ inconsistencies
+# in recognizing friend functions, and in whether static const
+# members can be defined inline.
+d2 5
+a6 4
+# I'm leaving the default to work with Linux, but try the flag
+# -DSTRONGER_CPP if compilation doesn't work.
+#
+# (make ADDL_CXXFLAGS=-DSTRONGER_CPP)
+d11 1
+a11 1
+CXXFLAGS = -g $(ADDL_CXXFLAGS)
+@
+
+
+1.26
+log
+@Added -instr-no-printfPctN flag to libc.c compilation.
+@
+text
+@d1 11
+d13 1
+a13 1
+CXXFLAGS = -g
+@
+
+
+1.25
+log
+@Added new stat counters for range analysis: count average
+and max size of RANfact when collecting.
+@
+text
+@d14 1
+a14 1
+	tc -assign libc.c
+d35 1
+a35 1
+interval.o: ao.h ty.h suco.h id.h edge.h interval.h
+@
+
+
+1.24
+log
+@Added implementation of cycle detection and elimination
+of points-to cycles (had previously only implemented
+for includes-to cycles).
+CAVEAT: it's unclear whether the two algorithms will
+clash; am now testing.
+@
+text
+@d40 1
+a40 1
+ran.o: red.h interval.h ecr.h
+@
+
+
+1.23
+log
+@Added code to
+ - lookup address range (evalAddrRange)
+ - do the bounds check
+Also, fixed small bug: skipArgs() now takes aoi as
+argument, as that has to be advanced for each 'V' and
+'S' in the string!
+@
+text
+@d32 1
+a32 1
+ecr.o: ecr.h ao.h ty.h suco.h id.h edge.h flags.h
+@
+
+
+1.22
+log
+@Added "base pointer" member (ao) to Interval,
+so an interval represents &ao + [min, max].
+@
+text
+@d40 1
+a40 1
+ran.o: red.h interval.h
+@
+
+
+1.21
+log
+@Added Interval class to encapsulate [min,max] intervals.
+@
+text
+@d35 1
+a35 1
+interval.o: interval.h
+@
+
+
+1.20
+log
+@Remade depend, with ran.h and other changes.
+@
+text
+@d5 1
+a5 1
+STEMS = ao cfg dfa diag ecr edge id mbu pta ran rda rdmb red suco_usage tca ty
+d27 1
+a27 1
+cfg.o: ran.h red.h tca.h flags.h diag.h
+d29 1
+a29 1
+dfa.o: red.h flags.h diag.h
+d31 1
+a31 1
+diag.o: rda.h rdmb.h ran.h red.h
+d35 1
+d37 1
+a37 1
+mbu.o: ran.h red.h flags.h diag.h
+d40 1
+a40 1
+ran.o: red.h
+d42 1
+a42 1
+rda.o: ran.h red.h flags.h diag.h
+d44 1
+a44 1
+rdmb.o: ran.h red.h flags.h
+d46 1
+a46 1
+red.o: red.h ecr.h
+d49 1
+a49 1
+tca.o: mbu.h rda.h rdmb.h ran.h red.h pta.h
+@
+
+
+1.19
+log
+@1. Added code (to CFG::assignId) to mark backedges in
+   the CFG.
+   May be buggy -- must test.
+2. -MAJOR UPDATE-
+   Added ran.cpp/ran.h for range checking.
+   Thusfar, ran.cpp contains only empty skeletons to be
+   filled in - do not run!
+3. Renamed widen_narrow in CFG to is_backedge;
+   also, now widen/narrow are specific to RAN/RANfact,
+   rather than generic to DFA/DFAfact.
+@
+text
+@d27 3
+a29 3
+cfg.o: red.h tca.h flags.h diag.h
+dfa.o: ao.h ty.h suco.h id.h edge.h cfg.h dfa.h mbu.h rda.h rdmb.h red.h
+dfa.o: flags.h diag.h
+d31 1
+a31 1
+diag.o: rda.h rdmb.h red.h
+d36 1
+a36 1
+mbu.o: red.h flags.h diag.h
+d38 1
+a38 1
+ran.o: ran.h cfg.h suco.h ao.h ty.h id.h edge.h dfa.h mbu.h rda.h rdmb.h
+d41 1
+a41 1
+rda.o: red.h flags.h diag.h
+d43 3
+a45 3
+rdmb.o: red.h flags.h
+red.o: cfg.h suco.h ao.h ty.h id.h edge.h dfa.h mbu.h rda.h rdmb.h red.h
+red.o: ecr.h
+d48 1
+a48 1
+tca.o: mbu.h rda.h rdmb.h red.h pta.h ran.h
+@
+
+
+1.18
+log
+@Changed TCstats::timer to remember a stack of (up to 10)
+timers, which allows more simultaneous timings.
+@
+text
+@d5 1
+a5 1
+STEMS = ao cfg dfa diag ecr edge id mbu pta rda rdmb red suco_usage tca ty
+d25 6
+a30 6
+ao.o: flags.h ecr.h ao.h ty.h suco.h id.h edge.h
+cfg.o: ao.h ty.h suco.h id.h edge.h ecr.h cfg.h mbu.h dfa.h rda.h rdmb.h
+cfg.o: red.h tca.h
+dfa.o: ao.h ty.h suco.h id.h edge.h cfg.h mbu.h dfa.h rda.h rdmb.h red.h
+dfa.o: flags.h
+diag.o: flags.h diag.h ao.h ty.h suco.h id.h edge.h ecr.h cfg.h mbu.h dfa.h
+d35 2
+a36 2
+mbu.o: ecr.h ao.h ty.h suco.h id.h edge.h cfg.h mbu.h dfa.h rda.h rdmb.h
+mbu.o: red.h flags.h
+d38 5
+a42 3
+rda.o: ao.h ty.h suco.h id.h edge.h ecr.h cfg.h mbu.h dfa.h rda.h rdmb.h
+rda.o: red.h flags.h
+rdmb.o: ecr.h ao.h ty.h suco.h id.h edge.h cfg.h mbu.h dfa.h rda.h rdmb.h
+d44 1
+a44 1
+red.o: cfg.h suco.h ao.h ty.h id.h edge.h mbu.h dfa.h rda.h rdmb.h red.h
+d47 3
+a49 3
+tca.o: diag.h ao.h ty.h suco.h id.h edge.h tca.h ecr.h cfg.h mbu.h dfa.h
+tca.o: rda.h rdmb.h red.h pta.h
+ty.o: diag.h ao.h ty.h suco.h id.h edge.h
+@
+
+
+1.17
+log
+@Added -cde-incl and -cde-pt flags -- only the latter
+has been implemented: in ECR::includesTo, check for
+cycle, and collapse these ECRs; also, remove redundant
+inclTo/inclFrom edges as a result of the collapse.
+Also, the output for -pta mode has been modified to
+be more a summary, to allow better comparison between differnet
+versions.
+@
+text
+@d37 1
+a37 1
+pta.o: flags.h ao.h ty.h suco.h id.h edge.h ecr.h pta.h
+@
+
+
+1.16
+log
+@Added red.cpp/h as target to Makefile.
+Modified cfg nodes to include REDfacts.
+Added ExpDescr sets to suco_usage.
+@
+text
+@d32 1
+a32 1
+ecr.o: ecr.h ao.h ty.h suco.h id.h edge.h
+d43 1
+@
+
+
+1.15
+log
+@Split dfa.h into mbu.h, rda.h, rdmb.h.
+@
+text
+@d5 1
+a5 1
+STEMS = ao cfg dfa diag ecr edge id mbu pta rda rdmb suco_usage tca ty
+d27 3
+a29 2
+cfg.o: tca.h
+dfa.o: ao.h ty.h suco.h id.h edge.h cfg.h mbu.h dfa.h rda.h rdmb.h flags.h
+d31 1
+a31 1
+diag.o: rda.h rdmb.h
+d36 1
+a36 1
+mbu.o: flags.h
+d39 1
+a39 1
+rda.o: flags.h
+d41 2
+a42 1
+rdmb.o: flags.h
+d45 1
+a45 1
+tca.o: rda.h rdmb.h pta.h
+@
+
+
+1.14
+log
+@Major restructuring:
+ 1. added DFAfactHandler class to encapsulate functions
+    that process a DFAfact based on the CFG node.
+    Created a handler for each fact class thusfar
+    (MBU, RDA, cMBU->RDMB)
+ 2. renamed cMBU to RDMB, to represent the pair (RDA,MBU).
+    The collection analysis class is now called RDMBc.
+    Use this new convention for naming?: end in "c" for
+    a "collecting" analysis class (and "a" for "analysis"?)
+@
+text
+@d26 5
+a30 3
+cfg.o: ao.h ty.h suco.h id.h edge.h ecr.h cfg.h tca.h
+dfa.o: ao.h ty.h suco.h id.h edge.h cfg.h dfa.h flags.h
+diag.o: flags.h diag.h ao.h ty.h suco.h id.h edge.h ecr.h cfg.h
+d34 2
+a35 1
+mbu.o: ecr.h ao.h ty.h suco.h id.h edge.h cfg.h dfa.h flags.h
+d37 4
+a40 2
+rda.o: ao.h ty.h suco.h id.h edge.h ecr.h cfg.h dfa.h flags.h
+rdmb.o: ecr.h ao.h ty.h suco.h id.h edge.h cfg.h dfa.h flags.h
+d42 2
+a43 1
+tca.o: diag.h ao.h ty.h suco.h id.h edge.h tca.h ecr.h cfg.h pta.h dfa.h
+@
+
+
+1.13
+log
+@Major fixes:
+1. right-hand-side of assignment now treated as a "use";
+   this is extended to cover formals and returns.
+2. special case (in MBUfact) when handling RHS of assignment:
+   if it is a return node (signifying the result of a call),
+   then a special alias resolution is used, in which
+   for Return(tgt), we find all aliases of tgt that are
+   functions of the form Function(fid), then collect the
+   set of Return(fid)s as  the alias set. Basically --
+   we're normalizing the "MBU holder" to be Return(fid).
+Appears to work on test cases -- the only remaining issue
+to be dealt with: must store additional information signifying
+whether a fact deals with the LHS or RHS of an assignment, as
+they can be independently instrumented.
+@
+text
+@d5 1
+a5 1
+STEMS = ao cfg cmbu dfa diag ecr edge id mbu pta rda suco_usage tca ty
+a26 1
+cmbu.o: cfg.h suco.h ao.h ty.h id.h edge.h dfa.h flags.h
+d35 1
+@
+
+
+1.12
+log
+@Added cMBU class to collect may-be-uninit results (after
+running RDA and MBU); new class is in cmbu.cpp.
+Appears to be working, though a few open issues remain:
+ - lookupNodeFact needs a complement (releaseNodeFact),
+   since cMBU returns a new node (though neither MBU
+   nor RDA do)
+ - mode_iterating/mode_collecting -- should get rid
+   of this flag cleanly
+ - absorbAndCompare -- should obsolesce this, or migrate
+   it to DFA/MBU/RDA
+Longer term:
+ - RDA should use GMOD, but when collecting, will need
+   to refer to GREF.
+@
+text
+@d27 1
+a27 1
+cmbu.o: cfg.h suco.h ao.h ty.h id.h edge.h dfa.h
+@
+
+
+1.11
+log
+@Split dfa.cpp into three files: dfa.cpp, mbu.cpp, rda.cpp
+(one for each analysis). Class header is still the single
+dfa.h.
+@
+text
+@d5 1
+a5 1
+STEMS = ao cfg dfa diag ecr edge id mbu pta rda suco_usage tca ty
+d27 1
+@
+
+
+1.10
+log
+@Wrote basic block mechanism, and routines to construct it.
+Currently builds, runs, but not yet used.
+Also, consolidated CFG initialization into one function:
+CFG:: prepareCFG, called by tca.cpp.
+Makefile dependencies updated.
+@
+text
+@d4 5
+a8 3
+TARGET = test
+SRCS = ao.cpp cfg.cpp dfa.cpp diag.cpp ecr.cpp edge.cpp id.cpp pta.cpp suco_usage.cpp tca.cpp ty.cpp
+OBJS = ao.o cfg.o dfa.o diag.o ecr.o edge.o id.o pta.o suco_usage.o tca.o ty.o
+d27 1
+a27 1
+dfa.o: ao.h ty.h suco.h id.h edge.h ecr.h cfg.h dfa.h flags.h
+d32 1
+d34 1
+@
+
+
+1.9
+log
+@Added suco_usage.cpp/o, with corresponding changes in
+dependencies.
+@
+text
+@d24 1
+a24 1
+cfg.o: ao.h ty.h suco.h id.h edge.h ecr.h cfg.h dfa.h tca.h
+d26 1
+a26 1
+diag.o: flags.h diag.h ao.h ty.h suco.h id.h edge.h ecr.h cfg.h dfa.h
+d32 1
+a32 1
+tca.o: diag.h ao.h ty.h suco.h id.h edge.h tca.h ecr.h cfg.h dfa.h pta.h
+@
+
+
+1.8
+log
+@Added dfa.o; added depend target; includes makedepend
+dependencies.
+@
+text
+@d5 2
+a6 2
+SRCS = ao.cpp cfg.cpp dfa.cpp diag.cpp ecr.cpp edge.cpp id.cpp pta.cpp tca.cpp ty.cpp
+OBJS = ao.o cfg.o dfa.o diag.o ecr.o edge.o id.o pta.o tca.o ty.o
+d23 11
+a33 11
+ao.o: flags.h ecr.h ao.h ty.h suco.h suco.cpp id.h edge.h
+cfg.o: ao.h ty.h suco.h suco.cpp id.h edge.h ecr.h cfg.h dfa.h tca.h
+dfa.o: ao.h ty.h suco.h suco.cpp id.h edge.h ecr.h cfg.h dfa.h flags.h
+diag.o: flags.h diag.h ao.h ty.h suco.h suco.cpp id.h edge.h ecr.h
+ecr.o: ecr.h ao.h ty.h suco.h suco.cpp id.h edge.h
+edge.o: edge.h ao.h ty.h suco.h suco.cpp id.h
+id.o: id.h ao.h ty.h suco.h suco.cpp edge.h
+pta.o: flags.h ao.h ty.h suco.h suco.cpp id.h edge.h ecr.h pta.h
+tca.o: diag.h ao.h ty.h suco.h suco.cpp id.h edge.h tca.h ecr.h cfg.h dfa.h
+tca.o: pta.h
+ty.o: diag.h ao.h ty.h suco.h suco.cpp id.h edge.h
+@
+
+
+1.7
+log
+@Incorporated cfg.cpp/cfg.h into rtca project.
+Modified DFfacts to be abstract, and have many children;
+CFGfunction now stores a "filestem" argument;
+tca -debug mode now dumps the CFG as well;
+currently cfg input reads aid and other integral arguments
+of DFfacts; yet to do: read in AO arguments.
+@
+text
+@d5 2
+a6 1
+OBJS = ao.o edge.o id.o tca.o ty.o ecr.o pta.o diag.o cfg.o
+d15 3
+d21 1
+a21 12
+ao.cpp: ao.h ecr.h
+ecr.cpp: ecr.h
+edge.cpp: edge.h
+id.cpp: id.h ao.h
+pta.cpp: ecr.h
+suco.cpp: suco.h
+tca.cpp: tca.h ao.h ecr.h
+ty.cpp: ty.h
+ao.h: ty.h id.h
+ecr.h: ao.h edge.h suco.h suco.cpp
+edge.h: ao.h
+tca.h: id.h edge.h ao.h ecr.h
+d23 11
+@
+
+
+1.6
+log
+@Normalized vargs/largno/islib:
+1. Directive from instr-ast is now 'f' for defined function,
+   and 'v' for vararg function.
+2. library functions are now processed in rtca/id.cpp, which
+   recognized (and strips out) the _rtclib_ prefix; the islib
+   property is propagated to children AOs as they are created.
+3. stat counters and the undef-fn output both now filter out
+   isLib objects.
+@
+text
+@d5 1
+a5 1
+OBJS = ao.o edge.o id.o tca.o ty.o ecr.o pta.o diag.o
+@
+
+
+1.5
+log
+@Renamed tca-addrof to rtca-raw;
+also added new target libc.
+@
+text
+@d12 1
+a12 1
+	sed -e 's/rtclib_//' < libc.tc_asgs > ../../scripts/libc.tc_asgs
+@
+
+
+1.4
+log
+@Added diag.cpp/h, for diagnosis/cmd-line flags.
+@
+text
+@d7 1
+a7 1
+tca-addrof: $(OBJS)
+d10 4
+d17 2
+a18 1
+ao.cpp: ao.h
+d21 3
+a23 1
+tca.cpp: tca.h ao.h
+d26 1
+d28 2
+a29 1
+tca.h: id.h edge.h ao.h
+@
+
+
+1.3
+log
+@Added ecr/pta
+@
+text
+@d5 1
+a5 1
+OBJS = ao.o edge.o id.o tca.o ty.o ecr.o pta.o
+@
+
+
+1.2
+log
+@Changed CC to CXX, CFLAGS to CXXFLAGS;
+added manual header-file dependencies (but doesn't really work)
+@
+text
+@d5 1
+a5 1
+OBJS = ao.o edge.o id.o tca.o ty.o
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 2
+a2 2
+CC = g++
+CFLAGS =
+d8 1
+a8 1
+	$(CC) $(CFLAGS) -o $@@ $^ $(LDFLAGS)
+d13 8
+@

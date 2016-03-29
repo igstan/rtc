@@ -1,0 +1,949 @@
+head	1.26;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.26
+date	2004.04.05.18.16.29;	author suan;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2004.03.31.15.17.54;	author suan;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2004.03.28.20.06.16;	author suan;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2004.03.07.05.30.41;	author suan;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2004.02.23.16.12.01;	author suan;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2004.02.22.00.20.20;	author suan;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2004.02.21.23.47.23;	author suan;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2004.02.21.23.25.21;	author suan;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2004.02.20.16.56.39;	author suan;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2004.02.19.16.41.34;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2003.10.27.22.41.44;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2002.11.15.22.07.32;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2002.11.15.17.49.43;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2002.08.19.14.22.25;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2002.08.18.16.15.21;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.08.16.23.20.35;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.08.16.21.56.08;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.08.16.20.28.52;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.08.16.16.57.31;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.08.15.23.39.23;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.07.30.19.48.50;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.07.29.21.29.44;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.05.21.21.51.31;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.04.16.20.06.53;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.04.11.04.21.43;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.04.10.16.19.04;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Header for type and typelist classes.
+@
+
+
+1.26
+log
+@Semi-bug fix: remember that function return node is
+represented by R F I <fn> not R I <fn>, which was
+not the case, so I've fixed it throughout (occurs
+mainly in handleReturnStmt() in the various analyses).
+
+Also, added AOReturn::getStaticType() as a separate
+function to look up the underlying function's return
+type if staticType is not set;
+added TCfunctionType::getReturnType() accessor to
+assist.
+@
+text
+@#ifndef TC_TY_H /* { */
+#define TC_TY_H
+
+#include <stdio.h>
+
+#include "suco.h"
+
+//------------------------------------------------------
+
+class TCtype
+{
+  public:
+    enum tcKind {
+	 tcVoid, tcZero, tcInt, tcChar, tcShort, tcLong, tcLongLong,
+	 tcFloat, tcDouble, tcLongDouble, tcPointer,
+	 tcStruct, tcUnion, tcArray,
+	 tcBitField, tcFunction
+	};
+    static TCtype * stringToTy(char * str, char ** nptr); //- return should be cleaned up by calling deleteTy
+    static void deleteTy(TCtype& ty);
+
+    const char * kindString();
+    virtual void debug_dump(FILE * os);
+    char kindCode();
+    tcKind getKind() const { return kind; }
+    virtual void write_string_rep(FILE * os);
+    bool equals(TCtype &t) const; //- equals: must be exactly equal
+    bool equiv(TCtype &t) const; //- equiv: ignores pointer dest type, and empty functions match all
+
+    virtual int countInstancesOf(TCtype& ty) const;	//- counts occurrences of "ty" (equiv or subtype) in this object
+    virtual int SizeOf() const;				//- return sizeof for a "common" scheme
+
+    //- list operations
+    static suco_llist<TCtype *>& stringToTyList(char * str, char ** nptr); //- return should be cleaned up by calling deleteTyList
+    static void deleteTyList(suco_llist<TCtype *>& ty);
+    static void write_list_string_rep(suco_llist<TCtype *>& tl, FILE * os);
+    static void debug_dump_list(suco_llist<TCtype *>& tl, FILE * os);
+    static bool listEquals(suco_llist<TCtype *>& l1, suco_llist<TCtype *>& l2);
+    static bool listEquiv(suco_llist<TCtype *>& l1, suco_llist<TCtype *>& l2);
+    static TCtype * listEquivPrefix(suco_llist<TCtype *>& prefix_list, suco_llist<TCtype *>& full_list);
+
+    static TCtype tcVoidType;
+    static TCtype tcZeroType;
+    static TCtype tcIntType;
+    static TCtype tcCharType;
+    static TCtype tcShortType;
+    static TCtype tcLongType;
+    static TCtype tcLongLongType;
+    static TCtype tcFloatType;
+    static TCtype tcDoubleType;
+    static TCtype tcLongDoubleType;
+
+  protected:
+    TCtype(enum tcKind k) : kind(k) {}
+    virtual bool cleanup() const { return false; } // indicates if class needs to be destroyed
+    virtual ~TCtype() {}
+  private:
+    TCtype();
+    enum tcKind kind;
+};
+
+//------------------------------------------------------
+
+//- for { tcStruct, tcUnion }
+class TCstructUnionType : public TCtype
+{
+  public:
+    friend class TCtype;
+    void debug_dump(FILE * os);
+    void write_string_rep(FILE * os);
+    virtual int countInstancesOf(TCtype& ty) const;	//- counts occurrences of "ty" (equiv or subtype) in this object
+    virtual int SizeOf() const;				//- return sizeof for a "common" scheme
+    suco_llist<TCtype *>& getTypeList() const { return tylist; }
+  private:
+    TCstructUnionType();
+    ~TCstructUnionType() { delete &tylist; }
+    bool cleanup() const { return true; }
+    TCstructUnionType(enum tcKind k, suco_llist<TCtype *>& l) : TCtype(k), tylist(l) {}
+    suco_llist<TCtype *>& tylist;
+};
+
+class TCfunctionType : public TCtype
+{
+  public:
+    friend class TCtype;
+    void debug_dump(FILE * os);
+    void write_string_rep(FILE * os);
+    virtual int countInstancesOf(TCtype& ty) const;
+    virtual int SizeOf() const { return 0; }
+
+    bool isEmpty() const { return (rty.getKind() == tcInt) && tylist.IsEmpty(); }
+    TCtype& getReturnType() const { return rty; }
+  private:
+    TCfunctionType();
+    ~TCfunctionType() { deleteTy(rty); delete &tylist; }
+    TCfunctionType(TCtype &t, suco_llist<TCtype *>& l) : TCtype(tcFunction), rty(t), tylist(l) {}
+    bool cleanup() const { return true; }
+    TCtype &rty;
+    suco_llist<TCtype *>& tylist;
+};
+
+class TCpointerType : public TCtype
+{
+  public:
+    friend class TCtype;
+    void debug_dump(FILE * os);
+    void write_string_rep(FILE * os);
+    virtual int countInstancesOf(TCtype& ty) const;
+    // virtual int SizeOf() const;	//- use default version
+
+    static TCpointerType tcVoidPtrType;
+
+  private:
+    TCpointerType();
+    ~TCpointerType() { deleteTy(ty); }
+    bool cleanup() const { return (this != &tcVoidPtrType); }
+    TCpointerType(TCtype * t = 0) : TCtype(tcPointer), ty(t?(*t):tcVoidType) {}
+    TCtype &ty;	//- NOTE: currently, typed pointers not supported
+};
+
+//-- for { tcArray, tcBitField }
+class TCnumType : public TCtype
+{
+  public:
+    friend class TCtype;
+    void debug_dump(FILE * os);
+    void write_string_rep(FILE * os);
+    virtual int countInstancesOf(TCtype& ty) const;	//- counts occurrences of "ty" (equiv or subtype) in this object
+    virtual int SizeOf() const;				//- return sizeof for a "common" scheme
+
+    TCtype& getBaseType() const { return ty; }
+    unsigned int getSize() const { return size; }
+  private:
+    TCnumType();
+    ~TCnumType() { deleteTy(ty); }
+    bool cleanup() const { return true; }
+    TCnumType(enum tcKind k, unsigned int i, TCtype &t) : TCtype(k), size(i), ty(t) {}
+    unsigned int size;
+    TCtype &ty;
+};
+
+//------------------------------------------------------
+
+class TClatType
+{ //- "enriched" lattice type
+  public:
+    friend class TClatRootSet;
+
+    enum latKind {    // encoding used in meet/join()!
+				tclBottom=0,
+
+	tclChar=101, tclShort=111, tclInt=121, tclLong=122, tclLongLong=131,
+		tclFloat=141, tclDouble=151, tclLongDouble=161,
+				tclPointer=171,
+
+				tclZero=200,
+				tclTop=300
+	};
+    TClatType(latKind k = tclTop) : kind(k) {}
+    TClatType(TCtype& t) : kind(getLatKindFor(t)),
+			   nodesLEthis() {}
+
+    void debug_dump(FILE * os);
+
+    //-- static functions to manipulate latKind values
+    static latKind getLatKindFor(TCtype& t);
+
+    static latKind Join(latKind k1, latKind k2);
+    static latKind Meet(latKind k1, latKind k2);
+    static bool LE(latKind k1, latKind k2) { return ((k1 == k2) || ((k1/100) < (k2/100))); }
+    static bool GE(latKind k1, latKind k2) { return ((k1 == k2) || ((k1/100) > (k2/100))); }
+    static void Debug_dump(latKind k, FILE * os);
+
+    //-- basic operations
+    void join(latKind k);
+    void meet(latKind k);
+
+    void setKind(latKind k) { kind = k; }
+    latKind getKind() const { return kind; }
+
+    //-- constraint solving stuff: designed for moving downward in lattice
+    void constrainLE(TClatType& gl); // constrain this <= gl
+
+  private:
+    void setZero();
+
+    latKind kind;
+    suco_set<TClatType *> nodesLEthis; // constaints: nodes <= this
+};
+
+//------------------------------------------------------
+
+class TClatRootSet
+{
+  public:
+
+    enum lrIndex {
+		lrBottom,
+		lrChar,
+		lrShort,
+		lrInt,
+		lrLong,
+		lrLongLong,
+		lrFloat,
+		lrDouble,
+		lrLongDouble,
+		lrPointer,
+		lrZero,
+		lrTop,
+		lrMax
+	};
+
+    TClatRootSet();
+
+    void debug_dump(FILE * os);
+
+    TClatType& getLatType(TCtype& t);
+    TClatType& getLatType(lrIndex i) { return roots[i]; }
+
+    //-- solves constraints (meeting along LE constraints)
+    void solveMeet();
+
+  private:
+    TClatType roots[lrMax];
+
+    //- helper for solveMeet()
+    void traverseMeetWith(TClatType& node, TClatType::latKind lty);
+
+};
+
+//------------------------------------------------------
+
+#endif /* } ifndef TC_TY_H */
+@
+
+
+1.25
+log
+@Added SizeOf() member function, to compute a size
+of a type based on a roughly-put-together sizing
+scheme (more-or-less consistent with Linux/x86).
+@
+text
+@d92 1
+@
+
+
+1.24
+log
+@Removed countNumUnits();
+changed countInstancesOf() to account for relative sizes
+of types (|char|<=|short|<=|int|<=|long|...)
+@
+text
+@d31 1
+d72 1
+d89 1
+d108 1
+d128 1
+@
+
+
+1.23
+log
+@Range analysis: added support for evaluating arroW/Member
+expressions.  Changes are:
+ - TCtype::listEquivPrefix: instead of returning bool,
+   now returns the TCtype of the last matching item.
+ - Interval: added setTgt(TCtype&), which was previously
+   included as part of setTgt(AO&).
+ - Interval: added adjustStructOffset() to perform the
+   meat of the arroW/Member handling.
+ - RANfact: added handlers for arroW/Member.
+@
+text
+@a29 1
+    virtual int countNumUnits() const { return 1; }	//- counts the number of scalar "units" in this object
+d70 1
+a70 2
+    int countNumUnits() const;	//- counts the number of scalar "units" in this object
+    int countInstancesOf(TCtype& ty) const;	//- counts occurrences of "ty" (equiv or subtype) in this object
+d86 1
+a86 2
+    int countNumUnits() const { return 0; } //- shouldn't be called!
+    int countInstancesOf(TCtype& ty) const {return 0; } //- shouldn't be called!
+d104 1
+a104 2
+    // int countNumUnits() const { return 1; }	//- use default
+    // int countInstancesOf(TCtype& ty) const;	//- use default (ignore ptr tgt type)
+d123 1
+a123 2
+    int countNumUnits() const;	//- counts the number of scalar "units" in this object
+    int countInstancesOf(TCtype& ty) const;	//- counts occurrences of "ty" (equiv or subtype) in this object
+@
+
+
+1.22
+log
+@Added refinements to Interval::adjustTypes:
+ - if rhs has target: ok under unit-addition if lhs
+   has no target ~~ just flip them.
+ - under unit-addition: if shrinking tgt_elty, then
+   augment tgt_numelts with countNumUnits, which
+   counts the number of (non-bitfield) scalar
+   entities in (the original) tgt_elty ~~ this is
+   a safe under-approximation of the sice of tgt_elty
+   in bytes.
+ - on type mismatch, check for cases where tgt_elty
+   actually contains a number of eltys, e.g. if tgt_elty
+   is a union which includes an array of eltys.
+   A generalized solution is adopted, where we use the
+   newly-added TCtype::countInstancesOf() function
+   which counts the occurrences of elty within tgt_elty.
+   This function also recognizes common-init-sequence
+   subtyping.
+   (NOTE: there's one pathological case in which the
+    current version would be suboptimal: when checking
+    tgt_elty->countInstancesOf(elty), if
+     elty     : struct { T1, T2 }
+     tgt_elty : struct { T1, T2, struct{T1,T2}[10] }
+    current version would return 1 because of subtype
+    recognition, when in principle it could've returned 11.)
+ - in cases where we heuristically check for tgt-ed
+   intervals with [0,0], call newly-added slide_if_constant()
+   method to check for cases of A[s]+[i,i] where i < s;
+   then "slide" the interval to get A[s-i]+[0,0].
+@
+text
+@d40 1
+a40 1
+    static bool listEquivPrefix(suco_llist<TCtype *>& prefix_list, suco_llist<TCtype *>& full_list);
+d73 1
+@
+
+
+1.21
+log
+@Added TCtype::countNumUnits(), which counts the number
+of "units" excluding bitfields within each type.
+This is used in a new Interval::adjustTypes() refinement:
+if elty is char and tgt_ty is a struct, instead of just
+shrinking, multiply by countNumUnits(), a safe under-
+approximation of the size of the type in (char) bytes.
+@
+text
+@d27 2
+a28 2
+    bool equals(TCtype &t); //- equals: must be exactly equal
+    bool equiv(TCtype &t); //- equiv: ignores pointer dest type, and empty functions match all
+d31 1
+d40 1
+d72 1
+d88 1
+d107 1
+d127 1
+@
+
+
+1.20
+log
+@Added deleteTyList() destructor function, which deleteTy()s
+each component TCtype before destructing itself.
+Note that unlike deleteTy(), the lack of protected
+destructor for suco_llist<TCtype *> means the type system
+cannot require the use of this function.
+@
+text
+@d30 2
+d62 1
+d69 1
+d84 2
+d102 1
+d114 1
+d121 1
+d123 1
+a123 1
+    TCtype& getBaseType() { return ty; }
+@
+
+
+1.19
+log
+@Semimajor change: eliminated TCtypeList class; replaced
+with suco_llist<TCtype *>.
+The only semantic change is that destruction is not
+recursive, so a lot of leakage is likely.
+(Next change: devise a single-representative storage?
+)
+@
+text
+@d30 3
+a32 2
+//- LIST OPERATIONS
+    static suco_llist<TCtype *>& stringToTyList(char * str, char ** nptr);
+@
+
+
+1.18
+log
+@Major Change: ExpDescr estr augmented Sub(B)
+and plus/minus to include elty; further,
+remapped plus/minus to new representations:
+
+  Sub:   B(e1,e2)   -> B(e1,e2,elty)
+  Binop: o+(e1,e2)  -> p+(e1,e2,elty)
+         o-(e1,e2)  -> p-(e1,e2,elty)
+         O+=(e1,e2) -> p#(e1,e2,elty)
+         O-=(e1,e2) -> p=(e1,e2,elty)
+  Unop:  U+<(e)     -> U+<(e,elty)
+         U+>(e)     -> U+>(e,elty)
+         U-<(e)     -> U-<(e,elty)
+         U->(e)     -> U->(e,elty)
+
+For plain (non-pointer) arithmetic, elty = tcVoid.
+
+NOT YET DONE: change body of Interval.plus/minus
+to account for elty.
+
+Auxiliary change: Interval::deleteTy now takes
+a reference rather than a pointer.
+@
+text
+@a9 1
+class TCtypeList;
+d30 7
+a58 31
+class TCtypeList
+{
+  public:
+    static TCtypeList& stringToTyList(char * str, char ** nptr);
+    void debug_dump(FILE * os);
+    void write_string_rep(FILE * os);
+    bool isEmpty() const { return (head == 0); }
+    TCtype * tail();
+    bool equals(TCtypeList& list);
+    bool equiv(TCtypeList& list);
+    ~TCtypeList();
+    static int freelistLength(); //-TODO, write cleanup function to free the list?
+  private:
+    TCtypeList();
+    class node {
+      public:
+        static node * acquire(TCtype &t, node * n = 0);
+        static void dispose(node * n);
+        TCtype * ty;
+        node * next;
+        static node * freelist;
+      private:
+        node();
+        node(TCtype &t, node * n = 0) : ty(&t), next(n) {}
+    };
+    TCtypeList(node * l): head(l) {}
+    node * head;
+};
+
+//------------------------------------------------------
+
+d69 2
+a70 2
+    TCstructUnionType(enum tcKind k, TCtypeList& l) : TCtype(k), tylist(l) {}
+    TCtypeList& tylist;
+d79 1
+a79 1
+    bool isEmpty() const { return (rty.getKind() == tcInt) && tylist.isEmpty(); }
+d83 1
+a83 1
+    TCfunctionType(TCtype &t, TCtypeList& l) : TCtype(tcFunction), rty(t), tylist(l) {}
+d86 1
+a86 1
+    TCtypeList& tylist;
+@
+
+
+1.17
+log
+@Changed AO::getStaticType() to a virtual function, so that
+for SDot it'll return tylist.tail, and for UDot, it'll
+return the type.
+Entailed adding TCtypeList::tail() function.
+
+Note: UDot version not currently used (because UDots are
+normalized by RAN/Interval).
+@
+text
+@d20 2
+a21 2
+    static TCtype * stringToTy(char * str, char ** nptr);
+    static void deleteTy(TCtype * ty);
+d107 1
+a107 1
+    ~TCfunctionType() { deleteTy(&rty); delete &tylist; }
+d125 1
+a125 1
+    ~TCpointerType() { deleteTy(&ty); }
+d128 1
+a128 1
+    TCtype &ty;
+d137 1
+d142 1
+a142 1
+    ~TCnumType() { deleteTy(&ty); }
+@
+
+
+1.16
+log
+@Added code to
+ - lookup address range (evalAddrRange)
+ - do the bounds check
+Also, fixed small bug: skipArgs() now takes aoi as
+argument, as that has to be advanced for each 'V' and
+'S' in the string!
+@
+text
+@d60 1
+@
+
+
+1.15
+log
+@Suco change (major):
+ 1. Added new file suco_usage.cpp as a hack to instantiate
+    the suco code only once, rather than once-per-file as
+    before.
+ 2. Suco now has node-recycling mechanism in place, which
+    seems to help with rtca performance.
+@
+text
+@d136 2
+@
+
+
+1.14
+log
+@Reorganized global flags, stat-collection and output;
+moved TCcollectStats to diag.cpp/h, renamed to TCstats,
+and absorbed what used to be in diag.cpp/h.
+Global flags have been moved to flags.h, (they're defined
+in tca.cpp, for now).
+Removed the -stat flag: the "stat" output is now always
+dumped, to the output file rather than stderr.
+Added -mbu# flag, though haven't done anything with the
+different mbu levels yet.
+@
+text
+@a6 1
+#include "suco.cpp"
+@
+
+
+1.13
+log
+@Added Type-safety Category assignment.
+(major change).
+Appears working, tested on gcc, verified on small examples,
+not thoroughly verified.
+Also, added -readable flag.
+@
+text
+@d12 2
+a13 1
+class TCtype {
+d54 2
+a55 1
+class TCtypeList {
+d64 1
+d73 1
+a76 1
+        static node * freelist;
+d84 2
+a85 1
+class TCstructUnionType : public TCtype {
+d98 2
+a99 1
+class TCfunctionType : public TCtype {
+d114 2
+a115 1
+class TCpointerType : public TCtype {
+d131 2
+a132 1
+class TCnumType : public TCtype {
+d148 2
+a149 1
+class TClatType { //- "enriched" lattice type
+d197 2
+a198 1
+class TClatRootSet {
+@
+
+
+1.12
+log
+@Fixed oversight in applyAssignConstraint -- was not propagating down
+inclusion edges.
+Added STAT debug output, etc.
+@
+text
+@d167 1
+@
+
+
+1.11
+log
+@Added constraint solving -- not thoroughly tested, though
+it appears to work on some sample tests.
+@
+text
+@d156 1
+a156 1
+    TClatType(TCtype& t) : kind(getKind(t)),
+d162 1
+a162 1
+    static latKind getKind(TCtype& t);
+d174 1
+@
+
+
+1.10
+log
+@Finished (but not tested) initialization of poss-type
+constraints.
+This entailed creation of a root set (encapsulated by
+the class TClatRootSet).
+Also, to manipulate the traverseCounter, TCAstate is now
+a friend of ECR -- I'm not sure I like this arrangement.
+@
+text
+@d166 1
+d213 3
+d218 4
+@
+
+
+1.9
+log
+@Intermediate checkin: started writing poss-type constraint
+generation: added some needed data structures to ECR and
+TClatType; initialized AO constraints and wrote helper
+to process inclusion edges from a given ECR;
+need to finally process assignments.
+@
+text
+@d143 2
+d182 32
+@
+
+
+1.8
+log
+@Added setting of required-types:
+ - file interface now delivers two kinds of assignment edges:
+   "true" ('=') and "pseudo" ('-'), the latter for function
+   and array object assignments as well as void return assignments.
+ - added to AO reqdType member, which is just an enum;
+   modified TClatType meet/join functions to work directly on
+   enums;
+The setting of required types is done:
+ 1. on file input, for each typed-true-assignment and verify-tag
+ 2. during arg/ret assignment adding
+Finally, AO's debug_dump function has been modified to supply
+more diagnostic information; this entailed the renaming of
+the virtual portion of the function to dump_descr.
+@
+text
+@d6 3
+d154 4
+a157 1
+    TClatType(TCtype& t) : kind(getKind(t)) {}
+d159 1
+d166 1
+d172 2
+a173 1
+    void debug_dump(FILE * os);
+d178 2
+a179 1
+    enum latKind kind;
+@
+
+
+1.7
+log
+@Revamped TClatType;
+renamed ECR::rtType to poss_type;
+rewrote TCAstate functions for initializing poss-types;
+also left a skeleton function for generating constraints.
+Todo: augment TClatType with constraint graph capabilities,
+generate contraints, and solve.
+Also, AO needs to have required-type.
+@
+text
+@d155 4
+@
+
+
+1.6
+log
+@Added skeleton for lvalType(), with initial seeding rules
+in tca.cpp, and ECR debug_dump to include rttype.
+Must rethink strategy for solving constraints before
+proceeding
+@
+text
+@d140 9
+a148 2
+    enum latKind { // encoding used in meet()!
+	 tcBottom=0, tcType=10, tcValidPtr=11, tcTop=20
+d150 9
+a158 5
+    TClatType() : kind(tcTop), ty(0) {}
+    TClatType(TCtype& t) : kind(tcType), ty(&t) {}
+    static TClatType& validPtrType(TCtype& t);
+    void meet(TClatType& t); //-- meet according to "safe" lattice
+    void setBottom(); //-- set to bottom
+d163 2
+a165 1
+    TCtype * ty;
+@
+
+
+1.5
+log
+@Added TClatType, added "rttype" member to ECR.
+Now: ready to compute runtime-types.
+@
+text
+@d147 1
+@
+
+
+1.4
+log
+@Added tcZero; modified tcTypeList::node to store type pointer
+rather than type reference - something to do with ability
+to delete referenced objects!
+@
+text
+@d111 3
+d117 1
+a117 1
+    bool cleanup() const { return true; }
+d134 19
+@
+
+
+1.3
+log
+@Added mechanism to store AOs in an AOlist in each AO.
+Included mechanism for traversing all AOs, and debug output
+functions.
+Fairly complete, but not thoroughly tested (especially TypeList
+destructors?)
+@
+text
+@d12 1
+a12 1
+	 tcVoid, tcInt, tcChar, tcShort, tcLong, tcLongLong,
+d29 1
+d63 3
+a65 2
+        node(TCtype &t, node * n = 0) : ty(t), next(n) {}
+        TCtype& ty;
+d69 2
+@
+
+
+1.2
+log
+@Added write_string_rep to output intermediate file format.
+@
+text
+@d19 1
+d22 2
+a23 1
+    char kindLetter();
+d25 2
+d54 3
+d92 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d21 2
+d49 1
+d71 1
+d84 1
+d98 1
+d111 1
+@

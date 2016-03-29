@@ -1,0 +1,817 @@
+head	1.22;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+1.22
+date	2004.05.25.14.20.58;	author suan;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2004.05.11.21.50.54;	author suan;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2004.05.06.23.30.10;	author suan;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2004.05.03.20.45.38;	author suan;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2004.04.29.15.09.01;	author suan;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2004.03.29.02.24.42;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2004.02.21.23.25.21;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2004.01.16.21.47.26;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2003.03.20.23.01.22;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2003.02.22.00.05.44;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2003.02.17.17.44.25;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2003.01.07.20.01.38;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.12.11.17.43.59;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.11.29.21.26.17;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.11.27.18.46.20;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.11.25.22.49.51;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.11.25.19.29.16;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.11.21.20.44.57;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.11.21.19.01.48;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.11.20.19.09.02;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.11.18.22.15.52;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.11.15.22.06.35;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@New hack to get suco code to instantiate only once,
+for faster compilation.
+Also contains newly-added stat-output function for
+suco recycling.
+@
+
+
+1.22
+log
+@Added set::Subtract().
+@
+text
+@#include <stdio.h>
+#include "suco.h"
+#include "suco.cpp"
+
+bool suco_recycle = true;
+
+class AO;
+class AOId;
+class CFGbblock;
+class CFGfunction;
+class CFGnode;
+class Dependency;
+class ECR;
+class ECRargRet;
+class ExpDescr;
+class PExprArg;
+class PExprAssign;
+class PExprCall;
+class PExprVerify;
+class PExprPredicate;
+class PgmExpr;
+class PgmStmt;
+class TCassignEdge;
+class TClatType;
+class TCtype;
+
+struct int_triple;
+
+void suco_diag_wrapper::suco_write_recycle_stats(FILE * outf)
+{
+  if(suco_recycle){
+
+#define write_recy_stats(ty) \
+    fprintf(outf, "# \t%8d\t%8d\t%8d\t%s\n", \
+		suco_llist<ty>::_suco_node::num_new_nodes, \
+		suco_llist<ty>::_suco_node::num_recy_nodes, \
+		suco_llist<ty>::_suco_node::freelistLength(), \
+		#ty \
+		);
+    fprintf(outf, "# Recycled Suco Nodes (new/recycled/freelist/type):\n");
+
+    write_recy_stats(AO *)
+    write_recy_stats(AOId *)
+    write_recy_stats(CFGbblock *)
+    write_recy_stats(CFGfunction *)
+    write_recy_stats(CFGnode *)
+    write_recy_stats(Dependency *)
+    write_recy_stats(ECR *)
+    write_recy_stats(ECRargRet *)
+    write_recy_stats(ExpDescr *)
+    write_recy_stats(PExprArg *)
+    write_recy_stats(PExprAssign *)
+    write_recy_stats(PExprCall *)
+    write_recy_stats(PExprVerify *)
+    write_recy_stats(PExprPredicate *)
+    write_recy_stats(PgmExpr *)
+    write_recy_stats(PgmStmt *)
+    write_recy_stats(TCassignEdge *)
+    write_recy_stats(TClatType *)
+    write_recy_stats(TCtype *)
+    write_recy_stats(const char *)
+    write_recy_stats(int)
+    write_recy_stats(suco_llist<PgmExpr *> *)
+    write_recy_stats(struct int_triple *)
+
+#undef write_recy_stats
+  }
+}
+
+void suco_usage_dummy_function()
+{
+#define instantiate_llist(list) do{\
+		list.Contains(0); \
+		list.Insert(0); \
+		list.Append(0); \
+		list.Attach(list); \
+		list.Copy(list); \
+		list.Head(); \
+		list.Last(); \
+		list.ElementAt(0); \
+		list.Remove(0); \
+		list.Clear(); \
+		list.RemoveHead(); \
+		list.Length(); \
+		list.IsEmpty(); \
+	} while(0)
+
+  suco_llist<CFGbblock *> lcb;
+  suco_llist<CFGfunction *> lcf;
+  suco_llist<CFGnode *> lcn;
+  suco_llist<PExprCall *> lpc;
+  suco_llist<TCassignEdge *> ltae;
+  suco_llist<const char *> lstr;
+  suco_llist<suco_llist<PgmExpr *> *> lfnl;
+
+  suco_llist<AO *> lao;
+  suco_llist<suco_set<AO *> *> laos;
+  suco_llist<AOId *> lid;
+  suco_llist<Dependency *> ldep;
+  suco_llist<ECR *> lecr;
+  suco_llist<ECRargRet *> lear;
+  suco_llist<ExpDescr *> led;
+  suco_llist<PExprArg *> lpa;
+  suco_llist<PExprAssign *> lpg;
+  suco_llist<PExprVerify *> lpv;
+  suco_llist<PExprPredicate *> lpp;
+  suco_llist<PgmExpr *> lpe;
+  suco_llist<PgmStmt *> lps;
+  suco_llist<TCassignEdge *> lae;
+  suco_llist<TClatType *> ltlt;
+  suco_llist<TCtype *> ltt;
+  suco_llist<int> lint;
+  suco_llist<struct int_triple *> lit;
+
+  instantiate_llist(lcb);
+  instantiate_llist(lcf);
+  instantiate_llist(lcn);
+  instantiate_llist(lpc);
+  instantiate_llist(ltae);
+  instantiate_llist(lstr);
+  instantiate_llist(lfnl);
+
+  instantiate_llist(lao);
+  instantiate_llist(laos);
+  instantiate_llist(lid);
+  instantiate_llist(ldep);
+  instantiate_llist(lecr);
+  instantiate_llist(lear);
+  instantiate_llist(led);
+  instantiate_llist(lpa);
+  instantiate_llist(lpg);
+  instantiate_llist(lpv);
+  instantiate_llist(lpp);
+  instantiate_llist(lpe);
+  instantiate_llist(lps);
+  instantiate_llist(lae);
+  instantiate_llist(ltlt);
+  instantiate_llist(ltt);
+  instantiate_llist(lint);
+  instantiate_llist(lit);
+
+#undef instantiate_llist
+
+#define instantiate_queue(queue) do{\
+		queue.Enqueue(0); \
+		queue.Dequeue(); \
+	} while(0)
+
+#define instantiate_stack(stack) do{\
+		stack.Push(0); \
+		stack.Pop(); \
+	} while(0)
+
+#undef instantiate_queue
+#undef instantiate_stack
+
+#define instantiate_set(set) do{\
+		set.Insert(0); \
+		set.GetSingleton(); \
+		set.InsertList(set); \
+		set.Union(set); \
+		set.UnionConsume(set); \
+		set.Superset(set); \
+		set.Subset(set); \
+		set.Intersect(set); \
+		set.Subtract(set); \
+		set.Intersects(set); \
+	} while(0)
+
+  suco_set<AO *> sao;
+  suco_set<suco_set<AO *> *> saos;
+  suco_set<AOId *> sid;
+  suco_set<CFGfunction *> scf;
+  suco_set<CFGnode *> scn;
+  suco_set<Dependency *> sdep;
+  suco_set<ECR *> secr;
+  suco_set<ECRargRet *> sear;
+  suco_set<ExpDescr *> sed;
+  suco_set<PExprArg *> spa;
+  suco_set<PExprAssign *> spg;
+  suco_set<PExprVerify *> spv;
+  suco_set<PExprPredicate *> spp;
+  suco_set<PgmExpr *> spe;
+  suco_set<PgmStmt *> sps;
+  suco_set<TCassignEdge *> sae;
+  suco_set<TClatType *> stlt;
+  suco_set<int> sint;
+  suco_set<struct int_triple *> sit;
+
+  instantiate_set(sao);
+  instantiate_set(saos);
+  instantiate_set(sid);
+  instantiate_set(scf);
+  instantiate_set(scn);
+  instantiate_set(sdep);
+  instantiate_set(secr);
+  instantiate_set(sear);
+  instantiate_set(sed);
+  instantiate_set(spa);
+  instantiate_set(spg);
+  instantiate_set(spv);
+  instantiate_set(spp);
+  instantiate_set(spe);
+  instantiate_set(sps);
+  instantiate_set(sae);
+  instantiate_set(stlt);
+  instantiate_set(sint);
+  instantiate_set(sit);
+
+#undef instantiate_set
+}
+@
+
+
+1.21
+log
+@RELEVANT AOS DONE (but some parts not efficient):
+ - Added Dependency and DependencyMap classes, to record
+   dependencies not captured by flow-insensitive assign
+   edges.
+ - Revamped tca relevant-aos collecting mechanism.
+Note: certain recent changes rendered certain operations
+less efficient, like getAliasECRs.
+@
+text
+@d166 1
+@
+
+
+1.20
+log
+@Added set::InsertList(llist).
+@
+text
+@d12 1
+d47 1
+d97 1
+d99 1
+d124 1
+d126 1
+d170 1
+d174 1
+d190 1
+d194 1
+@
+
+
+1.19
+log
+@Fixed typo: trilpe->triple
+@
+text
+@d154 1
+@
+
+
+1.18
+log
+@1. Removed STRONGER_CPP compile-time flag.
+   This was surrounding two things affected by g++
+   version change:
+   A. inline initialization of static member CFGnode::ALL_AOS.
+      ~~> no big deal.
+   B. ability to define friend function suco_write_recycle_stats
+      as friend of (templated) suco class.
+      ~~> solution: wrap suco_write_recycle_stats in its
+          own class (suco_diag_wrapper).
+2. Added purify target to makefile.
+@
+text
+@d62 1
+a62 1
+    write_recy_stats(struct int_trilpe *)
+@
+
+
+1.17
+log
+@Collecting RAN stats (all-vps, finite-vps, half-finite-vps, inbounds-vps,
+known-preds):
+ - RAN replaced checkInBounds() with getDerefRangeFor()
+ - added reportKnownPredicate() helper to RAN[c]factHandler
+ - added list accumulators to RANcFactHandler
+ - added count holders to TCAstate
+
+Interval::isTop() - now returns true of min > max!
+(was returning only if min = +inf, max = -inf!)
+
+Interval: added "modulo" to compute %.
+
+AO::get_AOUDot/get_AOSDot() - unify ecr if called after pt-analysis.
+@
+text
+@d28 1
+a28 1
+void suco_write_recycle_stats(FILE * outf)
+d31 1
+a31 3
+#ifdef STRONGER_CPP // {
+#define write_recy_stats(ty)
+#else // } ifndef STRONGER_CPP {
+a39 1
+#endif // } ifndef STRONGER_CPP
+@
+
+
+1.16
+log
+@Semimajor change: eliminated TCtypeList class; replaced
+with suco_llist<TCtype *>.
+The only semantic change is that destruction is not
+recursive, so a lot of leakage is likely.
+(Next change: devise a single-representative storage?
+)
+@
+text
+@d19 1
+d56 1
+d105 1
+d130 1
+d175 1
+d193 1
+@
+
+
+1.15
+log
+@Added "STRONGER_CPP" flag to shift some definitions
+so they compile on solaris.
+@
+text
+@d23 1
+d59 1
+d107 1
+d131 1
+@
+
+
+1.14
+log
+@Fixed REDt -- previous version was naive and didn't account
+for aliases.
+Removed REDfact::remove, which is no longer needed.
+Added ExpDescr::aliasecrs cache (with accessor getAliasECRs()).
+Added to suco GetSingleton function.
+@
+text
+@d29 3
+d39 2
+a41 1
+    fprintf(outf, "# Recycled Suco Nodes (new/recycled/freelist/type):\n");
+@
+
+
+1.13
+log
+@Wrote redundant analysis collection function.
+Entailed creation of REDresults class and REDcFactHandler, etc.
+Resulted in modifying suco_set (olist, actually) to have a
+different Contains function that uses the compare function
+rather than ==. (Future work: may want to extend to some
+other functions).
+@
+text
+@d144 1
+@
+
+
+1.12
+log
+@Added red.cpp/h as target to Makefile.
+Modified cfg nodes to include REDfacts.
+Added ExpDescr sets to suco_usage.
+@
+text
+@d16 1
+d18 1
+d47 1
+d49 1
+d95 2
+d118 2
+d160 2
+d177 2
+@
+
+
+1.11
+log
+@Eliminated LocAidNodes from MBUfact -- major strip-down.
+Now MBUfact is implemented as simply a suco_set of AOs.
+Added suco_set::Intersect.
+@
+text
+@d14 1
+d43 1
+d89 1
+d110 1
+d150 1
+d165 1
+@
+
+
+1.10
+log
+@1. Added mechanism to output full trace with -v4.
+2. Modified trigger counter output mechanism to output
+   a full histogram rather than just some stats on the
+   max.  Currently implemented as static functions
+   within dfa.cpp; should absorb into one of the
+   classes?
+@
+text
+@d136 1
+@
+
+
+1.9
+log
+@Added worklist traversal mode (fifo, lifo, leaf-first),
+the last sorting the worklist in call-graph leaf-first
+order (non-recursive first), and within each function,
+sorting by a traversal_id which is a bottom-up numbering
+of CFGnodes.
+@
+text
+@d21 2
+d51 1
+d93 1
+d113 1
+d151 1
+d165 1
+@
+
+
+1.8
+log
+@Renamed CFGnode to PgmStmt, then created new base
+class CFGnode from which PgmStmt and CFGbblock are
+derived. Added PgmStmt.getPred/getSucc helper functions
+for cleaner lookups.
+@
+text
+@d137 1
+d150 1
+@
+
+
+1.7
+log
+@Renamed DFAnode to PgmExpr, and its subclasses from
+DFA_ to PExpr_.
+@
+text
+@d17 1
+d43 1
+d67 1
+d74 1
+a81 1
+  suco_llist<CFGnode *> lcn;
+d86 1
+d93 1
+a100 1
+  instantiate_llist(lcn);
+d105 1
+d110 2
+d122 2
+a123 5
+  suco_queue<CFGnode *> qcn;
+  instantiate_queue(qcn);
+
+  suco_stack<CFGnode *> kcn;
+  instantiate_stack(kcn);
+a136 1
+  suco_set<CFGnode *> scn;
+d141 1
+a148 1
+  instantiate_set(scn);
+d153 1
+a157 1
+#undef instantiate_llist
+@
+
+
+1.6
+log
+@Added RemoveHead(), Last(); changed Remove() to return
+a bool indicating whether item was present.
+@
+text
+@a11 3
+class DFAarg;
+class DFAcall;
+class DFAnode;
+d14 3
+a36 3
+    write_recy_stats(DFAarg *)
+    write_recy_stats(DFAcall *)
+    write_recy_stats(DFAnode *)
+d39 3
+d46 1
+a46 1
+    write_recy_stats(suco_llist<DFAnode *> *)
+d71 1
+a71 1
+  suco_llist<DFAcall *> ldc;
+d74 1
+a74 1
+  suco_llist<suco_llist<DFAnode *> *> lfnl;
+a78 2
+  suco_llist<DFAarg *> lda;
+  suco_llist<DFAnode *> ldn;
+d81 2
+d89 1
+a89 1
+  instantiate_llist(ldc);
+a96 2
+  instantiate_llist(lda);
+  instantiate_llist(ldn);
+d99 2
+a133 2
+  suco_set<DFAarg *> sda;
+  suco_set<DFAnode *> sdn;
+d136 2
+a145 2
+  instantiate_set(sda);
+  instantiate_set(sdn);
+d148 2
+@
+
+
+1.5
+log
+@Changed worklist to a queue/stack, with two execution modes
+(fifo/lifo):
+ - added command-line flags "fifo" or "lifo"
+ - in suco, made stack inherit queue publicly, so a stack
+   object can be used as both a stack and a queue
+   (an unsafe thing to do?)
+ - added a flag in CFGnodes to indicate if a node is in the
+   worklist -- should make it faster than checking for
+   worklist membership each time, though we have to make
+   sure the bookkeeping is correct.
+@
+text
+@d9 1
+d34 1
+d61 1
+d69 1
+d87 1
+@
+
+
+1.4
+log
+@Prettified recycled node output.
+@
+text
+@d100 16
+@
+
+
+1.3
+log
+@Major changes -- fixed logical flaws in ability to collect
+MBU results.
+1. Added suco_llist::Copy and suco_set::Union (non-destructive version)
+2. In cfg.cpp/h, added new type DFAarg to represent a function
+   call actual argument.
+3. In dfa.cpp/h, MBUfacts now stores (in LocAidNode) for each
+   AO, in place of just a single set of aids:
+    - nodes:DFAnode - assignments, calls, and formal decls
+    - args::DFAarg - function call arguments
+    - rets:CFGnode - function return node
+@
+text
+@d23 2
+a24 2
+    fprintf(outf, "# Recycle Suco (%s) Nodes: New = %d, Recycled = %d, Freelist = %d\n", \
+	#ty,	suco_llist<ty>::_suco_node::num_new_nodes, \
+d26 3
+a28 1
+		suco_llist<ty>::_suco_node::freelistLength());
+d30 1
+@
+
+
+1.2
+log
+@Changed CFG nodes' AID member to be of type AID, which
+is a pair <filestem_id, aid>; MBUfacts now tracks a set
+of (references to) these, so we can have access to the
+filestem_id for output.
+Old code commented out -- will clear out in next checkin.
+@
+text
+@a6 1
+class AID;
+d11 1
+a27 1
+    write_recy_stats(AID *)
+d32 1
+d54 1
+d64 1
+a64 3
+  suco_llist<CFGnode *> lcn;
+  suco_llist<DFAcall *> lfc;
+  suco_llist<DFAnode *> lfn;
+d69 11
+d81 1
+a81 3
+  instantiate_llist(lcn);
+  instantiate_llist(lfc);
+  instantiate_llist(lfn);
+d86 11
+d99 1
+a105 1
+  suco_set<AID *> said;
+d109 3
+a117 11
+  instantiate_llist(said);
+  instantiate_llist(sao);
+  instantiate_llist(sid);
+  instantiate_llist(scf);
+  instantiate_llist(secr);
+  instantiate_llist(sear);
+  instantiate_llist(sae);
+  instantiate_llist(stlt);
+  instantiate_llist(sint);
+
+  instantiate_set(said);
+d121 3
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d7 1
+d28 1
+d39 1
+d62 15
+a76 13
+  suco_llist<CFGfunction *> d1;
+  suco_llist<CFGnode *> d2;
+  suco_llist<DFAcall *> d3;
+  suco_llist<DFAnode *> d4;
+  suco_llist<TCassignEdge *> d5;
+  suco_llist<suco_llist<DFAnode *> *> d6;
+
+  instantiate_llist(d1);
+  instantiate_llist(d2);
+  instantiate_llist(d3);
+  instantiate_llist(d4);
+  instantiate_llist(d5);
+  instantiate_llist(d6);
+d86 29
+a114 26
+  suco_set<AO *> d7;
+  suco_set<AOId *> d8;
+  suco_set<CFGfunction *> d9;
+  suco_set<ECR *> d10;
+  suco_set<ECRargRet *> d11;
+  suco_set<TCassignEdge *> d12;
+  suco_set<TClatType *> d13;
+  suco_set<int> d14;
+
+  instantiate_llist(d7);
+  instantiate_llist(d8);
+  instantiate_llist(d9);
+  instantiate_llist(d10);
+  instantiate_llist(d11);
+  instantiate_llist(d12);
+  instantiate_llist(d13);
+  instantiate_llist(d14);
+
+  instantiate_set(d7);
+  instantiate_set(d8);
+  instantiate_set(d9);
+  instantiate_set(d10);
+  instantiate_set(d11);
+  instantiate_set(d12);
+  instantiate_set(d13);
+  instantiate_set(d14);
+@

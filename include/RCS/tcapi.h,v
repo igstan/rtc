@@ -1,0 +1,4076 @@
+head	1.67;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.67
+date	2003.01.07.15.21.47;	author suan;	state Exp;
+branches;
+next	1.66;
+
+1.66
+date	2002.11.04.21.45.47;	author suan;	state Exp;
+branches;
+next	1.65;
+
+1.65
+date	2002.10.31.21.28.53;	author suan;	state Exp;
+branches;
+next	1.64;
+
+1.64
+date	2002.10.31.17.09.51;	author suan;	state Exp;
+branches;
+next	1.63;
+
+1.63
+date	2002.10.23.00.09.40;	author suan;	state Exp;
+branches;
+next	1.62;
+
+1.62
+date	2002.10.10.14.00.14;	author suan;	state Exp;
+branches;
+next	1.61;
+
+1.61
+date	2002.10.07.22.10.22;	author suan;	state Exp;
+branches;
+next	1.60;
+
+1.60
+date	2002.08.25.00.42.36;	author suan;	state Exp;
+branches;
+next	1.59;
+
+1.59
+date	2002.04.22.20.17.22;	author suan;	state Exp;
+branches;
+next	1.58;
+
+1.58
+date	2002.03.13.20.14.40;	author suan;	state Exp;
+branches;
+next	1.57;
+
+1.57
+date	2002.03.12.23.48.29;	author suan;	state Exp;
+branches;
+next	1.56;
+
+1.56
+date	2002.03.04.19.38.51;	author suan;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2002.03.01.19.53.36;	author suan;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2002.02.26.23.17.35;	author suan;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2002.01.29.20.49.13;	author suan;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2001.06.13.22.38.03;	author suan;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2001.06.13.21.09.09;	author suan;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2000.10.15.22.37.12;	author suan;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2000.07.12.19.48.18;	author alexey;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2000.07.07.20.26.44;	author suan;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2000.07.07.00.37.35;	author alexey;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2000.07.06.22.45.37;	author suan;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2000.07.05.19.54.26;	author alexey;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2000.07.05.19.31.43;	author alexey;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2000.06.30.18.22.12;	author suan;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2000.06.30.16.17.07;	author suan;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2000.06.30.14.43.29;	author suan;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2000.06.30.04.08.08;	author suan;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2000.06.28.22.21.57;	author suan;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2000.06.28.22.07.22;	author suan;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2000.06.27.02.01.16;	author suan;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2000.06.16.22.56.30;	author alexey;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2000.06.16.00.56.08;	author suan;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2000.06.15.23.11.25;	author alexey;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2000.06.15.20.57.08;	author suan;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2000.06.15.19.52.55;	author alexey;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2000.06.12.21.14.30;	author alexey;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2000.06.12.18.59.54;	author alexey;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2000.06.11.22.31.12;	author alexey;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2000.06.09.22.14.26;	author alexey;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2000.06.09.19.56.28;	author suan;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2000.06.09.01.19.32;	author suan;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2000.06.08.14.28.31;	author suan;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2000.06.08.14.04.36;	author suan;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2000.05.30.20.15.20;	author suan;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2000.05.30.19.40.00;	author suan;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2000.05.26.03.27.44;	author suan;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2000.05.26.01.14.14;	author suan;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2000.05.25.02.18.17;	author suan;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2000.05.25.01.37.12;	author suan;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2000.05.25.01.28.22;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.05.21.16.23.22;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.05.11.19.04.01;	author alexey;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.03.23.23.14.15;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.03.16.20.42.54;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.02.17.23.37.37;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.02.09.20.36.11;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.02.09.20.10.57;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.02.03.21.43.02;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.01.29.04.08.14;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.01.29.04.02.41;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.01.28.01.53.06;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.01.12.18.57.39;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.01.11.23.45.43;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.01.11.22.40.03;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.01.10.05.54.54;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.12.23.23.50.09;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@This contains the typechecker API prototypes, etc.
+(Used to be part of dynamic.h.)
+@
+
+
+1.67
+log
+@Added interface for registerFunction, currently macro'ed
+to nothing.
+@
+text
+@#ifndef _TYPECHECK_API_H /* { */
+#define _TYPECHECK_API_H
+
+/*****************************************/
+/******** general type info stuff ********/
+/*****************************************/
+
+/* Include size_t typedef, so we don't have to include stdlib.h. */
+#ifndef _SIZE_T
+#define _SIZE_T
+typedef unsigned int    size_t;
+#endif
+
+/* the index into type_info[] array in pmirror.c (or whatever) must
+   match this enum */
+typedef enum _ctype {
+  _ctype_void_invalid = 0,
+  _ctype_int = 1,
+  _ctype_char = 2,
+  _ctype_short = 3,
+  _ctype_long = 4,
+  _ctype_longlong = 5,
+  _ctype_float = 6,
+  _ctype_double = 7,
+#ifdef LONGDOUBLE /* { */
+/* AAL: Keep it 8 for easier debugging? */
+  _ctype_longdouble = 8,
+#endif /* } LONGDOUBLE */
+  _ctype_pointer = 9,
+  _ctype_aggregate = 10
+} _ctype_t;
+
+#ifndef TC_PREINSTR /* { */
+
+typedef struct {
+  unsigned char * ptr;
+  unsigned char bit;
+} _mirror_pos_t;
+
+#include <tcapi_postinstr.h>
+#if defined(TC_USE_MACROS) || defined(TC_INTERNAL) /* { */
+
+typedef struct {
+  void * staticrep_ptr;
+  _typetag_t typetag;
+  size_t size; 
+  int logsize;
+  unsigned char tagbyte; /* combines typetag and logsize */
+  _ctype_t promo;
+  const char * desc;
+} _typeinfo_t;
+
+extern _typeinfo_t typeinfo[];
+
+/* newtags functions */
+void _touchMirrorPage(unsigned long mapindex);
+
+#endif /* } defined TC_USE_MACROS or TC_INTERNAL */
+
+#if defined(TC_USE_MACROS) /* { */
+/* for now, we'll define this here */
+/*
+#define COUNT_MACROS
+*/
+
+/* for alignment checks */
+#ifdef TC_CHECK_ALIGN /* { */
+#define ALIGN_CHECK(test)  test
+#define ALIGN_AND          &&
+#else /* } if !TC_CHECK_ALIGN { */
+#define ALIGN_CHECK(test)
+#define ALIGN_AND
+#endif /* } TC_CHECK_ALIGN */
+
+/* macro statistic counting stuff */
+#if defined(COUNT_MACROS) /* { */
+
+extern int _vpctr, _vpcctr, _vpactr, /* verifyPtr */
+	   _vpfctr,_vpcfctr,_vpafctr;
+extern int _vtctr, _vtcctr, _vtactr, /* verifyTag */
+	   _vtfctr,_vtcfctr,_vtafctr;
+extern int _ctctr, _ctcctr, _ctactr, /* copyTag */
+	   _ctfctr,_ctcfctr,_ctafctr;
+extern int _sstctr, _sstcctr, /* setScalarTag */
+	   _sstfctr,_sstcfctr;
+extern int _ssutctr, _ssutcctr, /* setScalarUninitTag */
+	   _ssutfctr,_ssutcfctr;
+extern int _patctr, _patactr, _patpctr, /* processArgTag */
+	   _patfctr,_patafctr;
+
+/* Avoid having a bogus expression when not counting macros. */
+#define CNTMAC(x) (x++)
+#define CNTCOMMA  ,
+#else /* } if !COUNT_MACROS { */
+#define CNTMAC(x)
+#define CNTCOMMA
+#endif /* } !COUNT_MACROS */
+
+#endif /* } TC_USE_MACROS */
+
+#endif /* } !TC_PREINSTR */
+
+/****************************************************/
+/****************** API functions *******************/
+/****************************************************/
+
+/********************/
+/* registerFunction */
+/********************/
+#if defined(TC_PREINSTR) /* { */
+extern void _registerFunction(const char * fname, int line, int col, void * addr);
+#else /* } if !TC_PREINSTR { */
+#define _registerFunction(f,l,c,a)
+#endif /* } !TC_PREINSTR */
+
+/******************/
+/* registerExtern */
+/******************/
+#if defined(TC_PREINSTR) /* { */
+extern void _registerExtern(const char * fname, int line, int col,
+			void * addr, _ctype_t type, size_t size);
+#else /* } if !TC_PREINSTR { */
+extern void _registerExtern_nosize(const char * fname, int line, int col,
+			void * addr, _ctype_t type);
+#define _registerExtern(f,l,c,a,t,s) _registerExtern_nosize(f,l,c,a,t)
+#endif /* } !TC_PREINSTR */
+
+/*************/
+/* verifyPtr */
+/*************/
+#if defined(TC_PREINSTR) /* { */
+extern void _verifyPtr_int(const char * fname, int line, int col,
+			const char * exp, const void * addr, size_t size);
+extern void _verifyPtr_char(const char * fname, int line, int col,
+			const char * exp, const void * addr, size_t size);
+extern void _verifyPtr_short(const char * fname, int line, int col,
+			const char * exp, const void * addr, size_t size);
+extern void _verifyPtr_long(const char * fname, int line, int col,
+			const char * exp, const void * addr, size_t size);
+extern void _verifyPtr_longlong(const char * fname, int line, int col,
+			const char * exp, const void * addr, size_t size);
+extern void _verifyPtr_float(const char * fname, int line, int col,
+			const char * exp, const void * addr, size_t size);
+extern void _verifyPtr_double(const char * fname, int line, int col,
+			const char * exp, const void * addr, size_t size);
+#ifdef LONGDOUBLE /* { */
+extern void _verifyPtr_longdouble(const char * fname, int line, int col,
+			const char * exp, const void * addr, size_t size);
+#endif /* } LONGDOUBLE */
+extern void _verifyPtr_pointer(const char * fname, int line, int col,
+			const char * exp, const void * addr, size_t size);
+extern void _verifyPtr_aggregate(const char * fname, int line, int col,
+			const char * exp, const void * addr, size_t size);
+#else /* } if !TC_PREINSTR { */
+#if defined(TC_USE_MACROS) /* { */
+extern void _verifyPtr(const char * fname, int line, int col,
+			const char * exp, const void * addr, size_t size);
+
+/* The tests ANDing with tag masks below assume that
+   _typetag_unalloc is 0, and that CONT_BIT also has
+   to be cleared for the tag to represent unalloc, so
+   no unalloc tags bigger than 1 byte are possible.
+
+   Note, most of the macros in this file rely on the fact
+   that sizes and tags with value 0 are bad, and so the
+   outer || operators invoke the corresponding functions. */
+#if defined(OLD_MACROS) || defined(OLD_VERIFY_PTR) || defined(SAFE_VERIFY_PTR) /* { */
+#define _verifyPtr_char(f,l,c,exp,addr,size) ( \
+	  CNTMAC(_vpcctr) CNTCOMMA \
+	  ( ((unsigned long) (addr) & 0x1) \
+	    ? (GET_TAG_BYTE(addr) & ODD_TAG_MASK) \
+	    : (GET_TAG_BYTE(addr) & EVEN_TAG_MASK) \
+	  ) || (_verifyPtr(f,l,c,exp,addr,size) \
+		CNTCOMMA CNTMAC(_vpcfctr), 1) \
+	)
+
+/* The alignment test in the macro can be removed.
+   It should not fail for any reasonable machine.
+   Should we skip the size part of the test while the
+   work is also done by _verifyTag? */
+#define VP_SIZE(f,l,c,exp,addr,size) ( \
+	  CNTMAC(_vpctr) CNTCOMMA \
+	  ( ALIGN_CHECK(!((unsigned long) (addr) & 0x1)) \
+	    ALIGN_AND ((GET_TAG_BYTE(addr) & (EVEN_CONT_MASK|ODD_CONT_MASK)) \
+			== ODD_CONT_MASK) \
+	    && ((1 << (ODD_TYPE_BITS(GET_TAG_BYTE(addr)))) >= size) \
+	  ) || (_verifyPtr(f,l,c,exp,addr,size) \
+		CNTCOMMA CNTMAC(_vpfctr), 1) \
+	)
+
+#define _verifyPtr_aggregate(f,l,c,e,a,s) \
+		(CNTMAC(_vpactr) CNTCOMMA \
+		 _verifyPtr(f,l,c,e,a,s) CNTCOMMA CNTMAC(_vpafctr), 1)
+#else /* } !(defined(OLD_MACROS) || defined(OLD_VERIFY_PTR) || defined(SAFE_VERIFY_PTR)) { */
+#define _verifyPtr_char(f,l,c,exp,addr,size) ( \
+	  CNTMAC(_vpcctr) CNTCOMMA \
+	  GET_TAG_BYTE(addr) \
+	  || (_verifyPtr(f,l,c,exp,addr,size) \
+	      CNTCOMMA CNTMAC(_vpcfctr), 1) \
+	)
+
+#define VP_SIZE(f,l,c,exp,addr,size) ( \
+	  CNTMAC(_vpctr) CNTCOMMA \
+	  ( ALIGN_CHECK(!((unsigned long) (addr) & 0x1)) \
+	    ALIGN_AND GET_TAG_BYTE(addr)) \
+	  || (_verifyPtr(f,l,c,exp,addr,size) \
+	      CNTCOMMA CNTMAC(_vpfctr), 1) \
+	)
+
+#define _verifyPtr_aggregate(f,l,c,exp,addr,size) ( \
+	  CNTMAC(_vpactr) CNTCOMMA \
+	  GET_TAG_BYTE(addr) \
+	  && GET_TAG_BYTE((char*)addr+size-1) \
+	  || (_verifyPtr(f,l,c,exp,addr,size) CNTCOMMA CNTMAC(_vpafctr), 1) \
+	)
+#endif /* } !(defined(OLD_MACROS) || defined(OLD_VERIFY_PTR)) */
+
+#define _verifyPtr_int(f,l,c,e,a,s)		VP_SIZE(f,l,c,e,a,s)
+#define _verifyPtr_short(f,l,c,e,a,s)		VP_SIZE(f,l,c,e,a,s)
+#define _verifyPtr_long(f,l,c,e,a,s)		VP_SIZE(f,l,c,e,a,s)
+#define _verifyPtr_longlong(f,l,c,e,a,s)	VP_SIZE(f,l,c,e,a,s)
+#define _verifyPtr_float(f,l,c,e,a,s)		VP_SIZE(f,l,c,e,a,s)
+#define _verifyPtr_double(f,l,c,e,a,s)		VP_SIZE(f,l,c,e,a,s)
+#ifdef LONGDOUBLE /* { */
+#define _verifyPtr_longdouble(f,l,c,e,a,s)	VP_SIZE(f,l,c,e,a,s)
+#endif /* } LONGDOUBLE */
+#define _verifyPtr_pointer(f,l,c,e,a,s)		VP_SIZE(f,l,c,e,a,s)
+
+#else /* } if !TC_USE_MACROS { */
+
+extern void _verifyPtr(const char * fname, int line, int col,
+			const char * exp, const void * addr, size_t size);
+
+#define _verifyPtr_int(f,l,c,e,a,s)		_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_char(f,l,c,e,a,s)		_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_short(f,l,c,e,a,s)		_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_long(f,l,c,e,a,s)		_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_longlong(f,l,c,e,a,s)	_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_float(f,l,c,e,a,s)		_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_double(f,l,c,e,a,s)		_verifyPtr(f,l,c,e,a,s)
+#ifdef LONGDOUBLE /* { */
+#define _verifyPtr_longdouble(f,l,c,e,a,s)	_verifyPtr(f,l,c,e,a,s)
+#endif /* } LONGDOUBLE */
+#define _verifyPtr_pointer(f,l,c,e,a,s)		_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_aggregate(f,l,c,e,a,s)	_verifyPtr(f,l,c,e,a,s)
+#endif /* } !TC_USE_MACROS */
+#endif /* } !TC_PREINSTR */
+
+/*************/
+/* verifyTag */
+/*************/
+#if defined(TC_PREINSTR) /* { */
+extern void _verifyTag_int(const char * fname, int line, int col,
+			const char * exp, const void * addr);
+extern void _verifyTag_char(const char * fname, int line, int col,
+			const char * exp, const void * addr);
+extern void _verifyTag_short(const char * fname, int line, int col,
+			const char * exp, const void * addr);
+extern void _verifyTag_long(const char * fname, int line, int col,
+			const char * exp, const void * addr);
+extern void _verifyTag_longlong(const char * fname, int line, int col,
+			const char * exp, const void * addr);
+extern void _verifyTag_float(const char * fname, int line, int col,
+			const char * exp, const void * addr);
+extern void _verifyTag_double(const char * fname, int line, int col,
+			const char * exp, const void * addr);
+#ifdef LONGDOUBLE /* { */
+extern void _verifyTag_longdouble(const char * fname, int line, int col,
+			const char * exp, const void * addr);
+#endif /* } LONGDOUBLE */
+extern void _verifyTag_pointer(const char * fname, int line, int col,
+			const char * exp, const void * addr);
+extern void _verifyTag_aggregate(const char * fname, int line, int col,
+			const char * exp, const void * addr);
+#else /* } if !TC_PREINSTR { */
+
+extern void _verifyTag(const char * fname, int line, int col,
+			const char * exp, const void * addr, _ctype_t reftype);
+extern int _verifyTagSilent(const void * addr, _ctype_t reftype);
+
+#if defined(TC_USE_MACROS) /* { */
+
+#ifdef NEW_VERIFY_TAG /* { */
+#define _verifyTag_char(f,l,c,e,addr)	( \
+	  CNTMAC(_vtcctr) CNTCOMMA \
+	  !(GET_TAG_BYTE(addr) & (EVEN_CONT_MASK|ODD_CONT_MASK)) \
+	  && GET_CHAR_TAG(GET_TAG_BYTE(addr), (unsigned long)(addr)&0x1) == _typetag_int \
+	  || (_verifyTag(f,l,c,e,addr,_ctype_char) \
+	      CNTCOMMA CNTMAC(_vtcfctr), 1) \
+	)
+
+#elif defined(FAST_VERIFY_TAG) /* } !NEW_VERIFY_TAG { */
+static unsigned char _vt_tmp_tag;
+
+/* Surprisingly, this version is slower than the one above,
+   which repeats GET_TAG_BYTE(addr) twice. */
+#define _verifyTag_char(f,l,c,e,addr)	( \
+	  CNTMAC(_vtcctr) CNTCOMMA \
+	  (_vt_tmp_tag = GET_TAG_BYTE(addr), \
+	   !(_vt_tmp_tag & (EVEN_CONT_MASK|ODD_CONT_MASK))) \
+	  && GET_CHAR_TAG(_vt_tmp_tag, (unsigned long)(addr)&0x1) == _typetag_int \
+	  || (_verifyTag(f,l,c,e,addr,_ctype_char) \
+	      CNTCOMMA CNTMAC(_vtcfctr), 1) \
+	)
+#else /* } !defined(FAST_VERIFY_TAG) { */
+/* Comparison with _typetag_int assumes char is the only int type
+   that can be unaligned on a two byte boundary.  Comparison with
+   EVEN_TAG_MASK|ODD_CONT_MASK assumes _typetag_unalloc is 0. */
+#define _verifyTag_char(f,l,c,e,addr)	( \
+	  CNTMAC(_vtcctr) CNTCOMMA \
+	  ( ((unsigned long) (addr) & 0x1) \
+	    ? (ODD_TAG_BITS(GET_TAG_BYTE(addr)) == _typetag_int) \
+	    : ((GET_TAG_BYTE(addr) & (EVEN_TAG_MASK|ODD_CONT_MASK)) \
+		== _typetag_int) \
+	  ) || (_verifyTag(f,l,c,e,addr,_ctype_char) \
+		CNTCOMMA CNTMAC(_vtcfctr), 1) \
+	)
+#endif /* } !defined(FAST_VERIFY_TAG) */
+
+/* GET_TAG_BYTE(&type##_static_rep[0]) should be changed to a
+   pre-computed first byte of the tag rather than a tag lookup. */
+#define VT_NONCHAR(f,l,c,e,addr,type)	( \
+	  CNTMAC(_vtctr) CNTCOMMA \
+	  ( ALIGN_CHECK(!((unsigned long) (addr) & 0x1)) \
+	    ALIGN_AND (GET_TAG_BYTE(addr) == GET_TAG_BYTE(&type##_static_rep[0]))) \
+	  || (_verifyTag(f,l,c,e,addr,_ctype##type) \
+	      CNTCOMMA CNTMAC(_vtfctr), 1) \
+	)
+
+#define _verifyTag_int(f,l,c,e,a)	VT_NONCHAR(f,l,c,e,a,_int)
+#define _verifyTag_short(f,l,c,e,a)	VT_NONCHAR(f,l,c,e,a,_short)
+#define _verifyTag_long(f,l,c,e,a)	VT_NONCHAR(f,l,c,e,a,_long)
+#define _verifyTag_longlong(f,l,c,e,a)	VT_NONCHAR(f,l,c,e,a,_longlong)
+#define _verifyTag_float(f,l,c,e,a)	VT_NONCHAR(f,l,c,e,a,_float)
+#define _verifyTag_double(f,l,c,e,a)	VT_NONCHAR(f,l,c,e,a,_double)
+#define _verifyTag_pointer(f,l,c,e,a)	VT_NONCHAR(f,l,c,e,a,_pointer)
+
+#ifdef LONGDOUBLE /* { */
+#define _verifyTag_longdouble(f,l,c,e,a) VT_NONCHAR(f,l,c,e,a,_longdouble)
+#endif /* } LONGDOUBLE */
+/* Note: currently _verifyTag does nothing on aggregate types, so bypass */
+#define _verifyTag_aggregate(f,l,c,e,a)	(CNTMAC(_vtactr) CNTCOMMA 1)
+
+#else /* } if !TC_USE_MACROS { */
+
+#define _verifyTag_int(f,l,c,e,a)	_verifyTag(f,l,c,e,a,_ctype_int)
+#define _verifyTag_char(f,l,c,e,a)	_verifyTag(f,l,c,e,a,_ctype_char)
+#define _verifyTag_short(f,l,c,e,a)	_verifyTag(f,l,c,e,a,_ctype_short)
+#define _verifyTag_long(f,l,c,e,a)	_verifyTag(f,l,c,e,a,_ctype_long)
+#define _verifyTag_longlong(f,l,c,e,a)	_verifyTag(f,l,c,e,a,_ctype_longlong)
+#define _verifyTag_float(f,l,c,e,a)	_verifyTag(f,l,c,e,a,_ctype_float)
+#define _verifyTag_double(f,l,c,e,a)	_verifyTag(f,l,c,e,a,_ctype_double)
+#ifdef LONGDOUBLE /* { */
+#define _verifyTag_longdouble(f,l,c,e,a) _verifyTag(f,l,c,e,a,_ctype_longdouble)
+#endif /* } LONGDOUBLE */
+#define _verifyTag_pointer(f,l,c,e,a)	_verifyTag(f,l,c,e,a,_ctype_pointer)
+#define _verifyTag_aggregate(f,l,c,e,a)	_verifyTag(f,l,c,e,a,_ctype_aggregate)
+
+#endif /* } !TC_USE_MACROS */
+#endif /* } !TC_PREINSTR */
+
+/***********/
+/* copyTag */
+/***********/
+#if defined(TC_PREINSTR) /* { */
+extern void _copyTag_int(const char * fname, int line, int col,
+			const void * dst, const void * src, size_t size);
+extern void _copyTag_char(const char * fname, int line, int col,
+			const void * dst, const void * src, size_t size);
+extern void _copyTag_short(const char * fname, int line, int col,
+			const void * dst, const void * src, size_t size);
+extern void _copyTag_long(const char * fname, int line, int col,
+			const void * dst, const void * src, size_t size);
+extern void _copyTag_longlong(const char * fname, int line, int col,
+			const void * dst, const void * src, size_t size);
+extern void _copyTag_float(const char * fname, int line, int col,
+			const void * dst, const void * src, size_t size);
+extern void _copyTag_double(const char * fname, int line, int col,
+			const void * dst, const void * src, size_t size);
+#ifdef LONGDOUBLE /* { */
+extern void _copyTag_longdouble(const char * fname, int line, int col,
+			const void * dst, const void * src, size_t size);
+#endif /* } LONGDOUBLE */
+extern void _copyTag_pointer(const char * fname, int line, int col,
+			const void * dst, const void * src, size_t size);
+extern void _copyTag_aggregate(const char * fname, int line, int col,
+			const void * dst, const void * src, size_t size);
+#else /* } if !TC_PREINSTR { */
+
+extern void _copyTag(const char * fname, int line, int col,
+		     const void * dst, const void * src, size_t size, _ctype_t type);
+
+#if defined(TC_USE_MACROS) /* { */
+
+static unsigned char * _ct_tmp_dstptr, _ct_tmp_src;
+static unsigned char _ct_tmp_tag;
+
+#if defined(OLD_MACROS) || defined(OLD_COPY_TAG) /* { */
+/* Lack of tests against CONT_MASKs when ((unsigned long) ([src\dst]) & 0x1)
+   is 1 is due to the assumption that char is the only int type
+   that can be unaligned on a two byte boundary. */
+#define _copyTag_char(f,l,c,dst,src,z) (\
+	  CNTMAC(_ctcctr) CNTCOMMA \
+	  _ct_tmp_src = GET_TAG_BYTE(src), \
+	  _ct_tmp_dstptr = &GET_TAG_BYTE(dst), \
+	  !(_ct_tmp_src & (EVEN_CONT_MASK|ODD_CONT_MASK)) \
+	  && (_ct_tmp_tag = ((unsigned long) (src) & 0x1) \
+	      ? ODD_TAG_BITS(_ct_tmp_src) : EVEN_TAG_BITS(_ct_tmp_src)) \
+	  && !(*_ct_tmp_dstptr & (EVEN_CONT_MASK|ODD_CONT_MASK)) \
+	  && ( ((unsigned long) (dst) & 0x1) \
+	       ? ((*_ct_tmp_dstptr & ODD_TAG_MASK) \
+		  && (*_ct_tmp_dstptr &= ~ODD_TAG_MASK, \
+		      *_ct_tmp_dstptr |= (_ct_tmp_tag << BITS_PER_TAG))) \
+	       : ((*_ct_tmp_dstptr & EVEN_TAG_MASK) \
+		  && (*_ct_tmp_dstptr &= ~EVEN_TAG_MASK, \
+		      *_ct_tmp_dstptr |= _ct_tmp_tag))) \
+	  || (_copyTag(f,l,c,dst,src,z,_ctype_char) \
+	      CNTCOMMA CNTMAC(_ctcfctr), 1) \
+	)
+
+/* The alignment tests in the macro can be removed.
+   They should not fail for any reasonable machine. */
+#define CT_NONCHAR(f,l,c,dst,src,size,type)	( \
+	  CNTMAC(_ctctr) CNTCOMMA \
+	  _ct_tmp_src = GET_TAG_BYTE(src), \
+	  _ct_tmp_dstptr = &GET_TAG_BYTE(dst), \
+	  ( ALIGN_CHECK(!(((unsigned long)(src)|(unsigned long)(dst)) & 0x1)) \
+	    ALIGN_AND ((_ct_tmp_src & (EVEN_CONT_MASK|ODD_CONT_MASK)) \
+			== ODD_CONT_MASK) \
+	    && ((1 << (ODD_TYPE_BITS(_ct_tmp_src))) == size) \
+	    && ((*_ct_tmp_dstptr & (EVEN_CONT_MASK|ODD_CONT_MASK)) \
+			== ODD_CONT_MASK) \
+	    && ((1 << (ODD_TYPE_BITS(*_ct_tmp_dstptr))) == size) \
+	    && (*_ct_tmp_dstptr = _ct_tmp_src) \
+	  ) || (_copyTag(f,l,c,dst,src,size,_ctype##type) \
+		CNTCOMMA CNTMAC(_ctfctr), 1) \
+	)
+#elif defined(FAST_COPY_TAG) /* } !(defined(OLD_MACROS) || defined(OLD_COPY_TAG)) { */
+/* Lack of tests against CONT_MASKs when ((unsigned long) ([src\dst]) & 0x1)
+   is 1 is due to the assumption that char is the only int type
+   that can be unaligned on a two byte boundary. */
+#define _copyTag_char(f,l,c,dst,src,z) (\
+	  CNTMAC(_ctcctr) CNTCOMMA \
+	  _ct_tmp_src = GET_TAG_BYTE(src), \
+	  _ct_tmp_dstptr = &GET_TAG_BYTE(dst), \
+	  !(_ct_tmp_src & (EVEN_CONT_MASK|ODD_CONT_MASK)) \
+	  && !(*_ct_tmp_dstptr & (EVEN_CONT_MASK|ODD_CONT_MASK)) \
+	  && GET_CHAR_TAG(_ct_tmp_src, (unsigned long)(src)&0x1) == _typetag_int \
+	  && GET_CHAR_TAG(*_ct_tmp_dstptr, (unsigned long)(dst)&0x1) == _typetag_int \
+	  || (_copyTag(f,l,c,dst,src,z,_ctype_char) \
+	      CNTCOMMA CNTMAC(_ctcfctr), 1) \
+	)
+
+#define CT_NONCHAR(f,l,c,dst,src,size,type)	( \
+	  CNTMAC(_ctctr) CNTCOMMA \
+	  _ct_tmp_src = GET_TAG_BYTE(src), \
+	  _ct_tmp_dstptr = &GET_TAG_BYTE(dst), \
+	  ( ALIGN_CHECK(!(((unsigned long)(src)|(unsigned long)(dst)) & 0x1)) \
+	    ALIGN_AND _ct_tmp_src == typeinfo[_ctype##type].tagbyte \
+	    && *_ct_tmp_dstptr == _ct_tmp_src \
+	  ) || (_copyTag(f,l,c,dst,src,size,_ctype##type) \
+		CNTCOMMA CNTMAC(_ctfctr), 1) \
+	)
+#else /* } !defined(FAST_COPY_TAG) { */
+/* Lack of tests against CONT_MASKs when ((unsigned long) ([src\dst]) & 0x1)
+   is 1 is due to the assumption that char is the only int type
+   that can be unaligned on a two byte boundary. */
+#define _copyTag_char(f,l,c,dst,src,z) (\
+	  CNTMAC(_ctcctr) CNTCOMMA \
+	  _ct_tmp_src = GET_TAG_BYTE(src), \
+	  _ct_tmp_dstptr = &GET_TAG_BYTE(dst), \
+	  !(_ct_tmp_src & (EVEN_CONT_MASK|ODD_CONT_MASK)) \
+	  && (_ct_tmp_tag = GET_CHAR_TAG(_ct_tmp_src, (unsigned long)(src)&0x1), \
+	      _ct_tmp_tag == _typetag_int) \
+	  && !(*_ct_tmp_dstptr & (EVEN_CONT_MASK|ODD_CONT_MASK)) \
+	  && GET_CHAR_TAG(*_ct_tmp_dstptr, (unsigned long)(dst)&0x1) \
+	  && SET_CHAR_TAG(*_ct_tmp_dstptr, _ct_tmp_tag, (unsigned long)(dst)&0x1) \
+	  || (_copyTag(f,l,c,dst,src,z,_ctype_char) \
+	      CNTCOMMA CNTMAC(_ctcfctr), 1) \
+	)
+
+#define CT_NONCHAR(f,l,c,dst,src,size,type) ( \
+	  CNTMAC(_ctctr) CNTCOMMA \
+	  _ct_tmp_src = GET_TAG_BYTE(src), \
+	  _ct_tmp_dstptr = &GET_TAG_BYTE(dst), \
+	  ALIGN_CHECK(!(((unsigned long)(src)|(unsigned long)(dst)) & 0x1)) \
+	  ALIGN_AND _ct_tmp_src == typeinfo[_ctype##type].tagbyte \
+	  && (*_ct_tmp_dstptr == _ct_tmp_src \
+	      /* Below is just for the size comparison.  Since src is compared \
+		 against static rep, we can do this simple check here. */ \
+	      || (ODD_TAG_BITS(_ct_tmp_src) == ODD_TAG_BITS(*_ct_tmp_dstptr) ? \
+		  (*_ct_tmp_dstptr = _ct_tmp_src) : 0) \
+	      ) \
+	  || (_copyTag(f,l,c,dst,src,size,_ctype##type) \
+	      CNTCOMMA CNTMAC(_ctfctr), 1) \
+	)
+#endif /* } !defined(FAST_COPY_TAG) */
+
+#define _copyTag_int(f,l,c,d,s,z)	CT_NONCHAR(f,l,c,d,s,z,_int)
+#define _copyTag_short(f,l,c,d,s,z)	CT_NONCHAR(f,l,c,d,s,z,_short)
+#define _copyTag_long(f,l,c,d,s,z)	CT_NONCHAR(f,l,c,d,s,z,_long)
+#define _copyTag_longlong(f,l,c,d,s,z)	CT_NONCHAR(f,l,c,d,s,z,_longlong)
+#define _copyTag_float(f,l,c,d,s,z)	CT_NONCHAR(f,l,c,d,s,z,_float)
+#define _copyTag_double(f,l,c,d,s,z)	CT_NONCHAR(f,l,c,d,s,z,_double)
+#ifdef LONGDOUBLE /* { */
+#define _copyTag_longdouble(f,l,c,d,s,z) CT_NONCHAR(f,l,c,d,s,z,_longdouble)
+#endif /* } LONGDOUBLE */
+#define _copyTag_pointer(f,l,c,d,s,z)	CT_NONCHAR(f,l,c,d,s,z,_pointer)
+#define _copyTag_aggregate(f,l,c,d,s,z)	\
+		(CNTMAC(_ctactr) CNTCOMMA \
+		 _copyTag(f,l,c,d,s,z,_ctype_aggregate) \
+		 CNTCOMMA CNTMAC(_ctafctr), 1)
+
+#else /* } if !TC_USE_MACROS { */
+
+#define _copyTag_int(f,l,c,d,s,z)	_copyTag(f,l,c,d,s,z,_ctype_int)
+#define _copyTag_char(f,l,c,d,s,z)	_copyTag(f,l,c,d,s,z,_ctype_char)
+#define _copyTag_short(f,l,c,d,s,z)	_copyTag(f,l,c,d,s,z,_ctype_short)
+#define _copyTag_long(f,l,c,d,s,z)	_copyTag(f,l,c,d,s,z,_ctype_long)
+#define _copyTag_longlong(f,l,c,d,s,z)	_copyTag(f,l,c,d,s,z,_ctype_longlong)
+#define _copyTag_float(f,l,c,d,s,z)	_copyTag(f,l,c,d,s,z,_ctype_float)
+#define _copyTag_double(f,l,c,d,s,z)	_copyTag(f,l,c,d,s,z,_ctype_double)
+#ifdef LONGDOUBLE /* { */
+#define _copyTag_longdouble(f,l,c,d,s,z) _copyTag(f,l,c,d,s,z,_ctype_longdouble)
+#endif /* } LONGDOUBLE */
+#define _copyTag_pointer(f,l,c,d,s,z)	_copyTag(f,l,c,d,s,z,_ctype_pointer)
+#define _copyTag_aggregate(f,l,c,d,s,z)	_copyTag(f,l,c,d,s,z,_ctype_aggregate)
+#endif /* } !TC_USE_MACROS */
+#endif /* } !TC_PREINSTR */
+
+/*****************************************************************/
+/* setByteTags, setStringTag, setUninitTag, setInitTag, clearTag */
+/*****************************************************************/
+#if defined(TC_PREINSTR) /* { */
+extern void _setByteTags(const char * fname, int line, int col,
+			const void * addr, size_t size, int set_tag, int clear_tag);
+extern void _setStringTag(const char * fname, int line, int col,
+			const char * addr, size_t str_len);
+extern void _setUninitTag(const char * fname, int line, int col,
+			void * addr, size_t size);
+extern void _setInitTag(const char * fname, int line, int col,
+			void * addr, size_t size);
+extern void _clearTag(const char * fname, int line, int col,
+			void * addr, size_t size);
+#else /* } if !TC_PREINSTR { */
+extern void _setByteTags(const char * fname, int line, int col,
+			const void * addr, size_t size, int set_tag, int clear_tag);
+#define _setStringTag(f,l,c,a,s) _setByteTags(f,l,c,a,s+1, _typetag_int, _typetag_uninit)
+#define _setUninitTag(f,l,c,a,s) _setByteTags(f,l,c,a,s, _typetag_uninit, _typetag_unalloc)
+#define _setInitTag(f,l,c,a,s)	 _setByteTags(f,l,c,a,s, _typetag_init, _typetag_unalloc)
+#define _clearTag(f,l,c,a,s)	 _setByteTags(f,l,c,a,s, _typetag_unalloc, _typetag_unalloc)
+#endif /* } !TC_PREINSTR */
+
+/************************/
+/* _extern_setUninitTag */
+/************************/
+#if defined(TC_PREINSTR) /* { */
+extern void _extern_setUninitTag(const char * fname, int line, int col,
+			void * addr, size_t size);
+#else /* } if !TC_PREINSTR { */
+extern void _extern_setUninitTag(const char * fname, int line, int col,
+			void * addr, size_t size);
+#endif /* } !TC_PREINSTR */
+
+/*************************/
+/* (_extern)_registerVar */
+/* SY: currently unused: discard? Don't remember its intended purpose -27feb02 */
+/*************************/
+#if defined(TC_PREINSTR) /* { */
+extern void _registerVar(const char * fname, int line, int col,
+			const char * varname, void * addr, size_t size);
+extern void _extern_registerVar(const char * fname, int line, int col,
+			const char * varname, void * addr, size_t size);
+#else /* } if !TC_PREINSTR { */
+extern void _registerVar(const char * fname, int line, int col,
+			const char * varname, void * addr, size_t size);
+extern void _extern_registerVar(const char * fname, int line, int col,
+			const char * varname, void * addr, size_t size);
+#endif /* } !TC_PREINSTR */
+
+/**********************/
+/* setScalarUninitTag */
+/**********************/
+#if defined(TC_PREINSTR) /* { */
+extern void _setScalarUninitTag_int(const char * fname,
+			int line, int col, void * addr);
+extern void _setScalarUninitTag_char(const char * fname,
+			int line, int col, void * addr);
+extern void _setScalarUninitTag_short(const char * fname,
+			int line, int col, void * addr);
+extern void _setScalarUninitTag_long(const char * fname,
+			int line, int col, void * addr);
+extern void _setScalarUninitTag_longlong(const char * fname,
+			int line, int col, void * addr);
+extern void _setScalarUninitTag_float(const char * fname,
+			int line, int col, void * addr);
+extern void _setScalarUninitTag_double(const char * fname,
+			int line, int col, void * addr);
+#ifdef LONGDOUBLE /* { */
+extern void _setScalarUninitTag_longdouble(const char * fname,
+			int line, int col, void * addr);
+#endif /* } LONGDOUBLE */
+extern void _setScalarUninitTag_pointer(const char * fname,
+			int line, int col, void * addr);
+#else /* } if !TC_PREINSTR { */
+extern void _setScalarUninitTag(const char * fname, int line, int col,
+			void * addr, _ctype_t type);
+
+#if defined(TC_USE_MACROS) /* { */
+
+static unsigned char * _ssut_tmp_tagptr;
+
+/* This macro also relies on unalloc being the only 0 tag. */
+#if defined(OLD_MACROS) || defined(OLD_SSU_TAG) /* { */
+#define _setScalarUninitTag_char(f,l,c,addr)	( \
+	  CNTMAC(_ssutcctr) CNTCOMMA \
+	  _ssut_tmp_tagptr = &GET_TAG_BYTE(addr), \
+	  !(*_ssut_tmp_tagptr & (EVEN_CONT_MASK|ODD_CONT_MASK)) \
+	  && ( ((unsigned long) (addr) & 0x1) \
+	       ? (*_ssut_tmp_tagptr &= ~ODD_TAG_MASK, \
+		  *_ssut_tmp_tagptr |= (_typetag_uninit << BITS_PER_TAG)) \
+	       : (*_ssut_tmp_tagptr &= ~EVEN_TAG_MASK, \
+		  *_ssut_tmp_tagptr |= _typetag_uninit)) \
+	  || (_setScalarUninitTag(f,l,c,addr,_ctype_char) \
+	      CNTCOMMA CNTMAC(_ssutcfctr), 1) \
+	)
+#else /* } !(defined(OLD_MACROS) || defined(OLD_SSU_TAG)) { */
+#define _setScalarUninitTag_char(f,l,c,addr)	( \
+	  CNTMAC(_ssutcctr) CNTCOMMA \
+	  _ssut_tmp_tagptr = &GET_TAG_BYTE(addr), \
+	  !(*_ssut_tmp_tagptr & (EVEN_CONT_MASK|ODD_CONT_MASK)) \
+	  && SET_CHAR_TAG(*_ssut_tmp_tagptr, _typetag_uninit, (unsigned long)(addr)&0x1) \
+	  || (_setScalarUninitTag(f,l,c,addr,_ctype_char) \
+	      CNTCOMMA CNTMAC(_ssutcfctr), 1) \
+	)
+#endif /* } !(defined(OLD_MACROS) || defined(OLD_SSU_TAG)) */
+
+/* The alignment test in the macro can be removed.
+   It should not fail for any reasonable machine. */
+#define SSUT_NONCHAR(f,l,c,addr,type)	( \
+	  CNTMAC(_ssutctr) CNTCOMMA \
+	  _ssut_tmp_tagptr = &GET_TAG_BYTE(addr), \
+	  ALIGN_CHECK(!((unsigned long) (addr) & 0x1)) \
+	  ALIGN_AND SAME_MIRROR_PAGE((addr),(_MIRROR_##type *)(addr)+1) \
+	  && !(*_ssut_tmp_tagptr & EVEN_CONT_MASK) \
+	  && !(*(unsigned char *)((_MIRROR_##type *)_ssut_tmp_tagptr + 1) & EVEN_CONT_MASK) \
+	  && (*(_MIRROR_##type *)_ssut_tmp_tagptr = _##type##_uninit_tag_u.uninit_mt) \
+	  || (_setScalarUninitTag(f,l,c,addr,_ctype_##type) \
+	      CNTCOMMA CNTMAC(_ssutfctr), 1) \
+	)
+#else /* } if !TC_USE_MACROS { */
+#define _setScalarUninitTag_char(f,l,c,a) \
+			_setScalarUninitTag(f,l,c,a,_ctype_char)
+#endif /* } TC_USE_MACROS */
+
+#if defined(TC_USE_MACROS) && defined(_MIRROR_int)
+#define _setScalarUninitTag_int(f,l,c,a) \
+			SSUT_NONCHAR(f,l,c,a,int)
+#else /* defined(TC_USE_MACROS) && defined(_MIRROR_int) */
+#define _setScalarUninitTag_int(f,l,c,a) \
+			_setScalarUninitTag(f,l,c,a,_ctype_int)
+#endif /* defined(TC_USE_MACROS) && defined(_MIRROR_int) */
+
+#if defined(TC_USE_MACROS) && defined(_MIRROR_short)
+#define _setScalarUninitTag_short(f,l,c,a) \
+			SSUT_NONCHAR(f,l,c,a,short)
+#else /* defined(TC_USE_MACROS) && defined(_MIRROR_short) */
+#define _setScalarUninitTag_short(f,l,c,a) \
+			_setScalarUninitTag(f,l,c,a,_ctype_short)
+#endif /* defined(TC_USE_MACROS) && defined(_MIRROR_short) */
+
+#if defined(TC_USE_MACROS) && defined(_MIRROR_long)
+#define _setScalarUninitTag_long(f,l,c,a) \
+			SSUT_NONCHAR(f,l,c,a,long)
+#else /* defined(TC_USE_MACROS) && defined(_MIRROR_long) */
+#define _setScalarUninitTag_long(f,l,c,a) \
+			_setScalarUninitTag(f,l,c,a,_ctype_long)
+#endif /* defined(TC_USE_MACROS) && defined(_MIRROR_long) */
+
+#if defined(TC_USE_MACROS) && defined(_MIRROR_longlong)
+#define _setScalarUninitTag_longlong(f,l,c,a) \
+			SSUT_NONCHAR(f,l,c,a,longlong)
+#else /* defined(TC_USE_MACROS) && defined(_MIRROR_longlong) */
+#define _setScalarUninitTag_longlong(f,l,c,a) \
+			_setScalarUninitTag(f,l,c,a,_ctype_longlong)
+#endif /* defined(TC_USE_MACROS) && defined(_MIRROR_longlong) */
+
+#if defined(TC_USE_MACROS) && defined(_MIRROR_float)
+#define _setScalarUninitTag_float(f,l,c,a) \
+			SSUT_NONCHAR(f,l,c,a,float)
+#else /* defined(TC_USE_MACROS) && defined(_MIRROR_float) */
+#define _setScalarUninitTag_float(f,l,c,a) \
+			_setScalarUninitTag(f,l,c,a,_ctype_float)
+#endif /* defined(TC_USE_MACROS) && defined(_MIRROR_float) */
+
+#if defined(TC_USE_MACROS) && defined(_MIRROR_double)
+#define _setScalarUninitTag_double(f,l,c,a) \
+			SSUT_NONCHAR(f,l,c,a,double)
+#else /* defined(TC_USE_MACROS) && defined(_MIRROR_double) */
+#define _setScalarUninitTag_double(f,l,c,a) \
+			_setScalarUninitTag(f,l,c,a,_ctype_double)
+#endif /* defined(TC_USE_MACROS) && defined(_MIRROR_double) */
+
+#ifdef LONGDOUBLE /* { */
+#if defined(TC_USE_MACROS) && defined(_MIRROR_longdouble)
+#define _setScalarUninitTag_longdouble(f,l,c,a) \
+			SSUT_NONCHAR(f,l,c,a,longdouble)
+#else /* defined(TC_USE_MACROS) && defined(_MIRROR_longdouble) */
+#define _setScalarUninitTag_longdouble(f,l,c,a) \
+			_setScalarUninitTag(f,l,c,a,_ctype_longdouble)
+#endif /* defined(TC_USE_MACROS) && defined(_MIRROR_longdouble) */
+#endif /* } LONGDOUBLE */
+
+#if defined(TC_USE_MACROS) && defined(_MIRROR_pointer)
+#define _setScalarUninitTag_pointer(f,l,c,a) \
+			SSUT_NONCHAR(f,l,c,a,pointer)
+#else /* defined(TC_USE_MACROS) && defined(_MIRROR_pointer) */
+#define _setScalarUninitTag_pointer(f,l,c,a) \
+			_setScalarUninitTag(f,l,c,a,_ctype_pointer)
+#endif /* defined(TC_USE_MACROS) && defined(_MIRROR_pointer) */
+
+#endif /* } !TC_PREINSTR */
+
+/************************/
+/* setScalarPtrToIntTag */
+/************************/
+#if defined(TC_PREINSTR) /* { */
+extern void _setScalarTagPtrToInt_int(const char * fname,
+			int line, int col, const void * addr);
+extern void _setScalarTagPtrToInt_char(const char * fname,
+			int line, int col, const void * addr);
+extern void _setScalarTagPtrToInt_short(const char * fname,
+			int line, int col, const void * addr);
+extern void _setScalarTagPtrToInt_long(const char * fname,
+			int line, int col, const void * addr);
+extern void _setScalarTagPtrToInt_longlong(const char * fname,
+			int line, int col, const void * addr);
+extern void _setScalarTagPtrToInt_float(const char * fname,
+			int line, int col, const void * addr);
+extern void _setScalarTagPtrToInt_double(const char * fname,
+			int line, int col, const void * addr);
+#ifdef LONGDOUBLE /* { */
+extern void _setScalarTagPtrToInt_longdouble(const char * fname,
+			int line, int col, const void * addr);
+#endif /* } LONGDOUBLE */
+extern void _setScalarTagPtrToInt_pointer(const char * fname,
+			int line, int col, const void * addr);
+#else /* } if !TC_PREINSTR { */
+extern void _setScalarTagPtrToInt(const char * fname, int line, int col,
+			const void * addr, _ctype_t type);
+
+#define _setScalarTagPtrToInt_int(f,l,c,a) \
+			_setScalarTagPtrToInt(f,l,c,a,_ctype_int)
+#define _setScalarTagPtrToInt_char(f,l,c,a) \
+			_setScalarTagPtrToInt(f,l,c,a,_ctype_char)
+#define _setScalarTagPtrToInt_short(f,l,c,a) \
+			_setScalarTagPtrToInt(f,l,c,a,_ctype_short)
+#define _setScalarTagPtrToInt_long(f,l,c,a) \
+			_setScalarTagPtrToInt(f,l,c,a,_ctype_long)
+#define _setScalarTagPtrToInt_longlong(f,l,c,a) \
+			_setScalarTagPtrToInt(f,l,c,a,_ctype_longlong)
+#define _setScalarTagPtrToInt_float(f,l,c,a) \
+			_setScalarTagPtrToInt(f,l,c,a,_ctype_float)
+#define _setScalarTagPtrToInt_double(f,l,c,a) \
+			_setScalarTagPtrToInt(f,l,c,a,_ctype_double)
+#ifdef LONGDOUBLE /* { */
+#define _setScalarTagPtrToInt_longdouble(f,l,c,a) \
+			_setScalarTagPtrToInt(f,l,c,a,_ctype_longdouble)
+#endif /* } LONGDOUBLE */
+#define _setScalarTagPtrToInt_pointer(f,l,c,a) \
+			_setScalarTagPtrToInt(f,l,c,a,_ctype_pointer)
+
+#endif /* } !TC_PREINSTR */
+
+/**************************/
+/* (_extern)_setScalarTag */
+/**************************/
+#if defined(TC_PREINSTR) /* { */
+extern void _setScalarTag_int(const char * fname, int line, int col,
+				const void * addr);
+extern void _setScalarTag_char(const char * fname, int line, int col,
+				const void * addr);
+extern void _setScalarTag_short(const char * fname, int line, int col,
+				const void * addr);
+extern void _setScalarTag_long(const char * fname, int line, int col,
+				const void * addr);
+extern void _setScalarTag_longlong(const char * fname, int line, int col,
+				const void * addr);
+extern void _setScalarTag_float(const char * fname, int line, int col,
+				const void * addr);
+extern void _setScalarTag_double(const char * fname, int line, int col,
+				const void * addr);
+#ifdef LONGDOUBLE /* { */
+extern void _setScalarTag_longdouble(const char * fname, int line, int col,
+				const void * addr);
+#endif /* } LONGDOUBLE */
+extern void _setScalarTag_pointer(const char * fname, int line, int col,
+				const void * addr);
+
+extern void _setScalarInitTag_int(const char * fname, int line, int col,
+				const void * addr);
+extern void _setScalarInitTag_char(const char * fname, int line, int col,
+				const void * addr);
+extern void _setScalarInitTag_short(const char * fname, int line, int col,
+				const void * addr);
+extern void _setScalarInitTag_long(const char * fname, int line, int col,
+				const void * addr);
+extern void _setScalarInitTag_longlong(const char * fname, int line, int col,
+				const void * addr);
+extern void _setScalarInitTag_float(const char * fname, int line, int col,
+				const void * addr);
+extern void _setScalarInitTag_double(const char * fname, int line, int col,
+				const void * addr);
+#ifdef LONGDOUBLE /* { */
+extern void _setScalarInitTag_longdouble(const char * fname, int line, int col,
+				const void * addr);
+#endif /* } LONGDOUBLE */
+extern void _setScalarInitTag_pointer(const char * fname, int line, int col,
+				const void * addr);
+
+extern void _extern_setScalarTag_int(const char * fname,
+			int line, int col, const void * addr);
+extern void _extern_setScalarTag_char(const char * fname,
+			int line, int col, const void * addr);
+extern void _extern_setScalarTag_short(const char * fname,
+			int line, int col, const void * addr);
+extern void _extern_setScalarTag_long(const char * fname,
+			int line, int col, const void * addr);
+extern void _extern_setScalarTag_longlong(const char * fname,
+			int line, int col, const void * addr);
+extern void _extern_setScalarTag_float(const char * fname,
+			int line, int col, const void * addr);
+extern void _extern_setScalarTag_double(const char * fname,
+			int line, int col, const void * addr);
+#ifdef LONGDOUBLE /* { */
+extern void _extern_setScalarTag_longdouble(const char * fname,
+			int line, int col, const void * addr);
+#endif /* } LONGDOUBLE */
+extern void _extern_setScalarTag_pointer(const char * fname,
+			int line, int col, const void * addr);
+
+#else /* } if !TC_PREINSTR { */
+
+#define _setScalarInitTag_int(f,l,c,a) \
+			_setByteTags(f,l,c,a,sizeof(int),_typetag_init,_typetag_uninit)
+#define _setScalarInitTag_char(f,l,c,a) \
+			_setByteTags(f,l,c,a,sizeof(char),_typetag_init,_typetag_uninit)
+#define _setScalarInitTag_short(f,l,c,a) \
+			_setByteTags(f,l,c,a,sizeof(short),_typetag_init,_typetag_uninit)
+#define _setScalarInitTag_long(f,l,c,a) \
+			_setByteTags(f,l,c,a,sizeof(long),_typetag_init,_typetag_uninit)
+#define _setScalarInitTag_longlong(f,l,c,a) \
+			_setByteTags(f,l,c,a,sizeof(long long),_typetag_init,_typetag_uninit)
+#define _setScalarInitTag_float(f,l,c,a) \
+			_setByteTags(f,l,c,a,sizeof(float),_typetag_init,_typetag_uninit)
+#define _setScalarInitTag_double(f,l,c,a) \
+			_setByteTags(f,l,c,a,sizeof(double),_typetag_init,_typetag_uninit)
+#ifdef LONGDOUBLE /* { */
+#define _setScalarInitTag_longdouble(f,l,c,a) \
+			_setByteTags(f,l,c,a,sizeof(long double),_typetag_init,_typetag_uninit)
+#endif /* } LONGDOUBLE */
+#define _setScalarInitTag_pointer(f,l,c,a) \
+			_setByteTags(f,l,c,a,sizeof(pointer),_typetag_init,_typetag_uninit)
+
+
+extern void _extern_setScalarTag(const char * fname, int line, int col,
+			const void * addr, _ctype_t type);
+
+#define _extern_setScalarTag_int(f,l,c,a) \
+			_extern_setScalarTag(f,l,c,a,_ctype_int)
+#define _extern_setScalarTag_char(f,l,c,a) \
+			_extern_setScalarTag(f,l,c,a,_ctype_char)
+#define _extern_setScalarTag_short(f,l,c,a) \
+			_extern_setScalarTag(f,l,c,a,_ctype_short)
+#define _extern_setScalarTag_long(f,l,c,a) \
+			_extern_setScalarTag(f,l,c,a,_ctype_long)
+#define _extern_setScalarTag_longlong(f,l,c,a) \
+			_extern_setScalarTag(f,l,c,a,_ctype_longlong)
+#define _extern_setScalarTag_float(f,l,c,a) \
+			_extern_setScalarTag(f,l,c,a,_ctype_float)
+#define _extern_setScalarTag_double(f,l,c,a) \
+			_extern_setScalarTag(f,l,c,a,_ctype_double)
+#ifdef LONGDOUBLE /* { */
+#define _extern_setScalarTag_longdouble(f,l,c,a) \
+			_extern_setScalarTag(f,l,c,a,_ctype_longdouble)
+#endif /* } LONGDOUBLE */
+#define _extern_setScalarTag_pointer(f,l,c,a) \
+			_extern_setScalarTag(f,l,c,a,_ctype_pointer)
+
+extern void _setScalarTag(const char * fname, int line, int col,
+			const void * addr, _ctype_t type);
+
+#if defined(TC_USE_MACROS) /* { */
+
+static unsigned char * _sst_tmp_tagptr;
+
+/* This macro also relies on unalloc being the only 0 tag. */
+#if defined(OLD_MACROS) || defined(OLD_SS_TAG) /* { */
+#define _setScalarTag_char(f,l,c,addr)	( \
+	  CNTMAC(_sstcctr) CNTCOMMA \
+	  _sst_tmp_tagptr = &GET_TAG_BYTE(addr), \
+	  !(*_sst_tmp_tagptr & (EVEN_CONT_MASK|ODD_CONT_MASK)) \
+	  && ( ((unsigned long) (addr) & 0x1) \
+	       ? (*_sst_tmp_tagptr &= ~ODD_TAG_MASK, \
+		  *_sst_tmp_tagptr |= (_typetag_int << BITS_PER_TAG)) \
+	       : (*_sst_tmp_tagptr &= ~EVEN_TAG_MASK, \
+		  *_sst_tmp_tagptr |= _typetag_int)) \
+	  || (_setScalarTag(f,l,c,addr,_ctype_char) \
+	      CNTCOMMA CNTMAC(_sstcfctr), 1) \
+	)
+#else /* } !(defined(OLD_MACROS) || defined(OLD_SS_TAG)) { */
+#define _setScalarTag_char(f,l,c,addr)	( \
+	  CNTMAC(_sstcctr) CNTCOMMA \
+	  _sst_tmp_tagptr = &GET_TAG_BYTE(addr), \
+	  !(*_sst_tmp_tagptr & (EVEN_CONT_MASK|ODD_CONT_MASK)) \
+	  && SET_CHAR_TAG(*_sst_tmp_tagptr, _typetag_int, (unsigned long)(addr)&0x1) \
+	  || (_setScalarTag(f,l,c,addr,_ctype_char) \
+	      CNTCOMMA CNTMAC(_sstcfctr), 1) \
+	)
+#endif /* } !(defined(OLD_MACROS) || defined(OLD_SS_TAG)) */
+
+/* The alignment test in the macro can be removed.
+   It should not fail for any reasonable machine. */
+#define SST_NONCHAR(f,l,c,addr,type)	( \
+	  CNTMAC(_sstctr) CNTCOMMA \
+	  _sst_tmp_tagptr = &GET_TAG_BYTE(addr), \
+	  ALIGN_CHECK(!((unsigned long) (addr) & 0x1)) \
+	  ALIGN_AND SAME_MIRROR_PAGE((addr),(_MIRROR_##type *)(addr)+1) \
+	  && !(*_sst_tmp_tagptr & EVEN_CONT_MASK) \
+	  && !(*(unsigned char *)((_MIRROR_##type *)_sst_tmp_tagptr + 1) & EVEN_CONT_MASK) \
+	  && (*(_MIRROR_##type *)_sst_tmp_tagptr = _##type##_tag_u.init_mt) \
+	  || (_setScalarTag(f,l,c,addr,_ctype_##type) \
+	      CNTCOMMA CNTMAC(_sstfctr), 1) \
+	)
+#else /* } if !TC_USE_MACROS { */
+#define _setScalarTag_char(f,l,c,a) \
+			_setScalarTag(f,l,c,a,_ctype_char)
+#endif /* } TC_USE_MACROS */
+
+#if defined(TC_USE_MACROS) && defined(_MIRROR_int)
+#define _setScalarTag_int(f,l,c,a) \
+			SST_NONCHAR(f,l,c,a,int)
+#else /* defined(TC_USE_MACROS) && defined(_MIRROR_int) */
+#define _setScalarTag_int(f,l,c,a) \
+			_setScalarTag(f,l,c,a,_ctype_int)
+#endif /* defined(TC_USE_MACROS) && defined(_MIRROR_int) */
+
+#if defined(TC_USE_MACROS) && defined(_MIRROR_short)
+#define _setScalarTag_short(f,l,c,a) \
+			SST_NONCHAR(f,l,c,a,short)
+#else /* defined(TC_USE_MACROS) && defined(_MIRROR_short) */
+#define _setScalarTag_short(f,l,c,a) \
+			_setScalarTag(f,l,c,a,_ctype_short)
+#endif /* defined(TC_USE_MACROS) && defined(_MIRROR_short) */
+
+#if defined(TC_USE_MACROS) && defined(_MIRROR_long)
+#define _setScalarTag_long(f,l,c,a) \
+			SST_NONCHAR(f,l,c,a,long)
+#else /* defined(TC_USE_MACROS) && defined(_MIRROR_long) */
+#define _setScalarTag_long(f,l,c,a) \
+			_setScalarTag(f,l,c,a,_ctype_long)
+#endif /* defined(TC_USE_MACROS) && defined(_MIRROR_long) */
+
+#if defined(TC_USE_MACROS) && defined(_MIRROR_longlong)
+#define _setScalarTag_longlong(f,l,c,a) \
+			SST_NONCHAR(f,l,c,a,longlong)
+#else /* defined(TC_USE_MACROS) && defined(_MIRROR_longlong) */
+#define _setScalarTag_longlong(f,l,c,a) \
+			_setScalarTag(f,l,c,a,_ctype_longlong)
+#endif /* defined(TC_USE_MACROS) && defined(_MIRROR_longlong) */
+
+#if defined(TC_USE_MACROS) && defined(_MIRROR_float)
+#define _setScalarTag_float(f,l,c,a) \
+			SST_NONCHAR(f,l,c,a,float)
+#else /* defined(TC_USE_MACROS) && defined(_MIRROR_float) */
+#define _setScalarTag_float(f,l,c,a) \
+			_setScalarTag(f,l,c,a,_ctype_float)
+#endif /* defined(TC_USE_MACROS) && defined(_MIRROR_float) */
+
+#if defined(TC_USE_MACROS) && defined(_MIRROR_double)
+#define _setScalarTag_double(f,l,c,a) \
+			SST_NONCHAR(f,l,c,a,double)
+#else /* defined(TC_USE_MACROS) && defined(_MIRROR_double) */
+#define _setScalarTag_double(f,l,c,a) \
+			_setScalarTag(f,l,c,a,_ctype_double)
+#endif /* defined(TC_USE_MACROS) && defined(_MIRROR_double) */
+
+#ifdef LONGDOUBLE /* { */
+#if defined(TC_USE_MACROS) && defined(_MIRROR_longdouble)
+#define _setScalarTag_longdouble(f,l,c,a) \
+			SST_NONCHAR(f,l,c,a,longdouble)
+#else /* defined(TC_USE_MACROS) && defined(_MIRROR_longdouble) */
+#define _setScalarTag_longdouble(f,l,c,a) \
+			_setScalarTag(f,l,c,a,_ctype_longdouble)
+#endif /* defined(TC_USE_MACROS) && defined(_MIRROR_longdouble) */
+#endif /* } LONGDOUBLE */
+
+#if defined(TC_USE_MACROS) && defined(_MIRROR_pointer)
+#define _setScalarTag_pointer(f,l,c,a) \
+			SST_NONCHAR(f,l,c,a,pointer)
+#else /* defined(TC_USE_MACROS) && defined(_MIRROR_pointer) */
+#define _setScalarTag_pointer(f,l,c,a) \
+			_setScalarTag(f,l,c,a,_ctype_pointer)
+#endif /* defined(TC_USE_MACROS) && defined(_MIRROR_pointer) */
+
+#endif /* } !TC_PREINSTR */
+
+/**************************/
+/* (_extern)_replicateTag */
+/**************************/
+#if defined(TC_PREINSTR) /* { */
+extern void _replicateTag(const char * fname, int line, int col,
+			void * addr, size_t size, int nelem);
+extern void _extern_replicateTag(const char * fname, int line, int col,
+			void * addr, size_t size, int nelem);
+#else /* } if !TC_PREINSTR { */
+extern void _replicateTag(const char * fname, int line, int col,
+			void * addr, size_t size, int nelem);
+extern void _extern_replicateTag(const char * fname, int line, int col,
+			void * addr, size_t size, int nelem);
+#endif /* } !TC_PREINSTR */
+
+/**************/
+/* promoteTag */
+/**************/
+#if defined(TC_PREINSTR) /* { */
+extern void _promoteTag(const char * fname, int line, int col,
+			const void ** addrptr,
+                        _ctype_t opnd_type,
+                        _ctype_t expr_type,
+			void * tmpspace);
+#else /* } if !TC_PREINSTR { */
+extern void _promoteTag(const char * fname, int line, int col,
+			const void ** addrptr,
+                        _ctype_t opnd_type,
+                        _ctype_t expr_type,
+			void * tmpspace);
+#endif /* } !TC_PREINSTR */
+
+/***************/
+/* *alloc_init */
+/***************/
+#if defined(TC_PREINSTR) /* { */
+extern void * _typecheck_malloc_init(size_t size);
+extern void _typecheck_free_partial(void * ptr);
+extern void * _typecheck_realloc_init(void * ptr, size_t size);
+extern void * _typecheck_memalign_init(size_t alignment, size_t size);
+extern void * _typecheck_valloc_init(size_t size);
+#else /* } if !TC_PREINSTR { */
+extern void * _typecheck_malloc_init(size_t size);
+extern void _typecheck_free_partial(void * ptr);
+extern void * _typecheck_realloc_init(void * ptr, size_t size);
+extern void * _typecheck_memalign_init(size_t alignment, size_t size);
+extern void * _typecheck_valloc_init(size_t size);
+#endif /* } !TC_PREINSTR */
+
+/**********************************************/
+/*************** function stuff ***************/
+/**********************************************/
+
+typedef struct {
+  const void * addr;
+  size_t size;
+} _addr_and_size_t;
+
+extern _addr_and_size_t * _globalArgAddrs;
+extern int _globalArgCount;
+extern void * _globalCallTarget;
+extern void * _dummyAddr;
+extern char * _globalErrlocFile;
+extern int _globalErrlocLine, _globalErrlocCol;
+
+/* for bitfields */
+extern long long _dummyInt;
+
+/* Note: aargaddrs serves two purposes:
+      1 - (void *)aargaddrs marks the start of the stack frame
+      2 - *aargaddrs points to the argaddrs array, if any
+*/
+extern void _processReturn(const char * fname, int line, int col,
+		void * scaf_start, void * scaf_end, void * agrf_start, void * agrf_end,
+		_addr_and_size_t ** aargaddrs, const void * addr, size_t size);
+
+extern void _processReturnNoClear(const char * fname, int line, int col,
+		_addr_and_size_t * argaddrs, const void * addr, size_t size);
+
+#if defined(TC_PREINSTR) /* { */
+
+extern void _tcdebug_processCall(const char * fnname);
+
+#else /* } if !TC_PREINSTR { */
+
+/* DEBUG: Uncomment the following to replace the debugging
+   call with a nil macro */
+/* #define TC_NO_TRACECALL */
+
+#ifdef TC_NO_TRACECALL
+#define _tcdebug_processCall(fnname)
+#else
+extern void _tcdebug_processCall_func(const char * fnname);
+#define _tcdebug_processCall(fnname) _tcdebug_processCall_func(fnname)
+#endif
+
+#endif /* } !TC_PREINSTR */
+
+/*******************/
+/* process arg tag */
+/*******************/
+#if defined(TC_PREINSTR) /* { */
+extern void _processArgTag_int(const char *, int, int,
+		_addr_and_size_t *, int, void *, size_t);
+extern void _processArgTag_char(const char *, int, int,
+		_addr_and_size_t *, int, void *, size_t);
+extern void _processArgTag_short(const char *, int, int,
+		_addr_and_size_t *, int, void *, size_t);
+extern void _processArgTag_long(const char *, int, int,
+		_addr_and_size_t *, int, void *, size_t);
+extern void _processArgTag_longlong(const char *, int, int,
+		_addr_and_size_t *, int, void *, size_t);
+extern void _processArgTag_float(const char *, int, int,
+		_addr_and_size_t *, int, void *, size_t);
+extern void _processArgTag_double(const char *, int, int,
+		_addr_and_size_t *, int, void *, size_t);
+#ifdef LONGDOUBLE /* { */
+extern void _processArgTag_longdouble(const char *, int, int,
+		_addr_and_size_t *, int, void *, size_t);
+#endif /* } LONGDOUBLE */
+extern void _processArgTag_pointer(const char *, int, int,
+		_addr_and_size_t *, int, void *, size_t);
+extern void _processArgTag_aggregate(const char *, int, int,
+		_addr_and_size_t *, int, void *, size_t);
+#else /* } if !TC_PREINSTR { */
+
+extern void _processArgTag(const char * fname, int line, int col,
+			_addr_and_size_t * argaddrs,
+			/*int argCount,*/ int index,
+			void * addr, _ctype_t type, size_t size_aggr);
+
+#if defined(TC_USE_MACROS) /* { */
+
+#define PAT_SCALAR(f,l,c,r,i,a,type) \
+  CNTMAC(_patctr); \
+  /* If not going past the number of arguments passed in \
+     and the size of the argument is as expected, just copy. */ \
+  if(i <= _globalArgCount && r[i].size == typeinfo[_ctype##type].size) \
+    /*NOTE: copyTag won't cough _typetag_unalloc; memory is pre-initialized*/ \
+    _copyTag##type(f,l,c,a,r[i].addr,r[i].size); \
+  /** type matches promotion, set to declared type **/ \
+  else if(i <= _globalArgCount && \
+	  r[i].size == typeinfo[typeinfo[_ctype##type].promo].size && \
+	  _verifyTagSilent(r[i].addr, typeinfo[_ctype##type].promo)) \
+    _setScalarTag##type(f,l,c,a) CNTCOMMA CNTMAC(_patpctr); \
+  else \
+    _processArgTag(f,l,c,r,i,a,_ctype##type,0) CNTCOMMA CNTMAC(_patfctr);
+
+#define _processArgTag_int(f,l,c,r,i,a,s) \
+				PAT_SCALAR(f,l,c,r,i,a,_int)
+#define _processArgTag_char(f,l,c,r,i,a,s) \
+				PAT_SCALAR(f,l,c,r,i,a,_char)
+#define _processArgTag_short(f,l,c,r,i,a,s) \
+				PAT_SCALAR(f,l,c,r,i,a,_short)
+#define _processArgTag_long(f,l,c,r,i,a,s) \
+				PAT_SCALAR(f,l,c,r,i,a,_long)
+#define _processArgTag_longlong(f,l,c,r,i,a,s) \
+				PAT_SCALAR(f,l,c,r,i,a,_longlong)
+#define _processArgTag_float(f,l,c,r,i,a,s) \
+				PAT_SCALAR(f,l,c,r,i,a,_float)
+#define _processArgTag_double(f,l,c,r,i,a,s) \
+				PAT_SCALAR(f,l,c,r,i,a,_double)
+#ifdef LONGDOUBLE /* { */
+#define _processArgTag_longdouble(f,l,c,r,i,a,s) \
+				PAT_SCALAR(f,l,c,r,i,a,_longdouble)
+#endif /* } LONGDOUBLE */
+#define _processArgTag_pointer(f,l,c,r,i,a,s) \
+				PAT_SCALAR(f,l,c,r,i,a,_pointer)
+#define _processArgTag_aggregate(f,l,c,r,i,a,s) \
+  CNTMAC(_patactr); \
+  /* If not going past the number of arguments passed in \
+     and the size of the argument is as expected, just copy. */ \
+  if(i <= _globalArgCount && r[i].size == s) \
+    /*NOTE: copyTag won't cough _typetag_unalloc; memory is pre-initialized*/ \
+    _copyTag_aggregate(f,l,c,a,r[i].addr,r[i].size); \
+  else _processArgTag(f,l,c,r,i,a,_ctype_aggregate,s) CNTCOMMA CNTMAC(_patafctr);
+
+#else /* } if !TC_USE_MACROS { */
+
+#define _processArgTag_int(f,l,c,r,i,a,s) \
+				_processArgTag(f,l,c,r,i,a,_ctype_int,s)
+#define _processArgTag_char(f,l,c,r,i,a,s) \
+				_processArgTag(f,l,c,r,i,a,_ctype_char,s)
+#define _processArgTag_short(f,l,c,r,i,a,s) \
+				_processArgTag(f,l,c,r,i,a,_ctype_short,s)
+#define _processArgTag_long(f,l,c,r,i,a,s) \
+				_processArgTag(f,l,c,r,i,a,_ctype_long,s)
+#define _processArgTag_longlong(f,l,c,r,i,a,s) \
+				_processArgTag(f,l,c,r,i,a,_ctype_longlong,s)
+#define _processArgTag_float(f,l,c,r,i,a,s) \
+				_processArgTag(f,l,c,r,i,a,_ctype_float,s)
+#define _processArgTag_double(f,l,c,r,i,a,s) \
+				_processArgTag(f,l,c,r,i,a,_ctype_double,s)
+#ifdef LONGDOUBLE /* { */
+#define _processArgTag_longdouble(f,l,c,r,i,a,s) \
+				_processArgTag(f,l,c,r,i,a,_ctype_longdouble,s)
+#endif /* } LONGDOUBLE */
+#define _processArgTag_pointer(f,l,c,r,i,a,s) \
+				_processArgTag(f,l,c,r,i,a,_ctype_pointer,s)
+#define _processArgTag_aggregate(f,l,c,r,i,a,s) \
+				_processArgTag(f,l,c,r,i,a,_ctype_aggregate,s)
+
+#endif /* } !TC_USE_MACROS */
+#endif /* } !TC_PREINSTR */
+
+/*************************************************************/
+/*************** static mirror representatives ***************/
+/*************************************************************/
+
+#if defined(TC_PREINSTR) /* { */
+
+extern void * _ini_static_repptr;
+
+extern void * _int_static_repptr;
+extern void * _char_static_repptr;
+extern void * _short_static_repptr;
+extern void * _long_static_repptr;
+extern void * _longlong_static_repptr;
+extern void * _float_static_repptr;
+extern void * _double_static_repptr;
+#ifdef LONGDOUBLE /* { */
+extern void * _longdouble_static_repptr;
+#endif /* } LONGDOUBLE */
+extern void * _pointer_static_repptr;
+
+#else /* } if !TC_PREINSTR { */
+
+extern char _ini_static_rep[];
+
+extern int _int_static_rep[];
+extern char _char_static_rep[];
+extern short _short_static_rep[];
+extern long _long_static_rep[];
+extern long long _longlong_static_rep[];
+extern float _float_static_rep[];
+extern double _double_static_rep[];
+#ifdef LONGDOUBLE /* { */
+extern long double _longdouble_static_rep[];
+#endif /* } LONGDOUBLE */
+extern void * _pointer_static_rep[];
+
+#define _ini_static_repptr		(&_ini_static_rep[0])
+
+#define _int_static_repptr		(&_int_static_rep[0])
+#define _char_static_repptr		(&_char_static_rep[0])
+#define _short_static_repptr		(&_short_static_rep[0])
+#define _long_static_repptr		(&_long_static_rep[0])
+#define _longlong_static_repptr		(&_longlong_static_rep[0])
+#define _float_static_repptr		(&_float_static_rep[0])
+#define _double_static_repptr		(&_double_static_rep[0])
+#ifdef LONGDOUBLE /* { */
+#define _longdouble_static_repptr	(&_longdouble_static_rep[0])
+#endif /* } LONGDOUBLE */
+#define _pointer_static_repptr		(&_pointer_static_rep[0])
+
+#endif /* } !TC_PREINSTR */
+
+/******************************************************************/
+/*************** End of API functions and variables ***************/
+/******************************************************************/
+
+/**********************/
+/* reportStaticCounts */
+/**********************/
+#if defined(TC_PREINSTR) /* { */
+extern void _reportStaticCounts(const char * fname, const char * descr, int count);
+#else /* } if !TC_PREINSTR { */
+extern void _reportStaticCounts(const char * fname, const char * descr, int count);
+#endif /* } !TC_PREINSTR */
+
+/**************************************************/
+/*************** compile time flags ***************/
+/**************************************************/
+
+extern int strictPointer;
+
+#endif /* } #ifndef TYPECHECK_API */
+
+#if 0 /* { */
+/******************/
+/* macro template */
+/******************/
+#if defined(TC_PREINSTR) /* { */
+_int
+_char
+_short
+_long
+_longlong
+_float
+_double
+#ifdef LONGDOUBLE /* { */
+_longdouble
+#endif /* } LONGDOUBLE */
+_pointer
+_aggregate
+#else /* } if !TC_PREINSTR { */
+#if defined(TC_USE_MACROS) /* { */
+
+#define _int
+#define _char
+#define _short
+#define _long
+#define _longlong
+#define _float
+#define _double
+#ifdef LONGDOUBLE /* { */
+#define _longdouble
+#endif /* } LONGDOUBLE */
+#define _pointer
+#define _aggregate
+
+#else /* } if !TC_USE_MACROS { */
+
+#define _int
+#define _char
+#define _short
+#define _long
+#define _longlong
+#define _float
+#define _double
+#ifdef LONGDOUBLE /* { */
+#define _longdouble
+#endif /* } LONGDOUBLE */
+#define _pointer
+#define _aggregate
+
+#endif /* } !TC_USE_MACROS */
+#endif /* } !TC_PREINSTR */
+
+#endif /* } 0 */
+@
+
+
+1.66
+log
+@Added _processReturnNoClear()
+@
+text
+@d107 9
+@
+
+
+1.65
+log
+@Updated tcapi to include clearTag, which is called in
+-indivClearTags mode
+@
+text
+@d1075 3
+@
+
+
+1.64
+log
+@Added _typecheck_free_partial protos.
+@
+text
+@d522 3
+a524 3
+/*******************************************************/
+/* setByteTags, setStringTag, setUninitTag, setInitTag */
+/*******************************************************/
+d534 2
+d541 2
+a542 1
+#define _setInitTag(f,l,c,a,s)   _setByteTags(f,l,c,a,s, _typetag_init, _typetag_unalloc)
+@
+
+
+1.63
+log
+@Renamed reportNumCalls to reportStaticCounts, taking an extra
+parameter describing the count.
+@
+text
+@d1033 1
+d1039 1
+@
+
+
+1.62
+log
+@Changed registerExtern to take extra size argument;
+renamed current instrumentation function to registerExtern_nosize
+@
+text
+@d1252 3
+a1254 3
+/******************/
+/* reportNumCalls */
+/******************/
+d1256 1
+a1256 1
+extern void _reportNumCalls(const char * fname, int num_calls);
+d1258 1
+a1258 1
+extern void _reportNumCalls(const char * fname, int num_calls);
+@
+
+
+1.61
+log
+@Added const to promoteTag arg#4 type to suppress
+type mismatch warnings.
+@
+text
+@d112 1
+a112 1
+			void * addr, _ctype_t type);
+d114 1
+a114 1
+extern void _registerExtern(const char * fname, int line, int col,
+d116 1
+@
+
+
+1.60
+log
+@Added prototypes for malloc_init functions.
+@
+text
+@d1015 1
+a1015 1
+			void ** addrptr,
+d1021 1
+a1021 1
+			void ** addrptr,
+@
+
+
+1.59
+log
+@Added reportNumCalls
+@
+text
+@d1027 15
+@
+
+
+1.58
+log
+@Added _setInitTag alias.
+@
+text
+@d1236 9
+@
+
+
+1.57
+log
+@Added _ini_static_rep[ptr]
+and _setScalarInitTag_*
+@
+text
+@d521 3
+a523 3
+/*******************************************/
+/* setByteTags, setStringTag, setUninitTag */
+/*******************************************/
+d531 2
+d538 1
+@
+
+
+1.56
+log
+@Deleted deprecated stuff (setStringTag/setUninitTag).
+@
+text
+@d783 22
+d825 1
+d828 22
+d1183 2
+d1199 2
+d1212 2
+@
+
+
+1.55
+log
+@Changed registerExtern prototype to exclude size_aggr argument.
+@
+text
+@a537 13
+#if 0 /* { DEPRECATED */
+/****************/
+/* setStringTag */
+/****************/
+#if defined(TC_PREINSTR) /* { */
+extern void _setStringTag(const char * fname, int line, int col,
+			const char * addr, size_t str_len);
+#else /* } if !TC_PREINSTR { */
+extern void _setStringTag(const char * fname, int line, int col,
+			const char * addr, size_t str_len);
+#endif /* } !TC_PREINSTR */
+#endif /* } if 0 */
+
+a541 4
+/* DEPRECATED
+extern void _setUninitTag(const char * fname, int line, int col,
+			void * addr, size_t size);
+*/
+a544 4
+/* DEPRECATED
+extern void _setUninitTag(const char * fname, int line, int col,
+			void * addr, size_t size);
+*/
+@
+
+
+1.54
+log
+@Added _setByteTags; added redirection macros to point
+_setUninitTag and _setStringTag to _setByteTag; old stuff
+commented out, will next be deleted.
+Also, added _typetag_init; and tcapi.h now ALWAYS includes tcapi_postinstr.h
+@
+text
+@d112 1
+a112 1
+			void * addr, _ctype_t type, size_t size_aggr);
+d115 1
+a115 1
+			void * addr, _ctype_t type, size_t size_aggr);
+d572 1
+@
+
+
+1.53
+log
+@Renamed USE_MACROS to TC_USE_MACROS
+@
+text
+@d40 1
+a41 1
+#include <tcapi_postinstr.h>
+d521 18
+d549 1
+d551 3
+a553 3
+/**************************/
+/* (_extern)_setUninitTag */
+/**************************/
+d555 1
+d558 1
+d562 1
+d565 1
+@
+
+
+1.52
+log
+@Replaced "TC_TRACECALL" ifdef with "TC_NO_TRACECALL"
+so as not to clash with pmirror_newtags.c.
+@
+text
+@d40 1
+a40 1
+#if defined(USE_MACROS) || defined(TC_INTERNAL) /* { */
+d58 1
+a58 1
+#endif /* } defined USE_MACROS or TC_INTERNAL */
+d60 1
+a60 1
+#ifdef USE_MACROS /* { */
+d76 1
+a76 1
+#ifdef COUNT_MACROS /* { */
+d99 1
+a99 1
+#endif /* } USE_MACROS */
+d110 1
+a110 1
+#ifdef TC_PREINSTR /* { */
+d121 1
+a121 1
+#ifdef TC_PREINSTR /* { */
+d145 1
+a145 1
+#ifdef USE_MACROS /* { */
+d219 1
+a219 1
+#else /* } if !USE_MACROS { */
+d236 1
+a236 1
+#endif /* } !USE_MACROS */
+d242 1
+a242 1
+#ifdef TC_PREINSTR /* { */
+d271 1
+a271 1
+#ifdef USE_MACROS /* { */
+d334 1
+a334 1
+#else /* } if !USE_MACROS { */
+d349 1
+a349 1
+#endif /* } !USE_MACROS */
+d355 1
+a355 1
+#ifdef TC_PREINSTR /* { */
+d383 1
+a383 1
+#ifdef USE_MACROS /* { */
+d504 1
+a504 1
+#else /* } if !USE_MACROS { */
+d518 1
+a518 1
+#endif /* } !USE_MACROS */
+d524 1
+a524 1
+#ifdef TC_PREINSTR /* { */
+d535 1
+a535 1
+#ifdef TC_PREINSTR /* { */
+d550 1
+a550 1
+#ifdef TC_PREINSTR /* { */
+d565 1
+a565 1
+#ifdef TC_PREINSTR /* { */
+d590 1
+a590 1
+#ifdef USE_MACROS /* { */
+d632 1
+a632 1
+#else /* } if !USE_MACROS { */
+d635 1
+a635 1
+#endif /* } USE_MACROS */
+d637 1
+a637 1
+#if defined(USE_MACROS) && defined(_MIRROR_int)
+d640 1
+a640 1
+#else /* defined(USE_MACROS) && defined(_MIRROR_int) */
+d643 1
+a643 1
+#endif /* defined(USE_MACROS) && defined(_MIRROR_int) */
+d645 1
+a645 1
+#if defined(USE_MACROS) && defined(_MIRROR_short)
+d648 1
+a648 1
+#else /* defined(USE_MACROS) && defined(_MIRROR_short) */
+d651 1
+a651 1
+#endif /* defined(USE_MACROS) && defined(_MIRROR_short) */
+d653 1
+a653 1
+#if defined(USE_MACROS) && defined(_MIRROR_long)
+d656 1
+a656 1
+#else /* defined(USE_MACROS) && defined(_MIRROR_long) */
+d659 1
+a659 1
+#endif /* defined(USE_MACROS) && defined(_MIRROR_long) */
+d661 1
+a661 1
+#if defined(USE_MACROS) && defined(_MIRROR_longlong)
+d664 1
+a664 1
+#else /* defined(USE_MACROS) && defined(_MIRROR_longlong) */
+d667 1
+a667 1
+#endif /* defined(USE_MACROS) && defined(_MIRROR_longlong) */
+d669 1
+a669 1
+#if defined(USE_MACROS) && defined(_MIRROR_float)
+d672 1
+a672 1
+#else /* defined(USE_MACROS) && defined(_MIRROR_float) */
+d675 1
+a675 1
+#endif /* defined(USE_MACROS) && defined(_MIRROR_float) */
+d677 1
+a677 1
+#if defined(USE_MACROS) && defined(_MIRROR_double)
+d680 1
+a680 1
+#else /* defined(USE_MACROS) && defined(_MIRROR_double) */
+d683 1
+a683 1
+#endif /* defined(USE_MACROS) && defined(_MIRROR_double) */
+d686 1
+a686 1
+#if defined(USE_MACROS) && defined(_MIRROR_longdouble)
+d689 1
+a689 1
+#else /* defined(USE_MACROS) && defined(_MIRROR_longdouble) */
+d692 1
+a692 1
+#endif /* defined(USE_MACROS) && defined(_MIRROR_longdouble) */
+d695 1
+a695 1
+#if defined(USE_MACROS) && defined(_MIRROR_pointer)
+d698 1
+a698 1
+#else /* defined(USE_MACROS) && defined(_MIRROR_pointer) */
+d701 1
+a701 1
+#endif /* defined(USE_MACROS) && defined(_MIRROR_pointer) */
+d708 1
+a708 1
+#ifdef TC_PREINSTR /* { */
+d759 1
+a759 1
+#ifdef TC_PREINSTR /* { */
+d829 1
+a829 1
+#ifdef USE_MACROS /* { */
+d871 1
+a871 1
+#else /* } if !USE_MACROS { */
+d874 1
+a874 1
+#endif /* } USE_MACROS */
+d876 1
+a876 1
+#if defined(USE_MACROS) && defined(_MIRROR_int)
+d879 1
+a879 1
+#else /* defined(USE_MACROS) && defined(_MIRROR_int) */
+d882 1
+a882 1
+#endif /* defined(USE_MACROS) && defined(_MIRROR_int) */
+d884 1
+a884 1
+#if defined(USE_MACROS) && defined(_MIRROR_short)
+d887 1
+a887 1
+#else /* defined(USE_MACROS) && defined(_MIRROR_short) */
+d890 1
+a890 1
+#endif /* defined(USE_MACROS) && defined(_MIRROR_short) */
+d892 1
+a892 1
+#if defined(USE_MACROS) && defined(_MIRROR_long)
+d895 1
+a895 1
+#else /* defined(USE_MACROS) && defined(_MIRROR_long) */
+d898 1
+a898 1
+#endif /* defined(USE_MACROS) && defined(_MIRROR_long) */
+d900 1
+a900 1
+#if defined(USE_MACROS) && defined(_MIRROR_longlong)
+d903 1
+a903 1
+#else /* defined(USE_MACROS) && defined(_MIRROR_longlong) */
+d906 1
+a906 1
+#endif /* defined(USE_MACROS) && defined(_MIRROR_longlong) */
+d908 1
+a908 1
+#if defined(USE_MACROS) && defined(_MIRROR_float)
+d911 1
+a911 1
+#else /* defined(USE_MACROS) && defined(_MIRROR_float) */
+d914 1
+a914 1
+#endif /* defined(USE_MACROS) && defined(_MIRROR_float) */
+d916 1
+a916 1
+#if defined(USE_MACROS) && defined(_MIRROR_double)
+d919 1
+a919 1
+#else /* defined(USE_MACROS) && defined(_MIRROR_double) */
+d922 1
+a922 1
+#endif /* defined(USE_MACROS) && defined(_MIRROR_double) */
+d925 1
+a925 1
+#if defined(USE_MACROS) && defined(_MIRROR_longdouble)
+d928 1
+a928 1
+#else /* defined(USE_MACROS) && defined(_MIRROR_longdouble) */
+d931 1
+a931 1
+#endif /* defined(USE_MACROS) && defined(_MIRROR_longdouble) */
+d934 1
+a934 1
+#if defined(USE_MACROS) && defined(_MIRROR_pointer)
+d937 1
+a937 1
+#else /* defined(USE_MACROS) && defined(_MIRROR_pointer) */
+d940 1
+a940 1
+#endif /* defined(USE_MACROS) && defined(_MIRROR_pointer) */
+d947 1
+a947 1
+#ifdef TC_PREINSTR /* { */
+d962 1
+a962 1
+#ifdef TC_PREINSTR /* { */
+d1003 1
+a1003 1
+#ifdef TC_PREINSTR /* { */
+d1025 1
+a1025 1
+#ifdef TC_PREINSTR /* { */
+d1055 1
+a1055 1
+#ifdef USE_MACROS /* { */
+d1101 1
+a1101 1
+#else /* } if !USE_MACROS { */
+d1126 1
+a1126 1
+#endif /* } !USE_MACROS */
+d1133 1
+a1133 1
+#ifdef TC_PREINSTR /* { */
+d1191 1
+a1191 1
+#ifdef TC_PREINSTR /* { */
+d1205 1
+a1205 1
+#ifdef USE_MACROS /* { */
+d1220 1
+a1220 1
+#else /* } if !USE_MACROS { */
+d1235 1
+a1235 1
+#endif /* } !USE_MACROS */
+@
+
+
+1.51
+log
+@Added prototype for _tcdebug_processCall;
+modified prototype for _processReturn.
+@
+text
+@d1009 1
+a1009 1
+/* DEBUG: Undefine the following to replace this debugging
+d1011 1
+a1011 1
+#define TC_TRACECALL
+d1013 2
+a1014 3
+
+#ifdef TC_TRACECALL
+extern void _tcdebug_processCall(const char * fnname);
+d1016 2
+a1017 1
+#define _tcdebug_processCall(fnname)
+@
+
+
+1.50
+log
+@Changed setScalarTag prototype to take const void * instead of void *;
+Added long long _dummyInt, for use by bitfield handling code;
+Fixed macro bugs (I'm surprised it never manifested itself before)
+for setScalarTag and setScalarUninitTag, by changing one instance of
+(type *) to (_MIRROR_##type *).
+@
+text
+@d995 4
+d1000 21
+a1020 2
+		void * f1_ptr, size_t f1_siz, void * fn_ptr, size_t fn_siz,
+		_addr_and_size_t * argaddrs, const void * addr, size_t size);
+@
+
+
+1.49
+log
+@Made some changes to macros:
+copyTag macros are now more correct (and faster than before).
+verifyPtr now only checks the first byte of a scalar (or
+first and last byte of an aggregate).
+Char versions of verifyTag, setScalarTag, and setScalarUninitTag
+macros are now faster due to the removal of ?:.  Same was done
+to copyTag_char macro.  Actually, verifyTag_char is not always
+faster with the update, so the active version is the old one.
+To get older macros, define OLD_MACROS, or the individual
+ifdef controlling compilation.
+@
+text
+@d625 1
+a625 1
+	  ALIGN_AND SAME_MIRROR_PAGE((addr),(type *)(addr)+1) \
+d710 1
+a710 1
+			int line, int col, void * addr);
+d712 1
+a712 1
+			int line, int col, void * addr);
+d714 1
+a714 1
+			int line, int col, void * addr);
+d716 1
+a716 1
+			int line, int col, void * addr);
+d718 1
+a718 1
+			int line, int col, void * addr);
+d720 1
+a720 1
+			int line, int col, void * addr);
+d722 1
+a722 1
+			int line, int col, void * addr);
+d725 1
+a725 1
+			int line, int col, void * addr);
+d728 1
+a728 1
+			int line, int col, void * addr);
+d731 1
+a731 1
+			void * addr, _ctype_t type);
+d761 1
+a761 1
+				void * addr);
+d763 1
+a763 1
+				void * addr);
+d765 1
+a765 1
+				void * addr);
+d767 1
+a767 1
+				void * addr);
+d769 1
+a769 1
+				void * addr);
+d771 1
+a771 1
+				void * addr);
+d773 1
+a773 1
+				void * addr);
+d776 1
+a776 1
+				void * addr);
+d779 1
+a779 1
+				void * addr);
+d781 1
+a781 1
+			int line, int col, void * addr);
+d783 1
+a783 1
+			int line, int col, void * addr);
+d785 1
+a785 1
+			int line, int col, void * addr);
+d787 1
+a787 1
+			int line, int col, void * addr);
+d789 1
+a789 1
+			int line, int col, void * addr);
+d791 1
+a791 1
+			int line, int col, void * addr);
+d793 1
+a793 1
+			int line, int col, void * addr);
+d796 1
+a796 1
+			int line, int col, void * addr);
+d799 1
+a799 1
+			int line, int col, void * addr);
+d803 1
+a803 1
+			void * addr, _ctype_t type);
+d827 1
+a827 1
+			void * addr, _ctype_t type);
+d864 1
+a864 1
+	  ALIGN_AND SAME_MIRROR_PAGE((addr),(type *)(addr)+1) \
+d991 3
+@
+
+
+1.48
+log
+@Moved _touchMirrorPage prototype to be visible by both USE_MACROS and
+TC_INTERNAL;
+added _processArgTag_char #defines previously left out by accident.
+@
+text
+@d48 1
+d157 1
+d181 27
+a217 3
+#define _verifyPtr_aggregate(f,l,c,e,a,s) \
+		(CNTMAC(_vpactr) CNTCOMMA \
+		 _verifyPtr(f,l,c,e,a,s) CNTCOMMA CNTMAC(_vpafctr), 1)
+d273 23
+d308 1
+d381 1
+a381 1
+			const void * dst, const void * src, size_t size);
+d388 1
+d407 1
+a407 1
+	  || (_copyTag(f,l,c,dst,src,z) \
+d413 1
+a413 1
+#define CT_NONCHAR(f,l,c,dst,src,size)	( \
+d425 27
+a451 1
+	  ) || (_copyTag(f,l,c,dst,src,size) \
+d454 17
+d472 23
+a494 6
+#define _copyTag_int(f,l,c,d,s,z)	CT_NONCHAR(f,l,c,d,s,z)
+#define _copyTag_short(f,l,c,d,s,z)	CT_NONCHAR(f,l,c,d,s,z)
+#define _copyTag_long(f,l,c,d,s,z)	CT_NONCHAR(f,l,c,d,s,z)
+#define _copyTag_longlong(f,l,c,d,s,z)	CT_NONCHAR(f,l,c,d,s,z)
+#define _copyTag_float(f,l,c,d,s,z)	CT_NONCHAR(f,l,c,d,s,z)
+#define _copyTag_double(f,l,c,d,s,z)	CT_NONCHAR(f,l,c,d,s,z)
+d496 1
+a496 1
+#define _copyTag_longdouble(f,l,c,d,s,z) CT_NONCHAR(f,l,c,d,s,z)
+d498 1
+a498 1
+#define _copyTag_pointer(f,l,c,d,s,z)	CT_NONCHAR(f,l,c,d,s,z)
+d501 2
+a502 1
+		 _copyTag(f,l,c,d,s,z) CNTCOMMA CNTMAC(_ctafctr), 1)
+d506 7
+a512 7
+#define _copyTag_int(f,l,c,d,s,z)	_copyTag(f,l,c,d,s,z)
+#define _copyTag_char(f,l,c,d,s,z)	_copyTag(f,l,c,d,s,z)
+#define _copyTag_short(f,l,c,d,s,z)	_copyTag(f,l,c,d,s,z)
+#define _copyTag_long(f,l,c,d,s,z)	_copyTag(f,l,c,d,s,z)
+#define _copyTag_longlong(f,l,c,d,s,z)	_copyTag(f,l,c,d,s,z)
+#define _copyTag_float(f,l,c,d,s,z)	_copyTag(f,l,c,d,s,z)
+#define _copyTag_double(f,l,c,d,s,z)	_copyTag(f,l,c,d,s,z)
+d514 1
+a514 1
+#define _copyTag_longdouble(f,l,c,d,s,z) _copyTag(f,l,c,d,s,z)
+d516 2
+a517 2
+#define _copyTag_pointer(f,l,c,d,s,z)	_copyTag(f,l,c,d,s,z)
+#define _copyTag_aggregate(f,l,c,d,s,z)	_copyTag(f,l,c,d,s,z)
+d595 1
+d608 10
+d834 1
+d847 10
+@
+
+
+1.47
+log
+@Converted processArgTag to a macro (PAT_SCALAR and
+_processArgTag_aggregate).  May need to macrofy the Silent
+version of _verifyTag for more speed.
+In the process made typeinfo visible to the macros.
+@
+text
+@d40 1
+a40 1
+#if defined(USE_MACROS) || defined(TC_INTERNAL)
+d54 4
+a57 1
+#endif
+a64 3
+/* newtags functions */
+void _touchMirrorPage(unsigned long mapindex);
+
+d914 2
+d945 2
+d1048 1
+d1063 1
+@
+
+
+1.46
+log
+@Consolidated even address checking from (!(a&0x1) && !(b&0x1)) to
+(!(a | b & 0x1)).
+@
+text
+@d42 12
+d87 2
+d240 1
+a240 1
+#ifdef USE_MACROS /* { */
+d243 3
+a284 2
+extern void _verifyTag(const char * fname, int line, int col,
+			const char * exp, const void * addr, _ctype_t reftype);
+a328 1
+#ifdef USE_MACROS /* { */
+d333 2
+a393 3
+extern void _copyTag(const char * fname, int line, int col,
+			const void * dst, const void * src, size_t size);
+
+d897 15
+d913 1
+a913 1
+				_processArgTag(f,l,c,r,i,a,_ctype_int,s)
+d915 1
+a915 1
+				_processArgTag(f,l,c,r,i,a,_ctype_short,s)
+d917 1
+a917 1
+				_processArgTag(f,l,c,r,i,a,_ctype_long,s)
+d919 1
+a919 1
+				_processArgTag(f,l,c,r,i,a,_ctype_longlong,s)
+d921 1
+a921 1
+				_processArgTag(f,l,c,r,i,a,_ctype_float,s)
+d923 1
+a923 1
+				_processArgTag(f,l,c,r,i,a,_ctype_double,s)
+d926 1
+a926 1
+				_processArgTag(f,l,c,r,i,a,_ctype_longdouble,s)
+d929 1
+a929 1
+				_processArgTag(f,l,c,r,i,a,_ctype_pointer,s)
+d931 7
+a937 1
+				_processArgTag(f,l,c,r,i,a,_ctype_aggregate,s)
+@
+
+
+1.45
+log
+@Now alignment checks for non-char macros are conditionally
+compiled in based on macro TC_CHECK_ALIGN.
+Also added the missing alignment check to macro VT_NONCHAR.
+@
+text
+@d350 1
+a350 2
+	  ( ALIGN_CHECK(!((unsigned long) (src) & 0x1)) \
+	    ALIGN_AND ALIGN_CHECK(!((unsigned long) (dst) & 0x1)) \
+@
+
+
+1.44
+log
+@Changed counting macros not to have extra expressions when
+not counting.
+@
+text
+@d53 9
+d157 2
+a158 2
+	  ( !((unsigned long) (addr) & 0x1) \
+	    && ((GET_TAG_BYTE(addr) & (EVEN_CONT_MASK|ODD_CONT_MASK)) \
+d247 2
+a248 1
+	  (GET_TAG_BYTE(addr) == GET_TAG_BYTE(&type##_static_rep[0])) \
+d350 3
+a352 3
+	  ( !((unsigned long) (src) & 0x1) \
+	    && !((unsigned long) (dst) & 0x1) \
+	    && ((_ct_tmp_src & (EVEN_CONT_MASK|ODD_CONT_MASK)) \
+d489 2
+a490 2
+	  !((unsigned long) (addr) & 0x1) \
+	  && SAME_MIRROR_PAGE((addr),(type *)(addr)+1) \
+d717 2
+a718 2
+	  !((unsigned long) (addr) & 0x1) \
+	  && SAME_MIRROR_PAGE((addr),(type *)(addr)+1) \
+@
+
+
+1.43
+log
+@"Typified" processArgTags into _processArgTag_<type>.
+Currently still maps back to original.
+@
+text
+@d67 1
+d69 1
+d71 2
+a72 1
+#define CNTMAC(x) 1
+d134 1
+a134 1
+	  CNTMAC(_vpcctr), \
+d138 2
+a139 1
+	  ) || (_verifyPtr(f,l,c,exp,addr,size),CNTMAC(_vpcfctr)) \
+d147 1
+a147 1
+	  CNTMAC(_vpctr), \
+d152 2
+a153 1
+	  ) || (_verifyPtr(f,l,c,exp,addr,size),CNTMAC(_vpfctr)) \
+d167 2
+a168 1
+		(CNTMAC(_vpactr),_verifyPtr(f,l,c,e,a,s),CNTMAC(_vpafctr))
+d225 1
+a225 1
+	  CNTMAC(_vtcctr), \
+d230 2
+a231 1
+	  ) || (_verifyTag(f,l,c,e,addr,_ctype_char),CNTMAC(_vtcfctr)) \
+d237 1
+a237 1
+	  CNTMAC(_vtctr), \
+d239 2
+a240 1
+	  || (_verifyTag(f,l,c,e,addr,_ctype##type),CNTMAC(_vtfctr)) \
+d255 1
+a255 1
+#define _verifyTag_aggregate(f,l,c,e,a)	CNTMAC(_vtactr)
+d316 1
+a316 1
+	  CNTMAC(_ctcctr), \
+d330 2
+a331 1
+	  || (_copyTag(f,l,c,dst,src,z),CNTMAC(_ctcfctr)) \
+d337 1
+a337 1
+	  CNTMAC(_ctctr), \
+d349 2
+a350 1
+	  ) || (_copyTag(f,l,c,dst,src,size),CNTMAC(_ctfctr)) \
+d364 2
+a365 1
+		(CNTMAC(_ctactr),_copyTag(f,l,c,d,s,z),CNTMAC(_ctafctr))
+d462 1
+a462 1
+	  CNTMAC(_ssutcctr), \
+d470 2
+a471 1
+	  || (_setScalarUninitTag(f,l,c,addr,_ctype_char),CNTMAC(_ssutcfctr)) \
+d477 1
+a477 1
+	  CNTMAC(_ssutctr), \
+d484 2
+a485 1
+	  || (_setScalarUninitTag(f,l,c,addr,_ctype_##type),CNTMAC(_ssutfctr)) \
+d690 1
+a690 1
+	  CNTMAC(_sstcctr), \
+d698 2
+a699 1
+	  || (_setScalarTag(f,l,c,addr,_ctype_char),CNTMAC(_sstcfctr)) \
+d705 1
+a705 1
+	  CNTMAC(_sstctr), \
+d712 2
+a713 1
+	  || (_setScalarTag(f,l,c,addr,_ctype_##type),CNTMAC(_sstfctr)) \
+@
+
+
+1.42
+log
+@Eliminated markStackStart call; replaced with a more complicated
+processReturn call that takes in four arguments (_f1_ptr, _f1_siz,
+_fn_ptr, _fn_siz) instead of just sf_start.
+@
+text
+@d821 32
+d858 48
+a905 3
+extern void _processReturn(const char * fname, int line, int col,
+		void * f1_ptr, size_t f1_siz, void * fn_ptr, size_t fn_siz,
+		_addr_and_size_t * argaddrs, const void * addr, size_t size);
+d964 51
+@
+
+
+1.41
+log
+@Upgraded _touchMirrorPage (formal is not long mapindex instead of
+void * addr).
+@
+text
+@a825 3
+extern void _markStackStart(const char * fname, int line, int col,
+			void ** sf_start, void * formal0, void * formaln);
+
+d827 2
+a828 2
+			void * sf_start, _addr_and_size_t * argaddrs,
+			const void * addr, size_t size);
+@
+
+
+1.40
+log
+@Replaced !SPANS_MIRROR_PAGES with SAME_MIRROR_PAGE macro.
+@
+text
+@d51 1
+a51 1
+void _touchMirrorPage(const void * addr);
+@
+
+
+1.39
+log
+@Changed verifyTag_aggregate macro to do nothing (except count), since
+the function returns immediately on an aggregate anyways.
+@
+text
+@d468 1
+a468 1
+	  && !SPANS_MIRROR_PAGES(type, addr) \
+d694 1
+a694 1
+	  && !SPANS_MIRROR_PAGES(type, addr) \
+@
+
+
+1.38
+log
+@Changed COUNT_MACROS to count occurrences of char,nonchar, and aggr
+(and corresponding function call cases).
+@
+text
+@d246 2
+a247 2
+#define _verifyTag_aggregate(f,l,c,e,a)	\
+     (CNTMAC(_vtactr),_verifyTag(f,l,c,e,a,_ctype_aggregate),CNTMAC(_vtafctr))
+@
+
+
+1.37
+log
+@Changed the static tmps used by the macros from char * to unsigned char *.
+@
+text
+@d56 10
+a65 5
+extern int _vpctr, _vpfctr; /* verifyPtr */
+extern int _vtctr, _vtfctr; /* verifyTag */
+extern int _ctctr, _ctfctr; /* copyTag */
+extern int _sstctr, _sstfctr; /* setScalarTag */
+extern int _ssutctr, _ssutfctr; /* setScalarUninitTag */
+d131 1
+a131 1
+	  CNTMAC(_vpctr), \
+d135 1
+a135 1
+	  ) || (_verifyPtr(f,l,c,exp,addr,size),CNTMAC(_vpfctr)) \
+d162 1
+a162 1
+		(CNTMAC(_vpctr),_verifyPtr(f,l,c,e,a,s),CNTMAC(_vpfctr))
+d219 1
+a219 1
+	  CNTMAC(_vtctr), \
+d224 1
+a224 1
+	  ) || (_verifyTag(f,l,c,e,addr,_ctype_char),CNTMAC(_vtfctr)) \
+d247 1
+a247 1
+	(CNTMAC(_vtctr),_verifyTag(f,l,c,e,a,_ctype_aggregate),CNTMAC(_vtfctr))
+d308 1
+a308 1
+	  CNTMAC(_ctctr), \
+d322 1
+a322 1
+	  || (_copyTag(f,l,c,dst,src,z),CNTMAC(_ctfctr)) \
+d354 1
+a354 1
+		(CNTMAC(_ctctr),_copyTag(f,l,c,d,s,z),CNTMAC(_ctfctr))
+d451 1
+a451 1
+	  CNTMAC(_ssutctr), \
+d459 1
+a459 1
+	  || (_setScalarUninitTag(f,l,c,addr,_ctype_char),CNTMAC(_ssutfctr)) \
+d677 1
+a677 1
+	  CNTMAC(_sstctr), \
+d685 1
+a685 1
+	  || (_setScalarTag(f,l,c,addr,_ctype_char),CNTMAC(_sstfctr)) \
+@
+
+
+1.36
+log
+@Macrofied _setScalarUninitTag.  Nearly identical to _setScalarTag.
+@
+text
+@d296 2
+a297 2
+static char * _ct_tmp_dstptr, _ct_tmp_src;
+static char _ct_tmp_tag;
+d442 1
+a442 1
+static char * _ssut_tmp_tagptr;
+d668 1
+a668 1
+static char * _sst_tmp_tagptr;
+@
+
+
+1.35
+log
+@Removed _getTagPos from API (it's now in tcinternal.h).
+@
+text
+@d60 1
+d440 38
+d480 6
+a485 2
+#define _setScalarUninitTag_char(f,l,c,a) \
+			_setScalarUninitTag(f,l,c,a,_ctype_char)
+d488 6
+d496 6
+d504 6
+d512 6
+d520 2
+d523 4
+d529 1
+d531 5
+d538 2
+@
+
+
+1.34
+log
+@Fixed a minor bug in SST_NONCHAR that would prevent us from
+using non-integer scalar types as mirror types.
+@
+text
+@a67 2
+extern _mirror_pos_t _getTagPos(const void * addr);
+
+@
+
+
+1.33
+log
+@Renamed tcapi_postproc_newtags.h to tcapi_postinstr.h,
+and include it now if defined(USE_MACROS) || defined(TC_INTERNAL)
+@
+text
+@d612 1
+a612 1
+	  && !(*((_MIRROR_##type *)_sst_tmp_tagptr + 1) & EVEN_CONT_MASK) \
+@
+
+
+1.32
+log
+@Cleaned up the #ifdefs a bit.
+Wrote the setScalarTag macros.
+@
+text
+@d40 4
+a64 2
+
+#include <tcapi_postproc_newtags.h>
+@
+
+
+1.31
+log
+@Shortened the more compact version of _copyTag_char.
+Removed the other version and did some testing.
+@
+text
+@d1 1
+a1 1
+#ifndef _TYPECHECK_API_H
+d25 1
+a25 1
+#ifdef LONGDOUBLE
+d28 1
+a28 1
+#endif /* LONGDOUBLE */
+d33 1
+a33 1
+#ifndef TC_PREINSTR
+d40 1
+a40 1
+#ifdef NEWTAGS
+d50 1
+a50 1
+#ifdef COUNT_MACROS
+d55 1
+d58 1
+a58 1
+#else /* !COUNT_MACROS */
+d60 1
+a60 1
+#endif /* COUNT_MACROS */
+d62 1
+d64 1
+a64 4
+#include <tcapi_postproc_newtags.h>
+#else /* NEWTAGS */
+#include <tcapi-postproc.h>
+#endif /* NEWTAGS */
+d68 1
+a68 1
+#endif /* !TC_PREINSTR */
+d74 1
+d76 2
+a77 1
+#ifdef TC_PREINSTR
+d80 1
+a80 1
+#else /* !TC_PREINSTR */
+d83 1
+a83 1
+#endif /* TC_PREINSTR */
+d85 1
+d87 2
+a88 1
+#ifdef TC_PREINSTR
+d103 1
+a103 1
+#ifdef LONGDOUBLE
+d106 1
+a106 1
+#endif
+d111 2
+a112 2
+#else /* !TC_PREINSTR */
+#ifdef NEWTAGS
+d151 1
+a151 1
+#ifdef LONGDOUBLE
+d153 1
+a153 1
+#endif
+d158 1
+a158 1
+#else /* !NEWTAGS */
+d170 1
+a170 1
+#ifdef LONGDOUBLE
+d172 1
+a172 1
+#endif
+d175 2
+a176 2
+#endif /* NEWTAGS */
+#endif /* TC_PREINSTR */
+d178 1
+d180 2
+a181 1
+#ifdef TC_PREINSTR
+d196 1
+a196 1
+#ifdef LONGDOUBLE
+d199 1
+a199 1
+#endif
+d204 2
+a205 2
+#else /* !TC_PREINSTR */
+#ifdef NEWTAGS
+d237 1
+a237 1
+#ifdef LONGDOUBLE
+d239 1
+a239 1
+#endif
+d243 1
+a243 1
+#else /* !NEWTAGS */
+d254 1
+a254 1
+#ifdef LONGDOUBLE
+d256 1
+a256 1
+#endif
+d260 2
+a261 2
+#endif /* NEWTAGS */
+#endif /* TC_PREINSTR */
+d263 4
+a266 1
+#ifdef TC_PREINSTR
+d281 1
+a281 1
+#ifdef LONGDOUBLE
+d284 1
+a284 1
+#endif
+d289 2
+a290 2
+#else /* !TC_PREINSTR */
+#ifdef NEWTAGS
+d343 1
+a343 1
+#ifdef LONGDOUBLE
+d345 1
+a345 1
+#endif
+d350 1
+a350 1
+#else /* !NEWTAGS */
+d362 1
+a362 1
+#ifdef LONGDOUBLE
+d364 1
+a364 1
+#endif
+d367 2
+a368 2
+#endif /* NEWTAGS */
+#endif /* TC_PREINSTR */
+d370 4
+a373 3
+/* setStringTag: A shortcut for libio routines that read in a string to
+		 set the tags to an array of chars. */
+#ifdef TC_PREINSTR
+d376 1
+a376 1
+#else /* !TC_PREINSTR */
+d379 1
+a379 1
+#endif /* TC_PREINSTR */
+d381 1
+d383 2
+a384 1
+#ifdef TC_PREINSTR
+d389 1
+a389 1
+#else /* !TC_PREINSTR */
+d394 1
+a394 1
+#endif /* TC_PREINSTR */
+d396 1
+d398 2
+a399 1
+#ifdef TC_PREINSTR
+d404 1
+a404 1
+#else /* !TC_PREINSTR */
+d409 1
+a409 1
+#endif /* TC_PREINSTR */
+d411 1
+d413 2
+a414 1
+#ifdef TC_PREINSTR
+d429 1
+a429 1
+#ifdef LONGDOUBLE
+d432 1
+a432 1
+#endif /* LONGDOUBLE */
+d435 1
+a435 1
+#else /* !TC_PREINSTR */
+d453 1
+a453 1
+#ifdef LONGDOUBLE
+d456 1
+a456 1
+#endif /* LONGDOUBLE */
+d459 1
+a459 1
+#endif /* TC_PREINSTR */
+d461 1
+d463 2
+a464 1
+#ifdef TC_PREINSTR
+d479 1
+a479 1
+#ifdef LONGDOUBLE
+d482 1
+a482 1
+#endif /* LONGDOUBLE */
+d485 1
+a485 1
+#else /* !TC_PREINSTR */
+d503 1
+a503 1
+#ifdef LONGDOUBLE
+d506 1
+a506 1
+#endif /* LONGDOUBLE */
+d510 1
+a510 1
+#endif /* TC_PREINSTR */
+d512 1
+d514 2
+a515 1
+#ifdef TC_PREINSTR
+d530 1
+a530 1
+#ifdef LONGDOUBLE
+d533 1
+a533 1
+#endif /* LONGDOUBLE */
+d550 1
+a550 1
+#ifdef LONGDOUBLE
+d553 1
+a553 1
+#endif /* LONGDOUBLE */
+d556 2
+a557 3
+#else /* !TC_PREINSTR */
+extern void _setScalarTag(const char * fname, int line, int col,
+			void * addr, _ctype_t type);
+a560 20
+#define _setScalarTag_int(f,l,c,a) \
+			_setScalarTag(f,l,c,a,_ctype_int)
+#define _setScalarTag_char(f,l,c,a) \
+			_setScalarTag(f,l,c,a,_ctype_char)
+#define _setScalarTag_short(f,l,c,a) \
+			_setScalarTag(f,l,c,a,_ctype_short)
+#define _setScalarTag_long(f,l,c,a) \
+			_setScalarTag(f,l,c,a,_ctype_long)
+#define _setScalarTag_longlong(f,l,c,a) \
+			_setScalarTag(f,l,c,a,_ctype_longlong)
+#define _setScalarTag_float(f,l,c,a) \
+			_setScalarTag(f,l,c,a,_ctype_float)
+#define _setScalarTag_double(f,l,c,a) \
+			_setScalarTag(f,l,c,a,_ctype_double)
+#ifdef LONGDOUBLE
+#define _setScalarTag_longdouble(f,l,c,a) \
+			_setScalarTag(f,l,c,a,_ctype_longdouble)
+#endif /* LONGDOUBLE */
+#define _setScalarTag_pointer(f,l,c,a) \
+			_setScalarTag(f,l,c,a,_ctype_pointer)
+d575 1
+a575 1
+#ifdef LONGDOUBLE
+d578 1
+a578 1
+#endif /* LONGDOUBLE */
+d582 104
+a685 1
+#endif /* TC_PREINSTR */
+d687 1
+d689 2
+a690 1
+#ifdef TC_PREINSTR
+d695 1
+a695 1
+#else /* !TC_PREINSTR */
+d700 1
+a700 1
+#endif /* TC_PREINSTR */
+d702 4
+a705 2
+/* replicateTag */
+#ifdef TC_PREINSTR
+d711 1
+a711 1
+#else /* !TC_PREINSTR */
+d717 1
+a717 1
+#endif /* TC_PREINSTR */
+d751 1
+a751 1
+#if TC_PREINSTR
+d760 1
+a760 1
+#ifdef LONGDOUBLE
+d762 1
+a762 1
+#endif /* LONGDOUBLE */
+d765 1
+a765 1
+#else /* !TC_PREINSTR */
+d774 1
+a774 1
+#ifdef LONGDOUBLE
+d776 1
+a776 1
+#endif /* LONGDOUBLE */
+d786 1
+a786 1
+#ifdef LONGDOUBLE
+d788 1
+a788 1
+#endif /* LONGDOUBLE */
+d791 1
+a791 1
+#endif /* TC_PREINSTR */
+d803 1
+a803 1
+#endif /* #ifndef TYPECHECK_API */
+@
+
+
+1.30
+log
+@Fixed the bug of testing the whole tag instead of just the cont bit
+in the two version of the _copyTag_char macro.  Also added a test
+of the copied tag for unalloc in the more compact macro.
+@
+text
+@d297 11
+a307 13
+	  ( ((unsigned long) (src) & 0x1) \
+	    ? (!(_ct_tmp_src & ODD_CONT_MASK) \
+	       && (_ct_tmp_tag = ODD_TAG_BITS(_ct_tmp_src))) \
+	    : (!(_ct_tmp_src & (EVEN_CONT_MASK|ODD_CONT_MASK)) \
+	       && (_ct_tmp_tag = EVEN_TAG_BITS(_ct_tmp_src)))) \
+	  && _ct_tmp_tag && \
+	  ( ((unsigned long) (dst) & 0x1) \
+	    ? (!(*_ct_tmp_dstptr & ODD_CONT_MASK) \
+	       && (*_ct_tmp_dstptr &= ~ODD_TAG_MASK, \
+		   *_ct_tmp_dstptr |= (_ct_tmp_tag << BITS_PER_TAG))) \
+	    : (!(*_ct_tmp_dstptr & (EVEN_CONT_MASK|ODD_CONT_MASK)) \
+	       && (*_ct_tmp_dstptr &= ~EVEN_TAG_MASK, \
+		   *_ct_tmp_dstptr |= _ct_tmp_tag))) \
+a309 24
+
+/* The above should do the same thing as this more explicit version:
+#define _copyTag_char(f,l,c,dst,src,z) (\
+	  CNTMAC(_ctctr), \
+	  _ct_tmp_src = GET_TAG_BYTE(src), \
+	  _ct_tmp_dstptr = &GET_TAG_BYTE(dst), \
+	  ( ((unsigned long) (dst) & 0x1) \
+	    ? (!(*_ct_tmp_dstptr & ODD_CONT_MASK) \
+	       && (*_ct_tmp_dstptr &= ~ODD_TAG_MASK, \
+		   ((unsigned long) (src) & 0x1) \
+		   ? (!(_ct_tmp_src & ODD_CONT_MASK) \
+		      && (*_ct_tmp_dstptr |= (ODD_TAG_BITS(_ct_tmp_src) << BITS_PER_TAG))) \
+		   : (!(_ct_tmp_src & (EVEN_CONT_MASK|ODD_CONT_MASK)) \
+		      && (*_ct_tmp_dstptr |= (EVEN_TAG_BITS(_ct_tmp_src) << BITS_PER_TAG))))) \
+	   : (!(*_ct_tmp_dstptr & (EVEN_TAG_MASK|ODD_CONT_MASK)) \
+	      && (*_ct_tmp_dstptr &= ~EVEN_TAG_MASK, \
+		  ((unsigned long) (src) & 0x1) \
+		  ? (!(_ct_tmp_src & ODD_CONT_MASK) \
+		     && (*_ct_tmp_dstptr |= ODD_TAG_BITS(_ct_tmp_src))) \
+		  : (!(_ct_tmp_src & (EVEN_CONT_MASK|ODD_CONT_MASK)) \
+		     && (*_ct_tmp_dstptr |= EVEN_TAG_BITS(_ct_tmp_src))))) \
+	   ) || (_copyTag(f,l,c,dst,src,z),CNTMAC(_ctfctr)) \
+	)
+*/
+@
+
+
+1.29
+log
+@Added a couple of comments, renamed _ct_tmp_dst to _ct_tmp_dstptr,
+and wrote the _copyTag_char macro (two similar versions).
+Did not test the macro, yet.
+@
+text
+@d300 1
+a300 1
+	    : (!(_ct_tmp_src & (EVEN_TAG_MASK|ODD_CONT_MASK)) \
+d302 1
+a302 1
+	  && \
+d307 1
+a307 1
+	    : (!(*_ct_tmp_dstptr & (EVEN_TAG_MASK|ODD_CONT_MASK)) \
+a312 1
+
+d324 1
+a324 1
+		   : (!(_ct_tmp_src & (EVEN_TAG_MASK|ODD_CONT_MASK)) \
+d331 1
+a331 1
+		  : (!(_ct_tmp_src & (EVEN_TAG_MASK|ODD_CONT_MASK)) \
+@
+
+
+1.28
+log
+@Just added some comments over macros.
+@
+text
+@d113 8
+d286 49
+a334 8
+/*
+#define CT_CHAR(f,l,c,dst,src,z) (\
+	  CNTMAC(_ctctr),
+	  ( ((unsigned long) (addr) & 0x1) \
+	    ? (ODD_CONT_BITS(GET_TAG_BYTE(addr)) == _typetag_int) \
+	    : ((GET_TAG_BYTE(addr) & (EVEN_TAG_MASK|ODD_CONT_MASK)) \
+		== _typetag_int) \
+	  ) || (_copyTag(f,l,c,dst,src,z),CNTMAC(_ctfctr)) \
+a336 1
+static char * _ct_tmp_dst, _ct_tmp_src;
+d343 1
+a343 1
+	  _ct_tmp_dst = &GET_TAG_BYTE(dst), \
+d349 1
+a349 1
+	    && ((*_ct_tmp_dst & (EVEN_CONT_MASK|ODD_CONT_MASK)) \
+d351 2
+a352 2
+	    && ((1 << (ODD_TYPE_BITS(*_ct_tmp_dst))) == size) \
+	    && (*_ct_tmp_dst = _ct_tmp_src) \
+a355 1
+#define _copyTag_char(f,l,c,d,s,z)	_copyTag(f,l,c,d,s,z)
+@
+
+
+1.27
+log
+@Added copyTag macros (except for char case)
+@
+text
+@d121 4
+d196 3
+d208 2
+d290 2
+@
+
+
+1.26
+log
+@verifyPtr is now "typed";
+enhanced verifyPtr to check size bits;
+fancy-macrofied verifyTag macros (using ##);
+in conclusion: verifyTag and verifyPtr are now "cleanly" macrofied.
+@
+text
+@d42 1
+a42 1
+
+d44 1
+a44 1
+
+d54 1
+d216 1
+a216 2
+#define _verifyTag_longdouble(f,l,c,e,a) \
+	(CNTMAC(_vtctr),_verifyTag(f,l,c,e,a,_ctype_longdouble),CNTMAC(_vtfctr))
+d265 48
+d328 1
+@
+
+
+1.25
+log
+@Added macro counter
+@
+text
+@d42 1
+d45 1
+d85 21
+a105 1
+extern void _verifyPtr(const char * fname, int line, int col,
+d109 1
+a109 1
+extern void _func_verifyPtr(const char * fname, int line, int col,
+d112 1
+a112 1
+#define _verifyPtr(f,l,c,exp,addr,size) ( \
+d117 1
+a117 1
+	  ) || (_func_verifyPtr(f,l,c,exp,addr,size),CNTMAC(_vpfctr)) \
+d120 22
+d143 1
+d146 13
+a190 5
+#define _verifyTag_int(f,l,c,e,addr)	( \
+	  CNTMAC(_vtctr), \
+	  (GET_TAG_BYTE(addr) == GET_TAG_BYTE(&_int_static_rep[0])) \
+	  || (_verifyTag(f,l,c,e,addr,_ctype_int),CNTMAC(_vtfctr)) \
+	)
+d194 1
+a194 2
+	    ? ((GET_TAG_BYTE(addr) & ODD_TAG_MASK) \
+		== (_typetag_int << BITS_PER_TAG)) \
+d199 2
+a200 1
+#define _verifyTag_short(f,l,c,e,addr)	( \
+d202 2
+a203 22
+	  (GET_TAG_BYTE(addr) == GET_TAG_BYTE(&_short_static_rep[0])) \
+	  || (_verifyTag(f,l,c,e,addr,_ctype_short),CNTMAC(_vtfctr)) \
+	)
+#define _verifyTag_long(f,l,c,e,addr)	( \
+	  CNTMAC(_vtctr), \
+	  (GET_TAG_BYTE(addr) == GET_TAG_BYTE(&_long_static_rep[0])) \
+	  || (_verifyTag(f,l,c,e,addr,_ctype_long),CNTMAC(_vtfctr)) \
+	)
+#define _verifyTag_longlong(f,l,c,e,addr)	( \
+	  CNTMAC(_vtctr), \
+	  (GET_TAG_BYTE(addr) == GET_TAG_BYTE(&_longlong_static_rep[0])) \
+	  || (_verifyTag(f,l,c,e,addr,_ctype_longlong),CNTMAC(_vtfctr)) \
+	)
+#define _verifyTag_float(f,l,c,e,addr)	( \
+	  CNTMAC(_vtctr), \
+	  (GET_TAG_BYTE(addr) == GET_TAG_BYTE(&_float_static_rep[0])) \
+	  || (_verifyTag(f,l,c,e,addr,_ctype_float),CNTMAC(_vtfctr)) \
+	)
+#define _verifyTag_double(f,l,c,e,addr)	( \
+	  CNTMAC(_vtctr), \
+	  (GET_TAG_BYTE(addr) == GET_TAG_BYTE(&_double_static_rep[0])) \
+	  || (_verifyTag(f,l,c,e,addr,_ctype_double),CNTMAC(_vtfctr)) \
+d205 9
+a217 5
+#define _verifyTag_pointer(f,l,c,e,addr)	( \
+	  CNTMAC(_vtctr), \
+	  (GET_TAG_BYTE(addr) == GET_TAG_BYTE(&_pointer_static_rep[0])) \
+	  || (_verifyTag(f,l,c,e,addr,_ctype_pointer),CNTMAC(_vtfctr)) \
+	)
+@
+
+
+1.24
+log
+@Added macrofied versions of verifyPtr and verifyTag
+@
+text
+@d41 3
+d47 12
+d91 1
+d95 1
+a95 1
+	  ) || (_func_verifyPtr(f,l,c,exp,addr,size),1) \
+d134 1
+d136 1
+a136 1
+	  || (_verifyTag(f,l,c,e,addr,_ctype_int),1) \
+d139 1
+d141 2
+a142 1
+	    ? ((GET_TAG_BYTE(addr) & ODD_TAG_MASK) == _typetag_int) \
+d145 1
+a145 1
+	  ) || (_verifyTag(f,l,c,e,addr,_ctype_char),1) \
+d148 1
+d150 1
+a150 1
+	  || (_verifyTag(f,l,c,e,addr,_ctype_short),1) \
+d153 1
+d155 1
+a155 1
+	  || (_verifyTag(f,l,c,e,addr,_ctype_long),1) \
+d158 1
+d160 1
+a160 1
+	  || (_verifyTag(f,l,c,e,addr,_ctype_longlong),1) \
+d163 1
+d165 1
+a165 1
+	  || (_verifyTag(f,l,c,e,addr,_ctype_float),1) \
+d168 1
+d170 1
+a170 1
+	  || (_verifyTag(f,l,c,e,addr,_ctype_double),1) \
+d173 2
+a174 1
+#define _verifyTag_longdouble(f,l,c,e,a) _verifyTag(f,l,c,e,a,_ctype_longdouble)
+d177 1
+d179 1
+a179 1
+	  || (_verifyTag(f,l,c,e,addr,_ctype_pointer),1) \
+d181 2
+a182 1
+#define _verifyTag_aggregate(f,l,c,e,a)	_verifyTag(f,l,c,e,a,_ctype_aggregate)
+@
+
+
+1.23
+log
+@Added comment.
+@
+text
+@d41 3
+d71 12
+d85 1
+d113 45
+d174 1
+@
+
+
+1.22
+log
+@Alexey added LONGDOUBLE ifdefs;
+Made verifyTag and copyTag "typed" functions.
+@
+text
+@d14 2
+@
+
+
+1.21
+log
+@Added more const's.
+This covers most cases encountered so far; feel free to add more as
+the need arises.
+@
+text
+@d23 2
+d26 1
+d38 3
+d42 1
+d63 2
+a64 2
+extern void _verifyPtr(const char * fname, int line, int col, const char * exp,
+			const void * addr, size_t size);
+d66 2
+a67 2
+extern void _verifyPtr(const char * fname, int line, int col, const char * exp,
+			const void * addr, size_t size);
+d72 39
+a110 5
+extern void _verifyTag(const char * fname, int line, int col, const char * exp,
+			const void * addr, _ctype_t reftype);
+#else /* !TC_PREINSTR */
+extern void _verifyTag(const char * fname, int line, int col, const char * exp,
+			const void * addr, _ctype_t reftype);
+d114 21
+a134 1
+extern void _copyTag(const char * fname, int line, int col,
+d139 13
+d206 1
+d209 1
+d230 1
+d233 1
+d254 1
+d257 1
+d278 1
+d281 1
+d303 1
+d306 1
+d323 1
+d326 1
+d349 1
+d352 1
+d369 1
+d372 1
+d447 1
+d449 1
+d461 1
+d463 1
+d473 1
+d475 1
+@
+
+
+1.20
+log
+@Changed (_extern)_setScalarTag and _setScalarUninitTag to be
+type-specialized; also made some of the API function arguments
+const void *s. May want to do this for all!
+@
+text
+@d74 1
+a74 1
+			void * dst, const void * src, size_t size);
+d77 1
+a77 1
+			void * dst, const void * src, size_t size);
+d321 1
+a321 1
+  void * addr;
+d342 1
+a342 1
+			void * addr, size_t size);
+@
+
+
+1.19
+log
+@Changed my mind:
+ - removed _extern_setStringTag: not needed!
+ - removed comment about str_len = 0: not needed either!
+@
+text
+@d57 1
+a57 1
+			void * addr, size_t size);
+d60 1
+a60 1
+			void * addr, size_t size);
+d66 1
+a66 1
+			void * addr, _ctype_t reftype);
+d69 1
+a69 1
+			void * addr, _ctype_t reftype);
+d84 1
+a84 1
+			char * addr, size_t str_len);
+d87 1
+a87 1
+			char * addr, size_t str_len);
+d90 1
+a90 1
+/* setUninitTag */
+d94 2
+d99 2
+d103 1
+a103 1
+/* registerVar */
+d107 2
+d112 2
+d118 18
+a135 2
+extern void _setScalarUninitTag(const char * fname, int line, int col,
+			void * addr, _ctype_t type);
+d139 19
+d162 18
+a179 2
+extern void _setScalarTagPtrToInt(const char * fname, int line, int col,
+			void * addr, _ctype_t type);
+d183 20
+d205 39
+a243 2
+/* setScalarTag */
+#ifdef TC_PREINSTR
+d246 1
+a246 2
+#else /* !TC_PREINSTR */
+extern void _setScalarTag(const char * fname, int line, int col,
+d248 38
+d288 1
+a288 1
+/* replicateTag */
+d292 2
+a296 9
+#endif /* TC_PREINSTR */
+
+/* EXTERN VERSIONS */
+extern void _extern_setUninitTag(const char * fname, int line, int col,
+			void * addr, size_t size);
+extern void _extern_registerVar(const char * fname, int line, int col,
+			const char * varname, void * addr, size_t size);
+extern void _extern_setScalarTag(const char * fname, int line, int col,
+			void * addr, _ctype_t type);
+d299 1
+@
+
+
+1.18
+log
+@Just added a comment to signify this change: setScalarTag with str_len = 0
+now means we'll compute strlen ourselves.
+@
+text
+@d81 1
+a81 2
+		 set the tags to an array of chars.
+   Note: str_len == 0 means strlen(addr) will be computed. */
+a150 2
+extern void _extern_setStringTag(const char * fname, int line, int col,
+			char * addr, size_t str_len);
+@
+
+
+1.17
+log
+@Added _extern_setStringTag;
+Changed _setStringTag's arguments to be of type char * and size_t
+(was void * and int).
+@
+text
+@d81 2
+a82 1
+		 set the tags to an array of chars. */
+@
+
+
+1.16
+log
+@Complete overhaul: de-getTagPos-ified, restructured (#ifdef TC_PREINSTR, etc).
+@
+text
+@d84 1
+a84 1
+			void * addr, int str_len);
+d87 1
+a87 1
+			void * addr, int str_len);
+d151 2
+@
+
+
+1.15
+log
+@Converted mirror_pos_t, pos_and_size_t, etc. to corresponding
+isLoc (intermediate/instrumentation space location).
+Changed getTagPos to ps2is.
+Changed staticpos things to staticIsLoc.
+@
+text
+@a3 2
+#define BYTE 8
+
+a13 7
+typedef unsigned char uchar;
+
+typedef enum {err_none, err_unalloc, err_uninit,
+		err_wrong_type, err_short, err_long} _error_t;
+
+typedef enum {Unalloc = 0, Uninit, Int, Float, Ptr, Bits} _type_t;
+
+d28 1
+a28 1
+typedef const void * _is_loc_t;
+d31 2
+a32 2
+  uchar * ptr;
+  uchar bit;
+d35 1
+a35 3
+/******************************************************************/
+/****************** API functions and variables *******************/
+/******************************************************************/
+d37 1
+a37 3
+/* declaration stuff */
+extern void _registerExtern(const char * fname, int line, int col,
+			void * addr, _ctype_t type, size_t size_aggr);
+d39 1
+a39 1
+/* instr[RL]value stuff */
+d41 3
+a43 1
+extern _mirror_pos_t _getTagPos(_is_loc_t isLoc);
+d45 8
+a52 1
+extern void _inxTagPos(_is_loc_t * isLocPtr, size_t offset);
+d54 2
+d57 5
+a61 1
+			const void * addr, size_t size);
+d63 5
+d69 2
+a70 1
+			_is_loc_t isLoc, _ctype_t reftype);
+d72 4
+d77 6
+a82 7
+			_is_loc_t dst,
+			_is_loc_t src,
+			size_t size);
+
+/* A shortcut for libio routines that read in a string to set the
+ * tags to an array of chars.
+ */
+d85 4
+d90 5
+d96 2
+a97 3
+			_is_loc_t isLoc, size_t size);
+extern void _extern_setUninitTag(const char * fname, int line, int col,
+			_is_loc_t isLoc, size_t size);
+d99 2
+d103 2
+a104 1
+extern void _extern_registerVar(const char * fname, int line, int col,
+d106 1
+d108 5
+d114 5
+a118 1
+			const void * addr, _ctype_t type);
+d120 8
+a127 1
+			const void * addr, _ctype_t type);
+d129 5
+a133 3
+			const void * addr, _ctype_t type);
+extern void _extern_setScalarTag(const char * fname, int line, int col,
+			const void * addr, _ctype_t type);
+d135 2
+d139 12
+d154 2
+d157 1
+a157 1
+			_is_loc_t * isLocPtr,
+d161 7
+d174 1
+a174 1
+  _is_loc_t isLoc;
+d176 1
+a176 1
+} _isLoc_and_size_t;
+d178 1
+a178 1
+extern _isLoc_and_size_t * _globalArgIsLocs;
+d181 1
+a181 1
+extern _is_loc_t _dummyIsLoc;
+d186 1
+a186 1
+			_isLoc_and_size_t * argIsLocs,
+d194 40
+a233 2
+			void * sf_start, _isLoc_and_size_t * argIsLocs,
+			_is_loc_t isLoc, size_t size);
+d235 1
+a235 13
+/*******************************************************/
+/*************** static mirror isLoc-es ***************/
+/*******************************************************/
+
+extern _is_loc_t _int_staticIsLoc;
+extern _is_loc_t _char_staticIsLoc;
+extern _is_loc_t _short_staticIsLoc;
+extern _is_loc_t _long_staticIsLoc;
+extern _is_loc_t _longlong_staticIsLoc;
+extern _is_loc_t _float_staticIsLoc;
+extern _is_loc_t _double_staticIsLoc;
+extern _is_loc_t _longdouble_staticIsLoc;
+extern _is_loc_t _pointer_staticIsLoc;
+@
+
+
+1.14
+log
+@Added prototype for _setScalarTagPtrToInt(),
+added extern declaration of strictPointer (compile time flag).
+@
+text
+@d37 2
+d54 1
+a54 1
+extern _mirror_pos_t _getTagPos(const void * addr);
+d56 1
+a56 1
+extern void _inxTagPos(_mirror_pos_t * tagposptr, size_t offset);
+d62 1
+a62 1
+			_mirror_pos_t tagpos, _ctype_t reftype);
+d65 2
+a66 2
+			_mirror_pos_t dst,
+			_mirror_pos_t src,
+d76 1
+a76 1
+			_mirror_pos_t tagpos, size_t size);
+d78 1
+a78 1
+			_mirror_pos_t tagpos, size_t size);
+d100 1
+a100 1
+			_mirror_pos_t * tagposptr,
+d110 1
+a110 1
+  _mirror_pos_t pos;
+d112 1
+a112 1
+} _pos_and_size_t;
+d114 1
+a114 1
+extern _pos_and_size_t * _globalArgTags;
+d117 1
+a117 1
+extern _mirror_pos_t _dummyTagPos;
+d122 1
+a122 1
+			_pos_and_size_t * argTags,
+d130 2
+a131 2
+			void * sf_start, _pos_and_size_t * argtags,
+			_mirror_pos_t tagpos, size_t size);
+d134 1
+a134 1
+/*************** static mirror tagpos-es ***************/
+d137 9
+a145 9
+extern _mirror_pos_t _int_staticpos;
+extern _mirror_pos_t _char_staticpos;
+extern _mirror_pos_t _short_staticpos;
+extern _mirror_pos_t _long_staticpos;
+extern _mirror_pos_t _longlong_staticpos;
+extern _mirror_pos_t _float_staticpos;
+extern _mirror_pos_t _double_staticpos;
+extern _mirror_pos_t _longdouble_staticpos;
+extern _mirror_pos_t _pointer_staticpos;
+@
+
+
+1.13
+log
+@Added prototype for _setScalarUninitTag function.
+@
+text
+@d42 3
+a44 3
+/**********************************************************/
+/****************** Interface functions *******************/
+/**********************************************************/
+d85 2
+d103 3
+a105 1
+/* function stuff */
+d131 4
+a134 1
+/* static mirror tagpos's */
+d145 9
+a153 3
+/**********************************************************/
+/*************** End of interface functions ***************/
+/**********************************************************/
+@
+
+
+1.12
+log
+@Removed previously commented-out _mirror_*alloc prototypes.
+@
+text
+@d83 2
+@
+
+
+1.11
+log
+@Added _ctype_longlong and _ctype_longdouble.
+@
+text
+@a135 12
+/* The following functions wrap memory allocation/deallocation
+   functions to provide initialization of tags. */
+/* From <stdlib.h> */
+/* repl. by typecheck_*alloc in tcmalloc.h
+extern void * _mirror_malloc(size_t size);
+extern void * _mirror_calloc(size_t nelem, size_t elsize);
+extern void   _mirror_free(void * ptr);
+extern void * _mirror_memalign(size_t alignment, size_t size);
+extern void * _mirror_realloc(void * ptr, size_t size);
+extern void * _mirror_valloc(size_t size);
+*/
+
+@
+
+
+1.10
+log
+@Removed _mirror_alloca
+@
+text
+@d29 6
+a34 4
+  _ctype_float = 5,
+  _ctype_double = 6,
+  _ctype_pointer = 7,
+  _ctype_aggregate = 8
+d130 1
+d133 1
+@
+
+
+1.9
+log
+@Added "const" qualifier to certain instrumented function args.
+@
+text
+@d135 1
+d142 1
+a142 2
+/* From <alloca.h> */
+extern void * _mirror_alloca(size_t size);
+@
+
+
+1.8
+log
+@Removed commented out stuff (cleaned things up a bit).
+@
+text
+@d50 1
+a50 1
+extern _mirror_pos_t _getTagPos(void * addr);
+d55 1
+a55 1
+			void * addr, size_t size);
+d82 1
+a82 1
+			void * addr, _ctype_t type);
+d84 1
+a84 1
+			void * addr, _ctype_t type);
+@
+
+
+1.7
+log
+@Commented out obsolete functions processReturnTag(), markStackFrame(),
+clearStackFrame() and object dummyArgTags; added replacement functions
+markStackStart() and processReturn() (with helper function compareTags()),
+and object dummyTagPos.
+@
+text
+@a90 9
+/* - old prototype
+extern void _promoteTag(const char * fname, int line, int col,
+			_mirror_pos_t * tagposptr,
+                        _mirror_pos_t opnd_tagpos,
+                        size_t opnd_size,
+                        _mirror_pos_t expr_tagpos,
+                        size_t expr_size);
+*/
+
+d107 1
+a107 4
+/*
+extern _pos_and_size_t _dummyArgTag;
+*/
+/**/extern _mirror_pos_t _dummyTagPos;
+a114 5
+/*
+extern void _processReturnTag(const char * fname, int line, int col,
+			_pos_and_size_t retTag,
+			void * addr, _ctype_t type, size_t size_aggr);
+*/
+d116 1
+a116 1
+/**/extern void _markStackStart(const char * fname, int line, int col,
+d118 2
+a119 1
+/**/extern void _processReturn(const char * fname, int line, int col,
+a121 7
+/*
+extern void _markStackFrame(const char * fname, int line, int col,
+			void ** sf_start, void ** sf_end,
+			void * formal0, void * formaln);
+extern void _clearStackFrame(const char * fname, int line, int col,
+			void * sf_start, void * sf_end);
+*/
+@
+
+
+1.6
+log
+@Added _extern_setUninitTag and _verifyPtr; changed _setUninitTag return
+type from int to void (previous return type was just a dummy anyway).
+@
+text
+@d116 1
+d118 2
+d127 1
+d131 8
+d144 1
+@
+
+
+1.5
+log
+@Removed annoying and useless uint/ulong typedefs (was
+causing a conflict with <sys/types.h>.
+@
+text
+@d54 4
+a57 2
+extern void _verifyTag(const char * fname, int line, int col,
+			const char * exp,
+d71 3
+a73 1
+extern int _setUninitTag(const char * fname, int line, int col,
+@
+
+
+1.4
+log
+@Changed verifyTag's args from (tagpos,staticpos) to (tagpos, ctype).
+Added inxTagPos and processReturnTag functions.
+@
+text
+@a16 2
+typedef unsigned  int  uint;
+typedef unsigned long ulong;
+@
+
+
+1.3
+log
+@Added _ctype_void_invalid placeholder to _ctype enumeration.
+@
+text
+@d54 2
+d58 1
+a58 1
+			_mirror_pos_t tagpos, _mirror_pos_t staticpos);
+d121 3
+@
+
+
+1.2
+log
+@Changed promoteTag to take _ctype enums and a "tmpspace" argument
+(replacing clumsier staticpos/sizeof arguments).
+@
+text
+@d26 9
+a34 8
+  _ctype_int = 0,
+  _ctype_char = 1,
+  _ctype_short = 2,
+  _ctype_long = 3,
+  _ctype_float = 4,
+  _ctype_double = 5,
+  _ctype_pointer = 6,
+  _ctype_aggregate = 7
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d86 1
+d93 1
+d95 2
+a96 2
+/* - switch to this?
+extern void _promoteTag(_mirror_pos_t * tagposptr,
+d98 2
+a99 2
+                        _ctype_t expr_type)
+*/
+@

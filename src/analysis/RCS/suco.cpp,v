@@ -1,0 +1,862 @@
+head	1.17;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+1.17
+date	2004.05.25.14.20.58;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2004.05.06.23.30.10;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2003.06.18.20.06.40;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2003.03.20.23.01.22;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2003.02.22.00.05.44;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2003.02.18.23.26.50;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2003.02.13.20.44.50;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2003.01.08.21.44.38;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2003.01.07.20.01.38;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.11.27.16.20.42;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.11.25.19.29.16;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.11.21.18.39.07;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.11.20.19.09.02;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.11.19.18.47.44;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.11.15.22.07.32;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.10.21.21.11.31;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.08.14.19.29.16;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@SUCO list and set library.
+@
+
+
+1.17
+log
+@Added set::Subtract().
+@
+text
+@#ifndef SUCO_CPP
+#define SUCO_CPP
+
+//
+// The data structures used by SUan and COlby (SUCO) in this
+// project.  It includes:
+//   suco_llist - a linked list
+//   suco_queue - a queue
+//   suco_stack - a stack
+//   suco_olist - an ordered list
+//   suco_set   - a set
+// Note: very little 'protection' is provided; designed on the
+// assumption that its users (us) know what they (we) are doing.
+//
+
+#include "suco.h"
+
+//----------SUCO_NODE-----------
+template <class T>
+typename suco_llist<T>::_suco_node * suco_llist<T>::_suco_node::freelist = 0;
+
+template <class T>
+int suco_llist<T>::_suco_node::num_new_nodes = 0;
+template <class T>
+int suco_llist<T>::_suco_node::num_recy_nodes = 0;
+
+template <class T>
+typename suco_llist<T>::_suco_node * suco_llist<T>::_suco_node::acquire(T i, _suco_node * n)
+{
+  if(freelist){
+    num_recy_nodes++;
+    _suco_node * nn = freelist;
+    freelist = freelist->next;
+    nn->item = i;
+    nn->next = n;
+    return nn;
+  } else {
+    num_new_nodes++;
+    return new _suco_node(i,n);
+  }
+
+}
+
+template <class T>
+void suco_llist<T>::_suco_node::dispose(_suco_node * n)
+{
+  if(suco_recycle){
+    n->item = 0;
+    n->next = freelist;
+    freelist = n;
+  } else {
+    delete n;
+  }
+}
+
+template <class T>
+int suco_llist<T>::_suco_node::freelistLength()
+{
+  int i = 0;
+  for(_suco_node * n = freelist; n; n = n->next) i++;
+  return i;
+}
+
+//----------SUCO_LLIST-----------
+
+template <class T>
+suco_llist<T>::~suco_llist()
+{
+  _suco_node * deleteval;
+  while(_head){
+    deleteval = _head;
+    _head = _head->next;
+    _suco_node::dispose(deleteval);
+  }
+}
+
+template <class T>
+bool suco_llist<T>::Insert(T item)
+{
+  if(!item) return false;
+
+  _head = _suco_node::acquire(item, _head);
+  if(!_head->next) _tail = &(_head->next);
+  return true;
+}
+
+template <class T>
+void suco_llist<T>::Append(T item)
+{
+  if(!item) return;
+
+  *_tail = _suco_node::acquire(item);
+  _tail = &((*_tail)->next);
+}
+
+template <class T>
+void suco_llist<T>::Attach(suco_llist<T>& list)
+{
+  if(list._head){
+    *_tail = list._head;
+    _tail = list._tail;
+    list._head = 0;
+    list._tail = &list._head;
+  }
+}
+
+template <class T>
+void suco_llist<T>::Copy(suco_llist<T>& list)
+{
+  if(list._head){
+    Clear();
+
+    _suco_node ** nn = &_head;
+
+    for(_suco_node * ln = list._head; ln; ln = ln->next){
+      *nn = _suco_node::acquire(ln->item);
+      nn = &(*nn)->next;
+    }
+
+    _tail = nn;
+  }
+}
+
+
+template <class T>
+T suco_llist<T>::Last()
+{
+  T last = 0;
+  suco_iterator<T> si(*this);
+  while(si.Iterate())
+    last = si.Current();
+  return last;
+}
+
+template <class T>
+T suco_llist<T>::ElementAt(int index)
+{
+  suco_iterator<T> si(*this);
+  int i = 0;
+  while(si.Iterate()){
+    if(++i >= index)
+      return si.Current();
+  }
+  return 0;
+}
+
+template <class T>
+bool suco_llist<T>::Remove(T item)
+{
+  suco_iterator<T> si(*this);
+  while(si.Iterate()){
+    if(si.Current() == item){
+      si.DeleteCurrent();
+      return true; //- found, removed
+    }
+  }
+  return false; //- not found
+}
+
+template <class T>
+T suco_llist<T>::RemoveHead()
+{
+  if(!_head) return 0;
+
+  T returnval = _head->item;
+  _suco_node * deleteval = _head;
+  _head = _head->next;
+  if(!_head) _tail = &_head;
+
+  _suco_node::dispose(deleteval);
+  return returnval;
+}
+
+template <class T>
+void suco_llist<T>::Clear()
+{
+  suco_iterator<T> si(*this);
+  while(si.Iterate())
+    si.DeleteCurrent();
+}
+
+template <class T>
+bool suco_llist<T>::Contains(T item)
+{
+  suco_iterator<T> si(*this);
+  while(si.Iterate())
+    if(si.Current() == item)
+      return true;
+  
+  return false;
+}
+
+template <class T>
+int suco_llist<T>::Length()
+{
+  int returnval = 0;
+  suco_iterator<T> si(*this);
+  while(si.Iterate()) returnval++;
+  return returnval;
+}
+
+//----------SUCO_QUEUE-----------
+
+template <class T>
+void suco_queue<T>::Enqueue(T item)
+{
+  Append(item);
+}
+
+template <class T>
+T suco_queue<T>::Dequeue()
+{
+  return RemoveHead();
+}
+
+//----------SUCO_STACK-----------
+
+template <class T>
+void suco_stack<T>::Push(T item)
+{
+  Insert(item);
+}
+
+template <class T>
+T suco_stack<T>::Pop()
+{
+  return RemoveHead();
+}
+
+template <class T>
+suco_stack<T>::operator bool()
+{
+  return !IsEmpty();
+}
+
+//----------SUCO_OLIST-----------
+
+template <class T>
+bool suco_olist<T>::Insert(T item)
+{
+  if(!item) return false;
+
+  typename suco_olist<T>::_suco_node ** i;
+
+  for(i = &_head; *i; i = &((*i)->next)){
+    if(compare(item, (*i)->item) < 0){
+      *i = _suco_node::acquire(item, *i);
+      return true;
+    }
+  }
+  Append(item);
+  return true;
+}
+
+template <class T>
+bool suco_olist<T>::Contains(T item)
+{
+  suco_iterator<T> si(*this);
+  while(si.Iterate()){
+    if(!compare(si.Current(), item))
+      return true;
+    //- TODO: can optimize by breaking out early if <
+  }
+  
+  return false;
+}
+
+//----------SUCO_SET-----------
+
+template <class T>
+suco_set<T>::suco_set(suco_set<T>& src, int (*cf)(T,T))
+: suco_olist<T>(cf)
+{
+  suco_iterator<T> si(src);
+
+  while(si.Iterate())
+    Insert(si.Current());
+  
+}
+
+template <class T>
+bool suco_set<T>::Insert(T item)
+{
+  if(!item) return false;
+  typename suco_set<T>::_suco_node ** i;
+
+  for(i = &_head; *i; i = &((*i)->next)){
+    int cf = compare(item, (*i)->item);
+    if(cf == 0){ //- item found
+      return false;
+    } else if(cf < 0){
+      *i = _suco_node::acquire(item, *i);
+      return true;
+    }
+  }
+  Append(item);
+  return true;
+}
+
+template <class T>
+T suco_set<T>::GetSingleton()
+{
+  if(_head && !_head->next) return _head->item;
+  else return 0;
+}
+
+template <class T>
+void suco_set<T>::InsertList(suco_llist<T> &tgt)
+{
+  suco_iterator<T> ti(tgt);
+  while(ti.Iterate())
+    this->Insert(ti.Current());
+}
+
+// - creates a copy of added elements
+template <class T>
+void suco_set<T>::Union(suco_set<T> &set)
+{
+  typename suco_set<T>::_suco_node ** tp = &this->_head;
+  typename suco_set<T>::_suco_node * sp = set._head;
+
+  while(sp){
+    if(!*tp){
+      *tp = _suco_node::acquire(sp->item);
+      tp = &(*tp)->next;
+      sp = sp->next;
+    } else {
+      int cf = compare((*tp)->item, sp->item);
+      if(cf < 0){
+        tp = &(*tp)->next;
+      } else if(cf == 0){
+        tp = &(*tp)->next;
+        sp = sp->next;
+      } else {
+        *tp = _suco_node::acquire(sp->item, *tp);
+        tp = &(*tp)->next;
+        sp = sp->next;
+      }
+    }
+  }
+  if(!*tp)
+    this->_tail = tp;
+}
+
+// - removes elements from set
+template <class T>
+void suco_set<T>::UnionConsume(suco_set<T> &set)
+{
+  typename suco_set<T>::_suco_node ** tp = &this->_head;
+  typename suco_set<T>::_suco_node * sp = set._head;
+  set._head = 0; // - clear set
+
+  while(sp){
+    if(!*tp){
+      *tp = sp;
+      this->_tail = set._tail;
+      set._tail = &set._head;
+      return;
+    } else {
+      int cf = compare((*tp)->item, sp->item);
+      if(cf < 0){
+        tp = &(*tp)->next;
+      } else if(cf == 0){
+        typename suco_set<T>::_suco_node * tmp = sp;
+        sp = sp->next;
+        _suco_node::dispose(tmp);
+        tp = &(*tp)->next;
+      } else {
+        typename suco_set<T>::_suco_node * tmp = sp;
+        sp = sp->next;
+        tmp->next = *tp;
+        *tp = tmp;
+        tp = &(*tp)->next;
+      }
+    }
+  }
+  set._tail = &set._head;
+}
+
+template <class T>
+bool suco_set<T>::Subset(suco_set<T> &tgt)
+{
+//--SUBOPTIMAL: REWRITE
+  suco_iterator<T> si(*this);
+
+  while(si.Iterate())
+    if(!tgt.Contains(si.Current()))
+      return false;
+
+  return true;
+}
+
+template <class T>
+bool suco_set<T>::Superset(suco_set<T> &tgt)
+{
+//--SUBOPTIMAL: REWRITE
+  suco_iterator<T> si(tgt);
+
+  while(si.Iterate())
+    if(!this->Contains(si.Current()))
+      return false;
+
+  return true;
+}
+
+template <class T>
+void suco_set<T>::Intersect(suco_set<T> &tgt)
+{
+//--SUBOPTIMAL: REWRITE
+  suco_iterator<T> ti(*this);
+
+  while(ti.Iterate())
+    if(!tgt.Contains(ti.Current()))
+      ti.DeleteCurrent();
+}
+
+template <class T>
+void suco_set<T>::Subtract(suco_set<T> &tgt)
+{
+//--SUBOPTIMAL: REWRITE
+  suco_iterator<T> ti(*this);
+
+  while(ti.Iterate())
+    if(tgt.Contains(ti.Current()))
+      ti.DeleteCurrent();
+}
+
+template <class T>
+bool suco_set<T>::Intersects(suco_llist<T> &tgt)
+{
+//--SUBOPTIMAL: REWRITE
+  suco_iterator<T> si(tgt);
+
+  while(si.Iterate())
+    if(this->Contains(si.Current()))
+      return true;
+
+  return false;
+}
+
+//--------SUCO_ITERATOR---------
+
+template <class T>
+bool suco_iterator<T>::Iterate()
+{
+  if(!_valid) _valid = true;
+  else if(*_ptr) _ptr = &((*_ptr)->next);
+  return ((*_ptr)!=0);
+}
+
+template <class T>
+void suco_iterator<T>::DeleteCurrent()
+{
+  if(*_ptr){
+    typename suco_set<T>::_suco_node * deleteval = *_ptr;
+    *_ptr = deleteval->next;
+    if(!(*_ptr)) *_tail = _ptr;
+    suco_llist<T>::_suco_node::dispose(deleteval);
+    _valid = false;
+  }
+}
+
+#endif
+@
+
+
+1.16
+log
+@Added set::InsertList(llist).
+@
+text
+@d409 1
+d414 11
+@
+
+
+1.15
+log
+@Fixed stupid bug in freelistLength.
+@
+text
+@d307 8
+@
+
+
+1.14
+log
+@Fixed REDt -- previous version was naive and didn't account
+for aliases.
+Removed REDfact::remove, which is no longer needed.
+Added ExpDescr::aliasecrs cache (with accessor getAliasECRs()).
+Added to suco GetSingleton function.
+@
+text
+@d60 2
+a61 2
+  for(_suco_node * n = freelist; n; n = n->next)
+    return i;
+@
+
+
+1.13
+log
+@Wrote redundant analysis collection function.
+Entailed creation of REDresults class and REDcFactHandler, etc.
+Resulted in modifying suco_set (olist, actually) to have a
+different Contains function that uses the compare function
+rather than ==. (Future work: may want to extend to some
+other functions).
+@
+text
+@d300 7
+@
+
+
+1.12
+log
+@Changed Intersects to accept a llist rather than a set.
+@
+text
+@d255 13
+@
+
+
+1.11
+log
+@Fixed bug in Intersects!!
+@
+text
+@d389 1
+a389 1
+bool suco_set<T>::Intersects(suco_set<T> &tgt)
+@
+
+
+1.10
+log
+@Added "typename" keywords to suppress "implicit typename
+deprecated" warnings in latest version of g++.
+@
+text
+@d372 1
+a372 1
+    if(!Contains(si.Current()))
+d395 1
+a395 1
+    if(!Contains(si.Current()))
+@
+
+
+1.9
+log
+@Eliminated LocAidNodes from MBUfact -- major strip-down.
+Now MBUfact is implemented as simply a suco_set of AOs.
+Added suco_set::Intersect.
+@
+text
+@d20 1
+a20 1
+suco_llist<T>::_suco_node * suco_llist<T>::_suco_node::freelist = 0;
+d28 1
+a28 1
+suco_llist<T>::_suco_node * suco_llist<T>::_suco_node::acquire(T i, _suco_node * n)
+d242 2
+a243 1
+  _suco_node ** i;
+d272 1
+a272 1
+  _suco_node ** i;
+d291 2
+a292 2
+  _suco_node ** tp = &this->_head;
+  _suco_node * sp = set._head;
+d321 2
+a322 2
+  _suco_node ** tp = &this->_head;
+  _suco_node * sp = set._head;
+d336 1
+a336 1
+        _suco_node * tmp = sp;
+d341 1
+a341 1
+        _suco_node * tmp = sp;
+d415 1
+a415 1
+    suco_set<T>::_suco_node * deleteval = *_ptr;
+@
+
+
+1.8
+log
+@Updated suco so that stack is derived from llist rather
+than queue, and also Pop calls RemoveHead (as does Dequeue),
+and old commented-out code is deleted.
+@
+text
+@d378 10
+@
+
+
+1.7
+log
+@Added RemoveHead(), Last(); changed Remove() to return
+a bool indicating whether item was present.
+@
+text
+@a213 11
+/*
+  if(!_head) return 0;
+
+  T returnval = _head->item;
+  _suco_node * deleteval = _head;
+  _head = _head->next;
+  if(!_head) _tail = &_head;
+
+  _suco_node::dispose(deleteval);
+  return returnval;
+*/
+d227 1
+a227 1
+  return Dequeue();
+@
+
+
+1.6
+log
+@Bug Fixes:
+ SUCO: fixed tail-assignment in suco_set::Union()
+ DFA:  fixed copyFact to union, rather than copy, facts.
+ TCA:  added mbu-result output to -debug dump.
+@
+text
+@d126 10
+d148 1
+a148 1
+void suco_llist<T>::Remove(T item)
+d154 1
+a154 1
+      return;
+d157 15
+d213 2
+d224 1
+@
+
+
+1.5
+log
+@Major changes -- fixed logical flaws in ability to collect
+MBU results.
+1. Added suco_llist::Copy and suco_set::Union (non-destructive version)
+2. In cfg.cpp/h, added new type DFAarg to represent a function
+   call actual argument.
+3. In dfa.cpp/h, MBUfacts now stores (in LocAidNode) for each
+   AO, in place of just a single set of aids:
+    - nodes:DFAnode - assignments, calls, and formal decls
+    - args::DFAarg - function call arguments
+    - rets:CFGnode - function return node
+@
+text
+@d240 1
+a240 1
+suco_set<T>::suco_set(suco_set<T> & src, int (*cf)(T,T))
+d295 2
+a296 1
+  this->_tail = tp;
+a330 1
+  this->_tail = tp;
+@
+
+
+1.4
+log
+@Added conditional to olist::Insert and set::Insert to
+prevent insertion of null!
+@
+text
+@d97 1
+a97 1
+void suco_llist<T>::Attach(suco_llist<T> &list)
+d108 18
+d269 29
+d320 1
+d326 1
+d330 1
+@
+
+
+1.3
+log
+@Suco change (major):
+ 1. Added new file suco_usage.cpp as a hack to instantiate
+    the suco code only once, rather than once-per-file as
+    before.
+ 2. Suco now has node-recycling mechanism in place, which
+    seems to help with rtca performance.
+@
+text
+@d206 1
+d235 1
+@
+
+
+1.2
+log
+@BUG FIX: suco_set::UnionConsume did not correctly set
+the _tail pointer!
+@
+text
+@a15 1
+#include <iostream.h>
+d18 46
+d73 1
+a73 1
+    delete deleteval;
+a77 12
+void suco_llist<T>::debug_print()
+{
+  cout << '{';
+
+  suco_iterator<T> si(*this);
+  while(si.Iterate())
+    cout << ' ' << si.Current() << ' ';
+  
+  cout << '}' << endl;
+}
+
+template <class T>
+d82 1
+a82 1
+  _head = new _suco_node(item, _head);
+d92 1
+a92 1
+  *_tail = new _suco_node(item);
+d177 1
+a177 1
+  delete deleteval;
+d210 1
+a210 1
+      *i = new _suco_node(item, *i);
+d241 1
+a241 1
+      *i = new _suco_node(item, *i);
+d270 1
+a270 1
+        delete tmp;
+d338 1
+a338 1
+    delete deleteval;
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d227 2
+d246 1
+@

@@ -1,0 +1,1668 @@
+head	1.35;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.35
+date	2003.04.03.20.03.18;	author suan;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2002.09.05.15.08.22;	author suan;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2002.05.02.23.31.05;	author suan;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2002.05.02.20.51.43;	author suan;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2002.03.16.23.10.07;	author suan;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2002.03.04.19.39.53;	author suan;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2002.03.01.19.54.10;	author suan;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2002.02.26.23.20.35;	author suan;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2002.02.26.17.34.40;	author suan;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2002.02.25.17.03.02;	author suan;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2001.05.18.23.11.55;	author suan;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2001.05.04.20.35.13;	author suan;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2001.05.04.01.04.09;	author suan;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2001.05.03.22.45.17;	author suan;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2001.05.03.19.44.31;	author suan;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2001.04.19.20.43.40;	author suan;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2001.04.16.23.26.20;	author suan;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2001.04.16.22.39.28;	author suan;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2001.04.16.20.49.51;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2000.07.12.23.57.35;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2000.07.12.00.51.21;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.07.12.00.27.53;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.07.07.20.22.21;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.07.07.00.39.24;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.07.06.21.09.13;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.06.30.14.41.57;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.06.30.04.07.36;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.06.21.22.16.54;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.06.16.00.55.16;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.06.15.21.03.20;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.05.30.20.52.03;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.05.21.16.21.29;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.02.17.23.56.31;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.02.16.03.29.25;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.12.27.04.22.02;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@"internal" API functions.
+@
+
+
+1.35
+log
+@Updated TCFR/TCSC error messages: fread now includes also read;
+scanf now includes fscanf/sscanf.
+@
+text
+@#ifndef _TYPECHECK_INTERNAL_H
+#define _TYPECHECK_INTERNAL_H
+
+#define TC_INTERNAL
+
+#include <tcapi.h>
+#include <stdio.h>
+
+/************************/
+/* GDB-usable Functions */
+/************************/
+extern void _printTagStderr(void * addr, size_t size);
+extern void _tcSetBreak(int msgid, int line);
+extern void _tcMallocStatus(void * ptr);
+
+extern _mirror_pos_t _getTagPos(const void * addr);
+extern void _printConstsStderr();
+/*
+extern void _tcfn_SET_UNALLOC_TAG(const void * saddr, const void * eaddr);
+extern const void * _tcfn_MIRRORMAP_INDEX(const void * addr);
+extern const void * _tcfn_MIRRORPAGE_INDEX(const void * addr);
+extern int _tcfn_SAME_MIRROR_PAGE(const void * addr1, const void * addr2);
+extern unsigned char _tcfn_TAG_BITS(_mirror_pos_t pos);
+extern unsigned char _tcfn_CONT_BIT(_mirror_pos_t pos);
+extern unsigned char _tcfn_TYPE_BITS(_mirror_pos_t pos);
+extern void WRITE_TAG(_mirror_pos_t * posptr, unsigned char tag);
+extern _mirror_pos_t _tcfn_get_NEXT_POS(_mirror_pos_t pos);
+extern _mirror_pos_t _tcfn_get_PREV_POS(_mirror_pos_t pos);
+extern unsigned char _tcfn_ODD_TAG_BITS(unsigned char byte);
+extern unsigned char _tcfn_ODD_TYPE_BITS(unsigned char byte);
+extern unsigned char _tcfn_EVEN_TAG_BITS(unsigned char byte);
+extern unsigned char _tcfn_EVEN_TYPE_BITS(unsigned char byte);
+extern unsigned char _tcfn_GET_TAG_BYTE(const void * addr);
+extern const void * _tcfn_GET_TAG_BYTE_addr(const void * addr);
+extern unsigned char _tcfn_GET_CHAR_TAG(unsigned char byte, int isOdd);
+extern void _tcfn_SET_CHAR_TAG(unsigned char * lhsptr, unsigned char * rhsptr, int isOdd);
+*/
+
+
+/**********************/
+/* Compile time flags */
+/**********************/
+/* This is the size of the extra padding we put between malloc'ed blocks */
+#define TC_MALLOC_PADDING 64
+
+/* -- verify buffer size for input functions (e.g., fgets) */
+#define TC_VERIFY_INPUT_BUFFER_ALLOC
+
+/* -- debugging: trace call stack bounds */
+/* #define TC_TRACECALL */
+
+/* -- turn on/off printing of stats */
+#define TC_DOSTATS
+
+/* -- turn on/off getrusage timing */
+/* #define TC_DO_TIMINGS(x) x */
+#define TC_DO_TIMINGS(x)
+
+/* -- if we want multiline (human-readable) output */
+#define TC_MULTILINE
+
+/* -- if we want compact (minimal) output */
+/* #define TC_TERSE_OUTPUT */
+
+/* -- log if we're copying INTO mismatched memory */
+/* #define TC_LOG_DIRTY_COPY */
+
+/* -- warn if setUninitTag overwrites non-zero (non-Unalloc) memory */
+/*    - disabled because of locally-scoped aggregates, e.g. for(){char c[];} */
+/* #define TC_CHECK_SET_UNALLOC */
+
+/* -- Counts process return "efficiency" */
+/* #define TC_COUNT_PROC_RET */
+
+/******************/
+/* Run time flags */
+/******************/
+
+/* keep track of free'd memory for diagnostic lookup */
+extern int tc_flag_trackfree;
+
+
+/************************/
+/* Signal sending stuff */
+/************************/
+
+extern int _brk_msgid, _brk_line;
+
+/* This suppresses the sending of a signal each time
+ * a warning or error is encountered.
+ * Note: overrides run-time flag (-tc-nosig).
+ */
+/*
+#define TC_NOSIGNAL
+*/
+
+#ifndef TC_NOSIGNAL
+#include <sys/types.h>
+#include <signal.h>
+#include <unistd.h>
+
+#define TCSIG SIGUSR1
+#define TCKILL kill(getpid(),TCSIG)
+
+#else /* TC_NOSIGNAL */
+
+#define TCKILL
+
+#endif /* TC_NOSIGNAL */
+
+/******************/
+/* Output Streams */
+/******************/
+enum _tc_stream {_tc_null	= 0,
+		 _tc_log	= 1,
+		 _tc_warn	= 2,
+		 _tc_error	= 3,
+		 _tc_debug	= 4,
+		 _tc_stat	= 5,
+		 _tc_numstreams	= 6};
+
+static char * stream_descr[_tc_numstreams] = { "null", "log", "warn", "error", "debug", "stat" };
+
+/***********/
+/* Various */
+/***********/
+typedef unsigned char uchar;
+
+extern void _printTagPos(FILE * f, _mirror_pos_t tagpos, size_t size);
+
+extern void _printTag(FILE * f, const void * addr, size_t size);
+
+extern int verifyAlloc(const void * addr, size_t size);
+
+extern void overflowTagPos(_mirror_pos_t * tagpos, int offset);
+
+#define GET_TAG_POS(pos,addr) ( \
+	  ((pos).ptr = (unsigned char *) mirrormap[MIRRORMAP_INDEX(addr)]) \
+	  || (_touchMirrorPage(MIRRORMAP_INDEX(addr)), \
+	      (pos).ptr = (unsigned char *) mirrormap[MIRRORMAP_INDEX(addr)]), \
+	  (pos).ptr += MIRRORPAGE_INDEX(addr)/2, \
+	  (pos).bit = (unsigned long)(addr)%2 * BITS_PER_TAG \
+	)
+
+#define SET_UNALLOC_TAG(caller,fname,line,col, start_addr, end_addr) { \
+	  _mirror_pos_t spos, epos; \
+	  char * saddr = (char *) (start_addr); \
+	  char * eaddr = (char *) (end_addr); \
+ \
+	  if(saddr != eaddr) { \
+	    /* Check stray tags to left */ \
+	    GET_TAG_POS(spos, saddr); \
+	    if(CONT_BIT(spos)){ \
+	      _mirror_pos_t tmp; \
+	      _output_si(fname,line,col, SUT_STB, caller,0,0,0, 0,0,0,0); \
+	      tmp = spos; \
+	      PREV_POS(tmp); \
+	      while(CONT_BIT(tmp)){ \
+	        /* AAL: unalloc or uninit? */ \
+	        WRITE_TAG(tmp,_typetag_unalloc); \
+	        PREV_POS(tmp); \
+	      } \
+	      WRITE_TAG(tmp,_typetag_unalloc); \
+	    } \
+	    /* Align saddr to even address */ \
+	    if((unsigned long)saddr & 0x1){ \
+	      WRITE_TAG(spos,_typetag_unalloc); \
+	      saddr++; \
+	    } \
+ \
+	    /* Check stray tags to right */ \
+	    GET_TAG_POS(epos, eaddr); \
+	    if(CONT_BIT(epos)){ \
+	      _mirror_pos_t tmp; \
+	      _output_si(fname,line,col, SUT_STA, caller,0,0,0, 0,0,0,0); \
+	      tmp = epos; \
+	      while(CONT_BIT(tmp)){ \
+	        /* AAL: unalloc or uninit? */ \
+	        WRITE_TAG(tmp,_typetag_unalloc) \
+	        NEXT_POS(tmp); \
+	      } \
+	    } \
+	    /* Align eaddr to even address */ \
+	    if((unsigned long)eaddr & 0x1){ \
+	      --eaddr; \
+	      GET_TAG_POS(epos, eaddr); /* note: eaddr is (char *) */ \
+	      WRITE_TAG(epos,_typetag_unalloc); \
+	    } \
+ \
+	    if(SAME_MIRROR_PAGE(saddr,eaddr-1)){ \
+	      memset(&GET_TAG_BYTE(saddr), _typetag_unalloc, (eaddr-saddr)/2); \
+	    } else { \
+	      int sindex = MIRRORMAP_INDEX(saddr); \
+	      int eindex = MIRRORMAP_INDEX(eaddr-1); \
+	      memset(&GET_TAG_BYTE(saddr), _typetag_unalloc, \
+			(MIRRORPAGE_NUMBYTES - MIRRORPAGE_INDEX(saddr))/2); \
+	      for(++sindex; sindex < eindex; sindex++){ \
+	        memset(&GET_TAG_BYTE((char *)(sindex << MIRRORPAGE_NUMBITS)), \
+			_typetag_unalloc, MIRRORPAGE_NUMBYTES/2); \
+	      } \
+	      memset(&GET_TAG_BYTE((char *)(sindex << MIRRORPAGE_NUMBITS)), \
+			_typetag_unalloc, MIRRORPAGE_INDEX(eaddr)/2); \
+	    } \
+	  } \
+	}
+
+void _copyTagSilent(const void * dstaddr, const void * srcaddr, size_t size);
+
+/***********************************************************************/
+/* Output manager (more or less centralizes log/warning/error outputs) */
+/***********************************************************************/
+
+/* Note: implicitly, the first "targs" integer arguments correspond to the
+         sizes of the tags (should be asserted?) */
+
+#if !defined(TC_DEFINE_MSGS)
+  extern
+#endif
+  struct {
+    enum _tc_stream str; /* _tc_null to deactivate */
+    int id;
+    const char * msg;
+    const char * sdesc;
+    const char * idesc;
+    const char * adesc;
+    const char * tdesc;
+    int sargs;
+    int iargs;
+    int aargs;
+    int targs;
+  } _msgs[]
+#if defined(TC_DEFINE_MSGS)
+	= {
+#define DMSG(s,i,m,sd,id,ad,td,sa,ia,aa,ta) {s,i,m,sd,id,ad,td,sa,ia,aa,ta},
+#else /* !defined(TC_DEFINE_MSGS) */
+	;
+#define DMSG(s,i,m,sd,id,ad,td,sa,ia,aa,ta)
+#endif /* defined(TC_DEFINE_MSGS) */
+
+#define	MSGS_0  0
+DMSG(_tc_null,	MSGS_0,	"INTERNAL ERROR", "","","","",	0, 0, 0, 0)
+
+#define	SUT_STB   1
+DMSG(_tc_warn,	SUT_STB,	"SET_UNALLOC_TAG: cleaning stray tags (before)",
+				"function","","","",	1, 0, 0, 0)
+
+#define	SST_ONM	    2
+DMSG(_tc_warn,	SST_ONM,	"setScalarTag: Overwrote non-aligned/non-empty memory!",
+				"ovr-tag","ovr-size","addr","",
+				1, 1, 1, 0)
+
+#define	PEV_IT	    3
+DMSG(_tc_debug,	PEV_IT,		"processExternVars: "
+			"extern with incomplete type not initialized!",
+					"","","","",	0, 0, 0, 0)
+#define	RE_PDEF	    4
+DMSG(_tc_warn,	RE_PDEF,	"registerExtern: extern previously defined with different type!",
+	"deffile:origfile:deftype:origtype",
+	"defline:origline:defcol:origcol", "", "",	4, 4, 0, 0)
+
+#define	VP_UNA	    5
+DMSG(_tc_error,	VP_UNA,		"verifyPtr: ptr points to unallocated memory!",
+	"exp", "",
+	"addr", "", 					1, 0, 1, 0)
+
+#define	VT_TMM	    6
+DMSG(_tc_error,	VT_TMM,		"verifyTag: type mismatch!",
+	"exp",
+	"exsize:fndsize",
+	"addr",
+	"expect:found", 				1, 2, 1, 2)
+
+#define	VT_TSM	    7
+DMSG(_tc_error,	VT_TSM,		"verifyTag: type size mismatch!",
+	"exp",
+	"exsize:fndsize",
+	"addr",
+	"expect:found", 				1, 2, 1, 2)
+
+#define	SBT_STB	    8
+DMSG(_tc_warn,	SBT_STB,	"setByteTags: stray tags (before)!",
+					"","","","",	0, 0, 0, 0)
+
+#define	SBT_STA	    9
+DMSG(_tc_warn,	SBT_STA,	"setByteTags: stray tags (after)!",
+					"","","","",	0, 0, 0, 0)
+
+#define	SBT_NEM     10
+DMSG(_tc_warn,	SBT_NEM,	"setByteTags: initializing non-empty memory!",
+		"","size:approx-offset","addr","tags",	0, 2, 1, 1)
+
+#define	CT_CFU	    11
+DMSG(_tc_error,	CT_CFU,		"copyTag: copying from unallocated memory!",
+	"", "",
+	"from:to", "",	 				0, 0, 2, 0)
+
+#define	CT_AIU	    12
+DMSG(_tc_error,	CT_AIU,		"copyTag: ... and into unallocated memory!",
+					"","","","",	0, 0, 0, 0)
+
+#define	CT_CIU	    13
+DMSG(_tc_error,	CT_CIU,		"copyTag: copying into unallocated memory!",
+	"", "",
+	"from:to", "",	 				0, 0, 2, 0)
+
+#define	CT_TMM	    14
+DMSG(_tc_log,	CT_TMM,		"copyTag: type mismatch!",
+	"", "exsize:cpsize:insize",
+	"src,dst",
+	"expect:copying:into", 				0, 3, 2, 3)
+
+#define	CT_TDM	    15
+DMSG(_tc_log,	CT_TDM,		"copyTag: type mismatch (dest)!",
+	"", "exsize:cpsize:insize",
+	"src,dst",
+	"expect:copying:into", 				0, 3, 2, 3)
+
+#define	CT_SI	    16
+DMSG(_tc_warn,	CT_SI,		"copyTag: source invalid!",
+	"", "cpsize:insize",
+	"src,dst",
+	"copying:into", 				0, 2, 2, 2)
+
+#define	SUT_STA   17
+DMSG(_tc_warn,	SUT_STA,	"SET_UNALLOC_TAG: cleaning stray tags (after)",
+				"function","","","",	1, 0, 0, 0)
+
+
+#define	ERV_ENN	    18
+DMSG(_tc_error,	ERV_ENN,	"extern_registerVar: externInitFns not null!",
+					"","","","",	0, 0, 0, 0)
+
+#define	SSUT_NEM    19
+DMSG(_tc_warn,	SSUT_NEM,	"setScalarUninitTag: initializing non-empty memory!",
+					"","","","",	0, 0, 0, 0)
+
+#define	PR_TMM	    20
+DMSG(_tc_warn,	PR_TMM,		"processReturn: type mismatch!",
+	"", "exsize:fndsize",
+	"", "expecting:found", 				0, 2, 0, 2)
+
+#define	PR_TSM	    21
+DMSG(_tc_warn,	PR_TSM,		"processReturn: type size mismatch!",
+	"", "exsize:fndsize",
+	"", "expecting:found", 				0, 2, 0, 2)
+
+#define	PR_TMC	    22
+DMSG(_tc_warn,	PR_TMC,		"processReturn: type mismatch (corrected)!",
+	"", "exsize:fndsize",
+	"", "expecting:found", 				0, 2, 0, 2)
+
+#define	PAT_TMA	    23
+DMSG(_tc_warn,	PAT_TMA,	"processArgTags: type size mismatch (aggregate)!",
+	"", "expecting:found:index",
+	"", "", 					0, 3, 0, 0)
+
+#define	PAT_TMS	    24
+DMSG(_tc_warn,	PAT_TMS,	"processArgTags: type mismatch (scalar)!",
+	"", "exsize:fndsize:index",
+	"", "expecting:found", 				0, 3, 0, 2)
+
+#define	PAT_NEA	    25
+DMSG(_tc_error,	PAT_NEA,	"processArgTags: "
+			"not enough arguments passed to function!",
+	"", "expecting:passed",
+	"", "", 					0, 2, 0, 0)
+
+#define	TCF_FUM     26
+DMSG(_tc_error,	TCF_FUM,	"(tc_free): freeing unallocated memory!",
+					"","","","",	0, 0, 0, 0)
+
+#define	TCMC_CFU    27
+DMSG(_tc_error,	TCMC_CFU,	"(tc_memcpy): copying from unallocated memory!",
+					"","","","",	0, 0, 0, 0)
+
+#define	TCMC_CIU    28
+DMSG(_tc_error,	TCMC_CIU,	"(tc_memcpy): copying into unallocated memory!",
+					"","","","",	0, 0, 0, 0)
+
+#define	TCMM_CFU    29
+DMSG(_tc_error,	TCMM_CFU,	"(tc_memmove): copying from unallocated memory!",
+					"","","","",	0, 0, 0, 0)
+
+#define	TCMM_CIU    30
+DMSG(_tc_error,	TCMM_CIU,	"(tc_memmove): copying into unallocated memory!",
+					"","","","",	0, 0, 0, 0)
+
+#define	TCMS_SUM    31
+DMSG(_tc_error,	TCMS_SUM,	"(tc_memset): setting unallocated memory!",
+					"","","","",	0, 0, 0, 0)
+
+#define	TCLIB_CFU   32
+DMSG(_tc_error,	TCLIB_CFU,	"(tc library fn): copying from unallocated memory!",
+	"function", "copybytes:allocbytes",
+	"", "", 					1, 2, 0, 0)
+
+#define	TCLIB_CIU   33
+DMSG(_tc_error,	TCLIB_CIU,	"(tc library fn): copying into unallocated memory!",
+	"function","copybytes","","",			1, 1, 0, 0)
+
+#define	TCFG_RIUM   34
+DMSG(_tc_error,	TCFG_RIUM,	"(tc_fgets): reading into unallocated memory!",
+					"","","","",	0, 0, 0, 0)
+
+#define	TCG_RIUM    35
+DMSG(_tc_error,	TCG_RIUM,	"(tc_gets): reading into unallocated memory!",
+					"","","","",	0, 0, 0, 0)
+
+#define	TCSP_RIUM   36
+DMSG(_tc_error,	TCG_RIUM,	"(tc_sprintf): reading into unallocated memory!",
+					"","","","",	0, 0, 0, 0)
+
+#define	TCSNP_RIUM  37
+DMSG(_tc_error,	TCG_RIUM,	"(tc_snprintf): reading into unallocated memory!",
+					"","","","",	0, 0, 0, 0)
+
+#define	TCFR_RIUM   38
+DMSG(_tc_error,	TCFR_RIUM,	"(tc_[f]read): reading into unallocated memory!",
+					"","","","",	0, 0, 0, 0)
+
+#define	TCSC_MFS    39
+DMSG(_tc_error,	TCSC_MFS,	"(tc_*scanf): malformed format string!",
+					"","","","",	0, 0, 0, 0)
+
+#define	TCSC_POSN   40
+DMSG(_tc_warn,	TCSC_POSN,	"(tc_*scanf): mix of positional and non-positional params!",
+					"","","","",	0, 0, 0, 0)
+
+#define	TCSC_UM     41
+DMSG(_tc_error,	TCSC_UM,	"(tc_*scanf): reading into unallocated memory!",
+		"descr","arg#:fmt#","","",	1, 2, 0, 0)
+
+#define	MSGS_LAST   42
+DMSG(_tc_null,	MSGS_LAST,	"INTERNAL ERROR", "","","","",	0, 0, 0, 0)
+
+#if defined(TC_DEFINE_MSGS)
+    {0}}; /* dummy last entry */
+#undef DMSG
+#endif /* !defined(TC_DEFINE_MSGS) */
+
+/********************/
+/* Output functions */
+/********************/
+
+void _output_internal_error(const char * context, const char * msg);
+
+void _output_simple(int msgid);
+
+void _output_flc(const char * file, int line, int col,
+		int msgid);
+
+void _output_si(const char * file, int line, int col,
+		int msgid,
+		const char *s1, const char *s2, const char *s3, const char *c4,
+		int i1, int i2, int i3, int i4);
+
+void _output_full(const char * file, int line, int col,
+		int msgid,
+		const char *s1,
+		int i1, int i2, int i3,
+		const void *a1, const void *a2,
+		const void *t1, const void *t2, const void *t3);
+
+#endif /* ifndef _TYPECHECK_INTERNAL_H */
+@
+
+
+1.34
+log
+@Added _typecheck_sprintf and _typecheck_snprintf
+@
+text
+@d418 1
+a418 1
+DMSG(_tc_error,	TCFR_RIUM,	"(tc_fread): reading into unallocated memory!",
+d422 1
+a422 1
+DMSG(_tc_error,	TCSC_MFS,	"(tc_scanf): malformed format string!",
+d426 1
+a426 1
+DMSG(_tc_warn,	TCSC_POSN,	"(tc_scanf): mix of positional and non-positional params!",
+d430 2
+a431 2
+DMSG(_tc_error,	TCSC_UM,	"(tc_scanf): reading into unallocated memory!",
+		"function","arg#:fmt#","","",	1, 2, 0, 0)
+@
+
+
+1.33
+log
+@Fixed SUT_STB/SUT_STA to have string arg = 1.
+@
+text
+@d409 9
+a417 1
+#define	TCFR_RIUM   36
+d421 1
+a421 1
+#define	TCSC_MFS    37
+d425 1
+a425 1
+#define	TCSC_POSN   38
+d429 1
+a429 1
+#define	TCSC_UM     39
+d433 1
+a433 1
+#define	MSGS_LAST   40
+@
+
+
+1.32
+log
+@Restructured output mechanism to associate stream with error message;
+also, generalized signalflag mechanism (TCKILL now called by _output_
+functions), and enhanced run-time flags to allow better control of
+streams, message-destinations, and signal-flags.
+Also, added function _fn_SET_UNALLOC_TAG to reduce code bloat in
+processReturn.
+@
+text
+@d245 1
+a245 1
+				"function","","","",	0, 0, 0, 0)
+d257 1
+a257 2
+DMSG(_tc_warn,	RE_PDEF,	"registerExtern: "
+			"extern previously defined with different type!",
+d326 1
+a326 1
+				"function","","","",	0, 0, 0, 0)
+@
+
+
+1.31
+log
+@Added prototypes for GDB-callable wrappers.
+@
+text
+@d47 1
+a47 1
+/* #define TC_VERIFY_INPUT_BUFFER_ALLOC */
+a71 3
+/* -- Suppresses all output, though we still "do all the work" */
+/* #define TC_SILENT */
+
+a77 6
+/* turn on/off sending of signal on error/warning */
+extern int tc_flag_logsignal, tc_flag_warnsignal, tc_flag_errsignal;
+
+/* "summarize" errors and warnings, by line number,
+   at end of execution; may not print on crash */
+extern int tc_flag_summarize;
+a104 4
+#define TC_LOG_SIGNAL (tc_flag_logsignal && TCKILL)
+#define TC_WARN_SIGNAL (tc_flag_warnsignal && TCKILL)
+#define TC_ERR_SIGNAL (tc_flag_errsignal && TCKILL)
+
+a106 4
+#define TC_LOG_SIGNAL 
+#define TC_WARN_SIGNAL
+#define TC_ERR_SIGNAL
+
+d111 13
+a128 5
+extern FILE * logstream;
+extern FILE * debugstream;
+extern FILE * warnstream;
+extern FILE * errorstream;
+
+d145 1
+a145 1
+#define SET_UNALLOC_TAG(fname,line,col, start_addr, end_addr) { \
+d155 1
+a155 6
+	      if(warnstream){ \
+	        fprintf(warnstream, \
+		"[%s:%d.%d]setUnallocTag: cleaning stray tags (before).\n", \
+		(fname), (line), (col)); \
+	        TC_WARN_SIGNAL; \
+	      } \
+d175 1
+a175 6
+	      if(warnstream){ \
+	        fprintf(warnstream, \
+		"[%s:%d.%d]setUnallocTag: cleaning stray tags (after).\n", \
+		(fname), (line), (col)); \
+	        TC_WARN_SIGNAL; \
+	      } \
+d220 1
+a220 1
+    int active;
+d234 1
+a234 1
+#define DMSG(a,i,m,sd,id,ad,td,sa,ia,aa,ta) {a,i,m,sd,id,ad,td,sa,ia,aa,ta},
+d237 1
+a237 1
+#define DMSG(a,i,m,sd,id,ad,td,sa,ia,aa,ta)
+d241 5
+a245 1
+DMSG(0,	MSGS_0,	"INTERNAL ERROR", "","","","",	0, 0, 0, 0)
+a246 3
+#define	GAFP_FAIL   1
+DMSG(1,	GAFP_FAIL,	"getAddrForPos failed!",
+					"","","","",	0, 0, 0, 0)
+d248 1
+a248 1
+DMSG(1,	SST_ONM,	"setScalarTag: Overwrote non-aligned/non-empty memory!",
+d253 1
+a253 1
+DMSG(1,	PEV_IT,		"processExternVars: "
+d257 1
+a257 1
+DMSG(1,	RE_PDEF,	"registerExtern: "
+d263 1
+a263 1
+DMSG(1,	VP_UNA,		"verifyPtr: ptr points to unallocated memory!",
+d268 1
+a268 1
+DMSG(1,	VT_TMM,		"verifyTag: type mismatch!",
+d275 1
+a275 1
+DMSG(1,	VT_TSM,		"verifyTag: type size mismatch!",
+d282 1
+a282 1
+DMSG(1,	SBT_STB,	"setByteTags: stray tags (before)!",
+d286 1
+a286 1
+DMSG(1,	SBT_STA,	"setByteTags: stray tags (after)!",
+d290 1
+a290 1
+DMSG(1,	SBT_NEM,	"setByteTags: initializing non-empty memory!",
+d294 1
+a294 1
+DMSG(1,	CT_CFU,		"copyTag: copying from unallocated memory!",
+d299 1
+a299 1
+DMSG(1,	CT_AIU,		"copyTag: ... and into unallocated memory!",
+d303 1
+a303 1
+DMSG(1,	CT_CIU,		"copyTag: copying into unallocated memory!",
+d308 1
+a308 1
+DMSG(1,	CT_TMM,		"copyTag: type mismatch!",
+d314 1
+a314 1
+DMSG(1,	CT_TDM,		"copyTag: type mismatch (dest)!",
+d320 1
+a320 1
+DMSG(1,	CT_SI,		"copyTag: source invalid!",
+d325 4
+a328 4
+/* DEPRECATED: */
+#define	SSTT_NEM    17
+DMSG(1,	SSTT_NEM,	"setStringTag: initializing non-empty memory!",
+					"","","","",	0, 0, 0, 0)
+d331 1
+a331 1
+DMSG(1,	ERV_ENN,	"extern_registerVar: externInitFns not null!",
+d335 1
+a335 1
+DMSG(1,	SSUT_NEM,	"setScalarUninitTag: initializing non-empty memory!",
+d339 1
+a339 1
+DMSG(1,	PR_TMM,		"processReturn: type mismatch!",
+d344 1
+a344 1
+DMSG(1,	PR_TSM,		"processReturn: type size mismatch!",
+d349 1
+a349 1
+DMSG(1,	PR_TMC,		"processReturn: type mismatch (corrected)!",
+d354 1
+a354 1
+DMSG(1,	PAT_TMA,	"processArgTags: type size mismatch (aggregate)!",
+d359 1
+a359 1
+DMSG(1,	PAT_TMS,	"processArgTags: type mismatch (scalar)!",
+d364 1
+a364 1
+DMSG(1,	PAT_NEA,	"processArgTags: "
+d370 1
+a370 1
+DMSG(1,	TCF_FUM,	"(tc_free): freeing unallocated memory!",
+d374 1
+a374 1
+DMSG(1,	TCMC_CFU,	"(tc_memcpy): copying from unallocated memory!",
+d378 1
+a378 1
+DMSG(1,	TCMC_CIU,	"(tc_memcpy): copying into unallocated memory!",
+d382 1
+a382 1
+DMSG(1,	TCMM_CFU,	"(tc_memmove): copying from unallocated memory!",
+d386 1
+a386 1
+DMSG(1,	TCMM_CIU,	"(tc_memmove): copying into unallocated memory!",
+d390 1
+a390 1
+DMSG(1,	TCMS_SUM,	"(tc_memset): setting unallocated memory!",
+d394 1
+a394 1
+DMSG(1,	TCLIB_CFU,	"(tc library fn): copying from unallocated memory!",
+d399 1
+a399 1
+DMSG(1,	TCLIB_CIU,	"(tc library fn): copying into unallocated memory!",
+d403 1
+a403 1
+DMSG(1,	TCFG_RIUM,	"(tc_fgets): reading into unallocated memory!",
+d407 1
+a407 1
+DMSG(1,	TCG_RIUM,	"(tc_gets): reading into unallocated memory!",
+d411 1
+a411 1
+DMSG(1,	TCFR_RIUM,	"(tc_fread): reading into unallocated memory!",
+d415 1
+a415 1
+DMSG(1,	TCSC_MFS,	"(tc_scanf): malformed format string!",
+d419 1
+a419 1
+DMSG(1,	TCSC_POSN,	"(tc_scanf): mix of positional and non-positional params!",
+d423 1
+a423 1
+DMSG(1,	TCSC_UM,	"(tc_scanf): reading into unallocated memory!",
+d427 1
+a427 1
+DMSG(0,	MSGS_LAST,	"INTERNAL ERROR", "","","","",	0, 0, 0, 0)
+d438 3
+a440 1
+void _output_simple(FILE * stream, int msgid);
+d442 1
+a442 1
+void _output_flc(FILE * stream, const char * file, int line, int col,
+d445 1
+a445 1
+void _output_si(FILE * stream, const char * file, int line, int col,
+d450 1
+a450 1
+void _output_full(FILE * stream, const char * file, int line, int col,
+@
+
+
+1.30
+log
+@Deleted deprecated old code.
+@
+text
+@d16 24
+a142 2
+
+extern _mirror_pos_t _getTagPos(const void * addr);
+@
+
+
+1.29
+log
+@Removed TC_VERIFY_UNALLOC flag.
+@
+text
+@d45 2
+a46 1
+#define TC_CHECK_SET_UNALLOC
+d321 1
+a321 1
+/* deprecate also: */
+d422 1
+a422 14
+/* these are to be deprecated */
+#define	SUT_STB	    40
+DMSG(1,	SUT_STB,	"setUninitTag: stray tags (before)!",
+					"","","","",	0, 0, 0, 0)
+
+#define	SUT_STA	    41
+DMSG(1,	SUT_STA,	"setUninitTag: stray tags (after)!",
+					"","","","",	0, 0, 0, 0)
+
+#define	SUT_NEM     42
+DMSG(1,	SUT_NEM,	"setUninitTag: initializing non-empty memory!",
+		"","size:approx-offset","addr","tags",	0, 2, 1, 1)
+
+#define	MSGS_LAST   43
+@
+
+
+1.28
+log
+@Added _setByteTags; added redirection macros to point
+_setUninitTag and _setStringTag to _setByteTag; old stuff
+commented out, will next be deleted.
+Also, added _typetag_init;
+and added _typecheck_bzero to tcstring.c
+@
+text
+@a52 4
+/* -- With this on, VerifyPtr will complain when a character is unallocated.
+      else, it will assume an uninitialized character, and set it */
+#define TC_VERIFY_UNALLOC
+
+@
+
+
+1.27
+log
+@Added tc_scanf error messages;
+revamped definition of msgs array, from old way (one static array
+for each module that included this header) to having only one
+definition (in pmirror_newtags, or whatever defines TC_DEFINE_MSGS).
+@
+text
+@d42 1
+a42 1
+#define TC_LOG_DIRTY_COPY
+d280 2
+a281 2
+#define	SUT_STB	    8
+DMSG(1,	SUT_STB,	"setUninitTag: stray tags (before)!",
+d284 2
+a285 2
+#define	SUT_STA	    9
+DMSG(1,	SUT_STA,	"setUninitTag: stray tags (after)!",
+d288 5
+a292 1
+#define	CT_CFU	    10
+d297 1
+a297 1
+#define	CT_AIU	    11
+d301 1
+a301 1
+#define	CT_CIU	    12
+d306 1
+a306 1
+#define	CT_TMM	    13
+d312 1
+a312 1
+#define	CT_TDM	    14
+d318 1
+a318 1
+#define	CT_SI	    15
+d324 2
+a325 1
+#define	SSTT_NEM    16
+d329 1
+a329 1
+#define	ERV_ENN	    17
+d333 1
+a333 1
+#define	SSUT_NEM    18
+d337 1
+a337 1
+#define	PR_TMM	    19
+d342 1
+a342 1
+#define	PR_TSM	    20
+d347 1
+a347 1
+#define	PR_TMC	    21
+d352 1
+a352 1
+#define	PAT_TMA	    22
+d357 1
+a357 1
+#define	PAT_TMS	    23
+d362 1
+a362 1
+#define	PAT_NEA	    24
+d368 1
+a368 1
+#define	TCF_FUM     25
+d372 1
+a372 1
+#define	TCMC_CFU    26
+d376 1
+a376 1
+#define	TCMC_CIU    27
+d380 1
+a380 1
+#define	TCMM_CFU    28
+d384 1
+a384 1
+#define	TCMM_CIU    29
+d388 1
+a388 1
+#define	TCMS_SUM    30
+d392 1
+a392 1
+#define	TCLIB_CFU   31
+d397 1
+a397 1
+#define	TCLIB_CIU   32
+d401 1
+a401 1
+#define	TCFG_RIUM   33
+d405 1
+a405 1
+#define	TCG_RIUM    34
+d409 1
+a409 1
+#define	TCFR_RIUM   35
+d413 1
+a413 1
+#define	TCSC_MFS    36
+d417 1
+a417 1
+#define	TCSC_POSN   37
+d421 1
+a421 1
+#define	TCSC_UM     38
+d425 10
+a434 1
+#define	SUT_NEM     39
+d438 1
+a438 1
+#define	MSGS_LAST   40
+@
+
+
+1.26
+log
+@Moved compile-time flags to tcinternal.h; renamed some to include TC_ prefix.
+@
+text
+@d214 25
+a238 14
+         sizes of the tags (should asserted?) */
+static struct {
+  int active;
+  int id;
+  const char * msg;
+  const char * sdesc;
+  const char * idesc;
+  const char * adesc;
+  const char * tdesc;
+  int sargs;
+  int iargs;
+  int aargs;
+  int targs;
+} _msgs[] = {
+d241 1
+a241 1
+ { 0,	MSGS_0,	"INTERNAL ERROR", "","","","",	0, 0, 0, 0 },
+d244 2
+a245 2
+ { 1,	GAFP_FAIL,	"getAddrForPos failed!",
+					"","","","",	0, 0, 0, 0 },
+d247 1
+a247 1
+ { 1,	SST_ONM,	"setScalarTag: Overwrote non-aligned/non-empty memory!",
+d249 1
+a249 1
+				1, 1, 1, 0 },
+d252 1
+a252 1
+ { 1,	PEV_IT,		"processExternVars: "
+d254 1
+a254 1
+					"","","","",	0, 0, 0, 0 },
+d256 1
+a256 1
+ { 1,	RE_PDEF,	"registerExtern: "
+d259 1
+a259 1
+	"defline:origline:defcol:origcol", "", "",	4, 4, 0, 0 },
+d262 1
+a262 1
+ { 1,	VP_UNA,		"verifyPtr: ptr points to unallocated memory!",
+d264 1
+a264 1
+	"addr", "", 					1, 0, 1, 0 },
+d267 1
+a267 1
+ { 1,	VT_TMM,		"verifyTag: type mismatch!",
+d271 1
+a271 1
+	"expect:found", 				1, 2, 1, 2 },
+d274 1
+a274 1
+ { 1,	VT_TSM,		"verifyTag: type size mismatch!",
+d278 1
+a278 1
+	"expect:found", 				1, 2, 1, 2 },
+d281 2
+a282 2
+ { 1,	SUT_STB,	"setUninitTag: stray tags (before)!",
+					"","","","",	0, 0, 0, 0 },
+d285 2
+a286 2
+ { 1,	SUT_STA,	"setUninitTag: stray tags (after)!",
+					"","","","",	0, 0, 0, 0 },
+d289 1
+a289 1
+ { 1,	CT_CFU,		"copyTag: copying from unallocated memory!",
+d291 1
+a291 1
+	"from:to", "",	 				0, 0, 2, 0 },
+d294 2
+a295 2
+ { 1,	CT_AIU,		"copyTag: ... and into unallocated memory!",
+					"","","","",	0, 0, 0, 0 },
+d298 1
+a298 1
+ { 1,	CT_CIU,		"copyTag: copying into unallocated memory!",
+d300 1
+a300 1
+	"from:to", "",	 				0, 0, 2, 0 },
+d303 1
+a303 1
+ { 1,	CT_TMM,		"copyTag: type mismatch!",
+d306 1
+a306 1
+	"expect:copying:into", 				0, 3, 2, 3 },
+d309 1
+a309 1
+ { 1,	CT_TDM,		"copyTag: type mismatch (dest)!",
+d312 1
+a312 1
+	"expect:copying:into", 				0, 3, 2, 3 },
+d315 1
+a315 1
+ { 1,	CT_SI,		"copyTag: source invalid!",
+d318 1
+a318 1
+	"copying:into", 				0, 2, 2, 2 },
+d321 2
+a322 2
+ { 1,	SSTT_NEM,	"setStringTag: initializing non-empty memory!",
+					"","","","",	0, 0, 0, 0 },
+d325 2
+a326 2
+ { 1,	ERV_ENN,	"extern_registerVar: externInitFns not null!",
+					"","","","",	0, 0, 0, 0 },
+d329 2
+a330 2
+ { 1,	SSUT_NEM,	"setScalarUninitTag: initializing non-empty memory!",
+					"","","","",	0, 0, 0, 0 },
+d333 1
+a333 1
+ { 1,	PR_TMM,		"processReturn: type mismatch!",
+d335 1
+a335 1
+	"", "expecting:found", 				0, 2, 0, 2 },
+d338 1
+a338 1
+ { 1,	PR_TSM,		"processReturn: type size mismatch!",
+d340 1
+a340 1
+	"", "expecting:found", 				0, 2, 0, 2 },
+d343 1
+a343 1
+ { 1,	PR_TMC,		"processReturn: type mismatch (corrected)!",
+d345 1
+a345 1
+	"", "expecting:found", 				0, 2, 0, 2 },
+d348 1
+a348 1
+ { 1,	PAT_TMA,	"processArgTags: type size mismatch (aggregate)!",
+d350 1
+a350 1
+	"", "", 					0, 3, 0, 0 },
+d353 1
+a353 1
+ { 1,	PAT_TMS,	"processArgTags: type mismatch (scalar)!",
+d355 1
+a355 1
+	"", "expecting:found", 				0, 3, 0, 2 },
+d358 1
+a358 1
+ { 1,	PAT_NEA,	"processArgTags: "
+d361 1
+a361 1
+	"", "", 					0, 2, 0, 0 },
+d364 2
+a365 2
+ { 1,	TCF_FUM,	"(tc_free): freeing unallocated memory!",
+					"","","","",	0, 0, 0, 0 },
+d368 2
+a369 2
+ { 1,	TCMC_CFU,	"(tc_memcpy): copying from unallocated memory!",
+					"","","","",	0, 0, 0, 0 },
+d372 2
+a373 2
+ { 1,	TCMC_CIU,	"(tc_memcpy): copying into unallocated memory!",
+					"","","","",	0, 0, 0, 0 },
+d376 2
+a377 2
+ { 1,	TCMM_CFU,	"(tc_memmove): copying from unallocated memory!",
+					"","","","",	0, 0, 0, 0 },
+d380 2
+a381 2
+ { 1,	TCMM_CIU,	"(tc_memmove): copying into unallocated memory!",
+					"","","","",	0, 0, 0, 0 },
+d384 2
+a385 2
+ { 1,	TCMS_SUM,	"(tc_memset): setting unallocated memory!",
+					"","","","",	0, 0, 0, 0 },
+d388 1
+a388 1
+ { 1,	TCLIB_CFU,	"(tc library fn): copying from unallocated memory!",
+d390 1
+a390 1
+	"", "", 					1, 2, 0, 0 },
+d393 2
+a394 2
+ { 1,	TCLIB_CIU,	"(tc library fn): copying into unallocated memory!",
+	"function","copybytes","","",			1, 1, 0, 0 },
+d397 2
+a398 2
+ { 1,	TCFG_RIUM,	"(tc_fgets): reading into unallocated memory!",
+					"","","","",	0, 0, 0, 0 },
+d401 2
+a402 2
+ { 1,	TCG_RIUM,	"(tc_gets): reading into unallocated memory!",
+					"","","","",	0, 0, 0, 0 },
+d405 2
+a406 9
+ { 1,	TCFR_RIUM,	"(tc_fread): reading into unallocated memory!",
+					"","","","",	0, 0, 0, 0 },
+
+#define	SUT_NEM     36
+ { 1,	SUT_NEM,	"setUninitTag: initializing non-empty memory!",
+		"","size:approx-offset","addr","tags",	0, 2, 1, 1 },
+
+#define	MSGS_LAST   37
+ { 0,	MSGS_LAST,	"INTERNAL ERROR", "","","","",	0, 0, 0, 0 }
+d408 23
+a430 1
+};
+@
+
+
+1.25
+log
+@Added tc_flag_summarize flag;
+added prototype for new GDB function _tcMallocStatus;
+@
+text
+@d16 41
+@
+
+
+1.24
+log
+@Replaced TCMCC stuff with more general TCLIB stuff, with a few
+arguments (though not the best-named arguments).
+@
+text
+@d14 1
+d21 8
+a28 2
+extern int tc_flag_summarize; /* "summarize" errors and warnings, by line number,
+				at end of execution; may not print on crash */
+@
+
+
+1.23
+log
+@Removed old commented-out TDM stuff.
+@
+text
+@d328 4
+a331 4
+#define	TCMCC_CFU   31
+ { 1,	TCMCC_CFU,	"(tc_memccpy): copying from unallocated memory!",
+	"", "copybytes:allocbytes",
+	"", "", 					0, 2, 0, 0 },
+d333 3
+a335 3
+#define	TCMCC_CIU   32
+ { 1,	TCMCC_CIU,	"(tc_memset): copying into unallocated memory!",
+					"","","","",	0, 0, 0, 0 },
+@
+
+
+1.22
+log
+@Changed CT_TDM format; old format commented out.
+@
+text
+@d249 1
+a249 1
+#define	CT_TDM	    14 /* TURN THIS OFF???*/
+a253 5
+/*
+	"", "cpsize:insize",
+	"src,dst",
+	"copying:into", 				0, 2, 2, 2 },
+*/
+@
+
+
+1.21
+log
+@Added SUT_NEM message.
+Also, added #define TCKILL for nosig case.
+@
+text
+@d251 4
+d258 1
+@
+
+
+1.20
+log
+@Added _tcSetBreak capability (for use with GDB); entails adding
+a couple of globals, the function, and changing the output
+functions to TCKILL when the breakpoint is reached.
+@
+text
+@d55 2
+d349 5
+a353 1
+#define	MSGS_LAST   36
+@
+
+
+1.19
+log
+@Added tc_flag_{log,warn,err}signal flags and commandline flags
+-tc-nosig/-tc-allsig to turn on/off signals.
+@
+text
+@d9 6
+d23 6
+d57 3
+@
+
+
+1.18
+log
+@Changed IT_INM to SST_ONM: setScalarTag: Overwrote non-aligned/
+non-empty memory.
+@
+text
+@d9 8
+d18 2
+a19 1
+ * a warning or error is encountered
+d33 3
+a35 3
+#define TC_LOG_SIGNAL 
+#define TC_WARN_SIGNAL TCKILL
+#define TC_ERR_SIGNAL TCKILL
+@
+
+
+1.17
+log
+@Renamed DUMMY_PLACEHOLDER_* with MSGS_* (more meaningful name).
+@
+text
+@d161 5
+a165 3
+#define	IT_INM	    2
+ { 1,	IT_INM,		"initTag: Initializing non-empty memory!",
+					"","","","",	0, 0, 0, 0 },
+@
+
+
+1.16
+log
+@Added message info for tcstdio.c functions (fgets, gets, fread).
+@
+text
+@d133 1
+d155 2
+a156 2
+#define	DUMMY_PLACEHOLDER_0  0
+ { 0,	DUMMY_PLACEHOLDER_0,	"INTERNAL ERROR", "","","","",	0, 0, 0, 0 },
+d321 2
+a322 2
+#define	DUMMY_PLACEHOLDER_END   36
+ { 0,	DUMMY_PLACEHOLDER_END,	"INTERNAL ERROR", "","","","",	0, 0, 0, 0 }
+@
+
+
+1.15
+log
+@Added tcstring and tcmalloc output messages.
+@
+text
+@d308 13
+a320 1
+#define	DUMMY_PLACEHOLDER_END   33
+@
+
+
+1.14
+log
+@Added "output manager" data and function prototypes.
+@
+text
+@d275 34
+a308 1
+#define	DUMMY_PLACEHOLDER_END   25
+@
+
+
+1.13
+log
+@rewrote GET_TAG_POS to be a bit faster;
+applied GET_TAG_POS macro (to replace _getTagPos function call);
+replaced bzero calls with memset.
+removed _setUnallocTag function prototype (obsolete).
+@
+text
+@d45 2
+d132 168
+@
+
+
+1.12
+log
+@Wrote GET_TAG_POS macro.
+@
+text
+@a44 3
+extern void _setUnallocTag(const char * fname, int line, int col,
+				void * addr, size_t size);
+
+d52 5
+a56 5
+	  (mirrormap[MIRRORMAP_INDEX(addr)]) \
+	  || (_touchMirrorPage(MIRRORMAP_INDEX(addr)),1), \
+	  (pos).ptr = ((unsigned char *) mirrormap[MIRRORMAP_INDEX(addr)] \
+			+ MIRRORPAGE_INDEX(addr)/2), \
+	  (pos).bit = addr%2 * BITS_PER_TAG \
+d66 1
+a66 1
+	    spos = _getTagPos(saddr); \
+d91 1
+a91 1
+	    epos = _getTagPos(eaddr); \
+d110 1
+a110 1
+	      epos = _getTagPos(eaddr); /* note: eaddr is (char *) */ \
+d115 1
+a115 1
+	      bzero(&GET_TAG_BYTE(saddr), (eaddr-saddr)/2); \
+d119 1
+a119 1
+	      bzero(&GET_TAG_BYTE(saddr), \
+d122 2
+a123 2
+	        bzero(&GET_TAG_BYTE((char *)(sindex << MIRRORPAGE_NUMBITS)), \
+			MIRRORPAGE_NUMBYTES/2); \
+d125 2
+a126 2
+	      bzero(&GET_TAG_BYTE((char *)(sindex << MIRRORPAGE_NUMBITS)), \
+			MIRRORPAGE_INDEX(eaddr)/2); \
+@
+
+
+1.11
+log
+@Fixed SET_UNALLOC_TAG to be smarter at the boundary condition
+(check "eaddr-1" instead of "eaddr").
+@
+text
+@d54 8
+@
+
+
+1.10
+log
+@Introduced MIRRORPAGE_INDEX macro.
+@
+text
+@d92 1
+a92 1
+		fname, line, col); \
+d109 1
+a109 1
+	    if(SAME_MIRROR_PAGE(saddr,eaddr)){ \
+d113 1
+a113 1
+	      int eindex = MIRRORMAP_INDEX(eaddr); \
+@
+
+
+1.9
+log
+@Added new SET_UNALLOC_TAG macro (used in pmirror-newtags.c and tcmalloc.c).
+@
+text
+@d115 1
+a115 2
+			(MIRRORPAGE_NUMBYTES - \
+			((unsigned long)saddr & MIRRORPAGE_MASK))/2); \
+d121 1
+a121 1
+			((unsigned long)eaddr & MIRRORPAGE_MASK)/2); \
+@
+
+
+1.8
+log
+@Added signal stuff.
+@
+text
+@d54 73
+@
+
+
+1.7
+log
+@Added _getTagPos (which is now "internal"); removed _getTagPos from tcapi.h.
+@
+text
+@d9 27
+@
+
+
+1.6
+log
+@Streamlined. pmirror.h now obsolete.
+@
+text
+@d23 2
+@
+
+
+1.5
+log
+@Updated to include pmirror.h.
+@
+text
+@d4 1
+a4 1
+#define BYTE 8
+d9 1
+a9 1
+#include "pmirror.h"
+@
+
+
+1.4
+log
+@Fixed verifyAlloc prototype.
+@
+text
+@d9 1
+a9 1
+#include "paged_mirror.h"
+@
+
+
+1.3
+log
+@Added #include "paged_mirror.h" (eventually will just incorporate
+that file into this one).
+Added overflowTagPos prototype.
+@
+text
+@d4 2
+d21 1
+a21 1
+extern int verifyAlloc(_mirror_pos_t tagpos, size_t size);
+@
+
+
+1.2
+log
+@Added prototype for verifyAlloc.
+@
+text
+@d7 2
+d20 2
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d17 2
+@

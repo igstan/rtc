@@ -1,0 +1,756 @@
+head	1.32;
+access;
+symbols;
+locks
+	suan:1.32; strict;
+comment	@ * @;
+
+
+1.32
+date	2004.07.19.22.59.54;	author suan;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2004.07.16.19.46.35;	author suan;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2004.06.29.20.02.32;	author suan;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2004.05.14.22.41.56;	author suan;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2004.05.13.19.19.32;	author suan;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2004.05.12.21.17.22;	author suan;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2004.05.07.23.30.14;	author suan;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2004.04.21.18.59.26;	author suan;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2004.04.14.16.12.19;	author suan;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2004.03.31.15.18.37;	author suan;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2004.03.29.17.17.32;	author suan;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2004.03.29.02.24.42;	author suan;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2004.03.28.20.53.05;	author suan;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2004.03.03.00.45.32;	author suan;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2004.02.19.14.37.04;	author suan;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2004.02.19.00.39.16;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2003.12.16.22.57.18;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2003.12.06.01.38.01;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2003.11.14.15.58.36;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2003.10.21.21.32.17;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2003.02.25.20.04.46;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.12.19.22.03.44;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.12.19.19.44.08;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.12.19.00.24.06;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.12.18.00.24.34;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.12.11.21.31.34;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.11.29.21.26.17;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.11.29.16.45.56;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.11.27.19.52.44;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.11.21.21.07.34;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.11.21.20.44.57;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.11.15.17.48.30;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Global flags declared. They are defined in tca.cpp (for now)
+@
+
+
+1.32
+log
+@Added -mbu-intra-iref flag to collect iref in addition
+to gref, and to just use iref for MBU analysis -- hopefully
+will lead to smaller facts and faster analysis.
+Also: observed that "gmodref_skip_locals" has been set
+all along (for ran?), so mbu may not have been correct??
+Fixed --- at least partially, for mbu --- I think...
+@
+text
+@#ifndef TC_FLAGS_H /* { */
+#define TC_FLAGS_H
+
+extern bool flag_readwrite;
+extern bool flag_use_maxnargs;
+extern int flag_verbose;
+extern bool flag_recycle;
+extern bool flag_readable_output;
+extern bool flag_gref_filter;
+extern bool flag_gmodref_skip_locals;
+extern int flag_may_be_uninit;
+extern bool flag_reaching_defs;
+extern bool flag_vtfix;
+extern bool flag_compute_iref;
+
+extern bool flag_collapse_inclto_cycle;
+extern bool flag_collapse_ptsto_cycle;
+
+extern enum wl_mode {
+  WL_MODE_FIFO		= 0,
+  WL_MODE_LIFO		= 1,
+  WL_MODE_LEAF_FIRST	= 2
+} flag_worklist_mode;
+
+extern bool flag_instantiate_structunion;
+extern bool flag_filter_relevant_aos;
+extern bool flag_worklist_init_depth_first;
+
+extern bool flag_range_filter_loop_backedge;
+extern bool flag_range_filter_call_backedge;
+extern bool flag_range_zero_special;
+extern bool flag_range_must_have_ao;
+extern bool flag_range_ty_can_change;
+extern bool flag_range_do_sliding;
+extern bool flag_range_handle_preds;
+extern bool flag_range_skip_targeted_preds;
+extern bool flag_range_exact_sizes;
+extern bool flag_range_collect_stats;
+
+extern bool flag_debug_range_collect_phase;
+
+extern bool flag_strlit_readonly;
+extern bool flag_range_handle_malloc;
+extern bool flag_mbu_lowerthan_by_size;
+extern bool flag_callsite_top;
+extern bool flag_use_bblocks;
+
+#endif /* } ifndef TC_FLAGS_H */
+@
+
+
+1.31
+log
+@CHANGES:
+1. Moved PExprAssign::getSingletonLHSloc() to
+   ExpDescr::getSingletonLoc(), so it can be used
+   elsewhere to determine strong update.
+1a. FIXED BUG (??) in getSingletonLoc(): previously
+    for sdot object, was returning enclosing struct!?!
+2. Added -vtfix flag, which enables/disables RED and
+   MBU treatment of verifyTag as fixing the type on
+   mismatch.
+3. Added MBU handling of verifyTag vtfix.
+4. Changed so that MBU uses the RED parallel hackery
+   (PM_RED_UNSAFE) when vtfix is on.
+@
+text
+@d14 1
+@
+
+
+1.30
+log
+@ADDED evaluation of each library function call to determine
+if its target (where relevant) is exposed -- this will mainly
+be used in -vulnw mode to remove instrumentation when a
+function's target is exposed (needed to avoid false positive).
+Eventually, it may also be used in -ptr/ptrw mode to remove
+instrumentation when a library function's target is not
+exposed -- though currently this never happens because of
+context-insensitive analysis and overly-conservative models.
+SUPPLEMENTAL CHANGES to achieve the above:
+ 1. Created ExposedStatus class in ao.cpp/ao.h (was previously
+    an enum in AO class)
+ 2. Changed PExprcall::isDirectCall() to return the ID of the
+    direct call, rather than just a bool.
+ 3. Exported "flag_readwrite" to become a global -- it's about
+    time (I'd been misguidedly trying to avoid this for far
+    too long, creating a bigger mess instead)
+@
+text
+@d13 1
+@
+
+
+1.29
+log
+@Changed GMOD/GREF to _exclude_ local variables taht
+are only directly accessed.  (Added flag_gmodref_skip_locals
+to control this.)
+THIS IS A SIGNIFICANT CHANGE, and has been minimally verified
+for RAN; need to validate for RED,MBU,other analyses.
+@
+text
+@d4 1
+@
+
+
+1.28
+log
+@Added flag_range_skip_targeted_preds: when set, will
+not try to improve ranges at predicates for targeted
+ranges (improve only NULL-targeted ranges).
+@
+text
+@d9 1
+@
+
+
+1.27
+log
+@SMALL BUT MAJOR BUG FIX: RANc must take a flag indicating
+whether to do intra or inter!  (Previously, was always
+doing intra mode!)
+
+Also: added ugly flag "flag_debug_range_collect_phase"
+to help in debugging, currently used to output meaningful
+information when reporting known predicates.
+@
+text
+@d32 1
+@
+
+
+1.26
+log
+@More work towards filtering relevant AOs:
+ - Added flag -relevant-aos
+ - AO added "dfa_relevant" bit for each AO
+ - ECR added "collectInclFromECRs() helper that's
+   needed when collecting relevant aos
+ - TCA added a bunch of helpers:
+   - markRelevantLocs() which calls
+     1. clearRelevantTags() on each AO, to clear
+        the dfa_relevant tags
+     2. markStartingPoints(), which walks the
+        assignment edges (in the CFG!) to populate
+        the initial set of aos (based on readwrite
+        flag and whether we want to mark safe AOs
+        (for MBU) or unsafe ones (for RAN)).
+     3. propagate along (flow-insensitive) assign
+        edges.
+@
+text
+@d35 2
+@
+
+
+1.25
+log
+@Changed filter-backedge default behavior:
+1. split flag_range_filter_backedge into two flags:
+   flag_range_filter_[loop|call]_backedge.
+   The former controls intra-procedural ("loop")
+   backedges, while the latter controls callgraph
+   backedges (from recursion and and "findRemainingBackedges").
+2. default behavior now is: loop=yes but call=no.
+@
+text
+@d22 1
+@
+
+
+1.24
+log
+@Added [-no]-inst-fields option to turn off
+instantiation of all struct/union member AOs
+at declaration point.
+Originally did this to circumvent explosion in
+mesa which has some huge structures -- but as
+I think about it, leaving this feature off by
+default should still get correct results!?!
+@
+text
+@d24 2
+a25 1
+extern bool flag_range_filter_backedge;
+@
+
+
+1.23
+log
+@Added flag_range_exact_sizes to assume exact sizes
+when doing type-mismatch transformations.
+@
+text
+@d21 1
+d23 1
+@
+
+
+1.22
+log
+@Added flag_range_handle_predicates to control whether
+or not to try to improve ranges for predicates.
+
+Predicate handling (cond_intersect) updated so that
+two non-aliasing-loc -targeted ranges can set to top
+only if they're both in-bounds.
+
+Known-predicate stat-counter now only counts STMT and
+QC predicates -- previously was double counting &&/||
+predicates within a STMT predicate.
+*NOTE*: the current flow-sensitive representation for
+predicates are _BROKEN_ -- they're ad-hoc (OK for
+redundant checks?), and don't look entirely correct
+for RAN analysis evaluation!  Try e.g. (i++>0).
+@
+text
+@d28 1
+@
+
+
+1.21
+log
+@Collecting RAN stats (all-vps, finite-vps, half-finite-vps, inbounds-vps,
+known-preds):
+ - RAN replaced checkInBounds() with getDerefRangeFor()
+ - added reportKnownPredicate() helper to RAN[c]factHandler
+ - added list accumulators to RANcFactHandler
+ - added count holders to TCAstate
+
+Interval::isTop() - now returns true of min > max!
+(was returning only if min = +inf, max = -inf!)
+
+Interval: added "modulo" to compute %.
+
+AO::get_AOUDot/get_AOSDot() - unify ecr if called after pt-analysis.
+@
+text
+@d27 1
+@
+
+
+1.20
+log
+@OVERHAUL: removed flag_range_target_aos, replaced with
+ - flag_range_must_have_ao: do we support ao=bottom?
+ - flag_ty_can_change: must interval's ty equal loc's ty?
+ - flag_range_do_sliding: allow sliding transformation?
+Changed command-line flags: -ran-DO, -ran-LO should be
+the default ones to use, while the above flags can be
+individually manipulated for data collection.
+
+CHANGED Interval::adjustStructOffset to also change the
+ao target (if possible; currently doesn't handle array-of
+structs correctly sometimes).
+
+CHANGED Interval::adjustTypes to support the full type
+assumptions (incl |char|<=|short|<=|int|...).  This is
+actually implemented in TCtype::countInstancesOf.
+This resulted in greatly-streamlined code.
+
+CHANGED Interval::cond_intersect to allow intersection
+to go to Top in cases when we know the two sides don't
+intersect.
+@
+text
+@d27 1
+@
+
+
+1.19
+log
+@Added support for AO-targeted intervals:
+ - global flag_range_target_aos
+ - command line flags -ran-tgt-ao -ran-tgt-elty (default)
+ - new ao member of Interval class
+ - changed interval.cpp code to support ao-targeted mode,
+   including code for ptrs_minus and precise handling
+   of targeted intervals in predicates (cond_intersect()).
+@
+text
+@d24 3
+a26 1
+extern bool flag_range_target_aos;
+@
+
+
+1.18
+log
+@Looks like I already had a flag to indicate whether strlit
+should be writable (it was used only for the TRACKED-computation
+phase).
+I've eliminated the extra runtime arguments, and renamed the
+flag to make it more global.
+@
+text
+@d24 2
+@
+
+
+1.17
+log
+@Added support for treating StringLits as read-only in RAN analysis.
+ - commandline flag -ran-strlit-[readonly|readwrite];
+   global flag flag_range_strlit_readonly
+ - in Interval, added boolean tgt_readonly;
+   updated each Interval function to properly propagate it
+ - added readwrite argument to Interval::inBounds() and
+   RANfact::checkInBounds().
+Also, while updating Interval functions:
+ - fixed some hidden but significant bugs in implementation:
+   a typo in Plus; rudimentary overflow detection for
+   Multiply;...
+@
+text
+@d24 1
+a24 1
+extern bool flag_range_strlit_readonly;
+@
+
+
+1.16
+log
+@1. Changed AOMalloc representation to include <eltype, numelts>
+   (previously had single <size> field)
+2. Changed Interval to store <eltype, numelts> rather than AO
+   as "target" field: potentially allows for "smarter" range
+   analysis per Susan's suggestion.
+(Added runtime flag -ran-[no-]malloc to turn on/off handling
+ of malloc objects, now on by default)
+TODO: account for elty in Interval::plus/minus (added signature,
+      but not yet implemented)
+@
+text
+@d24 1
+@
+
+
+1.15
+log
+@Added -ran-zero-special: range analysis treats "zero" as
+a special value, so allows tracking of intervals of the
+form {0} U &ptr + [m,n].
+Flag is off by default; must be turned on explicitly.
+@
+text
+@d24 1
+@
+
+
+1.14
+log
+@1. SUCO UPDATE: added copy constructor to suco_iterator,
+   that sets the "list" pointer to the current pointer
+   (this feature will be used in collecting backedge
+   filter).
+2. compute backedge filters: reshuffled interface, and
+   wrote some preliminary untested code!
+   The old version tried to recursively walk the cfg;
+   the new one just walks the sequential list of nodes.
+   Also added command line flag (-ran-[no-]filter-backedge).
+TODO: fix high level bug that only handles true-false
+edges differently when the predicate node gives a pair
+of facts.
+@
+text
+@d23 1
+@
+
+
+1.13
+log
+@Added -wli-topo/-wli-depth, which signals whether to
+initialize the worklist in "breadth-first" order or
+depth-first order. Previously, defaulted to depth-first,
+but with widening, this is not a good initial scheme!
+The "topo"/"breadth-first" order uses the traversal_id
+computed for "leaf-first" traversal -- seems to do the
+desirable thing.
+Implementation (in dfa.h/dfa.cpp) is somewhat hackish
+with respect to Worklist class and its set/list members,
+so beware!.
+@
+text
+@d22 1
+a22 1
+
+@
+
+
+1.12
+log
+@Added -cde-incl and -cde-pt flags -- only the latter
+has been implemented: in ECR::includesTo, check for
+cycle, and collapse these ECRs; also, remove redundant
+inclTo/inclFrom edges as a result of the collapse.
+Also, the output for -pta mode has been modified to
+be more a summary, to allow better comparison between differnet
+versions.
+@
+text
+@d21 2
+@
+
+
+1.11
+log
+@Major update:
+Added -rda (reaching-defs analysis) in new class RDA:DFA.
+Basically, copied the meat from MBU, making minimal changes.
+Compiles, runs, verified against small examples.
+NEED TO REVIEW CODE IN DETAIL, and verify against larger
+examples.
+Potential problem: seems rather slow, may want to compute
+GMOD?
+@
+text
+@d12 3
+@
+
+
+1.10
+log
+@Removed experimental CFG numbering schemes (in-order DFS, post-order DFS,
+successor-wait), sticking with post-order DFS as the only reasonable scheme.
+Also, updated certain flag defaults: -leaf and -gref are now on by default.
+@
+text
+@d10 1
+@
+
+
+1.9
+log
+@SIGNIFICANT UPDATE:
+ - added -gref flag, to enable GREF filtering
+ - added code to first compute IREF for each function,
+   then collect them into GREFs
+ - this makes use of recursion_id/callgraph_id traversal
+   order (verify that this correctly computes GREF with
+   complex callgaphs?)
+ - the recursion_id/callgraph_id ordering is encoded by
+   the function CFGfunction::compareByCallgraphId, which
+   has been absorbed into the worklist ordering function,
+   so a slight behavior change there as well.
+@
+text
+@a16 6
+extern enum ct_mode {
+  CT_MODE_POST_DFS	= 0,
+  CT_MODE_IN_DFS	= 1,
+  CT_MODE_SUCC_WAIT	= 2
+} flag_cfg_traverse_mode;
+
+@
+
+
+1.8
+log
+@Added flag for different DFA traversal mode (numbering
+of CFGnodes in different order).
+Currently has:
+ 1. in-order --> seems the best?
+                 (note: is misnomer -- should in fact be post-order)
+ 2. post-order --> with CFG node ordering, turns out
+                   to be equivalent to in-order?
+ 3. succ-last --> turns out to be logically flawed
+                   (suboptimal).
+In short -- added much overhead for a debug experiment that failed.
+May want to remove succ-last, which numbers them in opposite
+priority order -- so we can simplify worklist comparison function.
+@
+text
+@d8 1
+@
+
+
+1.7
+log
+@1. Added -ltsize flag which when determining "lowerThan"
+   uses the length of the MBUfact set rather than explicit
+   comparison; a consequent change is the storing of a
+   "num_elts" field to MBUfact, which must be updated
+   on each change. This doesn't seem to be a significant
+   improvement over the old version of length() which
+   traverses the nodelist to count elements.
+2. eliminated lowerThan() function, incorporating the
+   "lowerThan" check into the meet() function. This
+   eliminates a redundancy which speeds things up a bit.
+@
+text
+@d16 6
+@
+
+
+1.6
+log
+@Added worklist traversal mode (fifo, lifo, leaf-first),
+the last sorting the worklist in call-graph leaf-first
+order (non-recursive first), and within each function,
+sorting by a traversal_id which is a bottom-up numbering
+of CFGnodes.
+@
+text
+@d16 1
+@
+
+
+1.5
+log
+@Changed flag_verbose to be an integer indicating verbose
+level: 1 (default) only lists current analysis phase;
+2 gives progress dots; 3 supplies other "normal" verbose
+information; 4 is for debug stuff.
+@
+text
+@d9 7
+a15 1
+extern bool flag_worklist_fifo;
+@
+
+
+1.4
+log
+@Added -bblocks flag; partially separated bblock and non-bblock
+mode of DFA; many bblock components not yet written.
+@
+text
+@d5 1
+a5 1
+extern bool flag_verbose;
+@
+
+
+1.3
+log
+@Added -calltop flag -- so that for function calls,
+the pre-call facts are met into the result of the
+calls (by default; -calltop disables this).
+@
+text
+@d11 1
+@
+
+
+1.2
+log
+@Changed worklist to a queue/stack, with two execution modes
+(fifo/lifo):
+ - added command-line flags "fifo" or "lifo"
+ - in suco, made stack inherit queue publicly, so a stack
+   object can be used as both a stack and a queue
+   (an unsafe thing to do?)
+ - added a flag in CFGnodes to indicate if a node is in the
+   worklist -- should make it faster than checking for
+   worklist membership each time, though we have to make
+   sure the bookkeeping is correct.
+@
+text
+@d10 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d9 1
+@

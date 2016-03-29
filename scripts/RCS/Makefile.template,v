@@ -1,0 +1,1885 @@
+head	1.45;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.45
+date	2004.06.23.15.15.23;	author suan;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2004.04.19.22.49.15;	author suan;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2004.02.26.18.37.39;	author suan;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2004.02.24.00.30.40;	author suan;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2004.02.23.23.55.03;	author suan;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2004.02.23.17.22.03;	author suan;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2003.11.28.21.45.51;	author suan;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2003.07.24.18.52.47;	author suan;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2003.07.10.18.36.47;	author suan;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2003.06.04.20.24.43;	author suan;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2003.05.29.15.27.58;	author suan;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2003.05.22.18.58.08;	author suan;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2003.05.14.22.20.36;	author suan;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2003.05.14.20.44.11;	author suan;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2003.05.13.21.43.20;	author suan;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2003.03.27.22.04.31;	author suan;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2003.03.18.20.25.27;	author suan;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2003.03.12.16.36.34;	author suan;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2003.03.11.17.36.22;	author suan;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2003.02.28.22.05.44;	author suan;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2003.02.24.23.11.24;	author suan;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2003.02.04.17.47.26;	author suan;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2003.01.21.20.31.23;	author suan;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2002.10.28.23.27.17;	author suan;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2002.10.21.15.14.54;	author suan;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2002.10.16.00.50.18;	author suan;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2002.10.11.00.14.46;	author suan;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2002.08.28.22.50.36;	author suan;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2002.08.08.22.09.21;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2002.05.07.16.28.08;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2002.05.02.15.03.01;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2002.04.25.18.43.25;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2002.04.25.18.40.08;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2002.04.23.19.14.53;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.04.19.17.26.26;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.04.12.22.49.10;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.02.04.20.10.07;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.10.18.19.42.35;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.07.11.18.53.36;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.07.11.15.40.49;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.07.07.20.41.46;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.07.05.21.03.23;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.07.05.16.16.59;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.06.26.16.29.26;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.23.16.54.49;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Template Makefile for making TC stuff.
+@
+
+
+1.45
+log
+@Added -vuln stuff.
+@
+text
+@#################################################################
+# USER DEFINED PART #
+#####################
+#CC = gcc
+#CFLAGS +=
+#TCFLAGS += -cc=cc -pp=cpp
+#LDFLAGS += -lm
+PURIFYFLAGS += -windows=no
+#RTCAFLAGS += -mbu -rda
+
+## Uncomment this to send rtca jobs to condor
+## (only when making targets tsl-tca, tsl-ptr, or tsl-ptrw
+#RTCA_USE_CONDOR = 1
+
+### STEMS: list of object file stems
+#STEMS = test1 test2
+
+### TARGET: target name
+#TARGET = test
+
+### If a dummy_externs object file is needed, add it here
+#DUMMY_EXTERNS = dummy_externs.o
+
+###
+#include /p/wpis/people/students/suan/TypecheckDebugger/scripts/Makefile.template
+
+#################################################################
+#################################################################
+# Allow command-line "additional" flags
+CFLAGS += $(ADDL_CFLAGS)
+PURIFYFLAGS += $(ADDL_PURIFYFLAGS)
+TCFLAGS += $(ADDL_TCFLAGS)
+RTCAFLAGS += $(ADDL_RTCAFLAGS)
+CCUREDFLAGS += $(ADDL_CCUREDFLAGS)
+#################################################################
+#################################################################
+# FILENAMES #
+#############
+CFILES = $(addsuffix .c,$(STEMS))
+
+OBJS = $(addsuffix .o,$(STEMS))
+GCCEOBJS = $(addsuffix .gcce.o,$(STEMS))
+CCEOBJS = $(addsuffix .cce.o,$(STEMS))
+CPPOBJS = $(addsuffix .cpp.o,$(STEMS))
+CKITOBJS = $(addsuffix .ckit.o,$(STEMS))
+MIROBJS = $(addsuffix .mir.o,$(STEMS))
+
+IASGFILES = $(addsuffix .tc_iasgs,$(STEMS))
+PASGFILES = $(addsuffix .tc_pasgs,$(STEMS))
+TSL_TCA_FILE = $(TARGET).tc_tca
+TSL_PTR_FILE = $(TARGET).tc_ptr
+TSL_PTRW_FILE = $(TARGET).tc_ptrw
+
+tcusage:
+	@@echo 'Main Targets: exe'
+	@@echo '              nt nt-addrof nt-tca nt-mac nt-opt-mac'
+	@@echo '                 (main rtc targets; nt=new tags)'
+	@@echo '              sm sm-addrof sm-tca sm-mac sm-opt-mac'
+	@@echo '                 (rtc with safe mallocs)'
+	@@echo '              ptr ptr-tca ptr-mac ptr-opt-mac'
+	@@echo '              ptr-macstm ptr-opt-macstm'
+	@@echo '                 (security tool, checking reads and writes)'
+	@@echo '              ptrw ptrw-tca ptrw-mac ptrw-opt-mac'
+	@@echo '              ptrw-macstm ptrw-opt-macstm'
+	@@echo '                 (security tool, checking writes only)'
+	@@echo '              vulnw vulnw-tca vulnw-mac vulnw-opt-mac'
+	@@echo '              vulnw-macstm vulnw-opt-macstm'
+	@@echo '                 (alt security tool, vulnerable checks)'
+	@@echo '              rtft rt'
+	@@echo '                 (range-tracking, flowtest)'
+	@@echo 'Intermediate Targets: pp[i|p|f] tc_[i|p]asgs tsl-addrof tsl-tca'
+	@@echo '                      [|p|pw|f]instr instr-addrof [|p|pw]instr-tca'
+	@@echo 'Cleaning Object Files: clean-exe clean-nt[-tca] clean-nt-c'
+	@@echo '                       clean-ptr[-tca] clean-ptr-c'
+	@@echo '                       clean-ptrw[-tca] clean-ptrw-c'
+	@@echo '                       clean-vulnw[-tca] clean-vulnw-c'
+	@@echo '                       clean-rtft clean-rtft-c'
+	@@echo '                       clean-rt clean-rt-c'
+	@@echo 'NOTE: non-obvious cleaning behavior must be manually'
+	@@echo '      accounted for'
+	@@echo
+	@@echo 'CFILES =' $(CFILES)
+
+#################################################################
+# SHORTHAND #
+#############
+exe: $(TARGET)
+
+pure: $(TARGET)-pure
+
+ccured: CC = /scratch/suan/ccured/bin/ccured
+ccured: CFLAGS += $(CCUREDFLAGS)
+ccured: $(TARGET)-ccured
+
+cpp: $(TARGET)-cpp
+
+cce: $(TARGET)-cce
+
+gcce: $(TARGET)-gcce
+
+ckit: $(TARGET)-ckit
+
+mir: $(TARGET)-mir
+
+noop: $(TARGET)-noop
+
+nt: $(TARGET)-nt
+
+nt-addrof: $(TARGET)-nt-addrof
+
+nt-tca: $(TARGET)-nt-tca
+
+nt-mac: $(TARGET)-nt-mac
+
+nt-opt-mac: $(TARGET)-nt-opt-mac
+
+sm: $(TARGET)-sm
+
+sm-addrof: $(TARGET)-sm-addrof
+
+sm-tca: $(TARGET)-sm-tca
+
+sm-mac: $(TARGET)-sm-mac
+
+sm-opt-mac: $(TARGET)-sm-opt-mac
+
+ptr: TCFLAGS += -ptr
+ptr: $(TARGET)-ptr
+
+ptr-tca: TCFLAGS += -ptr
+ptr-tca: $(TARGET)-ptr-tca
+
+ptr-mac: TCFLAGS += -ptr
+ptr-mac: $(TARGET)-ptr-mac
+
+ptr-macstm: TCFLAGS += -ptr -stm
+ptr-macstm: $(TARGET)-ptr-macstm
+
+ptr-opt-mac: TCFLAGS += -ptr
+ptr-opt-mac: $(TARGET)-ptr-opt-mac
+
+ptr-opt-macstm: TCFLAGS += -ptr -stm
+ptr-opt-macstm: $(TARGET)-ptr-opt-macstm
+
+ptrw: TCFLAGS += -ptrw
+ptrw: $(TARGET)-ptrw
+
+ptrw-tca: TCFLAGS += -ptrw
+ptrw-tca: $(TARGET)-ptrw-tca
+
+ptrw-mac: TCFLAGS += -ptrw
+ptrw-mac: $(TARGET)-ptrw-mac
+
+ptrw-macstm: TCFLAGS += -ptrw
+ptrw-macstm: $(TARGET)-ptrw-macstm
+
+ptrw-opt-mac: TCFLAGS += -ptrw
+ptrw-opt-mac: $(TARGET)-ptrw-opt-mac
+
+ptrw-opt-macstm: TCFLAGS += -ptrw
+ptrw-opt-macstm: $(TARGET)-ptrw-opt-macstm
+
+vulnw: TCFLAGS += -ptrw-vuln
+vulnw: $(TARGET)-vulnw
+
+vulnw-tca: TCFLAGS += -ptrw-vuln
+vulnw-tca: $(TARGET)-vulnw-tca
+
+vulnw-mac: TCFLAGS += -ptrw-vuln
+vulnw-mac: $(TARGET)-vulnw-mac
+
+vulnw-macstm: TCFLAGS += -ptrw-vuln
+vulnw-macstm: $(TARGET)-vulnw-macstm
+
+vulnw-opt-mac: TCFLAGS += -ptrw-vuln
+vulnw-opt-mac: $(TARGET)-vulnw-opt-mac
+
+vulnw-opt-macstm: TCFLAGS += -ptrw-vuln
+vulnw-opt-macstm: $(TARGET)-vulnw-opt-macstm
+
+rtft: TCFLAGS += -rtft
+rtft: $(TARGET)-rtft
+
+rt: TCFLAGS += -rt
+rt: $(TARGET)-rt
+
+mpg: $(TARGET)-mpg
+
+#################################################################
+# TARGETS #
+###########
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-pure: $(OBJS)
+	purify $(PURIFYFLAGS) $(CC) $(CFLAGS) -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-ccured: $(OBJS)
+	$(CC) $(CFLAGS) -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-cpp: $(CPPOBJS)
+	$(CC) $(CFLAGS) -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-cce: $(CCEOBJS)
+	$(CC) $(CFLAGS) -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-gcce: $(GCCEOBJS)
+	$(CC) $(CFLAGS) -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-ckit: $(CKITOBJS)
+	$(CC) $(CFLAGS) -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-mir: $(MIROBJS)
+	tc $(TCFLAGS) -mirlink -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-noop: $(addsuffix .instr.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc $(TCFLAGS) -noop -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-nt: $(addsuffix .instr.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc $(TCFLAGS) -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-nt-tca: $(addsuffix .opt.instr.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc $(TCFLAGS) -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-nt-mac: $(addsuffix .instr.mac.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc $(TCFLAGS) -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-nt-opt-mac: $(addsuffix .opt.instr.mac.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc $(TCFLAGS) -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-sm: $(addsuffix .instr.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc -sm $(TCFLAGS) -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-sm-tca: $(addsuffix .opt.instr.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc -sm $(TCFLAGS) -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-sm-mac: $(addsuffix .instr.mac.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc -sm $(TCFLAGS) -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-sm-opt-mac: $(addsuffix .opt.instr.mac.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc -sm $(TCFLAGS) -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-mpg: $(addsuffix .mpg.instr.o,$(STEMS))
+	tc $(TCFLAGS) -pg -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-ptr: $(addsuffix .pinstr.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc $(TCFLAGS) -ptr -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-ptr-mac: $(addsuffix .pinstr.mac.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc $(TCFLAGS) -ptr -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-ptr-macstm: $(addsuffix .pinstr.macstm.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc $(TCFLAGS) -ptr -stm -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-ptr-tca: $(addsuffix .opt.pinstr.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc $(TCFLAGS) -ptr -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-ptr-opt-mac: $(addsuffix .opt.pinstr.mac.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc $(TCFLAGS) -ptr -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-ptr-opt-macstm: $(addsuffix .opt.pinstr.macstm.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc $(TCFLAGS) -ptr -stm -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-ptrw: $(addsuffix .pwinstr.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc $(TCFLAGS) -ptrw -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-ptrw-mac: $(addsuffix .pwinstr.mac.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc $(TCFLAGS) -ptrw -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-ptrw-macstm: $(addsuffix .pwinstr.macstm.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc $(TCFLAGS) -ptrw -stm -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-ptrw-tca: $(addsuffix .opt.pwinstr.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc $(TCFLAGS) -ptrw -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-ptrw-opt-mac: $(addsuffix .opt.pwinstr.mac.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc $(TCFLAGS) -ptrw -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-ptrw-opt-macstm: $(addsuffix .opt.pwinstr.macstm.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc $(TCFLAGS) -ptrw -stm -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-vulnw: $(addsuffix .vwinstr.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc $(TCFLAGS) -ptrw-vuln -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-vulnw-mac: $(addsuffix .vwinstr.mac.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc $(TCFLAGS) -ptrw-vuln -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-vulnw-macstm: $(addsuffix .vwinstr.macstm.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc $(TCFLAGS) -ptrw-vuln -stm -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-vulnw-tca: $(addsuffix .opt.vwinstr.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc $(TCFLAGS) -ptrw-vuln -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-vulnw-opt-mac: $(addsuffix .opt.vwinstr.mac.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc $(TCFLAGS) -ptrw-vuln -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-vulnw-opt-macstm: $(addsuffix .opt.vwinstr.macstm.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc $(TCFLAGS) -ptrw-vuln -stm -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-rtft: $(addsuffix .finstr.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc $(TCFLAGS) -rtft -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-rt: $(addsuffix .rinstr.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc $(TCFLAGS) -rt -o $@@ $^ $(LDFLAGS)
+
+#################################################################
+# INTERMEDIATE TARGETS #
+########################
+
+tc_iasgs: $(IASGFILES)
+
+tc_pasgs: $(PASGFILES)
+
+################################
+
+ifeq ($(RTCA_USE_CONDOR), 1)
+
+tsl-tca: CONDOR_RTCAFLAGS = -nt $(RTCAFLAGS)
+tsl-tca: condor-nt
+	$(error Condor submitted; halting (continue when condor finished))
+
+tsl-ptr: CONDOR_RTCAFLAGS = -ptr $(RTCAFLAGS)
+tsl-ptr: condor-ptr
+	$(error Condor submitted; halting (continue when condor finished))
+
+tsl-ptrw: CONDOR_RTCAFLAGS = -ptrw $(RTCAFLAGS)
+tsl-ptrw: condor-ptrw
+	$(error Condor submitted; halting (continue when condor finished))
+
+else
+
+tsl-tca: $(TSL_TCA_FILE)
+
+tsl-ptr: $(TSL_PTR_FILE)
+
+tsl-ptrw: $(TSL_PTRW_FILE)
+
+endif
+
+################################
+
+aids: $(addsuffix .aids,$(STEMS))
+
+ppi: $(addsuffix .ppi.c,$(STEMS))
+
+ppp: $(addsuffix .ppp.c,$(STEMS))
+
+ppf: $(addsuffix .ppf.c,$(STEMS))
+
+ppr: $(addsuffix .ppr.c,$(STEMS))
+
+instr: $(addsuffix .instr.c,$(STEMS))
+
+pinstr: $(addsuffix .pinstr.c,$(STEMS))
+
+pwinstr: $(addsuffix .pwinstr.c,$(STEMS))
+
+vinstr: $(addsuffix .vinstr.c,$(STEMS))
+
+vwinstr: $(addsuffix .vwinstr.c,$(STEMS))
+
+finstr: $(addsuffix .finstr.c,$(STEMS))
+
+rinstr: $(addsuffix .rinstr.c,$(STEMS))
+
+instr-tca: $(addsuffix .opt.instr.c,$(STEMS))
+
+pinstr-tca: $(addsuffix .opt.pinstr.c,$(STEMS))
+
+pwinstr-tca: $(addsuffix .opt.pwinstr.c,$(STEMS))
+
+vinstr-tca: $(addsuffix .opt.vinstr.c,$(STEMS))
+
+vwinstr-tca: $(addsuffix .opt.vwinstr.c,$(STEMS))
+
+#################################################################
+# TC INTERMEDIATE STUFF #
+#########################
+# The following prevents make from deleting intermediate files
+# when something fails
+.PRECIOUS: %.ppi.c %.ppp.c %.ppf.c %.ppr.c %.tc_iasgs %.tc_pasgs %.tc_tca %.tc_ptr %.tc_ptrw
+.PRECIOUS: %.instr.c %.finstr.c %.pinstr.c %.pwinstr.c %.rinstr.c %.vinstr.c %.vwinstr.c
+.PRECIOUS: %.instr.o %.finstr.o %.pinstr.o %.pwinstr.o %.rinstr.o %.vinstr.c %.vwinstr.c
+.PRECIOUS: %.aids %.ckit.c %.ckit.o %.mir.c %.mir.o %.cpp.c %.cce.c %.gcce.c
+
+%.ppi.c: %.c
+	tc $(CFLAGS) $(TCFLAGS) -E $<
+
+%.aids: %.ppi.c
+	tc $(CFLAGS) $(TCFLAGS) -aid $<
+
+%.ppp.c: %.c
+	tc -ptr $(CFLAGS) $(TCFLAGS) -E $<
+
+%.ppf.c: %.c
+	tc -rtft $(CFLAGS) $(TCFLAGS) -E $<
+
+%.ppr.c: %.c
+	tc -rt $(CFLAGS) $(TCFLAGS) -E $<
+
+%.ckit.c: %.c
+	tc $(CFLAGS) $(TCFLAGS) -ckit $<
+
+%.mir.c: %.c
+	tc $(CFLAGS) $(TCFLAGS) -mir $<
+
+%.tc_iasgs: %.ppi.c
+	tc $(TCFLAGS) -assign $<
+
+%.tc_pasgs: %.ppp.c
+	tc $(TCFLAGS) -ptr -assign $<
+
+$(TSL_TCA_FILE): $(IASGFILES)
+	rtca -nt $(RTCAFLAGS) -o $@@ $^
+
+$(TSL_PTR_FILE): $(PASGFILES)
+	rtca -ptr $(RTCAFLAGS) -o $@@ $^
+
+$(TSL_PTRW_FILE): $(PASGFILES)
+	rtca -ptrw $(RTCAFLAGS) -o $@@ $^
+
+%.opt.instr.c: %.ppi.c $(TSL_TCA_FILE)
+	tc $(TCFLAGS) -instr -tsl-$(TSL_TCA_FILE) $<
+
+%.opt.pinstr.c: %.ppp.c $(TSL_PTR_FILE)
+	tc $(TCFLAGS) -ptr -instr -tsl-$(TSL_PTR_FILE) $<
+
+%.opt.pwinstr.c: %.ppp.c $(TSL_PTRW_FILE)
+	tc $(TCFLAGS) -ptrw -instr -tsl-$(TSL_PTRW_FILE) $<
+
+%.opt.vinstr.c: %.ppp.c $(TSL_PTR_FILE)
+	tc $(TCFLAGS) -ptr-vuln -instr -tsl-$(TSL_PTR_FILE) $<
+
+%.opt.vwinstr.c: %.ppp.c $(TSL_PTRW_FILE)
+	tc $(TCFLAGS) -ptrw-vuln -instr -tsl-$(TSL_PTRW_FILE) $<
+
+%.instr.c: %.ppi.c
+	tc $(TCFLAGS) -instr $<
+
+%.pinstr.c: %.ppp.c
+	tc $(TCFLAGS) -ptr -instr $<
+
+%.pwinstr.c: %.ppp.c
+	tc $(TCFLAGS) -ptrw -instr $<
+
+%.vinstr.c: %.ppp.c
+	tc $(TCFLAGS) -ptr-vuln -instr $<
+
+%.vwinstr.c: %.ppp.c
+	tc $(TCFLAGS) -ptrw-vuln -instr $<
+
+%.finstr.c: %.ppf.c
+	tc $(TCFLAGS) -rtft -instr $<
+
+%.rinstr.c: %.ppr.c
+	tc $(TCFLAGS) -rt -instr $<
+
+%.instr.o: %.instr.c
+	tc $(CFLAGS) $(TCFLAGS) -c $<
+
+%.pinstr.o: %.pinstr.c
+	tc $(CFLAGS) $(TCFLAGS) -c $<
+
+%.pwinstr.o: %.pwinstr.c
+	tc $(CFLAGS) $(TCFLAGS) -c $<
+
+%.vinstr.o: %.vinstr.c
+	tc $(CFLAGS) $(TCFLAGS) -c $<
+
+%.vwinstr.o: %.vwinstr.c
+	tc $(CFLAGS) $(TCFLAGS) -c $<
+
+%.finstr.o: %.finstr.c
+	tc $(CFLAGS) $(TCFLAGS) -c $<
+
+%.rinstr.o: %.rinstr.c
+	tc $(CFLAGS) $(TCFLAGS) -c $<
+
+%.mac.o: %.c
+	tc $(CFLAGS) $(TCFLAGS) -macros -c $<
+
+%.macstm.o: %.c
+	tc $(CFLAGS) $(TCFLAGS) -macros -stm -c $<
+
+%.instr.mpg.o: %.instr.c
+	tc $(CFLAGS) $(TCFLAGS) -macros -pg -c $<
+
+%.gcce.c: %.c
+#	gcc -E $< > $@@
+	gcc -E -ansi -pedantic -U__GNUC__ -D__STDC__=0 $< > $@@
+
+%.cce.c: %.c
+	cc -E $< > $@@
+
+%.cpp.c: %.c
+	cpp $< > $@@
+
+#################################################################
+# CONDOR RTCA #
+###############
+CONDOR_RTCA_EXE = /afs/cs.wisc.edu/p/wpis/people/students/suan/TypecheckDebugger/src/analysis/rtca-raw-condor
+CONDOR_OUTDIR = /afs/cs.wisc.edu/u/s/u/suan/CONDOR
+
+EMPTY =
+
+condor-nt: CONDOR_RUN_ID = $(subst $(EMPTY) $(EMPTY),,$(CONDOR_RTCAFLAGS))
+condor-nt: CONDOR_OUTFILE = $(CONDOR_OUTDIR)/$(TARGET).tc$(CONDOR_RUN_ID)
+condor-nt: CONDOR_SUBMIT = "Executable = $(CONDOR_RTCA_EXE) \n\
+		Universe = standard \n\
+		Arguments = $(CONDOR_RTCAFLAGS) -o $(CONDOR_OUTFILE)\
+			$(CONDOR_OUTDIR)/libc.tc_asgs $(IASGFILES) \n\
+		Output = $(CONDOR_OUTDIR)/$(TARGET)$(CONDOR_RUN_ID).out \n\
+		Error = $(CONDOR_OUTDIR)/$(TARGET)$(CONDOR_RUN_ID).err \n\
+		Log = $(CONDOR_OUTDIR)/$(TARGET)$(CONDOR_RUN_ID).log \n\
+		Queue \n\
+		"
+condor-nt: $(IASGFILES)
+	@@date >> $(CONDOR_OUTDIR)/$(TARGET).condorlog
+	@@echo -e $(CONDOR_SUBMIT) >> $(CONDOR_OUTDIR)/$(TARGET).condorlog
+	echo -e $(CONDOR_SUBMIT) | condor_submit
+
+condor-ptr: CONDOR_RUN_ID = $(subst $(EMPTY) $(EMPTY),,$(CONDOR_RTCAFLAGS))
+condor-ptr: CONDOR_OUTFILE = $(CONDOR_OUTDIR)/$(TARGET).tc$(CONDOR_RUN_ID)
+condor-ptr: CONDOR_SUBMIT = "Executable = $(CONDOR_RTCA_EXE) \n\
+		Universe = standard \n\
+		Arguments = $(CONDOR_RTCAFLAGS) -o $(CONDOR_OUTFILE)\
+			$(CONDOR_OUTDIR)/libc.tc_asgs $(PASGFILES) \n\
+		Output = $(CONDOR_OUTDIR)/$(TARGET)$(CONDOR_RUN_ID).out \n\
+		Error = $(CONDOR_OUTDIR)/$(TARGET)$(CONDOR_RUN_ID).err \n\
+		Log = $(CONDOR_OUTDIR)/$(TARGET)$(CONDOR_RUN_ID).log \n\
+		Queue \n\
+		"
+condor-ptr: $(PASGFILES)
+	@@date >> $(CONDOR_OUTDIR)/$(TARGET).condorlog
+	@@echo -e $(CONDOR_SUBMIT) >> $(CONDOR_OUTDIR)/$(TARGET).condorlog
+	echo -e $(CONDOR_SUBMIT) | condor_submit
+
+condor-ptrw: CONDOR_RUN_ID = $(subst $(EMPTY) $(EMPTY),,$(CONDOR_RTCAFLAGS))
+condor-ptrw: CONDOR_OUTFILE = $(CONDOR_OUTDIR)/$(TARGET).tc$(CONDOR_RUN_ID)
+condor-ptrw: CONDOR_SUBMIT = "Executable = $(CONDOR_RTCA_EXE) \n\
+		Universe = standard \n\
+		Arguments = $(CONDOR_RTCAFLAGS) -o $(CONDOR_OUTFILE)\
+			$(CONDOR_OUTDIR)/libc.tc_asgs $(PASGFILES) \n\
+		Output = $(CONDOR_OUTDIR)/$(TARGET)$(CONDOR_RUN_ID).out \n\
+		Error = $(CONDOR_OUTDIR)/$(TARGET)$(CONDOR_RUN_ID).err \n\
+		Log = $(CONDOR_OUTDIR)/$(TARGET)$(CONDOR_RUN_ID).log \n\
+		Queue \n\
+		"
+condor-ptrw: $(PASGFILES)
+	@@date >> $(CONDOR_OUTDIR)/$(TARGET).condorlog
+	@@echo -e $(CONDOR_SUBMIT) >> $(CONDOR_OUTDIR)/$(TARGET).condorlog
+	echo -e $(CONDOR_SUBMIT) | condor_submit
+
+#################################################################
+# CLEAN #
+#########
+clean:
+	rm -f *.ppi.c *.ppp.c *.ppf.c *.ppr.c *.ckit.c *.mir.c *.cce.c *.gcce.c *.cpp.c \
+		*.tc_iasgs *.tc_pasgs *.tc_tca *.tc_ptr *.tc_ptrw \
+		*.instr.c *.pinstr.c *.pwinstr.c *.vinstr.c *.vwinstr.c *.finstr.c *.rinstr.c *.init.c *.tmp.c *.o
+
+clean-exe:
+	rm -f $(addsuffix .o,$(STEMS))
+
+clean-nt:
+	rm -f $(addsuffix .instr.o,$(STEMS))
+
+clean-nt-c:
+	rm -f $(addsuffix .instr.c,$(STEMS))
+
+clean-nt-tca:
+	rm -f $(addsuffix .opt.instr.o,$(STEMS))
+
+clean-ptr:
+	rm -f $(addsuffix .pinstr.o,$(STEMS))
+
+clean-ptr-c:
+	rm -f $(addsuffix .pinstr.c,$(STEMS))
+
+clean-ptr-tca:
+	rm -f $(addsuffix .opt.pinstr.o,$(STEMS))
+
+clean-ptrw:
+	rm -f $(addsuffix .pwinstr.o,$(STEMS))
+
+clean-ptrw-c:
+	rm -f $(addsuffix .pwinstr.c,$(STEMS))
+
+clean-ptrw-tca:
+	rm -f $(addsuffix .opt.pwinstr.o,$(STEMS))
+
+clean-vulnw:
+	rm -f $(addsuffix .vwinstr.o,$(STEMS))
+
+clean-vulnw-c:
+	rm -f $(addsuffix .vwinstr.c,$(STEMS))
+
+clean-vulnw-tca:
+	rm -f $(addsuffix .opt.vwinstr.o,$(STEMS))
+
+
+clean-rtft:
+	rm -f $(addsuffix .finstr.o,$(STEMS))
+
+clean-rtft-c:
+	rm -f $(addsuffix .finstr.c,$(STEMS))
+
+clean-rt:
+	rm -f $(addsuffix .rinstr.o,$(STEMS))
+
+clean-rt-c:
+	rm -f $(addsuffix .rinstr.c,$(STEMS))
+
+@
+
+
+1.44
+log
+@Changed behavior of RTCA_USE_CONDOR flag: if 1 then do
+condor, if 0 (or otherwise) don't do condor.
+@
+text
+@d66 3
+d76 1
+d163 18
+d282 18
+d358 4
+d372 4
+d382 2
+a383 2
+.PRECIOUS: %.instr.c %.finstr.c %.pinstr.c %.pwinstr.c %.rinstr.c
+.PRECIOUS: %.instr.o %.finstr.o %.pinstr.o %.pwinstr.o %.rinstr.o
+d426 1
+a426 1
+	tc $(TCFLAGS) -instr -tsl-$(TSL_PTR_FILE) $<
+d429 7
+a435 1
+	tc $(TCFLAGS) -instr -tsl-$(TSL_PTRW_FILE) $<
+d446 6
+d467 6
+d560 1
+a560 1
+		*.instr.c *.pinstr.c *.pwinstr.c *.finstr.c *.rinstr.c *.init.c *.tmp.c *.o
+d591 10
+@
+
+
+1.43
+log
+@Changed condor-support behavior:
+ - do condor only when directly calling target
+   tsl-tca, tsl-ptr, or tsl-ptrw.
+   (previously, did condor when making the target
+    file $(TARGET).tc_ptr)
+So basically, I can call make tsl-ptrw to send
+the job to condor; when done, calling ptrw-tca
+will continue, rather than re-calling condor to
+build the .tc_ptrw file.
+@
+text
+@d276 1
+a276 9
+ifndef RTCA_USE_CONDOR
+
+tsl-tca: $(TSL_TCA_FILE)
+
+tsl-ptr: $(TSL_PTR_FILE)
+
+tsl-ptrw: $(TSL_PTRW_FILE)
+
+else
+d289 8
+@
+
+
+1.42
+log
+@Changed rtca's -full flag to -nt
+@
+text
+@d276 2
+d284 16
+a364 2
+ifndef RTCA_USE_CONDOR
+
+a372 16
+
+else
+
+$(TSL_TCA_FILE): CONDOR_RTCAFLAGS = -nt $(RTCAFLAGS)
+$(TSL_TCA_FILE): condor-nt
+	$(error Condor submitted; halting (continue when condor finished))
+
+$(TSL_PTR_FILE): CONDOR_RTCAFLAGS = -ptr $(RTCAFLAGS)
+$(TSL_PTR_FILE): condor-ptr
+	$(error Condor submitted; halting (continue when condor finished))
+
+$(TSL_PTRW_FILE): CONDOR_RTCAFLAGS = -ptrw $(RTCAFLAGS)
+$(TSL_PTRW_FILE): condor-ptrw
+	$(error Condor submitted; halting (continue when condor finished))
+
+endif
+@
+
+
+1.41
+log
+@Changed/enhanced support for condor-rtca:
+can invoke either
+1. with targets condor-nt,condor-ptr,condor-ptrw; or
+2. by defining RTCA_USE_CONDOR in makefile preamble.
+@
+text
+@d350 1
+a350 1
+	rtca -full $(RTCAFLAGS) -o $@@ $^
+d360 1
+a360 1
+$(TSL_TCA_FILE): CONDOR_RTCAFLAGS = -full $(RTCAFLAGS)
+@
+
+
+1.40
+log
+@Added target condor-rtca, which submits an rtca job
+to condor with flags $(CONDOR_RTCAFLAGS)
+(-ptr/-ptrw must be explicit).
+@
+text
+@d11 4
+a199 5
+$(TARGET)-nt-addrof: OPT_ADDROF = 1
+$(TARGET)-nt-addrof: $(addsuffix .opt.instr.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc $(TCFLAGS) -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-nt-tca: OPT_TCA = 1
+a211 5
+$(TARGET)-sm-addrof: OPT_ADDROF = 1
+$(TARGET)-sm-addrof: $(addsuffix .opt.instr.o,$(STEMS)) $(DUMMY_EXTERNS)
+	tc -sm $(TCFLAGS) -o $@@ $^ $(LDFLAGS)
+
+$(TARGET)-sm-tca: OPT_TCA = 1
+a266 30
+# CONDOR RTCA #
+###############
+CONDOR_RTCA_EXE = /afs/cs.wisc.edu/p/wpis/people/students/suan/TypecheckDebugger/src/analysis/rtca-raw-condor
+CONDOR_OUTDIR = /afs/cs.wisc.edu/u/s/u/suan/CONDOR
+
+ifdef CONDOR_RTCAFLAGS
+  EMPTY =
+  SPACE = $(EMPTY) $(EMPTY)
+  CONDOR_RUN_ID = $(subst $(SPACE),,$(CONDOR_RTCAFLAGS))
+else
+  CONDOR_RUN_ID = -NO_ARGS
+endif
+
+CONDOR_OUTFILE = $(CONDOR_OUTDIR)/$(TARGET).tc$(CONDOR_RUN_ID)
+CONDOR_SUBMIT = "Executable = $(CONDOR_RTCA_EXE) \n\
+		Universe = standard \n\
+		Arguments = $(CONDOR_RTCAFLAGS) -o $(CONDOR_OUTFILE)\
+			$(CONDOR_OUTDIR)/libc.tc_asgs $(PASGFILES) \n\
+		Output = $(CONDOR_OUTDIR)/$(TARGET)$(CONDOR_RUN_ID).out \n\
+		Error = $(CONDOR_OUTDIR)/$(TARGET)$(CONDOR_RUN_ID).err \n\
+		Log = $(CONDOR_OUTDIR)/$(TARGET)$(CONDOR_RUN_ID).log \n\
+		Queue \n\
+		"
+
+condor-rtca: $(PASGFILES)
+	@@date >> $(CONDOR_OUTDIR)/$(TARGET).condorlog
+	@@echo -e $(CONDOR_SUBMIT) >> $(CONDOR_OUTDIR)/$(TARGET).condorlog
+	echo -e $(CONDOR_SUBMIT) | condor_submit
+
+#################################################################
+d274 1
+a274 2
+tsl-addrof: OPT_ADDROF = 1
+tsl-addrof: $(TSL_TCA_FILE)
+a275 1
+tsl-tca: OPT_TCA = 1
+d282 2
+a303 4
+instr-addrof: OPT_ADDROF = 1
+instr-addrof: $(addsuffix .opt.instr.c,$(STEMS))
+
+instr-tca: OPT_TCA = 1
+a305 1
+pinstr-tca: OPT_TCA = 1
+a307 1
+pwinstr-tca: OPT_TCA = 1
+d347 2
+d350 1
+a350 2
+	$(if $(OPT_ADDROF), rtca -addr $(RTCAFLAGS) -o $@@ $^)
+	$(if $(OPT_TCA), rtca -full $(RTCAFLAGS) -o $@@ $^)
+d358 16
+d431 56
+@
+
+
+1.39
+log
+@Added -stm flag for STATIC_MIRROR implementation of
+ptr/ptrw.
+Makefile.template now has macstm targets to make
+macro versions that use the static mirror.
+@
+text
+@d273 30
+@
+
+
+1.38
+log
+@Added .ppr to clean
+@
+text
+@d57 1
+d60 1
+d128 3
+d134 3
+d146 3
+d152 3
+d236 3
+a238 1
+#$(TARGET)-ptr-tca: OPT_PTR = 1
+a241 1
+#$(TARGET)-ptr-opt-mac: OPT_PTR = 1
+d245 3
+d254 3
+a256 1
+#$(TARGET)-ptrw-tca: OPT_PTRW = 1
+a259 1
+#$(TARGET)-ptrw-opt-mac: OPT_PTRW = 1
+d263 3
+d410 3
+@
+
+
+1.37
+log
+@Added rt
+@
+text
+@d406 1
+a406 1
+	rm -f *.ppi.c *.ppp.c *.ppf.c *.ckit.c *.mir.c *.cce.c *.gcce.c *.cpp.c \
+@
+
+
+1.36
+log
+@Added PURIFYFLAGS, specifically to add -windows=no as an option.
+@
+text
+@d60 1
+a60 1
+	@@echo '              rtft'
+d68 1
+d144 3
+d247 3
+d276 2
+d286 2
+d305 3
+a307 2
+.PRECIOUS: %.ppi.c %.ppp.c %.ppf.c %.tc_iasgs %.tc_pasgs %.tc_tca %.tc_ptr %.tc_ptrw
+.PRECIOUS: %.instr.c %.finstr.c %.pinstr.c %.pwinstr.c %.instr.o %.finstr.c %.pinstr.o %.pwinstr.o
+d322 3
+d368 3
+d383 3
+d408 1
+a408 1
+		*.instr.c *.pinstr.c *.pwinstr.c *.finstr.c *.init.c *.tmp.c *.o
+d445 6
+@
+
+
+1.35
+log
+@Added CCUREDFLAGS/ADDL_CCUREDFLAGS
+@
+text
+@d8 1
+d27 1
+d152 1
+a152 1
+	purify $(CC) $(CFLAGS) -o $@@ $^ $(LDFLAGS)
+@
+
+
+1.34
+log
+@Added ccured target (catered to cygnet, with /scratch/suan/ccured...)
+@
+text
+@d28 1
+d79 1
+@
+
+
+1.33
+log
+@Added aids target.
+@
+text
+@d77 3
+d149 3
+@
+
+
+1.32
+log
+@Added intermediate targets ppf, finster, clean-rtft[-c].
+@
+text
+@a32 3
+PPICFILES = $(addsuffix .ppi.c,$(STEMS))
+PPPCFILES = $(addsuffix .ppp.c,$(STEMS))
+PPFCFILES = $(addsuffix .ppf.c,$(STEMS))
+d251 1
+a251 1
+ppi: $(PPICFILES)
+d253 1
+a253 1
+ppp: $(PPPCFILES)
+d255 3
+a257 1
+ppf: $(PPPCFILES)
+d286 1
+a286 1
+.PRECIOUS: %.ckit.c %.ckit.o %.mir.c %.mir.o %.cpp.c %.cce.c %.gcce.c
+d290 3
+@
+
+
+1.31
+log
+@Added rtft target.
+@
+text
+@d35 1
+d62 2
+a63 2
+	@@echo 'Intermediate Targets: ppi ppp tc_iasgs tc_pasgs tsl-addrof tsl-tca'
+	@@echo '                      instr instr-addrof instr-tca'
+d67 1
+d258 2
+d266 2
+d285 1
+a285 1
+.PRECIOUS: %.ppi.c %.ppp.c %.tc_iasgs %.tc_pasgs %.tc_tca %.tc_ptr %.tc_ptrw
+d295 3
+d338 1
+a338 1
+%.finstr.c: %.ppp.c
+d373 1
+a373 1
+	rm -f *.ppi.c *.ppp.c *.ckit.c *.mir.c *.cce.c *.gcce.c *.cpp.c \
+d375 1
+a375 1
+		*.instr.c *.pinstr.c *.pwinstr.c *.init.c *.tmp.c *.o
+d406 6
+@
+
+
+1.30
+log
+@Added new clean targets: clean-nt-c, clean-ptr-c, clean-ptrw-c
+@
+text
+@d59 2
+d134 3
+d231 3
+d280 1
+a280 1
+.PRECIOUS: %.instr.c %.pinstr.c %.pwinstr.c %.instr.o %.pinstr.o %.pwinstr.o
+d329 3
+d339 3
+@
+
+
+1.29
+log
+@Added -sm (safe mallocs) targets.
+@
+text
+@d61 3
+a63 2
+	@@echo 'Cleaning Object Files: clean-exe clean-nt[-tca]'
+	@@echo '                       clean-ptr[-tca] clean-ptrw[-tca]'
+d360 3
+d369 3
+d377 3
+@
+
+
+1.28
+log
+@Added dump of cfiles at the end of usage.
+@
+text
+@d49 1
+a49 1
+usage:
+d52 3
+d56 1
+d58 1
+d93 14
+a130 4
+nt-mac: $(TARGET)-nt-mac
+
+nt-opt-mac: $(TARGET)-nt-opt-mac
+
+d176 17
+@
+
+
+1.27
+log
+@Added addl_rtcaflags
+@
+text
+@d60 2
+@
+
+
+1.26
+log
+@Removed spurious clean-* targets -- evidently left behind
+when I copied-and-pasted them for reference.
+@
+text
+@d27 1
+@
+
+
+1.25
+log
+@Added -ptr flag for making tc_pasgs target.
+@
+text
+@d52 1
+a52 1
+	@@echo '  (soon:)     ptrw ptrw-tca ptrw-mac ptrw-opt-mac'
+a58 8
+
+clean-exe:
+clean-nt:
+clean-nt-tca:
+clean-ptr:
+clean-ptr-tca:
+clean-ptrw:
+clean-ptrw-tca:
+@
+
+
+1.24
+log
+@Added variety of cleaning targets, to clean various
+object files.
+@
+text
+@d263 1
+a263 1
+	tc $(TCFLAGS) -assign $<
+@
+
+
+1.23
+log
+@Added RTCAFLAGS variable so Makefile can specify whether
+to do -mbu or -rda or both, etc.
+@
+text
+@d55 2
+d60 8
+d325 21
+@
+
+
+1.22
+log
+@Split .pp.c suffix into .ppi.c and .ppp.c;
+also, .tc_asgs into .tc_iasgs and .tc_pasgs;
+this way, can make nt and ptr/w targets in same
+directory without cleaning.
+@
+text
+@d8 1
+d256 2
+a257 2
+	$(if $(OPT_ADDROF), rtca -addr -o $@@ $^)
+	$(if $(OPT_TCA), rtca -full -o $@@ $^)
+d260 1
+a260 1
+	rtca -ptr -o $@@ $^
+d263 1
+a263 1
+	rtca -ptrw -o $@@ $^
+@
+
+
+1.21
+log
+@MAJOR OVERHAUL:
+Added -ptrw
+Changed target instr'ed filenames: instr, pinstr, pwinstr
+Changed rtca output filenames: tc_tca, tc_ptr, tc_ptrw
+Optimized version has opt prepended
+Macro version has mac appended
+So, we have file[.opt].[p[w]]instr[.mac].c
+@
+text
+@d31 2
+a32 1
+PPCFILES = $(addsuffix .pp.c,$(STEMS))
+d41 2
+a42 1
+ASGFILES = $(addsuffix .tc_asgs,$(STEMS))
+d52 1
+a52 1
+	@@echo 'Intermediate Targets: pp tc_asgs tsl-addrof tsl-tca'
+d191 3
+a193 1
+tc_asgs: $(ASGFILES)
+d205 3
+a207 1
+pp: $(PPCFILES)
+d232 1
+a232 1
+.PRECIOUS: %.pp.c %.tc_asgs %.tc_tca %.tc_ptr %.tc_ptrw
+d236 1
+a236 1
+%.pp.c: %.c
+d239 3
+d248 1
+a248 1
+%.tc_asgs: %.pp.c
+d251 4
+a254 1
+$(TSL_TCA_FILE): $(ASGFILES)
+d258 1
+a258 1
+$(TSL_PTR_FILE): $(ASGFILES)
+d261 1
+a261 1
+$(TSL_PTRW_FILE): $(ASGFILES)
+d264 1
+a264 7
+#$(TSLFILE): $(ASGFILES)
+#	$(if $(OPT_ADDROF), rtca -addr -o $@@ $^)
+#	$(if $(OPT_TCA), rtca -full -o $@@ $^)
+#	$(if $(OPT_PTR), rtca -ptr -o $@@ $^)
+#	$(if $(OPT_PTRW), rtca -ptrw -o $@@ $^)
+
+%.opt.instr.c: %.pp.c $(TSL_TCA_FILE)
+d267 1
+a267 1
+%.opt.pinstr.c: %.pp.c $(TSL_PTR_FILE)
+d270 1
+a270 1
+%.opt.pwinstr.c: %.pp.c $(TSL_PTRW_FILE)
+d273 1
+a273 1
+%.instr.c: %.pp.c
+d276 1
+a276 1
+%.pinstr.c: %.pp.c
+d279 1
+a279 1
+%.pwinstr.c: %.pp.c
+d311 2
+a312 2
+	rm -f *.pp.c *.ckit.c *.mir.c *.cce.c *.gcce.c *.cpp.c \
+		*.tc_asgs *.tc_tca *.tc_ptr *.tc_ptrw \
+@
+
+
+1.20
+log
+@Added targets ptr-mac and ptr-opt-mac
+@
+text
+@a31 2
+INSTRCFILES = $(addsuffix .instr.c,$(STEMS))
+OINSTRCFILES = $(addsuffix .opt.instr.c,$(STEMS))
+a38 5
+IOBJS = $(addsuffix .instr.o,$(STEMS)) $(DUMMY_EXTERNS)
+OIOBJS = $(addsuffix .opt.instr.o,$(STEMS)) $(DUMMY_EXTERNS)
+MOBJS = $(addsuffix .mac.instr.o,$(STEMS)) $(DUMMY_EXTERNS)
+OMOBJS = $(addsuffix .opt.mac.instr.o,$(STEMS)) $(DUMMY_EXTERNS)
+MPGOBJS = $(addsuffix .mpg.instr.o,$(STEMS)) $(DUMMY_EXTERNS)
+d41 3
+a43 1
+TSLFILE = $(TARGET).tc_tsls
+d46 4
+a49 1
+	@@echo 'Main Targets: exe nt nt-addrof mac opt-mac'
+d80 1
+d83 1
+d86 1
+d89 1
+d92 2
+a93 1
+mac: $(TARGET)-mac
+d95 12
+a106 1
+opt-mac: $(TARGET)-opt-mac
+d134 2
+a135 2
+$(TARGET)-noop: $(IOBJS)
+	tc -noop $(TCFLAGS) -o $@@ $^ $(LDFLAGS)
+d137 1
+a137 1
+$(TARGET)-nt: $(IOBJS)
+d141 1
+a141 1
+$(TARGET)-nt-addrof: $(OIOBJS)
+d145 1
+a145 1
+$(TARGET)-nt-tca: $(OIOBJS)
+d148 1
+a148 2
+$(TARGET)-ptr: TCFLAGS += -ptr
+$(TARGET)-ptr: $(IOBJS)
+d151 1
+a151 2
+$(TARGET)-ptr-mac: TCFLAGS += -ptr
+$(TARGET)-ptr-mac: $(MOBJS)
+d154 16
+a169 4
+$(TARGET)-ptr-tca: TCFLAGS += -ptr
+$(TARGET)-ptr-tca: OPT_PTR = 1
+$(TARGET)-ptr-tca: $(OIOBJS)
+	tc $(TCFLAGS) -o $@@ $^ $(LDFLAGS)
+d171 2
+a172 4
+$(TARGET)-ptr-opt-mac: TCFLAGS += -ptr
+$(TARGET)-ptr-opt-mac: OPT_PTR = 1
+$(TARGET)-ptr-opt-mac: $(OMOBJS)
+	tc $(TCFLAGS) -o $@@ $^ $(LDFLAGS)
+d174 2
+a175 2
+$(TARGET)-mac: $(MOBJS)
+	tc $(TCFLAGS) -o $@@ $^ $(LDFLAGS)
+d177 3
+a179 2
+$(TARGET)-opt-mac: $(OMOBJS)
+	tc $(TCFLAGS) -o $@@ $^ $(LDFLAGS)
+d181 3
+a183 2
+$(TARGET)-mpg: $(MPGOBJS)
+	tc -pg $(TCFLAGS) -o $@@ $^ $(LDFLAGS)
+d192 1
+a192 1
+tsl-addrof: $(TSLFILE)
+d195 3
+a197 1
+tsl-tca: $(TSLFILE)
+d199 1
+a199 2
+tsl-ptr: OPT_PTR = 1
+tsl-ptr: $(TSLFILE)
+d203 5
+a207 1
+instr: $(INSTRCFILES)
+d210 1
+a210 1
+instr-addrof: $(OINSTRCFILES)
+d213 7
+a219 1
+instr-tca: $(OINSTRCFILES)
+d226 3
+a228 1
+.PRECIOUS: %.pp.c %.tc_asgs %.tc_tsls %.instr.c %.instr.o %.ckit.c %.ckit.o %.mir.c %.mir.o %.cpp.c %.cce.c %.gcce.c
+d240 1
+a240 1
+	tc -assign $(TCFLAGS) $<
+d242 1
+a242 1
+$(TSLFILE): $(ASGFILES)
+a243 1
+	$(if $(OPT_PTR), rtca -ptr -o $@@ $^)
+d246 20
+a265 2
+%.opt.instr.c: %.pp.c $(TSLFILE)
+	tc $(TCFLAGS) -instr -tsl-$(TSLFILE) $<
+d270 6
+d279 8
+a286 2
+%.mac.instr.o: %.instr.c
+	tc -macros $(CFLAGS) $(TCFLAGS) -c $<
+d288 2
+a289 2
+%.mpg.instr.o: %.instr.c
+	tc -macros -pg $(CFLAGS) $(TCFLAGS) -c $<
+d305 3
+a307 1
+	rm -f *.pp.c *.ckit.c *.mir.c *.cce.c *.gcce.c *.cpp.c *.tc_asgs *.tc_tsls *.instr.c *.init.c *.tmp.c *.o
+@
+
+
+1.19
+log
+@Added -ptr targets
+@
+text
+@d86 4
+d138 4
+d145 5
+@
+
+
+1.18
+log
+@Major changes: optimized instr file extension is now opt.instr.c
+and macro is mac.instr.o; targets nt-tca, opt-mac;
+tca-addrof renamed to rtca-raw, replaced by script rtca
+which incorporates libc assignment edges; etc...
+@
+text
+@d82 4
+d130 9
+d160 3
+d194 1
+@
+
+
+1.17
+log
+@Added intermediate targets: pp, tc_asgs, tc_tsls, instr, instr-addrof
+@
+text
+@d33 1
+d42 4
+a45 2
+MOBJS = $(addsuffix .instrm.o,$(STEMS)) $(DUMMY_EXTERNS)
+MPGOBJS = $(addsuffix .instrmpg.o,$(STEMS)) $(DUMMY_EXTERNS)
+d50 7
+d80 2
+d84 2
+a114 1
+$(TARGET)-nt: OPT_NONE = 1
+d119 5
+a123 1
+$(TARGET)-nt-addrof: $(IOBJS)
+d129 3
+a138 1
+tc_asgs: OPT_ADDROF = 1
+d141 5
+a145 2
+tc_tsls: OPT_ADDROF = 1
+tc_tsls: $(TSLFILE)
+a148 1
+instr: OPT_NONE = 1
+d152 4
+a155 1
+instr-addrof: $(INSTRCFILES)
+d162 1
+a162 1
+.PRECIOUS: %.pp.c %.tc_asgs %.tc_tsls %.instr.c %.instr.o %.instrm.o %.instrmpg.o %.ckit.c %.ckit.o %.mir.c %.mir.o %.cpp.c %.cce.c %.gcce.c
+d174 1
+a174 2
+	$(if $(OPT_ADDROF), tc -assign $(TCFLAGS) $<)
+	$(if $(OPT_NONE), touch $@@)
+d177 5
+a181 2
+	$(if $(OPT_ADDROF), tca-addrof -o $@@ $^)
+	$(if $(OPT_NONE), touch $@@)
+d183 2
+a184 3
+%.instr.c: %.pp.c $(TSLFILE)
+	$(if $(OPT_ADDROF), tc $(TCFLAGS) -instr -tsl-$(TSLFILE) $<)
+	$(if $(OPT_NONE), tc $(TCFLAGS) -instr $<)
+d189 1
+a189 1
+%.instrm.o: %.instr.c
+d192 1
+a192 1
+%.instrmpg.o: %.instr.c
+@
+
+
+1.16
+log
+@Added OPT_NONE rule to touch tc_asgs and tc_tsls files,
+to allow make to track dependencies again.
+On the flipside, must be careful to make clean before
+making nt-addrof.
+@
+text
+@d28 6
+a33 2
+# OBJ FILENAMES #
+#################
+d114 18
+@
+
+
+1.15
+log
+@Removed obsolete -nowarn targets
+@
+text
+@d129 1
+d133 1
+@
+
+
+1.14
+log
+@NOW Fixed typo in make clean: ".tsla" -> ".tsls"
+@
+text
+@d19 1
+a19 1
+#include /p/wpis/people/students/alexey/types/scripts/Makefile.template
+a65 2
+nowarn: $(TARGET)-nowarn
+
+a67 2
+nwm: $(TARGET)-nwm
+
+a104 3
+$(TARGET)-nowarn: $(IOBJS)
+	tc -nowarn $(TCFLAGS) -o $@@ $^ $(LDFLAGS)
+
+a106 3
+
+$(TARGET)-nwm: $(MOBJS)
+	tc -nowarn $(TCFLAGS) -o $@@ $^ $(LDFLAGS)
+@
+
+
+1.13
+log
+@Fixed typo in make clean: ".tsla" -> ".tsls"
+@
+text
+@d170 1
+a170 1
+	rm -f *.pp.c *.ckit.c *.mir.c *.cce.c *.gcce.c *.cpp.c *.tc_asgs *.tc_tsla *.instr.c *.init.c *.tmp.c *.o
+@
+
+
+1.12
+log
+@Added TCFLAGS to call to 'tc -assign'
+@
+text
+@d126 1
+a126 1
+.PRECIOUS: %.pp.c %.tc_asgs %.tc_tsla %.instr.c %.instr.o %.instrm.o %.instrmpg.o %.ckit.c %.ckit.o %.mir.c %.mir.o %.cpp.c %.cce.c %.gcce.c
+@
+
+
+1.11
+log
+@Added .tc_asgs and .tc_tsla files to clean list.
+@
+text
+@d138 1
+a138 1
+	$(if $(OPT_ADDROF), tc -assign $<)
+@
+
+
+1.10
+log
+@Added stuff to do addrof analysis:
+For tc: -assign flag to output assignment edges
+        -tsl-<> flag to read ts-levels from file
+For makefile: added nt-addrof target, and new complicated
+        conditionals to do the right thing (calling tc
+        with above new flags)
+@
+text
+@d170 1
+a170 1
+	rm -f *.pp.c *.ckit.c *.mir.c *.cce.c *.gcce.c *.cpp.c *.instr.c *.init.c *.tmp.c *.o
+@
+
+
+1.9
+log
+@Added mir target.
+@
+text
+@d40 3
+d64 2
+d101 1
+d105 4
+d126 1
+a126 1
+.PRECIOUS: %.pp.c %.instr.c %.instr.o %.instrm.o %.instrmpg.o %.ckit.c %.ckit.o %.mir.c %.mir.o %.cpp.c %.cce.c %.gcce.c
+d137 9
+a145 2
+%.instr.c: %.pp.c
+	tc $(TCFLAGS) -instr $<
+@
+
+
+1.8
+log
+@Modified so that tc compilation $CFLAGS in addition to $TCFLAGS;
+added support for $ADDL_CFLAGS/$ADDL_TCFLAGS, which the user
+can now add to the make's commandline.
+@
+text
+@d35 1
+d55 2
+d90 3
+d116 1
+a116 1
+.PRECIOUS: %.pp.c %.instr.c %.instr.o %.instrm.o %.instrmpg.o %.ckit.c %.ckit.o %.cpp.c %.cce.c %.gcce.c
+d124 3
+d153 1
+a153 1
+	rm -f *.pp.c *.ckit.c *.cce.c *.gcce.c *.cpp.c *.instr.c *.init.c *.tmp.c *.o
+@
+
+
+1.7
+log
+@Added "nwm" target == nowarn+mac
+@
+text
+@d23 4
+d113 1
+a113 1
+	tc $(TCFLAGS) -E $<
+d116 1
+a116 1
+	tc $(TCFLAGS) -ckit $<
+d122 1
+a122 1
+	tc $(TCFLAGS) -c $<
+d125 1
+a125 1
+	tc -macros $(TCFLAGS) -c $<
+d128 1
+a128 1
+	tc -macros -pg $(TCFLAGS) -c $<
+@
+
+
+1.6
+log
+@Removed "ins" target and obsolete "-newtags" flag.
+Added "nowarn" target.
+@
+text
+@d58 2
+d94 3
+@
+
+
+1.5
+log
+@Added MPGOBJS;
+abstracted dummy_externs into DUMMY_EXTERNS;
+commented out all initial (user-defined) portions, so this file can now be
+included from elsewhere.
+@
+text
+@d18 5
+a49 2
+ins: $(TARGET)-ins
+
+d54 2
+a80 3
+$(TARGET)-ins: $(IOBJS)
+	tc $(TCFLAGS) -o $@@ $^ $(LDFLAGS)
+
+d85 4
+a88 1
+	tc -newtags $(TCFLAGS) -o $@@ $^ $(LDFLAGS)
+d91 1
+a91 1
+	tc -newtags $(TCFLAGS) -o $@@ $^ $(LDFLAGS)
+d94 1
+a94 1
+	tc -newtags -pg $(TCFLAGS) -o $@@ $^ $(LDFLAGS)
+@
+
+
+1.4
+log
+@Added -mpg support for macro/-pg.
+@
+text
+@d4 4
+a7 4
+CC = gcc
+#CFLAGS =
+#TCFLAGS = -cc=cc -pp=cpp
+#LDFLAGS = -lm
+d10 1
+a10 1
+STEMS = test1 test2
+d13 4
+a16 1
+TARGET = test
+d26 3
+a28 2
+IOBJS = $(addsuffix .instr.o,$(STEMS))
+MOBJS = $(addsuffix .instrm.o,$(STEMS))
+@
+
+
+1.3
+log
+@Enhanced clean to also delete *.init.c *.tmp.c
+@
+text
+@d49 2
+d84 3
+d92 1
+a92 1
+.PRECIOUS: %.pp.c %.instr.c %.instr.o %.instrm.o %.ckit.c %.ckit.o %.cpp.c %.cce.c %.gcce.c
+d108 3
+@
+
+
+1.2
+log
+@Added pure
+@
+text
+@d118 1
+a118 1
+	rm -f *.pp.c *.ckit.c *.cce.c *.gcce.c *.cpp.c *.instr.c *.o
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d31 2
+d54 3
+@

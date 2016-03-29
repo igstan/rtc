@@ -1,0 +1,770 @@
+head	1.22;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+1.22
+date	2004.05.07.19.52.39;	author suan;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2004.05.02.18.26.36;	author suan;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2004.04.14.00.22.35;	author suan;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2004.04.07.21.07.14;	author suan;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2004.04.07.18.02.03;	author suan;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2004.04.07.17.38.56;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2004.02.24.23.48.16;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2004.02.24.19.29.20;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2003.12.11.21.03.59;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2003.12.11.19.18.20;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2003.12.11.18.26.35;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2003.10.08.16.31.43;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2003.10.01.22.18.32;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2003.02.24.21.53.17;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2003.02.22.00.11.49;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2003.02.21.17.40.11;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2003.02.14.17.41.44;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2003.02.13.20.45.06;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.01.20.19.46.55;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.01.20.18.24.37;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.01.16.19.30.49;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.01.16.17.45.36;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Renamed from cmbu.cpp.
+@
+
+
+1.22
+log
+@Changed AO/ECR relationship: added AO::getECR() function
+that is to be called after pt-analysis finalization of
+ECRs -- so, PRIOR to finalization, must use ECR::getECR()
+(as is now done in pta.cpp), but AFTER, must only use
+AO::getECR() which outputs a fatal error message if ECR
+not found.
+@
+text
+@#include <stdio.h>
+#include "ecr.h"
+#include "cfg.h"
+#include "rdmb.h"
+#include "flags.h"
+
+//--------------------------------
+// collecting MBU facts
+
+DFAfact& RDMBfact::newClone(bool preserve)
+{
+  return *new RDMBfact( (RDAfact&) this->rda_fact.newClone(preserve),
+			(MBUfact&) this->mbu_fact.newClone(preserve));
+}
+
+void RDMBfact::setTop()
+{
+  this->rda_fact.setTop();
+  this->mbu_fact.setTop();
+}
+
+void RDMBfact::setBottom()
+{
+  this->rda_fact.setBottom();
+  this->mbu_fact.setBottom();
+}
+
+bool RDMBfact::meet(DFAfact& df, bool preserve, bool warnNotLE)
+{
+  bool r = this->rda_fact.meet(((RDMBfact&)df).rda_fact, preserve, warnNotLE);
+  bool m = this->mbu_fact.meet(((RDMBfact&)df).mbu_fact, preserve, warnNotLE);
+  return (m || r);
+}
+
+void RDMBfact::join(DFAfact& df, bool preserve)
+{
+  this->rda_fact.join(((RDMBfact&)df).rda_fact, preserve);
+  this->mbu_fact.join(((RDMBfact&)df).mbu_fact, preserve);
+}
+
+void RDMBfact::debug_dump(FILE * outf, bool brief)
+{
+  fprintf(outf, "--RDMBfact::debug_dump:\n");
+  fprintf(outf, "----RDA:");
+  this->rda_fact.debug_dump(outf, brief);
+  fprintf(outf, "----MBU:");
+  this->mbu_fact.debug_dump(outf, brief);
+  fprintf(outf, "--end RDMBfact::debug_dump\n");
+}
+
+//------------------------------
+
+RDAfact * RDMBfact::results = 0;
+
+//------------------------------
+
+AO * RDMBfact::cf_ao = 0;
+RDAfact * RDMBfact::cf_rda_fact = 0;
+PgmStmt * RDMBfact::cf_parent_node = 0;
+
+bool RDMBfact::collectFacts(AO& ao)
+{
+  //-- add reaching-defs to results -- including cached grefs
+  if(cf_ao && cf_rda_fact){ //- assert
+    RDMBfact::results->copyFacts(*cf_ao, ao, *cf_rda_fact);
+
+    // - traverse calling context - add cached GMOD-filtered facts
+    if(cf_parent_node){
+      //- collect caller functions (recursively)
+      suco_set<CFGfunction *> fns;
+      CFGfunction& cfn = cf_parent_node->getParentFunction();
+      CFGfunction::collectCallers(cfn, fns);
+      //- now walk caller functions
+      suco_iterator<CFGfunction *> fni(fns);
+      while(fni.Iterate()){
+        suco_iterator<PExprCall *> csi(fni.Current()->getCallSites());
+        while(csi.Iterate()){
+          RDMBfact::results->copyFacts(*cf_ao, ao, csi.Current()->getRDAlocal());
+        }
+      }
+    }
+
+  } else fprintf(stderr, "collectFacts: cf_ao or cf_rda_fact is null!\n");
+
+  return true;
+}
+
+void RDMBfact::addFacts(suco_set<AO *>& aoset, PgmExpr& dnode, PgmStmt * cnode, PExprArg * arg)
+{
+  //-- collect MBU results
+  if(RDMBfact::results){ //- assert
+    //-- for each AO...
+    suco_iterator<AO *> aoi(aoset);
+    while(aoi.Iterate()){
+      AO& ao = *aoi.Current();
+      if(ao.getTSC() >= AO::TSC_EXPOSED){
+//future TODO?: modify to have one LocAidNode per uninit instance?
+        //-- add this verifyTag to results
+        RDMBfact::results->addFact(ao, &dnode, cnode, arg);
+
+        //-- add reaching-defs of ao's aliases to results, including cached grefs
+        RDMBfact::cf_ao = &ao;
+        RDMBfact::cf_rda_fact = &this->rda_fact;
+        RDMBfact::cf_parent_node = dnode.getParentNode();
+        ao.getECR().traverseAliases(RDMBfact::collectFacts);
+      }
+    }
+  } else fprintf(stderr, "RDMBfact::addFacts: results not set!\n");
+}
+
+//--------------------------------
+// collecting MBU results
+
+DFAfact& RDMBfactHandler::newTopFact()
+{
+  return *new RDMBfact(*new RDAfact, *new MBUfact);
+}
+
+void RDMBfactHandler::deleteFact(DFAfact& df)
+{
+  RDMBfact& cmf = (RDMBfact&) df;
+  delete &cmf.rda_fact;
+  delete &cmf.mbu_fact;
+  delete &cmf;
+}
+
+void RDMBfactHandler::filterCallsiteFacts(PExprCall& dc, DFAfact& df, DFAfact& df_local)
+{
+  RDMBfact& cmbf = (RDMBfact&) df;
+  RDMBfact& cmbf_local = (RDMBfact&) df_local;
+
+  //- 1. move all facts to cmbf_local
+  cmbf_local.meet(cmbf, false);
+
+  //- 2. filter elements back into cmbf
+  //~~ RDA portion: don't call RDA version, because it caches its results (may not matter?)
+  suco_iterator<CFGfunction *> tfi(dc.getTargetFns());
+  while(tfi.Iterate()){
+    cmbf_local.rda_fact.filterGmodInto(*tfi.Current(), cmbf.rda_fact);
+  }
+  //~~ MBU portion
+  MBUfactHandler::handler.filterCallsiteFacts(dc, cmbf.mbu_fact, cmbf_local.mbu_fact);
+
+  //- 3. specially handle call arguments
+  //  - not necessary for collecting phase
+}
+
+void RDMBfactHandler::interProcHandleCallArgs(DFAfact& df, PExprCall& dc)
+{
+// TODO?  or NOP?
+}
+
+void RDMBfactHandler::interProcHandleRetvalAssign(DFAfact& df, PExprCall& dc)
+{
+// TODO?  or NOP?
+}
+
+DFAfact& RDMBfactHandler::lookupNodeFact(CFGnode& cn, CFGnode * tfSucc)
+{
+  return cn.getRDMBfact();
+}
+
+DFAfact& RDMBfactHandler::lookupNodeFact(PExprCall& dc)
+{
+  return dc.getRDMBfact();
+}
+
+DFAfact& RDMBfactHandler::lookupNodeFact(PExprParallel& dp)
+{
+  return dp.getRDMBfact();
+}
+
+bool RDMBfactHandler::handleStrongAssign(DFAfact& df, AO& lhs, ExpDescr& rhs, PgmExpr * dnode, PgmStmt * cnode, PExprArg * arg)
+{
+  RDMBfact& cmf = (RDMBfact&) df;
+  RDAfactHandler::handler.handleStrongAssign(cmf.rda_fact, lhs, rhs, dnode, cnode, arg);
+  MBUfactHandler::handler.handleStrongAssign(cmf.mbu_fact, lhs, rhs, dnode, cnode, arg);
+  return false; //- not useless
+}
+
+bool RDMBfactHandler::handleWeakAssign(DFAfact& df, ExpDescr& lhs, ExpDescr& rhs, PExprAssign& dnode)
+{
+  RDMBfact& cmf = (RDMBfact&) df;
+  RDAfactHandler::handler.handleWeakAssign(cmf.rda_fact, lhs, rhs, dnode);
+  MBUfactHandler::handler.handleWeakAssign(cmf.mbu_fact, lhs, rhs, dnode);
+  return false; //- not useless
+}
+
+bool RDMBfactHandler::handleFormal(DFAfact& df, PExprDecl& dd, CFGfunction& parfn, bool interproc)
+{
+  RDMBfact& cmf = (RDMBfact&) df;
+  RDAfactHandler::handler.handleFormal(cmf.rda_fact, dd, parfn, interproc);
+  MBUfactHandler::handler.handleFormal(cmf.mbu_fact, dd, parfn, interproc);
+  return false; //- not useless
+}
+
+bool RDMBfactHandler::handleReturnStmt(DFAfact& df, PgmStmt& retnode, ExpDescr * retedesc, bool interproc)
+{
+  RDMBfact& cmf = (RDMBfact&) df;
+  RDAfactHandler::handler.handleReturnStmt(cmf.rda_fact, retnode, retedesc, interproc);
+  MBUfactHandler::handler.handleReturnStmt(cmf.mbu_fact, retnode, retedesc, interproc);
+  return false;
+}
+
+bool RDMBfactHandler::handleDecl(DFAfact& df, PExprDecl& dd)
+{
+  RDMBfact& cmf = (RDMBfact&) df;
+  RDAfactHandler::handler.handleDecl(cmf.rda_fact, dd);
+  MBUfactHandler::handler.handleDecl(cmf.mbu_fact, dd);
+  return false; //- not useless
+}
+
+bool RDMBfactHandler::handleVerify(DFAfact& df, PExprVerify& dv)
+{
+  RDMBfact& cmf = (RDMBfact&) df;
+  switch(dv.getVtKind()){
+    case PExprVerify::vtTag:
+    case PExprVerify::vtRhs: {
+        //-- collect MBU results
+        if(cmf.mbu_fact.intersectsAliases(dv.getAOs())){
+          cmf.addFacts(dv.getAOs(), dv);
+        }
+      } break;
+    case PExprVerify::vtNone:
+    default:
+      break;
+  }
+
+  //-- process fact
+  RDAfactHandler::handler.handleVerify(cmf.rda_fact, dv);
+  MBUfactHandler::handler.handleVerify(cmf.mbu_fact, dv);
+  return false; //- not useless
+}
+
+void RDMBfactHandler::handleFreeCall(DFAfact& df, PExprCall& dc)
+{
+  RDMBfact& cmf = (RDMBfact&) df;
+  RDAfactHandler::handler.handleFreeCall(cmf.rda_fact, dc);
+  MBUfactHandler::handler.handleFreeCall(cmf.mbu_fact, dc);
+}
+
+void RDMBfactHandler::interProcFilterEntryFact(DFAfact& df, CFGnode& cn)
+{
+  RDMBfact& cmf = (RDMBfact&) df;
+  RDAfactHandler::handler.interProcFilterEntryFact(cmf.rda_fact, cn);
+  MBUfactHandler::handler.interProcFilterEntryFact(cmf.mbu_fact, cn);
+}
+
+void RDMBfactHandler::intraProcInitializeEntryFact(DFAfact& df, CFGnode& cn)
+{
+  RDMBfact& cmf = (RDMBfact&) df;
+  RDAfactHandler::handler.intraProcInitializeEntryFact(cmf.rda_fact, cn);
+  MBUfactHandler::handler.intraProcInitializeEntryFact(cmf.mbu_fact, cn);
+}
+
+void RDMBfactHandler::intraProcHandleCall(DFAfact& df, PExprCall& dc)
+{
+  RDMBfact& cmf = (RDMBfact&) df;
+  RDAfactHandler::handler.intraProcHandleCall(cmf.rda_fact, dc);
+  MBUfactHandler::handler.intraProcHandleCall(cmf.mbu_fact, dc);
+}
+
+
+@
+
+
+1.21
+log
+@MAJOR UPDATE:
+- Created new class LocSet to encapsulate a set of
+  locations, used to store GMOD, GREF, and backedge
+  filters.
+  (Previously, was suco_set<AO *>, later changed to
+  suco_set<ECR *>.)
+- Created two versions, one storing AOs, another
+  storing ECRs.  Verified that results are the
+  same, though performance is not (but only when
+  computing backedge filters).
+@
+text
+@d105 1
+a105 2
+        if(ao.hasECR()) ECR::getECR(ao).traverseAliases(RDMBfact::collectFacts);
+        else RDMBfact::collectFacts(ao);
+@
+
+
+1.20
+log
+@Major overhaul, to handle function call filtering.
+See dfa.cpp for documentation.
+ - filterRetnodeFact() eliminated; replaced by
+ - interProcHandleRetvalAssign -- responsible for
+   assigning from R X I <fn> to R D I <fp>.
+ - interProcPrepareReturnCollector() -- special
+    pre-processor for indirect calls to set "intersection"
+   AOs to "top".
+ - meetFiltered() -- does meet, but constrained by a
+   window (defined by a function's GREF/MayFree set).
+Supporting changes:
+ - eliminated removeArgIntervalsExceptFor(); rendered obsolete
+   by
+ - filterGrefMayFree() -- called at function entry
+ - RANfact::isTop()
+ - collectAOset, createTopMappings, in support of
+   interProcPrepareReturnCollector()
+ - PExprCall::isDirectCall() and isRecursiveCall()
+ - CFGfunction::GrefOrFreeHeapAffects()
+@
+text
+@d137 1
+d140 1
+a140 2
+    cmbf_local.rda_fact.filterInto(tfi.Current()->getGMOD(), cmbf.rda_fact);
+    cmbf_local.mbu_fact.filterInto(tfi.Current()->getGREF(), cmbf.mbu_fact);
+d142 2
+@
+
+
+1.19
+log
+@Added new DFA interface function interProcFilterEntryFact()
+called at each function entry (when doing inter-proc
+analysis).
+@
+text
+@d152 5
+@
+
+
+1.18
+log
+@Changed handleFormal to pass parent-function rather
+than previous "ismain" and "callsites" pair.
+@
+text
+@d236 7
+@
+
+
+1.17
+log
+@Added interProcHandleCallArgs() interface function to
+DFA and all derived classes.
+@
+text
+@d183 1
+a183 1
+bool RDMBfactHandler::handleFormal(DFAfact& df, PExprDecl& dd, bool ismain, suco_llist<PExprCall *>& callsites, bool interproc)
+d186 2
+a187 2
+  RDAfactHandler::handler.handleFormal(cmf.rda_fact, dd, ismain, callsites, interproc);
+  MBUfactHandler::handler.handleFormal(cmf.mbu_fact, dd, ismain, callsites, interproc);
+@
+
+
+1.16
+log
+@PREVIOUSLY: handleReturnStmt was only called for non-void
+return statements.
+NOW: handleReturnStmt is called for ALL return statements.
+This is needed so analyses can properly handle deallocation
+of local variables.
+OTHER CHANGES:
+ 1. RAN: handleReturnStmt now removes intervals pointing
+    to freedStack ECRs.
+ 2. Interval: changed code for narrow() to be more logically
+    sound?
+@
+text
+@d147 5
+@
+
+
+1.15
+log
+@Modified handleFormal to pass a flag indicating whether
+the function is "main".  This is needed because main's
+argc/argv formals may need to be initialized differently.
+
+For RAN::handleFormal() - if ismain, then set bottom;
+else do top MEET callsite facts.
+
+For MBU::handleFormal() - *BUG FIX* - was previously calling
+handleStrongAssign(), which was _wrong_ (doesn't correctly
+meet facts from multiple callsites); fixed to do "weak"
+assignment.
+@
+text
+@d186 1
+a186 1
+bool RDMBfactHandler::handleReturnStmt(DFAfact& df, PgmStmt& retnode, ExpDescr& retedesc, bool interproc)
+@
+
+
+1.14
+log
+@Another change: RETURN argument is now an ExpDescr
+instead of an aoset (as was before); with a corresponding
+change to the argument of handleReturnStmt.
+
+Independently: updated RAN's handleFormal (wrote but
+not tested).
+@
+text
+@d178 1
+a178 1
+bool RDMBfactHandler::handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites, bool interproc)
+d181 2
+a182 2
+  RDAfactHandler::handler.handleFormal(cmf.rda_fact, dd, callsites, interproc);
+  MBUfactHandler::handler.handleFormal(cmf.mbu_fact, dd, callsites, interproc);
+@
+
+
+1.13
+log
+@Interface change: intraProcHandleCall now takes a PExprCall
+rather than a CFGfunction -- consequently, the iteration
+over target functions is now the responsibility of
+intraProcHandleCall rather than in dfa.cpp: BBA::PgmExprPropagate.
+
+Then, one update to body of MBU::intraProcHandleCall -
+to account for assignment of return value, at callsite
+dc to ao, now add "R D ao" to the MBUfact set, so that
+the subsequent assignment of the call's return value
+to a variable will mark that variable as MBU as well.
+This was a bug in the old implemenation.
+@
+text
+@d186 1
+a186 1
+bool RDMBfactHandler::handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos, bool interproc)
+d189 2
+a190 2
+  RDAfactHandler::handler.handleReturnStmt(cmf.rda_fact, retnode, retaos, interproc);
+  MBUfactHandler::handler.handleReturnStmt(cmf.mbu_fact, retnode, retaos, interproc);
+@
+
+
+1.12
+log
+@Interface update: augmented handleFormal / handleReturnStmt
+with "interproc" flag.
+Not yet used.
+@
+text
+@d238 1
+a238 1
+void RDMBfactHandler::intraProcHandleCall(DFAfact& df, CFGfunction& fn)
+d241 2
+a242 2
+  RDAfactHandler::handler.intraProcHandleCall(cmf.rda_fact, fn);
+  MBUfactHandler::handler.intraProcHandleCall(cmf.mbu_fact, fn);
+@
+
+
+1.11
+log
+@Added infrastructure for widening/narrowing:
+ - added widen/narrow flag to CFGnode and DFA
+ - added widen/narrow flag to absorbAndCompare to
+   trigger widening/narrowing
+Also, extended lookupNodeFact to take an extra argument:
+a CFGnode to guide lookup of branch successors.
+@
+text
+@d178 1
+a178 1
+bool RDMBfactHandler::handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites)
+d181 2
+a182 2
+  RDAfactHandler::handler.handleFormal(cmf.rda_fact, dd, callsites);
+  MBUfactHandler::handler.handleFormal(cmf.mbu_fact, dd, callsites);
+d186 1
+a186 1
+bool RDMBfactHandler::handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos)
+d189 2
+a190 2
+  RDAfactHandler::handler.handleReturnStmt(cmf.rda_fact, retnode, retaos);
+  MBUfactHandler::handler.handleReturnStmt(cmf.mbu_fact, retnode, retaos);
+@
+
+
+1.10
+log
+@Changed rhs argument of Assign node from an aolist to an exp-descr
+triplet: <aolist, aff-aolist, estr>.
+Main effect is changing the type of the rhs argument of
+handle[Strong/Weak]Assign from an aoset to an ExpDescr,
+which has been down-propagated to all subclasses.
+@
+text
+@d147 1
+a147 1
+DFAfact& RDMBfactHandler::lookupNodeFact(CFGnode& cn)
+@
+
+
+1.9
+log
+@Added handleFreeCall to dfa framework (PExprCall now has
+extra set of undeclared functions to which it might point,
+and a helper callsFree() to determine if it may call free()).
+For mbu/rda/rdmb, handleFreeCall is a noop; for RED: wrote
+handleFreeCall to remove expressions affected by *p (p is
+arg 1 of free call).
+@
+text
+@d162 1
+a162 1
+bool RDMBfactHandler::handleStrongAssign(DFAfact& df, AO& lhs, suco_set<AO *>& rhs, PgmExpr * dnode, PgmStmt * cnode, PExprArg * arg)
+d170 1
+a170 1
+bool RDMBfactHandler::handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& rhs, PExprAssign& dnode)
+@
+
+
+1.8
+log
+@Changed final argument to handleWeakAssign from PgmExpr
+to PExprAssign!
+@
+text
+@d224 7
+@
+
+
+1.7
+log
+@Updated redundant analysis: strong and weak assignments written;
+to do: function calls and result collection.
+Entailed following changes:
+  PExprAssign::getLHS to return ExpDescr instead of AO set.
+  DFA handleWeakAssign's second argument is now ExpDescr rather than AO set.
+  ECR: added helper collectAliasECRs (not tested!)
+@
+text
+@d170 1
+a170 1
+bool RDMBfactHandler::handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& rhs, PgmExpr& dnode)
+@
+
+
+1.6
+log
+@Split dfa.h into mbu.h, rda.h, rdmb.h.
+@
+text
+@d170 1
+a170 1
+bool RDMBfactHandler::handleWeakAssign(DFAfact& df, suco_set<AO *>& lhs, suco_set<AO *>& rhs, PgmExpr& dnode)
+@
+
+
+1.5
+log
+@Finished writing intra-procedural engine...
+tested only on small example.
+@
+text
+@d4 1
+a4 1
+#include "dfa.h"
+@
+
+
+1.4
+log
+@Deleted commented-out old code for handleReturn/handleReturnDealloc.
+@
+text
+@d224 14
+@
+
+
+1.3
+log
+@Significant Update: changed handling of function returns
+ - OLD: was handled at function callsite, split betwee
+        functions handleReturn and handleReturnDealloc
+ - NEW: handled when processing statement, by function
+        handleReturnStmt
+This checkin has old code commented-out; will remove in
+next checkin.
+@
+text
+@a185 9
+/*
+void RDMBfactHandler::handleReturn(DFAfact& df, PExprCall& callnode, PgmStmt& retnode, suco_set<AO *>& retaos)
+{
+  RDMBfact& cmf = (RDMBfact&) df;
+  RDAfactHandler::handler.handleReturn(cmf.rda_fact, callnode, retnode, retaos);
+  MBUfactHandler::handler.handleReturn(cmf.mbu_fact, callnode, retnode, retaos);
+}
+*/
+
+a192 9
+
+/*
+void RDMBfactHandler::handleReturnDealloc(DFAfact& df, suco_set<AOId *>& localvars)
+{
+  RDMBfact& cmf = (RDMBfact&) df;
+  RDAfactHandler::handler.handleReturnDealloc(cmf.rda_fact, localvars);
+  MBUfactHandler::handler.handleReturnDealloc(cmf.mbu_fact, localvars);
+}
+*/
+@
+
+
+1.2
+log
+@Removed RDMBc class; replaced by instantiation of
+general MBUc class (for collecting may-be-uninit
+results in a RDAfact object).
+Added MBUc1factHandler class, and skeleton for MBUc2factHandler.
+@
+text
+@d162 1
+a162 1
+bool RDMBfactHandler::handleStrongAssign(DFAfact& df, AO& lhs, suco_set<AO *>& rhs, PgmExpr& dnode, PgmStmt * cnode, PExprArg * arg)
+d186 1
+d193 1
+d195 9
+d210 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@a114 2
+RDMBfactHandler RDMBfactHandler::handler;
+
+@

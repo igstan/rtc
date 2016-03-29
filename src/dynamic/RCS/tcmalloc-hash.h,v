@@ -1,0 +1,73 @@
+head	1.3;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.3
+date	2004.02.09.23.42.54;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2004.02.06.21.59.31;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.10.14.20.02.17;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Interface to tcmalloc-hash.c: hashtable to track malloc and
+freed object sizes; used by tcmalloc.c and tcptrmalloc.c
+@
+
+
+1.3
+log
+@Added debug histogram output for tcmalloc-hash
+statistics (guarded by TC_PRINT_STAT, only runs
+when building -g).
+Also, malloc hash table size is now 16381 (may revert
+back to smaller number depending on SPEC behavior)
+@
+text
+@#ifndef TC_MALLOC_HASH_H /* { */
+#define TC_MALLOC_HASH_H
+
+#include <stdio.h> /* for FILE */
+
+void mhash_insert(void * ptr, size_t siz);
+size_t mhash_remove(void * ptr);
+size_t mhash_getsize(const void * ptr);
+void mhash_debugout(FILE * os);
+
+#endif /* } ifndef TC_MALLOC_HASH_H */
+@
+
+
+1.2
+log
+@Added "hashopt": optimize verifyPtr to lookup in the malloc
+hash table when lookup size is greater than hashopt thresh-
+hold (default 0; can set with -tc-hashopt=N).
+@
+text
+@d4 1
+d9 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d7 1
+a7 1
+
+@

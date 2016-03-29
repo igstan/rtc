@@ -1,0 +1,627 @@
+head	1.20;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+1.20
+date	2004.05.07.18.54.14;	author suan;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2003.06.18.20.08.46;	author suan;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2003.03.26.15.53.05;	author suan;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2003.02.25.20.04.46;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2002.11.29.16.45.56;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2002.11.15.17.49.43;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2002.10.29.17.14.08;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2002.10.28.22.02.27;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2002.10.21.22.38.11;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.10.17.15.51.44;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.08.15.21.14.39;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.08.15.16.22.23;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.08.15.14.34.17;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.08.13.22.47.52;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.08.12.22.23.58;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.08.12.20.18.11;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.05.25.18.58.05;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.05.23.16.39.37;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.04.18.17.06.19;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.04.18.15.55.32;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Encapsulates pointer-analysis-related functions.
+@
+
+
+1.20
+log
+@Added routines to "finalize" ecrset after pt-analysis:
+- added new factory method to keep the set of all
+  allocated ECRs, to allow garbage collection when
+  "finalizing";
+- finalizers are called in tca.cpp:supplementalPTanalysis.
+In tca.cpp: started adding code to compute filter set
+for ptr-MBU analysis -- current version is very slow.
+@
+text
+@#include "flags.h"
+#include "diag.h" // for timer
+#include "ao.h"
+#include "ecr.h"
+#include "pta.h"
+
+void PTanalysis::initializeECRbasic(AO& ao)
+{
+  switch(ao.getKind()){
+    case AO::aoReturn: {
+	  ECR& parecr  = ECR::getECR(((AOReturn&) ao).getParent());
+	  parecr.getArgRet().addRet(ECR::getECR(ao));
+	} break;
+    case AO::aoArg: {
+	  ECR& parecr  = ECR::getECR(((AOArg&) ao).getParent());
+	  parecr.getArgRet().addArg(((AOArg&) ao).argNo(), ECR::getECR(ao));
+	} break;
+
+    case AO::aoSDot:  //- do nothing
+    case AO::aoUDot:
+	break;
+
+    case AO::aoFunction: {
+	  ECR& e = ECR::getECR(ao); //- allocates new ECR
+	  if(((AOFunction &)ao).isVarg()){ //- is var-arg: merge argret slots starting from vargno
+	    ECRargRet& ear = e.getArgRet();	// TODO1: merge for all functions, as ellipsis may not be explicit?
+	    ECR& ve = ECR::new_ECR();		// TODO2: user could walk va_list from earlier than next-to-last formal!?
+	    for(int i = ((AOFunction &)ao).getLargNo(); i <= ECRargRet::getMaxNargs(); ++i)
+	      ear.addArg(i, ve);
+	  }
+	} break;
+
+    case AO::aoStar:
+    case AO::aoAddrOf:
+    case AO::aoOp:
+    case AO::aoExt:
+    case AO::aoId:
+    case AO::aoMalloc:
+    case AO::aoValue:
+    case AO::aoStringLit:
+    default: {
+	  ECR::getECR(ao); //- allocates new ECR
+	} break;
+  }
+}
+
+void PTanalysis::initializeECRaggregate_collapseAlways(AO& ao)
+{
+  switch(ao.getKind()){
+    case AO::aoSDot: {
+	  ECR::unifyECRs(ao, ((AOSDot&) ao).getParent());
+	} break;
+    case AO::aoUDot: {
+	  ECR::unifyECRs(ao, ((AOUDot&) ao).getParent());
+	} break;
+
+    case AO::aoStar:
+    case AO::aoAddrOf:
+    case AO::aoOp:
+    case AO::aoExt:
+    case AO::aoReturn:
+    case AO::aoArg:
+    case AO::aoId:
+    case AO::aoMalloc:
+    case AO::aoValue:
+    case AO::aoStringLit:
+    default:
+	break;
+  }
+}
+
+void PTanalysis::initializeECRaggregate_collapseOnCast(AO& ao)
+{
+  initializeECRaggregate_collapseAlways(ao);
+}
+
+void PTanalysis::initializeECRpointers(AO& ao)
+{
+  switch(ao.getKind()){
+    case AO::aoStar: {
+// (old approach: p --pt--> *p)
+//        ECR::getECR(((AOStar&) ao).getTarget()).pointsTo(ECR::getECR(ao));
+// (new appraoch: *p --incl--> a <--pt-- p )
+          ECR& a = ECR::getECR(((AOStar&) ao).getTarget()).getPointsTo();
+          ECR::getECR(ao).includesTo(a);
+	} break;
+
+    case AO::aoAddrOf: {
+	  ECR::getECR(ao).pointsTo(ECR::getECR(((AOAddrOf&) ao).getTarget()));
+	} break;
+
+    case AO::aoOp: {
+// (old approach: +p --pt--> a <--pt--p
+//	  ECR::getECR(ao).pointsTo(ECR::getECR(((AOOp&) ao).getTarget()).getPointsTo());
+// (new approach: +p --pt--> a --incl--> b <--pt-- p
+          ECR& b = ECR::getECR(((AOOp&) ao).getTarget()).getPointsTo();
+          ECR::getECR(ao).getPointsTo().includesTo(b);
+	} break;
+    case AO::aoExt: {
+// (old approach: ext p --pt--> a <--pt--p
+//	  ECR::getECR(ao).pointsTo(ECR::getECR(((AOExt&) ao).getTarget()).getPointsTo());
+// (new approach: ext p --pt--> a --incl--> b <--pt-- p
+          ECR& b = ECR::getECR(((AOExt&) ao).getTarget()).getPointsTo();
+          ECR::getECR(ao).getPointsTo().includesTo(b);
+	} break;
+
+    case AO::aoSDot:
+    case AO::aoUDot:
+    case AO::aoReturn:
+    case AO::aoArg:
+    case AO::aoId:
+    case AO::aoMalloc:
+    case AO::aoValue:
+    case AO::aoStringLit:
+    default:
+	break;
+  }
+}
+
+void PTanalysis::analyzeAssigns_collapseAlways(suco_llist<TCassignEdge *>& assigns)
+{
+  // - process assignment edges
+  if(flag_verbose){
+    TCstats::timer("processing assignment edges");
+    if(flag_verbose > 1)
+      fprintf(stderr, "(each dot is 100 assignments, 50 dots per row)\n");
+  }
+
+  int counter = 0;
+  suco_iterator<TCassignEdge *> ei(assigns);
+  while(ei.Iterate()){
+    TCassignEdge& e = *ei.Current();
+    if(!e.getTo().isVal()){ //- don't process assignments into Value nodes
+      ECR& rhs = ECR::getECR(e.getFrom());
+      ECR& lhs = ECR::getECR(e.getTo());
+      lhs.getPointsTo().includesTo(rhs.getPointsTo());
+      if(flag_verbose > 1){
+        if(++counter % 100 == 0)
+          fprintf(stderr, ".");
+        if(counter % 5000 == 0)
+          fprintf(stderr, "\n");
+      }
+    }
+  }
+  if(flag_verbose) TCstats::timer(0);
+}
+
+void PTanalysis::analyzeAssigns_collapseOnCast(suco_llist<TCassignEdge *>& assigns)
+{
+  analyzeAssigns_collapseAlways(assigns);
+}
+
+@
+
+
+1.19
+log
+@Gave the code the -Wall treatment: adjusted things to
+get rid of warnings:
+ - reordered initializers to match declaration order
+ - made some destructors virtual (note that for many
+   classes with no explicit destructors, I did not
+   add explicit virtual destructors, so -Wall warnings
+   remain)
+ - made some signed/unsigned casts
+ - made some pointer/unsigned int casts for printfs
+ - filled in unaccounted-for cases in switch statements
+@
+text
+@d27 1
+a27 1
+	    ECR& ve = *new ECR;			// TODO2: user could walk va_list from earlier than next-to-last formal!?
+@
+
+
+1.18
+log
+@Changed TCstats::timer to remember a stack of (up to 10)
+timers, which allows more simultaneous timings.
+@
+text
+@d42 1
+a42 1
+	  ECR& e = ECR::getECR(ao); //- allocates new ECR
+@
+
+
+1.17
+log
+@Added -cde-incl and -cde-pt flags -- only the latter
+has been implemented: in ECR::includesTo, check for
+cycle, and collapse these ECRs; also, remove redundant
+inclTo/inclFrom edges as a result of the collapse.
+Also, the output for -pta mode has been modified to
+be more a summary, to allow better comparison between differnet
+versions.
+@
+text
+@d2 1
+d123 5
+a127 2
+  if(flag_verbose) fprintf(stderr, "Processing Assignment Edges...\n%s",
+                                   (flag_verbose > 1)?"(each dot is 100 assignments, 50 dots per row)\n":"");
+d145 1
+a145 1
+  if(flag_verbose) fprintf(stderr, "\n... done Processing Assignment Edges\n");
+@
+
+
+1.16
+log
+@Changed flag_verbose to be an integer indicating verbose
+level: 1 (default) only lists current analysis phase;
+2 gives progress dots; 3 supplies other "normal" verbose
+information; 4 is for debug stuff.
+@
+text
+@d96 1
+a96 1
+          ECR::getECR(ao).getPointsTo(). includesTo(b);
+d103 1
+a103 1
+          ECR::getECR(ao).getPointsTo(). includesTo(b);
+@
+
+
+1.15
+log
+@Reorganized global flags, stat-collection and output;
+moved TCcollectStats to diag.cpp/h, renamed to TCstats,
+and absorbed what used to be in diag.cpp/h.
+Global flags have been moved to flags.h, (they're defined
+in tca.cpp, for now).
+Removed the -stat flag: the "stat" output is now always
+dumped, to the output file rather than stderr.
+Added -mbu# flag, though haven't done anything with the
+different mbu levels yet.
+@
+text
+@d122 2
+a123 2
+  if(flag_verbose) fprintf(stderr, "Processing Assignment Edges...\n"
+                                   "(each dot is 100 assignments, 50 dots per row)\n");
+d133 1
+a133 1
+      if(flag_verbose){
+d141 1
+a141 1
+  if(flag_verbose) fprintf(stderr, "... done Processing Assignment Edges\n");
+@
+
+
+1.14
+log
+@Normalized vargs/largno/islib:
+1. Directive from instr-ast is now 'f' for defined function,
+   and 'v' for vararg function.
+2. library functions are now processed in rtca/id.cpp, which
+   recognized (and strips out) the _rtclib_ prefix; the islib
+   property is propagated to children AOs as they are created.
+3. stat counters and the undef-fn output both now filter out
+   isLib objects.
+@
+text
+@d1 1
+a1 1
+#include "diag.h"
+@
+
+
+1.13
+log
+@Removed aoArray object.
+@
+text
+@d22 10
+a41 6
+	  if(ao.getVargNo()){ //- merge argret slots starting from vargno
+	    ECRargRet& ear = e.getArgRet();
+	    ECR& ve = *new ECR;
+	    for(int i = ao.getVargNo(); i <= ECRargRet::getMaxNargs(); ++i)
+	      ear.addArg(i, ve);
+	  }
+@
+
+
+1.12
+log
+@Fixed bug in VargNo handling: should unify argrets <= max_nargs,
+not just < max_nargs (since argno is 1-based).
+@
+text
+@a29 1
+    case AO::aoArray:
+a61 1
+    case AO::aoArray:
+a109 1
+    case AO::aoArray:
+@
+
+
+1.11
+log
+@Added vargno handling:
+Each AO now has a vargno argument, which if nonzero indicates
+a vararg function. This is set by the new "v" directive from
+tc-assign. When an AO has a non-zero vargno, we merge the ECRs
+of all argret nodes from vargno up to maxnargs.
+NOTE: may want to reimplement better: make vargno an argument
+of only aoFunction...
+@
+text
+@d36 1
+a36 1
+	    for(int i = ao.getVargNo(); i < ECRargRet::getMaxNargs(); ++i)
+@
+
+
+1.10
+log
+@Changed initial points-to rules for op/ext objects:
++p --pt--> a --incl--> b <--pt-- p
+(similarly for ext p)
+@
+text
+@d32 7
+a38 1
+	  ECR::getECR(ao); //- allocates new ECR
+@
+
+
+1.9
+log
+@Split initializeECR into three phases:
+1. basic - instantiate ECRs, and build argRets
+2. aggregate - do struct/unions (currently collapseAlways)
+3. pointers - setup initial points-to relations*
+   * reincorporated change to p --pt--> x <--incl-- *p
+     from p --pt--> *p
+     - this effectively fixes a flaw with *op and *ext
+       nodes, where before *+p and *p were combined in
+       the same ECR, making it imprecise to propagate
+       invalidity. The alternate solution would've been
+       to keep the *p rule, but change the *op and *ext
+       rules.
+@
+text
+@d84 5
+a88 1
+	  ECR::getECR(ao).pointsTo(ECR::getECR(((AOOp&) ao).getTarget()).getPointsTo());
+d91 5
+a95 1
+	  ECR::getECR(ao).pointsTo(ECR::getECR(((AOExt&) ao).getTarget()).getPointsTo());
+@
+
+
+1.8
+log
+@ELIMINATED TCassignEdgeList, TCassignEdgeSet, and TCassignEdgeIterator;
+replaced by SUCO equivalents;
+entailed writing a new edge compare function.
+@
+text
+@d6 32
+a37 1
+void PTanalysis::initializeECR_collapseAlways(AO& ao)
+d47 24
+d72 5
+a76 1
+	  ECR::getECR(((AOStar&) ao).getTarget()).pointsTo(ECR::getECR(ao));
+d90 4
+a93 9
+    case AO::aoReturn: {
+	  ECR& parecr  = ECR::getECR(((AOReturn&) ao).getParent());
+	  parecr.getArgRet().addRet(ECR::getECR(ao));
+	} break;
+    case AO::aoArg: {
+	  ECR& parecr  = ECR::getECR(((AOArg&) ao).getParent());
+	  parecr.getArgRet().addArg(((AOArg&) ao).argNo(), ECR::getECR(ao));
+	} break;
+
+d99 2
+a100 3
+    default: {
+	  ECR::getECR(ao); //- allocates new ECR
+	} break;
+a101 5
+}
+
+void PTanalysis::initializeECR_collapseOnCast(AO& ao)
+{
+  initializeECR_collapseAlways(ao);
+@
+
+
+1.7
+log
+@Reverted to old version where p --pt--> *pt.
+We cannot do the new approach *p --incl--> a <--pt-- p
+because the argRet children of *p has not yet been set
+up, therefore it is unsafe to perform includesTo.
+@
+text
+@d56 1
+a56 1
+void PTanalysis::analyzeAssigns_collapseAlways(TCassignEdgeList& assigns)
+d63 3
+a65 3
+  TCassignEdgeIterator ei(assigns);
+  while(ei.iterate()){
+    TCassignEdge& e = *ei.current();
+d81 1
+a81 1
+void PTanalysis::analyzeAssigns_collapseOnCast(TCassignEdgeList& assigns)
+@
+
+
+1.6
+log
+@Modified seed rule for *p from
+  p --pt--> *p
+to
+  *p --incl--> a <--pt-- p
+where a is a new anonymous node.
+This will be useful for later (backward) propagation
+(of required-type) through graph.
+@
+text
+@d17 1
+a17 5
+// (old approach: p --pt--> *p)
+//	  ECR::getECR(((AOStar&) ao).getTarget()).pointsTo(ECR::getECR(ao));
+// (new appraoch: *p --incl--> a <--pt-- p )
+	  ECR& a = ECR::getECR(((AOStar&) ao).getTarget()).getPointsTo();
+	  ECR::getECR(ao).includesTo(a);
+@
+
+
+1.5
+log
+@Transferred PTA assignment processing from tca.cpp to pta.cpp/h
+@
+text
+@d17 5
+a21 1
+	  ECR::getECR(((AOStar&) ao).getTarget()).pointsTo(ECR::getECR(ao));
+@
+
+
+1.4
+log
+@Major change: added ArgRet handling stuff:
+defined ECRargRet class, wrote functions
+ECR::processArgRetFlow/simulateAssign/collectArgRetFrontier...
+Only aspect not handled: after simulating assignment for
+argrets with different nargs, must propagate the delta
+(forward or backward) - requires non-trivial change
+to data structure.
+@
+text
+@d1 1
+d50 36
+@
+
+
+1.3
+log
+@Added AOOp/AOExt.getTarget();
+initializeECR_collapseAlways() now properly sets op and ext
+nodes to point to the same target as their parents.
+@
+text
+@d30 9
+a40 2
+    case AO::aoReturn:
+    case AO::aoArg:
+@
+
+
+1.2
+log
+@Fixed bug in direction of call to pointsTo function.
+@
+text
+@d23 7
+a35 2
+    case AO::aoOp:
+    case AO::aoExt:
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d16 1
+a16 1
+	  ECR::getECR(ao).pointsTo(ECR::getECR(((AOStar&) ao).getTarget()));
+d20 1
+a20 1
+	  ECR::getECR(((AOStar&) ao).getTarget()).pointsTo(ECR::getECR(ao));
+@

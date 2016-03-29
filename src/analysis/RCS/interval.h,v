@@ -1,0 +1,914 @@
+head	1.30;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.30
+date	2004.05.14.20.32.27;	author suan;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2004.04.06.21.56.32;	author suan;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2004.04.06.15.52.42;	author suan;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2004.04.06.00.03.55;	author suan;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2004.04.05.18.32.21;	author suan;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2004.04.02.02.16.47;	author suan;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2004.03.29.02.24.42;	author suan;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2004.03.28.20.53.05;	author suan;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2004.03.21.20.45.24;	author suan;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2004.03.07.05.30.41;	author suan;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2004.03.04.20.51.02;	author suan;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2004.03.03.00.45.32;	author suan;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2004.02.27.01.24.36;	author suan;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2004.02.24.21.44.28;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2004.02.23.16.12.01;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2004.02.21.22.12.41;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2004.02.20.23.33.40;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2004.02.20.16.56.39;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2004.02.19.00.39.16;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2003.12.16.22.57.18;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2003.12.15.22.58.23;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2003.12.06.01.38.01;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2003.11.18.00.34.50;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2003.10.29.23.12.11;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2003.10.24.22.40.50;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2003.10.24.21.09.25;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.10.24.17.15.24;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.10.23.23.04.55;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.10.23.21.04.28;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.10.22.23.33.55;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Interval class, encapsulates an integer [min,max] interval
+@
+
+
+1.30
+log
+@REPAIRS:
+ 1. fixed Interval::divide to be compliant with
+    recent change to isTop().
+IMPROVEMENT:
+ 2. Interval::widen now adds an extra stopper at
+    0 when widening positive min values:
+    captures a common(?) case of divide-and-conquer?
+    (not quite fully captured, due to over-large
+    GMOD set)
+@
+text
+@#ifndef TC_INTERVAL_H /* { */
+#define TC_INTERVAL_H
+
+#include <limits.h> //- for INT_MIN, INT_MAX
+#include <stdio.h>
+
+class AO;
+
+class Interval
+{
+  public:
+
+    static const int PLUS_INF = INT_MAX;
+    static const int MINUS_INF = INT_MIN;
+
+    Interval()
+	: tgt_ao(0), tgt_elty(0), tgt_numelts(0), min(MINUS_INF), max(PLUS_INF),
+	  has_zero(false), tgt_readonly(false) {}
+    Interval(int c)
+	: tgt_ao(0), tgt_elty(0), tgt_numelts(0), min(c), max(c),
+	  has_zero(false), tgt_readonly(false) {}
+    Interval(int mn, int mx)
+	: tgt_ao(0), tgt_elty(0), tgt_numelts(0), min(mn), max(mx),
+	  has_zero(false), tgt_readonly(false) {}
+    Interval(AO& ao, int mn = 0, int mx = 0)
+	: tgt_ao(0), tgt_elty(0), tgt_numelts(0), min(mn), max(mx),
+	  has_zero(false), tgt_readonly(false)
+	  { setTgt(ao.normalize()); }
+    Interval(Interval& iv, int mn, int mx) // This is a specialized constructor, used only by RANfact::evalPredExpr: case 'S'/'V'
+	: tgt_ao(iv.tgt_ao), tgt_elty(iv.tgt_elty), tgt_numelts(iv.tgt_numelts), min(mn), max(mx),
+	  has_zero(iv.has_zero), tgt_readonly(iv.tgt_readonly) {}
+
+    bool operator==(Interval iv) const
+	{ return (this->tgt_ao == iv.tgt_ao) &&
+		 (this->tgt_elty == iv.tgt_elty) &&
+		 (this->tgt_numelts == iv.tgt_numelts) &&
+		 (this->min == iv.min) &&
+		 (this->max == iv.max) &&
+		 (this->has_zero == iv.has_zero) &&
+		 (this->tgt_readonly == iv.tgt_readonly) ;
+	}
+
+    bool isNullTgted() const { return (tgt_elty == 0); }
+    AO * tgtAO() const { return tgt_ao; }
+    int Min() const { return min; }
+    int Max() const { return max; }
+
+    void debug_dump(FILE * outf) const;
+
+    bool inBounds(bool iswrite) const;
+    void adjustStructOffset(suco_llist<TCtype *>& tylist);
+
+    bool disableIfTargetIsPartOf(AO& ao);
+
+    bool isTop() const;
+    bool isBottom() const;
+
+    bool isTargetedFinite() const;
+    bool isTargetedHalfFinite() const;
+
+    static const Interval Top;
+    static const Interval Bottom;
+
+    void setTop();
+    void setBottom();
+
+    bool widen(Interval iv);
+    bool narrow(Interval iv);
+    bool meet(Interval iv); //- "superset of union"
+    bool join(Interval iv); //- "subset of intersect"
+    bool cond_intersect(Interval iv); //- "superset of intersect"
+
+    void slide_if_constant(); //- A[s]+[i,i] ==> A[s-i]+[0,0]  (if i < s)
+
+    Interval plus(Interval iv, TCtype * elty) const;  //- > elty=0 means "use underlying type"
+    Interval minus(Interval iv, TCtype * elty) const; //- > elty=tcVoid means plain (non-pointer) arithmetic
+    Interval ptrs_minus(Interval iv, TCtype& elty) const; //- ptr minus ptr (currently not handled precisely)
+    Interval times(Interval iv) const;
+    Interval divide(Interval iv) const;
+    Interval modulo(Interval iv) const;
+
+  private:
+    AO * tgt_ao;	//- used only if flag_range_target_aos == true
+    TCtype * tgt_elty;
+    int tgt_numelts;
+
+    int min;
+    int max;
+    bool has_zero;	//- used only when flag_range_zero_special is on; meaningful only if tgt_ao/tgt_elty != 0
+    bool tgt_readonly;	//- indicates if the target is readonly, specifically string literals
+
+    void setTgt(AO& ao); //- used by constructor
+    void setTgt(TCtype& ty);
+
+    bool minmax_union(int min, int max); //- returns true if changed
+
+    //- return true if OK; false if failed
+    static bool adjustTypes(Interval& iv1, Interval& iv2, TCtype * elty, bool addition);
+
+    int maxpos() const;
+    int maxneg() const;
+    int minpos() const;
+    int minneg() const;
+    bool inclzero() const;
+    bool iszero() const;
+};
+
+#endif /* } ifndef TC_INTERVAL_H */
+@
+
+
+1.29
+log
+@Modified Interval/RAN functions to account for
+is_top case;
+also, introduced Interval::Bottom member to make
+bottom initialization and returning more explicit
+(readable).
+@
+text
+@d95 2
+@
+
+
+1.28
+log
+@Added tgtAO() getter.
+@
+text
+@d62 1
+@
+
+
+1.27
+log
+@Added Malloc arg-evaluation mechanism:
+
+- RAN: added evalSizeOfExpr() and evalMallocSize();
+- AOMalloc: added mtype/msize members, and meetMallocStaticType()
+  function to set those at each MallocDecl node;
+- Interval::setTgt now checks for AOMalloc, and uses its
+  mtype/msize members to set tgt_ty/tgt_numelts;
+- Interval addedisNullTgted() helper;
+@
+text
+@d44 1
+@
+
+
+1.26
+log
+@Changed RAN::handleDecl filtering of facts with target =
+AO: previously, set to bottom if target is ao; now, just
+set tgt_ao = 0 unless flag_range_must_have_ao -- basically
+let Interval class decide what to do.
+Entailed renaming of:
+  RANfact::removeIntervalsWithTarget()
+  to       disableIntervalsWithTarget
+and name/functionality change of:
+  Interval::targetIsPartOf()
+  to        disableIfTargetIsPartOf()
+@
+text
+@d43 1
+@
+
+
+1.25
+log
+@Changed the whole AO::get_AO[SU]Dot mechanism -- now
+split into two sets of functions:
+ - get_or_create_AO[SU]Dot() is AO-protected, and is
+   called to get, or create if not found, and follows
+   the old semantics of get_AO[SU]Dot (deleting the
+   type if found, etc).
+ - get_AO[SU]Dot() not returns a pointer, and returns
+   null if not found.
+
+So now, interval calls the public version which may
+return null; cascadingly, Interval::adjustStructOffset
+no longer consumes tylist -- the consumption is now
+taken care of by the RAN callsites.
+@
+text
+@d51 1
+a51 1
+    bool targetIsPartOf(AO& ao) const;
+@
+
+
+1.24
+log
+@Collecting RAN stats (all-vps, finite-vps, half-finite-vps, inbounds-vps,
+known-preds):
+ - RAN replaced checkInBounds() with getDerefRangeFor()
+ - added reportKnownPredicate() helper to RAN[c]factHandler
+ - added list accumulators to RANcFactHandler
+ - added count holders to TCAstate
+
+Interval::isTop() - now returns true of min > max!
+(was returning only if min = +inf, max = -inf!)
+
+Interval: added "modulo" to compute %.
+
+AO::get_AOUDot/get_AOSDot() - unify ecr if called after pt-analysis.
+@
+text
+@d49 1
+a49 1
+    void adjustStructOffset(suco_llist<TCtype *>& tylist); // must consume tylist
+@
+
+
+1.23
+log
+@OVERHAUL: removed flag_range_target_aos, replaced with
+ - flag_range_must_have_ao: do we support ao=bottom?
+ - flag_ty_can_change: must interval's ty equal loc's ty?
+ - flag_range_do_sliding: allow sliding transformation?
+Changed command-line flags: -ran-DO, -ran-LO should be
+the default ones to use, while the above flags can be
+individually manipulated for data collection.
+
+CHANGED Interval::adjustStructOffset to also change the
+ao target (if possible; currently doesn't handle array-of
+structs correctly sometimes).
+
+CHANGED Interval::adjustTypes to support the full type
+assumptions (incl |char|<=|short|<=|int|...).  This is
+actually implemented in TCtype::countInstancesOf.
+This resulted in greatly-streamlined code.
+
+CHANGED Interval::cond_intersect to allow intersection
+to go to Top in cases when we know the two sides don't
+intersect.
+@
+text
+@d77 1
+@
+
+
+1.22
+log
+@Removed some obsolete comments.
+@
+text
+@d49 1
+a49 1
+    void adjustStructOffset(suco_llist<TCtype *>& tylist);
+d55 3
+@
+
+
+1.21
+log
+@Range analysis: added support for evaluating arroW/Member
+expressions.  Changes are:
+ - TCtype::listEquivPrefix: instead of returning bool,
+   now returns the TCtype of the last matching item.
+ - Interval: added setTgt(TCtype&), which was previously
+   included as part of setTgt(AO&).
+ - Interval: added adjustStructOffset() to perform the
+   meat of the arroW/Member handling.
+ - RANfact: added handlers for arroW/Member.
+@
+text
+@d77 2
+a78 2
+    TCtype * tgt_elty;	//- used only if flag_range_target_aos == false
+    int tgt_numelts;	//- used only if flag_range_target_aos == false
+@
+
+
+1.20
+log
+@Minor bug fix(es):
+ 1. Interval::ptrs_minus()
+    Need to account for has_zero -- if either argument
+    has zero, return bottom.
+ 2. RANfactHandled::handleDecl()
+    When declaring x, need to remove both
+    1. fact for x, and
+    2. facts whose interval target ao is x
+    because of new scope/aliasing potential.
+    (Entailed introduction of helpers in many
+    classes, including AO.)
+Note: 2 is the clean solution, but appears to be
+technically unnecessary with context-insensitive
+analysis, since any recursive loop (for which the
+new scope/aliasing problem arises) must have an
+external in-edge which should bottom out any facts
+affecting x.
+@
+text
+@d49 1
+d86 1
+@
+
+
+1.19
+log
+@Added support for AO-targeted intervals:
+ - global flag_range_target_aos
+ - command line flags -ran-tgt-ao -ran-tgt-elty (default)
+ - new ao member of Interval class
+ - changed interval.cpp code to support ao-targeted mode,
+   including code for ptrs_minus and precise handling
+   of targeted intervals in predicates (cond_intersect()).
+@
+text
+@d50 2
+@
+
+
+1.18
+log
+@Modified ptrs_minus to output a NOTE message to stderr,
+(only if both are not Bottom), so I can gauge how often
+they occur, and what benefits might be gained by accounting
+for targets.
+@
+text
+@d17 1
+a17 1
+	: tgt_elty(0), tgt_numelts(0), min(MINUS_INF), max(PLUS_INF),
+d20 1
+a20 1
+	: tgt_elty(0), tgt_numelts(0), min(c), max(c),
+d23 1
+a23 1
+	: tgt_elty(0), tgt_numelts(0), min(mn), max(mx),
+d26 1
+a26 1
+	: tgt_elty(0), tgt_numelts(0), min(mn), max(mx),
+d30 1
+a30 1
+	: tgt_elty(iv.tgt_elty), tgt_numelts(iv.tgt_numelts), min(mn), max(mx),
+d34 2
+a35 1
+	{ return (this->tgt_elty == iv.tgt_elty) &&
+d73 3
+a75 2
+    TCtype * tgt_elty;
+    int tgt_numelts;
+d79 1
+a79 1
+    bool has_zero;	//- used only when flag_range_zero_special is on; meaningful only if tgt_elty != 0
+@
+
+
+1.17
+log
+@Changed RAN::evalPredExpr S/V case to use
+Interval::cond_intersect() rather than Interval::join()
+to impose the predicate's constraint.
+(cond_intersect() is a newly written method.)
+The difference is that join computes a SUBSET of the
+intersection, while cond_intersect computes a SUPERSET
+(conservative approximation), as mandated by the semantics
+of how we handle predicates.
+Note that as of now, join() is not being used for any
+purpose.
+@
+text
+@d67 1
+a67 1
+    Interval ptrs_minus(Interval iv, TCtype& elty) const { return Interval(); } //- ptr minus ptr (currently not supported)
+@
+
+
+1.16
+log
+@Added refinements to Interval::adjustTypes:
+ - if rhs has target: ok under unit-addition if lhs
+   has no target ~~ just flip them.
+ - under unit-addition: if shrinking tgt_elty, then
+   augment tgt_numelts with countNumUnits, which
+   counts the number of (non-bitfield) scalar
+   entities in (the original) tgt_elty ~~ this is
+   a safe under-approximation of the sice of tgt_elty
+   in bytes.
+ - on type mismatch, check for cases where tgt_elty
+   actually contains a number of eltys, e.g. if tgt_elty
+   is a union which includes an array of eltys.
+   A generalized solution is adopted, where we use the
+   newly-added TCtype::countInstancesOf() function
+   which counts the occurrences of elty within tgt_elty.
+   This function also recognizes common-init-sequence
+   subtyping.
+   (NOTE: there's one pathological case in which the
+    current version would be suboptimal: when checking
+    tgt_elty->countInstancesOf(elty), if
+     elty     : struct { T1, T2 }
+     tgt_elty : struct { T1, T2, struct{T1,T2}[10] }
+    current version would return 1 because of subtype
+    recognition, when in principle it could've returned 11.)
+ - in cases where we heuristically check for tgt-ed
+   intervals with [0,0], call newly-added slide_if_constant()
+   method to check for cases of A[s]+[i,i] where i < s;
+   then "slide" the interval to get A[s-i]+[0,0].
+@
+text
+@d59 3
+a61 2
+    bool meet(Interval iv); //- "expand"
+    bool join(Interval iv); //- "intersect"
+@
+
+
+1.15
+log
+@Small but important change to ExpDescr/estr format:
+ - "pointer-minus-pointer" is now a separate operator "p_",
+   because it has different semantic behavior from the other
+   minuses.
+ - pointer addition and array-sub operators must be normalized,
+   because the behavior is NOT COMMUTATIVE: so now,
+     int + pointer    --(normalized)-->     pointer + int
+     int[pointer]     --(normalized)-->     pointer[int]
+So,
+ - Adjusted ran.cpp to read and handle "p_";
+ - Introduced new function Interval::ptrs_minus for
+   ptr-ptr subtraction ~~ currently returns bottom
+   (because tgt_elty/numelts method cannot support
+    ptr-ptr subtraction).
+ - Simplified Interval::plus/minus, due to int+ptr/ptr+int
+   normalization
+ - for evalPredExpr, had to make sure I respected the
+   normalization.
+@
+text
+@d62 2
+@
+
+
+1.14
+log
+@Added support for type-recognizing plus/minus operations,
+including a long comment describing approximation choices.
+Completed for the common cases; couple of TODOs include:
+ 1. for a union, try to find a matching child;
+ 2. for a struct, see if first element(s) has a matching
+    type;
+ 3. when converting a struct/union to a char, try to
+    underestimate the size of the struct/union by counting
+    its constituents (being careful with bitfields).
+Discovered bug: pointer plus operation is NOT COMMUTATIVE!
+Must alter sml engine to normalize the output to be
+direction sensitive; for pointer minus, must differentiate
+between pointer-minus-int and pointer-minus-pointer (new
+operator symbol).
+Goal is to fix this for next checkin.
+@
+text
+@d64 1
+@
+
+
+1.13
+log
+@Major Change: ExpDescr estr augmented Sub(B)
+and plus/minus to include elty; further,
+remapped plus/minus to new representations:
+
+  Sub:   B(e1,e2)   -> B(e1,e2,elty)
+  Binop: o+(e1,e2)  -> p+(e1,e2,elty)
+         o-(e1,e2)  -> p-(e1,e2,elty)
+         O+=(e1,e2) -> p#(e1,e2,elty)
+         O-=(e1,e2) -> p=(e1,e2,elty)
+  Unop:  U+<(e)     -> U+<(e,elty)
+         U+>(e)     -> U+>(e,elty)
+         U-<(e)     -> U-<(e,elty)
+         U->(e)     -> U->(e,elty)
+
+For plain (non-pointer) arithmetic, elty = tcVoid.
+
+NOT YET DONE: change body of Interval.plus/minus
+to account for elty.
+
+Auxiliary change: Interval::deleteTy now takes
+a reference rather than a pointer.
+@
+text
+@d78 3
+@
+
+
+1.12
+log
+@Added support for treating StringLits as read-only in RAN analysis.
+ - commandline flag -ran-strlit-[readonly|readwrite];
+   global flag flag_range_strlit_readonly
+ - in Interval, added boolean tgt_readonly;
+   updated each Interval function to properly propagate it
+ - added readwrite argument to Interval::inBounds() and
+   RANfact::checkInBounds().
+Also, while updating Interval functions:
+ - fixed some hidden but significant bugs in implementation:
+   a typo in Plus; rudimentary overflow detection for
+   Multiply;...
+@
+text
+@d62 2
+a63 2
+    Interval plus(Interval iv, TCtype * elty = 0) const;
+    Interval minus(Interval iv, TCtype * elty = 0) const;
+@
+
+
+1.11
+log
+@1. Changed AOMalloc representation to include <eltype, numelts>
+   (previously had single <size> field)
+2. Changed Interval to store <eltype, numelts> rather than AO
+   as "target" field: potentially allows for "smarter" range
+   analysis per Susan's suggestion.
+(Added runtime flag -ran-[no-]malloc to turn on/off handling
+ of malloc objects, now on by default)
+TODO: account for elty in Interval::plus/minus (added signature,
+      but not yet implemented)
+@
+text
+@d17 2
+a18 1
+	: tgt_elty(0), tgt_numelts(0), min(MINUS_INF), max(PLUS_INF), has_zero(false) {}
+d20 2
+a21 1
+	: tgt_elty(0), tgt_numelts(0), min(c), max(c), has_zero(false) {}
+d23 2
+a24 1
+	: tgt_elty(0), tgt_numelts(0), min(mn), max(mx), has_zero(false) {}
+d26 2
+a27 1
+	: tgt_elty(0), tgt_numelts(0), min(mn), max(mx), has_zero(false)
+d30 2
+a31 1
+	: tgt_elty(iv.tgt_elty), tgt_numelts(iv.tgt_numelts), min(mn), max(mx), has_zero(iv.has_zero) {}
+d38 2
+a39 1
+		 (this->has_zero == iv.has_zero);
+d47 1
+a47 1
+    bool inBounds() const;
+d74 1
+@
+
+
+1.10
+log
+@Added "top" abstraction to Interval: setTop(), isTop(),
+and static member "Top".
+@
+text
+@d16 9
+a24 4
+    Interval() : ao(0), min(MINUS_INF), max(PLUS_INF), has_zero(false) {}
+    Interval(int c) : ao(0), min(c), max(c), has_zero(false) {}
+    Interval(int mn, int mx) : ao(0), min(mn), max(mx), has_zero(false) {}
+    Interval(AO& o, int mn = 0, int mx = 0) : ao(&o.normalize()), min(mn), max(mx), has_zero(false) {}
+d26 1
+a26 1
+	: ao(iv.ao), min(mn), max(mx), has_zero(iv.has_zero) {}
+d29 2
+a30 1
+	{ return (this->ao == iv.ao) &&
+d56 2
+a57 2
+    Interval plus(Interval iv) const;
+    Interval minus(Interval iv) const;
+d62 3
+a64 1
+    AO * ao;
+d67 3
+a69 1
+    bool has_zero;	//- used only when flag_range_zero_special is on; meaningful only if ao != 0
+@
+
+
+1.9
+log
+@Added -ran-zero-special: range analysis treats "zero" as
+a special value, so allows tracking of intervals of the
+form {0} U &ptr + [m,n].
+Flag is off by default; must be turned on explicitly.
+@
+text
+@d37 1
+d40 3
+@
+
+
+1.8
+log
+@Added AO::normalize, to normalize union members and struct
+first members to a normal representative (the outermost
+object).  This might eventually be useful for extending
+points-to analysis to handle structs.
+For now, it's used by Interval, to normalize the ao
+representative.  This improves the precision in the
+benchmark _vortex_ which has (had) many instances of
+mismatched AOs due to one being an outermost struct
+and the other being a first-member of a struct.
+@
+text
+@d16 6
+a21 5
+    Interval() : ao(0), min(MINUS_INF), max(PLUS_INF) {}
+    Interval(int c) : ao(0), min(c), max(c) {}
+    Interval(int mn, int mx) : ao(0), min(mn), max(mx) {}
+    Interval(AO& o, int mn = 0, int mx = 0) : ao(&o.normalize()), min(mn), max(mx) {}
+    Interval(Interval& iv, int mn, int mx) : ao(iv.ao), min(mn), max(mx) {}
+d24 5
+a28 1
+	{ return (this->ao == iv.ao) && (this->min == iv.min) && (this->max == iv.max); }
+d55 1
+d62 1
+@
+
+
+1.7
+log
+@Major update: implemeted narrowing.
+Some restructuring: previously had different classes
+RAN/RANnarrow/RANwiden; have consolidated them with
+a flag indicating which mode the analysis will run in
+(meet/narrow/widen; the first not currently used).
+Also added runtime flags to turn on/off narrowing
+phase, and also to control whether widen/narrow
+is done always or on backedge only (previous implementation
+was equivalent to one widen pass plus one meet pass;
+current default is one widen(backedge) pass plus one
+narrow(always) pass).
+Note that the narrowing code is currently full of
+debug printfs -- cases that shouldn't(?) occur.
+@
+text
+@d19 1
+a19 1
+    Interval(AO& o, int mn = 0, int mx = 0) : ao(&o), min(mn), max(mx) {}
+@
+
+
+1.6
+log
+@Added interface skeleton for doing the bounds-check phase,
+including:
+  Interval::inBounds
+  RANfact::checkInBounds
+  RANfact::evalAddrRange (needed by both checkInBounds
+                          and evalSubexpr/addrof case)
+and changed RANc result type from a REDresult to a
+list of PExprVerify's.
+Next need to fill in, mainly evalAddrRange, but must
+think of strategy to store object sizes.
+@
+text
+@d37 1
+@
+
+
+1.5
+log
+@Migrated more interval stuff from ran.cpp to
+Interval class, including:
+ - renaming expand/shrink to meet/join
+ - added code to check for ao equality
+ - ao, min, max are now private members
+@
+text
+@d30 2
+@
+
+
+1.4
+log
+@Added "base pointer" member (ao) to Interval,
+so an interval represents &ao + [min, max].
+@
+text
+@d20 1
+d22 5
+a26 3
+    AO * ao;
+    int min;
+    int max;
+d32 5
+a36 2
+    bool expand(Interval iv); //- "meet"
+    bool shrink(Interval iv); //- "join"
+d42 5
+@
+
+
+1.3
+log
+@Changed constructor structure:
+ default = [MINUS_INF,PLUS_INF]
+ one-arg = singleton interval [c,c]
+ two args = regular interval [min,max]
+@
+text
+@d7 2
+d16 4
+a19 3
+    Interval() : min(MINUS_INF), max(PLUS_INF) {}
+    Interval(int c) : min(c), max(c) {}
+    Interval(int mn, int mx) : min(mn), max(mx) {}
+d21 1
+d25 1
+a25 1
+    void debug_dump(FILE * outf);
+@
+
+
+1.2
+log
+@Added Interval helpers expand(meet), shrink(join);
+added times, divide (which use helpers [max/min][pos/neg]()
+and inclzero()).
+@
+text
+@d14 3
+a16 2
+    Interval(int mn = MINUS_INF, int mx = PLUS_INF)
+	: min(mn), max(mx) {}
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d24 13
+a36 2
+    Interval plus(Interval iv);
+    Interval minus(Interval iv);
+@

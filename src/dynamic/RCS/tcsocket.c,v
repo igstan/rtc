@@ -1,0 +1,113 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.2
+date	2001.05.22.22.54.30;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.05.04.22.32.32;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Socket and netdb library functions.
+@
+
+
+1.2
+log
+@Modified output functions to use _globalErrloc* variables
+which are now set by instr-ast.sml.
+@
+text
+@#include <netdb.h>
+#include <sys/socket.h>
+
+#include "tcinternal.h"
+#include <tclibc.h>
+
+static struct hostent * init_hostent(struct hostent * he)
+{
+  if(he){
+    int i;
+    _setScalarTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, &he->h_name, _ctype_pointer);
+    _setStringTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, he->h_name, strlen(he->h_name));
+
+    _setScalarTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, &he->h_addr_list, _ctype_pointer);
+    for(i = 0; he->h_addr_list[i]; ++i){
+      _setScalarTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		&he->h_addr_list[i], _ctype_pointer);
+      _setStringTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		he->h_addr_list[i], strlen(he->h_addr_list[i]));
+    }
+    _setScalarTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, &he->h_addr_list[i], _ctype_pointer);
+
+    _setScalarTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, &he->h_addrtype, _ctype_int);
+    _setScalarTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, &he->h_length, _ctype_int);
+
+    _setScalarTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, &he->h_aliases, _ctype_pointer);
+    for(i = 0; he->h_aliases[i]; ++i){
+      _setScalarTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		&he->h_aliases[i], _ctype_pointer);
+      _setStringTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol,
+		he->h_aliases[i], strlen(he->h_aliases[i]));
+    }
+    _setScalarTag(_globalErrlocFile,_globalErrlocLine,_globalErrlocCol, &he->h_aliases[i], _ctype_pointer);
+  }
+  return he;
+}
+struct hostent *_typecheck_gethostbyname(const char *name)
+{
+  return init_hostent(gethostbyname(name));
+}
+struct hostent *_typecheck_gethostbyaddr(const char *addr, int len, int type)
+{
+  return init_hostent(gethostbyaddr(addr, len, type));
+}
+
+
+
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d11 2
+a12 2
+    _setScalarTag("(_typecheck_gethostby*)", __LINE__,0, &he->h_name, _ctype_pointer);
+    _setStringTag("(_typecheck_gethostby*)", __LINE__,0, he->h_name, strlen(he->h_name));
+d14 1
+a14 1
+    _setScalarTag("(_typecheck_gethostby*)", __LINE__,0, &he->h_addr_list, _ctype_pointer);
+d16 4
+a19 2
+      _setScalarTag("(_typecheck_gethostby*)", __LINE__,0, &he->h_addr_list[i], _ctype_pointer);
+      _setStringTag("(_typecheck_gethostby*)", __LINE__,0, he->h_addr_list[i], strlen(he->h_addr_list[i]));
+d21 1
+a21 1
+    _setScalarTag("(_typecheck_gethostby*)", __LINE__,0, &he->h_addr_list[i], _ctype_pointer);
+d23 2
+a24 2
+    _setScalarTag("(_typecheck_gethostby*)", __LINE__,0, &he->h_addrtype, _ctype_int);
+    _setScalarTag("(_typecheck_gethostby*)", __LINE__,0, &he->h_length, _ctype_int);
+d26 1
+a26 1
+    _setScalarTag("(_typecheck_gethostby*)", __LINE__,0, &he->h_aliases, _ctype_pointer);
+d28 4
+a31 2
+      _setScalarTag("(_typecheck_gethostby*)", __LINE__,0, &he->h_aliases[i], _ctype_pointer);
+      _setStringTag("(_typecheck_gethostby*)", __LINE__,0, he->h_aliases[i], strlen(he->h_aliases[i]));
+d33 1
+a33 1
+    _setScalarTag("(_typecheck_gethostby*)", __LINE__,0, &he->h_aliases[i], _ctype_pointer);
+@

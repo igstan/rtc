@@ -1,0 +1,1850 @@
+head	1.37;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.37
+date	2004.06.23.19.02.03;	author suan;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2004.02.06.21.59.31;	author suan;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2004.02.03.23.35.27;	author suan;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2003.12.23.19.20.02;	author suan;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2003.12.10.15.38.58;	author suan;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2003.11.28.21.46.53;	author suan;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2003.11.18.20.14.21;	author suan;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2003.03.28.19.08.03;	author suan;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2003.03.18.20.26.43;	author suan;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2003.03.07.17.41.45;	author suan;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2003.03.07.17.20.05;	author suan;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2002.10.31.17.10.55;	author suan;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2002.10.21.21.46.25;	author suan;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2002.10.14.20.05.24;	author suan;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2002.10.11.00.19.06;	author suan;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2002.10.11.00.15.53;	author suan;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2002.07.25.15.53.41;	author suan;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2002.02.26.17.36.59;	author suan;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2002.02.04.20.08.58;	author suan;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2001.09.24.20.59.43;	author suan;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2001.05.18.20.16.39;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2001.05.14.22.55.40;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2001.05.04.03.26.31;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2000.07.12.23.09.29;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2000.07.12.00.58.39;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2000.07.09.19.50.41;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2000.07.09.02.57.36;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2000.07.05.20.21.22;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2000.07.05.16.14.07;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2000.06.28.18.56.44;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.06.27.17.47.42;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.06.15.21.07.55;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	99.10.25.20.03.21;	author alexey;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.09.06.04.14.55;	author alexey;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.08.31.16.54.13;	author alexey;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.08.17.18.20.37;	author alexey;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.08.17.18.19.19;	author alexey;	state Exp;
+branches;
+next	;
+
+
+desc
+@First version of the Makefile for compiling instrumented code.
+@
+
+
+1.37
+log
+@Added TC_VULNERABLE_VP stuff: changing behavior of
+_verifyPtr().
+@
+text
+@TC_DIR = /p/wpis/people/students/suan/TypecheckDebugger
+ # TC_DIR = /home/research/TypecheckDebugger
+SRCDIR = $(TC_DIR)/src/dynamic
+OBJDIR = ../obj
+INCDIR = $(TC_DIR)/include
+LIBDIR = $(TC_DIR)/lib
+
+CC = gcc
+CFLAGS = -I$(INCDIR)
+AR = ar
+# r = add to archive; c = suppress error message if archive doesn't exist
+AR_FLAGS = rc
+RANLIB = ranlib
+
+SRCS =	pmirror_newtags.c \
+	tclibc.c \
+	tcmalloc-hash.c \
+	tcmalloc.c \
+	tcmalloc-safe.c \
+	tcmir.c \
+	tcnoop.c \
+	tcnooplibc.c \
+	tcptr.c \
+	tcptrhisto.c \
+	tcptrlibc.c \
+	tcptrmalloc.c \
+	tcptrscanf.c \
+	tcptrprintf.c \
+	tcscanf.c \
+	tcsocket.c \
+	tcstdio.c \
+	tcstring.c
+
+TCLIBC_OBJS = $(OBJDIR)/tcmalloc.o $(OBJDIR)/tcmalloc-hash.o \
+		$(OBJDIR)/tcstdio.o $(OBJDIR)/tcscanf.o \
+		$(OBJDIR)/tcstring.o $(OBJDIR)/tclibc.o $(OBJDIR)/tcsocket.o
+TCLIBC_G_OBJS = $(OBJDIR)/tcmalloc-g.o $(OBJDIR)/tcmalloc-hash-g.o \
+		$(OBJDIR)/tcstdio-g.o $(OBJDIR)/tcscanf-g.o \
+		$(OBJDIR)/tcstring-g.o $(OBJDIR)/tclibc-g.o $(OBJDIR)/tcsocket-g.o
+TCLIBC_PG_OBJS = $(OBJDIR)/tcmalloc-pg.o $(OBJDIR)/tcmalloc-hash-pg.o \
+		$(OBJDIR)/tcstdio-pg.o $(OBJDIR)/tcscanf-pg.o \
+		$(OBJDIR)/tcstring-pg.o $(OBJDIR)/tclibc-pg.o $(OBJDIR)/tcsocket-pg.o
+TCLIBC_CC_OBJS = $(OBJDIR)/tcmalloc-cc.o $(OBJDIR)/tcmalloc-hash-cc.o \
+		$(OBJDIR)/tcstdio-cc.o $(OBJDIR)/tcscanf-cc.o \
+		$(OBJDIR)/tcstring-cc.o $(OBJDIR)/tclibc-cc.o $(OBJDIR)/tcsocket-cc.o
+
+TCPTR_LIBC_OBJS = $(OBJDIR)/tcptrmalloc.o $(OBJDIR)/tcmalloc-hash.o \
+		$(OBJDIR)/tcptrlibc.o $(OBJDIR)/tcptrscanf.o $(OBJDIR)/tcptrprintf.o
+TCPTR_LIBC_G_OBJS = $(OBJDIR)/tcptrmalloc-g.o $(OBJDIR)/tcmalloc-hash-g.o \
+		$(OBJDIR)/tcptrlibc-g.o $(OBJDIR)/tcptrscanf-g.o $(OBJDIR)/tcptrprintf-g.o \
+		$(OBJDIR)/tcptrhisto-g.o
+TCPTRW_LIBC_OBJS = $(OBJDIR)/tcptrmalloc.w.o $(OBJDIR)/tcmalloc-hash.o \
+		$(OBJDIR)/tcptrlibc.w.o $(OBJDIR)/tcptrscanf.w.o $(OBJDIR)/tcptrprintf.w.o
+TCPTRW_LIBC_G_OBJS = $(OBJDIR)/tcptrmalloc-g.w.o $(OBJDIR)/tcmalloc-hash-g.o \
+		$(OBJDIR)/tcptrlibc-g.w.o $(OBJDIR)/tcptrscanf-g.w.o $(OBJDIR)/tcptrprintf-g.w.o \
+		$(OBJDIR)/tcptrhisto-g.o
+TCVULNW_LIBC_OBJS = $(OBJDIR)/tcptrmalloc.vw.o $(OBJDIR)/tcmalloc-hash.o \
+		$(OBJDIR)/tcptrlibc.vw.o $(OBJDIR)/tcptrscanf.vw.o $(OBJDIR)/tcptrprintf.vw.o
+TCVULNW_LIBC_G_OBJS = $(OBJDIR)/tcptrmalloc-g.vw.o $(OBJDIR)/tcmalloc-hash-g.o \
+		$(OBJDIR)/tcptrlibc-g.vw.o $(OBJDIR)/tcptrscanf-g.vw.o $(OBJDIR)/tcptrprintf-g.vw.o \
+		$(OBJDIR)/tcptrhisto-g.o
+
+TCAPI_NEWTAGS_OBJS = $(OBJDIR)/pmirror_newtags.o $(TCLIBC_OBJS)
+TCAPI_NEWTAGS_NS_OBJS = $(OBJDIR)/pmirror_newtags-ns.o $(TCLIBC_OBJS)
+TCAPI_NEWTAGS_TRS_OBJS = $(OBJDIR)/pmirror_newtags-trs.o $(TCLIBC_OBJS)
+TCAPI_NEWTAGS_G_OBJS = $(OBJDIR)/pmirror_newtags-g.o $(TCLIBC_G_OBJS)
+TCAPI_NEWTAGS_PG_OBJS = $(OBJDIR)/pmirror_newtags-pg.o $(TCLIBC_PG_OBJS)
+TCAPI_NEWTAGS_CC_OBJS = $(OBJDIR)/pmirror_newtags-cc.o $(TCLIBC_CC_OBJS)
+TCAPI_NEWTAGS_CCTRS_OBJS = $(OBJDIR)/pmirror_newtags-cctrs.o $(TCLIBC_CC_OBJS)
+
+TCPTR_OBJS = $(OBJDIR)/tcptr.o $(TCPTR_LIBC_OBJS)
+TCPTR_G_OBJS = $(OBJDIR)/tcptr-g.o $(TCPTR_LIBC_G_OBJS)
+
+TCPTR_STATICMIR_OBJS = $(OBJDIR)/tcptr-stm.o $(TCPTR_LIBC_OBJS)
+TCPTR_STATICMIR_G_OBJS = $(OBJDIR)/tcptr-stm-g.o $(TCPTR_LIBC_G_OBJS)
+
+TCPTRW_OBJS = $(OBJDIR)/tcptr.o $(TCPTRW_LIBC_OBJS)
+TCPTRW_G_OBJS = $(OBJDIR)/tcptr-g.o $(TCPTRW_LIBC_G_OBJS)
+
+TCPTRW_STATICMIR_OBJS = $(OBJDIR)/tcptr-stm.o $(TCPTRW_LIBC_OBJS)
+TCPTRW_STATICMIR_G_OBJS = $(OBJDIR)/tcptr-stm-g.o $(TCPTRW_LIBC_G_OBJS)
+
+TCVULNW_OBJS = $(OBJDIR)/tcptr.vw.o $(TCVULNW_LIBC_OBJS)
+TCVULNW_G_OBJS = $(OBJDIR)/tcptr-g.vw.o $(TCVULNW_LIBC_G_OBJS)
+
+TCVULNW_STATICMIR_OBJS = $(OBJDIR)/tcptr-stm.vw.o $(TCVULNW_LIBC_OBJS)
+TCVULNW_STATICMIR_G_OBJS = $(OBJDIR)/tcptr-stm-g.vw.o $(TCVULNW_LIBC_G_OBJS)
+
+TCNOOP_OBJS = $(OBJDIR)/tcnoop.o $(OBJDIR)/tcnooplibc.o
+
+# Won't make use of verbose-asm without outputting assembly.  Also
+# won't benefit from inling-functions if source is linked with mirror.o.
+ifeq ($(CC), gcc)
+	CFLAGS += -finline-functions -fverbose-asm
+endif
+
+regular: $(OBJDIR)/libtcapint.a
+
+# obsolete targets include: pg cc cctrs terse
+# (was: regular g sm smg ptr ptrg ptrw ptrwg nosig pg cc cctrs terse
+#  )
+all: regular g sm smg ptr ptrg ptrstm ptrstmg ptrw ptrwg vulnw vulnwg ptrwstm ptrwstmg vulnwstm vulnwstmg nosig noop
+
+depend:
+	makedepend -I$(INCDIR) -Y $(SRCS) -p$(OBJDIR)/
+
+g: $(OBJDIR)/libtcapintg.a
+
+sm: $(OBJDIR)/libtcapintsm.a
+
+smg: $(OBJDIR)/libtcapintsmg.a
+
+# verify-ptr version
+ptr: $(OBJDIR)/libtcptr.a
+
+# verify-ptr version, -g
+ptrg: $(OBJDIR)/libtcptrg.a
+
+# verify-ptr write-only version
+ptrw: $(OBJDIR)/libtcptrw.a
+
+# verify-ptr write-only version, -g
+ptrwg: $(OBJDIR)/libtcptrwg.a
+
+# vuln-verify-ptr write-only version
+vulnw: $(OBJDIR)/libtcvulnw.a
+
+# vuln-verify-ptr write-only version, -g
+vulnwg: $(OBJDIR)/libtcvulnwg.a
+
+# staticmir version of above
+ptrstm: $(OBJDIR)/libtcptrstm.a
+
+ptrstmg: $(OBJDIR)/libtcptrstmg.a
+
+ptrwstm: $(OBJDIR)/libtcptrwstm.a
+
+ptrwstmg: $(OBJDIR)/libtcptrwstmg.a
+
+vulnwstm: $(OBJDIR)/libtcvulnwstm.a
+
+vulnwstmg: $(OBJDIR)/libtcvulnwstmg.a
+
+# "no signal" version
+nosig: $(OBJDIR)/libtcapintns.a
+
+# "terse output" version 
+terse: $(OBJDIR)/libtcapinttrs.a
+
+pg: $(OBJDIR)/libtcapintpg.a
+
+cc: $(OBJDIR)/libtcapintcc.a
+
+cctrs: $(OBJDIR)/libtcapintcctrs.a
+
+newtags: $(OBJDIR)/libtcapint.a
+
+mir: $(OBJDIR)/libtcapimir.a
+
+
+$(OBJDIR)/libtcapint.a: $(TCAPI_NEWTAGS_OBJS)
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+$(OBJDIR)/libtcapintg.a: $(TCAPI_NEWTAGS_G_OBJS)
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+$(OBJDIR)/libtcapintsm.a: $(subst tcmalloc.o,tcmalloc-safe.o,$(TCAPI_NEWTAGS_OBJS))
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+$(OBJDIR)/libtcapintsmg.a:  $(subst tcmalloc-g.o,tcmalloc-safe-g.o,$(TCAPI_NEWTAGS_G_OBJS))
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+$(OBJDIR)/libtcptr.a: $(TCPTR_OBJS)
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+$(OBJDIR)/libtcptrg.a: $(TCPTR_G_OBJS)
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+$(OBJDIR)/libtcptrw.a: $(TCPTRW_OBJS)
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+$(OBJDIR)/libtcptrwg.a: $(TCPTRW_G_OBJS)
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+$(OBJDIR)/libtcvulnw.a: $(TCVULNW_OBJS)
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+$(OBJDIR)/libtcvulnwg.a: $(TCVULNW_G_OBJS)
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+$(OBJDIR)/libtcptrstm.a: $(TCPTR_STATICMIR_OBJS)
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+$(OBJDIR)/libtcptrstmg.a: $(TCPTR_STATICMIR_G_OBJS)
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+$(OBJDIR)/libtcptrwstm.a: $(TCPTRW_STATICMIR_OBJS)
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+$(OBJDIR)/libtcptrwstmg.a: $(TCPTRW_STATICMIR_G_OBJS)
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+$(OBJDIR)/libtcvulnwstm.a: $(TCVULNW_STATICMIR_OBJS)
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+$(OBJDIR)/libtcvulnwstmg.a: $(TCVULNW_STATICMIR_G_OBJS)
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+$(OBJDIR)/libtcapimir.a: tcmir.o
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+$(OBJDIR)/libtcapinttrs.a: $(TCAPI_NEWTAGS_TRS_OBJS)
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+$(OBJDIR)/libtcapintns.a: $(TCAPI_NEWTAGS_NS_OBJS)
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+$(OBJDIR)/libtcapintpg.a: $(TCAPI_NEWTAGS_PG_OBJS)
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+$(OBJDIR)/libtcapintcc.a: $(TCAPI_NEWTAGS_CC_OBJS)
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+$(OBJDIR)/libtcapintcctrs.a: $(TCAPI_NEWTAGS_CCTRS_OBJS)
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+noop: $(OBJDIR)/libtcnoop.a
+
+$(OBJDIR)/libtcnoop.a: $(TCNOOP_OBJS)
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+pmirror_newtags: pmirror_newtags.c
+	$(CC) -DSTANDALONE -g $(CFLAGS) $< -o $@@
+
+tcptr: tcptr.c
+	$(CC) -DSTANDALONE -g $(CFLAGS) $< -o $@@
+
+############
+
+$(OBJDIR)/%-ns.o: %.c
+	$(CC) -c -o $@@ -DTC_NOSIGNAL $(CFLAGS) $<
+
+$(OBJDIR)/%-trs.o: %.c
+	$(CC) -c -o $@@ -DTC_TERSE_OUTPUT $(CFLAGS) $<
+
+$(OBJDIR)/%-stm-g.w.o: %.c
+	$(CC) -DTC_PTRW -DTC_STATIC_MIRROR -DTC_PRINT_STATS -c -g -o $@@ $(CFLAGS) -O0 $<
+
+$(OBJDIR)/%-stm-g.vw.o: %.c
+	$(CC) -DTC_PTRW -DTC_VULNERABLE_VP -DTC_STATIC_MIRROR -DTC_PRINT_STATS -c -g -o $@@ $(CFLAGS) -O0 $<
+
+$(OBJDIR)/%-g.w.o: %.c
+	$(CC) -DTC_PTRW -DTC_PRINT_STATS -c -g -o $@@ $(CFLAGS) -O0 $<
+
+$(OBJDIR)/%-g.vw.o: %.c
+	$(CC) -DTC_PTRW -DTC_VULNERABLE_VP -DTC_PRINT_STATS -c -g -o $@@ $(CFLAGS) -O0 $<
+
+$(OBJDIR)/%-stm.w.o: %.c
+	$(CC) -DTC_PTRW -DTC_STATIC_MIRROR -c -o $@@ $(CFLAGS) -O0 $<
+
+$(OBJDIR)/%-stm.vw.o: %.c
+	$(CC) -DTC_PTRW -DTC_VULNERABLE_VP -DTC_STATIC_MIRROR -c -o $@@ $(CFLAGS) -O0 $<
+
+$(OBJDIR)/%.w.o: %.c
+	$(CC) -DTC_PTRW -c -o $@@ $(CFLAGS) -O0 $<
+
+$(OBJDIR)/%.vw.o: %.c
+	$(CC) -DTC_PTRW -DTC_VULNERABLE_VP -c -o $@@ $(CFLAGS) -O0 $<
+
+$(OBJDIR)/%-stm-g.o: %.c
+	$(CC) -DTC_STATIC_MIRROR -DTC_PRINT_STATS -c -g -o $@@ $(CFLAGS) -O0 $<
+
+$(OBJDIR)/%-g.o: %.c
+	$(CC) -DTC_PRINT_STATS -c -g -o $@@ $(CFLAGS) -O0 $<
+
+$(OBJDIR)/%-pg.o: %.c
+	$(CC) -c -pg -o $@@ $(CFLAGS) $<
+
+$(OBJDIR)/%-cc.o: %.c
+	cc -c -o $@@ $(CFLAGS) $<
+
+$(OBJDIR)/%-cctrs.o: %.c
+	cc -c -o $@@ -DTC_TERSE_OUTPUT $(CFLAGS) $<
+
+$(OBJDIR)/%-stm.o: %.c
+	$(CC) -DTC_STATIC_MIRROR -c -o $@@ $(CFLAGS) $<
+
+$(OBJDIR)/%.o: %.c
+	$(CC) -c -o $@@ $(CFLAGS) $<
+
+############
+
+clean:
+	rm -f $(OBJDIR)/*
+clean_all: clean
+	rm -f $(LIBDIR)/*
+
+# DO NOT DELETE
+
+../obj/pmirror_newtags.o: tcinternal.h
+../obj/pmirror_newtags.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+../obj/pmirror_newtags.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+../obj/pmirror_newtags.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+../obj/tclibc.o: tcinternal.h
+../obj/tclibc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+../obj/tclibc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+../obj/tclibc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+../obj/tclibc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+../obj/tcmalloc-hash.o: tcmalloc-hash.h
+../obj/tcmalloc.o: tcinternal.h
+../obj/tcmalloc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+../obj/tcmalloc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+../obj/tcmalloc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+../obj/tcmalloc.o: tcmalloc-hash.h
+../obj/tcmalloc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+../obj/tcmalloc-safe.o: tcmalloc.c tcinternal.h
+../obj/tcmalloc-safe.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+../obj/tcmalloc-safe.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+../obj/tcmalloc-safe.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+../obj/tcmalloc-safe.o: tcmalloc-hash.h
+../obj/tcmalloc-safe.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+../obj/tcmir.o: tcinternal.h
+../obj/tcmir.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+../obj/tcmir.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+../obj/tcmir.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+../obj/tcnoop.o: tcinternal.h
+../obj/tcnoop.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+../obj/tcnoop.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+../obj/tcnoop.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+../obj/tcnooplibc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+../obj/tcptr.o: tcptr_internal.h
+../obj/tcptr.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcptr.h
+../obj/tcptr.o: tcmalloc-hash.h
+../obj/tcptrlibc.o: tcptr_internal.h
+../obj/tcptrlibc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcptr.h
+../obj/tcptrmalloc.o: tcptr_internal.h
+../obj/tcptrmalloc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcptr.h
+../obj/tcptrmalloc.o: tcmalloc-hash.h
+../obj/tcptrscanf.o: tcptr_internal.h
+../obj/tcptrscanf.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcptr.h
+../obj/tcptrscanf.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+../obj/tcptrprintf.o: tcptr_internal.h
+../obj/tcptrprintf.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcptr.h
+../obj/tcptrprintf.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+../obj/tcscanf.o: tcinternal.h
+../obj/tcscanf.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+../obj/tcscanf.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+../obj/tcscanf.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+../obj/tcscanf.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+../obj/tcsocket.o: tcinternal.h
+../obj/tcsocket.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+../obj/tcsocket.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+../obj/tcsocket.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+../obj/tcsocket.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+../obj/tcstdio.o: tcinternal.h
+../obj/tcstdio.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+../obj/tcstdio.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+../obj/tcstdio.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+../obj/tcstdio.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+../obj/tcstring.o: tcinternal.h
+../obj/tcstring.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+../obj/tcstring.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+../obj/tcstring.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+../obj/tcstring.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+@
+
+
+1.36
+log
+@Added "hashopt": optimize verifyPtr to lookup in the malloc
+hash table when lookup size is greater than hashopt thresh-
+hold (default 0; can set with -tc-hashopt=N).
+@
+text
+@d57 5
+d83 6
+d102 1
+a102 1
+all: regular g sm smg ptr ptrg ptrstm ptrstmg ptrw ptrwg ptrwstm ptrwstmg nosig noop
+d125 6
+d140 4
+d201 10
+d231 10
+d295 3
+d301 3
+d307 3
+d312 3
+@
+
+
+1.35
+log
+@Added linking with tcptrhisto.c (diagnostic histogram
+of instrumented calls).
+@
+text
+@d326 1
+@
+
+
+1.34
+log
+@Migrated obj directory to ../obj
+@
+text
+@d24 1
+d50 2
+a51 2
+		$(OBJDIR)/tcptrlibc-g.o $(OBJDIR)/tcptrscanf-g.o $(OBJDIR)/tcptrprintf-g.o
+
+d55 2
+a56 1
+		$(OBJDIR)/tcptrlibc-g.w.o $(OBJDIR)/tcptrscanf-g.w.o $(OBJDIR)/tcptrprintf-g.w.o
+@
+
+
+1.33
+log
+@Added tcptrprintf; migrated s*printf from tcptrscanf.c to
+tcptrprintf.c
+@
+text
+@d4 1
+a4 1
+OBJDIR = obj
+d291 64
+a354 64
+obj/pmirror_newtags.o: tcinternal.h
+obj/pmirror_newtags.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+obj/pmirror_newtags.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+obj/pmirror_newtags.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+obj/tclibc.o: tcinternal.h
+obj/tclibc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+obj/tclibc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+obj/tclibc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+obj/tclibc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+obj/tcmalloc-hash.o: tcmalloc-hash.h
+obj/tcmalloc.o: tcinternal.h
+obj/tcmalloc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+obj/tcmalloc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+obj/tcmalloc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+obj/tcmalloc.o: tcmalloc-hash.h
+obj/tcmalloc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+obj/tcmalloc-safe.o: tcmalloc.c tcinternal.h
+obj/tcmalloc-safe.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+obj/tcmalloc-safe.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+obj/tcmalloc-safe.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+obj/tcmalloc-safe.o: tcmalloc-hash.h
+obj/tcmalloc-safe.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+obj/tcmir.o: tcinternal.h
+obj/tcmir.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+obj/tcmir.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+obj/tcmir.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+obj/tcnoop.o: tcinternal.h
+obj/tcnoop.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+obj/tcnoop.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+obj/tcnoop.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+obj/tcnooplibc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+obj/tcptr.o: tcptr_internal.h
+obj/tcptr.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcptr.h
+obj/tcptrlibc.o: tcptr_internal.h
+obj/tcptrlibc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcptr.h
+obj/tcptrmalloc.o: tcptr_internal.h
+obj/tcptrmalloc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcptr.h
+obj/tcptrmalloc.o: tcmalloc-hash.h
+obj/tcptrscanf.o: tcptr_internal.h
+obj/tcptrscanf.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcptr.h
+obj/tcptrscanf.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+obj/tcptrprintf.o: tcptr_internal.h
+obj/tcptrprintf.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcptr.h
+obj/tcptrprintf.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+obj/tcscanf.o: tcinternal.h
+obj/tcscanf.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+obj/tcscanf.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+obj/tcscanf.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+obj/tcscanf.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+obj/tcsocket.o: tcinternal.h
+obj/tcsocket.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+obj/tcsocket.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+obj/tcsocket.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+obj/tcsocket.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+obj/tcstdio.o: tcinternal.h
+obj/tcstdio.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+obj/tcstdio.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+obj/tcstdio.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+obj/tcstdio.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+obj/tcstring.o: tcinternal.h
+obj/tcstring.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+obj/tcstring.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+obj/tcstring.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+obj/tcstring.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+@
+
+
+1.32
+log
+@Added STATIC_MIRROR targets: (libtc)ptr[w]stm[g]
+@
+text
+@d27 1
+d47 1
+a47 1
+		$(OBJDIR)/tcptrlibc.o $(OBJDIR)/tcptrscanf.o
+d49 1
+a49 1
+		$(OBJDIR)/tcptrlibc-g.o $(OBJDIR)/tcptrscanf-g.o
+d52 1
+a52 1
+		$(OBJDIR)/tcptrlibc.w.o $(OBJDIR)/tcptrscanf.w.o
+d54 1
+a54 1
+		$(OBJDIR)/tcptrlibc-g.w.o $(OBJDIR)/tcptrscanf-g.w.o
+d332 3
+@
+
+
+1.31
+log
+@Updated noop to link with tcnooplibc (new file of NOP wrappers).
+@
+text
+@d66 3
+d72 3
+d88 1
+a88 1
+all: regular g sm smg ptr ptrg ptrw ptrwg nosig noop
+d111 9
+d177 20
+d248 3
+d254 3
+d260 3
+d274 3
+@
+
+
+1.30
+log
+@standalone now compiled with -g
+@
+text
+@d22 1
+d69 1
+a69 1
+TCNOOP_OBJS = $(OBJDIR)/tcnoop.o $(TCLIBC_OBJS)
+d82 1
+a82 1
+all: regular g sm smg ptr ptrg ptrw ptrwg nosig
+d273 1
+@
+
+
+1.29
+log
+@Added TC_SAFE_MALLOC (sm) version of malloc functions
+(allocated bytes are INIT rather than UNINIT).
+@
+text
+@d199 1
+a199 1
+	$(CC) -DSTANDALONE $(CFLAGS) $< -o $@@
+@
+
+
+1.28
+log
+@Fixed makedepend to prepend obj/ prefix.
+@
+text
+@d19 1
+d78 4
+a81 1
+all: regular ptr ptrg ptrw ptrwg nosig g pg cc cctrs terse
+d86 6
+a109 2
+g: $(OBJDIR)/libtcapintg.a
+
+d120 1
+d126 15
+a175 5
+$(OBJDIR)/libtcapintg.a: $(TCAPI_NEWTAGS_G_OBJS)
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+d258 6
+@
+
+
+1.27
+log
+@Added make depend.
+@
+text
+@d80 1
+a80 1
+	makedepend -I$(INCDIR) -Y $(SRCS)
+d223 54
+a276 54
+pmirror_newtags.o: tcinternal.h
+pmirror_newtags.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+pmirror_newtags.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+pmirror_newtags.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+tclibc.o: tcinternal.h
+tclibc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+tclibc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+tclibc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+tclibc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+tcmalloc-hash.o: tcmalloc-hash.h
+tcmalloc.o: tcinternal.h
+tcmalloc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+tcmalloc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+tcmalloc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+tcmalloc.o: tcmalloc-hash.h
+tcmalloc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+tcmir.o: tcinternal.h
+tcmir.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+tcmir.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+tcmir.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+tcnoop.o: tcinternal.h
+tcnoop.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+tcnoop.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+tcnoop.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+tcptr.o: tcptr_internal.h
+tcptr.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcptr.h
+tcptrlibc.o: tcptr_internal.h
+tcptrlibc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcptr.h
+tcptrmalloc.o: tcptr_internal.h
+tcptrmalloc.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcptr.h
+tcptrmalloc.o: tcmalloc-hash.h
+tcptrscanf.o: tcptr_internal.h
+tcptrscanf.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcptr.h
+tcptrscanf.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+tcscanf.o: tcinternal.h
+tcscanf.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+tcscanf.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+tcscanf.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+tcscanf.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+tcsocket.o: tcinternal.h
+tcsocket.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+tcsocket.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+tcsocket.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+tcsocket.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+tcstdio.o: tcinternal.h
+tcstdio.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+tcstdio.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+tcstdio.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+tcstdio.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+tcstring.o: tcinternal.h
+tcstring.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi.h
+tcstring.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tcapi_postinstr.h
+tcstring.o: /p/wpis/people/students/suan/TypecheckDebugger/include/mirror_sizes.h
+tcstring.o: /p/wpis/people/students/suan/TypecheckDebugger/include/tclibc.h
+@
+
+
+1.26
+log
+@Added -DTC_PRINT_STATS to ptr/ptrw compilation
+@
+text
+@d15 15
+d79 3
+a215 15
+
+#
+# Source file dependencies (modified from makedepend output)
+#
+tcinternal.h: $(INCDIR)/tcapi.h
+pmirror_newtags.c: tcinternal.h
+tcstdio.c: tcinternal.h
+tcscanf.c: tcinternal.h
+tcmalloc.c: tcinternal.h
+tcnoop.c: tcinternal.h
+tcstring.c: tcinternal.h
+tclibc.c: tcinternal.h
+$(INCDIR)/tcapi.h: $(INCDIR)/tcapi_postinstr.h $(INCDIR)/tclibc.h
+$(INCDIR)/tcapi_postinstr.h: $(INCDIR)/mirror_sizes.h
+
+d221 56
+@
+
+
+1.25
+log
+@Added libtcptrw.a and libtcptrwg.a targets; these are
+compiled by passing -DTC_PTRW to the ptr-version of
+the library wrappers during compilation.
+@
+text
+@d176 1
+a176 1
+	$(CC) -DTC_PTRW -c -g -o $@@ $(CFLAGS) -O0 $<
+d182 1
+a182 1
+	$(CC) -c -g -o $@@ $(CFLAGS) -O0 $<
+@
+
+
+1.24
+log
+@Added ptrg target (-ptr with -g enabled).
+Also added tcptr (standalone test) target.
+Also, incorporate tcmalloc/tcmalloc-hash split.
+@
+text
+@d33 5
+d49 3
+d62 1
+a62 1
+all: regular ptr ptrg nosig g pg cc cctrs terse
+d70 6
+d109 10
+d174 6
+@
+
+
+1.23
+log
+@Removed commented-out old rules.
+@
+text
+@d15 2
+a16 1
+TCLIBC_OBJS = $(OBJDIR)/tcmalloc.o $(OBJDIR)/tcstdio.o $(OBJDIR)/tcscanf.o \
+d18 2
+a19 1
+TCLIBC_G_OBJS = $(OBJDIR)/tcmalloc-g.o $(OBJDIR)/tcstdio-g.o $(OBJDIR)/tcscanf-g.o \
+d21 2
+a22 1
+TCLIBC_PG_OBJS = $(OBJDIR)/tcmalloc-pg.o $(OBJDIR)/tcstdio-pg.o $(OBJDIR)/tcscanf-pg.o \
+d24 2
+a25 1
+TCLIBC_CC_OBJS = $(OBJDIR)/tcmalloc-cc.o $(OBJDIR)/tcstdio-cc.o $(OBJDIR)/tcscanf-cc.o \
+d28 4
+a31 1
+TCPTR_LIBC_OBJS = $(OBJDIR)/tcptrmalloc.o $(OBJDIR)/tcptrlibc.o $(OBJDIR)/tcptrscanf.o
+d42 1
+d54 1
+a54 1
+all: regular ptr nosig g pg cc cctrs terse
+d59 3
+d90 5
+d139 3
+@
+
+
+1.22
+log
+@Rewrote with prefix rules rather than individually-listed
+per-file; old stuff commented, next checkin will delete.
+@
+text
+@a123 23
+############################################
+
+#$(OBJDIR)/pmirror_newtags.o: pmirror_newtags.c
+#	$(CC) -c -o $@@ $(CFLAGS) $<
+
+#$(OBJDIR)/pmirror_newtags-ns.o: pmirror_newtags.c
+#	$(CC) -c -o $@@ -DTC_NOSIGNAL $(CFLAGS) $<
+
+#$(OBJDIR)/pmirror_newtags-trs.o: pmirror_newtags.c
+#	$(CC) -c -o $@@ -DTC_TERSE_OUTPUT $(CFLAGS) $<
+
+#$(OBJDIR)/pmirror_newtags-g.o: pmirror_newtags.c
+#	$(CC) -c -g -o $@@ $(CFLAGS) -O0 $<
+
+#$(OBJDIR)/pmirror_newtags-pg.o: pmirror_newtags.c
+#	$(CC) -c -pg -o $@@ $(CFLAGS) $<
+
+#$(OBJDIR)/pmirror_newtags-cc.o: pmirror_newtags.c
+#	cc -c -o $@@ $(CFLAGS) $<
+
+#$(OBJDIR)/pmirror_newtags-cctrs.o: pmirror_newtags.c
+#	cc -c -o $@@ -DTC_TERSE_OUTPUT $(CFLAGS) $<
+
+a148 81
+# The NOOP version of the api library
+#$(OBJDIR)/tcnoop.o: tcnoop.c
+#	$(CC) -c -o $@@ $(CFLAGS) $<
+
+# The typecheck version of malloc (library) functions
+#$(OBJDIR)/tcmalloc.o: tcmalloc.c
+#	$(CC) -c -o $@@ $(CFLAGS) $<
+
+#$(OBJDIR)/tcmalloc-pg.o: tcmalloc.c
+#	$(CC) -c -pg -o $@@ $(CFLAGS) $<
+
+#$(OBJDIR)/tcmalloc-cc.o: tcmalloc.c
+#	cc -c -o $@@ $(CFLAGS) $<
+
+#$(OBJDIR)/tcmalloc-g.o: tcmalloc.c
+#	$(CC) -c -g -o $@@ $(CFLAGS) -O0 $<
+
+# The typecheck version of stdio (library) functions
+#$(OBJDIR)/tcstdio.o: tcstdio.c
+#	$(CC) -c -o $@@ $(CFLAGS) $<
+
+#$(OBJDIR)/tcstdio-g.o: tcstdio.c
+#	$(CC) -c -g -o $@@ $(CFLAGS) -O0 $<
+
+#$(OBJDIR)/tcstdio-pg.o: tcstdio.c
+#	$(CC) -c -pg -o $@@ $(CFLAGS) $<
+
+#$(OBJDIR)/tcstdio-cc.o: tcstdio.c
+#	cc -c -o $@@ $(CFLAGS) $<
+
+# The typecheck version of scanf (library) functions
+#$(OBJDIR)/tcscanf.o: tcscanf.c
+#	$(CC) -c -o $@@ $(CFLAGS) $<
+
+#$(OBJDIR)/tcscanf-g.o: tcscanf.c
+#	$(CC) -c -g -o $@@ $(CFLAGS) -O0 $<
+
+#$(OBJDIR)/tcscanf-pg.o: tcscanf.c
+#	$(CC) -c -pg -o $@@ $(CFLAGS) $<
+
+#$(OBJDIR)/tcscanf-cc.o: tcscanf.c
+#	cc -c -o $@@ $(CFLAGS) $<
+
+# The typecheck version of string (library) functions
+#$(OBJDIR)/tcstring.o: tcstring.c
+#	$(CC) -c -o $@@ $(CFLAGS) $<
+
+#$(OBJDIR)/tcstring-g.o: tcstring.c
+#	$(CC) -c -g -o $@@ $(CFLAGS) -O0 $<
+
+#$(OBJDIR)/tcstring-pg.o: tcstring.c
+#	$(CC) -c -pg -o $@@ $(CFLAGS) $<
+
+#$(OBJDIR)/tcstring-cc.o: tcstring.c
+#	cc -c -o $@@ $(CFLAGS) $<
+
+# The typecheck version of miscellaneous library functions
+#$(OBJDIR)/tcsocket.o: tcsocket.c
+#	$(CC) -c -o $@@ $(CFLAGS) $<
+
+#$(OBJDIR)/tcsocket-g.o: tcsocket.c
+#	$(CC) -c -g -o $@@ $(CFLAGS) -O0 $<
+
+#$(OBJDIR)/tcsocket-pg.o: tcsocket.c
+#	$(CC) -c -pg -o $@@ $(CFLAGS) $<
+
+#$(OBJDIR)/tcsocket-cc.o: tcsocket.c
+#	cc -c -o $@@ $(CFLAGS) $<
+
+# The typecheck version of miscellaneous library functions
+#$(OBJDIR)/tclibc.o: tclibc.c
+#	$(CC) -c -o $@@ $(CFLAGS) $<
+
+#$(OBJDIR)/tclibc-g.o: tclibc.c
+#	$(CC) -c -g -o $@@ $(CFLAGS) -O0 $<
+
+#$(OBJDIR)/tclibc-pg.o: tclibc.c
+#	$(CC) -c -pg -o $@@ $(CFLAGS) $<
+
+#$(OBJDIR)/tclibc-cc.o: tclibc.c
+#	cc -c -o $@@ $(CFLAGS) $<
+@
+
+
+1.21
+log
+@Changed environment to be more cygwin-friendly.
+@
+text
+@d24 2
+d34 2
+d46 4
+a49 1
+all: regular nosig g pg cc cctrs terse
+d74 5
+d124 24
+a147 2
+$(OBJDIR)/pmirror_newtags.o: pmirror_newtags.c
+	$(CC) -c -o $@@ $(CFLAGS) $<
+d149 1
+a149 1
+$(OBJDIR)/pmirror_newtags-ns.o: pmirror_newtags.c
+d152 1
+a152 1
+$(OBJDIR)/pmirror_newtags-trs.o: pmirror_newtags.c
+d155 1
+a155 1
+$(OBJDIR)/pmirror_newtags-g.o: pmirror_newtags.c
+d158 1
+a158 1
+$(OBJDIR)/pmirror_newtags-pg.o: pmirror_newtags.c
+d161 1
+a161 1
+$(OBJDIR)/pmirror_newtags-cc.o: pmirror_newtags.c
+d164 1
+a164 1
+$(OBJDIR)/pmirror_newtags-cctrs.o: pmirror_newtags.c
+d167 5
+d173 2
+a174 2
+$(OBJDIR)/tcnoop.o: tcnoop.c
+	$(CC) -c -o $@@ $(CFLAGS) $<
+d177 2
+a178 2
+$(OBJDIR)/tcmalloc.o: tcmalloc.c
+	$(CC) -c -o $@@ $(CFLAGS) $<
+d180 2
+a181 2
+$(OBJDIR)/tcmalloc-pg.o: tcmalloc.c
+	$(CC) -c -pg -o $@@ $(CFLAGS) $<
+d183 2
+a184 2
+$(OBJDIR)/tcmalloc-cc.o: tcmalloc.c
+	cc -c -o $@@ $(CFLAGS) $<
+d186 2
+a187 2
+$(OBJDIR)/tcmalloc-g.o: tcmalloc.c
+	$(CC) -c -g -o $@@ $(CFLAGS) -O0 $<
+d190 2
+a191 2
+$(OBJDIR)/tcstdio.o: tcstdio.c
+	$(CC) -c -o $@@ $(CFLAGS) $<
+d193 2
+a194 2
+$(OBJDIR)/tcstdio-g.o: tcstdio.c
+	$(CC) -c -g -o $@@ $(CFLAGS) -O0 $<
+d196 2
+a197 2
+$(OBJDIR)/tcstdio-pg.o: tcstdio.c
+	$(CC) -c -pg -o $@@ $(CFLAGS) $<
+d199 2
+a200 2
+$(OBJDIR)/tcstdio-cc.o: tcstdio.c
+	cc -c -o $@@ $(CFLAGS) $<
+d203 2
+a204 2
+$(OBJDIR)/tcscanf.o: tcscanf.c
+	$(CC) -c -o $@@ $(CFLAGS) $<
+d206 2
+a207 2
+$(OBJDIR)/tcscanf-g.o: tcscanf.c
+	$(CC) -c -g -o $@@ $(CFLAGS) -O0 $<
+d209 2
+a210 2
+$(OBJDIR)/tcscanf-pg.o: tcscanf.c
+	$(CC) -c -pg -o $@@ $(CFLAGS) $<
+d212 2
+a213 2
+$(OBJDIR)/tcscanf-cc.o: tcscanf.c
+	cc -c -o $@@ $(CFLAGS) $<
+d216 2
+a217 2
+$(OBJDIR)/tcstring.o: tcstring.c
+	$(CC) -c -o $@@ $(CFLAGS) $<
+d219 2
+a220 2
+$(OBJDIR)/tcstring-g.o: tcstring.c
+	$(CC) -c -g -o $@@ $(CFLAGS) -O0 $<
+d222 2
+a223 2
+$(OBJDIR)/tcstring-pg.o: tcstring.c
+	$(CC) -c -pg -o $@@ $(CFLAGS) $<
+d225 2
+a226 2
+$(OBJDIR)/tcstring-cc.o: tcstring.c
+	cc -c -o $@@ $(CFLAGS) $<
+d229 2
+a230 2
+$(OBJDIR)/tcsocket.o: tcsocket.c
+	$(CC) -c -o $@@ $(CFLAGS) $<
+d232 2
+a233 2
+$(OBJDIR)/tcsocket-g.o: tcsocket.c
+	$(CC) -c -g -o $@@ $(CFLAGS) -O0 $<
+d235 2
+a236 2
+$(OBJDIR)/tcsocket-pg.o: tcsocket.c
+	$(CC) -c -pg -o $@@ $(CFLAGS) $<
+d238 2
+a239 2
+$(OBJDIR)/tcsocket-cc.o: tcsocket.c
+	cc -c -o $@@ $(CFLAGS) $<
+d242 2
+a243 2
+$(OBJDIR)/tclibc.o: tclibc.c
+	$(CC) -c -o $@@ $(CFLAGS) $<
+d245 2
+a246 2
+$(OBJDIR)/tclibc-g.o: tclibc.c
+	$(CC) -c -g -o $@@ $(CFLAGS) -O0 $<
+d248 2
+a249 2
+$(OBJDIR)/tclibc-pg.o: tclibc.c
+	$(CC) -c -pg -o $@@ $(CFLAGS) $<
+d251 2
+a252 2
+$(OBJDIR)/tclibc-cc.o: tclibc.c
+	cc -c -o $@@ $(CFLAGS) $<
+@
+
+
+1.20
+log
+@Included tcscanf.
+@
+text
+@d1 3
+a3 1
+SRCDIR = /p/wpis/people/students/suan/TypecheckDebugger/src/dynamic
+d5 2
+a6 2
+INCDIR = /p/wpis/people/students/suan/TypecheckDebugger/include
+LIBDIR = /p/wpis/people/students/suan/TypecheckDebugger/lib
+@
+
+
+1.19
+log
+@Added mir target
+@
+text
+@d7 1
+a7 1
+CFLAGS = -I$(INCDIR) -O2
+d13 8
+a20 4
+TCLIBC_OBJS = $(OBJDIR)/tcmalloc.o $(OBJDIR)/tcstdio.o $(OBJDIR)/tcstring.o $(OBJDIR)/tclibc.o $(OBJDIR)/tcsocket.o
+TCLIBC_G_OBJS = $(OBJDIR)/tcmalloc-g.o $(OBJDIR)/tcstdio-g.o $(OBJDIR)/tcstring-g.o $(OBJDIR)/tclibc-g.o $(OBJDIR)/tcsocket-g.o
+TCLIBC_PG_OBJS = $(OBJDIR)/tcmalloc-pg.o $(OBJDIR)/tcstdio-pg.o $(OBJDIR)/tcstring-pg.o $(OBJDIR)/tclibc-pg.o $(OBJDIR)/tcsocket-pg.o
+TCLIBC_CC_OBJS = $(OBJDIR)/tcmalloc-cc.o $(OBJDIR)/tcstdio-cc.o $(OBJDIR)/tcstring-cc.o $(OBJDIR)/tclibc-cc.o $(OBJDIR)/tcsocket-cc.o
+d161 13
+d218 2
+@
+
+
+1.18
+log
+@Updated directory to /p/wpis/people/students/suan/TypecheckDebugger
+@
+text
+@d54 2
+d57 5
+@
+
+
+1.17
+log
+@Made -g version do -O0 (no optimize).
+@
+text
+@d1 1
+a1 1
+SRCDIR = /p/wpis/people/students/alexey/types/src/dynamic
+d3 2
+a4 2
+INCDIR = /p/wpis/people/students/alexey/types/include
+LIBDIR = /p/wpis/people/students/alexey/types/lib
+@
+
+
+1.16
+log
+@Added stuff for making tcsocket
+@
+text
+@d109 1
+a109 1
+	$(CC) -c -g -o $@@ $(CFLAGS) $<
+d135 1
+a135 1
+	$(CC) -c -g -o $@@ $(CFLAGS) $<
+d142 1
+a142 1
+	$(CC) -c -g -o $@@ $(CFLAGS) $<
+d155 1
+a155 1
+	$(CC) -c -g -o $@@ $(CFLAGS) $<
+d168 1
+a168 1
+	$(CC) -c -g -o $@@ $(CFLAGS) $<
+d181 1
+a181 1
+	$(CC) -c -g -o $@@ $(CFLAGS) $<
+@
+
+
+1.15
+log
+@This file has not been checked in for ages; too many changes to note.
+@
+text
+@d13 4
+a16 4
+TCLIBC_OBJS = $(OBJDIR)/tcmalloc.o $(OBJDIR)/tcstdio.o $(OBJDIR)/tcstring.o $(OBJDIR)/tclibc.o
+TCLIBC_G_OBJS = $(OBJDIR)/tcmalloc-g.o $(OBJDIR)/tcstdio-g.o $(OBJDIR)/tcstring-g.o $(OBJDIR)/tclibc-g.o
+TCLIBC_PG_OBJS = $(OBJDIR)/tcmalloc-pg.o $(OBJDIR)/tcstdio-pg.o $(OBJDIR)/tcstring-pg.o $(OBJDIR)/tclibc-pg.o
+TCLIBC_CC_OBJS = $(OBJDIR)/tcmalloc-cc.o $(OBJDIR)/tcstdio-cc.o $(OBJDIR)/tcstring-cc.o $(OBJDIR)/tclibc-cc.o
+d161 13
+@
+
+
+1.14
+log
+@Cleaned out oldtags stuff; also removed libtcstdio.a target.
+@
+text
+@d7 1
+a7 1
+CFLAGS = -g -I$(INCDIR)
+d13 4
+a16 2
+TCLIBC_OBJS = $(OBJDIR)/tcmalloc.o $(OBJDIR)/tcstring.o
+TCLIBC_PG_OBJS = $(OBJDIR)/tcmalloc-pg.o $(OBJDIR)/tcstring-pg.o
+d21 1
+d23 2
+d36 1
+a36 1
+all: regular nosig pg terse
+d44 2
+d48 4
+d69 5
+d79 10
+d108 3
+d112 7
+a118 1
+	$(CC) -c -pg -o $@@ -DTC_NOSIGNAL $(CFLAGS) $<
+a127 1
+# The typecheck version of malloc (library) functions
+d131 19
+d154 3
+a156 1
+# The typecheck version of string (library) functions
+d160 16
+d184 1
+@
+
+
+1.13
+log
+@Removed oldtags targets;
+Removed silent targets -- replaced with terse.
+Oldtag rules still remain.
+@
+text
+@a15 5
+TCAPI_OBJS = $(OBJDIR)/pmirror.o $(TCLIBC_OBJS)
+TCAPI_NS_OBJS = $(OBJDIR)/pmirror-ns.o $(TCLIBC_OBJS)
+TCAPI_TRS_OBJS = $(OBJDIR)/pmirror-trs.o $(TCLIBC_OBJS)
+TCAPI_PG_OBJS = $(OBJDIR)/pmirror-pg.o $(TCLIBC_PG_OBJS)
+
+a28 1
+#regular: $(OBJDIR)/libtcapi.a $(OBJDIR)/libtcapint.a
+a33 1
+#nosig: $(OBJDIR)/libtcapins.a $(OBJDIR)/libtcapintns.a
+d36 1
+a36 1
+#terse: $(OBJDIR)/libtcapitrs.a $(OBJDIR)/libtcapinttrs.a
+a38 1
+#pg: $(OBJDIR)/libtcapipg.a $(OBJDIR)/libtcapintpg.a
+a40 23
+libtcstdio.a:
+	cd tcstdio && make libtcstdio.a
+
+$(OBJDIR)/libtcapi.a: $(TCAPI_OBJS)
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+$(OBJDIR)/libtcapins.a: $(TCAPI_NS_OBJS)
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+$(OBJDIR)/libtcapitrs.a: $(TCAPI_TRS_OBJS)
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+$(OBJDIR)/libtcapipg.a: $(TCAPI_PG_OBJS)
+	rm -f $@@
+	$(AR) $(AR_FLAGS) $@@ $^
+	cp -f $@@ $(LIBDIR)
+
+a69 15
+pmirror: pmirror.c
+	$(CC) -DSTANDALONE $(CFLAGS) $< -o $@@
+
+$(OBJDIR)/pmirror.o: pmirror.c
+	$(CC) -c -o $@@ $(CFLAGS) $<
+
+$(OBJDIR)/pmirror-ns.o: pmirror.c
+	$(CC) -c -o $@@ -DTC_NOSIGNAL $(CFLAGS) $<
+
+$(OBJDIR)/pmirror-trs.o: pmirror.c
+	$(CC) -c -o $@@ -DTC_TERSE_OUTPUT $(CFLAGS) $<
+
+$(OBJDIR)/pmirror-pg.o: pmirror.c
+	$(CC) -c -pg -o $@@ -DTC_NOSIGNAL $(CFLAGS) $<
+
+a107 1
+pmirror.c: tcinternal.h
+@
+
+
+1.12
+log
+@Added "silent" target.
+@
+text
+@d18 1
+a18 1
+TCAPI_SIL_OBJS = $(OBJDIR)/pmirror-sil.o $(TCLIBC_OBJS)
+d23 1
+a23 1
+TCAPI_NEWTAGS_SIL_OBJS = $(OBJDIR)/pmirror_newtags-sil.o $(TCLIBC_OBJS)
+d34 2
+a35 1
+regular: $(OBJDIR)/libtcapi.a $(OBJDIR)/libtcapint.a
+d37 1
+a37 1
+all: regular nosig pg silent
+d40 2
+a41 1
+nosig: $(OBJDIR)/libtcapins.a $(OBJDIR)/libtcapintns.a
+d43 2
+a44 1
+silent: $(OBJDIR)/libtcapisil.a $(OBJDIR)/libtcapintsil.a
+d46 2
+a47 1
+pg: $(OBJDIR)/libtcapipg.a $(OBJDIR)/libtcapintpg.a
+d62 1
+a62 1
+$(OBJDIR)/libtcapisil.a: $(TCAPI_SIL_OBJS)
+d79 1
+a79 1
+$(OBJDIR)/libtcapintsil.a: $(TCAPI_NEWTAGS_SIL_OBJS)
+d110 2
+a111 2
+$(OBJDIR)/pmirror-sil.o: pmirror.c
+	$(CC) -c -o $@@ -DTC_SILENT $(CFLAGS) $<
+d125 2
+a126 2
+$(OBJDIR)/pmirror_newtags-sil.o: pmirror_newtags.c
+	$(CC) -c -o $@@ -DTC_SILENT $(CFLAGS) $<
+@
+
+
+1.11
+log
+@Now, default is just "regular" libraries, all includes nosig and pg.
+@
+text
+@d18 1
+d23 1
+d36 1
+a36 1
+all: regular nosig pg
+d41 2
+d58 5
+d75 5
+d106 3
+d120 3
+@
+
+
+1.10
+log
+@Added "pg" target.
+@
+text
+@d32 3
+a34 1
+all: $(OBJDIR)/libtcapi.a $(OBJDIR)/libtcapint.a
+@
+
+
+1.9
+log
+@Changed clean.
+@
+text
+@d14 2
+d18 2
+d22 2
+d37 2
+d52 5
+d69 5
+d90 3
+d102 3
+d113 4
+d120 4
+@
+
+
+1.8
+log
+@Streamlined Makefile. Main difference is that object files are now
+written to an obj directory which points to obj.@@sys.
+@
+text
+@d106 1
+a106 1
+	rm -f a.out core pmirror pmirror_newtags *.instr *.o
+d108 1
+a108 1
+	rm -f *.pp.c *.instr* *.init.c *.tmp.c
+@
+
+
+1.7
+log
+@Minor changes (added noop; enhanced make clean).
+@
+text
+@d1 5
+a5 3
+INCDIR = /u/a/l/alexey/types/include
+SRCDIR = /u/a/l/alexey/types/src/dynamic
+LIBDIR = /u/a/l/alexey/types/lib
+a10 1
+#AR_FLAGS =
+d13 6
+a18 5
+TCLIBC_OBJS = tcmalloc.o tcstring.o
+#TCAPI_OBJS = paged_mirror.o $(TCLIBC_OBJS)
+TCAPI_OBJS = pmirror.o $(TCLIBC_OBJS)
+TCAPI_NEWTAGS_OBJS = pmirror_newtags.o $(TCLIBC_OBJS)
+TCNOOP_OBJS = tcnoop.o $(TCLIBC_OBJS)
+d26 1
+a26 2
+# Dependency search path for make
+VPATH = $(SRCDIR):$(INCDIR)
+d28 2
+a29 1
+all: libtcapi.a
+d34 28
+a61 16
+libtcapi.a: $(TCAPI_OBJS)
+	rm -f libtcapi.a
+	$(AR) $(AR_FLAGS) libtcapi.a $(TCAPI_OBJS)
+	cp -f libtcapi.a $(LIBDIR)
+
+newtags: $(TCAPI_NEWTAGS_OBJS)
+	rm -f libtcapint.a
+	$(AR) $(AR_FLAGS) libtcapint.a $(TCAPI_NEWTAGS_OBJS)
+	cp -f libtcapint.a $(LIBDIR)/libtcapint.a
+
+noop: libtcnoop.a
+
+libtcnoop.a: $(TCNOOP_OBJS)
+	rm -f libtcnoop.a
+	$(AR) $(AR_FLAGS) libtcnoop.a $(TCNOOP_OBJS)
+	cp -f libtcnoop.a $(LIBDIR)
+d63 1
+a63 2
+# The standalone paged_mirror test.
+paged_mirror: paged_mirror.c tcinternal.h $(INCDIR)/tcapi.h
+d66 5
+a70 3
+# The api library
+paged_mirror.o: paged_mirror.c tcinternal.h $(INCDIR)/tcapi.h
+	$(CC) -c $(CFLAGS) $<
+d72 1
+a72 1
+pmirror: pmirror.c tcinternal.h $(INCDIR)/tcapi.h
+d75 2
+a76 5
+pmirror.o: pmirror.c $(INCDIR)/tcapi.h
+	$(CC) -c $(CFLAGS) $<
+
+pmirror_newtags: pmirror_newtags.c tcinternal.h $(INCDIR)/tcapi.h
+	$(CC) -DSTANDALONE $(CFLAGS) $< -o $@@
+d78 2
+a79 2
+pmirror_newtags.o: pmirror_newtags.c $(INCDIR)/tcapi.h
+	$(CC) -c $(CFLAGS) $<
+d82 2
+a83 2
+tcnoop.o: tcnoop.c tcinternal.h $(INCDIR)/tcapi.h
+	$(CC) -c $(CFLAGS) $<
+d86 2
+a87 2
+tcmalloc.o: tcmalloc.c tcinternal.h $(INCDIR)/tclibc.h
+	$(CC) -c $(CFLAGS) $<
+d90 2
+a91 2
+tcstring.o: tcstring.c tcinternal.h $(INCDIR)/tclibc.h
+	$(CC) -c $(CFLAGS) $<
+d93 11
+a103 43
+# Rule for preprocessing original source files (to be done
+# before instrumentation and compilation (below)).
+# -U__GNUC__ turns off some gnu-C keywords (like __extension__)
+#  that aren't handled by the Lucent front end
+%.pp.c: %.c typecheck.h
+	echo '#include <typecheck.h>' > $*.tmp.c
+	echo '#line 1 "'$<'"' >> $*.tmp.c
+	cat $< >> $*.tmp.c
+	$(CC) -E -ansi -pedantic -U__GNUC__ $(CFLAGS) $*.tmp.c > $@@
+	rm -f $*.tmp.c
+
+# Now instrument %.pp.c to get %.instr.c using the ML front end.
+
+# Rule for generating file containing "callInitFunctions()" function
+%.init.c: %.instr.c
+	echo 'void callInitFunctions(void) {' > $@@
+	head -2 $< >> $@@
+	head -2 $< | cut -b 5- >> $@@
+	echo '}' >> $@@
+
+# Rule for instrumented program compilation.
+%.instr: %.instr.c %.init.c $(LIBDIR)/libtcapi.a $(LIBDIR)/libtcstdio.a
+	$(CC) $(CFLAGS) $*.init.c $< -L$(LIBDIR) -ltcapi -ltcstdio -o $@@
+
+# The two rules below (%.o and space_test) are not needed
+# since gnumake's implicit rules for patterns cover them.
+# Here are the implicit rules for the two cases:
+# LINK.c = $(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+# COMPILE.c = $(CC) $(CFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+# %: %.c
+#	$(LINK.c) $^ $(LOADLIBES) $(LDLIBS) -o $@@
+# %.o: %.c
+#	$(COMPILE.c) $< $(OUTPUT_OPTION)
+
+# Not needed anymore with Implicit Rules.
+# `n.o' is made automatically from `n.c' with a command of the form
+# `$(CC) -c $(CPPFLAGS) $(CFLAGS)'.
+# Pattern rule mainly used for mirror.o.
+# %.o: %.c
+# Not needed anymore with Implicit Rules.
+# Available swap space and stack size test.
+# space_test: space_test.c
+#	$(CC) $(CFLAGS) $< -o $@@
+d106 1
+a106 1
+	rm -f a.out core paged_mirror pmirror pmirror_newtags *.instr *.o
+d108 1
+a108 1
+	rm -f space_test *.pp.c *.instr* *.init.c *.tmp.c
+@
+
+
+1.6
+log
+@Totally new version, after many months of untracked changes.
+@
+text
+@d42 2
+d126 1
+a126 1
+	rm -f a.out core paged_mirror *.instr *.o
+d128 1
+a128 1
+	rm -f space_test *.pp.c *.instr* *.tmp.c
+@
+
+
+1.5
+log
+@Changed paths.  Added paged_mirror file compilation.
+@
+text
+@d1 3
+a3 3
+INCDIR=/u/a/l/alexey/types/include
+SRCDIR=/u/a/l/alexey/types/src/dynamic
+LIBDIR=/u/a/l/alexey/types/lib
+d6 11
+d21 1
+a21 1
+	CFLAGS += -finline-functions -fverbose-asm -Wall
+d27 20
+d48 8
+a55 1
+paged_mirror: paged_mirror.c paged_mirror.h dynamic.h
+d58 1
+a58 2
+# The dynamic library to be linked with instrumented source.
+paged_mirror.o: paged_mirror.c paged_mirror.h dynamic.h
+d61 1
+a61 2
+# The standalone mirror test.
+mirror: mirror.c mirror.h dynamic.h
+d64 13
+a76 2
+# The dynamic library to be linked with instrumented source.
+mirror.o: mirror.c mirror.h dynamic.h
+d81 5
+a85 2
+%.pp.c: %.c dynamic.h
+	echo '#include <dynamic.h>' > $*.tmp.c
+d87 1
+a87 1
+	$(CC) -E $(CFLAGS) $*.tmp.c > $@@
+d92 7
+d100 2
+a101 4
+# mirror.o has to appear first for the mirror arrays to go
+# into the data segment before original source globals.
+%.instr: %.instr.c paged_mirror.o
+	$(CC) $(CFLAGS) paged_mirror.o $< -o $@@
+d124 1
+a124 1
+	rm -f a.out core paged_mirror mirror *.instr *.o
+d127 1
+@
+
+
+1.4
+log
+@Automated the inclusion of dynamic.h, rearranged the cleaning rules.
+@
+text
+@d1 3
+a3 3
+INCDIR=/u/a/l/alexey/research/types/develop/include
+SRCDIR=/u/a/l/alexey/research/types/develop/src/dynamic
+LIBDIR=/u/a/l/alexey/research/types/develop/lib
+d5 1
+a5 1
+CFLAGS = -I$(INCDIR)
+d16 8
+d45 2
+a46 2
+%.instr: %.instr.c mirror.o
+	$(CC) $(CFLAGS) mirror.o $< -o $@@
+d69 1
+a69 1
+	rm -f core mirror *.o
+@
+
+
+1.3
+log
+@Added a bunch of options to pass to the compiler if the
+compiler is gcc only.
+@
+text
+@d27 6
+a32 1
+	$(CC) -E $(CFLAGS) $< > $@@
+d61 1
+a61 1
+	rm -f *.o
+d63 1
+a63 1
+	rm -f core mirror space_test *.pp.c *.instr*
+@
+
+
+1.2
+log
+@Now using gnumake's pattern rules (and implicit rules).
+Can now compile from other directories (defined variable VPATH).
+Added rules to preprocess original source before instrumentation.
+@
+text
+@d4 1
+a4 1
+CC = gcc -Wall
+d7 6
+d58 1
+a58 1
+	rm -f *.pp.c *.instr*
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d2 1
+d4 2
+a5 1
+CC=gcc -Wall
+d7 2
+a8 1
+.DEFAULT: mirror
+d11 2
+a12 2
+mirror: mirror.c $(INCDIR)/dynamic.h
+	$(CC) -DSTANDALONE -I$(INCDIR) $< -o $@@
+d14 8
+a21 7
+# Available swap space and stack size test.
+space_test: space_test.c
+	$(CC) -I$(INCDIR) $< -o $@@
+
+# Suffix rule mainly used for mirror.o.
+.c.o:
+	$(CC) -c -I$(INCDIR) $<
+d26 22
+a47 2
+.c:	mirror.o
+	$(CC) -I$(INCDIR) mirror.o $< -o $@@
+d51 2
+a52 4
+
+# Doesn't work for some reason.
+#.SUFFIXES:
+#	.c .h .o
+@

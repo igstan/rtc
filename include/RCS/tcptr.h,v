@@ -1,0 +1,1139 @@
+head	1.22;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.22
+date	2004.08.12.14.29.43;	author suan;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2004.06.24.15.46.10;	author suan;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2004.06.24.15.05.11;	author suan;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2004.06.23.21.48.40;	author suan;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2004.06.23.19.02.38;	author suan;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2004.05.18.21.41.48;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2004.02.03.23.35.58;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2003.11.28.21.48.10;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2003.03.12.18.54.11;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2003.03.11.21.49.34;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2003.01.07.15.21.47;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.10.31.21.28.53;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.10.31.17.09.51;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.10.23.00.09.40;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.10.21.17.21.16;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.10.17.22.29.16;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.10.16.00.51.06;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.10.14.23.03.39;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.10.14.22.10.03;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.10.14.20.12.29;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.10.11.00.13.06;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.10.10.18.05.04;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@TCPtr header file.
+@
+
+
+1.22
+log
+@Fixed bug in vuln mode (SLC) tagARretval: was adding
+one byte to frame address rather than one word -- not
+a major bug (since it gets one byte of the ret addr,
+plus the frame addr may be vulnerable as well?)
+@
+text
+@#ifndef _TYPECHECK_VERIFYPTR_API_H_ /* { */
+#define _TYPECHECK_VERIFYPTR_API_H_
+
+/* HISTO mode: redirect instrumentation calls to _tc_histo_* */
+/* #define TC_HISTO */
+
+/* NOTE: to time different instrumentation overheads, define the following */
+#if defined(TC_NO_INST) /* { */
+
+#define TC_NO_VP	/* no verifyPtr */
+#define TC_NO_STRINGTAG	/* no setStringTag */
+#define TC_NO_STACKTAG	/* no setTag (setByteTags, setStringTag, setUninitTag, setInitTag) */ 
+			/* no clearTag, no processReturn */
+#define TC_NO_HEAPTAG	/* no *alloc, free */
+#define TC_NO_LIB	/* no instrumented library functions */
+
+#endif /* } defined(TC_NO_INST) */
+
+/* Include size_t typedef, so we don't have to include stdlib.h. */
+#ifndef _SIZE_T
+#define _SIZE_T
+typedef unsigned int    size_t;
+#endif
+
+/**********************************************/
+/* for VULN mode: tag and clear AR retval */
+/**********************************************/
+#if defined(TC_PREINSTR) /* { */
+
+int _tcvuln_tagARretval;
+int _tcvuln_clearARretval;
+
+#else /* } !defined(TC_PREINSTR) { */
+
+/* GNU solution on Linux: */
+#define _tcvuln_tagARretval	_setInitTag(__FILE__,__LINE__,0,\
+					((void **)__builtin_frame_address(0)) + 1,\
+					sizeof(void *))
+
+#define _tcvuln_clearARretval	_clearTag(__FILE__,__LINE__,0,\
+					((void **)__builtin_frame_address(0)) + 1,\
+					sizeof(void *))
+
+#endif /* } !defined(TC_PREINSTR) */
+
+/**********************************************/
+/* MIRROR stuff */
+/**********************************************/
+#if defined(TC_USE_MACROS) || defined(TCPTR_INTERNAL) /* { */
+
+#define _TC_BYTE 8
+#define TAGS_PER_BYTE 8
+#define TAGS_PER_BYTE_BITS 3	/* TAGS_PER_BYTE = 2 ^ TAGS_PER_BYTE_BITS */
+
+#define DIV_TAGS_PER_BYTE(n) (((unsigned long)(n))>>TAGS_PER_BYTE_BITS)		/* optimized division by 8*/
+#define MOD_TAGS_PER_BYTE(n) (((unsigned long)(n))&0x07)			/* optimized modulus 8 */
+
+#if defined(TC_STATIC_MIRROR) /* { */
+  /**************************************/
+  /* STATIC MIRROR */
+  /**************************************/
+#define SAME_MIRROR_PAGE(addr1, addr2) 1
+
+#define GET_TAG_BYTE(addr)	_tc_mirror[DIV_TAGS_PER_BYTE(addr)]
+
+extern unsigned char _tc_mirror[];
+
+#else /* } !defined(TC_STATIC_MIRROR) { */
+  /**************************************/
+  /* NOT STATIC MIRROR: MIRRORMAP */
+  /**************************************/
+
+/*******************************************
+  Modify/experiment with following #define
+ *******************************************/
+#define MIRRORPAGE_NUMBITS 20
+
+/*******************************************/
+#define MIRRORPAGE_NUMBYTES (1 << MIRRORPAGE_NUMBITS)
+#define MIRRORPAGE_SIZE DIV_TAGS_PER_BYTE(MIRRORPAGE_NUMBYTES)
+#define MIRRORPAGE_ZERO_MASK ((-1) << MIRRORPAGE_NUMBITS)
+#define MIRRORPAGE_MASK (~(MIRRORPAGE_ZERO_MASK))
+#define MIRRORMAP_NUMBITS ((sizeof(void *) << 3) - MIRRORPAGE_NUMBITS)
+#define MIRRORMAP_NUMELEMENTS (1 << MIRRORMAP_NUMBITS)
+
+/* Handy macros */
+/* Note possible point of confusion: MIRRORPAGE_INDEX is the mirrorpage
+   portion of the address *in program space*, not in mirror space.
+   To get the latter, divide by two */
+#define MIRRORMAP_INDEX(addr) ((unsigned long)(addr) >> MIRRORPAGE_NUMBITS)
+#define MIRRORPAGE_INDEX(addr) ((unsigned long)(addr) & MIRRORPAGE_MASK)
+
+#define SAME_MIRROR_PAGE(addr1, addr2) \
+	(MIRRORMAP_INDEX(addr1) ==  MIRRORMAP_INDEX(addr2))
+
+/* The following macro must be an lvalue */
+#define GET_TAG_BYTE(addr)	*(\
+	 (mirrormap[MIRRORMAP_INDEX(addr)]) \
+	    || (_touchMirrorPage(MIRRORMAP_INDEX(addr)),1), \
+	    ((unsigned char *) mirrormap[MIRRORMAP_INDEX(addr)] \
+		+ DIV_TAGS_PER_BYTE(MIRRORPAGE_INDEX(addr))) \
+	 )
+
+extern void * mirrormap[];
+
+#endif /* } !defined(TC_STATIC_MIRROR) */
+
+#endif /* } defined TC_USE_MACROS or TCPTR_INTERNAL */
+
+/**********************************************/
+
+
+#if defined(TC_PREINSTR) /* { */
+
+/*******************************************************/
+/* pseudo datatypes: placeholders to allow compilation */
+typedef struct { int i; } _addr_and_size_t;
+typedef enum _ctype {
+  _ctype_void_invalid = 0,
+  _ctype_int = 1,
+  _ctype_char = 2,
+  _ctype_short = 3,
+  _ctype_long = 4,
+  _ctype_longlong = 5,
+  _ctype_float = 6,
+  _ctype_double = 7,
+  _ctype_longdouble = 8,
+  _ctype_pointer = 9,
+  _ctype_aggregate = 10
+} _ctype_t;
+
+/**************************************************/
+
+extern void _registerExtern(const char * fname, int line, int col,
+                        void * addr, _ctype_t type, size_t size);
+
+extern void _registerFunction(const char * fname, int line, int col, void * addr);
+
+extern void _verifyPtr_int(const char * fname, int line, int col,
+                        const char * exp, const void * addr, size_t size);
+extern void _verifyPtr_char(const char * fname, int line, int col,
+                        const char * exp, const void * addr, size_t size);
+extern void _verifyPtr_short(const char * fname, int line, int col,
+                        const char * exp, const void * addr, size_t size);
+extern void _verifyPtr_long(const char * fname, int line, int col,
+                        const char * exp, const void * addr, size_t size);
+extern void _verifyPtr_longlong(const char * fname, int line, int col,
+                        const char * exp, const void * addr, size_t size);
+extern void _verifyPtr_float(const char * fname, int line, int col,
+                        const char * exp, const void * addr, size_t size);
+extern void _verifyPtr_double(const char * fname, int line, int col,
+                        const char * exp, const void * addr, size_t size);
+extern void _verifyPtr_pointer(const char * fname, int line, int col,
+                        const char * exp, const void * addr, size_t size);
+extern void _verifyPtr_aggregate(const char * fname, int line, int col,
+                        const char * exp, const void * addr, size_t size);
+
+/* skipped _verifyTag_* */
+/* skipped _copyTag_* */
+
+extern void _setByteTags(const char * fname, int line, int col,
+                        const void * addr, size_t size, int set_tag, int clear_tag);
+extern void _setStringTag(const char * fname, int line, int col,
+                        const char * addr, size_t str_len);
+extern void _setUninitTag(const char * fname, int line, int col,
+                        void * addr, size_t size);
+extern void _setInitTag(const char * fname, int line, int col,
+                        void * addr, size_t size);
+extern void _clearTag(const char * fname, int line, int col,
+                        void * addr, size_t size);
+
+/* skipped _extern_setUninitTag */
+
+extern void _registerVar(const char * fname, int line, int col,
+                        const char * varname, void * addr, size_t size);
+extern void _extern_registerVar(const char * fname, int line, int col,
+                        const char * varname, void * addr, size_t size);
+
+/* skipped _setScalarUninitTag_* */
+/* skipped _setScalarTagPtrToInt_* */
+/* skipped _setScalarTag_* */
+/* skipped _setScalarInitTag_* */
+/* skipped _extern_setScalarTag_* */
+/* skipped _replicateTag */
+/* skipped _extern_replicateTag */
+/* skipped _promoteTag */
+
+extern void _typecheck_free_partial(void * ptr);
+extern void * _typecheck_malloc_zero(size_t size);
+extern void * _typecheck_calloc_zero(size_t nelem, size_t elsize);
+extern void * _typecheck_realloc_zero(void * ptr, size_t size);
+extern void * _typecheck_memalign_zero(size_t alignment, size_t size);
+extern void * _typecheck_valloc_zero(size_t size);
+
+extern void * malloc_zero(size_t size);
+extern void * calloc_zero(size_t nelem, size_t elsize);
+extern void * realloc_zero(void * ptr, size_t size);
+extern void * memalign_zero(size_t alignment, size_t size);
+extern void * valloc_zero(size_t size);
+
+extern void _processReturn(const char * fname, int line, int col,
+                void * scaf_start, void * scaf_end, void * agrf_start, void * agrf_end,
+                _addr_and_size_t ** aargaddrs, const void * addr, size_t size);
+
+/* skipped _processArgTag_* */
+
+extern void _reportStaticCounts(const char * fname, const char * descr, int count);
+
+
+/**************************************************/
+#else /* } if !defined (TC_PREINSTR) { */
+/**************************************************/
+
+#define _addr_and_size_t	void
+#define _ctype_t		void
+#define _ctype_void_invalid	0
+#define _ctype_int		0
+#define _ctype_char		0
+#define _ctype_short		0
+#define _ctype_long		0
+#define _ctype_longlong		0
+#define _ctype_float		0
+#define _ctype_double		0
+#define _ctype_longdouble	0
+#define _ctype_pointer		0
+#define _ctype_aggregate	0
+
+/* ignore registerExterns */
+#define _registerExtern(f,l,c,a,t,s)
+
+/* ignore registerFunctions */
+#define _registerFunction(f,l,c,a)
+
+#if defined(TC_HISTO) /* { */
+
+extern void _tcptr_histo_verifyPtr(const char * file, int line, int col, const char * exp,
+				const void * addr, size_t size);
+extern void _tcptr_histo_setTags(const char * file, int line, int col,
+				const void * addr, size_t size);
+extern void _tcptr_histo_clearTags(const char * file, int line, int col,
+				const void * addr, size_t size);
+
+
+#define _verifyPtr(f,l,c,e,a,s)                 _tcptr_histo_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_int(f,l,c,e,a,s)             _tcptr_histo_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_char(f,l,c,e,a,s)            _tcptr_histo_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_short(f,l,c,e,a,s)           _tcptr_histo_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_long(f,l,c,e,a,s)            _tcptr_histo_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_longlong(f,l,c,e,a,s)        _tcptr_histo_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_float(f,l,c,e,a,s)           _tcptr_histo_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_double(f,l,c,e,a,s)          _tcptr_histo_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_longdouble(f,l,c,e,a,s)      _tcptr_histo_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_pointer(f,l,c,e,a,s)         _tcptr_histo_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_aggregate(f,l,c,e,a,s)       _tcptr_histo_verifyPtr(f,l,c,e,a,s)
+
+#define _setByteTags(f,l,c,a,s,st,ct)   _tcptr_histo_setTags(f,l,c,a,s)
+#define _setStringTag(f,l,c,a,sl)       _tcptr_histo_setTags(f,l,c,a,(sl)+1)
+#define _setUninitTag(f,l,c,a,s)        _tcptr_histo_setTags(f,l,c,a,s)
+#define _setInitTag(f,l,c,a,s)          _tcptr_histo_setTags(f,l,c,a,s)
+
+#define _clearTag(f,l,c,a,s)            _tcptr_histo_clearTags(f,l,c,a,s)
+
+#define _registerVar(f,l,c,v,a,s)
+#define _extern_registerVar(f,l,c,v,a,s)
+#define _processReturn(f,l,c,ss,se,as,ae,aa,a,s)	0
+#define _reportStaticCounts(fname, descr, count)
+
+/** ERROR: cannot use because macros expansion fails on prototypes!
+extern void * _tcptr_histo_malloc(const char * file, int line, size_t size);
+extern void * _tcptr_histo_calloc(const char * file, int line, size_t nelem, size_t elsize);
+extern void _tcptr_histo_free(const char * file, int line, void * ptr);
+extern void * _tcptr_histo_realloc(const char * file, int line, void * ptr, size_t size);
+extern void * _tcptr_histo_memalign(const char * file, int line, size_t align, size_t size);
+extern void * _tcptr_histo_valloc(const char * file, int line, size_t size);
+
+#define _typecheck_free(p)		_tcptr_histo_free(__FILE__,__LINE__,p)
+#define _typecheck_free_partial(p)	_tcptr_histo_free(__FILE__,__LINE__,p)
+#define _typecheck_malloc(s)		_tcptr_histo_malloc(__FILE__,__LINE__,s)
+#define _typecheck_malloc_zero(s)	_tcptr_histo_malloc(__FILE__,__LINE__,s)
+#define _typecheck_calloc(n,e)		_tcptr_histo_calloc(__FILE__,__LINE__,n,e)
+#define _typecheck_realloc(p,s)		_tcptr_histo_realloc(__FILE__,__LINE__,p,s)
+#define _typecheck_realloc_zero(p,s)	_tcptr_histo_realloc(__FILE__,__LINE__,p,s)
+#define _typecheck_memalign(a,s)	_tcptr_histo_memalign(__FILE__,__LINE__,a,s)
+#define _typecheck_memalign_zero(a,s)	_tcptr_histo_memalign(__FILE__,__LINE__,a,s)
+#define _typecheck_valloc(s)		_tcptr_histo_valloc(__FILE__,__LINE__,s)
+#define _typecheck_valloc_zero(s)	_tcptr_histo_valloc(__FILE__,__LINE__,s)
+**/
+
+extern void _typecheck_free_partial(void * ptr);
+extern void * _typecheck_malloc_zero(size_t size);
+#define _typecheck_calloc_zero(n,e)	_typecheck_calloc(n,e)
+extern void * _typecheck_realloc_zero(void * ptr, size_t size);
+extern void * _typecheck_memalign_zero(size_t alignment, size_t size);
+extern void * _typecheck_valloc_zero(size_t size);
+
+extern void * malloc_zero(size_t size);
+#define calloc_zero(n,e)	calloc(n,e)
+#define realloc_zero(p,s)	realloc(p,s)
+extern void * memalign_zero(size_t alignment, size_t size);
+extern void * valloc_zero(size_t size);
+
+#else /* } !defined(TC_HISTO) { */
+
+extern void _tcptr_verifyPtr(const char * file, int line, int col, const char * exp,
+			const void * addr, size_t size);
+
+#if defined(TC_USE_MACROS) /* { */
+
+#if defined(TC_VULNERABLE_VP) /* { */
+
+#define _macro_verifyPtr(file,line,col,exp,addr,size) \
+	(((((signed)MOD_TAGS_PER_BYTE(addr)) <= TAGS_PER_BYTE - (signed)size) \
+	  && (GET_TAG_BYTE(addr) == 0)) \
+	 || (_tcptr_verifyPtr(file,line,col,exp,addr,size),1))
+
+#else /* } !defined(TC_VULN_VP) { */
+
+/* OPTION 1: one byte only version */
+#define _macro_verifyPtr(file,line,col,exp,addr,size) \
+	(((((signed)MOD_TAGS_PER_BYTE(addr)) <= TAGS_PER_BYTE - (signed)size) \
+	  && (GET_TAG_BYTE(addr) == 0xff)) \
+	 || (_tcptr_verifyPtr(file,line,col,exp,addr,size),1))
+
+/*
+	ver 2: masking -- slower on li!
+	  && ((GET_TAG_BYTE(addr) | ((unsigned char)~((~(0xffu << (size))) << MOD_TAGS_PER_BYTE(addr)))) == 0xff)) \
+*/
+#if 0 /* { */
+/* OPTION 2: one or two byte version: not frequent enough? */
+#define _macro_verifyPtr(file,line,col,exp,addr,size) \
+	(((GET_TAG_BYTE(addr) == 0xff) \
+	   && ((((signed)MOD_TAGS_PER_BYTE(addr)) <= TAGS_PER_BYTE - (signed)size) \
+		|| (GET_TAG_BYTE(((const char *)addr)+size) == 0xff))) \
+	 || (_tcptr_verifyPtr(file,line,col,exp,addr,size),1))
+#endif /* } if 0 */
+
+#endif /* } !defined(TC_VULN_VP) */
+
+#else /* } !defined(TC_USE_MACROS) { */
+
+#define _macro_verifyPtr(file,line,col,exp,addr,size) \
+		_tcptr_verifyPtr(file,line,col,exp,addr,size)
+
+#endif /* } !defined(TC_USE_MACROS) */
+
+#if defined(TC_NO_VP) /* { */
+
+#define _verifyPtr(f,l,c,e,a,s)			0
+#define _verifyPtr_int(f,l,c,e,a,s)		0
+#define _verifyPtr_char(f,l,c,e,a,s)		0
+#define _verifyPtr_short(f,l,c,e,a,s)		0
+#define _verifyPtr_long(f,l,c,e,a,s)		0
+#define _verifyPtr_longlong(f,l,c,e,a,s)	0
+#define _verifyPtr_float(f,l,c,e,a,s)		0
+#define _verifyPtr_double(f,l,c,e,a,s)		0
+#define _verifyPtr_longdouble(f,l,c,e,a,s)	0
+#define _verifyPtr_pointer(f,l,c,e,a,s)		0
+#define _verifyPtr_aggregate(f,l,c,e,a,s)	0
+
+#else /* } !defined(TC_NO_VP) { */
+
+#define _verifyPtr(f,l,c,e,a,s)			_macro_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_int(f,l,c,e,a,s)		_macro_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_char(f,l,c,e,a,s)		_macro_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_short(f,l,c,e,a,s)		_macro_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_long(f,l,c,e,a,s)		_macro_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_longlong(f,l,c,e,a,s)	_macro_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_float(f,l,c,e,a,s)		_macro_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_double(f,l,c,e,a,s)		_macro_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_longdouble(f,l,c,e,a,s)	_macro_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_pointer(f,l,c,e,a,s)		_macro_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_aggregate(f,l,c,e,a,s)	_macro_verifyPtr(f,l,c,e,a,s)
+
+#endif /* } !defined(TC_NO_VP) */
+
+/* skipped _verifyTag_* */
+/* skipped _copyTag_* */
+
+extern void _tcptr_setTags(const void * addr, size_t size);
+extern void _tcptr_clearTags(const void * addr, size_t size);
+
+#if defined(TC_USE_MACROS) /* { */
+
+#define _macro_setTags(addr,size) \
+	(((((signed)MOD_TAGS_PER_BYTE(addr)) <= TAGS_PER_BYTE - (signed)size) \
+	  && (GET_TAG_BYTE(addr) |= ((~(0xffu << (size))) << MOD_TAGS_PER_BYTE(addr)))) \
+	 || (_tcptr_setTags(addr,size),1))
+/*
+#define _macro_setTags(addr,size) _tcptr_setTags(addr,size)
+*/
+
+#else /* } !defined(TC_USE_MACROS) { */
+
+#define _macro_setTags(addr,size) _tcptr_setTags(addr,size)
+
+#endif /* } !defined(TC_USE_MACROS) */
+
+#if defined(TC_NO_STACKTAG) /* { */
+
+#define _setByteTags(f,l,c,a,s,st,ct)	0
+#define _setStringTag(f,l,c,a,sl)	0
+#define _setUninitTag(f,l,c,a,s)	0
+#define _setInitTag(f,l,c,a,s)		0
+
+#else /* } !defined(TC_NO_STACKTAG) { */
+
+#define _setByteTags(f,l,c,a,s,st,ct)	_macro_setTags(a,s)
+
+#if defined(TC_NO_STRINGTAG) /* { */
+#define _setStringTag(f,l,c,a,sl)	0
+#else /* } !defined(TC_NO_STRINGTAG) { */
+#define _setStringTag(f,l,c,a,sl)	_tcptr_setTags(a,(sl)+1)
+#endif /* } !defined(TC_NO_STRINGTAG) */
+
+#define _setUninitTag(f,l,c,a,s)	_macro_setTags(a,s)
+#define _setInitTag(f,l,c,a,s)		_macro_setTags(a,s)
+
+#endif /* } !defined(TC_NO_STACKTAG) */
+
+#if defined(TC_USE_MACROS) /* { */
+
+#define _macro_clearTags(addr,size) \
+	(((((signed)MOD_TAGS_PER_BYTE(addr)) <= TAGS_PER_BYTE - (signed)size) \
+	  && (GET_TAG_BYTE(addr) &= ~((~(0xffu << (size))) << MOD_TAGS_PER_BYTE(addr)),1)) \
+	 || (_tcptr_clearTags(addr,size),1))
+/*
+#define _macro_clearTags(addr,size) _tcptr_clearTags(addr,size)
+*/
+
+#else /* } !defined(TC_USE_MACROS) { */
+
+#define _macro_clearTags(addr,size) _tcptr_clearTags(addr,size)
+
+#endif /* } !defined(TC_USE_MACROS) */
+
+#if defined(TC_NO_STACKTAG) /* { */
+#define _clearTag(f,l,c,a,s)	0
+#else /* } !defined(TC_NO_STACKTAG) { */
+#define _clearTag(f,l,c,a,s)		_macro_clearTags(a,s)
+#endif /* } !defined(TC_NO_STACKTAG) */
+
+/* skipped _extern_setUninitTag */
+
+#define _registerVar(f,l,c,v,a,s)
+#define _extern_registerVar(f,l,c,v,a,s)
+
+/* skipped _setScalarUninitTag_* */
+/* skipped _setScalarTagPtrToInt_* */
+/* skipped _setScalarTag_* */
+/* skipped _setScalarInitTag_* */
+/* skipped _extern_setScalarTag_* */
+/* skipped _replicateTag */
+/* skipped _extern_replicateTag */
+/* skipped _promoteTag */
+
+extern void _typecheck_free_partial(void * ptr);
+extern void * _typecheck_malloc_zero(size_t size);
+#define _typecheck_calloc_zero(n,e)	_typecheck_calloc(n,e)
+extern void * _typecheck_realloc_zero(void * ptr, size_t size);
+extern void * _typecheck_memalign_zero(size_t alignment, size_t size);
+extern void * _typecheck_valloc_zero(size_t size);
+
+extern void * malloc_zero(size_t size);
+#define calloc_zero(n,e)	calloc(n,e)
+#define realloc_zero(p,s)	realloc(p,s)
+extern void * memalign_zero(size_t alignment, size_t size);
+extern void * valloc_zero(size_t size);
+
+extern void _tcptr_processReturn(void * scaf_start, void * scaf_end,
+				void * agrf_start, void * agrf_end,
+				void * local_start);
+#if defined(TC_NO_STACKTAG) /* { */
+#define _processReturn(f,l,c,ss,se,as,ae,aa,a,s)	0
+#else /* } !defined(TC_NO_STACKTAG) /* { */
+#define _processReturn(f,l,c,ss,se,as,ae,aa,a,s)	_tcptr_processReturn(ss,se,as,ae,aa)
+#endif /* } !defined(TC_NO_STACKTAG) */
+
+/* skipped _processArgTag_* */
+
+#if defined(TC_USE_MACROS) /* { */
+
+#define _reportStaticCounts(fname, descr, count)
+
+#else /* } !defined(TC_USE_MACROS) { */
+
+extern void _reportStaticCounts(const char * fname, const char * descr, int count);
+
+#endif /* } !defined(TC_USE_MACROS) */
+
+#endif /* } !defined(TC_HISTO) */
+
+#endif /* } !defined (TC_PREINSTR) */
+
+#endif /* } _TYPECHECK_VERIFYAPI_PTR_H_ */
+
+@
+
+
+1.21
+log
+@Remove TC_VULNERABLE_VP surrounding tcvuln_[tag/clear]ARretval.
+@
+text
+@d37 1
+a37 1
+					((void *)__builtin_frame_address(0)) + 1,\
+d41 1
+a41 1
+					((void *)__builtin_frame_address(0)) + 1,\
+@
+
+
+1.20
+log
+@Changed _tcvuln_[tag/clear]ARretval from function to int.
+@
+text
+@d26 1
+a26 1
+/* VULN mode: tag and clear AR retval */
+a27 2
+#if defined(TC_VULNERABLE_VP) /* { */
+
+a44 2
+
+#endif /* } defined(TC_VULNERABLE_VP) */
+@
+
+
+1.19
+log
+@Vuln mode: added macros _tcvuln_tagARretval/_tcvuln_clearARretval
+to be called at function entry/exit to set/clear tags for the
+retval field on the activation record.
+Currently defined to use GNU-specific __builtin_frame_address
+and the retval computed (empirically) from that.
+@
+text
+@d32 2
+a33 2
+void _tcvuln_tagARretval();
+void _tcvuln_clearARretval();
+@
+
+
+1.18
+log
+@Added TC_VULNERABLE_VP stuff: changing behavior of
+(macro)_verifyPtr().
+@
+text
+@d26 25
+@
+
+
+1.17
+log
+@Added malloc_zero() family of wrappers, which
+zero-initializes allocated memory (using bzero)
+@
+text
+@d288 9
+d315 2
+@
+
+
+1.16
+log
+@Added TC_HISTO stuff, for collecting diagnostic
+histogram of instrumented calls.
+@
+text
+@a166 1
+extern void * _typecheck_malloc_init(size_t size);
+d168 11
+a178 3
+extern void * _typecheck_realloc_init(void * ptr, size_t size);
+extern void * _typecheck_memalign_init(size_t alignment, size_t size);
+extern void * _typecheck_valloc_init(size_t size);
+d255 2
+d258 1
+a258 1
+#define _typecheck_malloc_init(s)	_tcptr_histo_malloc(__FILE__,__LINE__,s)
+a259 2
+#define _typecheck_free(p)		_tcptr_histo_free(__FILE__,__LINE__,p)
+#define _typecheck_free_partial(p)	_tcptr_histo_free(__FILE__,__LINE__,p)
+d261 1
+a261 1
+#define _typecheck_realloc_init(p,s)	_tcptr_histo_realloc(__FILE__,__LINE__,p,s)
+d263 1
+a263 1
+#define _typecheck_memalign_init(a,s)	_tcptr_histo_memalign(__FILE__,__LINE__,a,s)
+d265 1
+a265 1
+#define _typecheck_valloc_init(s)	_tcptr_histo_valloc(__FILE__,__LINE__,s)
+a267 2
+/**//* needed */
+#define _typecheck_malloc_init(s)	_typecheck_malloc(s)
+d269 11
+a279 5
+#define _typecheck_realloc_init(p,s)	_typecheck_realloc(p,s)
+#define _typecheck_memalign_init(a,s)	_typecheck_memalign(a,s)
+#define _typecheck_valloc_init(s)	_typecheck_valloc(s)
+/**/
+
+a423 1
+#define _typecheck_malloc_init(s)	_typecheck_malloc(s)
+d425 11
+a435 3
+#define _typecheck_realloc_init(p,s)	_typecheck_realloc(p,s)
+#define _typecheck_memalign_init(a,s)	_typecheck_memalign(a,s)
+#define _typecheck_valloc_init(s)	_typecheck_valloc(s)
+@
+
+
+1.15
+log
+@Added STATIC_MIRROR implementation.
+@
+text
+@d4 3
+d206 66
+d439 2
+@
+
+
+1.14
+log
+@Added TC_NO_STRINGTAG refinement
+@
+text
+@d29 1
+d31 17
+a47 2
+#define DIV_TAGS_PER_BYTE(n) (((unsigned long)(n))>>3)		/* optimized division by 8*/
+#define MOD_TAGS_PER_BYTE(n) (((unsigned long)(n))&0x07)	/* optimized modulus 8 */
+d81 2
+@
+
+
+1.13
+log
+@Added support for eliminating tcptr checks via ifdefs of
+TC_NO_INST, TC_NO_VP, TC_NO_STACKTAG, TC_NO_HEAPTAG, TC_NO_LIB
+@
+text
+@d8 1
+d278 4
+d283 2
+@
+
+
+1.12
+log
+@Added interface for registerFunction, currently macro'ed
+to nothing.
+@
+text
+@d4 11
+d215 16
+d243 2
+d267 9
+d281 2
+d299 3
+d303 1
+d328 3
+d332 1
+@
+
+
+1.11
+log
+@Updated tcapi to include clearTag, which is called in
+-indivClearTags mode
+@
+text
+@d83 2
+d169 3
+@
+
+
+1.10
+log
+@Added _typecheck_free_partial protos.
+@
+text
+@a112 2
+
+/* this one is exclusive to tcptr */
+@
+
+
+1.9
+log
+@Renamed reportNumCalls to reportStaticCounts, taking an extra
+parameter describing the count.
+Also, modified/added macros for setTags and clearTags.
+@
+text
+@d135 1
+d273 1
+@
+
+
+1.8
+log
+@Changed verifyPtr macro to forced signed comparison in
+predicate; this also deprecates the need for _macro_size_verifyPtr,
+which is removed.
+@
+text
+@d145 1
+a145 1
+extern void _reportNumCalls(const char * fname, int num_calls);
+a219 1
+/* macro slower than function!?!
+d221 2
+a222 3
+	(((size <= TAGS_PER_BYTE) \
+	  && (MOD_TAGS_PER_BYTE(addr) <= TAGS_PER_BYTE - (size)) \
+	  && (GET_TAG_BYTE(addr) |= ((unsigned char)(~(0xffu << (size))) << MOD_TAGS_PER_BYTE(addr)))) \
+d224 2
+a226 1
+#define _macro_setTags(addr,size) _tcptr_setTags(addr,size)
+d239 17
+a255 1
+#define _clearTag(f,l,c,a,s)		_tcptr_clearTags(a,s)
+d283 9
+a291 1
+extern void _reportNumCalls(const char * fname, int num_calls);
+@
+
+
+1.7
+log
+@1. macro cases switched to experimentally-determined optimal:
+   simple verifyPtr, no setTag
+2. added "_clearTag" alias, which is used by -ptr -indivClearTag
+   to clear local variable tags individually at return/scope
+   exit points.
+@
+text
+@d176 1
+a176 1
+	(((MOD_TAGS_PER_BYTE(addr) <= TAGS_PER_BYTE - size) \
+d188 1
+a188 1
+	   && ((MOD_TAGS_PER_BYTE(addr) <= TAGS_PER_BYTE - size) \
+a192 7
+#define _macro_size_verifyPtr(file,line,col,exp,addr,size) \
+	(((size <= TAGS_PER_BYTE) \
+	  && (MOD_TAGS_PER_BYTE(addr) <= (TAGS_PER_BYTE - size)) \
+	  && (GET_TAG_BYTE(addr) == 0xff)) \
+	 || (_tcptr_verifyPtr(file,line,col,exp,addr,size),1))
+
+
+a197 3
+#define _macro_size_verifyPtr(file,line,col,exp,addr,size) \
+		_tcptr_verifyPtr(file,line,col,exp,addr,size)
+
+d208 1
+a208 1
+#define _verifyPtr_longdouble(f,l,c,e,a,s)	_macro_size_verifyPtr(f,l,c,e,a,s)
+d210 1
+a210 1
+#define _verifyPtr_aggregate(f,l,c,e,a,s)	_macro_size_verifyPtr(f,l,c,e,a,s)
+@
+
+
+1.6
+log
+@Added verifyPtr and setTags macros (two versions of
+verifyPtr written)
+@
+text
+@d114 4
+d177 1
+a177 1
+	  && ((GET_TAG_BYTE(addr) | ((unsigned char)~((~(0xffu << (size))) << MOD_TAGS_PER_BYTE(addr)))) == 0xff)) \
+d181 2
+a182 3
+	  && ((GET_TAG_BYTE(addr) == 0xff) \
+	      || ((GET_TAG_BYTE(addr) | ((unsigned char)~((~(0xffu << (size))) << MOD_TAGS_PER_BYTE(addr)))) == 0xff))) \
+	  && (GET_TAG_BYTE(addr) == 0xff)) \
+d226 1
+d230 1
+a230 1
+/*
+d249 2
+@
+
+
+1.5
+log
+@Reintroduced file,line,col,exp arguments to _tcptr_verifyPtr
+@
+text
+@d10 49
+d167 51
+a217 11
+#define _verifyPtr(f,l,c,e,a,s)			_tcptr_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_int(f,l,c,e,a,s)		_tcptr_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_char(f,l,c,e,a,s)		_tcptr_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_short(f,l,c,e,a,s)		_tcptr_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_long(f,l,c,e,a,s)		_tcptr_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_longlong(f,l,c,e,a,s)	_tcptr_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_float(f,l,c,e,a,s)		_tcptr_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_double(f,l,c,e,a,s)		_tcptr_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_longdouble(f,l,c,e,a,s)	_tcptr_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_pointer(f,l,c,e,a,s)		_tcptr_verifyPtr(f,l,c,e,a,s)
+#define _verifyPtr_aggregate(f,l,c,e,a,s)	_tcptr_verifyPtr(f,l,c,e,a,s)
+d223 19
+a241 1
+#define _setByteTags(f,l,c,a,s,st,ct)	_tcptr_setTags(a,s)
+d243 2
+a244 2
+#define _setUninitTag(f,l,c,a,s)	_tcptr_setTags(a,s)
+#define _setInitTag(f,l,c,a,s)		_tcptr_setTags(a,s)
+a274 47
+
+/**********************************************/
+/* MIRROR stuff */
+/**********************************************/
+#if defined(TC_USE_MACROS) || defined(TCPTR_INTERNAL) /* { */
+
+#define _TC_BYTE 8
+#define TAGS_PER_BYTE 8
+
+#define DIV_TAGS_PER_BYTE(n) (((unsigned long)(n))>>3)		/* optimized division by 8*/
+#define MOD_TAGS_PER_BYTE(n) (((unsigned long)(n))&0x07)	/* optimized modulus 8 */
+
+/*******************************************
+  Modify/experiment with following #define
+ *******************************************/
+#define MIRRORPAGE_NUMBITS 20
+
+/*******************************************/
+#define MIRRORPAGE_NUMBYTES (1 << MIRRORPAGE_NUMBITS)
+#define MIRRORPAGE_SIZE DIV_TAGS_PER_BYTE(MIRRORPAGE_NUMBYTES)
+#define MIRRORPAGE_ZERO_MASK ((-1) << MIRRORPAGE_NUMBITS)
+#define MIRRORPAGE_MASK (~(MIRRORPAGE_ZERO_MASK))
+#define MIRRORMAP_NUMBITS ((sizeof(void *) << 3) - MIRRORPAGE_NUMBITS)
+#define MIRRORMAP_NUMELEMENTS (1 << MIRRORMAP_NUMBITS)
+
+/* Handy macros */
+/* Note possible point of confusion: MIRRORPAGE_INDEX is the mirrorpage
+   portion of the address *in program space*, not in mirror space.
+   To get the latter, divide by two */
+#define MIRRORMAP_INDEX(addr) ((unsigned long)(addr) >> MIRRORPAGE_NUMBITS)
+#define MIRRORPAGE_INDEX(addr) ((unsigned long)(addr) & MIRRORPAGE_MASK)
+
+#define SAME_MIRROR_PAGE(addr1, addr2) \
+	(MIRRORMAP_INDEX(addr1) ==  MIRRORMAP_INDEX(addr2))
+
+/* The following macro must be an lvalue */
+#define GET_TAG_BYTE(addr)	*(\
+	 (mirrormap[MIRRORMAP_INDEX(addr)]) \
+	    || (_touchMirrorPage(MIRRORMAP_INDEX(addr)),1), \
+	    ((unsigned char *) mirrormap[MIRRORMAP_INDEX(addr)] \
+		+ DIV_TAGS_PER_BYTE(MIRRORPAGE_INDEX(addr))) \
+	 )
+
+extern void * mirrormap[];
+
+#endif /* } defined TC_USE_MACROS or TCPTR_INTERNAL */
+/**********************************************/
+@
+
+
+1.4
+log
+@Added local_start argument to processReturn;
+deleted previously-commented out leftovers.
+@
+text
+@d116 13
+a128 12
+extern void _tcptr_verifyPtr(const void * addr, size_t size);
+#define _verifyPtr(f,l,c,e,a,s)			_tcptr_verifyPtr(a,s)
+#define _verifyPtr_int(f,l,c,e,a,s)		_tcptr_verifyPtr(a,s)
+#define _verifyPtr_char(f,l,c,e,a,s)		_tcptr_verifyPtr(a,s)
+#define _verifyPtr_short(f,l,c,e,a,s)		_tcptr_verifyPtr(a,s)
+#define _verifyPtr_long(f,l,c,e,a,s)		_tcptr_verifyPtr(a,s)
+#define _verifyPtr_longlong(f,l,c,e,a,s)	_tcptr_verifyPtr(a,s)
+#define _verifyPtr_float(f,l,c,e,a,s)		_tcptr_verifyPtr(a,s)
+#define _verifyPtr_double(f,l,c,e,a,s)		_tcptr_verifyPtr(a,s)
+#define _verifyPtr_longdouble(f,l,c,e,a,s)	_tcptr_verifyPtr(a,s)
+#define _verifyPtr_pointer(f,l,c,e,a,s)		_tcptr_verifyPtr(a,s)
+#define _verifyPtr_aggregate(f,l,c,e,a,s)	_tcptr_verifyPtr(a,s)
+@
+
+
+1.3
+log
+@setTags no longer takes "tag" argument;
+extern_setUninitTag eliminated;
+registerExtern also disabled;
+added MIRRORPAGE_ZERO_MASK (not sure if useful?)
+@
+text
+@d157 4
+a160 2
+extern void _tcptr_processReturn(void * scaf_start, void * scaf_end, void * agrf_start, void * agrf_end);
+#define _processReturn(f,l,c,ss,se,as,ae,aa,a,s)	_tcptr_processReturn(ss,se,as,ae)
+a215 27
+
+
+
+#if 0 /* { */
+
+
+typedef enum {_typetag_inappropriate = 0, _typetag_appropriate = 1 } _typetag_t;
+
+/* Note, BITS_PER_TAG must be no larger than _TC_BYTE.  */
+
+#define BITS_PER_TAG 1
+#define LOG_BITS_PER_TAG 1
+
+/**********************************/
+/* mirror pos manipulating macros */
+/**********************************/
+
+#define GET_CHAR_TAG(byte, isOdd) \
+		((byte) >> ((isOdd) << LOG_BITS_PER_TAG) & TAG_BITS_MASK)
+
+#define SET_CHAR_TAG(lhs, rhs, isOdd) ( \
+	  (lhs) = (rhs) << ((isOdd) << LOG_BITS_PER_TAG) | \
+		  (lhs) & ~(TAG_BITS_MASK << ((isOdd) << LOG_BITS_PER_TAG)) \
+	)
+
+
+#endif /* } if 0 */
+@
+
+
+1.2
+log
+@In conjunction with tcptr.c: basic skeleton is there,
+and verifyPtr is partially written though not tested.
+@
+text
+@d65 1
+a65 2
+extern void _extern_setUninitTag(const char * fname, int line, int col,
+                        void * addr, size_t size);
+d113 2
+a114 2
+extern void _tcptr_registerExtern(void * addr, size_t size);
+#define _registerExtern(f,l,c,a,t,s) _tcptr_registerExtern(a,s)
+d132 5
+a136 5
+extern void _tcptr_setTags(int tag, const void * addr, size_t size);
+#define _setByteTags(f,l,c,a,s,st,ct)	_tcptr_setTags(1, a,s)
+#define _setStringTag(f,l,c,a,sl)	_tcptr_setTags(1, a,(sl)+1)
+#define _setUninitTag(f,l,c,a,s)	_tcptr_setTags(1, a,s)
+#define _setInitTag(f,l,c,a,s)		_tcptr_setTags(1, a,s)
+d138 1
+a138 2
+extern void _tcptr_extern_setTag(int tag, void * addr, size_t size);
+#define _extern_setUninitTag(f,l,c,a,s)	_tcptr_extern_setTags(1,a,s)
+d185 2
+a186 1
+#define MIRRORPAGE_MASK (~((-1) << MIRRORPAGE_NUMBITS))
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d133 5
+a137 5
+extern void _tcptr_setAppropriateTags(const void * addr, size_t size);
+#define _setByteTags(f,l,c,a,s,st,ct)	_tcptr_setAppropriateTags(a,s)
+#define _setStringTag(f,l,c,a,sl)	_tcptr_setAppropriateTags(a,(sl)+1)
+#define _setUninitTag(f,l,c,a,s)	_tcptr_setAppropriateTags(a,s)
+#define _setInitTag(f,l,c,a,s)		_tcptr_setAppropriateTags(a,s)
+d139 2
+a140 2
+extern void _tcptr_extern_setAppropriateTag(void * addr, size_t size);
+#define _extern_setUninitTag(f,l,c,a,s)	_tcptr_extern_setAppropriateTags(a,s)
+d168 4
+a171 5
+#endif /* } _TYPECHECK_VERIFYAPI_PTR_H_ */
+
+
+#if 0 /* { */
+
+d174 1
+d176 2
+a177 1
+typedef enum {_typetag_inappropriate = 0, _typetag_appropriate = 1 } _typetag_t;
+d186 1
+d200 9
+a208 1
+				      
+d211 12
+a230 8
+
+/* The following macro must be an lvalue */
+#define GET_TAG_BYTE(addr)	*(\
+	 (mirrormap[MIRRORMAP_INDEX(addr)]) \
+	    || (_touchMirrorPage(MIRRORMAP_INDEX(addr)),1), \
+	    ((unsigned char *) mirrormap[MIRRORMAP_INDEX(addr)] \
+		+ MIRRORPAGE_INDEX(addr)/2) \
+	 )
+@

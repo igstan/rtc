@@ -1,0 +1,4030 @@
+head	1.57;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+1.57
+date	2004.05.14.21.59.39;	author suan;	state Exp;
+branches;
+next	1.56;
+
+1.56
+date	2004.05.14.20.30.08;	author suan;	state Exp;
+branches;
+next	1.55;
+
+1.55
+date	2004.05.13.20.49.54;	author suan;	state Exp;
+branches;
+next	1.54;
+
+1.54
+date	2004.05.13.19.19.32;	author suan;	state Exp;
+branches;
+next	1.53;
+
+1.53
+date	2004.05.13.15.35.36;	author suan;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2004.05.08.18.07.15;	author suan;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2004.05.07.21.52.52;	author suan;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2004.05.07.21.45.52;	author suan;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2004.04.15.17.49.30;	author suan;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2004.04.07.22.47.58;	author suan;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2004.04.06.21.56.32;	author suan;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2004.04.06.17.40.15;	author suan;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2004.04.06.00.03.55;	author suan;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2004.04.05.18.32.21;	author suan;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2004.04.02.03.54.45;	author suan;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2004.04.02.02.16.47;	author suan;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2004.03.31.18.41.55;	author suan;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2004.03.31.15.18.37;	author suan;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2004.03.30.01.52.49;	author suan;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2004.03.29.17.17.32;	author suan;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2004.03.29.02.24.42;	author suan;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2004.03.28.20.53.05;	author suan;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2004.03.22.21.42.47;	author suan;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2004.03.07.05.30.41;	author suan;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2004.03.04.20.51.02;	author suan;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2004.03.03.00.45.32;	author suan;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2004.02.27.20.09.58;	author suan;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2004.02.27.01.24.36;	author suan;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2004.02.26.18.27.11;	author suan;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2004.02.25.23.24.11;	author suan;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2004.02.25.00.48.09;	author suan;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2004.02.24.21.44.28;	author suan;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2004.02.24.20.25.05;	author suan;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2004.02.24.19.45.31;	author suan;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2004.02.24.02.04.09;	author suan;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2004.02.23.16.12.01;	author suan;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2004.02.22.00.20.20;	author suan;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2004.02.21.22.12.41;	author suan;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2004.02.20.23.33.40;	author suan;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2004.02.20.16.56.39;	author suan;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2004.02.19.14.37.04;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2004.02.19.00.39.16;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2004.02.18.22.33.22;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2004.01.05.21.15.01;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2003.12.18.17.05.20;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2003.12.16.22.57.18;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2003.12.15.22.58.23;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2003.12.12.03.38.39;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2003.12.06.01.38.01;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2003.10.29.23.12.11;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2003.10.28.20.24.02;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2003.10.27.22.41.44;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2003.10.24.22.40.50;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.10.24.21.09.25;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.10.24.17.15.24;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.10.23.21.04.28;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.10.22.23.33.55;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Interval class, encapsulates an integer [min,max] interval
+@
+
+
+1.57
+log
+@Changed "ao has no static type" message from "error" to
+"warning".
+@
+text
+@#include "ao.h"
+#include "flags.h" //- for flag_range_*
+#include "interval.h"
+#include <stdio.h>
+
+void Interval::setTgt(AO& ao)
+{
+  if(!flag_range_handle_malloc && ao.getKind() == AO::aoMalloc){
+    this->setBottom();
+  } else {
+    this->tgt_ao = &ao;
+    if(flag_strlit_readonly && ao.getKind() == AO::aoStringLit){
+      this->tgt_readonly = true;
+    }
+    if(ao.getKind() == AO::aoMalloc){ //-malloc: use mtype/msize
+      AOMalloc& mao = (AOMalloc&)ao;
+      if(mao.getMallocType()){
+        this->tgt_elty = mao.getMallocType();
+        this->tgt_numelts = mao.getMallocSize();
+      } else {
+        this->setBottom();
+      }
+    } else { //- non-malloc
+      TCtype * aoty = ao.getStaticType();
+      if(aoty){
+        this->setTgt(*aoty);
+      } else {
+        fprintf(stderr, "WARNING(Interval::setTgt): ao has no static type: ");
+        ao.dump_descr(stderr);
+        fprintf(stderr, "\n");
+        this->setBottom();
+      }
+    }
+  }
+}
+
+void Interval::setTgt(TCtype& ty)
+{
+  if(ty.getKind() == TCtype::tcVoid){
+    this->setBottom();
+  } else {
+    int numelts = 1;
+    TCtype * typ = &ty;
+    while(typ->getKind() == TCtype::tcArray){
+          TCnumType& arty = (TCnumType&)*typ;
+          typ = &arty.getBaseType();
+          numelts *= arty.getSize();
+    }
+    this->tgt_elty = typ;
+    this->tgt_numelts = numelts;
+  }
+}
+
+void Interval::debug_dump(FILE * outf) const
+{
+  if(isTop()){
+    fprintf(outf, "top");
+  } else {
+    if(tgt_readonly)
+      fprintf(outf, ":READONLY:");
+    if(has_zero)
+      fprintf(outf, "{0}U");
+    if(tgt_elty){
+      fprintf(outf, "&(");
+      if(tgt_ao){
+        tgt_ao->dump_descr(outf);
+        fprintf(outf, ":");
+      }
+      tgt_elty->debug_dump(outf);
+      fprintf(outf, "[%d])+", tgt_numelts);
+    }
+    fprintf(outf, "[");
+    if(min == MINUS_INF) fprintf(outf, "-INF");
+    else fprintf(outf, "%d", min);
+    fprintf(outf, ",");
+    if(max == PLUS_INF) fprintf(outf, "+INF");
+    else fprintf(outf, "%d", max);
+    fprintf(outf, "]");
+  }
+}
+
+//- Note: the idea behind the has_zero flag is that
+//	  this inBounds check will ignore it, since
+//	  we'll allow a null dereference to go unchecked
+bool Interval::inBounds(bool iswrite) const
+{
+  return ( (this->tgt_elty)
+	   && (this->min >= 0)
+	   && (this->max < this->tgt_numelts)
+	   && !(iswrite && this->tgt_readonly)
+	 );
+}
+
+//- adjust this interval by struct/union offset
+//  * only do this if inBounds and has no zero
+void Interval::adjustStructOffset(suco_llist<TCtype *>& tylist)
+{
+  if(this->isTop()) return;
+  if(this->inBounds(false)
+	&& !this->has_zero
+	&& (this->tgt_elty)){
+    //- note: (parts of) old tgt_elty will be leaked
+    switch(this->tgt_elty->getKind()){
+      case TCtype::tcStruct: {
+        TCtype * tailty = TCtype::listEquivPrefix(tylist, ((TCstructUnionType *) this->tgt_elty)->getTypeList());
+        if(tailty){
+          if(this->tgt_ao){
+            TCtype * ao_sty = this->tgt_ao->getStaticType();
+            if(ao_sty && (ao_sty->equiv(*this->tgt_elty)
+			  || (ao_sty->getKind() == TCtype::tcArray
+				&& ((TCnumType *)ao_sty)->getBaseType().equiv(*this->tgt_elty)))){
+              this->tgt_ao = this->tgt_ao->get_AOSDot(tylist);
+/**/          if(flag_instantiate_structunion && !this->tgt_ao)
+/**/            fprintf(stderr, "ERROR(adjustStructOffset): aoSdot not found\n");
+              this->setTgt(*tailty);	//- sets tgt_elty,tgt_numelts
+              this->min = this->max = 0;
+              return;
+            } else {
+/**/          fprintf(stderr, "ERROR(adjustStructOffset): struct ao-ty does not match, ao = ");
+/**/          this->tgt_ao->write_string_rep(stderr, true);
+/**/          fprintf(stderr, "  elty = ");
+/**/          this->tgt_elty->write_string_rep(stderr);
+/**/          fprintf(stderr, "\n");
+              if(flag_range_must_have_ao){
+                this->setBottom();
+                return;
+              }
+              this->tgt_ao = 0;
+            }
+          }
+          this->setTgt(*tailty);	//- sets tgt_elty,tgt_numelts
+          this->min = this->max = 0;
+          return;
+        } else {
+//fprintf(stderr, "NOTE(adjustStructOffset): could not struct-adjust ");
+//this->debug_dump(stderr);
+//fprintf(stderr, " to ");
+//TCtype::debug_dump_list(tylist, stderr);
+//fprintf(stderr, "\n");
+          this->setBottom();
+        }
+      } break;
+      case TCtype::tcUnion: {
+        if(tylist.Length() == 1){
+          suco_iterator<TCtype *> tli(((TCstructUnionType *) this->tgt_elty)->getTypeList());
+          while(tli.Iterate()){
+            if(tli.Current()->equiv(*tylist.Head())){
+              if(this->tgt_ao){
+                TCtype * ao_sty = this->tgt_ao->getStaticType();
+                if(ao_sty && (ao_sty->equiv(*this->tgt_elty)
+			      || (ao_sty->getKind() == TCtype::tcArray
+				  && ((TCnumType *)ao_sty)->getBaseType().equiv(*this->tgt_elty)))){
+                  this->tgt_ao = this->tgt_ao->get_AOUDot(*tli.Current());
+/**/              if(flag_instantiate_structunion && !this->tgt_ao)
+/**/                fprintf(stderr, "ERROR(adjustStructOffset): aoUdot not found\n");
+                } else {
+/**/              fprintf(stderr, "ERROR(adjustStructOffset): union ao-ty does not match, ao = ");
+/**/              this->tgt_ao->dump_descr(stderr);
+/**/              fprintf(stderr, "  elty = ");
+/**/              this->tgt_elty->debug_dump(stderr);
+/**/              fprintf(stderr, "\n");
+                  if(flag_range_must_have_ao){
+                    this->setBottom();
+                    return;
+                  }
+                  this->tgt_ao = 0;
+                }
+              }
+              this->setTgt(*tli.Current());	//- sets tgt_elty,tgt_numelts
+              this->min = this->max = 0;
+              return;
+            }
+          }
+/**/fprintf(stderr, "NOTE(adjustStructOffset): could not union-adjust ");
+/**/this->debug_dump(stderr);
+/**/fprintf(stderr, " to ");
+/**/TCtype::debug_dump_list(tylist, stderr);
+/**/fprintf(stderr, "\n");
+          this->setBottom();
+        } else { //- tylist is longer than 1 (or zero?)
+//TODO?: look for embedded structs
+/**/fprintf(stderr, "ERROR(adjustStructOffset): union target, but tylist is not 1: ");
+/**/TCtype::debug_dump_list(tylist, stderr);
+/**/fprintf(stderr, "  this = ");
+/**/this->debug_dump(stderr);
+/**/fprintf(stderr, "\n");
+          this->setBottom();
+        }
+      } break;
+      default: {
+        this->setBottom();
+      } break;
+    }
+  } else this->setBottom();
+}
+
+//- return true if disabled
+bool Interval::disableIfTargetIsPartOf(AO& ao)
+{
+  if(this->tgt_ao
+	&& (&this->tgt_ao->getEnclosingStruct() == &ao)){
+    if(flag_range_must_have_ao)
+      this->setBottom();
+    else
+      this->tgt_ao = 0;
+    return true;
+  }
+  return false;
+}
+
+const Interval Interval::Top(PLUS_INF,MINUS_INF);
+const Interval Interval::Bottom(MINUS_INF,PLUS_INF);
+
+bool Interval::isTop() const
+{
+  //- note: I'm ignoring tgt_elty/numelts
+  return( (this->min > this->max)
+	||(this->min == PLUS_INF)
+	||(this->max == MINUS_INF)
+	);
+}
+
+bool Interval::isBottom() const
+{
+  //- note: even if this->tgt_elty != 0, it's still bottom
+  return (this->min == MINUS_INF) && (this->max == PLUS_INF);
+}
+
+bool Interval::isTargetedFinite() const
+{
+  return (this->tgt_ao) && (this->min != MINUS_INF) && (this->max != PLUS_INF);
+}
+
+bool Interval::isTargetedHalfFinite() const
+{
+  return (this->tgt_ao) && ((this->min != MINUS_INF) || (this->max != PLUS_INF));
+}
+
+void Interval::setTop()
+{
+  this->tgt_ao = 0;
+  this->tgt_elty = 0;
+  this->tgt_numelts = 0;
+  this->min = PLUS_INF;
+  this->max = MINUS_INF;
+  this->has_zero = false;
+  this->tgt_readonly = false;
+}
+
+void Interval::setBottom()
+{
+  this->tgt_ao = 0;
+  this->tgt_elty = 0;
+  this->tgt_numelts = 0;
+  this->min = MINUS_INF;
+  this->max = PLUS_INF;
+  this->has_zero = false;
+  this->tgt_readonly = false;
+}
+
+bool Interval::widen(Interval iv)
+{
+  if(this->isBottom()){ //- bottom widen iv = bottom
+    return false;
+  } else if(iv.isBottom()){ //- this widen bottom = bottom
+    this->setBottom();
+    return true;
+  } else if((this->tgt_elty == iv.tgt_elty) ||
+	    (this->tgt_elty && iv.tgt_elty && this->tgt_elty->equiv(*iv.tgt_elty))){
+
+    bool changed = false;
+
+    //- adjust tgt_ao
+    if(this->tgt_ao != iv.tgt_ao){
+      if(flag_range_must_have_ao){
+        this->setBottom();
+        return true;
+      }
+      this->tgt_ao = 0;
+      changed = true;
+    }
+
+    //- adjust numelts (shouldn't occur?)
+    if(this->tgt_numelts > iv.tgt_numelts){
+//fprintf(stderr, "WARNING(Interval::widen): adjusted tgt_numelts %d -> %d\n",
+//				this->tgt_numelts, iv.tgt_numelts);
+      if(flag_range_must_have_ao && !flag_range_ty_can_change){
+        this->setBottom();
+        return true;
+      }
+      this->tgt_numelts = iv.tgt_numelts;
+      changed = true;
+    }
+
+    if(this->min > iv.min){
+      //- pragmatic improvement: if both are >0, then widen to 0
+      //- :only doing this case because 0 is valid lowerbound for
+      //   array access.
+      if(iv.min >= 0){
+        this->min = 0;
+      } else {
+        this->min = MINUS_INF;
+      }
+      changed = true;
+    }
+    if(this->max < iv.max){
+       this->max = PLUS_INF;
+       changed = true;
+    }
+    if(flag_range_zero_special &&
+	iv.has_zero && !this->has_zero){
+      this->has_zero = true;
+      changed = true;
+    }
+    if(iv.tgt_readonly && !this->tgt_readonly){
+      this->tgt_readonly = true;
+      changed = true;
+    }
+
+    return changed;
+
+  } else if(flag_range_zero_special &&
+	    this->tgt_elty && iv.iszero()){ //- widen with zero
+    if(!this->has_zero){
+      this->has_zero = true;
+      return true;
+    }
+  } else if(flag_range_zero_special &&
+	    iv.tgt_elty && this->iszero()){ //- zero widen sth = sth U {0}
+    *this = iv;
+    this->has_zero = true;
+    return true;
+  } else {
+/**/if(flag_verbose){
+/**/fprintf(stderr, "WARNING(Interval::widen): mismatched eltys or aos, this = ");
+/**/this->debug_dump(stderr);
+/**/fprintf(stderr, "  iv = ");
+/**/iv.debug_dump(stderr);
+/**/fprintf(stderr, "\n");
+/**/}
+    this->setBottom();
+    return true;
+  }
+  return false;
+}
+
+bool Interval::narrow(Interval iv)
+{
+  bool changed = false;
+  if(this->isBottom()){ //- bottom narrow iv = iv
+    *this = iv;
+    changed = !iv.isBottom();
+  } else if(this->isTop()){ //- top narrow iv = iv (??)
+//fprintf(stderr, "WARNING(Interval::narrow): top narrow this = ");
+//this->debug_dump(stderr);
+//fprintf(stderr, "\n");
+    *this = iv;
+    changed = !iv.isTop();
+  } else if(iv.isBottom()){ //- this narrow bottom = bottom
+/**/fprintf(stderr, "WARNING(Interval::narrow): narrow with bottom, this = ");
+/**/this->debug_dump(stderr);
+/**/fprintf(stderr, "\n");
+    this->setBottom();
+    changed = true;
+  } else if(iv.isTop()){ //- this narrow top = this?
+//fprintf(stderr, "WARNING(Interval::narrow): narrow with top, this = ");
+//this->debug_dump(stderr);
+//fprintf(stderr, "\n");
+    //-NOP
+  } else if((this->tgt_elty == iv.tgt_elty) ||
+	    (this->tgt_elty && iv.tgt_elty && this->tgt_elty->equiv(*iv.tgt_elty))){
+
+    //-NOTE: we can play with targeted intervals here, because in theory
+    // narrowing should only ever be called with intervals referring to
+    // the same location?  (It's like a "cleanup" phase.)
+
+    //- adjust tgt_ao
+    if(this->tgt_ao != iv.tgt_ao){
+
+/**/  fprintf(stderr, "WARNING(Interval::narrow): mismatched aos, this = ");
+/**/  this->debug_dump(stderr);
+/**/  fprintf(stderr, "  iv = ");
+/**/  iv.debug_dump(stderr);
+/**/  fprintf(stderr, "\n");
+
+      if(!this->tgt_ao && iv.tgt_ao){
+        this->tgt_ao = iv.tgt_ao;	//- (eltys already match; no need to adjust)
+        changed = true;
+      }
+      if(this->tgt_ao && iv.tgt_ao){
+        this->tgt_ao = 0;	//???
+      }
+      if(flag_range_must_have_ao && !this->tgt_ao){
+        this->setBottom();
+        return true;
+      }
+    }
+
+    if(this->tgt_numelts > iv.tgt_numelts){
+/**/  if(flag_verbose)
+/**/    fprintf(stderr, "WARNING(Interval::narrow): adjusted tgt_numelts %d -> %d\n",
+/**/				this->tgt_numelts, iv.tgt_numelts);
+      if(flag_range_must_have_ao && !flag_range_ty_can_change){
+        this->setBottom();
+        return true;
+      }
+      this->tgt_numelts = iv.tgt_numelts;
+    }
+
+    if(this->min == MINUS_INF && iv.min != MINUS_INF
+			      && iv.min != PLUS_INF){	//- ??
+       this->min = iv.min;
+       changed = true;
+    }
+    if(this->max == PLUS_INF && iv.max != PLUS_INF
+			     && iv.max != MINUS_INF){	//- ??
+       this->max = iv.max;
+       changed = true;
+    }
+    if(flag_range_zero_special &&
+	iv.has_zero && !this->has_zero){
+      this->has_zero = true;
+      changed = true;
+    }
+    if(iv.tgt_readonly && !this->tgt_readonly){
+      this->tgt_readonly = true;
+      changed = true;
+    }
+//TODO: warn if less than?
+  } else if(flag_range_zero_special &&
+		this->has_zero && iv.iszero()){
+    //-NOP
+  } else if(flag_range_zero_special &&
+	     iv.has_zero && this->iszero()){
+    *this = iv;
+    changed = true;
+  } else {
+/**/if(flag_verbose){
+/**/fprintf(stderr, "WARNING(Interval::narrow): mismatched eltys or aos, this = ");
+/**/this->debug_dump(stderr);
+/**/fprintf(stderr, "  iv = ");
+/**/iv.debug_dump(stderr);
+/**/fprintf(stderr, "\n");
+/**/}
+    //-NOP?
+  }
+  return changed;
+}
+
+bool Interval::meet(Interval iv) //- "expand"
+{
+  bool changed = false;
+  if(this->isBottom()){ //- bottom meet iv = bottom
+    changed = false;
+  } else if(iv.isBottom()){ //- this meet bottom = bottom
+    this->setBottom();
+    changed = true;
+  } else if(iv.isTop()){ //- this meet top = this
+  } else if(this->isTop()){ //- top meet iv = iv
+    *this = iv;
+    changed = true;
+  } else if((this->tgt_elty == iv.tgt_elty) ||
+	    (this->tgt_elty && iv.tgt_elty && this->tgt_elty->equiv(*iv.tgt_elty))){
+
+    //- adjust tgt_ao
+    if(this->tgt_ao != iv.tgt_ao){
+      if(flag_range_must_have_ao){
+        this->setBottom();
+        return true;
+      }
+      this->tgt_ao = 0;
+      changed = true;
+    }
+
+    //- adjust numelts
+    if(this->tgt_numelts > iv.tgt_numelts){
+      if(flag_range_must_have_ao && !flag_range_ty_can_change){
+        this->setBottom();
+        return true;
+      }
+      this->tgt_numelts = iv.tgt_numelts;
+      changed = true;
+    }
+
+    changed |= this->minmax_union(iv.min, iv.max);
+
+    if(flag_range_zero_special &&
+	iv.has_zero && !this->has_zero){
+      this->has_zero = true;
+      changed = true;
+    }
+    if(iv.tgt_readonly && !this->tgt_readonly){
+      this->tgt_readonly = true;
+      changed = true;
+    }
+  } else if(flag_range_zero_special &&
+	    this->tgt_elty && iv.iszero()){ //- meet with zero
+    if(!this->has_zero){
+      changed = true;
+      this->has_zero = true;
+    }
+  } else if(flag_range_zero_special &&
+	    iv.tgt_elty && this->iszero()){ //- zero meet sth = sth U {0}
+    *this = iv;
+    this->has_zero = true;
+    changed = true;
+  } else { //- set to bottom
+/**/if(flag_verbose){
+/**/fprintf(stderr, "NOTE(Interval::meet): mismatched eltys or aos, this = ");
+/**/this->debug_dump(stderr);
+/**/fprintf(stderr, "  iv = ");
+/**/iv.debug_dump(stderr);
+/**/fprintf(stderr, "\n");
+/**/}
+    this->setBottom();
+    changed = true;
+  }
+  return changed;
+}
+
+//  COMPARE with cond_intersect() below.
+bool Interval::join(Interval iv) //- "shrink"
+{
+  bool changed = false;
+  if(this->isBottom()){ //- bottom join iv = iv
+    *this = iv;
+    changed = !this->isBottom();
+  } else if(iv.isBottom()){ //- this join bottom = this
+    changed = false;
+  } else if((this->tgt_elty == iv.tgt_elty) ||
+	    (this->tgt_elty && iv.tgt_elty && this->tgt_elty->equiv(*iv.tgt_elty))){
+
+    //- adjust tgt_ao
+    if(this->tgt_ao != iv.tgt_ao){
+
+/**/  if(this->tgt_ao && iv.tgt_ao){
+/**/    fprintf(stderr, "WARNING(Interval::join): mismatched aos, this = ");
+/**/    this->debug_dump(stderr);
+/**/    fprintf(stderr, "  iv = ");
+/**/    iv.debug_dump(stderr);
+/**/    fprintf(stderr, "\n");
+/**/  }
+
+      if(!this->tgt_ao){
+        this->tgt_ao = iv.tgt_ao;
+        changed = true;
+      }
+    }
+
+    //- adjust numelts
+    if((!flag_range_must_have_ao || flag_range_ty_can_change) &&
+	this->tgt_numelts < iv.tgt_numelts){
+      this->tgt_numelts = iv.tgt_numelts;
+      changed = true;
+    }
+
+    if(this->min < iv.min){
+       this->min = iv.min;
+       changed = true;
+    }
+    if(this->max > iv.max){
+       this->max = iv.max;
+       changed = true;
+    }
+
+  } else if(flag_range_zero_special &&
+	    this->inclzero() && iv.inclzero()){
+
+//fprintf(stderr, "WARNING(Interval::join): targeted elty(s) but with zero, this = ");
+//this->debug_dump(stderr);
+//fprintf(stderr, "  iv = ");
+//iv.debug_dump(stderr);
+//fprintf(stderr, "\n");
+
+    if(!this->iszero()){
+      this->tgt_ao = 0;
+      this->tgt_elty = 0;
+      this->tgt_numelts = 0;
+      this->min = 0;
+      this->max = 0;
+      this->has_zero = false;
+      this->tgt_readonly = false;
+      changed = true;
+    }
+
+  } else {
+    //- targeted eltys: set to Top
+    this->setTop();
+    changed = true;
+  }
+  return changed;
+}
+
+//----------------------------------------------
+//- Modify this interval to be (a conservative
+//  superset of) its intersection with iv.
+//  This function is called when evaluating a
+//  predicate which constrains this interval
+//  to be bounded by iv.
+//  Conservative superset means we can always
+//  leave this unchanged.
+//- The difference between this function and join()
+//  is that this needs a superset (unchanged by default),
+//  while join needs a subset (top by default).
+//- RULES:
+//   1. If both are numeric (non-targeted), intersect.
+//   2. If both have same (non-bottom) target loc,
+//      _AND_ their eltypes are compatible: adjust
+//      numelts (if necessary) and intersect.
+//   3. If both have (non-bottom) target loc
+//      that don't alias (that aren't fields of
+//      the same structure), AND THAT ARE IN-BOUNDS,
+//      then can set to Top.
+//   4. Otherwise, leave unchanged.
+bool Interval::cond_intersect(Interval iv)
+{
+  bool changed = false;
+  if(this->isTop()){ //- top intersect iv = top
+    changed = false;
+  } else if(iv.isTop()){ //- top intersect iv = top
+    this->setTop();
+    changed = true;
+  } if(this->isBottom()){ //- bottom intersect iv = iv
+    *this = iv;
+    changed = !this->isBottom();
+  } else if(iv.isBottom()){ //- this intersect bottom = this
+    changed = false;
+  } else if(flag_range_skip_targeted_preds &&
+	    (this->tgt_elty || iv.tgt_elty)){
+    changed = false;
+  } else if(( (this->tgt_ao && this->tgt_ao == iv.tgt_ao)
+	       && (this->tgt_elty && iv.tgt_elty && this->tgt_elty->equiv(*iv.tgt_elty)))
+	    || (!this->tgt_elty && !iv.tgt_elty)){
+    //- same target loc and target ty, or non-targeted (integral)
+
+    //- adjust numelts
+    if(this->tgt_numelts < iv.tgt_numelts){
+
+/**/  fprintf(stderr, "WARNING(cond_intersect): adjusted numelts from %d to %d! this = ", this->tgt_numelts, iv.tgt_numelts);
+/**/  this->debug_dump(stderr);
+/**/  fprintf(stderr, "\n");
+
+      this->tgt_numelts = iv.tgt_numelts;
+      changed = true;
+    }
+    if(this->min < iv.min){
+       this->min = iv.min;
+       changed = true;
+    }
+    if(this->max > iv.max){
+       this->max = iv.max;
+       changed = true;
+    }
+  } else if(this->tgt_ao && iv.tgt_ao				//- if both have targeted locs, and
+	    && (&this->tgt_ao->getRootAO() != &iv.tgt_ao->getRootAO()) //- and they don't alias
+	    && this->inBounds(false) && iv.inBounds(false)){	//- and they're in-bounds,
+    this->setTop();						//--> can set to top!
+    changed = true;
+  } else {
+    //- targeted interval(s): leave unchanged
+    changed = false;
+  }
+  return changed;
+}
+
+//- DESCRIPTION: fix the types of iv1,iv2 for elty-arithmetic:
+//    elty = 0       means "use underlying type" (no conflict)
+//    elty = tcVoid  means plain (non-pointer) arithmetic
+//    elty = T       means pointer arithmetic on pointer-to-T
+// :The check is for (ptr +/- int), or (int +/- int); that is,
+//  (int +/- ptr) has already been normalized to (ptr +/- int).
+//  (ptr - ptr) is not handled by this function (see ptrs_minus()).
+// :Try to adjust either iv1 or iv2 to be consistent with elty-arithmetic;
+//  return true if successful; false if cannot fix.
+//- The idea is for this function to be extensible to apply different
+//  typing policies (implemented by TCtype::countInstancesOf()):
+//  - Currently, doing most-portable policy, which assumes that
+//    . |char| = 1
+//    . |char| <= all types except void, bitfield
+//    . |char| <= |short|<=|int|<=|long|<=|longlong|
+//    . |float| <= |double|<=|longdouble|
+//    . |t[x]| = |t| * x
+//    . all pointers have same size
+//    . struct and union containment
+//  - Future extensions can use (non-portable) relative sizes of the
+//    different types, etc.
+//- CONVERSION CHOICES:    (Notation: |ty| = sizeof ty)
+//  Let iv1 = <tgty,size> + [tmin,tmax]
+//      iv2 = [rmin,rmax]
+//  SOLUTION 1: normalize iv1 and iv2 to unit-arithmetic (we assume char
+//  is of size one, so that char-arithmetic is equivalent to "plain"
+//  unit-arithmetic):
+//      iv1' = <char,size*|tgty|> + [tmin*|tgty|, tmax*|tgty|]
+//      iv2' = [rmin*|elty|, rmax*|elty|]
+//  SOLUTION 2: let's convert only one of iv1 or iv2.  So, pick one of
+//  the following:        (Notation: |ty1/ty2| is shorthand for |ty1|/|ty2|)
+//    a. iv1'' = <elty,size*|tgty/elty|> + [tmin*|tgty/elty|, tmax*|tgty/elty|]
+//    b. iv2'' = [rmin*|elty/tgty|, rmax*|elty/tgty|]
+//  APPROXIMATIONS: the above are "precise" solutions, which can be computed
+//  if we know the size of the types.  When approximating, the constraints
+//  must follow the augmented-interval lattice, so APPROX "less-than" TRUE means:
+//     size_APPROX <= size_TRUE
+//      min_APPROX <= min_TRUE
+//      max_APPROX >= max_TRUE
+//  IMPLEMENTED SOLUTION: given above (portable) size assumptions, estimate the
+//  ratio |tgty/elty|:     (assume elty != tgty, else no conversion is needed)
+//   A. if |elty| <= |tgty|, which means r = |tgty/elty| >= 1,
+//      then let:
+//                                {tmin, if tmin >= 0} {tmax, if tmax <= 0}
+//        iv1a = <elty,size*r> + [{                  },{                  }]
+//                                {-INF, if tmin < 0 } {+INF, if tmax > 0 }
+//                {rmin, if rmin <= 0} {rmax, if rmax >= 0}
+//        iv2a = [{                  },{                  }]
+//                {  0,  if rmin > 0 } {  0,  if rmax < 0 }
+//      Since iv1a is "less-than" iv1'', and iv2a is "less than" iv2'',
+//      we can choose to convert either iv1 or iv2, heuristically avoiding
+//      divergence as much as possible.
+//      Current solution: aim for precise max; prefer iv2a
+//   B. if |tgty| <= |elty|, which means |elty/tgty| >= 1,
+//      then let:
+//                    {rmin, if rmin >= 0} {rmax, if rmax <= 0}
+//            iv2b = [{                  },{                  }]
+//                    {-INF, if rmin < 0 } {+INF, if rmax > 0 }
+//      We thus convert iv2 to iv2b, since iv2b is "less-than" iv2''.
+//   C. if we don't know the relative sizes of elty and tgty,
+//      then: we can make no precise approximations, so return false.
+bool Interval::adjustTypes(Interval& iv1, Interval& iv2, TCtype * elty, bool addition)
+{
+#define A_T_OUTPUT_NOTE_HEAD(descr)	do {				\
+	fprintf(stderr, "NOTE(adjustTypes:" descr ":%c): iv1 = ",	\
+		addition?'+':'-');					\
+	iv1.debug_dump(stderr);						\
+	fprintf(stderr, "  iv2 = ");					\
+	iv2.debug_dump(stderr);						\
+	fprintf(stderr, "  elty = ");					\
+	elty->debug_dump(stderr);					\
+	fprintf(stderr, "\n");						\
+	} while(0)
+
+#define A_T_OUTPUT_NOTE_TAIL(descr,ivdescr,iv)	do {			\
+	fprintf(stderr, "NOTE(adjustTypes:" descr ".%c): ... ",		\
+		addition?'+':'-');					\
+	fprintf(stderr, ivdescr " = ");					\
+	iv.debug_dump(stderr);						\
+	fprintf(stderr, "\n");						\
+	} while(0)
+
+/////////////////////////////////////////////////////////////////////////
+
+  if(iv2.tgt_elty){
+    //- OK if unit-addition, and lhs has no target
+    if(addition && !iv1.tgt_elty
+	&& elty && ((elty->getKind() == TCtype::tcVoid)
+		    || (elty->getKind() == TCtype::tcChar))){
+/**/A_T_OUTPUT_NOTE_HEAD("flipping_lhs_rhs");
+      //- flip
+      Interval ivt = iv1;
+      iv1 = iv2;
+      iv2 = ivt;
+      //- fallthrough...
+    } else {
+/**/  static bool first_time = true;
+/**/  if(first_time){
+/**/    first_time = false;
+/**/    A_T_OUTPUT_NOTE_HEAD("rhs_has_tgt");
+/**/  }
+      return false;
+    }
+  }
+  if(iv2.iszero()){ //- plus/minus zero: OK
+    return true;
+  }
+  if(iv1.tgt_elty && iv1.has_zero){
+/**/A_T_OUTPUT_NOTE_HEAD("tgt_w/zero");
+    return false;
+  } else if(!elty){ //- "use underlying type" (no conflict)
+    return true;
+  } else if(iv1.tgt_elty && iv1.tgt_elty->equiv(*elty)){ //- types match: OK ==> should be the common case <==
+      return true;
+  } else if(((elty->getKind() == TCtype::tcVoid)					//- elty is plain (non-ptr) arith
+	     || (elty->getKind() == TCtype::tcChar))					//       or char ptr arith
+	    && ((!iv1.tgt_elty) || (iv1.tgt_elty->getKind() == TCtype::tcChar))){	//- and tgt is NULL or char-typed
+    return true;
+  } else { //- mismatched type
+
+    if(!iv1.tgt_elty){ //- iv1 has no target, and elty is non-void non-char
+
+/**/  A_T_OUTPUT_NOTE_HEAD("tgtynull");
+      if(flag_range_exact_sizes){
+        // convert iv2
+        int elty_size = elty->SizeOf();
+        iv2 = iv2.times(Interval(elty_size,elty_size));
+      } else {
+        // convert iv2b
+        if(iv2.min < 0) iv2.min = MINUS_INF;
+        if(iv2.max > 0) iv2.max = PLUS_INF;
+      }
+/**/  A_T_OUTPUT_NOTE_TAIL("tgtynull","iv2b",iv2);
+      return true;
+
+    } else if(elty->getKind() == TCtype::tcArray){ //- elty is array
+
+      //- REFINEMENT A: if rhs is an array, work at its element level.
+      //  This happens when we're dealing with multi-dimensional arrays.
+      //  So, change: elty=T[i], iv1=<T1,s1>+[m1,n1], iv2=[m2,n2]
+      //  To:         elty=T,    iv1=<T1,s1>+[m1,n2], iv2=[m2,n3] * [i,i]
+
+//    A_T_OUTPUT_NOTE_HEAD("rhs_array");
+      TCnumType& elty_arr = *((TCnumType *) elty);
+      iv2 = iv2.times(Interval(elty_arr.getSize()));
+//    A_T_OUTPUT_NOTE_TAIL("rhs_array","iv2_adj",iv2);
+      return adjustTypes(iv1,iv2,&elty_arr.getBaseType(), addition);
+
+    } else { //- iv1.tgt_elty does not match elty (both non-null)
+
+      if(flag_range_exact_sizes){
+
+        int tgty_size = iv1.tgt_elty->SizeOf();
+        int elty_size = elty->SizeOf();
+
+        if(tgty_size == 0 || elty_size == 0){
+
+/**/      if(iv1.tgt_elty->getKind() != TCtype::tcVoid){
+/**/        fprintf(stderr, "ERROR(adjustTypes): zero size encountered: sizeof tgty : ");
+/**/        iv1.tgt_elty->debug_dump(stderr);
+/**/        fprintf(stderr, " = %d,  sizeof elty : ", tgty_size);
+/**/        elty->debug_dump(stderr);
+/**/        fprintf(stderr, " = %d\n", elty_size);
+/**/      }
+
+          return false;
+
+        } else if(flag_range_ty_can_change && (tgty_size > elty_size)){
+
+          //- do iv1''
+          int floor = tgty_size / elty_size;
+          int ceil = (tgty_size % elty_size) ? (floor+1) : floor;
+
+/**/      if(ceil != floor){
+/**/        A_T_OUTPUT_NOTE_HEAD("imprecise_iv1");
+/**/      }
+
+          iv1.tgt_elty = elty;		//- NOTE: old tgt_elty may be leaked
+          iv1.tgt_numelts *= floor;
+          if(iv1.min != MINUS_INF && iv1.min != PLUS_INF)
+            iv1.min *= floor;
+          if(iv1.max != MINUS_INF && iv1.max != PLUS_INF)
+            iv1.max *= ceil;
+
+/**/      if(ceil != floor){
+/**/        A_T_OUTPUT_NOTE_TAIL("imprecise_iv1","iv1_adj",iv1);
+/**/      }
+
+          return true;
+
+        } else {
+
+          //- do iv2''
+          int floor = elty_size / tgty_size;
+          int ceil = (elty_size % tgty_size) ? (floor+1) : floor;
+
+/**/      if(ceil != floor){
+/**/        A_T_OUTPUT_NOTE_HEAD("imprecise_iv2");
+/**/      }
+
+          if(iv2.min != MINUS_INF && iv2.min != PLUS_INF)
+            iv2.min *= floor;
+          if(iv2.max != MINUS_INF && iv2.max != PLUS_INF)
+            iv2.max *= ceil;
+
+/**/      if(ceil != floor){
+/**/        A_T_OUTPUT_NOTE_TAIL("imprecise_iv2","iv2_adj",iv2);
+/**/      }
+
+          return true;
+
+        }
+
+      } else { //- !flag_range_exact_sizes
+
+        int num_elty_in_tgt = iv1.tgt_elty->countInstancesOf(*elty);
+        int num_tgt_in_elty = elty->countInstancesOf(*iv1.tgt_elty);
+
+        if(num_elty_in_tgt > 0 && num_tgt_in_elty > 0){
+/**/fprintf(stderr, "ERROR(adjustTypes): elty in tgt = %d, tgt in elty = %d\n", num_elty_in_tgt, num_tgt_in_elty);
+/**/fprintf(stderr, "tgt  = ");
+/**/iv1.tgt_elty->debug_dump(stderr);
+/**/fprintf(stderr, "\nelty = ");
+/**/elty->debug_dump(stderr);
+/**/fprintf(stderr, "\n");
+          return false;
+        }
+
+        if(num_elty_in_tgt > 0){
+          Interval iv1a = Interval::Bottom;
+          Interval iv2a = Interval::Bottom;
+
+          //- I. try iv1a: only if |elty| <= |iv1.elty|
+          if(flag_range_ty_can_change){
+
+            iv1a = iv1;
+            iv1a.slide_if_constant(); //- FIRST: slide iv1a if offset is constant
+        
+            //- convert iv1a, but with elty instead of char
+            iv1a.tgt_elty = elty;	//NOTE: old tgt_elty may be leaked ~~ but currently, there's no helping it.
+            iv1a.tgt_numelts *= num_elty_in_tgt;
+            if(iv1a.min < 0) iv1a.min = MINUS_INF;
+            if(iv1a.max > 0) iv1a.max = PLUS_INF;
+          }
+
+          //- II. try iv2a
+          {
+            iv2a = iv2;
+            if(iv2a.min > 0) iv2a.min = 0;
+            if(iv2a.max < 0) iv2a.max = 0;
+          }
+
+          //- III. see which (if any) is better:
+          //  * choose iv1a if iv1a is [0,0], or if iv2a is bottom.
+	  //  * otherwise, always prefer iv2a.
+          if(((iv1a.min == 0) && (iv1a.max == 0)) || iv2a.isBottom()){
+            //- choose iv1a
+            if(iv1a.isBottom()){
+              return false;
+            }
+/**/        if(flag_verbose){
+/**/          A_T_OUTPUT_NOTE_HEAD("iv1a");
+/**/          A_T_OUTPUT_NOTE_TAIL("iv1a","iv1a",iv1a);
+/**/        }
+            iv1 = iv1a;
+          } else {
+            //- choose iv2a
+            if(iv2a.isBottom()){
+              return false;
+            }
+/**/        A_T_OUTPUT_NOTE_HEAD("iv2a");
+/**/        A_T_OUTPUT_NOTE_TAIL("iv2a","iv2a",iv2a);
+            iv2 = iv2a;
+          }
+          return true;
+        }
+
+        if(num_tgt_in_elty){ //- iv2b
+/**/      A_T_OUTPUT_NOTE_HEAD("tgtychar");
+          if(iv2.min < 0) iv2.min = MINUS_INF;
+          if(iv2.max > 0) iv2.max = PLUS_INF;
+/**/      A_T_OUTPUT_NOTE_TAIL("tgtychar","iv2b",iv2);
+          return true;
+        }
+
+/**/    if(iv1.tgt_elty->getKind() != TCtype::tcVoid){
+/**/      A_T_OUTPUT_NOTE_HEAD("mismatch");
+/**/    }
+        return false;
+      }
+    }
+  }
+#undef A_T_OUTPUT_NOTE_TAIL
+#undef A_T_OUTPUT_NOTE_HEAD
+}
+
+//- If this has the form A[s]+[i,i], where i < s,
+//  then convert to A[s-i]+[0,0]
+void Interval::slide_if_constant()
+{
+  if(flag_range_do_sliding
+     && (this->tgt_elty)
+     && (this->min == this->max)
+     && (this->min != 0)
+     && (this->min < this->tgt_numelts)){
+//fprintf(stderr, "NOTE(slide_if_constant): ");
+//this->debug_dump(stderr);
+    this->tgt_numelts -= this->min;
+    this->min = this->max = 0;
+//fprintf(stderr, "  -->  ");
+//this->debug_dump(stderr);
+//fprintf(stderr, "\n");
+  }
+}
+
+//- returns true if changed
+bool Interval::minmax_union(int min, int max)
+{
+  bool changed = false;
+  if(this->min > min){
+     this->min = min;
+     changed = true;
+  }
+  if(this->max < max){
+     this->max = max;
+     changed = true;
+  }
+  return changed;
+}
+
+//- elty = 0      means "use underlying type"
+//  elty = tcVoid means plain (non-pointer) arithmetic
+//  elty = T      means pointer arithmetic on pointer-to-T
+//- NOTE: assume (int+pointer) has been normalized to (ptr+int)
+Interval Interval::plus(Interval iv, TCtype * elty) const
+{
+  Interval ret = Interval::Bottom;
+  
+  if(this->isTop() || iv.isTop()){
+    ret = Interval::Top;
+  } else if(this->isBottom() || iv.iszero()){ //- short circuit some degenerate cases
+    ret = *this;
+  } else if(iv.isBottom()){ //- short circuit some degenerate cases
+    ret = iv;
+  } else {
+    ret = *this;
+    if(adjustTypes(ret, iv, elty, true)){
+      if((ret.min != MINUS_INF) && (iv.min != MINUS_INF))
+        ret.min += iv.min;
+      else ret.min = MINUS_INF;
+
+      if((ret.max != PLUS_INF) && (iv.max != PLUS_INF))
+        ret.max += iv.max;
+      else ret.max = PLUS_INF;
+    } else {
+      ret.setBottom();
+    }
+  }
+  return ret;
+}
+
+//- elty = 0      means "use underlying type"
+//  elty = tcVoid means plain (non-pointer) arithmetic
+//  elty = T      means pointer arithmetic on pointer-to-T (ptr-int)
+// NOTE: (ptr-ptr) is covered by ptrs_minus().
+Interval Interval::minus(Interval iv, TCtype * elty) const
+{
+  Interval ret = Interval::Bottom;
+  if(this->isTop() || iv.isTop()){
+    ret = Interval::Top;
+  } else if(this->isBottom() || iv.isBottom()){
+    //-NOP: to suppress informational warnings
+  } else if(iv.iszero()){
+    ret = *this;
+  } else {
+    ret = *this;
+    if(adjustTypes(ret, iv, elty, false)){
+      if((ret.min != MINUS_INF) && (iv.max != PLUS_INF))
+        ret.min -= iv.max;
+      else ret.min = MINUS_INF;
+      if((ret.max != PLUS_INF) && (iv.min != MINUS_INF))
+        ret.max -= iv.min;
+      else ret.max = PLUS_INF;
+    } else {
+      ret.setBottom();
+    }
+  }
+  return ret;
+}
+
+//- ptr minus ptr
+Interval Interval::ptrs_minus(Interval iv, TCtype& elty) const
+{
+  if(this->isTop() || iv.isTop()){
+    return Interval::Top;
+  } else if(!this->tgt_elty && !iv.tgt_elty && (elty.getKind() == TCtype::tcChar)){
+    return this->minus(iv, &TCtype::tcVoidType);
+  } else if(this->tgt_ao && (this->tgt_ao == iv.tgt_ao)
+	    && !this->has_zero && !iv.has_zero){
+    Interval ret = Interval::Bottom;
+    if(this->tgt_elty && this->tgt_elty->equiv(*iv.tgt_elty)
+		      && this->tgt_elty->equiv(elty)){
+      if((this->min != MINUS_INF) && (iv.max != PLUS_INF))
+        ret.min = this->min - iv.max;
+      if((this->max != PLUS_INF) && (iv.min != MINUS_INF))
+        ret.max = this->max - iv.min;
+    } else {
+/**/  fprintf(stderr, "NOTE(Interval::ptrs_minus): same tgt_ao but mismatched types, this = ");
+/**/  this->debug_dump(stderr);
+/**/  fprintf(stderr, "  iv = ");
+/**/  iv.debug_dump(stderr);
+/**/  fprintf(stderr, "\n");
+    }
+    return ret;
+  } else {
+/**/if(!this->isBottom() && !iv.isBottom()){
+/**/  fprintf(stderr, "NOTE(Interval::ptrs_minus): this = ");
+/**/  this->debug_dump(stderr);
+/**/  fprintf(stderr, "  iv = ");
+/**/  iv.debug_dump(stderr);
+/**/  fprintf(stderr, "\n");
+/**/}
+    return Interval::Bottom;
+  }
+}
+
+Interval Interval::times(Interval iv) const
+{
+  Interval ret = Interval::Bottom;
+
+  if(this->isTop() || iv.isTop()){
+    ret = Interval::Top;
+  } else if((this->tgt_elty) || (iv.tgt_elty)){
+
+/**/fprintf(stderr, "WARNING(Interval::times): non-empty eltys, this = ");
+/**/this->debug_dump(stderr);
+/**/fprintf(stderr, "  iv = ");
+/**/iv.debug_dump(stderr);
+/**/fprintf(stderr, "\n");
+
+  } else if((!this->tgt_elty) && (!iv.tgt_elty) && (!this->isBottom()) && (!iv.isBottom())){
+
+//TODO: detect overflows?
+
+    ret.setTop();
+
+    if( (this->min == MINUS_INF) || (iv.min == MINUS_INF) ||
+	(this->max == MINUS_INF) || (iv.max == MINUS_INF) )
+      ret.minmax_union(MINUS_INF,MINUS_INF);
+
+    if( (this->min == PLUS_INF) || (iv.min == PLUS_INF) ||
+	(this->max == PLUS_INF) || (iv.max == PLUS_INF) )
+      ret.minmax_union(PLUS_INF,PLUS_INF);
+
+    //- max * max
+    if( (this->max != MINUS_INF) && (iv.max != MINUS_INF) &&
+	(this->max != PLUS_INF)  && (iv.max != PLUS_INF) ){
+      int tmp = this->max * iv.max;
+      ret.minmax_union(tmp,tmp);
+    }
+
+    //- min * max
+    if( (this->min != MINUS_INF) && (iv.max != MINUS_INF) &&
+	(this->min != PLUS_INF)  && (iv.max != PLUS_INF) ){
+      int tmp = this->min * iv.max;
+      ret.minmax_union(tmp,tmp);
+    }
+
+    //- max * min
+    if( (this->max != MINUS_INF) && (iv.min != MINUS_INF) &&
+	(this->max != PLUS_INF)  && (iv.min != PLUS_INF) ){
+      int tmp = this->max * iv.min;
+      ret.minmax_union(tmp,tmp);
+    }
+
+    //- min * min
+    if( (this->min != MINUS_INF) && (iv.min != MINUS_INF) &&
+	(this->min != PLUS_INF)  && (iv.min != PLUS_INF) ){
+      int tmp = this->min * iv.min;
+      ret.minmax_union(tmp,tmp);
+    }
+  }
+  return ret;
+}
+
+Interval Interval::divide(Interval iv) const
+{
+  if(this->isTop() || iv.isTop()){
+    return Interval::Top;
+  }
+
+  if((this->tgt_elty) || (iv.tgt_elty)){
+/**/fprintf(stderr, "WARNING(Interval::divide): non-empty eltys, this = ");
+/**/this->debug_dump(stderr);
+/**/fprintf(stderr, "  iv = ");
+/**/iv.debug_dump(stderr);
+/**/fprintf(stderr, "\n");
+    return Interval::Bottom;
+  }
+
+  Interval ret = Interval::Top;
+
+  int maxpos1 = this->maxpos();
+  int maxneg1 = this->maxneg();
+  int minpos1 = this->minpos();
+  int minneg1 = this->minneg();
+  int maxpos2 = iv.maxpos();
+  int maxneg2 = iv.maxneg();
+  int minpos2 = iv.minpos();
+  int minneg2 = iv.minneg();
+
+  //- line 1: [ maxpos1/minneg2 , maxpos1/minpos2 ]
+  ret.minmax_union((maxpos1 && minneg2)
+			? ((maxpos1 == PLUS_INF || minneg2 == MINUS_INF)
+			   ? MINUS_INF
+			   : (maxpos1/minneg2))
+			: PLUS_INF
+		   ,(maxpos1 && minpos2)
+			? ((maxpos1 == PLUS_INF || minpos2 == PLUS_INF)
+			   ? PLUS_INF
+			   : (maxpos1/minpos2))
+			: MINUS_INF
+		   );
+  //- line 2: [ maxneg1/minpos2 , maxneg1/minneg2 ]
+  ret.minmax_union((maxneg1 && minpos2)
+			? ((maxneg1 == MINUS_INF || minpos2 == PLUS_INF)
+			   ? MINUS_INF
+			   : (maxneg1/minpos2))
+			: PLUS_INF
+		   ,(maxneg1 && minneg2)
+			? ((maxneg1 == MINUS_INF || minneg2 == MINUS_INF)
+			   ? PLUS_INF
+			   : (maxneg1/minneg2))
+			: MINUS_INF
+		   );
+  
+  //- line 3: [ minpos1/maxpos2 , minpos1/maxneg2 ]
+  ret.minmax_union((minpos1 && maxpos2)
+			? ((minpos1 == PLUS_INF || maxpos2 == PLUS_INF)
+			   ? MINUS_INF
+			   : (minpos1/maxpos2))
+			: PLUS_INF
+		     ,(minpos1 && maxneg2)
+			? ((minpos1 == PLUS_INF || maxneg2 == MINUS_INF)
+			   ? PLUS_INF
+			   : (minpos1/maxneg2))
+			: MINUS_INF
+		     );
+  //- line 4: [ minneg1/maxneg2 , minneg1/maxpos2 ]
+  ret.minmax_union((minneg1 && maxneg2)
+			? ((minneg1 == MINUS_INF || maxneg2 == MINUS_INF)
+			   ? MINUS_INF
+			   : (minneg1/maxneg2))
+			: PLUS_INF
+		     ,(minneg1 && maxpos2)
+			? ((minneg1 == MINUS_INF || maxpos2 == PLUS_INF)
+			   ? PLUS_INF
+			   : (minneg1/maxpos2))
+			: MINUS_INF
+		     );
+
+  if(this->inclzero()){
+    ret.minmax_union(0,0);
+//  } else if(iv.inclzero()){	//- ignore divide-by-zero
+//    ret.setBottom();
+  }
+
+  return ret;
+}
+
+Interval Interval::modulo(Interval iv) const
+{
+  Interval ret = Interval::Bottom;
+
+  if(this->isTop() || iv.isTop()){
+    ret = Interval::Top;
+  } else if((this->tgt_elty) || (iv.tgt_elty)){
+
+/**/fprintf(stderr, "WARNING(Interval::modulo): non-empty eltys, this = ");
+/**/this->debug_dump(stderr);
+/**/fprintf(stderr, "  iv = ");
+/**/iv.debug_dump(stderr);
+/**/fprintf(stderr, "\n");
+
+  } else if(!this->isBottom() && !iv.isBottom()){
+
+    int max_abs = 0;
+    if((iv.max > 0) && (max_abs < iv.max-1))
+      max_abs = iv.max-1;
+    if((iv.min < 0) && (max_abs < -(iv.min+1)))
+      max_abs = -(iv.min+1);
+    
+    bool pos = false, neg = false;
+    if(this->max > 0 && iv.max > 0) pos = true;
+    if(this->min < 0 && iv.min < 0) pos = true;
+    if(this->max > 0 && iv.min < 0) neg = true;
+    if(this->min < 0 && iv.max > 0) neg = true;
+
+    ret = Interval(neg?(-max_abs):0, pos?max_abs:0);
+  }
+  return ret;
+}
+
+//TODO: detect overflows?
+int Interval::maxpos() const
+{
+  return (max > 0)?max:0;
+}
+
+int Interval::maxneg() const
+{
+  return (min < 0)?min:0;
+}
+
+int Interval::minpos() const
+{
+  if(min > 0) return min;
+  else if(max > 0) return 1;
+  else return 0;
+}
+
+int Interval::minneg() const
+{
+  if(max < 0) return max;
+  else if(min < 0) return -1;
+  else return 0;
+}
+
+bool Interval::inclzero() const
+{
+  return has_zero || ((tgt_ao == 0) && (tgt_elty == 0) && (min <= 0) && (max >= 0));
+}
+
+bool Interval::iszero() const
+{
+  return ((tgt_ao == 0) && (tgt_elty == 0) && (min == 0) && (max == 0));
+}
+
+@
+
+
+1.56
+log
+@REPAIRS:
+ 1. fixed Interval::divide to be compliant with
+    recent change to isTop().
+IMPROVEMENT:
+ 2. Interval::widen now adds an extra stopper at
+    0 when widening positive min values:
+    captures a common(?) case of divide-and-conquer?
+    (not quite fully captured, due to over-large
+    GMOD set)
+@
+text
+@d28 1
+a28 1
+        fprintf(stderr, "ERROR(Interval::setTgt): ao has no static type: ");
+@
+
+
+1.55
+log
+@Changed Interval::isTop() to return true
+if min==+INF or max==-INF.
+Note: significant improvements in results -- suspicious?
+@
+text
+@d296 9
+a304 2
+       this->min = MINUS_INF;
+       changed = true;
+d485 2
+a486 8
+    if(this->min > iv.min){
+       this->min = iv.min;
+       changed = true;
+    }
+    if(this->max < iv.max){
+       this->max = iv.max;
+       changed = true;
+    }
+d981 15
+d1114 1
+a1114 1
+      ret.meet(Interval(MINUS_INF,MINUS_INF));
+d1118 1
+a1118 1
+      ret.meet(Interval(PLUS_INF,PLUS_INF));
+d1124 1
+a1124 1
+      ret.meet(Interval(tmp,tmp));
+d1131 1
+a1131 1
+      ret.meet(Interval(tmp,tmp));
+d1138 1
+a1138 1
+      ret.meet(Interval(tmp,tmp));
+d1145 1
+a1145 1
+      ret.meet(Interval(tmp,tmp));
+d1178 1
+a1178 1
+  ret.meet(Interval((maxpos1 && minneg2)
+d1188 1
+a1188 1
+		   ));
+d1190 1
+a1190 1
+  ret.meet(Interval((maxneg1 && minpos2)
+d1200 1
+a1200 1
+		   ));
+d1202 2
+a1203 5
+  if(this->inclzero()){
+    ret.meet(Interval(0,0));
+  } else {
+    //- line 3: [ minpos1/maxpos2 , minpos1/maxneg2 ]
+    ret.meet(Interval((minpos1 && maxpos2)
+d1213 3
+a1215 3
+		     ));
+    //- line 4: [ minneg1/maxneg2 , minneg1/maxpos2 ]
+    ret.meet(Interval((minneg1 && maxneg2)
+d1225 6
+a1230 1
+		     ));
+a1231 3
+
+  if(ret.min == PLUS_INF) ret.min = MINUS_INF;
+  if(ret.max == MINUS_INF) ret.max = PLUS_INF;
+@
+
+
+1.54
+log
+@Added flag_range_skip_targeted_preds: when set, will
+not try to improve ranges at predicates for targeted
+ranges (improve only NULL-targeted ranges).
+@
+text
+@d217 4
+a220 1
+  return (this->min > this->max);
+@
+
+
+1.53
+log
+@Stupid bug in Interval::minus - missing "else" restored.
+@
+text
+@d624 3
+@
+
+
+1.52
+log
+@Suppressed "zero size encountered" error message for
+exactsizes, when lhs is void type.
+@
+text
+@d1014 1
+a1014 1
+  } if(this->isBottom() || iv.isBottom()){
+@
+
+
+1.51
+log
+@stupid error in last fix;
+@
+text
+@d816 8
+a823 5
+/**/      fprintf(stderr, "ERROR(adjustTypes): zero size encountered: sizeof tgty : ");
+/**/      iv1.tgt_elty->debug_dump(stderr);
+/**/      fprintf(stderr, " = %d,  sizeof elty : ", tgty_size);
+/**/      elty->debug_dump(stderr);
+/**/      fprintf(stderr, " = %d\n", elty_size);
+@
+
+
+1.50
+log
+@Disabled widen/adjusted debug message.
+@
+text
+@d283 1
+a283 1
+				this->tgt_numelts, iv.tgt_numelts);
+@
+
+
+1.49
+log
+@Removed some diagnostic output; verbose-guarded others;
+k-limited yet others.
+@
+text
+@d282 1
+a282 1
+/**/fprintf(stderr, "WARNING(Interval::widen): adjusted tgt_numelts %d -> %d\n",
+@
+
+
+1.48
+log
+@AO: removed isPartOf(), replaced with getEnclosingStruct()
+which returns the outermost non-S/U-dotted AO.
+
+RAN: added removeArgIntervalsExceptFor() and
+removeRetIntervalsExcept(), which are used to
+clean up AOArg and AOReturn objects that would
+otherwise be unnecessarily propagated around.
+
+RAN: changed reconstitute so that if there is
+a clash, take the rf_local version rather than
+the default (previous) incoming-df version.
+@
+text
+@d113 1
+a113 1
+/**/          if(!this->tgt_ao)
+d135 5
+a139 5
+/**/fprintf(stderr, "NOTE(adjustStructOffset): could not struct-adjust ");
+/**/this->debug_dump(stderr);
+/**/fprintf(stderr, " to ");
+/**/TCtype::debug_dump_list(tylist, stderr);
+/**/fprintf(stderr, "\n");
+d154 1
+a154 1
+/**/              if(!this->tgt_ao)
+d324 1
+d330 1
+d390 3
+a392 2
+/**/  fprintf(stderr, "WARNING(Interval::narrow): adjusted tgt_numelts %d -> %d\n",
+				this->tgt_numelts, iv.tgt_numelts);
+d428 1
+d434 1
+d504 1
+d510 1
+d755 5
+a759 1
+/**/A_T_OUTPUT_NOTE_HEAD("rhs_has_tgt");
+d916 4
+a919 2
+/**/        A_T_OUTPUT_NOTE_HEAD("iv1a");
+/**/        A_T_OUTPUT_NOTE_TAIL("iv1a","iv1a",iv1a);
+d941 3
+a943 1
+/**/    A_T_OUTPUT_NOTE_HEAD("mismatch");
+@
+
+
+1.47
+log
+@Modified Interval/RAN functions to account for
+is_top case;
+also, introduced Interval::Bottom member to make
+bottom initialization and returning more explicit
+(readable).
+@
+text
+@d200 2
+a201 1
+  if(this->tgt_ao && this->tgt_ao->isPartOf(ao)){
+@
+
+
+1.46
+log
+@Minor adjustment to narrow().
+@
+text
+@d98 1
+d211 1
+d606 6
+a611 1
+  if(this->isBottom()){ //- bottom intersect iv = iv
+d873 2
+a874 2
+          Interval iv1a; //- default: bottom
+          Interval iv2a; //- default: bottom
+d961 1
+a961 1
+  Interval ret;	//- default constructor = bottom
+d963 3
+a965 1
+  if(this->isBottom() || iv.iszero()){ //- short circuit some degenerate cases
+d992 4
+a995 2
+  Interval ret;
+  if(this->isBottom() || iv.isBottom()){
+d1018 3
+a1020 1
+  if(!this->tgt_elty && !iv.tgt_elty && (elty.getKind() == TCtype::tcChar)){
+d1024 1
+a1024 1
+    Interval ret;
+d1047 1
+a1047 1
+    return Interval();
+d1053 1
+a1053 1
+  Interval ret;
+d1055 3
+a1057 1
+  if((this->tgt_elty) || (iv.tgt_elty)){
+d1112 4
+d1122 1
+a1122 1
+    return Interval();
+d1198 1
+a1198 1
+  Interval ret;
+d1200 3
+a1202 1
+  if((this->tgt_elty) || (iv.tgt_elty)){
+@
+
+
+1.45
+log
+@Added Malloc arg-evaluation mechanism:
+
+- RAN: added evalSizeOfExpr() and evalMallocSize();
+- AOMalloc: added mtype/msize members, and meetMallocStaticType()
+  function to set those at each MallocDecl node;
+- Interval::setTgt now checks for AOMalloc, and uses its
+  mtype/msize members to set tgt_ty/tgt_numelts;
+- Interval addedisNullTgted() helper;
+@
+text
+@d351 3
+a353 3
+/**/fprintf(stderr, "WARNING(Interval::narrow): narrow with top, this = ");
+/**/this->debug_dump(stderr);
+/**/fprintf(stderr, "\n");
+d414 7
+@
+
+
+1.44
+log
+@Changed RAN::handleDecl filtering of facts with target =
+AO: previously, set to bottom if target is ao; now, just
+set tgt_ao = 0 unless flag_range_must_have_ao -- basically
+let Interval class decide what to do.
+Entailed renaming of:
+  RANfact::removeIntervalsWithTarget()
+  to       disableIntervalsWithTarget
+and name/functionality change of:
+  Interval::targetIsPartOf()
+  to        disableIfTargetIsPartOf()
+@
+text
+@d15 18
+a32 8
+    TCtype * aoty = ao.getStaticType();
+    if(aoty){
+      this->setTgt(*aoty);
+    } else {
+      fprintf(stderr, "ERROR(Interval::setTgt): ao has no static type: ");
+      ao.dump_descr(stderr);
+      fprintf(stderr, "\n");
+      this->setBottom();
+@
+
+
+1.43
+log
+@Modified adjustStructOffset()'s tgt_ao part to also
+handle members of array-of-structs.
+@
+text
+@d186 2
+a187 1
+bool Interval::targetIsPartOf(AO& ao) const
+d189 6
+a194 2
+  if(this->tgt_ao){
+    return this->tgt_ao->isPartOf(ao);
+@
+
+
+1.42
+log
+@Changed the whole AO::get_AO[SU]Dot mechanism -- now
+split into two sets of functions:
+ - get_or_create_AO[SU]Dot() is AO-protected, and is
+   called to get, or create if not found, and follows
+   the old semantics of get_AO[SU]Dot (deleting the
+   type if found, etc).
+ - get_AO[SU]Dot() not returns a pointer, and returns
+   null if not found.
+
+So now, interval calls the public version which may
+return null; cascadingly, Interval::adjustStructOffset
+no longer consumes tylist -- the consumption is now
+taken care of by the RAN callsites.
+@
+text
+@d97 4
+a100 2
+            if(this->tgt_ao->getStaticType()
+		&& this->tgt_ao->getStaticType()->equiv(*this->tgt_elty)){
+d138 4
+a141 3
+                if(this->tgt_ao->getStaticType()
+			&& this->tgt_ao->getStaticType()->equiv(*this->tgt_elty)){
+	 	  //- (this->tgt_ao->staticType may be leaked)
+@
+
+
+1.41
+log
+@1. changed behavior of flag_range_ty_can_change:
+   a. if must-have-ao, then it controls whether ty
+      can change.
+   b. if NOT must-have-ao, then it only controls
+      application of transformation (1a').
+   (The difference; the former includes changing numelts
+    when meet-ing, etc)
+2. BUG FIX: a couple of missing "return true"s in
+   adjustType() for exact_sizes cases.
+3. FIXED: non-exact_size iv2a case -- if min>0 or max<0,
+   can set to ZERO instead of -/+INFINITY (which I'd
+   done before, overly conservatively).
+@
+text
+@a85 2
+//- NOTE: must consume tylist
+//- TODO: I think there may be some holes w.r.t. (multi-dimensional?) arrays of structs.
+d99 3
+a101 1
+              this->tgt_ao = &this->tgt_ao->get_AOSDot(tylist);		//TODO: may have ECR issues: see AO::get_AOSDot()
+d104 1
+a104 1
+              return; //tylist consumed: don't delete
+a112 1
+                TCtype::deleteTyList(tylist);
+a119 1
+          TCtype::deleteTyList(tylist);
+d139 3
+a141 1
+                  this->tgt_ao = &this->tgt_ao->get_AOUDot(*tli.Current());	//TODO: may have ECR issues: see AO::get_AOUDot()
+a149 1
+                    TCtype::deleteTyList(tylist);
+a156 1
+              TCtype::deleteTyList(tylist);
+a180 1
+  TCtype::deleteTyList(tylist);
+@
+
+
+1.40
+log
+@Added flag_range_exact_sizes to assume exact sizes
+when doing type-mismatch transformations.
+@
+text
+@d266 1
+a266 1
+      if(!flag_range_ty_can_change){
+d324 3
+a326 3
+/**/fprintf(stderr, "WARNING(Interval::narrow): top narrow this = ");
+/**/this->debug_dump(stderr);
+/**/fprintf(stderr, "\n");
+d372 1
+a372 1
+      if(!flag_range_ty_can_change){
+d437 1
+a437 1
+      if(!flag_range_ty_can_change){
+d515 1
+a515 1
+    if(flag_range_ty_can_change &&
+d670 1
+a670 1
+//                {-INF, if rmin > 0 } {+INF, if rmax < 0 }
+d774 1
+d781 1
+d792 1
+d803 2
+d823 3
+d863 2
+a864 2
+            if(iv2a.min > 0) iv2a.min = MINUS_INF;
+            if(iv2a.max < 0) iv2a.max = PLUS_INF;
+d867 12
+a878 5
+          //- III. see which (if any) is better: prefer non-bot and non-infinite max
+						// conditions in which to prefer iv2a are:
+          if(((iv2a.min != MINUS_INF) && (iv2a.max != PLUS_INF))	//- iv2a is precise, or
+		|| iv1a.isBottom()					//- iv1a is bottom, or
+		|| (iv1a.max == PLUS_INF && iv2a.max != PLUS_INF)){	//- iv2a has a more non-infinite max
+a885 8
+          } else {
+            //- choose iv1a
+            if(iv1a.isBottom()){
+              return false;
+            }
+/**/        A_T_OUTPUT_NOTE_HEAD("iv1a");
+/**/        A_T_OUTPUT_NOTE_TAIL("iv1a","iv1a",iv1a);
+            iv1 = iv1a;
+@
+
+
+1.39
+log
+@Minor fix in remote adjustStructOffset cases.
+@
+text
+@d2 1
+a2 1
+#include "flags.h" //- for flag_range_zero_special, flag_strlit_readonly, flag_range_handle_malloc
+d739 1
+a739 1
+      // convert iv2b
+d741 9
+a749 2
+      if(iv2.min < 0) iv2.min = MINUS_INF;
+      if(iv2.max > 0) iv2.max = PLUS_INF;
+d760 1
+a760 1
+//  A_T_OUTPUT_NOTE_HEAD("rhs_array");
+d763 1
+a763 1
+//  A_T_OUTPUT_NOTE_TAIL("rhs_array","iv2_adj",iv2);
+d768 4
+a771 2
+      int num_elty_in_tgt = iv1.tgt_elty->countInstancesOf(*elty);
+      int num_tgt_in_elty = elty->countInstancesOf(*iv1.tgt_elty);
+d773 53
+a825 1
+      if(num_elty_in_tgt > 0 && num_tgt_in_elty > 0){
+d832 2
+a833 2
+        return false;
+      }
+d835 3
+a837 3
+      if(num_elty_in_tgt > 0){
+        Interval iv1a; //- default: bottom
+        Interval iv2a; //- default: bottom
+d839 2
+a840 2
+        //- I. try iv1a: only if |elty| <= |iv1.elty|
+        if(flag_range_ty_can_change){
+d842 2
+a843 2
+          iv1a = iv1;
+          iv1a.slide_if_constant(); //- FIRST: slide iv1a if offset is constant
+d845 6
+a850 6
+          //- convert iv1a, but with elty instead of char
+          iv1a.tgt_elty = elty;	//NOTE: old tgt_elty may be leaked ~~ but currently, there's no helping it.
+          iv1a.tgt_numelts *= num_elty_in_tgt;
+          if(iv1a.min < 0) iv1a.min = MINUS_INF;
+          if(iv1a.max > 0) iv1a.max = PLUS_INF;
+        }
+d852 6
+a857 6
+        //- II. try iv2a
+        {
+          iv2a = iv2;
+          if(iv2a.min > 0) iv2a.min = MINUS_INF;
+          if(iv2a.max < 0) iv2a.max = PLUS_INF;
+        }
+d859 1
+a859 1
+        //- III. see which (if any) is better: prefer non-bot and non-infinite max
+d861 18
+a878 6
+        if(((iv2a.min != MINUS_INF) && (iv2a.max != PLUS_INF))	//- iv2a is precise, or
+	   || iv1a.isBottom()					//- iv1a is bottom, or
+	   || (iv1a.max == PLUS_INF && iv2a.max != PLUS_INF)){	//- iv2a has a more non-infinite max
+          //- choose iv2a
+          if(iv2a.isBottom()){
+            return false;
+d880 9
+a888 11
+/**/      A_T_OUTPUT_NOTE_HEAD("iv2a");
+/**/      A_T_OUTPUT_NOTE_TAIL("iv2a","iv2a",iv2a);
+          iv2 = iv2a;
+        } else {
+          //- choose iv1a
+          if(iv1a.isBottom()){
+            return false;
+          }
+/**/      A_T_OUTPUT_NOTE_HEAD("iv1a");
+/**/      A_T_OUTPUT_NOTE_TAIL("iv1a","iv1a",iv1a);
+          iv1 = iv1a;
+a889 2
+        return true;
+      }
+d891 2
+a892 6
+      if(num_tgt_in_elty){ //- iv2b
+/**/    A_T_OUTPUT_NOTE_HEAD("tgtychar");
+        if(iv2.min < 0) iv2.min = MINUS_INF;
+        if(iv2.max > 0) iv2.max = PLUS_INF;
+/**/    A_T_OUTPUT_NOTE_TAIL("tgtychar","iv2b",iv2);
+        return true;
+a893 3
+
+/**/  A_T_OUTPUT_NOTE_HEAD("mismatch");
+      return false;
+@
+
+
+1.38
+log
+@Added flag_range_handle_predicates to control whether
+or not to try to improve ranges for predicates.
+
+Predicate handling (cond_intersect) updated so that
+two non-aliasing-loc -targeted ranges can set to top
+only if they're both in-bounds.
+
+Known-predicate stat-counter now only counts STMT and
+QC predicates -- previously was double counting &&/||
+predicates within a STMT predicate.
+*NOTE*: the current flow-sensitive representation for
+predicates are _BROKEN_ -- they're ad-hoc (OK for
+redundant checks?), and don't look entirely correct
+for RAN analysis evaluation!  Try e.g. (i++>0).
+@
+text
+@a161 1
+          if(!tli.Current()){
+d167 1
+a167 2
+            this->setBottom();
+          }
+d175 1
+@
+
+
+1.37
+log
+@Collecting RAN stats (all-vps, finite-vps, half-finite-vps, inbounds-vps,
+known-preds):
+ - RAN replaced checkInBounds() with getDerefRangeFor()
+ - added reportKnownPredicate() helper to RAN[c]factHandler
+ - added list accumulators to RANcFactHandler
+ - added count holders to TCAstate
+
+Interval::isTop() - now returns true of min > max!
+(was returning only if min = +inf, max = -inf!)
+
+Interval: added "modulo" to compute %.
+
+AO::get_AOUDot/get_AOSDot() - unify ecr if called after pt-analysis.
+@
+text
+@d577 2
+a578 1
+//      the same structure), then can set to Top.
+d611 4
+a614 3
+  } else if(this->tgt_ao && iv.tgt_ao &&	//- if both have targeted locs, and they don't alias, can set to top!
+	    (&this->tgt_ao->getRootAO() != &iv.tgt_ao->getRootAO())){
+    this->setTop();
+@
+
+
+1.36
+log
+@OVERHAUL: removed flag_range_target_aos, replaced with
+ - flag_range_must_have_ao: do we support ao=bottom?
+ - flag_ty_can_change: must interval's ty equal loc's ty?
+ - flag_range_do_sliding: allow sliding transformation?
+Changed command-line flags: -ran-DO, -ran-LO should be
+the default ones to use, while the above flags can be
+individually manipulated for data collection.
+
+CHANGED Interval::adjustStructOffset to also change the
+ao target (if possible; currently doesn't handle array-of
+structs correctly sometimes).
+
+CHANGED Interval::adjustTypes to support the full type
+assumptions (incl |char|<=|short|<=|int|...).  This is
+actually implemented in TCtype::countInstancesOf.
+This resulted in greatly-streamlined code.
+
+CHANGED Interval::cond_intersect to allow intersection
+to go to Top in cases when we know the two sides don't
+intersect.
+@
+text
+@d101 1
+a101 1
+              this->tgt_ao = &this->tgt_ao->get_AOSDot(tylist);
+d140 2
+a141 1
+                  this->tgt_ao = &this->tgt_ao->get_AOUDot(*tli.Current());	//- (this->tgt_ao->staticType may be leaked)
+d200 1
+a200 1
+  return (this->min == PLUS_INF) && (this->max == MINUS_INF);
+d1085 32
+@
+
+
+1.35
+log
+@Modified so that under -tgt-ao mode (flag_range_target_aos),
+elty can still be modified.
+This will account for, at least, proper handling of multi-
+dimensional arrays under LO mode.
+@
+text
+@d2 1
+a2 1
+#include "flags.h" //- for flag_range_target_aos, flag_range_zero_special, flag_strlit_readonly, flag_range_handle_malloc
+d11 1
+a11 3
+    if(flag_range_target_aos){
+      this->tgt_ao = &ao;
+    }
+d86 2
+a87 1
+//- NOTE: cannot store reference to tylist, as it will be deleted
+d98 21
+d121 2
+a122 1
+          this->tgt_ao = 0; //- too many potential leakage problems if we try to set corresponding ao
+d137 18
+d157 2
+a158 2
+              this->tgt_ao = 0; //- too many potential leakage problems if we try to set corresponding ao
+              break;
+d183 1
+d208 10
+a241 1
+  bool changed = false;
+d243 1
+a243 1
+    changed = false;
+d246 17
+a262 5
+    changed = true;
+  } else if(((flag_range_target_aos) ? (this->tgt_ao == iv.tgt_ao) : 1)
+	    && ((this->tgt_elty == iv.tgt_elty) ||
+		(this->tgt_elty && iv.tgt_elty && this->tgt_elty->equiv(*iv.tgt_elty)))
+	   ){
+d266 4
+d271 1
+d273 1
+d291 3
+a296 1
+      changed = true;
+d298 1
+d304 1
+a304 1
+    changed = true;
+d312 1
+a312 1
+    changed = true;
+d314 1
+a314 1
+  return changed;
+d340 3
+a342 4
+  } else if(((flag_range_target_aos) ? (this->tgt_ao == iv.tgt_ao) : 1)
+	    && ((this->tgt_elty == iv.tgt_elty) ||
+		(this->tgt_elty && iv.tgt_elty && this->tgt_elty->equiv(*iv.tgt_elty)))
+	   ){
+d346 23
+d370 1
+a370 1
+/**/fprintf(stderr, "WARNING(Interval::narrow): adjusted tgt_numelts %d -> %d\n",
+d372 5
+a376 1
+       this->tgt_numelts = iv.tgt_numelts;
+d378 1
+d422 14
+a435 4
+  } else if(((flag_range_target_aos) ? (this->tgt_ao == iv.tgt_ao) : 1)
+	    && ((this->tgt_elty == iv.tgt_elty) ||
+		(this->tgt_elty && iv.tgt_elty && this->tgt_elty->equiv(*iv.tgt_elty)))
+	   ){
+d437 6
+a442 4
+/**/if(flag_range_target_aos){
+/**/  fprintf(stderr, "ERROR(Interval::meet): mismatched tgt_numelts %d -> %d\n", this->tgt_numelts, iv.tgt_numelts);
+/**/}
+       this->tgt_numelts = iv.tgt_numelts;
+d444 1
+a484 2
+//  NOTE: under tgt_elty/numelts scheme, we can only
+//  do intersection for integral (non-targeted") intervals.
+d494 27
+a520 4
+  } else if((flag_range_target_aos)
+	    ?(this->tgt_ao == iv.tgt_ao)
+	    :(!this->tgt_elty && !iv.tgt_elty) //- integral (non-targeted) interval
+	   ){
+d529 1
+a565 4
+//- NOTE: Under the tgt_elty/numelts model, we
+//  can only shrink integral (non-targeted) intervals.
+//  This is because, even if this->tgt == iv.tgt,
+//  they may refer to different objects!
+d569 9
+d586 15
+a600 4
+  } else if((flag_range_target_aos)
+	    ?(this->tgt_ao == iv.tgt_ao)
+	    :(!this->tgt_elty && !iv.tgt_elty) //- integral (non-targeted) interval
+	   ){
+d609 4
+d630 9
+a638 3
+//  typing policies:
+//  - For now, doing most-portable policy, which assumes only that
+//    tcChar is the smallest type unit and tcChar has a size of "1".
+d659 3
+a661 5
+//  IMPLEMENTED SOLUTION: since we assume no sizeof information except for
+//    i.  sizeof(char) == 1
+//    ii. sizeof(char) <= sizeof(T) for all T
+//  our solution is as follows:  (assume elty != tgty, else no conversion is needed)
+//   A. if (elty == char), which implies |tgty/elty| >= 1,
+d663 3
+a665 3
+//                              {tmin, if tmin >= 0} {tmax, if tmax <= 0}
+//        iv1a = <char,size> + [{                  },{                  }]
+//                              {-INF, if tmin < 0 } {+INF, if tmax > 0 }
+d672 2
+a673 5
+//      Current solution: (aim for precise max)
+//        For addition: do iv2a only if rmax>=0 AND tmax > 0;
+//        For subtraction: do iv2a only if rmin<=0 AND tmax > 0;
+//      otherwise do iv1a.
+//   B. if (tgty == char), which implies |elty/tgty| >= 1,
+d679 1
+a679 1
+//   C. if neither elty nor tgty is char
+a680 1
+//      EXCEPT: see REFINEMENTS below
+d702 2
+d707 2
+a708 2
+	&& ((elty->getKind() == TCtype::tcVoid)
+	    || (elty->getKind() == TCtype::tcChar))){
+d720 3
+d726 1
+a726 1
+  } else if(!elty){ //- "use underlying type" (no conflict)  ==> should be the common case <==
+d728 1
+a728 3
+  } else if(  (elty->getKind() == TCtype::tcVoid)   //- plain (non-pointer) arith
+	   || (elty->getKind() == TCtype::tcChar)){ //  or char ptr arith (assumed equal to non-ptr arith)
+    if(!iv1.tgt_elty){
+d730 7
+a736 33
+    } else if(iv1.tgt_elty->getKind() == TCtype::tcChar) {
+      return true; 
+    } else { //- iv1.tgt_elty is non-char type
+      //- See comments for 'A' above.
+/**/  A_T_OUTPUT_NOTE_HEAD("unit");
+      if(iv1.max > 0 && (addition?(iv2.max >= 0):(iv2.min <= 0))){
+        //- convert iv2a
+        if(iv2.min > 0) iv2.min = MINUS_INF;
+        if(iv2.max < 0) iv2.max = PLUS_INF;
+/**/    A_T_OUTPUT_NOTE_TAIL("unit","iv2a",iv2);
+      } else {
+        //- convert iv1a
+
+        //- FIRST: slide iv1 if offset is constant
+        if(!flag_range_target_aos)
+          iv1.slide_if_constant();
+
+        //  REFINEMENT 1: multiply <size> by countNumUnits(tgty),
+        //    which is an underestimation of the size of tgty
+        //    in bytes (will be >1 for struct/union only).
+
+        int tgty_size = iv1.tgt_elty->countNumUnits(); //- underestimation of the size of oldType in bytes
+        iv1.tgt_elty = &TCtype::tcCharType;	//NOTE: old tgt_elty may be leaked ~~ but currently, there's no helping it.
+        if(tgty_size > 1) iv1.tgt_numelts *= tgty_size;
+        if(iv1.min < 0) iv1.min = MINUS_INF;
+        if(iv1.max > 0) iv1.max = PLUS_INF;
+/**/    if(tgty_size > 1) fprintf(stderr, "  NOTE(adjustTypes): size augmented by size estimate = %d\n", tgty_size);
+/**/    A_T_OUTPUT_NOTE_TAIL("unit","iv1a",iv1);
+      }
+      return true;
+    }
+  } else { //- elty is non-unit (not tcChar or tcVoid)
+    if(!iv1.tgt_elty){ //- iv1 has no target:
+d743 3
+a745 3
+    } else if(iv1.tgt_elty->equiv(*elty)){ //- types match: OK
+      return true;
+    } else if(elty->getKind() == TCtype::tcArray){ //- types match: OK
+d750 2
+a751 1
+/**/  A_T_OUTPUT_NOTE_HEAD("rhs_array");
+d754 1
+a754 1
+/**/  A_T_OUTPUT_NOTE_TAIL("rhs_array","iv2_adj",iv2);
+a755 1
+    } else { //- types don't match
+d757 60
+a816 17
+      //- AGAIN: slide iv1 if offset is constant
+      if(!flag_range_target_aos)
+        iv1.slide_if_constant();
+
+      //- REFINEMENT 2: use countInstancesOf to estimate the
+      //  number of elty's that would fit in iv1.tgt_ty; if
+      //  this succeeds, do the iv1a approximation.
+      //  ~ Let's do this if it won't go to bottom
+      int numelty = iv1.tgt_elty->countInstancesOf(*elty);
+      if(numelty && (iv1.min >= 0 || iv1.max <= 0)){
+        //- convert iv1a, but with elty instead of char
+/**/    A_T_OUTPUT_NOTE_HEAD("count_insts");
+        iv1.tgt_elty = elty;	//NOTE: old tgt_elty may be leaked ~~ but currently, there's no helping it.
+        iv1.tgt_numelts *= numelty;
+        if(iv1.min < 0) iv1.min = MINUS_INF;
+        if(iv1.max > 0) iv1.max = PLUS_INF;
+/**/    A_T_OUTPUT_NOTE_TAIL("count_insts","iv1a",iv1);
+d818 3
+a820 2
+      } else if(iv1.tgt_elty->getKind() == TCtype::tcChar){ //- tgty is char
+        // convert iv2b
+a825 3
+      } else { //- types don't match: fail
+/**/    A_T_OUTPUT_NOTE_HEAD("mismatch");
+        return false;
+d827 3
+a835 1
+//- only called by adjustTypes, when flag_range_target_aos == false
+d840 2
+a841 1
+  if(this->tgt_elty
+d845 2
+a846 2
+/**/fprintf(stderr, "NOTE(slide_if_constant): ");
+/**/this->debug_dump(stderr);
+d849 3
+a851 3
+/**/fprintf(stderr, "  -->  ");
+/**/this->debug_dump(stderr);
+/**/fprintf(stderr, "\n");
+d916 2
+a917 2
+  } else if(flag_range_target_aos){
+
+d919 12
+a930 16
+    if((this->tgt_ao == iv.tgt_ao)
+	&& !this->has_zero && !iv.has_zero){
+      if(this->tgt_elty
+	&& this->tgt_elty->equiv(*iv.tgt_elty)
+	&& this->tgt_elty->equiv(elty)){
+        if((this->min != MINUS_INF) && (iv.max != PLUS_INF))
+          ret.min = this->min - iv.max;
+        if((this->max != PLUS_INF) && (iv.min != MINUS_INF))
+          ret.max = this->max - iv.min;
+      } else {
+/**/    fprintf(stderr, "NOTE(Interval::ptrs_minus): same tgt_ao but mismatched types, this = ");
+/**/    this->debug_dump(stderr);
+/**/    fprintf(stderr, "  iv = ");
+/**/    iv.debug_dump(stderr);
+/**/    fprintf(stderr, "\n");
+      }
+d933 1
+a933 2
+
+  } else { //- range target=elty/size
+@
+
+
+1.34
+log
+@Range analysis: added support for evaluating arroW/Member
+expressions.  Changes are:
+ - TCtype::listEquivPrefix: instead of returning bool,
+   now returns the TCtype of the last matching item.
+ - Interval: added setTgt(TCtype&), which was previously
+   included as part of setTgt(AO&).
+ - Interval: added adjustStructOffset() to perform the
+   meat of the arroW/Member handling.
+ - RANfact: added handlers for arroW/Member.
+@
+text
+@d198 3
+a200 4
+  } else if((flag_range_target_aos)
+	    ?(this->tgt_ao == iv.tgt_ao)
+	    :((this->tgt_elty == iv.tgt_elty) ||
+	      (this->tgt_elty && iv.tgt_elty && this->tgt_elty->equiv(*iv.tgt_elty)))
+d205 1
+a205 1
+       this->tgt_numelts = iv.tgt_numelts;
+d236 1
+a236 1
+/**/fprintf(stderr, "WARNING(Interval::widen): mismatched eltys, this = ");
+d270 3
+a272 4
+  } else if((flag_range_target_aos)
+	    ?(this->tgt_ao == iv.tgt_ao)
+	    :((this->tgt_elty == iv.tgt_elty) ||
+	      (this->tgt_elty && iv.tgt_elty && this->tgt_elty->equiv(*iv.tgt_elty)))
+d303 1
+a303 1
+/**/fprintf(stderr, "WARNING(Interval::narrow): mismatched eltys, this = ");
+d325 3
+a327 4
+  } else if((flag_range_target_aos)
+	    ?(this->tgt_ao == iv.tgt_ao)
+	    :((this->tgt_elty == iv.tgt_elty) ||
+	      (this->tgt_elty && iv.tgt_elty && this->tgt_elty->equiv(*iv.tgt_elty)))
+d364 1
+a364 1
+/**/fprintf(stderr, "NOTE(Interval::meet): mismatched eltys, this = ");
+a467 3
+//- IF flag_range_target_aos == true:
+//    return true only if lhs ao type is compatible with elty
+//- ELSE:...
+a570 4
+  } else if(flag_range_target_aos){
+    return ((iv1.tgt_ao)
+		? (iv1.tgt_elty->equiv(*elty)) //- types match: OK
+		: ((elty->getKind() == TCtype::tcVoid) || (elty->getKind() == TCtype::tcChar)));
+d589 2
+a590 1
+        iv1.slide_if_constant();
+d629 2
+a630 1
+      iv1.slide_if_constant();
+d747 15
+a761 6
+	&& !this->has_zero && !iv.has_zero
+	&& this->tgt_elty && this->tgt_elty->equiv(elty)){
+      if((this->min != MINUS_INF) && (iv.max != PLUS_INF))
+        ret.min = this->min - iv.max;
+      if((this->max != PLUS_INF) && (iv.min != MINUS_INF))
+        ret.max = this->max - iv.min;
+@
+
+
+1.33
+log
+@Minor bug fix(es):
+ 1. Interval::ptrs_minus()
+    Need to account for has_zero -- if either argument
+    has zero, return bottom.
+ 2. RANfactHandled::handleDecl()
+    When declaring x, need to remove both
+    1. fact for x, and
+    2. facts whose interval target ao is x
+    because of new scope/aliasing potential.
+    (Entailed introduction of helpers in many
+    classes, including AO.)
+Note: 2 is the clean solution, but appears to be
+technically unnecessary with context-insensitive
+analysis, since any recursive loop (for which the
+new scope/aliasing problem arises) must have an
+external in-edge which should bottom out any facts
+affecting x.
+@
+text
+@d14 3
+d19 1
+a19 15
+      if(aoty->getKind() == TCtype::tcVoid){
+        this->setBottom();
+      } else {
+        int numelts = 1;
+        while(aoty->getKind() == TCtype::tcArray){
+          TCnumType& arty = (TCnumType&)*aoty;
+          aoty = &arty.getBaseType();
+          numelts *= arty.getSize();
+        }
+        this->tgt_elty = aoty;
+        this->tgt_numelts = numelts;
+        if(flag_strlit_readonly && ao.getKind() == AO::aoStringLit){
+          this->tgt_readonly = true;
+        }
+      }
+d29 17
+d84 60
+@
+
+
+1.32
+log
+@Added support for AO-targeted intervals:
+ - global flag_range_target_aos
+ - command line flags -ran-tgt-ao -ran-tgt-elty (default)
+ - new ao member of Interval class
+ - changed interval.cpp code to support ao-targeted mode,
+   including code for ptrs_minus and precise handling
+   of targeted intervals in predicates (cond_intersect()).
+@
+text
+@d2 1
+a2 1
+#include "flags.h" //- for flag_range_target_mode, flag_range_zero_special, flag_strlit_readonly, flag_range_handle_malloc
+d80 8
+d689 1
+@
+
+
+1.31
+log
+@Softened constraint on applying "refinement 2" (countInstancesOf):
+before, only did it if min>=0 AND max<=0; now, doing if EITHER
+of the two conditions hold.
+@
+text
+@d2 1
+a2 1
+#include "flags.h" //- for flag_range_zero_special, flag_strlit_readonly, flag_range_handle_malloc
+d11 3
+d51 4
+d96 1
+d107 1
+d124 5
+a128 2
+  } else if((this->tgt_elty == iv.tgt_elty) ||
+	    (this->tgt_elty && iv.tgt_elty && this->tgt_elty->equiv(*iv.tgt_elty))){
+d197 5
+a201 2
+  } else if((this->tgt_elty == iv.tgt_elty) ||
+	    (this->tgt_elty && iv.tgt_elty && this->tgt_elty->equiv(*iv.tgt_elty))){
+d253 5
+a257 2
+  } else if((this->tgt_elty == iv.tgt_elty) ||
+	    (this->tgt_elty && iv.tgt_elty && this->tgt_elty->equiv(*iv.tgt_elty))){
+d259 3
+d315 4
+a318 1
+  } else if(!this->tgt_elty && !iv.tgt_elty){ //- integral (non-targeted) interval
+d337 1
+d378 4
+a381 1
+  } else if(!this->tgt_elty && !iv.tgt_elty){ //- integral (non-targeted) interval
+d397 3
+d503 4
+d597 1
+d672 1
+a672 1
+//- ptr minus ptr (currently not handled precisely)
+d675 15
+d697 2
+a698 1
+  return Interval();
+d706 1
+a711 1
+  }
+d713 2
+a714 1
+  if((!this->tgt_elty) && (!iv.tgt_elty) && (!this->isBottom()) && (!iv.isBottom())){
+d866 1
+a866 1
+  return has_zero || ((tgt_elty == 0) && (min <= 0) && (max >= 0));
+d871 1
+a871 1
+  return ((tgt_elty == 0) && (min == 0) && (max == 0));
+@
+
+
+1.30
+log
+@Modified ptrs_minus to output a NOTE message to stderr,
+(only if both are not Bottom), so I can gauge how often
+they occur, and what benefits might be gained by accounting
+for targets.
+@
+text
+@d429 1
+a429 4
+//      EXCEPT: (not yet implemented)
+//       a. if tgty is a union containing an array of 
+//       b. 
+//       c.
+d534 1
+a534 1
+      //  ~ Let's just do this if iv1's interval is [>=0,<=0].
+d536 1
+a536 1
+      if(numelty && iv1.max <= 0 && iv1.min >= 0){
+@
+
+
+1.29
+log
+@Changed meet-mismatch WARNING to NOTE
+@
+text
+@d639 13
+@
+
+
+1.28
+log
+@Changed Interval::plus/minus output to be prefixed by
+"NOTE" rather than "WARNING".
+@
+text
+@d272 1
+a272 1
+/**/fprintf(stderr, "WARNING(Interval::meet): mismatched eltys, this = ");
+@
+
+
+1.27
+log
+@Changed function call handling: filterCallsiteFacts and
+reconstituteFilteredFacts now just create disjoing df and
+df_local sets, and union them together.
+I.e., eliminated shortcut attempt to piggyback reconstitute
+on NARROW, which just complicated everything.
+~ Added function RANfact::reconstitute()
+~ modified RANfact::narrow() to be closer to "true" narrowing
+  (with more warning msgs etc)
+~ updated the comments scattered throughout.
+@
+text
+@d435 2
+a436 2
+#define A_T_OUTPUT_WARNING_HEAD(descr)	do {				\
+	fprintf(stderr, "WARNING(adjustTypes:" descr ":%c): iv1 = ",	\
+d446 2
+a447 2
+#define A_T_OUTPUT_WARNING_TAIL(descr,ivdescr,iv)	do {		\
+	fprintf(stderr, "WARNING(adjustTypes:" descr ".%c): ... ",	\
+d459 1
+a459 1
+/**/A_T_OUTPUT_WARNING_HEAD("flipping_lhs_rhs");
+d466 1
+a466 1
+/**/A_T_OUTPUT_WARNING_HEAD("rhs_has_tgt");
+d471 1
+a471 1
+/**/A_T_OUTPUT_WARNING_HEAD("tgt_w/zero");
+d483 1
+a483 1
+/**/  A_T_OUTPUT_WARNING_HEAD("unit");
+d488 1
+a488 1
+/**/    A_T_OUTPUT_WARNING_TAIL("unit","iv2a",iv2);
+d505 1
+a505 1
+/**/    A_T_OUTPUT_WARNING_TAIL("unit","iv1a",iv1);
+d512 1
+a512 1
+/**/  A_T_OUTPUT_WARNING_HEAD("tgtynull");
+d515 1
+a515 1
+/**/  A_T_OUTPUT_WARNING_TAIL("tgtynull","iv2b",iv2);
+d524 1
+a524 1
+/**/  A_T_OUTPUT_WARNING_HEAD("rhs_array");
+d527 1
+a527 1
+/**/  A_T_OUTPUT_WARNING_TAIL("rhs_array","iv2_adj",iv2);
+d541 1
+a541 1
+/**/    A_T_OUTPUT_WARNING_HEAD("count_insts");
+d546 1
+a546 1
+/**/    A_T_OUTPUT_WARNING_TAIL("count_insts","iv1a",iv1);
+d550 1
+a550 1
+/**/    A_T_OUTPUT_WARNING_HEAD("tgtychar");
+d553 1
+a553 1
+/**/    A_T_OUTPUT_WARNING_TAIL("tgtychar","iv2b",iv2);
+d556 1
+a556 1
+/**/    A_T_OUTPUT_WARNING_HEAD("mismatch");
+d561 2
+a562 2
+#undef A_T_OUTPUT_WARNING_TAIL
+#undef A_T_OUTPUT_WARNING_HEAD
+@
+
+
+1.26
+log
+@Changed RAN::evalPredExpr S/V case to use
+Interval::cond_intersect() rather than Interval::join()
+to impose the predicate's constraint.
+(cond_intersect() is a newly written method.)
+The difference is that join computes a SUBSET of the
+intersection, while cond_intersect computes a SUPERSET
+(conservative approximation), as mandated by the semantics
+of how we handle predicates.
+Note that as of now, join() is not being used for any
+purpose.
+@
+text
+@d168 12
+a179 2
+  } else if(iv.isBottom()){ //- this narrow bottom = this (used in interproc/reconstituteFilteredFacts)
+    //-NOP
+d181 3
+d187 3
+d196 1
+a196 1
+			      && iv.min != PLUS_INF){	//- hack: used in reconstituteFilteredFacts
+d201 1
+a201 1
+			     && iv.max != MINUS_INF){	//- hack: used in reconstituteFilteredFacts
+@
+
+
+1.25
+log
+@Changed Interval::times() -- to more correctly handle
+-INF/+INF cases.
+@
+text
+@d267 3
+d278 1
+a278 7
+  } else if((this->tgt_elty == iv.tgt_elty) ||
+	    (this->tgt_elty && iv.tgt_elty && this->tgt_elty->equiv(*iv.tgt_elty))){
+    if(this->tgt_numelts > iv.tgt_numelts){
+/**/fprintf(stderr, "WARNING(Interval::join): adjusted tgt_numelts %d -> %d\n",
+				this->tgt_numelts, iv.tgt_numelts);
+       this->tgt_numelts = iv.tgt_numelts;
+    }
+a286 9
+    if(flag_range_zero_special &&	//- TODO: check: is this correct?
+	!iv.has_zero && this->has_zero){
+      this->has_zero = false;
+      changed = true;
+    }
+    if(iv.tgt_readonly && !this->tgt_readonly){	//- TODO: check: is this correct?
+      this->tgt_readonly = true;
+      changed = true;
+    }
+d290 1
+a290 1
+//fprintf(stderr, "WARNING(Interval::join): mismatched eltys but with zero, this = ");
+d305 1
+d307 1
+a307 10
+    //- mismatched eltys: set to Top
+
+/**/if(!this->inclzero() && !iv.inclzero()){
+/**/fprintf(stderr, "WARNING(Interval::join): mismatched eltys, this = ");
+/**/this->debug_dump(stderr);
+/**/fprintf(stderr, "  iv = ");
+/**/iv.debug_dump(stderr);
+/**/fprintf(stderr, "\n");
+/**/}
+
+d310 39
+@
+
+
+1.24
+log
+@Changed setTgt so that if target has unknown size,
+(e.g. malloc objects) just setBottom, rather than
+keep around a tcVoid[0] interval, which is pretty
+useless.
+@
+text
+@d617 7
+a623 1
+    int tmin, tmax;
+d625 3
+a627 1
+//TODO: detect overflows?
+d630 5
+a634 5
+    tmin = tmax = this->max * iv.max;
+    if((this->max == MINUS_INF) || (iv.max == MINUS_INF)) tmin = MINUS_INF;
+    if((this->max == PLUS_INF)  || (iv.max == PLUS_INF))  tmax = PLUS_INF;
+    ret.min = tmin;
+    ret.max = tmax;
+d637 6
+a642 5
+    tmin = tmax = this->min * iv.max;
+    if((this->min == MINUS_INF) || (iv.max == MINUS_INF)) tmin = MINUS_INF;
+    if((this->min == PLUS_INF)  || (iv.max == PLUS_INF))  tmax = PLUS_INF;
+    ret.meet(Interval(tmin,tmax));
+    
+d644 5
+a648 4
+    tmin = tmax = this->max * iv.min;
+    if((this->max == MINUS_INF) || (iv.min == MINUS_INF)) tmin = MINUS_INF;
+    if((this->max == PLUS_INF)  || (iv.min == PLUS_INF))  tmax = PLUS_INF;
+    ret.meet(Interval(tmin,tmax));
+d651 5
+a655 4
+    tmin = tmax = this->min * iv.min;
+    if((this->min == MINUS_INF) || (iv.min == MINUS_INF)) tmin = MINUS_INF;
+    if((this->min == PLUS_INF)  || (iv.min == PLUS_INF))  tmax = PLUS_INF;
+    ret.meet(Interval(tmin,tmax));
+@
+
+
+1.23
+log
+@Two changes:
+1. BUG FIX: Interval::times was majorly wrong: I had
+   the wrong conditionals (!= instead of ==) in checking
+   for degenerate cases!  Duh!
+2. Interval::adjustTypes() refinement: if elty is an
+   array (can happen for multi-dimensional arrays),
+   then reduce to arithmetic on the base type.
+   This is simple and precise: just multiply rhs
+   by the array size.
+@
+text
+@d9 1
+a9 2
+    tgt_elty = &TCtype::tcVoidType;
+    tgt_numelts = 0;
+d14 1
+a14 2
+        tgt_elty = &TCtype::tcVoidType;
+        tgt_numelts = 0;
+d22 2
+a23 2
+        tgt_elty = aoty;
+        tgt_numelts = numelts;
+d25 1
+a25 1
+          tgt_readonly = true;
+d32 1
+a32 2
+      tgt_elty = &TCtype::tcVoidType;
+      tgt_numelts = 0;
+@
+
+
+1.22
+log
+@Added refinements to Interval::adjustTypes:
+ - if rhs has target: ok under unit-addition if lhs
+   has no target ~~ just flip them.
+ - under unit-addition: if shrinking tgt_elty, then
+   augment tgt_numelts with countNumUnits, which
+   counts the number of (non-bitfield) scalar
+   entities in (the original) tgt_elty ~~ this is
+   a safe under-approximation of the sice of tgt_elty
+   in bytes.
+ - on type mismatch, check for cases where tgt_elty
+   actually contains a number of eltys, e.g. if tgt_elty
+   is a union which includes an array of eltys.
+   A generalized solution is adopted, where we use the
+   newly-added TCtype::countInstancesOf() function
+   which counts the occurrences of elty within tgt_elty.
+   This function also recognizes common-init-sequence
+   subtyping.
+   (NOTE: there's one pathological case in which the
+    current version would be suboptimal: when checking
+    tgt_elty->countInstancesOf(elty), if
+     elty     : struct { T1, T2 }
+     tgt_elty : struct { T1, T2, struct{T1,T2}[10] }
+    current version would return 1 because of subtype
+    recognition, when in principle it could've returned 11.)
+ - in cases where we heuristically check for tgt-ed
+   intervals with [0,0], call newly-added slide_if_constant()
+   method to check for cases of A[s]+[i,i] where i < s;
+   then "slide" the interval to get A[s-i]+[0,0].
+@
+text
+@d487 10
+d580 4
+a583 2
+//  elty=0       means "use underlying type"
+//  elty=tcVoid  means plain (non-pointer) arithmetic
+d626 2
+a627 2
+    if((this->max != MINUS_INF) || (iv.max != MINUS_INF)) tmin = MINUS_INF;
+    if((this->max != PLUS_INF)  || (iv.max != PLUS_INF))  tmax = PLUS_INF;
+d633 2
+a634 2
+    if((this->min != MINUS_INF) || (iv.max != MINUS_INF)) tmin = MINUS_INF;
+    if((this->min != PLUS_INF)  || (iv.max != PLUS_INF))  tmax = PLUS_INF;
+d639 2
+a640 2
+    if((this->max != MINUS_INF) || (iv.min != MINUS_INF)) tmin = MINUS_INF;
+    if((this->max != PLUS_INF)  || (iv.min != PLUS_INF))  tmax = PLUS_INF;
+d645 2
+a646 2
+    if((this->min != MINUS_INF) || (iv.min != MINUS_INF)) tmin = MINUS_INF;
+    if((this->min != PLUS_INF)  || (iv.min != PLUS_INF))  tmax = PLUS_INF;
+@
+
+
+1.21
+log
+@Added TCtype::countNumUnits(), which counts the number
+of "units" excluding bitfields within each type.
+This is used in a new Interval::adjustTypes() refinement:
+if elty is char and tgt_ty is a struct, instead of just
+shrinking, multiply by countNumUnits(), a safe under-
+approximation of the size of the type in (char) bytes.
+@
+text
+@d423 16
+a438 3
+/**/A_T_OUTPUT_WARNING_HEAD("rhs_tgt");
+    return false;
+  } else if(iv1.tgt_elty && iv1.has_zero){
+d459 5
+a463 1
+        //  REFINEMENT: multiply <size> by countNumUnits(tgty),
+d466 1
+d468 1
+a468 1
+        iv1.tgt_elty = &TCtype::tcCharType;
+d489 2
+a490 14
+      //- BONUS: if iv1.tgt_ty is a union containing at least one array,
+      //         or a structure whose first field is an array,
+      //         AND iv1's interval is [0,0]*
+      //         then adopt one of the component array's eltype and numelts.
+      //        * actually, it's sufficient to have min >= 0 or max <= 0,
+      //          but how often would those be useful?
+//TODO:
+/*
+      if(iv1.min == 0 && iv1.max == 0 &&
+	 (iv1.tgt_elty->getKind() == TCtype::tcStruct || iv1.tgt_elty->getKind() == TCtype::tcUnion)){
+        TCstructUnionType& suType = *((TCstructUnionType *) iv1.tgt_elty);
+        TCnumType * arrType = 0;
+      }
+*/
+d492 15
+a506 1
+      if(iv1.tgt_elty->getKind() == TCtype::tcChar){ //- tgty is char
+d521 18
+@
+
+
+1.20
+log
+@Small but important change to ExpDescr/estr format:
+ - "pointer-minus-pointer" is now a separate operator "p_",
+   because it has different semantic behavior from the other
+   minuses.
+ - pointer addition and array-sub operators must be normalized,
+   because the behavior is NOT COMMUTATIVE: so now,
+     int + pointer    --(normalized)-->     pointer + int
+     int[pointer]     --(normalized)-->     pointer[int]
+So,
+ - Adjusted ran.cpp to read and handle "p_";
+ - Introduced new function Interval::ptrs_minus for
+   ptr-ptr subtraction ~~ currently returns bottom
+   (because tgt_elty/numelts method cannot support
+    ptr-ptr subtraction).
+ - Simplified Interval::plus/minus, due to int+ptr/ptr+int
+   normalization
+ - for evalPredExpr, had to make sure I respected the
+   normalization.
+@
+text
+@d446 4
+a449 3
+//TODO: if tgt_elty is a struct, can estimate lower bound
+//	on its size (in char units) by (recursively) counting its fields
+//	~ with caveat for bitfields.
+d451 1
+d454 1
+@
+
+
+1.19
+log
+@Added support for type-recognizing plus/minus operations,
+including a long comment describing approximation choices.
+Completed for the common cases; couple of TODOs include:
+ 1. for a union, try to find a matching child;
+ 2. for a struct, see if first element(s) has a matching
+    type;
+ 3. when converting a struct/union to a char, try to
+    underestimate the size of the struct/union by counting
+    its constituents (being careful with bitfields).
+Discovered bug: pointer plus operation is NOT COMMUTATIVE!
+Must alter sml engine to normalize the output to be
+direction sensitive; for pointer minus, must differentiate
+between pointer-minus-int and pointer-minus-pointer (new
+operator symbol).
+Goal is to fix this for next checkin.
+@
+text
+@d47 1
+a47 1
+    if(flag_range_zero_special && has_zero)
+d337 8
+a344 8
+//- PRECONDITION: iv1,iv2 normalized so that iv2.tgt_elty is null;
+//  that is, only iv1 may have a non-null tgt_elty.
+//- Check iv1.tgt_elty for compatibility with elty;
+//   elty = 0       means "use underlying type" (no conflict)
+//   elty = tcVoid  means plain (non-pointer) arithmetic
+//   elty = T       means pointer arithmetic on pointer-to-T
+//- Try to adjust either iv1 or iv2 to be consistent with elty-arithmetic
+//  (addition and subtraction only);
+d366 4
+a369 4
+//  must follow the augmented-interval lattice, so approx "less-than" true means:
+//     size_approx <= size_true
+//      min_approx <= min_true
+//      max_approx >= max_true
+d397 4
+d422 7
+a428 1
+  if(!elty){ //- "use underlying type" (no conflict)
+d456 1
+a456 1
+  } else { //- non-char elty
+d500 4
+a503 2
+//- elty=0 means "use underlying type"
+//- elty=tcVoid means plain (non-pointer) arithmetic
+d510 1
+a510 1
+  } else if(iv.isBottom() || this->iszero()){ //- short circuit some degenerate cases
+a511 14
+  } else if(this->tgt_elty && iv.tgt_elty){
+/**/fprintf(stderr, "WARNING(Interval::plus): multiple eltys, this = ");
+/**/this->debug_dump(stderr);
+/**/fprintf(stderr, "  iv = ");
+/**/iv.debug_dump(stderr);
+/**/fprintf(stderr, "\n");
+  } else if(flag_range_zero_special &&
+	    ((this->tgt_elty && this->has_zero && !iv.iszero())
+	    ||(iv.tgt_elty && iv.has_zero && !this->iszero()))){
+/**/fprintf(stderr, "WARNING(Interval::plus): pointer arithmetic with zero, this = ");
+/**/this->debug_dump(stderr);
+/**/fprintf(stderr, "  iv = ");
+/**/iv.debug_dump(stderr);
+/**/fprintf(stderr, "\n");
+d513 4
+a516 15
+
+    //- normalize, so that ret is the possibly-targeted interval,
+    //  and rhs_iv is the definitely-not-targeted interval.
+    Interval rhs_iv;
+    if(iv.tgt_elty){
+      ret = iv;
+      rhs_iv = *this;
+    } else {
+      ret = *this;
+      rhs_iv = iv;
+    }
+
+    if(adjustTypes(ret, rhs_iv, elty, true)){
+      if((ret.min != MINUS_INF) && (rhs_iv.min != MINUS_INF))
+        ret.min += rhs_iv.min;
+d519 2
+a520 2
+      if((ret.max != PLUS_INF) && (rhs_iv.max != PLUS_INF))
+        ret.max += rhs_iv.max;
+d529 2
+a530 2
+//- elty=0 means "use underlying type"
+//- elty=tcVoid means plain (non-pointer) arithmetic
+a537 14
+  } else if(flag_range_zero_special &&
+	((this->tgt_elty && this->has_zero && !iv.iszero())
+	||(iv.tgt_elty && iv.has_zero && !this->iszero()))){
+/**/fprintf(stderr, "WARNING(Interval::minus): pointer arithmetic with zero, this = ");
+/**/this->debug_dump(stderr);
+/**/fprintf(stderr, "  iv = ");
+/**/iv.debug_dump(stderr);
+/**/fprintf(stderr, "\n");
+  } else if(iv.tgt_elty){
+/**/fprintf(stderr, "WARNING(Interval::minus): subtracting pointer not handled: this = ");
+/**/this->debug_dump(stderr);
+/**/fprintf(stderr, "  iv = ");
+/**/iv.debug_dump(stderr);
+/**/fprintf(stderr, "\n");
+@
+
+
+1.18
+log
+@Major Change: ExpDescr estr augmented Sub(B)
+and plus/minus to include elty; further,
+remapped plus/minus to new representations:
+
+  Sub:   B(e1,e2)   -> B(e1,e2,elty)
+  Binop: o+(e1,e2)  -> p+(e1,e2,elty)
+         o-(e1,e2)  -> p-(e1,e2,elty)
+         O+=(e1,e2) -> p#(e1,e2,elty)
+         O-=(e1,e2) -> p=(e1,e2,elty)
+  Unop:  U+<(e)     -> U+<(e,elty)
+         U+>(e)     -> U+>(e,elty)
+         U-<(e)     -> U-<(e,elty)
+         U->(e)     -> U->(e,elty)
+
+For plain (non-pointer) arithmetic, elty = tcVoid.
+
+NOT YET DONE: change body of Interval.plus/minus
+to account for elty.
+
+Auxiliary change: Interval::deleteTy now takes
+a reference rather than a pointer.
+@
+text
+@d337 153
+d496 5
+a500 1
+  if(this->tgt_elty && iv.tgt_elty){
+d516 6
+a521 4
+    if(this->tgt_elty){
+      ret.tgt_elty = this->tgt_elty;
+      ret.tgt_numelts = this->tgt_numelts;
+      ret.tgt_readonly = this->tgt_readonly;
+d523 2
+a524 3
+      ret.tgt_elty = iv.tgt_elty;
+      ret.tgt_numelts = iv.tgt_numelts;
+      ret.tgt_readonly = iv.tgt_readonly;
+d527 11
+a537 5
+    if((this->min != MINUS_INF) && (iv.min != MINUS_INF))
+      ret.min = this->min + iv.min;
+
+    if((this->max != PLUS_INF) && (iv.max != PLUS_INF))
+      ret.max = this->max + iv.max;
+d549 3
+a551 1
+  } if(flag_range_zero_special &&
+d566 11
+a576 9
+
+    ret.tgt_elty = this->tgt_elty;
+    ret.tgt_numelts = this->tgt_numelts;
+    ret.tgt_readonly = this->tgt_readonly;
+
+    if((this->min != MINUS_INF) && (iv.max != PLUS_INF))
+      ret.min = this->min - iv.max;
+    if((this->max != PLUS_INF) && (iv.min != MINUS_INF))
+      ret.max = this->max - iv.min;
+@
+
+
+1.17
+log
+@Looks like I already had a flag to indicate whether strlit
+should be writable (it was used only for the TRACKED-computation
+phase).
+I've eliminated the extra runtime arguments, and renamed the
+flag to make it more global.
+@
+text
+@d337 2
+d378 2
+@
+
+
+1.16
+log
+@Added support for treating StringLits as read-only in RAN analysis.
+ - commandline flag -ran-strlit-[readonly|readwrite];
+   global flag flag_range_strlit_readonly
+ - in Interval, added boolean tgt_readonly;
+   updated each Interval function to properly propagate it
+ - added readwrite argument to Interval::inBounds() and
+   RANfact::checkInBounds().
+Also, while updating Interval functions:
+ - fixed some hidden but significant bugs in implementation:
+   a typo in Plus; rudimentary overflow detection for
+   Multiply;...
+@
+text
+@d2 1
+a2 1
+#include "flags.h" //- for flag_range_zero_special, flag_range_strlit_readonly, flag_range_handle_malloc
+d26 1
+a26 1
+        if(flag_range_strlit_readonly && ao.getKind() == AO::aoStringLit){
+@
+
+
+1.15
+log
+@REMOVED:
+ - eltype/numelts components of aoMalloc -- new implementation
+        now uses setStaticType mechanism to convey this information,
+        which is a  better solution that this previous unclean
+        approach
+   - note that as a result, Interval::setTgt() is now greatly
+        simplified, since all objects (from array aoIds to
+        aoMallocs to aoStringLits can now be treated uniformly
+        by just getting info from the staticType).
+FIXED:
+ - in CFG::read, I previously had a filter to make sure the
+        globnodes (initializer nodes) are either mStaticDecl
+        or mAssign; but with change to initializer behavior
+        that PARALLEL-izes aggregate initializations, this
+        constraint no longer makes sense; in fact I just
+        removed the filter altogether, so that globnodes can
+        now contain _any_ kind of PgmExpr.
+@
+text
+@d2 1
+a2 1
+#include "flags.h" //- for flag_range_zero_special, flag_range_handle_malloc
+d8 1
+a8 2
+  if(!flag_range_handle_malloc &&
+	ao.getKind() == AO::aoMalloc){
+d26 3
+d45 2
+d67 1
+a67 1
+bool Interval::inBounds() const
+d69 5
+a73 4
+  if(this->tgt_elty && this->min >= 0){
+//TODO: account for element type
+    return (this->max < this->tgt_numelts);
+  } else return false;
+d97 1
+d107 1
+d138 4
+d149 2
+a150 5
+	    iv.tgt_elty && this->iszero()){ //- zero widen sth
+    this->tgt_elty = iv.tgt_elty;
+    this->tgt_numelts = iv.tgt_numelts;
+    this->min = iv.min;
+    this->max = iv.max;
+d197 4
+d243 4
+d254 2
+a255 5
+	    iv.tgt_elty && this->iszero()){ //- zero meet sth
+    this->tgt_elty = iv.tgt_elty;
+    this->tgt_numelts = iv.tgt_numelts;
+    this->min = iv.min;
+    this->max = iv.max;
+d274 1
+a274 4
+    this->tgt_elty = iv.tgt_elty;
+    this->tgt_numelts = iv.tgt_numelts;
+    this->min = iv.min;
+    this->max = iv.max;
+d298 4
+d317 1
+a356 2
+//TODO: account for elty
+
+d360 1
+d363 2
+a364 1
+      ret.tgt_numelts = this->tgt_numelts;
+d379 3
+a381 1
+  if(flag_range_zero_special &&
+d389 7
+a395 1
+  } else if((!iv.tgt_elty) || (this->tgt_elty == iv.tgt_elty)){
+d397 3
+a399 1
+//TODO: account for elty
+a400 4
+    if(this->tgt_elty != iv.tgt_elty){
+      ret.tgt_elty = this->tgt_elty;
+      ret.tgt_numelts = this->tgt_numelts;
+    }
+a404 6
+  } else {
+/**/fprintf(stderr, "WARNING(Interval::minus): mismatched eltys, this = ");
+/**/this->debug_dump(stderr);
+/**/fprintf(stderr, "  iv = ");
+/**/iv.debug_dump(stderr);
+/**/fprintf(stderr, "\n");
+d422 3
+a424 1
+    int tmp;
+d427 5
+a431 1
+    ret.min = ret.max = this->max * iv.max;
+d434 4
+a437 2
+    tmp = this->min * iv.max;
+    ret.meet(Interval(tmp,tmp));
+d440 4
+a443 2
+    tmp = this->max * iv.min;
+    ret.meet(Interval(tmp,tmp));
+d446 4
+a449 2
+    tmp = this->min * iv.min;
+    ret.meet(Interval(tmp,tmp));
+@
+
+
+1.14
+log
+@Commented out a few WARNINGs.
+@
+text
+@d8 4
+a11 14
+  if(ao.getKind() == AO::aoMalloc){
+    if(flag_range_handle_malloc){
+      AOMalloc& mao = (AOMalloc&) ao;
+      if(mao.getElType()){
+        tgt_elty = mao.getElType();
+        tgt_numelts = mao.getNumElts();
+      } else {
+        tgt_elty = &TCtype::tcVoidType;
+        tgt_numelts = 0;
+      }
+    } else {
+      tgt_elty = &TCtype::tcVoidType;
+      tgt_numelts = 0;
+    }
+d15 12
+a26 5
+      int numelts = 1;
+      while(aoty->getKind() == TCtype::tcArray){
+        TCnumType& arty = (TCnumType&)*aoty;
+        aoty = &arty.getBaseType();
+        numelts *= arty.getSize();
+a27 2
+      tgt_elty = aoty;
+      tgt_numelts = numelts;
+d29 1
+a29 1
+      fprintf(stderr, "ERROR(Interval::setTgt): ao has no static type:");
+@
+
+
+1.13
+log
+@Fixed TCtype equality bug: previously only
+compared pointer equality; now augmented to
+use TCtype::equiv ~~ ignore pointer destination
+types when checking to see if two types are
+equivalent for interval arithmetics.
+@
+text
+@d296 5
+a300 5
+/**/fprintf(stderr, "WARNING(Interval::join): mismatched eltys but with zero, this = ");
+/**/this->debug_dump(stderr);
+/**/fprintf(stderr, "  iv = ");
+/**/iv.debug_dump(stderr);
+/**/fprintf(stderr, "\n");
+d313 1
+d319 1
+@
+
+
+1.12
+log
+@1. Changed AOMalloc representation to include <eltype, numelts>
+   (previously had single <size> field)
+2. Changed Interval to store <eltype, numelts> rather than AO
+   as "target" field: potentially allows for "smarter" range
+   analysis per Susan's suggestion.
+(Added runtime flag -ran-[no-]malloc to turn on/off handling
+ of malloc objects, now on by default)
+TODO: account for elty in Interval::plus/minus (added signature,
+      but not yet implemented)
+@
+text
+@d34 3
+a36 1
+      fprintf(stderr, "ERROR(Interval::setTgt): ao has no static type\n");
+d116 2
+a117 1
+  } else if(this->tgt_elty == iv.tgt_elty){
+d172 2
+a173 1
+  } else if(this->tgt_elty == iv.tgt_elty){
+d218 2
+a219 1
+  } else if(this->tgt_elty == iv.tgt_elty){
+d273 2
+a274 1
+  } else if(this->tgt_elty == iv.tgt_elty){
+@
+
+
+1.11
+log
+@Added "top" abstraction to Interval: setTop(), isTop(),
+and static member "Top".
+@
+text
+@d2 1
+a2 1
+#include "flags.h" //- for flag_range_zero_special
+d6 35
+d48 1
+a48 1
+    if(ao){
+d50 2
+a51 2
+      ao->dump_descr(outf);
+      fprintf(outf, ")+");
+d68 3
+a70 10
+  if(this->ao && this->min >= 0){
+    TCtype * aoty = this->ao->getStaticType();
+    if(aoty && aoty->getKind() == TCtype::tcArray){
+      //check max <= ao.size
+//TODO: account for element type?
+      TCnumType& arty = (TCnumType&)*aoty;
+      return (this->max <= arty.getSize());
+    } else {
+      return false;
+    }
+d78 1
+a78 1
+  //- note: I'm ignoring ao
+d84 1
+a84 1
+  //- note: even if this->ao != 0, it's still bottom
+d90 2
+a91 1
+  this->ao = 0;
+d99 2
+a100 1
+  this->ao = 0;
+d114 6
+a119 1
+  } else if(this->ao == iv.ao){
+d134 1
+a134 1
+	    this->ao && iv.iszero()){ //- widen with zero
+d140 3
+a142 2
+	    iv.ao && this->iszero()){ //- zero widen sth
+    this->ao = iv.ao;
+d148 1
+a148 1
+/**/fprintf(stderr, "WARNING(Interval::widen): mismatched aos, this = ");
+d169 6
+a174 1
+  } else if(this->ao == iv.ao){
+d192 1
+a192 1
+/**/fprintf(stderr, "WARNING(Interval::narrow): mismatched aos, this = ");
+d214 4
+a217 1
+  } else if(this->ao == iv.ao){
+d232 1
+a232 1
+	    this->ao && iv.iszero()){ //- meet with zero
+d238 3
+a240 2
+	    iv.ao && this->iszero()){ //- zero meet sth
+    this->ao = iv.ao;
+d246 1
+a246 1
+/**/fprintf(stderr, "WARNING(Interval::meet): mismatched aos, this = ");
+d261 2
+a262 1
+    this->ao = iv.ao;
+d268 6
+a273 1
+  } else if(this->ao == iv.ao){
+d290 1
+a290 1
+/**/fprintf(stderr, "WARNING(Interval::join): mismatched aos but with zero, this = ");
+d297 2
+a298 1
+      this->ao = 0;
+d305 1
+a305 1
+    //- mismatched aos: set to Top
+d307 1
+a307 1
+/**/fprintf(stderr, "WARNING(Interval::join): mismatched aos, this = ");
+d319 1
+a319 1
+Interval Interval::plus(Interval iv) const
+d323 2
+a324 2
+  if(this->ao && iv.ao){
+/**/fprintf(stderr, "WARNING(Interval::plus): multiple aos, this = ");
+d330 2
+a331 2
+	    ((this->ao && this->has_zero && !iv.iszero())
+	    ||(iv.ao && iv.has_zero && !this->iszero()))){
+d339 9
+a347 1
+    ret.ao = (this->ao)?(this->ao):(iv.ao);
+d358 1
+a358 1
+Interval Interval::minus(Interval iv) const
+d362 2
+a363 2
+	((this->ao && this->has_zero && !iv.iszero())
+	||(iv.ao && iv.has_zero && !this->iszero()))){
+d369 8
+a376 2
+  } else if((!iv.ao) || (this->ao == iv.ao)){
+    if(this->ao != iv.ao) ret.ao = this->ao;
+d382 1
+a382 1
+/**/fprintf(stderr, "WARNING(Interval::minus): mismatched aos, this = ");
+d395 2
+a396 2
+  if((this->ao) || (iv.ao)){
+/**/fprintf(stderr, "WARNING(Interval::times): non-empty aos, this = ");
+d403 1
+a403 1
+  if((!this->ao) && (!iv.ao) && (!this->isBottom()) && (!iv.isBottom())){
+d426 2
+a427 2
+  if((this->ao) || (iv.ao)){
+/**/fprintf(stderr, "WARNING(Interval::divide): non-empty aos, this = ");
+d532 1
+a532 1
+  return has_zero || ((ao == 0) && (min <= 0) && (max >= 0));
+d537 1
+a537 1
+  return ((ao == 0) && (min == 0) && (max == 0));
+@
+
+
+1.10
+log
+@Wrote -ran-inter (not fully working?), with many changes:
+- in dfa.cpp function call case, restructured code for
+  collecting facts from return nodes: introduced new
+  function reconstituteFilteredFacts as a dual to
+  filterCallsiteFacts; also introduced function
+  linkRetvalWithTargetFnRetval to copy the fact from
+  the target function's return node to the caller's
+  return node.
+- in the process, fixed two bugs in RANfact
+  (extended_meet(WN_NARROW) and meetIntervals()) -
+  now see if they help (or hurt).
+- modified behavior of Interval.narrow() to do nothing
+  when narrowing with "top" -- previously should never
+  have occured; now may occur due to the interproc stuff.
+@
+text
+@d8 17
+a24 6
+  if(flag_range_zero_special && has_zero)
+    fprintf(outf, "{0}U");
+  if(ao){
+    fprintf(outf, "&(");
+    ao->dump_descr(outf);
+    fprintf(outf, ")+");
+a25 7
+  fprintf(outf, "[");
+  if(min == MINUS_INF) fprintf(outf, "-INF");
+  else fprintf(outf, "%d", min);
+  fprintf(outf, ",");
+  if(max == PLUS_INF) fprintf(outf, "+INF");
+  else fprintf(outf, "%d", max);
+  fprintf(outf, "]");
+d46 8
+d60 8
+d81 1
+a81 1
+  } else if(iv.isBottom()){ //- iv widen bottom = bottom
+d129 3
+a131 1
+  } else if(iv.isBottom()){ //- this narrow bottom = this?
+a132 3
+/**/fprintf(stderr, "WARNING(Interval::narrow): narrowing ");
+/**/this->debug_dump(stderr);
+/**/fprintf(stderr, " with bottom\n");
+d169 4
+a186 2
+  } else if((iv.min == PLUS_INF) && (iv.max == MINUS_INF)){
+    //- this meet top = this
+d261 1
+a261 4
+    this->ao = 0;
+    this->min = PLUS_INF;
+    this->max = MINUS_INF;
+    this->has_zero = false;
+d369 1
+a369 1
+  Interval ret(PLUS_INF, MINUS_INF); //- start at top!
+@
+
+
+1.9
+log
+@Added -ran-zero-special: range analysis treats "zero" as
+a special value, so allows tracking of intervals of the
+form {0} U &ptr + [m,n].
+Flag is off by default; must be turned on explicitly.
+@
+text
+@d115 2
+a116 1
+    if(this->min == MINUS_INF && iv.min != MINUS_INF){
+d120 2
+a121 1
+    if(this->max == PLUS_INF && iv.max != PLUS_INF){
+@
+
+
+1.8
+log
+@Major update: implemeted narrowing.
+Some restructuring: previously had different classes
+RAN/RANnarrow/RANwiden; have consolidated them with
+a flag indicating which mode the analysis will run in
+(meet/narrow/widen; the first not currently used).
+Also added runtime flags to turn on/off narrowing
+phase, and also to control whether widen/narrow
+is done always or on backedge only (previous implementation
+was equivalent to one widen pass plus one meet pass;
+current default is one widen(backedge) pass plus one
+narrow(always) pass).
+Note that the narrowing code is currently full of
+debug printfs -- cases that shouldn't(?) occur.
+@
+text
+@d2 1
+d8 2
+d24 3
+d53 1
+d73 18
+d123 5
+d157 5
+d164 13
+d208 21
+d241 1
+d249 1
+a249 1
+  Interval ret;
+d257 8
+d266 1
+d281 9
+a289 1
+  if((!iv.ao) || (this->ao == iv.ao)){
+d308 9
+d446 6
+a451 1
+  return ((ao == 0) && (min <= 0) && (max >= 0));
+@
+
+
+1.7
+log
+@Small fixes:
+ - meet: handle meet with top
+ - minus: fixed to allow (ao+interval) - interval.
+@
+text
+@d78 32
+@
+
+
+1.6
+log
+@Added code to
+ - lookup address range (evalAddrRange)
+ - do the bounds check
+Also, fixed small bug: skipArgs() now takes aoi as
+argument, as that has to be advanced for each 'V' and
+'S' in the string!
+@
+text
+@d95 2
+d170 2
+a171 1
+  if(this->ao == iv.ao){
+@
+
+
+1.5
+log
+@Added interface skeleton for doing the bounds-check phase,
+including:
+  Interval::inBounds
+  RANfact::checkInBounds
+  RANfact::evalAddrRange (needed by both checkInBounds
+                          and evalSubexpr/addrof case)
+and changed RANc result type from a REDresult to a
+list of PExprVerify's.
+Next need to fill in, mainly evalAddrRange, but must
+think of strategy to store object sizes.
+@
+text
+@d24 9
+a32 2
+//TODO: check max <= ao.size
+    return false;
+@
+
+
+1.4
+log
+@Migrated more interval stuff from ran.cpp to
+Interval class, including:
+ - renaming expand/shrink to meet/join
+ - added code to check for ao equality
+ - ao, min, max are now private members
+@
+text
+@d21 8
+@
+
+
+1.3
+log
+@Added "base pointer" member (ao) to Interval,
+so an interval represents &ao + [min, max].
+@
+text
+@d23 2
+a24 1
+  return (this->ao == 0) && (this->min == MINUS_INF) && (this->max == PLUS_INF);
+d27 8
+a34 1
+bool Interval::expand(Interval iv)
+d37 35
+a71 1
+  if(this->ao == iv.ao){
+d80 9
+a88 1
+  } //- else, don't change
+d92 1
+a92 1
+bool Interval::shrink(Interval iv)
+d95 8
+a102 1
+  if(this->ao == iv.ao){
+d114 1
+a114 1
+/**/fprintf(stderr, "WARNING(Interval::shrink): mismatched aos, this = ");
+d179 1
+a179 1
+    ret.expand(Interval(tmp,tmp));
+d183 1
+a183 1
+    ret.expand(Interval(tmp,tmp));
+d187 1
+a187 1
+    ret.expand(Interval(tmp,tmp));
+d215 1
+a215 1
+  ret.expand( Interval( (maxpos1 && minneg2)
+d219 2
+a220 2
+			: PLUS_INF,
+			(maxpos1 && minpos2)
+d224 2
+a225 1
+			: MINUS_INF));
+d227 1
+a227 1
+  ret.expand( Interval( (maxneg1 && minpos2)
+d231 2
+a232 2
+			: PLUS_INF,
+			(maxneg1 && minneg2)
+d236 2
+a237 1
+			: MINUS_INF));
+d240 1
+a240 1
+    ret.expand(Interval(0,0));
+d243 1
+a243 1
+    ret.expand(Interval((minpos1 && maxpos2)
+d247 2
+a248 2
+			: PLUS_INF,
+			(minpos1 && maxneg2)
+d252 2
+a253 1
+			: MINUS_INF));
+d255 1
+a255 1
+    ret.expand(Interval((minneg1 && maxneg2)
+d259 2
+a260 2
+			: PLUS_INF,
+			(minneg1 && maxpos2)
+d264 2
+a265 1
+			: MINUS_INF));
+@
+
+
+1.2
+log
+@Added Interval helpers expand(meet), shrink(join);
+added times, divide (which use helpers [max/min][pos/neg]()
+and inclzero()).
+@
+text
+@d1 1
+d5 1
+a5 1
+void Interval::debug_dump(FILE * outf)
+d7 5
+d23 1
+a23 1
+  return (this->min == MINUS_INF) && (this->max == PLUS_INF);
+d29 10
+a38 8
+  if(this->min > iv.min){
+     this->min = iv.min;
+     changed = true;
+  }
+  if(this->max < iv.max){
+     this->max = iv.max;
+     changed = true;
+  }
+d45 22
+a66 7
+  if(this->min < iv.min){
+     this->min = iv.min;
+     changed = true;
+  }
+  if(this->max > iv.max){
+     this->max = iv.max;
+     changed = true;
+d74 16
+a89 4
+  if((this->min != MINUS_INF) && (iv.min != MINUS_INF))
+    ret.min = this->min + iv.min;
+  if((this->max != PLUS_INF) && (iv.max != PLUS_INF))
+    ret.max = this->max + iv.max;
+d96 12
+a107 4
+  if((this->min != MINUS_INF) && (iv.max != PLUS_INF))
+    ret.min = this->min - iv.max;
+  if((this->max != PLUS_INF) && (iv.min != MINUS_INF))
+    ret.max = this->max - iv.min;
+d114 1
+a114 1
+  if((!this->isBottom()) && (!iv.isBottom())){
+d137 9
+d239 1
+a239 1
+  return ((min <= 0) && (max >= 0));
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d20 29
+a48 1
+Interval Interval::plus(Interval iv)
+d58 1
+a58 1
+Interval Interval::minus(Interval iv)
+d66 122
+@

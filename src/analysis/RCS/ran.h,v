@@ -1,0 +1,1601 @@
+head	1.53;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.53
+date	2004.07.01.23.36.01;	author suan;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	2004.05.12.21.17.22;	author suan;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	2004.05.02.18.26.36;	author suan;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	2004.04.14.15.26.53;	author suan;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	2004.04.14.00.22.35;	author suan;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	2004.04.07.22.47.58;	author suan;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	2004.04.07.21.07.14;	author suan;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	2004.04.07.18.02.03;	author suan;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	2004.04.07.17.38.56;	author suan;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	2004.04.06.00.03.55;	author suan;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	2004.04.05.18.32.21;	author suan;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	2004.04.05.18.17.54;	author suan;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	2004.04.02.16.15.41;	author suan;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	2004.04.02.03.55.41;	author suan;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	2004.03.29.20.29.06;	author suan;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	2004.03.29.02.24.42;	author suan;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	2004.03.27.00.54.21;	author suan;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	2004.03.04.20.51.02;	author suan;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	2004.03.03.00.43.54;	author suan;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	2004.02.25.00.48.09;	author suan;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	2004.02.24.23.48.16;	author suan;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2004.02.24.20.57.49;	author suan;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2004.02.24.19.29.20;	author suan;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2004.02.19.00.39.16;	author suan;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2004.02.18.16.06.52;	author suan;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2003.12.18.17.06.31;	author suan;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2003.12.12.03.38.39;	author suan;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2003.12.11.21.28.54;	author suan;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2003.12.11.21.03.59;	author suan;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2003.12.11.19.18.20;	author suan;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2003.12.11.18.26.35;	author suan;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2003.12.11.17.31.28;	author suan;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2003.11.13.00.23.51;	author suan;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2003.11.12.00.10.31;	author suan;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2003.11.06.21.38.03;	author suan;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2003.10.29.23.12.11;	author suan;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2003.10.29.20.34.11;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2003.10.28.20.23.12;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2003.10.27.22.41.44;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2003.10.24.22.40.50;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2003.10.24.21.18.48;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2003.10.23.23.05.54;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2003.10.22.23.34.31;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2003.10.22.22.55.57;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2003.10.22.21.26.36;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2003.10.21.22.43.44;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2003.10.21.21.34.30;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2003.10.17.23.01.33;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2003.10.16.21.58.46;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.10.16.19.36.01;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.10.10.20.56.42;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.10.10.16.55.55;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.10.09.15.29.52;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Range Analysis.
+@
+
+
+1.53
+log
+@RAN: added counter to count number of in-bounds
+dereferences that contain an SDot/UDot ('M') or
+Arrow ('W').
+@
+text
+@#ifndef TC_RAN_H /* { */
+#define TC_RAN_H
+
+#include "cfg.h"
+#include "dfa.h"
+#include "red.h"
+#include "interval.h"
+
+//----------------------------------
+//- RANfactHandler: range analysis handler
+
+class RANfactHandler : public DFAfactHandler
+{
+  public: // inherited interface
+
+    DFAfact& newTopFact();
+    void deleteFact(DFAfact& df);
+
+    void filterCallsiteFacts(PExprCall& dc, DFAfact& df, DFAfact& df_local);
+    void reconstituteFilteredFacts(DFAfact& df, DFAfact& df_local);
+    void interProcPrepareReturnCollector(DFAfact& df, PExprCall& dc);
+
+    DFAfact& lookupNodeFact(CFGnode& cn, CFGnode * tfSucc = 0);
+    DFAfactPair& lookupNodeFactPair(CFGnode& cn);
+    DFAfact& lookupNodeFact(PExprCall& dc);
+    DFAfact& lookupNodeFact(PExprParallel& dp);
+
+    bool handleStrongAssign(DFAfact& df, AO& lhs, ExpDescr& rhs,
+			    PgmExpr * dnode = 0, PgmStmt * cnode = 0, PExprArg * arg = 0);
+    bool handleWeakAssign(DFAfact& df, ExpDescr& lhs, ExpDescr& rhs, PExprAssign& dnode);
+    bool handleFormal(DFAfact& df, PExprDecl& dd, CFGfunction& parfn, bool interproc);
+    bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, ExpDescr * retedesc, bool interproc);
+    bool handleDecl(DFAfact& df, PExprDecl& dd);
+    bool handleVerify(DFAfact& df, PExprVerify& dv);
+    bool handlePredicate(DFAfactPair& dfp, PExprPredicate& dp);
+
+    void handleFreeCall(DFAfact& df, PExprCall& dc);
+
+    void intraProcInitializeEntryFact(DFAfact& df, CFGnode& cn);
+    void interProcFilterEntryFact(DFAfact& df, CFGnode& cn);
+    void intraProcHandleCall(DFAfact& df, PExprCall& dc);
+    void interProcHandleCallArgs(DFAfact& df, PExprCall& dc);
+    void interProcHandleRetvalAssign(DFAfact& df, PExprCall& dc);
+
+  public:
+    static RANfactHandler handler;
+
+    virtual void reportKnownPredicate(PExprPredicate& dp) {} //- to report known predicates (for RANcFactHandler to collect data)
+
+  private:
+};
+
+//----------------------------------
+//- RAN: range analysis
+
+class RAN : public DFA
+{
+  public:
+    enum wn_mode {
+      WN_MEET = 0,
+      WN_WIDEN,
+      WN_NARROW
+    };
+
+    RAN(RANfactHandler& rah, bool inter, enum wn_mode wn, bool always)
+	: DFA((DFAfactHandler&)rah, inter, true), wnmode(wn), wn_always(always) {}
+
+    bool isUselessNode(CFGnode& cn);
+    bool isUselessNode(PgmExpr& dn);
+    bool markUselessNode(CFGnode& cn);
+    bool markUselessNode(PgmExpr& dn);
+
+    virtual bool absorbAndCompare(DFAfact& df1, DFAfact& df2, LocSet * backedge_filter = 0);
+
+    void print_debug_stats(CFG& cfg, FILE * outf);
+
+  private:
+    RAN();
+    enum wn_mode wnmode;
+    bool wn_always;
+};
+
+//----------------------------------
+//- RAN: range analysis
+
+class RANfact : public DFAfact
+{
+  public:
+
+    RANfact(): is_top(true), map(0) {}
+    ~RANfact();
+
+  public: //-- inherited interface
+    DFAfact& newClone(bool preserve = true);
+
+    void setTop();
+    void setBottom();
+    bool meet(DFAfact& df, bool preserve = true, bool warnNotLE = false);
+    void join(DFAfact& df, bool preserve = true);
+    void debug_dump(FILE * outf, bool brief = true);
+    void meetFiltered(DFAfact& df, CFGfunction& tgtfn);
+
+  public:
+    //- wnmode: { WN_MEET, WN_WIDEN, WN_NARROW }
+    bool extended_meet(RANfact& df, bool preserve, bool warnNotLE,
+			enum RAN::wn_mode wn, LocSet * backedge_filter = 0);
+    bool isTop() const { return is_top; }
+
+    Interval getDerefRangeFor(ExpDescr& ed);
+    Interval evalExpr(ExpDescr& ed);
+    void evalMallocSize(char * s, suco_iterator<AO *>& aoi, unsigned int& r_size, TCtype *& r_type); //- r_size,r_type are return values
+    void updateInterval(AO& ao, Interval iv, TCtype * aoty = 0);
+    void meetIntervals(suco_set<ECR *>& ecrset, Interval iv);
+    void removeIntervalsPointingTo(suco_set<ECR *>& tgt_ecrset);
+    bool disableIntervalsWithTarget(AO& ao); //- return true if any disabled
+    Interval getInterval(AO& ao);
+    void reconstitute(RANfact& rf_local);
+    void handleStructAssign(AO& lhs, TCtype& lhsty, AO * rhs, bool strong);
+    void createTopMappings(suco_set<AO *>& aoset); //- called by RANfactHandler::interProcPrepareReturnCollector
+    void collectAOset(suco_set<AO *>& aoset); //- collect the AOs present in this fact
+
+    //- helper cleanup functions
+    void filterGrefMayFreeInto(CFGfunction& fn, RANfact * in_fact);
+    void removeRetIntervalsExcept(AO * fnao);
+
+    int countIntervals() const;
+
+    enum cfmode {
+      m_eqne = 0,
+      m_ltge = 1,
+      m_gtle = 2
+    };
+    bool evalPredExpr(char * s, suco_iterator<AO *>& aoi, enum cfmode mode, Interval iv, DFAfactPair& dfp);
+
+  private:
+    bool is_top;
+    class interval_node
+    {
+      public:
+        interval_node(AO& o, Interval iv, interval_node * nx)
+		: ao(o), interval(iv), next(nx) {}
+        AO& ao;
+        Interval interval;
+        interval_node * next;
+      private:
+        interval_node();
+    } * map;
+
+    interval_node ** lookupIntervalPosn(AO& ao);
+    void clearMap();
+    void deleteInterval(AO& ao);
+
+    Interval evalSubexpr(char *& s, suco_iterator<AO *>& aoi, bool skipahead = false); //- helper for evalExpr
+    Interval evalAddrRange(char *& s, suco_iterator<AO *>& aoi); // used by getDerefRangeFor, evalExpr
+    TCtype * evalSizeOfExpr(char *& s); // used by evalMallocSize
+
+    static void skipArgs(char *& s, suco_iterator<AO *>& aoi); //- helper for evalSubexpr, evalAddrRange
+    static void consume(char *& s, char c);
+
+    static enum cfmode flipmode(enum cfmode mode)
+	{ return (mode == m_ltge) ? m_gtle : ((mode == m_gtle) ? m_ltge : mode); }
+};
+
+//----------------------------------
+// RANc: collect redundant results: -ptr/ptrw mode
+
+class RANcFactHandler : public RANfactHandler
+{
+  public:
+    bool handleVerify(DFAfact& df, PExprVerify& dv);
+    virtual void reportKnownPredicate(PExprPredicate& dp);
+
+  public:
+    RANcFactHandler(suco_set<PExprVerify *>& res, bool rw)
+	: RANfactHandler(),
+	  readwrite(rw),
+	  inbounds_vps(res),
+	  all_vps(),
+	  finite_vps(),
+	  half_finite_vps(),
+	  known_preds(),
+	  num_inb_sdotarrows(0)
+	{}
+    
+    int countAllVPs(bool limit_array) { return countVPs(all_vps, limit_array); }
+    int countFiniteVPs(bool limit_array) { return countVPs(finite_vps, limit_array); }
+    int countHalfFiniteVPs(bool limit_array) { return countVPs(half_finite_vps, limit_array); }
+    int countInboundsVPs(bool limit_array) { return countVPs(inbounds_vps, limit_array); }
+    int countInboundsSdotArrows() { return num_inb_sdotarrows; }
+    int countKnownPreds() { return known_preds.Length(); }
+
+  private:
+    RANcFactHandler();
+    
+    bool readwrite;
+
+    suco_set<PExprVerify *>& inbounds_vps;
+    suco_set<PExprVerify *> all_vps;
+    suco_set<PExprVerify *> finite_vps;
+    suco_set<PExprVerify *> half_finite_vps;
+    suco_set<PExprPredicate *> known_preds;
+    int num_inb_sdotarrows;
+
+    static int countVPs(suco_set<PExprVerify *>& vps, bool limit_array);
+};  
+
+//----------------------------------
+// RANc: collect redundant results
+
+class RANc : public BBA
+{
+  public:
+    RANc(RANcFactHandler& rcfh, bool inter) : BBA(rcfh, inter) {}
+
+  private:
+    RANc();
+};
+
+//----------------------------------
+
+#endif /* } ifndef TC_RAN_H */
+
+@
+
+
+1.52
+log
+@SMALL BUT MAJOR BUG FIX: RANc must take a flag indicating
+whether to do intra or inter!  (Previously, was always
+doing intra mode!)
+
+Also: added ugly flag "flag_debug_range_collect_phase"
+to help in debugging, currently used to output meaningful
+information when reporting known predicates.
+@
+text
+@d181 2
+a182 1
+	  known_preds()
+d189 1
+d202 1
+@
+
+
+1.51
+log
+@MAJOR UPDATE:
+- Created new class LocSet to encapsulate a set of
+  locations, used to store GMOD, GREF, and backedge
+  filters.
+  (Previously, was suco_set<AO *>, later changed to
+  suco_set<ECR *>.)
+- Created two versions, one storing AOs, another
+  storing ECRs.  Verified that results are the
+  same, though performance is not (but only when
+  computing backedge filters).
+@
+text
+@d210 1
+a210 1
+    RANc(RANcFactHandler& rcfh) : BBA(rcfh, false) {}
+@
+
+
+1.50
+log
+@RAN: combined formerly-two functions filterInto and
+filterGrefMayFree into one function filterGrefMayFreeInto.
+Code sharing, but more confusing?  May not have been a
+good idea...
+@
+text
+@d73 1
+a73 1
+    virtual bool absorbAndCompare(DFAfact& df1, DFAfact& df2, suco_set<AO *> * backedge_filter = 0);
+d106 1
+a106 1
+			enum RAN::wn_mode wn, suco_set<AO *> * backedge_filter = 0);
+@
+
+
+1.49
+log
+@Major overhaul, to handle function call filtering.
+See dfa.cpp for documentation.
+ - filterRetnodeFact() eliminated; replaced by
+ - interProcHandleRetvalAssign -- responsible for
+   assigning from R X I <fn> to R D I <fp>.
+ - interProcPrepareReturnCollector() -- special
+    pre-processor for indirect calls to set "intersection"
+   AOs to "top".
+ - meetFiltered() -- does meet, but constrained by a
+   window (defined by a function's GREF/MayFree set).
+Supporting changes:
+ - eliminated removeArgIntervalsExceptFor(); rendered obsolete
+   by
+ - filterGrefMayFree() -- called at function entry
+ - RANfact::isTop()
+ - collectAOset, createTopMappings, in support of
+   interProcPrepareReturnCollector()
+ - PExprCall::isDirectCall() and isRecursiveCall()
+ - CFGfunction::GrefOrFreeHeapAffects()
+@
+text
+@a116 1
+    void filterInto(suco_set<AO *>& filterset, suco_set<ECR *>* freeheap_ecrset, RANfact& ffact);
+d123 1
+a123 1
+    void filterGrefMayFree(CFGfunction& fn);
+@
+
+
+1.48
+log
+@AO: removed isPartOf(), replaced with getEnclosingStruct()
+which returns the outermost non-S/U-dotted AO.
+
+RAN: added removeArgIntervalsExceptFor() and
+removeRetIntervalsExcept(), which are used to
+clean up AOArg and AOReturn objects that would
+otherwise be unnecessarily propagated around.
+
+RAN: changed reconstitute so that if there is
+a clash, take the rf_local version rather than
+the default (previous) incoming-df version.
+@
+text
+@d21 1
+a21 1
+    virtual void filterRetnodeFact(DFAfact& df, suco_set<AO *>& faos, CFGfunction * tgtfn);
+d43 1
+d101 1
+d107 1
+d120 2
+d124 1
+a124 1
+    void removeArgIntervalsExceptFor(AO& fnao);
+@
+
+
+1.47
+log
+@Added new DFA interface function interProcFilterEntryFact()
+called at each function entry (when doing inter-proc
+analysis).
+@
+text
+@d118 4
+@
+
+
+1.46
+log
+@Changed handleFormal to pass parent-function rather
+than previous "ismain" and "callsites" pair.
+@
+text
+@d40 1
+@
+
+
+1.45
+log
+@Added interProcHandleCallArgs() interface function to
+DFA and all derived classes.
+@
+text
+@d31 1
+a31 1
+    bool handleFormal(DFAfact& df, PExprDecl& dd, bool ismain, suco_llist<PExprCall *>& callsites, bool interproc);
+@
+
+
+1.44
+log
+@Added Malloc arg-evaluation mechanism:
+
+- RAN: added evalSizeOfExpr() and evalMallocSize();
+- AOMalloc: added mtype/msize members, and meetMallocStaticType()
+  function to set those at each MallocDecl node;
+- Interval::setTgt now checks for AOMalloc, and uses its
+  mtype/msize members to set tgt_ty/tgt_numelts;
+- Interval addedisNullTgted() helper;
+@
+text
+@d41 1
+@
+
+
+1.43
+log
+@Changed RAN::handleDecl filtering of facts with target =
+AO: previously, set to bottom if target is ao; now, just
+set tgt_ao = 0 unless flag_range_must_have_ao -- basically
+let Interval class decide what to do.
+Entailed renaming of:
+  RANfact::removeIntervalsWithTarget()
+  to       disableIntervalsWithTarget
+and name/functionality change of:
+  Interval::targetIsPartOf()
+  to        disableIfTargetIsPartOf()
+@
+text
+@d106 1
+d145 1
+@
+
+
+1.42
+log
+@Changed updateInterval() to be struct-sensitive.
+@
+text
+@d109 1
+a109 1
+    bool removeIntervalsWithTarget(AO& ao); //- return true if any removed
+@
+
+
+1.41
+log
+@Augmented RAN counters to count both "all" and "array"
+versions of all four categories: all-vps, finite, half-finite,
+inbounds.
+@
+text
+@d106 1
+a106 1
+    void updateInterval(AO& ao, Interval iv);
+@
+
+
+1.40
+log
+@MAJOR BUG FIX: getInterval() was not checking for
+equality, because it assumed the (poorly-named)
+lookupInterval would return the proper interval,
+rather than just the position at which the interval
+should be!
+
+FIXED, and renamed lookupInteral() to lookupIntervalPosn(),
+to alleviate future such misunderstandings.
+
+MAJOR UPDATE: added handling of strong-assignment of
+structures ~ facilitated by helpder function
+RANfact::handleStructAssign().
+
+TODO: weak assignment, etc.
+@
+text
+@d164 1
+d169 1
+a169 2
+	  known_preds(),
+	  readwrite(rw)
+d172 4
+a175 4
+    int countAllVPs() { return all_vps.Length(); }
+    int countFiniteVPs() { return finite_vps.Length(); }
+    int countHalfFiniteVPs() { return half_finite_vps.Length(); }
+    int countInboundsVPs() { return inbounds_vps.Length(); }
+a176 2
+    int countAllArrayVPs();
+    int countInboundsArrayVPs();
+d181 2
+d188 2
+a189 1
+    bool readwrite;
+@
+
+
+1.39
+log
+@Added mechanism to report static RAN-count of
+direct-array accesses (all, and in-bounds only).
+Entailed adding AO::isDirectArrayAccess() helper
+funciton; a couple of counting helpers in
+RANcFactHandler, and a place to store the
+results in TCAstate.
+@
+text
+@d113 1
+d138 1
+a138 1
+    interval_node ** lookupInterval(AO& ao);
+@
+
+
+1.38
+log
+@Collecting RAN stats (all-vps, finite-vps, half-finite-vps, inbounds-vps,
+known-preds):
+ - RAN replaced checkInBounds() with getDerefRangeFor()
+ - added reportKnownPredicate() helper to RAN[c]factHandler
+ - added list accumulators to RANcFactHandler
+ - added count holders to TCAstate
+
+Interval::isTop() - now returns true of min > max!
+(was returning only if min = +inf, max = -inf!)
+
+Interval: added "modulo" to compute %.
+
+AO::get_AOUDot/get_AOSDot() - unify ecr if called after pt-analysis.
+@
+text
+@d176 2
+@
+
+
+1.37
+log
+@Augmented evalPredExpr to return a boolean, indicating
+if the evaluation encountered any top facts (implying
+the predicate is statically known).
+This value is not yet collected.
+@
+text
+@d45 2
+d104 1
+a104 1
+    bool checkInBounds(ExpDescr& ed, bool iswrite);
+d142 1
+a142 1
+    Interval evalAddrRange(char *& s, suco_iterator<AO *>& aoi); // used by checkInBounds, evalExpr
+d158 1
+d162 8
+a169 1
+	: RANfactHandler(), results(res), readwrite(rw) {}
+d171 6
+d180 5
+a184 1
+    suco_set<PExprVerify *>& results;
+@
+
+
+1.36
+log
+@Minor bug fix(es):
+ 1. Interval::ptrs_minus()
+    Need to account for has_zero -- if either argument
+    has zero, return bottom.
+ 2. RANfactHandled::handleDecl()
+    When declaring x, need to remove both
+    1. fact for x, and
+    2. facts whose interval target ao is x
+    because of new scope/aliasing potential.
+    (Entailed introduction of helpers in many
+    classes, including AO.)
+Note: 2 is the clean solution, but appears to be
+technically unnecessary with context-insensitive
+analysis, since any recursive loop (for which the
+new scope/aliasing problem arises) must have an
+external in-edge which should bottom out any facts
+affecting x.
+@
+text
+@d119 1
+a119 1
+    void evalPredExpr(char * s, suco_iterator<AO *>& aoi, enum cfmode mode, Interval iv, DFAfactPair& dfp);
+@
+
+
+1.35
+log
+@Removed unused method meetInterval().
+Added code so that whenever doing "meet" of intervals,
+always check after if result was bottom, and if so remove
+the interval from the RANfact.
+@
+text
+@d107 1
+@
+
+
+1.34
+log
+@Changed function call handling: filterCallsiteFacts and
+reconstituteFilteredFacts now just create disjoing df and
+df_local sets, and union them together.
+I.e., eliminated shortcut attempt to piggyback reconstitute
+on NARROW, which just complicated everything.
+~ Added function RANfact::reconstitute()
+~ modified RANfact::narrow() to be closer to "true" narrowing
+  (with more warning msgs etc)
+~ updated the comments scattered throughout.
+@
+text
+@a105 1
+    void meetInterval(AO& ao, Interval iv);
+@
+
+
+1.33
+log
+@PREVIOUSLY: handleReturnStmt was only called for non-void
+return statements.
+NOW: handleReturnStmt is called for ALL return statements.
+This is needed so analyses can properly handle deallocation
+of local variables.
+OTHER CHANGES:
+ 1. RAN: handleReturnStmt now removes intervals pointing
+    to freedStack ECRs.
+ 2. Interval: changed code for narrow() to be more logically
+    sound?
+@
+text
+@d110 1
+@
+
+
+1.32
+log
+@Updated some obsolete comments.
+@
+text
+@d32 1
+a32 1
+    bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, ExpDescr& retedesc, bool interproc);
+@
+
+
+1.31
+log
+@Modified handleFormal to pass a flag indicating whether
+the function is "main".  This is needed because main's
+argc/argv formals may need to be initialized differently.
+
+For RAN::handleFormal() - if ismain, then set bottom;
+else do top MEET callsite facts.
+
+For MBU::handleFormal() - *BUG FIX* - was previously calling
+handleStrongAssign(), which was _wrong_ (doesn't correctly
+meet facts from multiple callsites); fixed to do "weak"
+assignment.
+@
+text
+@d98 1
+a98 1
+    //- both widen and narrow must consume rf
+@
+
+
+1.30
+log
+@Added support for treating StringLits as read-only in RAN analysis.
+ - commandline flag -ran-strlit-[readonly|readwrite];
+   global flag flag_range_strlit_readonly
+ - in Interval, added boolean tgt_readonly;
+   updated each Interval function to properly propagate it
+ - added readwrite argument to Interval::inBounds() and
+   RANfact::checkInBounds().
+Also, while updating Interval functions:
+ - fixed some hidden but significant bugs in implementation:
+   a typo in Plus; rudimentary overflow detection for
+   Multiply;...
+@
+text
+@d31 1
+a31 1
+    bool handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites, bool interproc);
+@
+
+
+1.29
+log
+@CHANGE 1: wrote ECR::getAliasECRs(), which collects and
+  caches an ecrset of alias ECRs.
+  This function replaces the functionality of
+  collectAliasECRs(), but should only be called after
+  the points-to graph is finalized.
+CHANGE 2: changed RAN and REDp to account for MayFree
+  set (CFGfunction::getGFreeHeap()).
+  For RAN, this affected: filterCallsiteFact,
+  intraProcHandleCall, and handleFreeCall (previously
+  empty).
+  For RED, this affected only REDp::intraProcHandleCall.
+  For CFGfunction: added gfreeheap_ecrs/getGFreeHeapEcrs()
+  to cache the freeheap ecrset for use in the above
+  phases.
+@
+text
+@d102 1
+a102 1
+    bool checkInBounds(ExpDescr& ed);
+@
+
+
+1.28
+log
+@Reorganized (again) interface for inter-procedural handling
+of function calls; removed linkCallRetvalWithTargetFnRetval;
+added filterRetnodeFact.
+NOTE: current solution is very RAN-centric - hacks needed to
+get RAN to work.
+@
+text
+@d107 1
+d109 1
+a109 1
+    void filterInto(suco_set<AO *>& filterset, RANfact& ffact);
+@
+
+
+1.27
+log
+@Wrote -ran-inter (not fully working?), with many changes:
+- in dfa.cpp function call case, restructured code for
+  collecting facts from return nodes: introduced new
+  function reconstituteFilteredFacts as a dual to
+  filterCallsiteFacts; also introduced function
+  linkRetvalWithTargetFnRetval to copy the fact from
+  the target function's return node to the caller's
+  return node.
+- in the process, fixed two bugs in RANfact
+  (extended_meet(WN_NARROW) and meetIntervals()) -
+  now see if they help (or hurt).
+- modified behavior of Interval.narrow() to do nothing
+  when narrowing with "top" -- previously should never
+  have occured; now may occur due to the interproc stuff.
+@
+text
+@d21 1
+a21 1
+    void linkCallRetvalWithTargetFnRetval(DFAfact& df, PExprCall& dc, CFGfunction& tgtfn);
+@
+
+
+1.26
+log
+@Wrote handleReturnStmt, which introduced a new function
+meetInterval to RANfact.
+Only one piece missing...
+@
+text
+@d20 2
+d107 1
+@
+
+
+1.25
+log
+@Another change: RETURN argument is now an ExpDescr
+instead of an aoset (as was before); with a corresponding
+change to the argument of handleReturnStmt.
+
+Independently: updated RAN's handleFormal (wrote but
+not tested).
+@
+text
+@d104 1
+@
+
+
+1.24
+log
+@Interface change: intraProcHandleCall now takes a PExprCall
+rather than a CFGfunction -- consequently, the iteration
+over target functions is now the responsibility of
+intraProcHandleCall rather than in dfa.cpp: BBA::PgmExprPropagate.
+
+Then, one update to body of MBU::intraProcHandleCall -
+to account for assignment of return value, at callsite
+dc to ao, now add "R D ao" to the MBUfact set, so that
+the subsequent assignment of the call's return value
+to a variable will mark that variable as MBU as well.
+This was a bug in the old implemenation.
+@
+text
+@d30 1
+a30 1
+    bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos, bool interproc);
+@
+
+
+1.23
+log
+@Interface update: augmented handleFormal / handleReturnStmt
+with "interproc" flag.
+Not yet used.
+@
+text
+@d38 1
+a38 1
+    void intraProcHandleCall(DFAfact& df, CFGfunction& fn);
+@
+
+
+1.22
+log
+@Added -ran-inter support: only started implementing
+(not complete - don't run yet).
+@
+text
+@d29 2
+a30 2
+    bool handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites);
+    bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos);
+@
+
+
+1.21
+log
+@Infrastructure update: CFGnode backedge indicator has
+been upgraded from a boolean to an AO set pointer, for
+which a value of:
+  0 indicates non-backedge
+  1 (constant CFGnode::ALL_AOS) indicates a backedge
+    with no AO-filter information (i.e. widen all intervals)
+  otherwise, contains the set of AOs that may be modified
+    in the loop body, and constitutes a safe superset of
+    AOs whose interval needs to be widened.
+So far, added the necessary interface and skeletal function
+bodies; NOT YET DONE: write the engine to compute the may-mod
+sets.
+@
+text
+@d58 2
+a59 2
+    RAN(RANfactHandler& rah, enum wn_mode wn = WN_MEET, bool always = false)
+	: DFA((DFAfactHandler&)rah, false, true), wnmode(wn), wn_always(always) {} //- TODO: try inter=true also?
+d104 1
+@
+
+
+1.20
+log
+@1. Adjustment to "_" (untouched exposed aos) behavior: reports only
+   one status, rather than a separate status for ptr/ptrw as was done
+   before.  This is because the tsl analysis is already dependent on
+   ptr/ptrw-ness, so it makes no sense to report both when doing one
+   particular analysis.
+   Involved change to ECR class definition (used to have two booleans
+   touched_ptr/touched_ptrw; now just one).
+
+2. Updated "/" (freearg) to account for untouched-ness: by adding
+   a flag to AO::pointsToExposed/ECR::inclToExposed saying whether
+   or not to check the touched flag.
+@
+text
+@d66 1
+a66 1
+    virtual bool absorbAndCompare(DFAfact& df1, DFAfact& df2, bool is_backedge = false);
+d97 2
+a98 1
+    bool extended_meet(RANfact& df, bool preserve, bool warnNotLE, enum RAN::wn_mode wn);
+@
+
+
+1.19
+log
+@Added new stat counters for range analysis: count average
+and max size of RANfact when collecting.
+@
+text
+@d150 2
+a151 1
+    RANcFactHandler(suco_set<PExprVerify *>& res) : RANfactHandler(), results(res) {}
+d157 1
+@
+
+
+1.18
+log
+@Major update: implemeted narrowing.
+Some restructuring: previously had different classes
+RAN/RANnarrow/RANwiden; have consolidated them with
+a flag indicating which mode the analysis will run in
+(meet/narrow/widen; the first not currently used).
+Also added runtime flags to turn on/off narrowing
+phase, and also to control whether widen/narrow
+is done always or on backedge only (previous implementation
+was equivalent to one widen pass plus one meet pass;
+current default is one widen(backedge) pass plus one
+narrow(always) pass).
+Note that the narrowing code is currently full of
+debug printfs -- cases that shouldn't(?) occur.
+@
+text
+@d104 2
+@
+
+
+1.17
+log
+@Made absorbAndCompare virtual: unnecessary change, but made
+during the course of debugging (the cfg.h/isBackEdge bug).
+@
+text
+@d10 1
+a10 69
+//- RAN: range analysis
+
+class RANfact : public DFAfact
+{
+  public:
+
+    RANfact(): is_top(true), map(0) {}
+    ~RANfact();
+
+  public: //-- inherited interface
+    DFAfact& newClone(bool preserve = true);
+
+    void setTop();
+    void setBottom();
+    bool meet(DFAfact& df, bool preserve = true, bool warnNotLE = false);
+    void join(DFAfact& df, bool preserve = true);
+    void debug_dump(FILE * outf, bool brief = true);
+
+  public:
+    //- both widen and narrow must consume rf
+    enum wn_mode {
+      WN_MEET = 0,
+      WN_WIDEN,
+      WN_NARROW
+    };
+    bool extended_meet(RANfact& df, bool preserve, bool warnNotLE, enum wn_mode wn);
+
+    bool checkInBounds(ExpDescr& ed);
+    Interval evalExpr(ExpDescr& ed);
+    void updateInterval(AO& ao, Interval iv);
+    void meetIntervals(suco_set<ECR *>& ecrset, Interval iv);
+
+    enum cfmode {
+      m_eqne = 0,
+      m_ltge = 1,
+      m_gtle = 2
+    };
+    void evalPredExpr(char * s, suco_iterator<AO *>& aoi, enum cfmode mode, Interval iv, DFAfactPair& dfp);
+
+  private:
+    bool is_top;
+    class interval_node
+    {
+      public:
+        interval_node(AO& o, Interval iv, interval_node * nx)
+		: ao(o), interval(iv), next(nx) {}
+        AO& ao;
+        Interval interval;
+        interval_node * next;
+      private:
+        interval_node();
+    } * map;
+
+    interval_node ** lookupInterval(AO& ao);
+    void clearMap();
+    void deleteInterval(AO& ao);
+
+    Interval evalSubexpr(char *& s, suco_iterator<AO *>& aoi, bool skipahead = false); //- helper for evalExpr
+    Interval evalAddrRange(char *& s, suco_iterator<AO *>& aoi); // used by checkInBounds, evalExpr
+
+    static void skipArgs(char *& s, suco_iterator<AO *>& aoi); //- helper for evalSubexpr, evalAddrRange
+    static void consume(char *& s, char c);
+
+    static enum cfmode flipmode(enum cfmode mode)
+	{ return (mode == m_ltge) ? m_gtle : ((mode == m_gtle) ? m_ltge : mode); }
+};
+
+//----------------------------------
+//- RAN: range analysis
+d14 1
+a14 1
+  public:
+d16 2
+a17 2
+    DFAfact& newTopFact() { return *new RANfact; }
+    void deleteFact(DFAfact& df) { delete (RANfact*) &df; }
+d52 8
+a59 2
+    RAN(RANfactHandler& rah) : DFA(rah, false, true) {}
+					//- TODO: try inter=true also?
+d66 1
+a66 1
+    virtual bool absorbAndCompare(DFAfact& df1, DFAfact& df2, bool is_backedge = false) = 0;
+d72 2
+d76 4
+a79 1
+class RANwiden : public RAN
+a81 1
+    RANwiden(RANfactHandler& rah) : RAN(rah) {}
+d83 5
+a87 1
+    virtual bool absorbAndCompare(DFAfact& df1, DFAfact& df2, bool is_backedge = false);
+d89 5
+a93 3
+  private:
+    RANwiden();
+};
+a94 2
+class RANnarrow : public RAN
+{
+d96 7
+a102 1
+    RANnarrow(RANfactHandler& rah) : RAN(rah) {}
+d104 6
+a109 1
+    virtual bool absorbAndCompare(DFAfact& df1, DFAfact& df2, bool is_backedge = false);
+d112 25
+a136 1
+    RANnarrow();
+@
+
+
+1.16
+log
+@Added handleWeakAssign; involved adding meetIntervals
+helper.
+@
+text
+@d128 1
+a128 1
+    bool absorbAndCompare(DFAfact& df1, DFAfact& df2, bool is_backedge = false) = 0;
+d141 1
+a141 1
+    bool absorbAndCompare(DFAfact& df1, DFAfact& df2, bool is_backedge = false);
+d152 1
+a152 1
+    bool absorbAndCompare(DFAfact& df1, DFAfact& df2, bool is_backedge = false);
+@
+
+
+1.15
+log
+@Added code to
+ - lookup address range (evalAddrRange)
+ - do the bounds check
+Also, fixed small bug: skipArgs() now takes aoi as
+argument, as that has to be advanced for each 'V' and
+'S' in the string!
+@
+text
+@d40 1
+@
+
+
+1.14
+log
+@Added interface skeleton for doing the bounds-check phase,
+including:
+  Interval::inBounds
+  RANfact::checkInBounds
+  RANfact::evalAddrRange (needed by both checkInBounds
+                          and evalSubexpr/addrof case)
+and changed RANc result type from a REDresult to a
+list of PExprVerify's.
+Next need to fill in, mainly evalAddrRange, but must
+think of strategy to store object sizes.
+@
+text
+@d66 1
+a67 1
+    Interval evalSubexpr(char *& s, suco_iterator<AO *>& aoi, bool skipahead = false); //- helper for evalExpr
+d69 1
+a69 1
+    static void skipArgs(char *& s); //- helper for evalSubexpr
+@
+
+
+1.13
+log
+@Restructured BBA/DFA definitions: added default definitions
+of the seven BBA methods (isUseless,markUseless,checkProgress)
+and removed them from the inheriting collector classes.
+Altogether "cleaner" (?) interface, with no change in semantics.
+@
+text
+@d37 1
+d66 1
+d166 1
+a166 1
+    RANcFactHandler(REDresults& res) : RANfactHandler(), results(res) {}
+d171 1
+a171 1
+    REDresults& results;
+@
+
+
+1.12
+log
+@Filled in more cases: uplus/uminus, <=/>=/==/!=, type-cast.
+Note: changed evalPredExpr so taht first argument is no longer
+passed by reference -- since evalPredExpr is not written to
+consume while parsing.
+@
+text
+@a176 13
+  public: //- inherited stuff
+
+    //-- do nothing when collecting
+    void checkCallProgress(PExprCall& dc, DFAfact& df) {}
+    void checkNodeProgress(CFGnode& cn, DFAfactPair& dfp) {}
+    bool checkParallelProgress(PExprParallel& dp, DFAfact& df, bool preserve = true) { return false; }
+
+    //-- no node is useless when collecting
+    bool isUselessNode(CFGnode& cn) { return false; }
+    bool isUselessNode(PgmExpr& dn) { return false; }
+    bool markUselessNode(CFGnode& cn) { return false; }
+    bool markUselessNode(PgmExpr& dn) { return false; }
+
+@
+
+
+1.11
+log
+@Added Interval class to encapsulate [min,max] intervals.
+@
+text
+@d45 1
+a45 1
+    void evalPredExpr(char *& s, suco_iterator<AO *>& aoi, enum cfmode mode, Interval iv, DFAfactPair& dfp);
+d70 2
+@
+
+
+1.10
+log
+@Wrote evalPredExpr '+'/'-' cases:
+ - changed handlePredicate to create a copy of the fact
+	for lookup
+ - thus, evalPredExpr is no longer a static function
+ - added helper functions intervalAdd and intervalSubtract
+Next: will define Interval class to encapsulate intervals
+(min,max).
+@
+text
+@d7 1
+a7 1
+#include "limits.h"
+d37 2
+a38 2
+    void evalExpr(ExpDescr& ed, int& min, int& max);
+    void updateInterval(AO& ao, int min, int max);
+d45 1
+a45 1
+    void evalPredExpr(char *& s, suco_iterator<AO *>& aoi, enum cfmode mode, int min, int max, DFAfactPair& dfp);
+d52 2
+a53 2
+        interval_node(AO& o, int mn, int mx, interval_node * nx)
+		: ao(o), min(mn), max(mx), next(nx) {}
+d55 1
+a55 2
+        int min;
+        int max;
+d65 1
+a65 3
+    static int dummy;
+    //- call with min/max args to compute min/max; else, parse subexpr in "skipahead" mode
+    void evalSubexpr(char *& s, suco_iterator<AO *>& aoi, int& min = dummy, int& max = dummy); //- helper for evalExpr
+a69 3
+    //- interval arithmetic functions
+    static void intervalAdd(int& min, int& max, int min1, int max1, int min2, int max2);
+    static void intervalSubtract(int& min, int& max, int min1, int max1, int min2, int max2);
+@
+
+
+1.9
+log
+@Added code for initial handling of predicate nodes:
+wrote < and V cases for evalPredExpr;
+modified evalSubexpr to possibly take no arguments, to mean
+a "skipahead" pass, without evaluating min/max.
+Compiles, runs on small test, but not bigger pgms.
+@
+text
+@d7 1
+a7 1
+#include "limits.h" //- for INT_MIN, INT_MAX
+d45 1
+a45 1
+    static void evalPredExpr(char *& s, suco_iterator<AO *>& aoi, enum cfmode mode, int min, int max, DFAfactPair& dfp);
+d72 4
+@
+
+
+1.8
+log
+@Somewhat Major Rewrite:
+Previously, I was careless about RANfact being top/bottom
+and how to meet facts.
+Now, however, the lattice has been more distinctly defined:
+a top fact is one where all vars map to the empty interval;
+this is now represented with a is_top flag in RANfact.
+Next, when not is_top, the absense of an interval mapping
+for a variable implies the unconstrained [INT_MIN,INT_MAX]
+interval.
+Meet should thus be an intersection of the two interval
+maps, not union as was previously implemented!
+(The union code has been moved to join(), which is an
+unused function at the moment).
+NOTE: the one place where top-ness is important is when
+widening: the backedge "widening-cache" fact is initially
+top, and upon first widening will be a limited mapping
+with probably many unconstrained intervals.
+Therefore, the order of traversal is not vitally important:
+consider a branch within a loop: if the one-branch fact
+is allowed to be widened into the cached value, then the
+other-branch fact will probably be washed out by the
+cached value having many absent (implying unconstrained)
+intervals!  Therefore, the recently-added -wli-topo flag
+should always be used (it seems to do the "right" thing
+when traversing).
+@
+text
+@d33 1
+a33 1
+      WN_NARROW,
+d40 7
+d65 5
+a69 1
+    void evalSubexpr(char *& s, int& min, int& max, suco_iterator<AO *>& aoi); //- helper for evalExpr
+@
+
+
+1.7
+log
+@Added helpers skipArgs/consume; filled in all cases of
+evalSubexpr with empty default cases, and wrote plus
+and minus cases.
+@
+text
+@d16 1
+a16 1
+    RANfact(): is_bot(false), map(0) {}
+d38 1
+a38 2
+    bool updateInterval(AO& ao, int min, int max); //- return true if changed
+    bool deleteInterval(AO& ao); //- return true if deleted
+d41 1
+a41 1
+    bool is_bot;
+d57 1
+@
+
+
+1.6
+log
+@Removed const qualifier to evalSubexpr's char * arguments.
+@
+text
+@d38 2
+a39 2
+    void updateInterval(AO& ao, int min, int max);
+    void deleteInterval(AO& ao);
+d58 3
+a60 1
+    void evalSubexpr(char * s, int& min, int& max, suco_iterator<AO *> aoi, char ** ep = 0); //- helper for evalExpr
+@
+
+
+1.5
+log
+@Filled in skeletal switch functions for evalExpr / added
+evalSubexpr.
+@
+text
+@d58 1
+a58 1
+    void evalSubexpr(const char * s, int& min, int& max, const char ** ep = 0); //- helper for evalExpr
+@
+
+
+1.4
+log
+@Slowly filling in components of range analysis:
+ - filled in handleStrongAssign
+ - introduced RANfact::evalExpr, right now empty
+ - added RANfact::deleteInterval
+@
+text
+@d58 1
+@
+
+
+1.3
+log
+@Filled in more of RAN: basically all but transfer functions.
+Note: one change was to eliminate widen/narrow, and create
+an "extended_meet" function with a flag indicating which
+mode (meet/widen/narrow) to perform.
+(Note: narrow mode and meet mode are the same??)
+@
+text
+@d37 4
+a56 1
+    void updateInterval(AO& ao, int min, int max);
+@
+
+
+1.2
+log
+@Filled in code and data components for Range analysis.
+Only partway done: compiles, but run doesn't terminate.
+@
+text
+@d30 6
+a35 2
+    bool widen(RANfact& rf);
+    bool narrow(RANfact& rf);
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d7 1
+d16 2
+a17 2
+    RANfact() {}
+    ~RANfact() {}
+d32 19
+d60 2
+a61 2
+    DFAfact& newTopFact();
+    void deleteFact(DFAfact& df);
+@

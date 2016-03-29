@@ -1,0 +1,1281 @@
+head	1.33;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.33
+date	2004.07.01.14.05.11;	author suan;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	2004.06.30.16.20.13;	author suan;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	2004.05.02.18.26.36;	author suan;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	2004.04.14.00.22.35;	author suan;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	2004.04.07.21.07.14;	author suan;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	2004.04.07.18.02.03;	author suan;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	2004.04.07.17.38.56;	author suan;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	2004.02.24.23.48.16;	author suan;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	2004.02.24.19.29.20;	author suan;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	2003.12.11.21.03.59;	author suan;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	2003.12.11.19.18.20;	author suan;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	2003.12.11.18.26.35;	author suan;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	2003.11.13.00.23.51;	author suan;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	2003.10.24.21.18.48;	author suan;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	2003.10.08.23.31.07;	author suan;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	2003.10.08.16.31.43;	author suan;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	2003.10.07.23.05.21;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2003.10.01.22.18.32;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2003.03.21.21.47.30;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2003.03.20.23.01.22;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2003.03.20.19.38.21;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2003.03.20.00.03.06;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2003.02.27.00.54.40;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2003.02.26.21.11.26;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2003.02.24.21.53.17;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2003.02.22.00.11.49;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2003.02.22.00.05.44;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2003.02.21.20.37.30;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2003.02.21.17.40.11;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2003.02.18.23.27.37;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2003.02.17.20.21.32;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2003.02.17.19.29.23;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2003.02.17.17.43.28;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Redundant check elimination analysis.
+@
+
+
+1.33
+log
+@Added "parallel-2-rounds" hackery to get RED (ptr mode)
+to get better results -- results _MAY_ or may not be sound...
+Complication: the fix "broke" RAN (it gave worse results).
+SO, in the interest of thesis deadline, I've hacked BBA to
+switch between the two versions depending on which analysis
+is being run.
+@
+text
+@#ifndef TC_RED_H /* { */
+#define TC_RED_H
+
+#include "cfg.h"
+#include "dfa.h"
+#include "rda.h"
+
+class PExprVerify;
+class PExprAssign;
+
+class REDresults
+{
+  public:
+    REDresults()
+	: vp_all(),
+	  vp_write(),
+	  vt_verify(),
+	  vt_assign(),
+	  stat_num_vp(0),
+	  stat_num_vp_red(0),
+	  stat_num_vpw(0),
+	  stat_num_vpw_red(0),
+	  stat_num_vtv(0),
+	  stat_num_vtv_red(0),
+	  stat_num_vta(0),
+	  stat_num_vta_red(0)
+	  {}
+
+    suco_set<PExprVerify *> vp_all;
+    suco_set<PExprVerify *> vp_write;
+    suco_set<PExprVerify *> vt_verify;
+    suco_set<PExprAssign *> vt_assign;
+
+    void debug_dump(FILE * outf);
+    void writeResults(FILE * outf);
+
+    int stat_num_vp;
+    int stat_num_vp_red;
+    int stat_num_vpw;
+    int stat_num_vpw_red;
+    int stat_num_vtv;
+    int stat_num_vtv_red;
+    int stat_num_vta;
+    int stat_num_vta_red;
+};
+
+//----------------------------------
+//- RED: redundant analysis
+
+class REDfact : public DFAfact
+{
+  //-- inherited interface
+  public:
+    DFAfact& newClone(bool preserve = true);
+
+    void setTop() { is_top = true; edescset.Clear(); }
+    void setBottom() { is_top = false; edescset.Clear(); }
+    bool meet(DFAfact& df, bool preserve = true, bool warnNotLE = false);
+    void join(DFAfact& df, bool preserve = true);
+
+    void debug_dump(FILE * outf, bool brief = true);
+
+  //-- mbu-specific stuff
+  public:
+    REDfact() : edescset(ExpDescr::compare), is_top(true) {}
+    ~REDfact() { edescset.Clear(); }
+
+    suco_set<ExpDescr *>& getEDescSet() { return edescset; }
+
+  private:
+    REDfact(REDfact& mf); //-- disable copy constructor
+
+    suco_set<ExpDescr *> edescset;
+    bool is_top;
+};
+
+class REDfactPair : public DFAfact
+{
+  //-- inherited interface
+  public:
+
+    DFAfact& newClone(bool preserve = true);
+
+    void setTop() { vpfact.setTop(); vtfact.setTop(); }
+    void setBottom() { vpfact.setBottom(); vtfact.setBottom(); }
+    bool meet(DFAfact& df, bool preserve = true, bool warnNotLE = false);
+    void join(DFAfact& df, bool preserve = true);
+
+    void debug_dump(FILE * outf, bool brief = true);
+
+  //-- mbu-specific stuff
+  public:
+    REDfactPair() : vpfact(), vtfact() {}
+    ~REDfactPair() {}
+
+    REDfact& getVPfact() { return vpfact; }
+    REDfact& getVTfact() { return vtfact; }
+
+  private:
+    REDfactPair(REDfactPair& mf); //-- disable copy constructor
+
+    REDfact vpfact; //- used in ptr, ptrw, and tc modes
+    REDfact vtfact; //- used in tc mode only
+};
+
+//----------------------------------
+//- REDfactHandler: abstract parent for [REDp/REDpw/REDt/REDtp]FactHandler
+
+class REDfactHandler : public DFAfactHandler
+{
+  public:
+    DFAfact& newTopFact() { return *new REDfactPair(); }
+    void deleteFact(DFAfact& df) { delete (REDfactPair *) &df; }
+
+    //- inter-proc: never called
+    void filterCallsiteFacts(PExprCall& dc, DFAfact& df, DFAfact& df_local) {}
+    virtual void interProcHandleCallArgs(DFAfact& df, PExprCall& dc) {}
+    virtual void interProcHandleRetvalAssign(DFAfact& df, PExprCall& dc) {}
+
+    DFAfact& lookupNodeFact(CFGnode& cn, CFGnode * tfSucc = 0);
+    DFAfact& lookupNodeFact(PExprCall& dc);
+    DFAfact& lookupNodeFact(PExprParallel& dp);
+
+    virtual bool handleFormal(DFAfact& df, PExprDecl& dd, CFGfunction& parfn, bool interproc)
+	{ return true; } //- intra-proc: do nothing
+    virtual bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, ExpDescr * retedesc, bool interproc)
+	{ return true; } //- intra-proc: do nothing
+    virtual bool handleDecl(DFAfact& df, PExprDecl& dd)
+	{ return true; } //- default: do nothing
+    virtual bool handlePredicate(DFAfactPair& dfp, PExprPredicate& dp)
+	{ return true; } //- RED: do nothing
+
+  protected:
+    REDfactHandler() : DFAfactHandler() {}
+};
+
+//----------------------------------
+//- REDp: redundant analysis: -ptr mode
+
+class REDpFactHandler : public REDfactHandler
+{
+  public:
+    virtual bool handleStrongAssign(DFAfact& df, AO& lhs, ExpDescr& rhs,
+			    PgmExpr * dnode = 0, PgmStmt * cnode = 0, PExprArg * arg = 0);
+    virtual bool handleWeakAssign(DFAfact& df, ExpDescr& lhs, ExpDescr& rhs, PExprAssign& dnode);
+    virtual bool handleVerify(DFAfact& df, PExprVerify& dv);
+
+    virtual void handleFreeCall(DFAfact& df, PExprCall& dc);
+
+    virtual void intraProcInitializeEntryFact(DFAfact& df, CFGnode& cn);
+    virtual void interProcFilterEntryFact(DFAfact& df, CFGnode& cn);
+    virtual void intraProcHandleCall(DFAfact& df, PExprCall& dc);
+
+  public:
+    static REDpFactHandler handler;
+};
+
+//----------------------------------
+//- REDpw: redundant analysis: -ptrw mode
+
+class REDpwFactHandler : public REDpFactHandler
+{
+  public:
+    virtual bool handleVerify(DFAfact& df, PExprVerify& dv);
+
+  public:
+    static REDpwFactHandler handler;
+};
+
+//----------------------------------
+//- REDt: redundant analysis: tc types
+
+class REDtFactHandler : public REDfactHandler
+{
+  public:
+//    bool handleFormal(DFAfact& df, PExprDecl& dd, CFGfunction& parfn, bool interproc);
+//    bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, ExpDescr * retedesc, bool interproc);
+//    bool handleDecl(DFAfact& df, PExprDecl& dd);
+
+    virtual bool handleStrongAssign(DFAfact& df, AO& lhs, ExpDescr& rhs,
+			    PgmExpr * dnode = 0, PgmStmt * cnode = 0, PExprArg * arg = 0);
+    virtual bool handleWeakAssign(DFAfact& df, ExpDescr& lhs, ExpDescr& rhs, PExprAssign& dnode);
+    virtual bool handleVerify(DFAfact& df, PExprVerify& dv);
+
+    void handleFreeCall(DFAfact& df, PExprCall& dc);
+
+    void intraProcInitializeEntryFact(DFAfact& df, CFGnode& cn);
+    void interProcFilterEntryFact(DFAfact& df, CFGnode& cn);
+    void intraProcHandleCall(DFAfact& df, PExprCall& dc);
+
+  public:
+    static REDtFactHandler handler;
+};
+
+//----------------------------------
+//- REDtp: redundant analysis: tc types + ptr
+
+class REDtpFactHandler : public REDfactHandler
+{
+  public:
+    bool handleFormal(DFAfact& df, PExprDecl& dd, CFGfunction& parfn, bool interproc);
+    bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, ExpDescr * retedesc, bool interproc);
+    bool handleDecl(DFAfact& df, PExprDecl& dd);
+
+    virtual bool handleStrongAssign(DFAfact& df, AO& lhs, ExpDescr& rhs,
+			    PgmExpr * dnode = 0, PgmStmt * cnode = 0, PExprArg * arg = 0);
+    virtual bool handleWeakAssign(DFAfact& df, ExpDescr& lhs, ExpDescr& rhs, PExprAssign& dnode);
+    virtual bool handleVerify(DFAfact& df, PExprVerify& dv);
+
+    void handleFreeCall(DFAfact& df, PExprCall& dc);
+
+    void intraProcInitializeEntryFact(DFAfact& df, CFGnode& cn);
+    void interProcFilterEntryFact(DFAfact& df, CFGnode& cn);
+    void intraProcHandleCall(DFAfact& df, PExprCall& dc);
+
+  public:
+    static REDtpFactHandler handler;
+};
+
+//----------------------------------
+//- RED: redundant analysis
+
+class RED : public DFA
+{
+  public:
+    RED(REDfactHandler& rfh, bool paral2r) : DFA(rfh, false, false, paral2r?BBA::PM_RED_UNSAFE:BBA::PM_RED) {}
+
+    bool isUselessNode(CFGnode& cn);
+    bool isUselessNode(PgmExpr& dn);
+    bool markUselessNode(CFGnode& cn);
+    bool markUselessNode(PgmExpr& dn);
+
+    bool absorbAndCompare(DFAfact& df1, DFAfact& df2, LocSet * backedge_filter = 0);
+
+    void print_debug_stats(CFG& cfg, FILE * outf);
+
+  private:
+    RED();
+};
+
+//----------------------------------
+// REDpc: collect redundant results: -ptr/ptrw mode
+
+class REDpcFactHandler : public REDpFactHandler
+{
+  public:
+    bool handleVerify(DFAfact& df, PExprVerify& dv);
+
+  public:
+    REDpcFactHandler(REDresults& res) : REDpFactHandler(), results(res) {}
+
+  private:
+    REDpcFactHandler();
+
+    REDresults& results;
+};
+
+//----------------------------------
+// REDpwc: collect redundant results: -ptr/ptrw mode
+
+class REDpwcFactHandler : public REDpwFactHandler
+{
+  public:
+    bool handleVerify(DFAfact& df, PExprVerify& dv);
+
+  public:
+    REDpwcFactHandler(REDresults& res) : REDpwFactHandler(), results(res) {}
+
+  private:
+    REDpwcFactHandler();
+
+    REDresults& results;
+};
+
+//----------------------------------
+// REDtc: collect redundant results: tc types
+
+class REDtcFactHandler : public REDtFactHandler
+{
+  public:
+    bool handleVerify(DFAfact& df, PExprVerify& dv);
+
+  public:
+    bool handleStrongAssign(DFAfact& df, AO& lhs, ExpDescr& rhs,
+			    PgmExpr * dnode = 0, PgmStmt * cnode = 0, PExprArg * arg = 0);
+    bool handleWeakAssign(DFAfact& df, ExpDescr& lhs, ExpDescr& rhs, PExprAssign& dnode);
+
+    REDtcFactHandler(REDresults& res) : REDtFactHandler(), results(res) {}
+
+  private:
+    REDtcFactHandler();
+
+    REDresults& results;
+};
+
+//----------------------------------
+// REDtpc: collect redundant results: tc types + ptr
+
+class REDtpcFactHandler : public REDtpFactHandler
+{
+  public:
+    bool handleStrongAssign(DFAfact& df, AO& lhs, ExpDescr& rhs,
+			    PgmExpr * dnode = 0, PgmStmt * cnode = 0, PExprArg * arg = 0);
+    bool handleWeakAssign(DFAfact& df, ExpDescr& lhs, ExpDescr& rhs, PExprAssign& dnode);
+    bool handleVerify(DFAfact& df, PExprVerify& dv);
+
+  public:
+    REDtpcFactHandler(REDresults& res) : REDtpFactHandler(), pcfh(res), tcfh(res) {}
+
+  private:
+    REDtpcFactHandler();
+
+    REDpcFactHandler pcfh;
+    REDtcFactHandler tcfh;
+};
+
+//----------------------------------
+// REDc: collect redundant results
+
+class REDc : public BBA
+{
+  public:
+    REDc(REDfactHandler& rcfh) : BBA(rcfh, false, PM_RED) {}
+
+  private:
+    REDc();
+};
+
+//----------------------------------
+
+#endif /* } ifndef TC_RED_H */
+
+@
+
+
+1.32
+log
+@Added stat-output for RED analysis.
+@
+text
+@d226 1
+a226 1
+    RED(REDfactHandler& rfh) : DFA(rfh, false) {}
+d323 1
+a323 1
+    REDc(REDfactHandler& rcfh) : BBA(rcfh, false) {}
+@
+
+
+1.31
+log
+@MAJOR UPDATE:
+- Created new class LocSet to encapsulate a set of
+  locations, used to store GMOD, GREF, and backedge
+  filters.
+  (Previously, was suco_set<AO *>, later changed to
+  suco_set<ECR *>.)
+- Created two versions, one storing AOs, another
+  storing ECRs.  Verified that results are the
+  same, though performance is not (but only when
+  computing backedge filters).
+@
+text
+@d14 14
+a27 1
+    REDresults() : vp_all(), vp_write(), vt_verify(), vt_assign() {}
+d36 9
+d287 1
+@
+
+
+1.30
+log
+@Major overhaul, to handle function call filtering.
+See dfa.cpp for documentation.
+ - filterRetnodeFact() eliminated; replaced by
+ - interProcHandleRetvalAssign -- responsible for
+   assigning from R X I <fn> to R D I <fp>.
+ - interProcPrepareReturnCollector() -- special
+    pre-processor for indirect calls to set "intersection"
+   AOs to "top".
+ - meetFiltered() -- does meet, but constrained by a
+   window (defined by a function's GREF/MayFree set).
+Supporting changes:
+ - eliminated removeArgIntervalsExceptFor(); rendered obsolete
+   by
+ - filterGrefMayFree() -- called at function entry
+ - RANfact::isTop()
+ - collectAOset, createTopMappings, in support of
+   interProcPrepareReturnCollector()
+ - PExprCall::isDirectCall() and isRecursiveCall()
+ - CFGfunction::GrefOrFreeHeapAffects()
+@
+text
+@d211 1
+a211 1
+    bool absorbAndCompare(DFAfact& df1, DFAfact& df2, suco_set<AO *> * backedge_filter = 0);
+@
+
+
+1.29
+log
+@Added new DFA interface function interProcFilterEntryFact()
+called at each function entry (when doing inter-proc
+analysis).
+@
+text
+@d96 1
+@
+
+
+1.28
+log
+@Changed handleFormal to pass parent-function rather
+than previous "ismain" and "callsites" pair.
+@
+text
+@d128 1
+d165 1
+d190 1
+@
+
+
+1.27
+log
+@Added interProcHandleCallArgs() interface function to
+DFA and all derived classes.
+@
+text
+@d101 1
+a101 1
+    virtual bool handleFormal(DFAfact& df, PExprDecl& dd, bool ismain, suco_llist<PExprCall *>& callsites, bool interproc)
+d152 1
+a152 1
+//    bool handleFormal(DFAfact& df, PExprDecl& dd, bool ismain, suco_llist<PExprCall *>& callsites, bool interproc);
+d176 1
+a176 1
+    bool handleFormal(DFAfact& df, PExprDecl& dd, bool ismain, suco_llist<PExprCall *>& callsites, bool interproc);
+@
+
+
+1.26
+log
+@PREVIOUSLY: handleReturnStmt was only called for non-void
+return statements.
+NOW: handleReturnStmt is called for ALL return statements.
+This is needed so analyses can properly handle deallocation
+of local variables.
+OTHER CHANGES:
+ 1. RAN: handleReturnStmt now removes intervals pointing
+    to freedStack ECRs.
+ 2. Interval: changed code for narrow() to be more logically
+    sound?
+@
+text
+@d93 1
+a93 1
+    //- intra-proc: never called
+d95 1
+@
+
+
+1.25
+log
+@Modified handleFormal to pass a flag indicating whether
+the function is "main".  This is needed because main's
+argc/argv formals may need to be initialized differently.
+
+For RAN::handleFormal() - if ismain, then set bottom;
+else do top MEET callsite facts.
+
+For MBU::handleFormal() - *BUG FIX* - was previously calling
+handleStrongAssign(), which was _wrong_ (doesn't correctly
+meet facts from multiple callsites); fixed to do "weak"
+assignment.
+@
+text
+@d102 1
+a102 1
+    virtual bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, ExpDescr& retedesc, bool interproc)
+d152 1
+a152 1
+//    bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, ExpDescr& retedesc, bool interproc);
+d176 1
+a176 1
+    bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, ExpDescr& retedesc, bool interproc);
+@
+
+
+1.24
+log
+@Another change: RETURN argument is now an ExpDescr
+instead of an aoset (as was before); with a corresponding
+change to the argument of handleReturnStmt.
+
+Independently: updated RAN's handleFormal (wrote but
+not tested).
+@
+text
+@d100 1
+a100 1
+    virtual bool handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites, bool interproc)
+d151 1
+a151 1
+//    bool handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites, bool interproc);
+d175 1
+a175 1
+    bool handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites, bool interproc);
+@
+
+
+1.23
+log
+@Interface change: intraProcHandleCall now takes a PExprCall
+rather than a CFGfunction -- consequently, the iteration
+over target functions is now the responsibility of
+intraProcHandleCall rather than in dfa.cpp: BBA::PgmExprPropagate.
+
+Then, one update to body of MBU::intraProcHandleCall -
+to account for assignment of return value, at callsite
+dc to ao, now add "R D ao" to the MBUfact set, so that
+the subsequent assignment of the call's return value
+to a variable will mark that variable as MBU as well.
+This was a bug in the old implemenation.
+@
+text
+@d102 1
+a102 1
+    virtual bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos, bool interproc)
+d152 1
+a152 1
+//    bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos, bool interproc);
+d176 1
+a176 1
+    bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos, bool interproc);
+@
+
+
+1.22
+log
+@Interface update: augmented handleFormal / handleReturnStmt
+with "interproc" flag.
+Not yet used.
+@
+text
+@d127 1
+a127 1
+    virtual void intraProcHandleCall(DFAfact& df, CFGfunction& fn);
+d163 1
+a163 1
+    void intraProcHandleCall(DFAfact& df, CFGfunction& fn);
+d187 1
+a187 1
+    void intraProcHandleCall(DFAfact& df, CFGfunction& fn);
+@
+
+
+1.21
+log
+@Infrastructure update: CFGnode backedge indicator has
+been upgraded from a boolean to an AO set pointer, for
+which a value of:
+  0 indicates non-backedge
+  1 (constant CFGnode::ALL_AOS) indicates a backedge
+    with no AO-filter information (i.e. widen all intervals)
+  otherwise, contains the set of AOs that may be modified
+    in the loop body, and constitutes a safe superset of
+    AOs whose interval needs to be widened.
+So far, added the necessary interface and skeletal function
+bodies; NOT YET DONE: write the engine to compute the may-mod
+sets.
+@
+text
+@d100 1
+a100 1
+    virtual bool handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites)
+d102 1
+a102 1
+    virtual bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos)
+d151 2
+a152 2
+//    bool handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites);
+//    bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos);
+d175 2
+a176 2
+    bool handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites);
+    bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos);
+@
+
+
+1.20
+log
+@Restructured BBA/DFA definitions: added default definitions
+of the seven BBA methods (isUseless,markUseless,checkProgress)
+and removed them from the inheriting collector classes.
+Altogether "cleaner" (?) interface, with no change in semantics.
+@
+text
+@d206 1
+a206 1
+    bool absorbAndCompare(DFAfact& df1, DFAfact& df2, bool is_backedge = false);
+@
+
+
+1.19
+log
+@1. Added code (to CFG::assignId) to mark backedges in
+   the CFG.
+   May be buggy -- must test.
+2. -MAJOR UPDATE-
+   Added ran.cpp/ran.h for range checking.
+   Thusfar, ran.cpp contains only empty skeletons to be
+   filled in - do not run!
+3. Renamed widen_narrow in CFG to is_backedge;
+   also, now widen/narrow are specific to RAN/RANfact,
+   rather than generic to DFA/DFAfact.
+@
+text
+@a293 13
+  public: //- inherited stuff
+
+    //-- do nothing when collecting
+    void checkCallProgress(PExprCall& dc, DFAfact& df) {}
+    void checkNodeProgress(CFGnode& cn, DFAfactPair& dfp) {}
+    bool checkParallelProgress(PExprParallel& dp, DFAfact& df, bool preserve = true) { return false; }
+
+    //-- no node is useless when collecting
+    bool isUselessNode(CFGnode& cn) { return false; }
+    bool isUselessNode(PgmExpr& dn) { return false; }
+    bool markUselessNode(CFGnode& cn) { return false; }
+    bool markUselessNode(PgmExpr& dn) { return false; }
+
+@
+
+
+1.18
+log
+@Added infrastructure for widening/narrowing:
+ - added widen/narrow flag to CFGnode and DFA
+ - added widen/narrow flag to absorbAndCompare to
+   trigger widening/narrowing
+Also, extended lookupNodeFact to take an extra argument:
+a CFGnode to guide lookup of branch successors.
+@
+text
+@d206 1
+a206 1
+    bool absorbAndCompare(DFAfact& df1, DFAfact& df2, bool widen_narrow = false);
+@
+
+
+1.17
+log
+@Major Update: added handling of predicates and branches:
+ - added DFAfactPair class
+ - changed Pgm[Expr/Stmt]Propagate to work on DFAfactPairs (dfps)
+ - checkNodeProgress also handles dfps properly
+ - two new virtual functions in DFAfactHandler are
+   - lookupNodeFactPair: default version outputs a warning
+     and allocates a dfp (which probably won't be deleted)
+   - handlePredicate: wrote default { return true; } versions
+     in all the subclasses.
+@
+text
+@d96 1
+a96 1
+    DFAfact& lookupNodeFact(CFGnode& cn);
+d206 1
+a206 1
+    bool absorbAndCompare(DFAfact& df1, DFAfact& df2);
+@
+
+
+1.16
+log
+@Changed rhs argument of Assign node from an aolist to an exp-descr
+triplet: <aolist, aff-aolist, estr>.
+Main effect is changing the type of the rhs argument of
+handle[Strong/Weak]Assign from an aoset to an ExpDescr,
+which has been down-propagated to all subclasses.
+@
+text
+@d106 2
+d298 1
+a298 1
+    void checkNodeProgress(CFGnode& cn, DFAfact& df) {}
+@
+
+
+1.15
+log
+@Fixed "major" logical flaw when dealing with Parallel nodes:
+previously, final fact was taken to be the *join* of the
+facts along the different paths; however, that only works
+for monotonic transfer functions (?), which gen-kill functions
+aren't; therefore must take the *meet*.
+(Note that when monotonic, the join result is more precise
+than the meet).
+@
+text
+@d117 1
+a117 1
+    virtual bool handleStrongAssign(DFAfact& df, AO& lhs, suco_set<AO *>& rhs,
+d119 1
+a119 1
+    virtual bool handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& rhs, PExprAssign& dnode);
+d153 1
+a153 1
+    virtual bool handleStrongAssign(DFAfact& df, AO& lhs, suco_set<AO *>& rhs,
+d155 1
+a155 1
+    virtual bool handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& rhs, PExprAssign& dnode);
+d177 1
+a177 1
+    virtual bool handleStrongAssign(DFAfact& df, AO& lhs, suco_set<AO *>& rhs,
+d179 1
+a179 1
+    virtual bool handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& rhs, PExprAssign& dnode);
+d255 1
+a255 1
+    bool handleStrongAssign(DFAfact& df, AO& lhs, suco_set<AO *>& rhs,
+d257 1
+a257 1
+    bool handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& rhs, PExprAssign& dnode);
+d272 1
+a272 1
+    bool handleStrongAssign(DFAfact& df, AO& lhs, suco_set<AO *>& rhs,
+d274 1
+a274 1
+    bool handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& rhs, PExprAssign& dnode);
+@
+
+
+1.14
+log
+@Fixed REDt -- previous version was naive and didn't account
+for aliases.
+Removed REDfact::remove, which is no longer needed.
+Added ExpDescr::aliasecrs cache (with accessor getAliasECRs()).
+Added to suco GetSingleton function.
+@
+text
+@d297 1
+a297 1
+    bool checkParallelProgress(PExprParallel& dp, DFAfact& df) { return false; }
+@
+
+
+1.13
+log
+@Wrote REDt.  Minimal test seems OK.
+@
+text
+@a47 3
+    void remove(AO& lhs);
+    void remove(suco_set<ECR *>& lecrset);
+
+@
+
+
+1.12
+log
+@Added REDt* REDtp* skeletons; just need to fill in
+REDt* bodies.
+Note however that there seems to be a logical flaw in REDp*.
+@
+text
+@d48 3
+d154 1
+a154 1
+    bool handleDecl(DFAfact& df, PExprDecl& dd);
+d156 1
+a156 1
+    bool handleStrongAssign(DFAfact& df, AO& lhs, suco_set<AO *>& rhs,
+d158 2
+a159 2
+    bool handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& rhs, PExprAssign& dnode);
+    bool handleVerify(DFAfact& df, PExprVerify& dv);
+d180 1
+a180 1
+    bool handleStrongAssign(DFAfact& df, AO& lhs, suco_set<AO *>& rhs,
+d182 2
+a183 2
+    bool handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& rhs, PExprAssign& dnode);
+    bool handleVerify(DFAfact& df, PExprVerify& dv);
+d258 3
+d275 3
+@
+
+
+1.11
+log
+@Further split RED*handler classes to differentiate between
+-ptr and -ptrw mode, with the latter inheriting from the former
+(with only one change -- w.r.t. handleVerify).
+Minimally tested.
+@
+text
+@d85 1
+a85 1
+//- REDfactHandler: abstract parent for [REDp/REDpw/REDt]FactHandler
+d105 1
+a105 1
+	{ return true; } //- intra-proc: do nothing
+d144 48
+d244 35
+@
+
+
+1.10
+log
+@Major reshuffling (non-final):
+1. output of RED realigned to be of one of four classes:
+    -ptr all, -ptr write, -tag verify, -tag assign
+2. specialized written RED analysis for ptr/ptrw only,
+   wrote -ptr pieces though doesn't seem to work.
+   TODO: split further between ptr and ptrw modes,
+   since these are differentiated anyways by rtca!
+@
+text
+@a31 3
+    friend class REDpFactHandler; //- to access edescset
+    friend class REDpcFactHandler; //- to access edescset
+
+d46 2
+a58 2
+    friend class REDpFactHandler; //- to access fact_p, fact_q
+    friend class REDpcFactHandler; //- to access fact_p, fact_q
+d62 2
+a63 2
+    void setTop() { fact_p.setTop(); fact_q.setTop(); }
+    void setBottom() { fact_p.setBottom(); fact_q.setBottom(); }
+d71 1
+a71 1
+    REDfactPair() : fact_p(), fact_q() {}
+d74 2
+d80 2
+a81 3
+    //- overloaded usage, depending on rtca mode
+    REDfact fact_p; //- tc mode: vp  ptr/w mode: -ptr
+    REDfact fact_q; //- tc mode: vt  ptr/w mode: -ptrw
+d85 1
+a85 1
+//- REDfactHandler: abstract parent for [REDp/REDt]FactHandler
+d112 1
+a112 1
+//- REDp: redundant analysis: -ptr/ptrw mode
+d132 13
+a144 1
+//- REDp: redundant analysis: -ptr/ptrw mode
+d182 17
+d201 1
+a201 1
+class REDpc : public BBA
+d217 1
+a217 5
+    REDpc(REDresults& res) : BBA(this->rcfh, false), rcfh(res), results(res) {}
+
+  protected:
+    REDpcFactHandler rcfh;
+    REDresults& results;
+d220 1
+a220 1
+    REDpc();
+@
+
+
+1.9
+log
+@Added handleFreeCall to dfa framework (PExprCall now has
+extra set of undeclared functions to which it might point,
+and a helper callsFree() to determine if it may call free()).
+For mbu/rda/rdmb, handleFreeCall is a noop; for RED: wrote
+handleFreeCall to remove expressions affected by *p (p is
+arg 1 of free call).
+@
+text
+@d14 1
+a14 1
+    REDresults() : vp_verify(), vt_verify(), vp_assign(), vt_assign() {}
+d16 2
+a17 1
+    suco_set<PExprVerify *> vp_verify;
+a18 1
+    suco_set<PExprAssign *> vp_assign;
+d32 2
+a33 2
+    friend class REDfactHandler; //- to access edescset
+    friend class REDcFactHandler; //- to access edescset
+a48 1
+
+d60 2
+a61 2
+    friend class REDfactHandler; //- to access vpfact, vtfact
+    friend class REDcFactHandler; //- to access vpfact, vtfact
+d65 2
+a66 2
+    void setTop() { vpfact.setTop(); vtfact.setTop(); }
+    void setBottom() { vpfact.setBottom(); vtfact.setBottom(); }
+d74 1
+a74 1
+    REDfactPair() : vpfact(), vtfact() {}
+d81 3
+a83 2
+    REDfact vpfact; //- for -ptr mode
+    REDfact vtfact; //- for tc mode
+d87 1
+a87 1
+//- RED: redundant analysis
+a101 3
+    virtual bool handleStrongAssign(DFAfact& df, AO& lhs, suco_set<AO *>& rhs,
+			    PgmExpr * dnode = 0, PgmStmt * cnode = 0, PExprArg * arg = 0);
+    virtual bool handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& rhs, PExprAssign& dnode);
+d108 14
+d130 1
+a130 1
+    static REDfactHandler handler;
+d134 1
+a134 1
+//- RED: redundant analysis
+d139 1
+a139 1
+    RED() : DFA(REDfactHandler::handler, false) {}
+d149 3
+d155 1
+a155 1
+// REDc: collect redundant results
+d157 1
+a157 1
+class REDcFactHandler : public REDfactHandler
+a159 1
+    bool handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& rhs, PExprAssign& dnode);
+d163 1
+a163 1
+    REDcFactHandler(REDresults& res) : REDfactHandler(), results(res) {}
+d166 1
+a166 1
+    REDcFactHandler();
+d174 1
+a174 1
+class REDc : public BBA
+d190 1
+a190 1
+    REDc(REDresults& res) : BBA(this->rcfh, false), rcfh(res), results(res) {}
+d193 1
+a193 1
+    REDcFactHandler rcfh;
+d197 1
+a197 1
+    REDc();
+@
+
+
+1.8
+log
+@Changed final argument to handleWeakAssign from PgmExpr
+to PExprAssign!
+@
+text
+@d113 2
+@
+
+
+1.7
+log
+@Wrote redundant analysis collection function.
+Entailed creation of REDresults class and REDcFactHandler, etc.
+Resulted in modifying suco_set (olist, actually) to have a
+different Contains function that uses the compare function
+rather than ==. (Future work: may want to extend to some
+other functions).
+@
+text
+@d104 1
+a104 1
+    virtual bool handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& rhs, PgmExpr& dnode);
+d144 1
+a144 1
+    bool handleWeakAssign(DFAfact& df, ExpDescr& lhs, suco_set<AO *>& rhs, PgmExpr& dnode);
+@
+
+
+1.6
+log
+@Added ExpDescr::compare function, which will be used
+by REDfact's edescset -- to eliminate duplication.
+@
+text
+@d8 17
+d33 1
+d61 2
+a62 1
+    friend class REDfactHandler; //- to access edescset
+d141 18
+d175 1
+a175 1
+    REDc(DFAfactHandler& dfh, suco_set<PgmExpr *>& res) : BBA(dfh,false), results(res) {}
+d178 2
+a179 1
+    suco_set<PgmExpr *>& results;
+@
+
+
+1.5
+log
+@Updated redundant analysis: strong and weak assignments written;
+to do: function calls and result collection.
+Entailed following changes:
+  PExprAssign::getLHS to return ExpDescr instead of AO set.
+  DFA handleWeakAssign's second argument is now ExpDescr rather than AO set.
+  ECR: added helper collectAliasECRs (not tested!)
+@
+text
+@d28 1
+a28 1
+    REDfact() : edescset(), is_top(true) {}
+@
+
+
+1.4
+log
+@Wrote some code -- incomplete, compiles but probably won't
+do the right thing yet.
+Entailed enriching ExpDescr class with intersectsAffLocs
+function and helpers (some, not all written yet).
+@
+text
+@d85 1
+a85 1
+    virtual bool handleWeakAssign(DFAfact& df, suco_set<AO *>& lhs, suco_set<AO *>& rhs, PgmExpr& dnode);
+@
+
+
+1.3
+log
+@Added REDfactPair class, which will be the "main" fact
+processed by RED analysis -- that class contains two
+REDfact sets, one for redundant verifyPtrs, another
+for verifyTags.  Only the former will be used by -ptr/ptrw
+mode, for example.
+Skeletons are still hollow
+@
+text
+@d15 1
+a15 1
+//    friend class REDfactHandler; //- to access edescset
+@
+
+
+1.2
+log
+@Filled in skeleton of REDundant analysis -- including
+CFG nodes' red_fact and red_is_useless members.
+TODO: fill in the important meat of the analysis in
+handleVerify, handle*Assign, etc.
+Also, must write REDc collector.
+@
+text
+@d15 1
+a15 1
+    friend class REDfactHandler; //- to access edescset
+d39 28
+d73 2
+a74 2
+    DFAfact& newTopFact() { return *new REDfact(); }
+    void deleteFact(DFAfact& df) { delete (REDfact *) &df; }
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d19 2
+a20 2
+    void setTop() { is_bot = false; edescset.Clear(); }
+    void setBottom() { is_bot = true; edescset.Clear(); }
+d28 1
+a28 1
+    REDfact() : edescset(), is_bot(false) {}
+d36 1
+a36 1
+    bool is_bot;
+d48 2
+a49 1
+    void filterCallsiteFacts(PExprCall& dc, DFAfact& df, DFAfact& df_local);
+d58 6
+a63 3
+    virtual bool handleFormal(DFAfact& df, PExprDecl& dd, suco_llist<PExprCall *>& callsites);
+    virtual bool handleReturnStmt(DFAfact& df, PgmStmt& retnode, suco_set<AO *>& retaos);
+    virtual bool handleDecl(DFAfact& df, PExprDecl& dd);
+@

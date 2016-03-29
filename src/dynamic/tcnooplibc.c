@@ -1,0 +1,307 @@
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h> /* for INT_MAX */
+#include <tclibc.h>
+
+#include <langinfo.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <time.h>
+#include <unistd.h>
+#include <sys/uio.h>
+
+#include <netdb.h>
+#include <sys/socket.h>
+
+/***********************************************/
+/*********  trackfree data structures  *********/
+/***********************************************/
+
+/**************************************/
+/*********  malloc functions  *********/
+/**************************************/
+void * _typecheck_malloc(size_t size)
+{
+  return malloc(size);
+}
+
+void * _typecheck_malloc_init(size_t size)
+{
+  return malloc(size);
+}
+
+void * _typecheck_calloc(size_t nelem, size_t elsize)
+{
+  return calloc(nelem, elsize);
+}
+
+void _typecheck_free(void * ptr)
+{
+  free(ptr);
+}
+
+/* don't output error if ptr target not allocated */
+void _typecheck_free_partial(void * ptr)
+{
+  free(ptr);
+}
+
+void * _typecheck_memalign(size_t alignment, size_t size)
+{
+  return (void *) memalign(alignment, size);
+}
+
+void * _typecheck_memalign_init(size_t alignment, size_t size)
+{
+  return (void *) memalign(alignment, size);
+}
+
+void * _typecheck_realloc(void * ptr, size_t size)
+{
+  return realloc(ptr, size);
+}
+
+void * _typecheck_realloc_init(void * ptr, size_t size)
+{
+  return realloc(ptr, size);
+}
+
+void * _typecheck_valloc(size_t size)
+{
+  return valloc(size);
+}
+
+void * _typecheck_valloc_init(size_t size)
+{
+  return valloc(size);
+}
+
+/*************************************/
+/*********  stdio functions  *********/
+/*************************************/
+
+char * _typecheck_fgets(char * s, int n, FILE * stream)
+{
+  return fgets(s, n, stream);
+}
+
+char * _typecheck_gets(char * s)
+{
+  return gets(s);
+}
+
+size_t _typecheck_fread(void * ptr, size_t size, size_t nitems, FILE * stream)
+{
+  return fread(ptr, size, nitems, stream);
+}
+
+/*************************************/
+/*********  scanf functions  *********/
+/*************************************/
+
+int _typecheck_scanf(const char * format, ...)
+{
+  va_list ap;
+  int ret;
+
+  va_start(ap, format);
+  ret = vscanf(format, ap);
+  va_end(ap);
+
+  return ret;
+}
+
+int _typecheck_fscanf(FILE * stream, const char * format, ...)
+{
+  va_list ap;
+  int ret;
+
+  va_start(ap, format);
+  ret = vfscanf(stream, format, ap);
+  va_end(ap);
+
+  return ret;
+}
+
+int _typecheck_sscanf(const char * str, const char * format, ...)
+{
+  va_list ap;
+  int ret;
+
+  va_start(ap, format);
+  ret = vsscanf(str, format, ap);
+  va_end(ap);
+
+  return ret;
+}
+
+int _typecheck_sprintf(char * str, const char * format, ...)
+{
+  va_list ap;
+  int ret;
+
+  va_start(ap, format);
+  ret = vsprintf(str, format, ap);
+  va_end(ap);
+
+  return ret;
+}
+
+int _typecheck_snprintf(char * str, size_t size, const char * format, ...)
+{
+  va_list ap;
+  int ret;
+
+  va_start(ap, format);
+  ret = vsnprintf(str, size, format, ap);
+  va_end(ap);
+
+  return ret;
+}
+
+/**************************************/
+/*********  string functions  *********/
+/**************************************/
+
+void *_typecheck_memcpy(void * s1, const void * s2, size_t n)
+{
+  return memcpy(s1, s2, n);
+}
+
+void *_typecheck_memmove(void * s1, const void * s2, size_t n)
+{
+  return memmove(s1, s2, n);
+}
+
+char *_typecheck_strcpy(char * dst, const char * src)
+{
+  return strcpy(dst, src);
+}
+
+char *_typecheck_strncpy(char * dst, const char * src, size_t n)
+{
+  return strncpy(dst, src, n);
+}
+
+char *_typecheck_strcat(char * dst, const char * src)
+{
+  return strcat(dst, src);
+}
+
+char *_typecheck_strncat(char * dst, const char * src, size_t n)
+{
+  return strncat(dst, src, n);
+}
+
+size_t _typecheck_strxfrm(char * s1, const char * s2, size_t n)
+{
+  return strxfrm(s1, s2, n);
+}
+
+void _typecheck_bzero(void * s, size_t n)
+{
+  bzero(s, n);
+}
+
+void *_typecheck_memset(void * s, int c, size_t n)
+{
+  return memset(s, c, n);
+}
+
+void *_typecheck_memccpy(void * s1, const void * s2, int c, size_t n)
+{
+  return memccpy(s1, s2, c, n);
+}
+
+char *_typecheck_strdup(const char * s1)
+{
+  return strdup(s1);
+}
+
+
+/******************************************/
+/*********  unistd etc functions  *********/
+/******************************************/
+
+char * _typecheck_nl_langinfo(nl_item item)
+{
+  return nl_langinfo(item);
+}
+
+
+int _typecheck_stat(const char *path, struct stat *buf)
+{
+  return stat(path, buf);
+}
+int _typecheck_lstat(const char *path, struct stat *buf)
+{
+  return lstat(path, buf);
+}
+int _typecheck_fstat(int fildes, struct stat *buf)
+{
+  return fstat(fildes, buf);
+}
+
+
+char *_typecheck_ctime(const time_t *clock)
+{
+  return ctime(clock);
+}
+struct tm *_typecheck_localtime(const time_t *clock)
+{
+  return localtime(clock);
+}
+struct tm *_typecheck_gmtime(const time_t *clock)
+{
+  return gmtime(clock);
+}
+char *_typecheck_asctime(const struct tm *tm)
+{
+  return asctime(tm);
+}
+
+char * _typecheck_getpass(const char * prompt)
+{
+  return getpass(prompt);
+}
+/*
+int    _typecheck_brk(void *endds)
+{ }
+*/
+/*
+void * _typecheck_sbrk(int incr)
+{ }
+*/
+
+ssize_t _typecheck_read(int fildes, void *buf, size_t nbyte)
+{
+  return read(fildes, buf, nbyte);
+}
+
+ssize_t _typecheck_pread(int fildes, void *buf, size_t nbyte, off_t offset)
+{
+  return pread(fildes, buf, nbyte, offset);
+}
+
+ssize_t _typecheck_readv(int fildes, struct iovec *iov, int iovcnt)
+{
+  return readv(fildes, iov, iovcnt);
+}
+
+/**************************************/
+/*********  socket functions  *********/
+/**************************************/
+
+struct hostent *_typecheck_gethostbyname(const char *name)
+{
+  return gethostbyname(name);
+}
+struct hostent *_typecheck_gethostbyaddr(const char *addr, int len, int type)
+{
+  return gethostbyaddr(addr, len, type);
+}
+
+
+

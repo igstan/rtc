@@ -1,0 +1,386 @@
+head	1.7;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.7
+date	2004.07.01.22.40.23;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2004.05.18.21.41.24;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.10.31.17.10.19;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.10.24.20.08.46;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.10.15.02.19.26;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.10.14.20.03.30;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.10.10.18.03.17;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@TCPtr version of malloc functions.
+@
+
+
+1.7
+log
+@Replaced _output_error() with _output_flce() in library
+functions, so their output can be controlled by tc-summarize.
+@
+text
+@#include <stdlib.h>
+#include <string.h> /* bzero */
+
+#define TC_MALLOC_PADDING 64
+
+#include "tcptr_internal.h"
+#include "tcmalloc-hash.h"
+
+void * _typecheck_malloc(size_t size)
+{   
+  void * newmem;
+  
+  newmem = malloc(size + TC_MALLOC_PADDING);
+
+  if(newmem){
+    mhash_insert(newmem, size);
+    _tcptr_setTags(newmem, size);
+  } 
+
+  return newmem;
+}
+
+void * _typecheck_malloc_zero(size_t size)
+{   
+  void * newmem;
+  
+  newmem = malloc(size + TC_MALLOC_PADDING);
+
+  if(newmem){
+    mhash_insert(newmem, size);
+    _tcptr_setTags(newmem, size);
+    bzero(newmem, size);
+  } 
+
+  return newmem;
+}
+
+void * malloc_zero(size_t size)
+{   
+  void * newmem;
+  
+  newmem = malloc(size);
+
+  if(newmem){
+    bzero(newmem, size);
+  } 
+
+  return newmem;
+}
+
+void * _typecheck_calloc(size_t nelem, size_t elsize)
+{
+  void * newmem;
+
+  newmem = calloc(nelem + TC_MALLOC_PADDING/elsize, elsize);
+
+  if(newmem){
+    size_t size = nelem * elsize;
+    mhash_insert(newmem, size);
+    _tcptr_setTags(newmem, size);
+  }
+
+  return newmem;
+}
+
+void   _typecheck_free(void * ptr)
+{
+  size_t siz = mhash_remove(ptr);
+
+  if(siz){
+    free(ptr);
+    _tcptr_clearTags(ptr, siz);
+  } else {
+    _output_flce(__FILE__,__LINE__,0,"(_typecheck_free)","Freeing unallocated memory");
+  }
+}
+
+/* don't output error if ptr target not allocated */
+void   _typecheck_free_partial(void * ptr)
+{
+  size_t siz = mhash_remove(ptr);
+
+  if(siz){
+    free(ptr);
+    _tcptr_clearTags(ptr, siz);
+  }
+}
+
+void * _typecheck_memalign(size_t alignment, size_t size)
+{
+  void * newmem;
+
+  newmem = memalign(alignment, size + TC_MALLOC_PADDING);
+
+  if(newmem){
+    mhash_insert(newmem, size);
+    _tcptr_setTags(newmem, size);
+  }
+
+  return newmem;
+}
+
+void * _typecheck_memalign_zero(size_t alignment, size_t size)
+{
+  void * newmem;
+
+  newmem = memalign(alignment, size + TC_MALLOC_PADDING);
+
+  if(newmem){
+    mhash_insert(newmem, size);
+    _tcptr_setTags(newmem, size);
+    bzero(newmem, size);
+  }
+
+  return newmem;
+}
+
+void * memalign_zero(size_t alignment, size_t size)
+{
+  void * newmem;
+
+  newmem = memalign(alignment, size);
+
+  if(newmem){
+    bzero(newmem, size);
+  }
+
+  return newmem;
+}
+
+void * _typecheck_realloc(void * ptr, size_t size)
+{
+  void * newmem;
+  size_t oldsiz;
+
+  if(ptr == 0) /* behaves like malloc */
+    return _typecheck_malloc(size);
+  if(size == 0){ /* behaves like free */
+    _typecheck_free(ptr);
+    return 0;
+  }
+
+  oldsiz = mhash_remove(ptr);
+
+  newmem = realloc(ptr, size + TC_MALLOC_PADDING);
+
+  if(newmem){
+    mhash_insert(newmem, size);
+    if(newmem == ptr){ /* memory block extended */
+      if(size < oldsiz){ /* shrink */
+        _tcptr_clearTags((char *)ptr+size, oldsiz-size);
+      } else { /* extend */
+        _tcptr_setTags((char *)ptr+oldsiz, size-oldsiz);
+      }
+    } else { /* new memory block created */
+      /*NOTE: newmem and old block may overlap: must clear before set!! */
+      _tcptr_clearTags(ptr, oldsiz);
+      _tcptr_setTags(newmem, size);
+    }
+  }
+
+  return newmem;
+}
+
+void * _typecheck_realloc_zero(void * ptr, size_t size)
+{
+  void * newmem;
+  size_t oldsiz;
+
+  if(ptr == 0) /* behaves like malloc */
+    return _typecheck_malloc_zero(size);
+  if(size == 0){ /* behaves like free */
+    _typecheck_free(ptr);
+    return 0;
+  }
+
+  oldsiz = mhash_remove(ptr);
+
+  newmem = realloc(ptr, size + TC_MALLOC_PADDING);
+
+  if(newmem){
+    mhash_insert(newmem, size);
+    if(newmem == ptr){ /* memory block extended */
+      if(size < oldsiz){ /* shrink */
+        _tcptr_clearTags((char *)ptr+size, oldsiz-size);
+      } else { /* extend */
+        _tcptr_setTags((char *)ptr+oldsiz, size-oldsiz);
+      }
+    } else { /* new memory block created */
+      /*NOTE: newmem and old block may overlap: must clear before set!! */
+      _tcptr_clearTags(ptr, oldsiz);
+      _tcptr_setTags(newmem, size);
+    }
+    if(oldsiz && (size > oldsiz)){
+      bzero((char *)newmem+oldsiz, size-oldsiz);
+    }
+  }
+
+  return newmem;
+}
+
+void * _typecheck_valloc(size_t size)
+{
+  void * newmem;
+
+  newmem = valloc(size + TC_MALLOC_PADDING);
+
+  if(newmem){
+    mhash_insert(newmem, size);
+    _tcptr_setTags(newmem, size);
+  }
+
+  return newmem;
+}
+
+void * _typecheck_valloc_zero(size_t size)
+{
+  void * newmem;
+
+  newmem = valloc(size + TC_MALLOC_PADDING);
+
+  if(newmem){
+    mhash_insert(newmem, size);
+    _tcptr_setTags(newmem, size);
+    bzero(newmem, size);
+  }
+
+  return newmem;
+}
+
+void * valloc_zero(size_t size)
+{
+  void * newmem;
+
+  newmem = valloc(size);
+
+  if(newmem){
+    bzero(newmem, size);
+  }
+
+  return newmem;
+}
+
+
+@
+
+
+1.6
+log
+@Added malloc_zero() family of wrappers, which
+zero-initializes allocated memory (using bzero)
+@
+text
+@d74 1
+a74 1
+    _output_error("typecheck_free: Freeing unallocated memory\n");
+@
+
+
+1.5
+log
+@Added _typecheck_free_partial.
+@
+text
+@d2 1
+d23 28
+d103 28
+d165 37
+d211 28
+@
+
+
+1.4
+log
+@realloc bug fix: new memory returned by realloc may
+overlap with old memory and not start from the same
+address; made changes to account for this case
+(previously not handled)
+@
+text
+@d49 11
+@
+
+
+1.3
+log
+@Added include "tcptr_internal.h" -- mainly to allow
+compilation on cygwin, where alt definition of memalign
+is appended to tcptr_internal.h.
+@
+text
+@d88 2
+a90 1
+      _tcptr_clearTags(ptr, oldsiz);
+@
+
+
+1.2
+log
+@Instrumented all functions; minimally tested.
+@
+text
+@d5 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d3 4
+d8 11
+a18 2
+{
+  return malloc(size);
+d23 11
+a33 1
+  return calloc(nelem, elsize);
+d38 8
+a45 1
+  return free(ptr);
+d50 10
+a59 1
+  return memalign(alignment, size);
+d64 29
+a92 1
+  return realloc(ptr, size);
+d97 10
+a106 1
+  return valloc(size);
+@

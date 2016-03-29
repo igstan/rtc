@@ -1,0 +1,394 @@
+head	1.10;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.10
+date	2004.05.18.21.41.13;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.04.30.20.05.15;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.02.26.23.17.35;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2000.07.12.19.45.38;	author alexey;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2000.06.30.14.44.01;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2000.06.30.04.08.33;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2000.06.28.01.04.26;	author alexey;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2000.06.27.02.01.36;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2000.06.23.21.43.25;	author alexey;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2000.06.15.20.57.51;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@This is a descendent of tcapi_postproc_newtags.h
+@
+
+
+1.10
+log
+@Minor fixes as detected by -Wall compilation.
+@
+text
+@#ifndef _TYPECHECK_API_POSTPROC_H_
+#define _TYPECHECK_API_POSTPROC_H_
+
+#define _TC_BYTE 8
+
+typedef enum {_typetag_unalloc = 0, _typetag_uninit, _typetag_int,
+	      _typetag_float, _typetag_ptr, _typetag_init, _typetag_bits} _typetag_t;
+
+typedef long long longlong;
+#ifdef LONGDOUBLE
+typedef long double longdouble;
+#endif /* LONGDOUBLE */
+typedef char* pointer;
+
+#include "mirror_sizes.h"
+
+/*******************************************
+  Modify/experiment with following #define
+ *******************************************/
+#define MIRRORPAGE_NUMBITS 20
+
+/*******************************************/
+#define MIRRORPAGE_NUMBYTES (1 << MIRRORPAGE_NUMBITS)
+#define MIRRORPAGE_MASK (~((-1) << MIRRORPAGE_NUMBITS))
+#define MIRRORMAP_NUMBITS ((sizeof(void *) << 3) - MIRRORPAGE_NUMBITS)
+#define MIRRORMAP_NUMELEMENTS (1 << MIRRORMAP_NUMBITS)
+
+/* Handy macros */
+/* Note possible point of confusion: MIRRORPAGE_INDEX is the mirrorpage
+   portion of the address *in program space*, not in mirror space.
+   To get the latter, divide by two */
+#define MIRRORMAP_INDEX(addr) ((unsigned long)(addr) >> MIRRORPAGE_NUMBITS)
+#define MIRRORPAGE_INDEX(addr) ((unsigned long)(addr) & MIRRORPAGE_MASK)
+
+#define SAME_MIRROR_PAGE(addr1, addr2) \
+	(MIRRORMAP_INDEX(addr1) ==  MIRRORMAP_INDEX(addr2))
+				      
+extern void * mirrormap[];
+
+/* Note, BITS_PER_TAG must be no larger than _TC_BYTE.  */
+
+#define BITS_PER_TAG 4
+#define LOG_BITS_PER_TAG 2
+
+/*
+   These bit patterns have to be in exact correspondence
+   with the _type_t enum values above.
+
+   The first (highest-order) of the four bits of a tag
+   is used to encode size.  If the bit is 0, the byte
+   represented by this tag is the first in a datum.
+   Otherwise, it's a continuation of a datum whose first
+   byte appears earlier.
+*/
+#define CONT_BIT_MASK (1 << (BITS_PER_TAG - 1))
+
+/*
+   The last three of the four bits of a tag are used
+   to represent types as follows:
+
+   000 - Unalloc, 001 - Uninit, 010 - Int,
+   011 - Float, 100 - Ptr, 101 - Bits, others?
+*/
+#define TYPE_BITS_MASK (0xffu >> (_TC_BYTE - BITS_PER_TAG + 1))
+
+#define TAG_BITS_MASK  (0xffu >> (_TC_BYTE - BITS_PER_TAG))
+
+/**********************************/
+/* mirror pos manipulating macros */
+/**********************************/
+
+/* Extract the tag indicated by pos. */
+#define TAG_BITS(pos) \
+	((*(pos).ptr >> (pos).bit) & TAG_BITS_MASK)
+
+/* Extract the continuation bit (see above) from the tag indicated by pos. */
+#define CONT_BIT(pos) \
+	((*(pos).ptr >> (pos).bit) & CONT_BIT_MASK)
+
+/* Extract the type bits (see above) from the tag indicated by pos. */
+/* Could replace the RHS of & with 7 if BITS_PER_TAG is fixed at 4. */
+#define TYPE_BITS(pos) \
+	((*(pos).ptr >> (pos).bit) & TYPE_BITS_MASK)
+
+/* Macro to set the tag indicated by pos. */
+#define WRITE_TAG(pos,tag) ( \
+		*(pos).ptr = (*(pos).ptr & \
+			      ~((0xffu >> (_TC_BYTE - BITS_PER_TAG)) << (pos).bit)) | \
+			     (tag << (pos).bit) \
+			   );
+
+/* Increment tag position pos:
+   Increment the bit position first.  If the bit number did not
+   roll over, do nothing.  If it did, increment the pointer.
+   If the pointer stayed within the same mirror page, do nothing.
+   Otherwise, find the position in the new mirror page.
+   The last one is to make the expression non-void.  Alternatively,
+   could make overflowTagPos return something. */
+#define NEXT_POS(pos) \
+		(((pos).bit = ((pos).bit + BITS_PER_TAG) % _TC_BYTE) || \
+		  (((unsigned long)(++(pos).ptr)%(MIRRORPAGE_NUMBYTES/2)) || \
+		    (--(pos).ptr, overflowTagPos(&(pos), 2), 1)))
+
+/* Decrement tag position pos. */
+#define PREV_POS(pos)  {\
+		(pos).bit = ((pos).bit + BITS_PER_TAG) % _TC_BYTE; \
+		if((pos).bit) \
+		  if(!((unsigned long)((pos).ptr--)%(MIRRORPAGE_NUMBYTES/2))){ \
+		    ++(pos).ptr; \
+		    overflowTagPos(&(pos), -2); \
+		  } \
+	 }
+
+#define EVEN_TAG_MASK  TAG_BITS_MASK
+#define EVEN_TYPE_MASK TYPE_BITS_MASK
+#define EVEN_CONT_MASK CONT_BIT_MASK
+#define ODD_TAG_MASK  (TAG_BITS_MASK << BITS_PER_TAG)
+#define ODD_TYPE_MASK (TYPE_BITS_MASK << BITS_PER_TAG)
+#define ODD_CONT_MASK (CONT_BIT_MASK << BITS_PER_TAG)
+
+#define ODD_TAG_BITS(byte)	(((byte) >> BITS_PER_TAG) & TAG_BITS_MASK)
+#define ODD_TYPE_BITS(byte)	(((byte) >> BITS_PER_TAG) & TYPE_BITS_MASK)
+#define EVEN_TAG_BITS(byte)	((byte) & TAG_BITS_MASK)
+#define EVEN_TYPE_BITS(byte)	((byte) & TYPE_BITS_MASK)
+
+/* The following macro must be an lvalue */
+#define GET_TAG_BYTE(addr)	*(\
+	 (mirrormap[MIRRORMAP_INDEX(addr)]) \
+	    || (_touchMirrorPage(MIRRORMAP_INDEX(addr)),1), \
+	    ((unsigned char *) mirrormap[MIRRORMAP_INDEX(addr)] \
+		+ MIRRORPAGE_INDEX(addr)/2) \
+	 )
+
+/*
+#define GET_CHAR_TAG(byte, isOdd) ((byte) >> BITS_PER_TAG * (isOdd) & TAG_BITS_MASK)
+*/
+#define GET_CHAR_TAG(byte, isOdd) \
+		((byte) >> ((isOdd) << LOG_BITS_PER_TAG) & TAG_BITS_MASK)
+
+/* rhs may need to be a tmp, so that it is not the same as lhs. */
+/*
+#define SET_CHAR_TAG(lhs, rhs, isOdd) ( \
+	  (lhs) = (rhs) << BITS_PER_TAG * (isOdd) | \
+		  (lhs) & ~(TAG_BITS_MASK << BITS_PER_TAG * (isOdd)) \
+	)
+*/
+#define SET_CHAR_TAG(lhs, rhs, isOdd) ( \
+	  (lhs) = ((rhs) << ((isOdd) << LOG_BITS_PER_TAG)) | \
+		  ((lhs) & ~(TAG_BITS_MASK << ((isOdd) << LOG_BITS_PER_TAG))) \
+	)
+
+#endif /* _TYPECHECK_API_POSTPROC_H_ */
+
+@
+
+
+1.9
+log
+@renamed BYTE to _TC_BYTE to avoid clash with Cyclone benchmark.
+TODO: rename other/all macros to prevent future clashes?
+@
+text
+@d87 2
+a88 2
+		*(pos).ptr = *(pos).ptr & \
+			     ~((0xffu >> (_TC_BYTE - BITS_PER_TAG)) << (pos).bit) | \
+d148 2
+a149 2
+	  (lhs) = (rhs) << ((isOdd) << LOG_BITS_PER_TAG) | \
+		  (lhs) & ~(TAG_BITS_MASK << ((isOdd) << LOG_BITS_PER_TAG)) \
+@
+
+
+1.8
+log
+@Added _setByteTags; added redirection macros to point
+_setUninitTag and _setStringTag to _setByteTag; old stuff
+commented out, will next be deleted.
+Also, added _typetag_init; and tcapi.h now ALWAYS includes tcapi_postinstr.h
+@
+text
+@d4 1
+a4 1
+#define BYTE 8
+d40 1
+a40 1
+/* Note, BITS_PER_TAG must be no larger than BYTE.  */
+d64 1
+a64 1
+#define TYPE_BITS_MASK (0xffu >> (BYTE - BITS_PER_TAG + 1))
+d66 1
+a66 1
+#define TAG_BITS_MASK  (0xffu >> (BYTE - BITS_PER_TAG))
+d88 1
+a88 1
+			     ~((0xffu >> (BYTE - BITS_PER_TAG)) << (pos).bit) | \
+d100 1
+a100 1
+		(((pos).bit = ((pos).bit + BITS_PER_TAG) % BYTE) || \
+d106 1
+a106 1
+		(pos).bit = ((pos).bit + BITS_PER_TAG) % BYTE; \
+@
+
+
+1.7
+log
+@Added GET_CHAR_TAG and SET_CHAR_TAG macros which replace
+a ?: with a multiplication.  They come with versions that
+shift instead of multiplying, too.
+Also added parens around the byte term in older macros.
+@
+text
+@d7 1
+a7 1
+	      _typetag_float, _typetag_ptr, _typetag_bits} _typetag_t;
+@
+
+
+1.6
+log
+@Introduced MIRRORPAGE_INDEX macro.
+@
+text
+@d43 1
+d121 4
+a124 4
+#define ODD_TAG_BITS(byte)	((byte >> BITS_PER_TAG) & TAG_BITS_MASK)
+#define ODD_TYPE_BITS(byte)	((byte >> BITS_PER_TAG) & TYPE_BITS_MASK)
+#define EVEN_TAG_BITS(byte)	(byte & TAG_BITS_MASK)
+#define EVEN_TYPE_BITS(byte)	(byte & TYPE_BITS_MASK)
+d133 18
+@
+
+
+1.5
+log
+@Added MIRRORPAGE_INDEX mini-macro; replaced SPANS_MIRROR_PAGES with
+SAME_MIRROR_PAGE macro; fixed NEXT_POS and PREV_POS overflow bug: must
+bump by +/- 2 instead of +/- 1!
+@
+text
+@d28 4
+d33 1
+d128 3
+a130 4
+	    || (_touchMirrorPage(addr),1), \
+	    ((unsigned char *) \
+	      (mirrormap[MIRRORMAP_INDEX(addr)]) + \
+	       (((unsigned long)(addr)) & MIRRORPAGE_MASK)/2) \
+@
+
+
+1.4
+log
+@Fixed the WRITE_TAG bug in which we cleared out the nibble
+to be written in one step and then set it in the next.
+This does not work for assignements from a location to
+itself.  Also made it into a one-line statement.  Should
+remove the semicolon to make it an expression.  This will
+require adding semicolons in a bunch of places, though.
+Need to go through all other nibble assignments to make
+sure we don't have a similar bug there!!!
+@
+text
+@d28 4
+a31 3
+#define SPANS_MIRROR_PAGES(ty, addr) ( \
+  ((unsigned long)((ty *)(addr)+1) >> MIRRORPAGE_NUMBITS) != \
+  ((unsigned long)(addr) >> MIRRORPAGE_NUMBITS))
+d96 1
+a96 1
+		    (--(pos).ptr, overflowTagPos(&(pos), 1), 1)))
+d104 1
+a104 1
+		    overflowTagPos(&(pos), -1); \
+d122 1
+a122 1
+	 (mirrormap[(unsigned long)(addr) >> MIRRORPAGE_NUMBITS]) \
+d125 1
+a125 1
+	      (mirrormap[(unsigned long)(addr) >> MIRRORPAGE_NUMBITS]) + \
+@
+
+
+1.3
+log
+@Fixed GET_TAG_BYTE macro to be a valid lvalue (for ansi C compliance).
+@
+text
+@d79 5
+a83 4
+#define WRITE_TAG(pos,tag)  {\
+		*(pos).ptr &= ~((0xff >> (BYTE - BITS_PER_TAG)) << (pos).bit); \
+		*(pos).ptr |= (tag << (pos).bit); \
+	}
+@
+
+
+1.2
+log
+@Started using TAG_BITS_MASK in TAG_BITS.
+@
+text
+@d118 3
+a120 2
+#define GET_TAG_BYTE(addr)	(\
+	 ( (mirrormap[(unsigned long)(addr) >> MIRRORPAGE_NUMBITS]) \
+d122 4
+a125 4
+	    *(unsigned char *) \
+	      (mirrormap[(unsigned long)(addr) >> MIRRORPAGE_NUMBITS] + \
+	       ((unsigned long)(addr) & MIRRORPAGE_MASK)/2) \
+	) )
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d67 1
+a67 1
+	((*(pos).ptr >> (pos).bit) & (0xff >> (BYTE - BITS_PER_TAG)))
+@

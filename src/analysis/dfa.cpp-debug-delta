@@ -1,0 +1,58 @@
+//      processCFGnode(*this->worklist.Remove());
+/**/
+/*********************************************/
+{
+#define SY_DEBUG_BUFFER 10000
+#define SY_DEBUG_LIMIT 10000
+  CFGnode * cn = this->worklist.Remove();
+
+  //- skip early buffer
+  static int buffer = SY_DEBUG_BUFFER;
+  if(buffer && this->worklist.list.IsEmpty()) buffer--;
+
+  static CFGnode * cache_cn = 0;
+
+  if(!buffer){
+    static int limit = SY_DEBUG_LIMIT;
+    if(!cache_cn){
+      //- cache first time
+      cache_cn = cn;
+      fprintf(stderr, "WWW-BEGIN [%d/%d]\n", cn->getParentFunction().getCallGraphId(), cn->getId());
+
+    } else {
+      limit--;
+
+      fprintf(stderr, "XXX-ITER %d: ", SY_DEBUG_LIMIT-limit);
+      { //- write worlist set
+        suco_iterator<CFGnode *> si(this->worklist.set);
+        while(si.Iterate())
+          fprintf(stderr, " [%d/%d]", si.Current()->getParentFunction().getCallGraphId(),
+					si.Current()->getId());
+        fprintf(stderr, "\n");
+      }
+      fprintf(stderr, "YYY-ITER %d:\n", SY_DEBUG_LIMIT-limit);
+      cn->debug_dump(stderr, 0, false);
+
+      if(limit <= 0 || cn == cache_cn){
+        fprintf(stderr, "ZZZ-END (limit = %d)\n", limit);
+        limit = 0;
+        buffer = -1;
+      }
+    }
+  }
+  //- dump facts to observe chains
+  if(buffer < 0 && cn == cache_cn){
+    static int dump_count = 10;
+    dump_count--;
+    fprintf(stderr, "AAA-%d:", 10-dump_count);
+    dfh.lookupNodeFact(*cn).debug_dump(stderr, false);
+    if(dump_count <= 0){
+      fprintf(stderr, "BBB-done\n");
+      return; //- done, break.
+    }
+  }
+
+  processCFGnode(*cn);
+}
+/*********************************************/
+/**/

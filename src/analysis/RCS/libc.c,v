@@ -1,0 +1,1141 @@
+head	1.11;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.11
+date	2004.01.05.21.15.19;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2003.12.30.17.56.49;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2003.12.16.22.30.41;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2003.12.10.15.39.34;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2003.06.13.16.30.22;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2003.06.11.23.08.26;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2003.06.03.15.57.35;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.10.31.17.09.08;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.10.29.17.14.08;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.10.21.22.39.11;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.08.28.22.58.32;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@Models for libc functions, used to generate model
+tc_asgs file.
+@
+
+
+1.11
+log
+@Renamed [f]printf models to pctn_[f]printf.
+
+The big picture in printf handling:
+For -ptrw (which turns on -DTC_PCTN_PRINTF), we translate printf
+and fprintf to _typecheck_pctn_printf and _typecheck_pctn_fprintf;
+then, during instrumentation, we preprocess the constructed ast
+to examine the format string argument of each pctn_[f]printf call:
+if it is a string literal that does not contain a "%n", we'll convert
+it back to a plain [f]printf, thus eliding the %d-instrumentation,
+and furthermore (for -ptrw -range, at least), allows static analysis
+to eliminate more tracked locations.
+@
+text
+@/*************************/
+/******** stdio.h ********/
+/*************************/
+typedef void FILE;
+
+char * _rtclib_fgets(char * s, int n, FILE * stream)
+{
+  int unknown;
+  *s = unknown;
+  *(s+unknown) = unknown;
+  return s;
+}
+
+char * _rtclib_gets(char * s)
+{
+  int unknown;
+  *s = unknown;
+  *(s+unknown) = unknown;
+  return s;
+}
+
+size_t _rtclib_fread(void * ptr, size_t size, size_t nitems, FILE * stream)
+{
+  int unknown;
+  *(char *)ptr = unknown;
+  *(char *)(ptr+unknown) = unknown;
+  return unknown;
+}
+
+int _rtclib_pctn_printf(const char * format, ...)
+{
+  int unknown;
+  char * args;
+
+  /* varg dummy hack; be careful if modifying; something like a cast may screw this up */
+  args = (_tc_varg_dummy,args);
+
+  /* WRITE: for %n */
+  *args = 0;
+  *(args+unknown) = 0;
+
+  /* READ: format and args */
+/* NOTE: currently not checked */
+/*
+  if(*format && *(format+unknown));
+  if(*args && *(args+unknown));
+*/
+
+  return unknown;
+}
+
+int _rtclib_pctn_fprintf(FILE * stream, const char * format, ...)
+{
+  int unknown;
+  char * args;
+
+  /* varg dummy hack; be careful if modifying; something like a cast may screw this up */
+  args = (_tc_varg_dummy,args);
+
+  /* WRITE: for %n */
+  *args = 0;
+  *(args+unknown) = 0;
+
+  /* READ: format and args */
+/* NOTE: currently not checked */
+/*
+  if(*stream);
+  if(*format && *(format+unknown));
+  if(*args && *(args+unknown));
+*/
+
+  return unknown;
+}
+
+int _rtclib_sprintf(char * str, const char * format, ...)
+{
+  int unknown;
+  char * args;
+
+  /* varg dummy hack; be careful if modifying; something like a cast may screw this up */
+  args = (_tc_varg_dummy,args);
+
+  /* write into str */
+  *str = 0;
+  *(str+unknown) = 0;
+
+  /* WRITE: for %n */
+  *args = 0;
+  *(args+unknown) = 0;
+
+  /* READ: format and args */
+/* NOTE: currently not checked */
+/*
+  if(*stream);
+  if(*format && *(format+unknown));
+  if(*args && *(args+unknown));
+*/
+
+  return unknown;
+}
+
+int _rtclib_snprintf(char * str, size_t size, const char * format, ...)
+{
+  int unknown;
+  char * args;
+
+  /* varg dummy hack; be careful if modifying; something like a cast may screw this up */
+  args = (_tc_varg_dummy,args);
+
+  /* write into str */
+  *str = 0;
+  *(str+unknown) = 0;
+
+  /* WRITE: for %n */
+  *args = 0;
+  *(args+unknown) = 0;
+
+  /* READ: format and args */
+/* NOTE: currently not checked */
+/*
+  if(*stream);
+  if(*format && *(format+unknown));
+  if(*args && *(args+unknown));
+*/
+
+  return unknown;
+}
+
+int _rtclib_scanf(const char * format, ...)
+{
+  int unknown;
+  char * args;
+
+  /* varg dummy hack; be careful if modifying; something like a cast may screw this up */
+  args = (_tc_varg_dummy,args);
+
+  *args = 0;
+  *(args+unknown) = 0;
+
+  if(*format && *(format+unknown));
+
+  return unknown;
+}
+
+/* for now: ignore stream: should read? */
+int _rtclib_fscanf(FILE * stream, const char * format, ...)
+{
+  int unknown;
+  char * args;
+
+  /* varg dummy hack; be careful if modifying; something like a cast may screw this up */
+  args = (_tc_varg_dummy,args);
+
+  *args = 0;
+  *(args+unknown) = 0;
+
+  if(*format && *(format+unknown));
+
+  return unknown;
+}
+
+int _rtclib_sscanf(const char * str, const char * format, ...)
+{
+  int unknown;
+  char * args;
+
+  /* varg dummy hack; be careful if modifying; something like a cast may screw this up */
+  args = (_tc_varg_dummy,args);
+
+  *args = 0;
+  *(args+unknown) = 0;
+
+  if(*format && *(format+unknown));
+  if(*str && *(str+unknown));
+
+  return unknown;
+}
+
+/**************************/
+/******** malloc.h ********/
+/**************************/
+
+/* bypassed
+void * _rtclib_malloc(size_t size);
+void * _rtclib_calloc(size_t nelem, size_t elsize);
+void * _rtclib_memalign(size_t alignment, size_t size);
+void * _rtclib_valloc(size_t size);
+*/
+
+/* create AOFunction placeholder */
+void _rtclib_free(void * ptr)
+{
+/* previously used to force instrumentation of all malloc/frees
+  *(char *)ptr = 0;
+*/
+}
+
+/* must do in assign-analysis or tca-addrof
+void * _rtclib_realloc(void * ptr, size_t size);
+*/
+
+
+/**************************/
+/******** string.h ********/
+/**************************/
+
+void *_rtclib_memcpy(void * s1, const void * s2, size_t n)
+{
+  int unknown;
+  *(char *)s1 = *(char *)s2;
+  *(char *)(s1+unknown) = *(char *)(s2+unknown);
+  return s1;
+}
+
+void *_rtclib_memmove(void * s1, const void * s2, size_t n)
+{
+  int unknown;
+  *(char *)s1 = *(char *)s2;
+  *(char *)(s1+unknown) = *(char *)(s2+unknown);
+  return s1;
+}
+
+char *_rtclib_strcpy(char * dst, const char * src)
+{
+  int unknown;
+  *dst = *src;
+  *(dst+unknown) = *(src+unknown);
+  return dst;
+}
+
+char *_rtclib_strncpy(char * dst, const char * src, size_t n)
+{
+  int unknown;
+  *dst = *src;
+  *(dst+unknown) = *(src+unknown);
+  return dst;
+}
+
+
+char *_rtclib_strcat(char * dst, const char * src)
+{
+  int unknown;
+  *dst = *src;
+  *(dst+unknown) = *(src+unknown);
+  return dst;
+}
+
+char *_rtclib_strncat(char * dst, const char * src, size_t n)
+{
+  int unknown;
+  *dst = *src;
+  *(dst+unknown) = *(src+unknown);
+  return dst;
+}
+
+size_t _rtclib_strxfrm(char * dst, const char * src, size_t n)
+{
+  int unknown;
+  *dst = *src;
+  *(dst+unknown) = *(src+unknown);
+  return unknown;
+}
+
+void _rtclib_bcopy(void * s, void * d, size_t n)
+{
+  int unknown;
+  *(char *)d = *(char *)s;
+  *(char *)(d+unknown) = *(char *)(s+unknown);
+}
+
+void _rtclib_bzero(void * s, size_t n)
+{
+  int unknown;
+  *(char *)s = 0;
+  *(char *)(s+unknown) = 0;
+}
+
+void *_rtclib_memset(void * s, int c, size_t n)
+{
+  int unknown;
+  *(char *)s = c;
+  *(char *)(s+unknown) = c;
+  return s;
+}
+
+/* extern char *strerror(int); */
+
+void *_rtclib_memccpy(void * s1, const void * s2, int c, size_t n)
+{
+  int unknown;
+  *(char *)s1 = *(char *)s2;
+  *(char *)(s1+unknown) = *(char *)(s2+unknown);
+}
+
+/* extern char *strsignal(int); */
+
+char *_rtclib_strdup(const char * s1)
+{
+  int unknown;
+  void * malloc();
+  char * ret = (char *)malloc();	/* malloc w/ no arguments => "unknown" malloc size */
+  *ret = *s1;
+  *(ret+unknown) = *(s1+unknown);
+  return ret;
+}
+
+/* no wrapper: model encodes flowthrough only */
+char *_rtclib_strchr(char *s, int c)
+{
+  int unknown;
+  return (s+unknown);
+}
+
+/* no wrapper: model encodes flowthrough only */
+char *_rtclib_strrchr(char *s, int c)
+{
+  int unknown;
+  return (s+unknown);
+}
+
+/* no wrapper: model encodes flowthrough only */
+char *_rtclib_strstr(char *s1, const char *s2)
+{
+  int unknown;
+  return (s1+unknown);
+}
+
+/* no wrapper: model encodes flowthrough only */
+/* TODO: write wrapper */
+char *_rtclib_strtok(char *s1, const char *s2)
+{
+  static char * sp;
+  int unknown;
+  sp = s1+unknown;
+  return sp;
+}
+
+/* no wrapper: model encodes flowthrough only */
+/* TODO: write wrapper */
+char *_rtclib_strtok_r(char *s1, const char *s2, char **lasts)
+{
+  int unknown;
+  return s1?(s1+unknown):(*lasts+unknown);
+}
+
+/****************************/
+/******** langinfo.h ********/
+/****************************/
+typedef int nl_item;
+
+char * _rtclib_nl_langinfo(nl_item item)
+{
+  static char nl_langinfo_static_buffer[1] = {'c'};
+  return nl_langinfo_static_buffer;
+}
+
+/****************************/
+/******** sys/stat.h ********/
+/****************************/
+struct stat {
+  unsigned long long int st_dev;
+  unsigned short int __pad1;
+  unsigned long st_ino;
+  unsigned int st_mode;
+  unsigned int st_nlink;
+  unsigned int st_uid;
+  unsigned int st_gid;
+  unsigned long long int st_rdev;
+  unsigned short int __pad2;
+  long int st_size;
+  long int st_blksize;
+  long int st_blocks;
+  long int st_atime;
+  unsigned long int __unused1;
+  long int st_mtime;
+  unsigned long int __unused2;
+  long int st_ctime;
+  unsigned long int __unused3;
+  unsigned long int __unused4;
+  unsigned long int __unused5;
+
+};
+
+int _rtclib_stat(const char *path, struct stat *buf)
+{
+  int unknown;
+  if(*path);
+  buf->st_dev = unknown;
+  buf->st_ino = unknown;
+  buf->st_mode = unknown;
+  buf->st_nlink = unknown;
+  buf->st_uid = unknown;
+  buf->st_gid = unknown;
+  buf->st_rdev = unknown;
+  buf->st_size = unknown;
+  buf->st_blksize = unknown;
+  buf->st_blocks = unknown;
+  buf->st_atime = unknown;
+  buf->st_mtime = unknown;
+  buf->st_ctime = unknown;
+  return unknown;
+}
+
+int _rtclib_lstat(const char *path, struct stat *buf)
+{
+  int unknown;
+  if(*path);
+  buf->st_dev = unknown;
+  buf->st_ino = unknown;
+  buf->st_mode = unknown;
+  buf->st_nlink = unknown;
+  buf->st_uid = unknown;
+  buf->st_gid = unknown;
+  buf->st_rdev = unknown;
+  buf->st_size = unknown;
+  buf->st_blksize = unknown;
+  buf->st_blocks = unknown;
+  buf->st_atime = unknown;
+  buf->st_mtime = unknown;
+  buf->st_ctime = unknown;
+  return unknown;
+}
+
+int _rtclib_fstat(int fildes, struct stat *buf)
+{
+  int unknown;
+  buf->st_dev = unknown;
+  buf->st_ino = unknown;
+  buf->st_mode = unknown;
+  buf->st_nlink = unknown;
+  buf->st_uid = unknown;
+  buf->st_gid = unknown;
+  buf->st_rdev = unknown;
+  buf->st_size = unknown;
+  buf->st_blksize = unknown;
+  buf->st_blocks = unknown;
+  buf->st_atime = unknown;
+  buf->st_mtime = unknown;
+  buf->st_ctime = unknown;
+  return unknown;
+}
+
+
+/************************/
+/******** time.h ********/
+/************************/
+typedef void time_t;
+
+struct tm {
+  int tm_sec;
+  int tm_min;
+  int tm_hour;
+  int tm_mday;
+  int tm_mon;
+  int tm_year;
+  int tm_wday;
+  int tm_yday;
+  int tm_isdst;
+};
+
+char *_rtclib_ctime(const time_t *clock)
+{
+  static char ctime_static_buffer[1] = {'c'};
+  return ctime_static_buffer;
+}
+
+struct tm *_rtclib_localtime(const time_t *clock)
+{
+  static struct tm localtime_static_buffer;
+  int unknown;
+  localtime_static_buffer.tm_sec = unknown;
+  localtime_static_buffer.tm_min = unknown;
+  localtime_static_buffer.tm_hour = unknown;
+  localtime_static_buffer.tm_mday = unknown;
+  localtime_static_buffer.tm_mon = unknown;
+  localtime_static_buffer.tm_year = unknown;
+  localtime_static_buffer.tm_wday = unknown;
+  localtime_static_buffer.tm_yday = unknown;
+  localtime_static_buffer.tm_isdst = unknown;
+  return &localtime_static_buffer;
+}
+
+struct tm *_rtclib_gmtime(const time_t *clock)
+{
+  static struct tm gmtime_static_buffer;
+  int unknown;
+  gmtime_static_buffer.tm_sec = unknown;
+  gmtime_static_buffer.tm_min = unknown;
+  gmtime_static_buffer.tm_hour = unknown;
+  gmtime_static_buffer.tm_mday = unknown;
+  gmtime_static_buffer.tm_mon = unknown;
+  gmtime_static_buffer.tm_year = unknown;
+  gmtime_static_buffer.tm_wday = unknown;
+  gmtime_static_buffer.tm_yday = unknown;
+  gmtime_static_buffer.tm_isdst = unknown;
+  return &gmtime_static_buffer;
+}
+
+char *_rtclib_asctime(const struct tm *tm)
+{
+  static char asctime_static_buffer[1] = {'c'};
+  return asctime_static_buffer;
+}
+
+
+/**************************/
+/******** unistd.h ********/
+/**************************/
+char * _rtclib_getpass(const char * prompt)
+{
+  static char getpass_static_buffer[1] = {'c'};
+  return getpass_static_buffer;
+}
+
+/* TODO
+int    _rtclib_brk(void *endds);
+void * _rtclib_sbrk(int incr);
+*/
+
+/* TODO
+typedef void off_t;
+struct iovec{
+};
+ssize_t _rtclib_read(int fildes, void *buf, size_t nbyte);
+ssize_t _rtclib_pread(int fildes, void *buf, size_t nbyte, off_t offset);
+ssize_t _rtclib_readv(int fildes, struct iovec *iov, int iovcnt);
+*/
+
+/*************************/
+/******** netdb.h ********/
+/****** sys/socket.h *****/
+/*************************/
+struct hostent {
+  char *h_name;
+  char **h_aliases;
+  int h_addrtype;
+  int h_length;
+  char **h_addr_list;
+};
+
+struct hostent *_rtclib_gethostbyname(const char *name)
+{
+  static struct hostent gethostbyname_static_buffer;
+  static char h_name_static_buffer[1] = {'c'};
+  static char h_addr_list_string_static_buffer[1] = {'c'};
+  static char * h_addr_list_static_buffer[1] = {h_addr_list_string_static_buffer};
+  static char h_aliases_string_static_buffer[1] = {'c'};
+  static char * h_aliases_static_buffer[1] = { h_aliases_string_static_buffer };
+  int unknown;
+
+  gethostbyname_static_buffer.h_name = h_name_static_buffer;
+  gethostbyname_static_buffer.h_addr_list = h_addr_list_static_buffer;
+  gethostbyname_static_buffer.h_addrtype = unknown;
+  gethostbyname_static_buffer.h_length = unknown;
+  gethostbyname_static_buffer.h_aliases = h_aliases_static_buffer;
+
+  return &gethostbyname_static_buffer;
+}
+
+struct hostent *_rtclib_gethostbyaddr(const void *addr, unsigned int len, int type)
+{
+  static struct hostent gethostbyaddr_static_buffer;
+  static char h_name_static_buffer[1] = {'c'};
+  static char h_addr_list_string_static_buffer[1] = {'c'};
+  static char * h_addr_list_static_buffer[1] = {h_addr_list_string_static_buffer};
+  static char h_aliases_string_static_buffer[1] = {'c'};
+  static char * h_aliases_static_buffer[1] = { h_aliases_string_static_buffer };
+  int unknown;
+
+  gethostbyaddr_static_buffer.h_name = h_name_static_buffer;
+  gethostbyaddr_static_buffer.h_addr_list = h_addr_list_static_buffer;
+  gethostbyaddr_static_buffer.h_addrtype = unknown;
+  gethostbyaddr_static_buffer.h_length = unknown;
+  gethostbyaddr_static_buffer.h_aliases = h_aliases_static_buffer;
+
+  return &gethostbyaddr_static_buffer;
+}
+
+@
+
+
+1.10
+log
+@Previously, "unsafe checks" were modeled by *(s+1), but
+with -ran-inter this is sometimes found to be safe!
+So changed them to *(s+unknown).
+This is still a temporary hack.
+@
+text
+@d30 1
+a30 1
+int _rtclib_printf(const char * format, ...)
+d52 1
+a52 1
+int _rtclib_fprintf(FILE * stream, const char * format, ...)
+@
+
+
+1.9
+log
+@Modified malloc call to not take an argument -
+forces range analysis to set malloc size to
+"unknown" (tcVoid,0).
+@
+text
+@d8 3
+a10 2
+  *s = 'c';
+  *(s+1) = 'c';
+d16 3
+a18 2
+  *s = 'c';
+  *(s+1) = 'c';
+d24 4
+a27 3
+  *(char *)ptr = 'c';
+  *(char *)(ptr+1) = 'c';
+  return 1;
+d32 1
+d40 1
+a40 1
+  *(args+1) = 0;
+d45 2
+a46 2
+  if(*format && *(format+1));
+  if(*args && *(args+1));
+d49 1
+a49 1
+  return 1;
+d54 1
+d62 1
+a62 1
+  *(args+1) = 0;
+d68 2
+a69 2
+  if(*format && *(format+1));
+  if(*args && *(args+1));
+d72 1
+a72 1
+  return 1;
+d77 1
+d85 1
+a85 1
+  *(str+1) = 0;
+d89 1
+a89 1
+  *(args+1) = 0;
+d95 2
+a96 2
+  if(*format && *(format+1));
+  if(*args && *(args+1));
+d99 1
+a99 1
+  return 1;
+d104 1
+d112 1
+a112 1
+  *(str+1) = 0;
+d116 1
+a116 1
+  *(args+1) = 0;
+d122 2
+a123 2
+  if(*format && *(format+1));
+  if(*args && *(args+1));
+d126 1
+a126 1
+  return 1;
+d131 1
+d138 1
+a138 1
+  *(args+1) = 0;
+d140 1
+a140 1
+  if(*format && *(format+1));
+d142 1
+a142 1
+  return 1;
+d148 1
+d155 1
+a155 1
+  *(args+1) = 0;
+d157 1
+a157 1
+  if(*format && *(format+1));
+d159 1
+a159 1
+  return 1;
+d164 1
+d171 1
+a171 1
+  *(args+1) = 0;
+d173 2
+a174 2
+  if(*format && *(format+1));
+  if(*str && *(str+1));
+d176 1
+a176 1
+  return 1;
+d209 1
+d211 1
+a211 1
+  *(char *)(s1+1) = *(char *)(s2+1);
+d217 1
+d219 1
+a219 1
+  *(char *)(s1+1) = *(char *)(s2+1);
+d225 1
+d227 1
+a227 1
+  *(dst+1) = *(src+1);
+d233 1
+d235 1
+a235 1
+  *(dst+1) = *(src+1);
+d242 1
+d244 1
+a244 1
+  *(dst+1) = *(src+1);
+d250 1
+d252 1
+a252 1
+  *(dst+1) = *(src+1);
+d258 1
+d260 2
+a261 2
+  *(dst+1) = *(src+1);
+  return 1;
+d266 1
+d268 1
+a268 1
+  *(char *)(d+1) = *(char *)(s+1);
+d273 1
+d275 1
+a275 1
+  *(char *)(s+1) = 0;
+d280 1
+d282 1
+a282 1
+  *(char *)(s+1) = c;
+d290 1
+d292 1
+a292 1
+  *(char *)(s1+1) = *(char *)(s2+1);
+d299 1
+d303 1
+a303 1
+  *(ret+1) = *(s1+1);
+d310 2
+a311 1
+  return (s+1);
+d317 2
+a318 1
+  return (s+1);
+d324 2
+a325 1
+  return (s1+1);
+d333 2
+a334 1
+  sp = s1+1;
+d342 2
+a343 1
+  return s1?(s1+1):(*lasts+1);
+d386 1
+d388 14
+a401 14
+  buf->st_dev = 1;
+  buf->st_ino = 1;
+  buf->st_mode = 1;
+  buf->st_nlink = 1;
+  buf->st_uid = 1;
+  buf->st_gid = 1;
+  buf->st_rdev = 1;
+  buf->st_size = 1;
+  buf->st_blksize = 1;
+  buf->st_blocks = 1;
+  buf->st_atime = 1;
+  buf->st_mtime = 1;
+  buf->st_ctime = 1;
+  return 1;
+d406 1
+d408 14
+a421 14
+  buf->st_dev = 1;
+  buf->st_ino = 1;
+  buf->st_mode = 1;
+  buf->st_nlink = 1;
+  buf->st_uid = 1;
+  buf->st_gid = 1;
+  buf->st_rdev = 1;
+  buf->st_size = 1;
+  buf->st_blksize = 1;
+  buf->st_blocks = 1;
+  buf->st_atime = 1;
+  buf->st_mtime = 1;
+  buf->st_ctime = 1;
+  return 1;
+d426 15
+a440 14
+  buf->st_dev = 1;
+  buf->st_ino = 1;
+  buf->st_mode = 1;
+  buf->st_nlink = 1;
+  buf->st_uid = 1;
+  buf->st_gid = 1;
+  buf->st_rdev = 1;
+  buf->st_size = 1;
+  buf->st_blksize = 1;
+  buf->st_blocks = 1;
+  buf->st_atime = 1;
+  buf->st_mtime = 1;
+  buf->st_ctime = 1;
+  return 1;
+d470 10
+a479 9
+  localtime_static_buffer.tm_sec = 1;
+  localtime_static_buffer.tm_min = 1;
+  localtime_static_buffer.tm_hour = 1;
+  localtime_static_buffer.tm_mday = 1;
+  localtime_static_buffer.tm_mon = 1;
+  localtime_static_buffer.tm_year = 1;
+  localtime_static_buffer.tm_wday = 1;
+  localtime_static_buffer.tm_yday = 1;
+  localtime_static_buffer.tm_isdst = 1;
+d486 10
+a495 9
+  gmtime_static_buffer.tm_sec = 1;
+  gmtime_static_buffer.tm_min = 1;
+  gmtime_static_buffer.tm_hour = 1;
+  gmtime_static_buffer.tm_mday = 1;
+  gmtime_static_buffer.tm_mon = 1;
+  gmtime_static_buffer.tm_year = 1;
+  gmtime_static_buffer.tm_wday = 1;
+  gmtime_static_buffer.tm_yday = 1;
+  gmtime_static_buffer.tm_isdst = 1;
+d549 1
+d553 2
+a554 2
+  gethostbyname_static_buffer.h_addrtype = 1;
+  gethostbyname_static_buffer.h_length = 1;
+d568 1
+d572 2
+a573 2
+  gethostbyaddr_static_buffer.h_addrtype = 1;
+  gethostbyaddr_static_buffer.h_length = 1;
+@
+
+
+1.8
+log
+@Added *printf models.
+@
+text
+@d279 1
+a279 1
+  char * ret = (char *)malloc(1);
+@
+
+
+1.7
+log
+@Added flowthrough models for str[r]chr, strtok[_r].
+@
+text
+@d27 95
+@
+
+
+1.6
+log
+@HEAPSTACK UPDATE: enhance -ptr/-ptrw mode to optionally consider
+freed-heap and stack locations as "possibly invalid" locations.
+
+Restored model for "free", but with null body.
+This is currently used to force the instantiation of the
+AOArg(AOFunction(AOId(free)), 1) object needed for the
+heap handler.
+@
+text
+@d106 1
+d113 1
+d168 1
+d183 1
+d190 33
+@
+
+
+1.5
+log
+@Added models for fscanf,sscanf (already had scanf)
+@
+text
+@d84 2
+a85 1
+/* previously used to force instrumentation of all malloc/frees
+d88 1
+d90 1
+d92 1
+a92 1
+*/
+@
+
+
+1.4
+log
+@Removed model of free.
+@
+text
+@d42 32
+@
+
+
+1.3
+log
+@Normalized vargs/largno/islib:
+1. Directive from instr-ast is now 'f' for defined function,
+   and 'v' for vararg function.
+2. library functions are now processed in rtca/id.cpp, which
+   recognized (and strips out) the _rtclib_ prefix; the islib
+   property is propagated to children AOs as they are created.
+3. stat counters and the undef-fn output both now filter out
+   isLib objects.
+@
+text
+@d52 1
+a52 1
+
+d57 1
+a57 1
+
+@
+
+
+1.2
+log
+@Added scanf, which uses the recently added vargno mechanism.
+@
+text
+@d6 1
+a6 1
+char * rtclib_fgets(char * s, int n, FILE * stream)
+d13 1
+a13 1
+char * rtclib_gets(char * s)
+d20 1
+a20 1
+size_t rtclib_fread(void * ptr, size_t size, size_t nitems, FILE * stream)
+d27 1
+a27 1
+int rtclib_scanf(const char * format, ...)
+d47 4
+a50 4
+void * rtclib_malloc(size_t size);
+void * rtclib_calloc(size_t nelem, size_t elsize);
+void * rtclib_memalign(size_t alignment, size_t size);
+void * rtclib_valloc(size_t size);
+d53 1
+a53 1
+void rtclib_free(void * ptr)
+d59 1
+a59 1
+void * rtclib_realloc(void * ptr, size_t size);
+d67 1
+a67 1
+void *rtclib_memcpy(void * s1, const void * s2, size_t n)
+d73 1
+a73 1
+void *rtclib_memmove(void * s1, const void * s2, size_t n)
+d79 1
+a79 1
+char *rtclib_strcpy(char * dst, const char * src)
+d86 1
+a86 1
+char *rtclib_strncpy(char * dst, const char * src, size_t n)
+d94 1
+a94 1
+char *rtclib_strcat(char * dst, const char * src)
+d101 1
+a101 1
+char *rtclib_strncat(char * dst, const char * src, size_t n)
+d108 1
+a108 1
+size_t rtclib_strxfrm(char * dst, const char * src, size_t n)
+d115 1
+a115 1
+void rtclib_bcopy(void * s, void * d, size_t n)
+d121 1
+a121 1
+void rtclib_bzero(void * s, size_t n)
+d127 1
+a127 1
+void *rtclib_memset(void * s, int c, size_t n)
+d129 2
+a130 1
+  *(char *)s = 0;
+d135 1
+a135 1
+void *rtclib_memccpy(void * s1, const void * s2, int c, size_t n)
+d143 1
+a143 1
+char *rtclib_strdup(const char * s1)
+d157 1
+a157 1
+char * rtclib_nl_langinfo(nl_item item)
+d190 1
+a190 1
+int rtclib_stat(const char *path, struct stat *buf)
+d209 1
+a209 1
+int rtclib_lstat(const char *path, struct stat *buf)
+d228 1
+a228 1
+int rtclib_fstat(int fildes, struct stat *buf)
+d264 1
+a264 1
+char *rtclib_ctime(const time_t *clock)
+d270 1
+a270 1
+struct tm *rtclib_localtime(const time_t *clock)
+d285 1
+a285 1
+struct tm *rtclib_gmtime(const time_t *clock)
+d300 1
+a300 1
+char *rtclib_asctime(const struct tm *tm)
+d310 1
+a310 1
+char * rtclib_getpass(const char * prompt)
+d317 2
+a318 2
+int    rtclib_brk(void *endds);
+void * rtclib_sbrk(int incr);
+d325 3
+a327 3
+ssize_t rtclib_read(int fildes, void *buf, size_t nbyte);
+ssize_t rtclib_pread(int fildes, void *buf, size_t nbyte, off_t offset);
+ssize_t rtclib_readv(int fildes, struct iovec *iov, int iovcnt);
+d342 1
+a342 1
+struct hostent *rtclib_gethostbyname(const char *name)
+d360 1
+a360 1
+struct hostent *rtclib_gethostbyaddr(const void *addr, unsigned int len, int type)
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@a26 1
+/* must do in tca-addrof
+d28 13
+a40 1
+*/
+@

@@ -1,0 +1,410 @@
+head	1.17;
+access;
+symbols;
+locks; strict;
+comment	@ * @;
+
+
+1.17
+date	2004.07.16.19.46.35;	author suan;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	2004.04.06.00.13.13;	author suan;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	2003.11.06.21.38.03;	author suan;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	2003.11.05.21.26.08;	author suan;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	2003.10.30.20.33.31;	author suan;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	2003.02.25.22.39.31;	author suan;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2002.12.20.00.06.38;	author suan;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	2002.11.15.23.20.38;	author suan;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	2002.11.15.20.12.21;	author suan;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	2002.11.15.17.49.43;	author suan;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2002.08.19.14.22.25;	author suan;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2002.08.18.21.30.13;	author suan;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2002.08.16.23.20.35;	author suan;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2002.08.16.21.56.08;	author suan;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2002.05.26.05.43.21;	author suan;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2002.05.23.22.44.23;	author suan;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2002.05.21.21.50.24;	author suan;	state Exp;
+branches;
+next	;
+
+
+desc
+@for diagnosis/cmd-line flags.
+@
+
+
+1.17
+log
+@CHANGES:
+1. Moved PExprAssign::getSingletonLHSloc() to
+   ExpDescr::getSingletonLoc(), so it can be used
+   elsewhere to determine strong update.
+1a. FIXED BUG (??) in getSingletonLoc(): previously
+    for sdot object, was returning enclosing struct!?!
+2. Added -vtfix flag, which enables/disables RED and
+   MBU treatment of verifyTag as fixing the type on
+   mismatch.
+3. Added MBU handling of verifyTag vtfix.
+4. Changed so that MBU uses the RED parallel hackery
+   (PM_RED_UNSAFE) when vtfix is on.
+@
+text
+@#ifndef TC_DIAG_H /* { */
+#define TC_DIAG_H
+
+#include <stdio.h>
+#include "ao.h"
+#include "edge.h"
+#include "suco.h"
+
+//------------------------------------------------------
+
+class TCstats
+{
+  public:
+
+    static int new_ty_nodes;
+    static int recy_ty_nodes;
+    static int new_la_nodes;
+    static int recy_la_nodes;
+    static int num_pt_constraints;
+    static int num_constraint_solving_visits;
+
+    static int cde_incl_num_collapses;
+    static int cde_incl_nodes_collapsed;
+    static int cde_pt_num_collapses;
+    static int cde_pt_nodes_collapsed;
+
+    static int dfa_useless_expr_node_visits;
+    static int dfa_useful_expr_node_visits;
+    static int dfa_useless_cfg_node_visits;
+    static int dfa_useful_cfg_node_visits;
+
+    static int ranc_verify_visits;
+    static int ranc_verify_visit_factsizes;
+    static int ranc_verify_visit_max_factsize;
+
+    static int mbuc_verify_visits;
+    static int mbuc_verify_visit_factsizes;
+    static int mbuc_verify_visit_max_factsize;
+
+    static void doAO(AO& ao);
+    static void doAssigns(FILE * outf, suco_llist<TCassignEdge *>& assigns);
+    static void print(FILE * outf);
+
+    static void timer(const char * descr); //- nonzero descr = start timer
+					   //- null descr = end timer, print delta
+    static void TCstats::print_now_time(FILE * outf); // prints the current time
+  private:
+    TCstats();
+    static int	num_aos,
+		num_addrof,
+		num_deref,
+		num_unsafe,
+		num_tracked;
+    static int	num_malloc,
+		num_malloc_constsize,
+		num_malloc_evalsize;
+    static int	num_poss_bottom,
+		num_poss_scalar,
+		num_poss_zero,
+		num_poss_top;
+    static int	num_safe_ptr,
+		num_unsafe_ptr,
+		num_safe_struct_ptr,
+		num_unsafe_struct_ptr,
+		num_safe_written_ptr,
+		num_unsafe_written_ptr,
+		num_safe_struct_written_ptr,
+		num_unsafe_struct_written_ptr,
+		num_safe_fnptr,
+		num_unsafe_fnptr,
+		num_safe_struct_fnptr,
+		num_unsafe_struct_fnptr,
+		num_tracked_loc,
+		num_untracked_loc,
+		num_tracked_fnptr,
+		num_untracked_fnptr,
+		num_tracked_struct_fnptr,
+		num_untracked_struct_fnptr;
+};
+
+//------------------------------------------------------
+
+#endif /* } ifndef TC_DIAG_H */
+
+@
+
+
+1.16
+log
+@Added malloc stat counter: number of malloc AOs,
+number with evaluated ty/size and number with
+const ty/size.
+@
+text
+@d36 4
+@
+
+
+1.15
+log
+@Added new stat counters for range analysis: count average
+and max size of RANfact when collecting.
+@
+text
+@d50 3
+@
+
+
+1.14
+log
+@Added implementation of cycle detection and elimination
+of points-to cycles (had previously only implemented
+for includes-to cycles).
+CAVEAT: it's unclear whether the two algorithms will
+clash; am now testing.
+@
+text
+@d32 4
+@
+
+
+1.13
+log
+@Added new diagnostic function: TCstats::print_now_time()
+to print the current real time (at start of timer, and
+in DFA::doAnalysis for each function, when intraprocedural)
+which'd be helpful to diagnose when a process is not terminating.
+@
+text
+@d22 5
+@
+
+
+1.12
+log
+@Added timer mechanism to output rusage times for various
+phases.
+(current implementation: only one timer at a time, though).
+@
+text
+@d33 1
+@
+
+
+1.11
+log
+@Renamed some mbu-counters to dfa-counters.
+@
+text
+@d31 2
+@
+
+
+1.10
+log
+@Added is_useless flag to CFGnode/DFAnode, to make visits
+faster during DFA.
+@
+text
+@d22 4
+a25 4
+    static int mbu_useless_dfa_node_visits;
+    static int mbu_useful_dfa_node_visits;
+    static int mbu_useless_cfg_node_visits;
+    static int mbu_useful_cfg_node_visits;
+@
+
+
+1.9
+log
+@Added node-recycling to MBUlist/LocAidNode.
+Speeds up mel test by about 20%!
+@
+text
+@d22 5
+@
+
+
+1.8
+log
+@Reorganized global flags, stat-collection and output;
+moved TCcollectStats to diag.cpp/h, renamed to TCstats,
+and absorbed what used to be in diag.cpp/h.
+Global flags have been moved to flags.h, (they're defined
+in tca.cpp, for now).
+Removed the -stat flag: the "stat" output is now always
+dumped, to the output file rather than stderr.
+Added -mbu# flag, though haven't done anything with the
+different mbu levels yet.
+@
+text
+@d17 2
+@
+
+
+1.7
+log
+@Added Type-safety Category assignment.
+(major change).
+Appears working, tested on gcc, verified on small examples,
+not thoroughly verified.
+Also, added -readable flag.
+@
+text
+@d5 3
+d9 47
+a55 16
+extern bool flag_use_maxnargs;
+extern bool flag_verbose;
+extern bool flag_recycle;
+extern bool flag_stat;
+
+extern bool flag_readable_output;
+
+extern int stat_new_ty_nodes;
+extern int stat_recy_ty_nodes;
+extern int stat_num_pt_constraints;
+extern int stat_num_constraint_solving_visits;
+extern void diag_print_stats(FILE * os);
+
+extern int poss_type_init_counter;
+extern int poss_type_assign_counter;
+extern int poss_type_incl_counter;
+d58 1
+@
+
+
+1.6
+log
+@Added -verbose-mode dot-output for possible-type constraint
+initialization and assignment-processing.
+@
+text
+@d11 2
+@
+
+
+1.5
+log
+@Added constraint solving -- not thoroughly tested, though
+it appears to work on some sample tests.
+@
+text
+@d17 4
+@
+
+
+1.4
+log
+@Finished (but not tested) initialization of poss-type
+constraints.
+This entailed creation of a root set (encapsulated by
+the class TClatRootSet).
+Also, to manipulate the traverseCounter, TCAstate is now
+a friend of ECR -- I'm not sure I like this arrangement.
+@
+text
+@d14 1
+@
+
+
+1.3
+log
+@3) added -fixnargs flag to compute max nargs and use
+   that for all argrets. simpler solution...
+
+4) added fwdptr to argret - necessary to ensure
+   correctness (?).
+   This resulted in a major overhaul - argret::absorb
+   must now be wary of clashes with ecr::absorb -
+   added recursive trick, etc.
+   Currently seems to work, but have not validated results.
+   NOTE: this change resulted in a crash that was eliminated
+   only after I removed both deletes of argrets. FIND BUG!?!
+@
+text
+@d13 1
+@
+
+
+1.2
+log
+@Added flag_verbose
+@
+text
+@d6 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 1
+@
