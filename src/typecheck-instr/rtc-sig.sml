@@ -70,7 +70,7 @@ sig
   val tcTypeToDescr : tcType -> string
   val tcTypeToString : tcType -> string
   val tcTypeListToString : tcType list -> string
- 
+
   val aoToString : absObject -> string
   val stringToAO : (int -> Aid.uid) * (int -> Pid.uid) * exn -> string -> absObject
 

@@ -1,5 +1,5 @@
 structure Rtc : RTC =
-struct 
+struct
 
   datatype ts_categ = TSC_POSS_INVALID | TSC_BADLY_TYPED | TSC_INFLUENTIAL | TSC_EXPOSED | TSC_SAFE
 

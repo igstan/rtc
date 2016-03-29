@@ -1,0 +1,7 @@
+group
+  library ($smlnj/compiler.cm) - (
+    signature SOURCE_MAP
+    structure SourceMap
+  )
+is
+  $smlnj/compiler.cm

@@ -1,15 +1,16 @@
 Group is
+	$/basis.cm
 	(* The root one *)
 	(* For now, using full path to allow compilation from
 	   independent typecheck-instr directories.
 	   Will eventually want to do something else.
 	 *)
 	(* /unsup/sml/installation/ckit/src/sources.cm *)
-	/p/wpis/imports/LucentFrontEnd/ckit/src/sources.cm
+	../ckit/src/sources.cm
 (*	/hsi/cygwin/home/research/ckit/src/sources.cm	*)
 
 	(* For ORD_MAP/BinaryMayFn *)
-	smlnj-lib.cm
+	$/smlnj-lib.cm
 
 	(* runtime command line flags *)
 	flags.sml

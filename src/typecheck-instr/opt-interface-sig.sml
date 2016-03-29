@@ -4,7 +4,7 @@ sig
   structure aidmap : ORD_MAP where type Key.ord_key = Aid.uid
 
   val ctypeToTcType : (Bindings.tidBinding Tidtab.uidtab) -> Ast.ctype -> Rtc.tcType
- 
+
   val isAssignUnop : Ast.unop -> bool
   val isAssignBinop : Ast.binop -> bool
   val isMalloc : Ast.expression -> bool
