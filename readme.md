@@ -1,3 +1,7 @@
+# Protecting C Programs from Attacks via Invalid Pointer Dereferences
+
+Imported from here: http://pages.cs.wisc.edu/~suan/Projects/SecurityTool/. Original README follows:
+
 RTC tool and Security Tool.
 
 (Suan Yong, Alexey Loginov; Susan Horwitz, Thomas Reps)
@@ -144,7 +148,7 @@ Here are the steps in compiling files foo and bar with RTC:
   5. tc -c foo.opt.instr.c bar.opt.instr.c
      : compile the instrumented source files
        (output: %.opt.instr.o)
-  6. tc -o foobar foo.opt.instr.o bar.opt.instr.o 
+  6. tc -o foobar foo.opt.instr.o bar.opt.instr.o
      : link the files (output executable: *-nt-tca.instr).
 
 and for the security tool (replace -ptrw with -ptr to
@@ -167,7 +171,7 @@ check both reads and writes):
   5. tc -ptrw -c foo.opt.pwinstr.c bar.opt.pwinstr.c
      : compile the instrumented source files
        (output: %.opt.pwinstr.o)
-  6. tc -ptrw -o foobar foo.opt.pwinstr.o bar.opt.pwinstr.o 
+  6. tc -ptrw -o foobar foo.opt.pwinstr.o bar.opt.pwinstr.o
      : link the files (output executable: *-ptrw-tca.pwinstr).
 
 NOTE: Do "tc -g" to compile and output execution-time stats;
